@@ -8,17 +8,16 @@
 
 #import "YahooMapVC.h"
 #import <YMapKit/YMapKit.h>
-#import "CUPointAnnotation.h"
+#import "CustomPointAnnotation.h"
+#import "CalloutMapAnnotation.h"
+#import "CallOutAnnotationView.h"
 
 @interface YahooMapVC ()<YMKMapViewDelegate>
 
-//var yahooMap: YMKMapView!
-//var calloutMapAnnotation: CalloutMapAnnotation!
-
 @property (nonatomic, strong) YMKMapView *yahooMap;
+@property (nonatomic, strong) CalloutMapAnnotation *calloutMapAnnotation;
 
 @end
-
 
 
 @implementation YahooMapVC
@@ -56,9 +55,9 @@
     [self.yahooMap invalidateIntrinsicContentSize];
     
     // 大头针泡泡的初始化
-    
+    CustomPointAnnotation *pointAnnotation = [[CustomPointAnnotation alloc] initWithLocationCoordinate:center title:NULL subtitle:NULL];
     // 添加大头针泡泡
-    
+    [self.yahooMap addAnnotation:pointAnnotation];
 }
 
 #pragma mark 实现Yahoo代理协议
@@ -66,12 +65,42 @@
 - (YMKAnnotationView *)mapView:(YMKMapView *)mapView viewForAnnotation:(id<YMKAnnotation>)annotation  {
     NSString *annotationIdentifier = @"customAnnotation";
     
+    if ([annotation isKindOfClass:[CustomPointAnnotation class]]) {
+        YMKPinAnnotationView *annotationview = [[YMKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:annotationIdentifier];
+        annotationview.image = [UIImage imageNamed:@"pin_red_s"];
+        annotationview.animatesDrop = YES;
+        // 添加手势
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(annotationviewSelcet:)];
+        [annotationview addGestureRecognizer:tapGesture];
+        NSLog(@"弹出自定义泡泡1");
+        return annotationview;
+    } else {
+        CalloutMapAnnotation *ann = (CalloutMapAnnotation *)annotation;
+        CallOutAnnotationView *calloutannotationview = [[CallOutAnnotationView alloc] initWithAnnotation:ann reuseIdentifier:@"calloutview"];
+        NSLog(@"弹出自定义泡泡2");
+        return calloutannotationview;
+    }
+}
+
+- (void)annotationviewSelcet:(UITapGestureRecognizer *)sender {
+    NSLog(@"添加点击手势");
+    YMKAnnotationView *view = (YMKAnnotationView *)sender.view;
     
-    YMKPinAnnotationView *annotationview = [[YMKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:annotationIdentifier];
-    annotationview.image = [UIImage imageNamed:@"pin_red_s"];
-    annotationview.animatesDrop = YES;
+    self.calloutMapAnnotation = [[CalloutMapAnnotation alloc] initLocationCoordinate:view.annotation.coordinate];
     
-    return annotationview;
+    NSMutableArray *annotationArray = [NSMutableArray arrayWithArray:self.yahooMap.annotations];
+    if (annotationArray.count > 1) {
+        [annotationArray removeLastObject];
+        return;
+    } else {
+        CGPoint centerPoint = [self.yahooMap convertCoordinate:self.yahooMap.centerCoordinate toPointToView:self.yahooMap];
+        self.yahooMap.centerCoordinate = [self.yahooMap convertPoint:CGPointMake(centerPoint.x, -centerPoint.y/2) toCoordinateFromView:sender.view];
+        
+        CLLocationCoordinate2D changeCenterCoordinate = [self.yahooMap convertPoint:CGPointMake(centerPoint.x/12, -centerPoint.y/2) toCoordinateFromView:sender.view];
+        self.yahooMap.centerCoordinate = CLLocationCoordinate2DMake(self.yahooMap.centerCoordinate.latitude, changeCenterCoordinate.longitude);
+        
+        [self.yahooMap addAnnotation:self.calloutMapAnnotation];
+    }
 }
 
 - (void)mapView:(YMKMapView *)mapView annotationView:(YMKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {

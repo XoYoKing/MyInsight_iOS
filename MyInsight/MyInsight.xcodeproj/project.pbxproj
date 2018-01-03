@@ -64,7 +64,9 @@
 		A22C4DD31FFC777A0079F7C2 /* yback.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBC1FFC77790079F7C2 /* yback.png */; };
 		A22C4DD41FFC777A0079F7C2 /* via.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBD1FFC77790079F7C2 /* via.png */; };
 		A22C4DD51FFC777A0079F7C2 /* route_start_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBE1FFC77790079F7C2 /* route_start_pin@2x.png */; };
-		A22C4DD81FFC83C80079F7C2 /* CUPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A22C4DD71FFC83C80079F7C2 /* CUPointAnnotation.m */; };
+		A22C4DDB1FFCAB8B0079F7C2 /* CustomPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A22C4DDA1FFCAB8B0079F7C2 /* CustomPointAnnotation.m */; };
+		A22C4DDE1FFCAEB10079F7C2 /* CalloutMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A22C4DDD1FFCAEB10079F7C2 /* CalloutMapAnnotation.m */; };
+		A22C4DE11FFCAF1F0079F7C2 /* CallOutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A22C4DE01FFCAF1F0079F7C2 /* CallOutAnnotationView.m */; };
 		A2419E89AB28D022C3D01AE0 /* libPods-MyInsight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D110F761EC3A481896E9E0EB /* libPods-MyInsight.a */; };
 		A288FB431FEFC7AE00CF85B4 /* ScaleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A288FB421FEFC7AE00CF85B4 /* ScaleVC.m */; };
 		A28ED52F1FD156B600A74551 /* RearRevealVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A28ED52E1FD156B600A74551 /* RearRevealVC.m */; };
@@ -175,8 +177,12 @@
 		A22C4DBC1FFC77790079F7C2 /* yback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yback.png; sourceTree = "<group>"; };
 		A22C4DBD1FFC77790079F7C2 /* via.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = via.png; sourceTree = "<group>"; };
 		A22C4DBE1FFC77790079F7C2 /* route_start_pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "route_start_pin@2x.png"; sourceTree = "<group>"; };
-		A22C4DD61FFC83C80079F7C2 /* CUPointAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CUPointAnnotation.h; sourceTree = "<group>"; };
-		A22C4DD71FFC83C80079F7C2 /* CUPointAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CUPointAnnotation.m; sourceTree = "<group>"; };
+		A22C4DD91FFCAB8B0079F7C2 /* CustomPointAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomPointAnnotation.h; sourceTree = "<group>"; };
+		A22C4DDA1FFCAB8B0079F7C2 /* CustomPointAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomPointAnnotation.m; sourceTree = "<group>"; };
+		A22C4DDC1FFCAEB10079F7C2 /* CalloutMapAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalloutMapAnnotation.h; sourceTree = "<group>"; };
+		A22C4DDD1FFCAEB10079F7C2 /* CalloutMapAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalloutMapAnnotation.m; sourceTree = "<group>"; };
+		A22C4DDF1FFCAF1F0079F7C2 /* CallOutAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallOutAnnotationView.h; sourceTree = "<group>"; };
+		A22C4DE01FFCAF1F0079F7C2 /* CallOutAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallOutAnnotationView.m; sourceTree = "<group>"; };
 		A288FB411FEFC7AE00CF85B4 /* ScaleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScaleVC.h; sourceTree = "<group>"; };
 		A288FB421FEFC7AE00CF85B4 /* ScaleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScaleVC.m; sourceTree = "<group>"; };
 		A28ED52D1FD156B600A74551 /* RearRevealVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RearRevealVC.h; sourceTree = "<group>"; };
@@ -437,8 +443,12 @@
 			children = (
 				A22C4DA31FFC731E0079F7C2 /* YahooMapVC.h */,
 				A22C4DA41FFC731E0079F7C2 /* YahooMapVC.m */,
-				A22C4DD61FFC83C80079F7C2 /* CUPointAnnotation.h */,
-				A22C4DD71FFC83C80079F7C2 /* CUPointAnnotation.m */,
+				A22C4DD91FFCAB8B0079F7C2 /* CustomPointAnnotation.h */,
+				A22C4DDA1FFCAB8B0079F7C2 /* CustomPointAnnotation.m */,
+				A22C4DDC1FFCAEB10079F7C2 /* CalloutMapAnnotation.h */,
+				A22C4DDD1FFCAEB10079F7C2 /* CalloutMapAnnotation.m */,
+				A22C4DDF1FFCAF1F0079F7C2 /* CallOutAnnotationView.h */,
+				A22C4DE01FFCAF1F0079F7C2 /* CallOutAnnotationView.m */,
 			);
 			path = YahooMap;
 			sourceTree = "<group>";
@@ -877,8 +887,9 @@
 				A22C4D2D1FF374A30079F7C2 /* SystemMapsVC.m in Sources */,
 				A20D5E231FD14E37000E191D /* RightRevealVC.m in Sources */,
 				A20D5E1D1FD14C7A000E191D /* MainRevealVC.m in Sources */,
+				A22C4DDB1FFCAB8B0079F7C2 /* CustomPointAnnotation.m in Sources */,
 				A22C4D791FFB14AA0079F7C2 /* OpenCVVC.mm in Sources */,
-				A22C4DD81FFC83C80079F7C2 /* CUPointAnnotation.m in Sources */,
+				A22C4DDE1FFCAEB10079F7C2 /* CalloutMapAnnotation.m in Sources */,
 				A2064FA81FECDBA700ED1C4B /* LandscapeScreenVC.m in Sources */,
 				A20D5DFE1FD14549000E191D /* AppDelegate.m in Sources */,
 				A22C4D391FF4CECE0079F7C2 /* BluetoothCell.m in Sources */,
@@ -886,6 +897,7 @@
 				A28ED5381FD15D8800A74551 /* MarkTableVC.m in Sources */,
 				A2D1DA351FF0E65B00D2F7AE /* BlueToothVC.m in Sources */,
 				A28ED52F1FD156B600A74551 /* RearRevealVC.m in Sources */,
+				A22C4DE11FFCAF1F0079F7C2 /* CallOutAnnotationView.m in Sources */,
 				A28ED53B1FD15D9A00A74551 /* MineVC.m in Sources */,
 				A28ED5351FD15D7B00A74551 /* HomeTableVC.mm in Sources */,
 				A288FB431FEFC7AE00CF85B4 /* ScaleVC.m in Sources */,
