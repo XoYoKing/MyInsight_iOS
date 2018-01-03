@@ -40,6 +40,31 @@
 		A22C4D951FFB29430079F7C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A22C4D941FFB29430079F7C2 /* Foundation.framework */; };
 		A22C4D971FFB29730079F7C2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A22C4D961FFB29720079F7C2 /* MapKit.framework */; };
 		A22C4D991FFB29880079F7C2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A22C4D981FFB29880079F7C2 /* CoreLocation.framework */; };
+		A22C4DA51FFC731E0079F7C2 /* YahooMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A22C4DA41FFC731E0079F7C2 /* YahooMapVC.m */; };
+		A22C4DBF1FFC777A0079F7C2 /* YMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A22C4DA71FFC77790079F7C2 /* YMapKit.framework */; };
+		A22C4DC01FFC777A0079F7C2 /* route_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DA91FFC77790079F7C2 /* route_pin.png */; };
+		A22C4DC11FFC777A0079F7C2 /* pin_head_s.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DAA1FFC77790079F7C2 /* pin_head_s.png */; };
+		A22C4DC21FFC777A0079F7C2 /* goal.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DAB1FFC77790079F7C2 /* goal.png */; };
+		A22C4DC31FFC777A0079F7C2 /* pin_green_s.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DAC1FFC77790079F7C2 /* pin_green_s.png */; };
+		A22C4DC41FFC777A0079F7C2 /* pin_purple_s.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DAD1FFC77790079F7C2 /* pin_purple_s.png */; };
+		A22C4DC51FFC777A0079F7C2 /* pin_red_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DAE1FFC77790079F7C2 /* pin_red_s@2x.png */; };
+		A22C4DC61FFC777A0079F7C2 /* route_start_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DAF1FFC77790079F7C2 /* route_start_pin.png */; };
+		A22C4DC71FFC777A0079F7C2 /* route_goal_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DB01FFC77790079F7C2 /* route_goal_pin.png */; };
+		A22C4DC81FFC777A0079F7C2 /* pin_green_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DB11FFC77790079F7C2 /* pin_green_s@2x.png */; };
+		A22C4DC91FFC777A0079F7C2 /* compass48@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DB21FFC77790079F7C2 /* compass48@2x.png */; };
+		A22C4DCA1FFC777A0079F7C2 /* compass48.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DB31FFC77790079F7C2 /* compass48.png */; };
+		A22C4DCB1FFC777A0079F7C2 /* route_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DB41FFC77790079F7C2 /* route_pin@2x.png */; };
+		A22C4DCC1FFC777A0079F7C2 /* goal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DB51FFC77790079F7C2 /* goal@2x.png */; };
+		A22C4DCD1FFC777A0079F7C2 /* via@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DB61FFC77790079F7C2 /* via@2x.png */; };
+		A22C4DCE1FFC777A0079F7C2 /* route_goal_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DB71FFC77790079F7C2 /* route_goal_pin@2x.png */; };
+		A22C4DCF1FFC777A0079F7C2 /* pin_head_l.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DB81FFC77790079F7C2 /* pin_head_l.png */; };
+		A22C4DD01FFC777A0079F7C2 /* pin_red_s.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DB91FFC77790079F7C2 /* pin_red_s.png */; };
+		A22C4DD11FFC777A0079F7C2 /* purple_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBA1FFC77790079F7C2 /* purple_arrow.png */; };
+		A22C4DD21FFC777A0079F7C2 /* pin_purple_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBB1FFC77790079F7C2 /* pin_purple_s@2x.png */; };
+		A22C4DD31FFC777A0079F7C2 /* yback.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBC1FFC77790079F7C2 /* yback.png */; };
+		A22C4DD41FFC777A0079F7C2 /* via.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBD1FFC77790079F7C2 /* via.png */; };
+		A22C4DD51FFC777A0079F7C2 /* route_start_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBE1FFC77790079F7C2 /* route_start_pin@2x.png */; };
+		A22C4DD81FFC83C80079F7C2 /* CUPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A22C4DD71FFC83C80079F7C2 /* CUPointAnnotation.m */; };
 		A2419E89AB28D022C3D01AE0 /* libPods-MyInsight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D110F761EC3A481896E9E0EB /* libPods-MyInsight.a */; };
 		A288FB431FEFC7AE00CF85B4 /* ScaleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A288FB421FEFC7AE00CF85B4 /* ScaleVC.m */; };
 		A28ED52F1FD156B600A74551 /* RearRevealVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A28ED52E1FD156B600A74551 /* RearRevealVC.m */; };
@@ -125,6 +150,33 @@
 		A22C4D941FFB29430079F7C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A22C4D961FFB29720079F7C2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A22C4D981FFB29880079F7C2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A22C4DA31FFC731E0079F7C2 /* YahooMapVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YahooMapVC.h; sourceTree = "<group>"; };
+		A22C4DA41FFC731E0079F7C2 /* YahooMapVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YahooMapVC.m; sourceTree = "<group>"; };
+		A22C4DA71FFC77790079F7C2 /* YMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YMapKit.framework; sourceTree = "<group>"; };
+		A22C4DA91FFC77790079F7C2 /* route_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = route_pin.png; sourceTree = "<group>"; };
+		A22C4DAA1FFC77790079F7C2 /* pin_head_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_head_s.png; sourceTree = "<group>"; };
+		A22C4DAB1FFC77790079F7C2 /* goal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goal.png; sourceTree = "<group>"; };
+		A22C4DAC1FFC77790079F7C2 /* pin_green_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_green_s.png; sourceTree = "<group>"; };
+		A22C4DAD1FFC77790079F7C2 /* pin_purple_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_purple_s.png; sourceTree = "<group>"; };
+		A22C4DAE1FFC77790079F7C2 /* pin_red_s@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin_red_s@2x.png"; sourceTree = "<group>"; };
+		A22C4DAF1FFC77790079F7C2 /* route_start_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = route_start_pin.png; sourceTree = "<group>"; };
+		A22C4DB01FFC77790079F7C2 /* route_goal_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = route_goal_pin.png; sourceTree = "<group>"; };
+		A22C4DB11FFC77790079F7C2 /* pin_green_s@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin_green_s@2x.png"; sourceTree = "<group>"; };
+		A22C4DB21FFC77790079F7C2 /* compass48@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass48@2x.png"; sourceTree = "<group>"; };
+		A22C4DB31FFC77790079F7C2 /* compass48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass48.png; sourceTree = "<group>"; };
+		A22C4DB41FFC77790079F7C2 /* route_pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "route_pin@2x.png"; sourceTree = "<group>"; };
+		A22C4DB51FFC77790079F7C2 /* goal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "goal@2x.png"; sourceTree = "<group>"; };
+		A22C4DB61FFC77790079F7C2 /* via@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "via@2x.png"; sourceTree = "<group>"; };
+		A22C4DB71FFC77790079F7C2 /* route_goal_pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "route_goal_pin@2x.png"; sourceTree = "<group>"; };
+		A22C4DB81FFC77790079F7C2 /* pin_head_l.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_head_l.png; sourceTree = "<group>"; };
+		A22C4DB91FFC77790079F7C2 /* pin_red_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin_red_s.png; sourceTree = "<group>"; };
+		A22C4DBA1FFC77790079F7C2 /* purple_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purple_arrow.png; sourceTree = "<group>"; };
+		A22C4DBB1FFC77790079F7C2 /* pin_purple_s@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin_purple_s@2x.png"; sourceTree = "<group>"; };
+		A22C4DBC1FFC77790079F7C2 /* yback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yback.png; sourceTree = "<group>"; };
+		A22C4DBD1FFC77790079F7C2 /* via.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = via.png; sourceTree = "<group>"; };
+		A22C4DBE1FFC77790079F7C2 /* route_start_pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "route_start_pin@2x.png"; sourceTree = "<group>"; };
+		A22C4DD61FFC83C80079F7C2 /* CUPointAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CUPointAnnotation.h; sourceTree = "<group>"; };
+		A22C4DD71FFC83C80079F7C2 /* CUPointAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CUPointAnnotation.m; sourceTree = "<group>"; };
 		A288FB411FEFC7AE00CF85B4 /* ScaleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScaleVC.h; sourceTree = "<group>"; };
 		A288FB421FEFC7AE00CF85B4 /* ScaleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScaleVC.m; sourceTree = "<group>"; };
 		A28ED52D1FD156B600A74551 /* RearRevealVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RearRevealVC.h; sourceTree = "<group>"; };
@@ -162,6 +214,7 @@
 				A22C4D831FFB1C4E0079F7C2 /* AVFoundation.framework in Frameworks */,
 				A22C4D811FFB1C3F0079F7C2 /* libc++.tbd in Frameworks */,
 				A2419E89AB28D022C3D01AE0 /* libPods-MyInsight.a in Frameworks */,
+				A22C4DBF1FFC777A0079F7C2 /* YMapKit.framework in Frameworks */,
 				A22C4D7F1FFB1BB00079F7C2 /* libjpeg.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +418,7 @@
 		A22C4D7A1FFB1B680079F7C2 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				A22C4DA61FFC77790079F7C2 /* YahooMap */,
 				A22C4D7B1FFB1B890079F7C2 /* OpenCV */,
 			);
 			path = Vendors;
@@ -376,6 +430,55 @@
 				A22C4D7E1FFB1BB00079F7C2 /* libjpeg.a */,
 			);
 			path = OpenCV;
+			sourceTree = "<group>";
+		};
+		A22C4D9F1FFC72E20079F7C2 /* YahooMap */ = {
+			isa = PBXGroup;
+			children = (
+				A22C4DA31FFC731E0079F7C2 /* YahooMapVC.h */,
+				A22C4DA41FFC731E0079F7C2 /* YahooMapVC.m */,
+				A22C4DD61FFC83C80079F7C2 /* CUPointAnnotation.h */,
+				A22C4DD71FFC83C80079F7C2 /* CUPointAnnotation.m */,
+			);
+			path = YahooMap;
+			sourceTree = "<group>";
+		};
+		A22C4DA61FFC77790079F7C2 /* YahooMap */ = {
+			isa = PBXGroup;
+			children = (
+				A22C4DA71FFC77790079F7C2 /* YMapKit.framework */,
+				A22C4DA81FFC77790079F7C2 /* image */,
+			);
+			path = YahooMap;
+			sourceTree = "<group>";
+		};
+		A22C4DA81FFC77790079F7C2 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				A22C4DA91FFC77790079F7C2 /* route_pin.png */,
+				A22C4DAA1FFC77790079F7C2 /* pin_head_s.png */,
+				A22C4DAB1FFC77790079F7C2 /* goal.png */,
+				A22C4DAC1FFC77790079F7C2 /* pin_green_s.png */,
+				A22C4DAD1FFC77790079F7C2 /* pin_purple_s.png */,
+				A22C4DAE1FFC77790079F7C2 /* pin_red_s@2x.png */,
+				A22C4DAF1FFC77790079F7C2 /* route_start_pin.png */,
+				A22C4DB01FFC77790079F7C2 /* route_goal_pin.png */,
+				A22C4DB11FFC77790079F7C2 /* pin_green_s@2x.png */,
+				A22C4DB21FFC77790079F7C2 /* compass48@2x.png */,
+				A22C4DB31FFC77790079F7C2 /* compass48.png */,
+				A22C4DB41FFC77790079F7C2 /* route_pin@2x.png */,
+				A22C4DB51FFC77790079F7C2 /* goal@2x.png */,
+				A22C4DB61FFC77790079F7C2 /* via@2x.png */,
+				A22C4DB71FFC77790079F7C2 /* route_goal_pin@2x.png */,
+				A22C4DB81FFC77790079F7C2 /* pin_head_l.png */,
+				A22C4DB91FFC77790079F7C2 /* pin_red_s.png */,
+				A22C4DBA1FFC77790079F7C2 /* purple_arrow.png */,
+				A22C4DBB1FFC77790079F7C2 /* pin_purple_s@2x.png */,
+				A22C4DBC1FFC77790079F7C2 /* yback.png */,
+				A22C4DBD1FFC77790079F7C2 /* via.png */,
+				A22C4DBE1FFC77790079F7C2 /* route_start_pin@2x.png */,
+			);
+			path = image;
 			sourceTree = "<group>";
 		};
 		A288FB401FEFC77200CF85B4 /* ScaleView */ = {
@@ -392,6 +495,7 @@
 			children = (
 				A28ED5331FD15D7B00A74551 /* HomeTableVC.h */,
 				A28ED5341FD15D7B00A74551 /* HomeTableVC.mm */,
+				A22C4D9F1FFC72E20079F7C2 /* YahooMap */,
 				A22C4D761FFB14960079F7C2 /* OpenCVView */,
 				A22C4D2A1FF374850079F7C2 /* SystemMaps */,
 				A2D1DA321FF0E64800D2F7AE /* BlueTooth */,
@@ -563,13 +667,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A22C4DD11FFC777A0079F7C2 /* purple_arrow.png in Resources */,
 				A22C4D3A1FF4CECE0079F7C2 /* BluetoothCell.xib in Resources */,
 				A20D5DFC1FD14549000E191D /* Assets.xcassets in Resources */,
+				A22C4DD51FFC777A0079F7C2 /* route_start_pin@2x.png in Resources */,
 				A28ED53F1FD2495300A74551 /* Mark.storyboard in Resources */,
+				A22C4DCF1FFC777A0079F7C2 /* pin_head_l.png in Resources */,
+				A22C4DCE1FFC777A0079F7C2 /* route_goal_pin@2x.png in Resources */,
+				A22C4DD41FFC777A0079F7C2 /* via.png in Resources */,
 				A28ED53D1FD2494800A74551 /* Home.storyboard in Resources */,
+				A22C4DCD1FFC777A0079F7C2 /* via@2x.png in Resources */,
+				A22C4DC61FFC777A0079F7C2 /* route_start_pin.png in Resources */,
+				A22C4DD31FFC777A0079F7C2 /* yback.png in Resources */,
 				A20D5DFB1FD14549000E191D /* LaunchScreen.storyboard in Resources */,
+				A22C4DD21FFC777A0079F7C2 /* pin_purple_s@2x.png in Resources */,
+				A22C4DC01FFC777A0079F7C2 /* route_pin.png in Resources */,
+				A22C4DC91FFC777A0079F7C2 /* compass48@2x.png in Resources */,
+				A22C4DD01FFC777A0079F7C2 /* pin_red_s.png in Resources */,
+				A22C4DC71FFC777A0079F7C2 /* route_goal_pin.png in Resources */,
+				A22C4DC81FFC777A0079F7C2 /* pin_green_s@2x.png in Resources */,
+				A22C4DC21FFC777A0079F7C2 /* goal.png in Resources */,
+				A22C4DCB1FFC777A0079F7C2 /* route_pin@2x.png in Resources */,
 				A28ED5411FD2495F00A74551 /* Mine.storyboard in Resources */,
+				A22C4DCA1FFC777A0079F7C2 /* compass48.png in Resources */,
+				A22C4DC31FFC777A0079F7C2 /* pin_green_s.png in Resources */,
+				A22C4DCC1FFC777A0079F7C2 /* goal@2x.png in Resources */,
+				A22C4DC51FFC777A0079F7C2 /* pin_red_s@2x.png in Resources */,
+				A22C4DC11FFC777A0079F7C2 /* pin_head_s.png in Resources */,
 				A20D5E001FD14549000E191D /* Main.storyboard in Resources */,
+				A22C4DC41FFC777A0079F7C2 /* pin_purple_s.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,11 +872,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A22C4D301FF4A3EF0079F7C2 /* BabyBleVC.m in Sources */,
+				A22C4DA51FFC731E0079F7C2 /* YahooMapVC.m in Sources */,
 				A2064FA91FECDBA700ED1C4B /* PortraitScreenVC.m in Sources */,
 				A22C4D2D1FF374A30079F7C2 /* SystemMapsVC.m in Sources */,
 				A20D5E231FD14E37000E191D /* RightRevealVC.m in Sources */,
 				A20D5E1D1FD14C7A000E191D /* MainRevealVC.m in Sources */,
 				A22C4D791FFB14AA0079F7C2 /* OpenCVVC.mm in Sources */,
+				A22C4DD81FFC83C80079F7C2 /* CUPointAnnotation.m in Sources */,
 				A2064FA81FECDBA700ED1C4B /* LandscapeScreenVC.m in Sources */,
 				A20D5DFE1FD14549000E191D /* AppDelegate.m in Sources */,
 				A22C4D391FF4CECE0079F7C2 /* BluetoothCell.m in Sources */,
@@ -914,6 +1042,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyInsight/UIFunction/Function/BaiduMaps/BaiduMapSDK",
 					"$(PROJECT_DIR)/MyInsight/Vendors/OpenCV",
+					"$(PROJECT_DIR)/MyInsight/Vendors/YahooMap",
 				);
 				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/MyInsight/SupportingFiles/Info.plist";
@@ -945,6 +1074,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyInsight/UIFunction/Function/BaiduMaps/BaiduMapSDK",
 					"$(PROJECT_DIR)/MyInsight/Vendors/OpenCV",
+					"$(PROJECT_DIR)/MyInsight/Vendors/YahooMap",
 				);
 				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/MyInsight/SupportingFiles/Info.plist";

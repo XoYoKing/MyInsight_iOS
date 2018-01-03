@@ -13,7 +13,8 @@
 #import "ScaleVC.h" // 三等分约束布局
 #import "BlueToothVC.h" // 蓝牙(系统)
 #import "BabyBleVC.h" // 蓝牙(三方)
-#import "OpenCVVC.h" //OpenCV
+#import "OpenCVVC.h" // OpenCV
+#import "YahooMapVC.h" // 雅虎地图
 #import <SWRevealViewController.h>
 
 @interface HomeTableVC ()
@@ -24,9 +25,10 @@
 
 // 定义字符串
 const NSString *ScreenStr = @"横竖屏";
-const NSString *BaiduMapsStr = @"百度地图";
-const NSString *SystemMapsStr = @"系统(高德)地图";
-const NSString *GoogleMapsStr = @"谷歌地图";
+const NSString *BaiduMapStr = @"百度地图";
+const NSString *SystemMapStr = @"系统(高德)地图";
+const NSString *GoogleMapStr = @"谷歌地图";
+const NSString *YahooMapEstr = @"YahooMap";
 const NSString *ScaleStr = @"自动比例约束布局";
 const NSString *BlueToothStr = @"蓝牙(系统)";
 const NSString *BabyBLEstr = @"蓝牙(三方)";
@@ -55,8 +57,8 @@ const NSString *OpenCVEstr = @"OpenCV";
     [super viewDidLoad];
     
     self.title = @"主页";
-    
-    self.handleDataArray = [NSMutableArray arrayWithArray:@[BaiduMapsStr, SystemMapsStr, GoogleMapsStr, BlueToothStr, BabyBLEstr, ScreenStr, ScaleStr, OpenCVEstr]];
+    // 初始化数组
+    self.handleDataArray = [NSMutableArray arrayWithArray:@[BaiduMapStr, SystemMapStr, GoogleMapStr, YahooMapEstr, BlueToothStr, BabyBLEstr, ScreenStr, ScaleStr, OpenCVEstr]];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     // 适配iOS11
     
@@ -94,17 +96,25 @@ const NSString *OpenCVEstr = @"OpenCV";
         portraitScreenVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:portraitScreenVC animated:YES];
     }
-    if ([indexString isEqual:BaiduMapsStr]) {
+    if ([indexString isEqual:BaiduMapStr]) {
         // 百度地图
         BaiduMapsVC *baiduMapsVC = [[BaiduMapsVC alloc] init];
         baiduMapsVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:baiduMapsVC animated:YES];
     }
-    if ([indexString isEqual:SystemMapsStr]) {
+    if ([indexString isEqual:SystemMapStr]) {
         // 系统地图
         SystemMapsVC *systemMapsVC = [[SystemMapsVC alloc] init];
         systemMapsVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:systemMapsVC animated:YES];
+    }
+    if ([indexPath isEqual:GoogleMapStr]) {
+        // 谷歌地图
+    }
+    if ([indexString isEqual:YahooMapEstr]) {
+        YahooMapVC *yahooMapVC = [[YahooMapVC alloc] init];
+        yahooMapVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:yahooMapVC animated:YES];
     }
     if ([indexString isEqual:ScaleStr]) {
         // 等分布局

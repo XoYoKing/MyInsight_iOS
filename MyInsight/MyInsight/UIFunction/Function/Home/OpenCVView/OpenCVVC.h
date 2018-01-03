@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <opencv2/opencv.hpp>
-#import "opencv2/highgui/ios.h"
+//#import <opencv2/opencv.hpp>
+//#import "opencv2/highgui/ios.h"
 
 
 @interface OpenCVVC : UIViewController
 {
-    cv::Mat cvImage;
+//    cv::Mat cvImage;
 }
 
 @end

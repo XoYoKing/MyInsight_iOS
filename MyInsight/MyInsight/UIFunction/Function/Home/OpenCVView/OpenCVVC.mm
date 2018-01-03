@@ -28,7 +28,7 @@
     self.title = @"OpenCV";
     
     // 创建图片1
-    [self creatImageView1];
+    //[self creatImageView1];
     // 创建图片2
     [self creatImageView2];
     // 创建图片3
@@ -39,52 +39,52 @@
 
 // 使用opencv的sdk
 #pragma mark 创建照片1
-- (void)creatImageView1 {
-    UIImage* image = [UIImage imageNamed:@"test3"];
-    
-    // Convert UIImage* to cv::Mat
-    UIImageToMat(image, cvImage);
-    
-//    if (/* DISABLES CODE */ (0)) {
-//        NSString* filePath = [[NSBundle mainBundle]
-//                              pathForResource:@"test3" ofType:@"png"];
-//        // Create file handle
-//        NSFileHandle* handle =
-//        [NSFileHandle fileHandleForReadingAtPath:filePath];
-//        // Read content of the file
-//        NSData* data = [handle readDataToEndOfFile];
-//        // Decode image from the data buffer
-//        cvImage = cv::imdecode(cv::Mat(1, [data length], CV_8UC1,
-//                                       (void*)data.bytes),
-//                               CV_LOAD_IMAGE_UNCHANGED);
+//- (void)creatImageView1 {
+//    UIImage* image = [UIImage imageNamed:@"test3"];
+//
+//    // Convert UIImage* to cv::Mat
+//    UIImageToMat(image, cvImage);
+//
+////    if (/* DISABLES CODE */ (0)) {
+////        NSString* filePath = [[NSBundle mainBundle]
+////                              pathForResource:@"test3" ofType:@"png"];
+////        // Create file handle
+////        NSFileHandle* handle =
+////        [NSFileHandle fileHandleForReadingAtPath:filePath];
+////        // Read content of the file
+////        NSData* data = [handle readDataToEndOfFile];
+////        // Decode image from the data buffer
+////        cvImage = cv::imdecode(cv::Mat(1, [data length], CV_8UC1,
+////                                       (void*)data.bytes),
+////                               CV_LOAD_IMAGE_UNCHANGED);
+////    }
+//
+////    if (0) {
+////        NSData* data = UIImagePNGRepresentation(image);
+////        // Decode image from the data buffer
+////        cvImage = cv::imdecode(cv::Mat(1, [data length], CV_8UC1,
+////                                       (void*)data.bytes),
+////                               CV_LOAD_IMAGE_UNCHANGED);
+////    }
+//
+//    if (!cvImage.empty()) {
+//        cv::Mat gray;
+//        // Convert the image to grayscale
+//        cv::cvtColor(cvImage, gray, CV_RGBA2GRAY);
+//        // Apply Gaussian filter to remove small edges
+//        cv::GaussianBlur(gray, gray,
+//                         cv::Size(5, 5), 1.5, 1.5);
+//        // Calculate edges with Canny
+//        cv::Mat edges;
+//        cv::Canny(gray, edges, 0, 50);
+//        // Fill image with white color
+//        cvImage.setTo(cv::Scalar::all(255));
+//        // Change color on edges
+//        cvImage.setTo(cv::Scalar(0, 128, 255, 255), edges);
+//        // Convert cv::Mat to UIImage* and show the resulting image
+//        self.imageView1.image = MatToUIImage(cvImage);
 //    }
-    
-//    if (0) {
-//        NSData* data = UIImagePNGRepresentation(image);
-//        // Decode image from the data buffer
-//        cvImage = cv::imdecode(cv::Mat(1, [data length], CV_8UC1,
-//                                       (void*)data.bytes),
-//                               CV_LOAD_IMAGE_UNCHANGED);
-//    }
-    
-    if (!cvImage.empty()) {
-        cv::Mat gray;
-        // Convert the image to grayscale
-        cv::cvtColor(cvImage, gray, CV_RGBA2GRAY);
-        // Apply Gaussian filter to remove small edges
-        cv::GaussianBlur(gray, gray,
-                         cv::Size(5, 5), 1.5, 1.5);
-        // Calculate edges with Canny
-        cv::Mat edges;
-        cv::Canny(gray, edges, 0, 50);
-        // Fill image with white color
-        cvImage.setTo(cv::Scalar::all(255));
-        // Change color on edges
-        cvImage.setTo(cv::Scalar(0, 128, 255, 255), edges);
-        // Convert cv::Mat to UIImage* and show the resulting image
-        self.imageView1.image = MatToUIImage(cvImage);
-    }
-}
+//}
 
 #pragma mark 创建照片2
 - (void)creatImageView2 {
