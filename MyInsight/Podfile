@@ -1,0 +1,26 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'MyInsight' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for MyInsight
+  pod 'Masonry' # 约束布局
+  pod 'MBProgressHUD' # 菊花加载
+  pod 'SWRevealViewController' # 侧边抽屉
+  pod 'BaiduMapKit' #百度地图SDK
+  pod 'GoogleMaps' # Goole地图
+  pod 'BabyBluetooth' # 蓝牙
+  
+  target 'MyInsightTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'MyInsightUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
