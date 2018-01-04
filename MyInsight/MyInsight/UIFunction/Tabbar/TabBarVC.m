@@ -36,7 +36,7 @@
     homeTableVC.tabBarItem.title = @"主页";
     markTableVC.tabBarItem.image = [UIImage imageNamed:@"mark_nor"];
     markTableVC.tabBarItem.selectedImage = [UIImage imageNamed:@"mark_sel"];
-    markTableVC.tabBarItem.title = @"书签";
+    markTableVC.tabBarItem.title = @"地图";
     mineVC.tabBarItem.image = [UIImage imageNamed:@"mine_nor"];
     mineVC.tabBarItem.selectedImage = [UIImage imageNamed:@"mine_sel"];
     mineVC.tabBarItem.title = @"个人";
