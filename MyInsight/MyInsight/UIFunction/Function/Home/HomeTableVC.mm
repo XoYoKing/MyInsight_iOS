@@ -8,13 +8,11 @@
 
 #import "HomeTableVC.h"
 #import "PortraitScreenVC.h" // 竖屏
-#import "BaiduMapsVC.h" // 百度地图
-#import "SystemMapsVC.h" // 系统地图
 #import "ScaleVC.h" // 三等分约束布局
 #import "BlueToothVC.h" // 蓝牙(系统)
 #import "BabyBleVC.h" // 蓝牙(三方)
 #import "OpenCVVC.h" // OpenCV
-#import "YahooMapVC.h" // 雅虎地图
+#import "FFmpegVC.h"
 #import <SWRevealViewController.h>
 
 @interface HomeTableVC ()
@@ -25,14 +23,15 @@
 
 // 定义字符串
 const NSString *ScreenStr = @"横竖屏";
-const NSString *BaiduMapStr = @"百度地图";
-const NSString *SystemMapStr = @"系统(高德)地图";
-const NSString *GoogleMapStr = @"谷歌地图";
-const NSString *YahooMapEstr = @"YahooMap";
+//const NSString *BaiduMapStr = @"百度地图";
+//const NSString *SystemMapStr = @"系统(高德)地图";
+//const NSString *GoogleMapStr = @"谷歌地图";
+//const NSString *YahooMapEstr = @"YahooMap";
 const NSString *ScaleStr = @"自动比例约束布局";
 const NSString *BlueToothStr = @"蓝牙(系统)";
-const NSString *BabyBLEstr = @"蓝牙(三方)";
-const NSString *OpenCVEstr = @"OpenCV";
+const NSString *BabyBLEStr = @"蓝牙(三方)";
+const NSString *OpenCVStr = @"OpenCV";
+const NSString *FFmpegStr = @"FFmpeg";
 
 @implementation HomeTableVC
 
@@ -58,7 +57,7 @@ const NSString *OpenCVEstr = @"OpenCV";
     
     self.title = @"主页";
     // 初始化数组
-    self.handleDataArray = [NSMutableArray arrayWithArray:@[BaiduMapStr, SystemMapStr, GoogleMapStr, YahooMapEstr, BlueToothStr, BabyBLEstr, ScreenStr, ScaleStr, OpenCVEstr]];
+    self.handleDataArray = [NSMutableArray arrayWithArray:@[BlueToothStr, BabyBLEStr, ScreenStr, ScaleStr, OpenCVStr, FFmpegStr]];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     // 适配iOS11
     
@@ -96,26 +95,6 @@ const NSString *OpenCVEstr = @"OpenCV";
         portraitScreenVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:portraitScreenVC animated:YES];
     }
-    if ([indexString isEqual:BaiduMapStr]) {
-        // 百度地图
-        BaiduMapsVC *baiduMapsVC = [[BaiduMapsVC alloc] init];
-        baiduMapsVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:baiduMapsVC animated:YES];
-    }
-    if ([indexString isEqual:SystemMapStr]) {
-        // 系统地图
-        SystemMapsVC *systemMapsVC = [[SystemMapsVC alloc] init];
-        systemMapsVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:systemMapsVC animated:YES];
-    }
-    if ([indexPath isEqual:GoogleMapStr]) {
-        // 谷歌地图
-    }
-    if ([indexString isEqual:YahooMapEstr]) {
-        YahooMapVC *yahooMapVC = [[YahooMapVC alloc] init];
-        yahooMapVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:yahooMapVC animated:YES];
-    }
     if ([indexString isEqual:ScaleStr]) {
         // 等分布局
         ScaleVC *scaleVC = [[UIStoryboard storyboardWithName:@"Home" bundle:NULL] instantiateViewControllerWithIdentifier:@"ScaleVC"];
@@ -128,17 +107,21 @@ const NSString *OpenCVEstr = @"OpenCV";
         blueToothVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:blueToothVC animated:YES];
     }
-    if ([indexString isEqual:BabyBLEstr]) {
+    if ([indexString isEqual:BabyBLEStr]) {
         // 蓝牙(三方)
         BabyBleVC *babyBleVC = [[BabyBleVC alloc] init];
         babyBleVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:babyBleVC animated:YES];
     }
-    if ([indexString isEqual:OpenCVEstr]) {
+    if ([indexString isEqual:OpenCVStr]) {
         // OpenCV
         OpenCVVC *openCVVC = [[UIStoryboard storyboardWithName:@"Home" bundle:NULL] instantiateViewControllerWithIdentifier:@"OpenCVVC"];
         openCVVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:openCVVC animated:YES];
+    }
+    if ([indexString isEqual:FFmpegStr]) {
+        // FFmpeg
+        
     }
 }
 

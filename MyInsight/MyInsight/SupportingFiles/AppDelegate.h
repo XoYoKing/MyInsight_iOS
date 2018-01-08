@@ -14,7 +14,5 @@
 // 横竖屏
 @property (assign, nonatomic) BOOL isSupportHori;
 
-
-
 @end
 

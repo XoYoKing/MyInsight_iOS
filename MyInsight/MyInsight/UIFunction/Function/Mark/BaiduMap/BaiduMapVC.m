@@ -1,19 +1,19 @@
 //
-//  BaiduMapsVC.m
+//  BaiduMapVC.m
 //  MyInsight
 //
-//  Created by SongMenglong on 2017/12/21.
-//  Copyright © 2017年 SongMenglong. All rights reserved.
+//  Created by SongMenglong on 2018/1/8.
+//  Copyright © 2018年 SongMenglong. All rights reserved.
 //
 
-#import "BaiduMapsVC.h"
+#import "BaiduMapVC.h"
 #import <BaiduMapAPI_Location/BMKLocationService.h>
 #import <BaiduMapAPI_Map/BMKMapView.h>
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import <BaiduMapAPI_Base/BMKMapManager.h>
 #import <Masonry.h>
 
-@interface BaiduMapsVC ()<BMKMapViewDelegate, BMKLocationServiceDelegate>
+@interface BaiduMapVC ()<BMKMapViewDelegate, BMKLocationServiceDelegate>
 // 定位
 @property (nonatomic, strong) BMKLocationService *service;
 // 创建百度地图
@@ -35,7 +35,7 @@
 
 @end
 
-@implementation BaiduMapsVC
+@implementation BaiduMapVC
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -66,6 +66,7 @@
     [self setupFunctionView];
     // 初始化数组
     self.annotationArray = [[NSMutableArray alloc] init];
+    
 }
 
 #pragma mark - 设置百度地图

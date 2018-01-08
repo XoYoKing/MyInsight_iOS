@@ -1,20 +1,19 @@
-
 //
-//  SystemMapsVC.m
+//  SystemMapVC.m
 //  MyInsight
 //
-//  Created by SongMenglong on 2017/12/27.
-//  Copyright © 2017年 SongMenglong. All rights reserved.
+//  Created by SongMenglong on 2018/1/8.
+//  Copyright © 2018年 SongMenglong. All rights reserved.
 //
 
-#import "SystemMapsVC.h"
+#import "SystemMapVC.h"
 // 原声地图头文件
 #import <MapKit/MapKit.h>
 // 核心定位服务头文件
 #import <CoreLocation/CoreLocation.h>
 #import <Masonry.h>
 
-@interface SystemMapsVC ()<MKMapViewDelegate, CLLocationManagerDelegate>
+@interface SystemMapVC ()<MKMapViewDelegate, CLLocationManagerDelegate>
 // 定位
 @property (nonatomic, strong) CLLocationManager *locationManager;
 // 地图
@@ -30,14 +29,14 @@
 
 @end
 
-@implementation SystemMapsVC
+@implementation SystemMapVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     /*
      [iOS 自带地图详解](https://www.cnblogs.com/hongyan1314/p/5802193.html)
      */
-    
     self.title = @"系统(高德)地图";
     
     // 创建地图
@@ -148,7 +147,6 @@
     
 }
 
-
 // 定位button动作方法
 - (void)locationButtonAction:(UIButton *)button {
     NSLog(@"定位button");
@@ -162,7 +160,6 @@
     NSLog(@"清除button");
     
 }
-
 
 - (void)mapViewDidFinishLoadingMap:(MKMapView *)mapView {
     NSLog(@"加载完地图");
