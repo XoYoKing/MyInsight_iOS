@@ -17,7 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"FFmpeg";
+    
     self.view.backgroundColor = [UIColor whiteColor];
+    
     
 }
 

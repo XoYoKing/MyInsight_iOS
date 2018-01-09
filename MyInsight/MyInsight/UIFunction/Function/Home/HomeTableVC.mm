@@ -12,7 +12,7 @@
 #import "BlueToothVC.h" // 蓝牙(系统)
 #import "BabyBleVC.h" // 蓝牙(三方)
 #import "OpenCVVC.h" // OpenCV
-#import "FFmpegVC.h"
+#import "FFmpegVC.h" // FFmpegVC
 #import <SWRevealViewController.h>
 
 @interface HomeTableVC ()
@@ -121,7 +121,9 @@ const NSString *FFmpegStr = @"FFmpeg";
     }
     if ([indexString isEqual:FFmpegStr]) {
         // FFmpeg
-        
+        FFmpegVC *ffmpegVC = [[FFmpegVC alloc] init];
+        ffmpegVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:ffmpegVC animated:YES];
     }
 }
 
