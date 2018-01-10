@@ -1,0 +1,6 @@
+framework module Pods_MyInsight_RXS {
+  umbrella header "Pods-MyInsight_RXS-umbrella.h"
+
+  export *
+  module * { export * }
+}

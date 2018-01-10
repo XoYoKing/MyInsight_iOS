@@ -1,0 +1,29 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'MyInsight_RXS' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for MyInsight_RXS
+  pod 'RxSwift',    '~> 4.0'
+  pod 'RxCocoa',    '~> 4.0'
+
+  target 'MyInsight_RXSTests' do
+    inherit! :search_paths
+    # Pods for testing
+    
+    pod 'RxBlocking', '~> 4.0'
+    pod 'RxTest',     '~> 4.0'
+    
+  end
+
+  target 'MyInsight_RXSUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+#RxSwift: ReactiveX for Swift: https://github.com/ReactiveX/RxSwift
+# [RxSwift使用教程](http://blog.csdn.net/Hello_Hwc/article/details/51859330)
