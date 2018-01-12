@@ -70,6 +70,11 @@
 		A28ED53D1FD2494800A74551 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28ED53C1FD2494800A74551 /* Home.storyboard */; };
 		A28ED53F1FD2495300A74551 /* Mark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28ED53E1FD2495300A74551 /* Mark.storyboard */; };
 		A28ED5411FD2495F00A74551 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28ED5401FD2495F00A74551 /* Mine.storyboard */; };
+		A2A30B9C2008B2FC00C974B7 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30B9B2008B2FC00C974B7 /* VideoToolbox.framework */; };
+		A2A30B9E2008B42B00C974B7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30B9D2008B42B00C974B7 /* AudioToolbox.framework */; };
+		A2A30BA62008BC5F00C974B7 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30BA52008BC5F00C974B7 /* libiconv.tbd */; };
+		A2A30BA82008C03E00C974B7 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30BA72008C03E00C974B7 /* libbz2.tbd */; };
+		A2A30BAA2008C04F00C974B7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30BA92008C04F00C974B7 /* libz.tbd */; };
 		A2D1DA351FF0E65B00D2F7AE /* BlueToothVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D1DA341FF0E65B00D2F7AE /* BlueToothVC.m */; };
 		A2E4E6022003431800EC3D63 /* FFmpegVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E4E6012003431800EC3D63 /* FFmpegVC.m */; };
 		A2E4E61520034A9400EC3D63 /* CallOutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E4E60F20034A9400EC3D63 /* CallOutAnnotationView.m */; };
@@ -193,6 +198,14 @@
 		A28ED53C1FD2494800A74551 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		A28ED53E1FD2495300A74551 /* Mark.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mark.storyboard; sourceTree = "<group>"; };
 		A28ED5401FD2495F00A74551 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		A2A30B9B2008B2FC00C974B7 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		A2A30B9D2008B42B00C974B7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A2A30B9F2008B43C00C974B7 /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
+		A2A30BA12008B49E00C974B7 /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
+		A2A30BA32008B4B500C974B7 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		A2A30BA52008BC5F00C974B7 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		A2A30BA72008C03E00C974B7 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		A2A30BA92008C04F00C974B7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A2D1DA331FF0E65B00D2F7AE /* BlueToothVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlueToothVC.h; sourceTree = "<group>"; };
 		A2D1DA341FF0E65B00D2F7AE /* BlueToothVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueToothVC.m; sourceTree = "<group>"; };
 		A2E4E6002003431800EC3D63 /* FFmpegVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFmpegVC.h; sourceTree = "<group>"; };
@@ -336,28 +349,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A22C4D991FFB29880079F7C2 /* CoreLocation.framework in Frameworks */,
-				A22C4D971FFB29730079F7C2 /* MapKit.framework in Frameworks */,
-				A2E4E7232004BFDF00EC3D63 /* libswscale.a in Frameworks */,
-				A22C4D951FFB29430079F7C2 /* Foundation.framework in Frameworks */,
-				A2E4E7202004BFDF00EC3D63 /* libavformat.a in Frameworks */,
-				A22C4D871FFB1C620079F7C2 /* CoreGraphics.framework in Frameworks */,
-				A22C4D911FFB1C8F0079F7C2 /* AssetsLibrary.framework in Frameworks */,
-				A22C4D8F1FFB1C860079F7C2 /* CoreMedia.framework in Frameworks */,
-				A2E4E71D2004BFDF00EC3D63 /* libavutil.a in Frameworks */,
-				A22C4D8D1FFB1C7E0079F7C2 /* CoreVideo.framework in Frameworks */,
-				A22C4D8B1FFB1C750079F7C2 /* Accelerate.framework in Frameworks */,
-				A2E4E7212004BFDF00EC3D63 /* libavdevice.a in Frameworks */,
-				A22C4D891FFB1C6C0079F7C2 /* QuartzCore.framework in Frameworks */,
-				A22C4D851FFB1C570079F7C2 /* CoreImage.framework in Frameworks */,
-				A22C4D831FFB1C4E0079F7C2 /* AVFoundation.framework in Frameworks */,
+				A2A30BAA2008C04F00C974B7 /* libz.tbd in Frameworks */,
+				A2A30BA82008C03E00C974B7 /* libbz2.tbd in Frameworks */,
+				A2A30BA62008BC5F00C974B7 /* libiconv.tbd in Frameworks */,
 				A22C4D811FFB1C3F0079F7C2 /* libc++.tbd in Frameworks */,
-				A2419E89AB28D022C3D01AE0 /* libPods-MyInsight.a in Frameworks */,
-				A22C4DBF1FFC777A0079F7C2 /* YMapKit.framework in Frameworks */,
+				A2E4E7232004BFDF00EC3D63 /* libswscale.a in Frameworks */,
+				A2E4E7202004BFDF00EC3D63 /* libavformat.a in Frameworks */,
+				A2E4E71D2004BFDF00EC3D63 /* libavutil.a in Frameworks */,
+				A2E4E7212004BFDF00EC3D63 /* libavdevice.a in Frameworks */,
 				A22C4D7F1FFB1BB00079F7C2 /* libjpeg.a in Frameworks */,
 				A2E4E71E2004BFDF00EC3D63 /* libavfilter.a in Frameworks */,
 				A2E4E7222004BFDF00EC3D63 /* libswresample.a in Frameworks */,
 				A2E4E71F2004BFDF00EC3D63 /* libavcodec.a in Frameworks */,
+				A2A30B9E2008B42B00C974B7 /* AudioToolbox.framework in Frameworks */,
+				A2A30B9C2008B2FC00C974B7 /* VideoToolbox.framework in Frameworks */,
+				A22C4D8F1FFB1C860079F7C2 /* CoreMedia.framework in Frameworks */,
+				A22C4D991FFB29880079F7C2 /* CoreLocation.framework in Frameworks */,
+				A22C4D971FFB29730079F7C2 /* MapKit.framework in Frameworks */,
+				A22C4D951FFB29430079F7C2 /* Foundation.framework in Frameworks */,
+				A22C4D871FFB1C620079F7C2 /* CoreGraphics.framework in Frameworks */,
+				A22C4D911FFB1C8F0079F7C2 /* AssetsLibrary.framework in Frameworks */,
+				A22C4D8D1FFB1C7E0079F7C2 /* CoreVideo.framework in Frameworks */,
+				A22C4D8B1FFB1C750079F7C2 /* Accelerate.framework in Frameworks */,
+				A22C4D891FFB1C6C0079F7C2 /* QuartzCore.framework in Frameworks */,
+				A22C4D851FFB1C570079F7C2 /* CoreImage.framework in Frameworks */,
+				A22C4D831FFB1C4E0079F7C2 /* AVFoundation.framework in Frameworks */,
+				A2419E89AB28D022C3D01AE0 /* libPods-MyInsight.a in Frameworks */,
+				A22C4DBF1FFC777A0079F7C2 /* YMapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +401,14 @@
 		6EADE52EE3D33EACA00B1056 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A2A30BA92008C04F00C974B7 /* libz.tbd */,
+				A2A30BA72008C03E00C974B7 /* libbz2.tbd */,
+				A2A30BA52008BC5F00C974B7 /* libiconv.tbd */,
+				A2A30BA32008B4B500C974B7 /* libz.1.2.5.tbd */,
+				A2A30BA12008B49E00C974B7 /* libbz2.1.0.tbd */,
+				A2A30B9F2008B43C00C974B7 /* libiconv.2.4.0.tbd */,
+				A2A30B9D2008B42B00C974B7 /* AudioToolbox.framework */,
+				A2A30B9B2008B2FC00C974B7 /* VideoToolbox.framework */,
 				A22C4D981FFB29880079F7C2 /* CoreLocation.framework */,
 				A22C4D961FFB29720079F7C2 /* MapKit.framework */,
 				A22C4D941FFB29430079F7C2 /* Foundation.framework */,

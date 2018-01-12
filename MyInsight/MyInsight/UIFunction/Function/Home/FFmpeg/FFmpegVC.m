@@ -7,6 +7,9 @@
 //
 
 #import "FFmpegVC.h"
+//#import "avcodec.h"
+//#import "avformat.h"
+//#import "avcodec.h"
 
 @interface FFmpegVC ()
 
@@ -18,6 +21,8 @@
     [super viewDidLoad];
     
     self.title = @"FFmpeg";
+    
+    //[iOS上使用高大上的ffmpeg(一)——导入到iOS](https://www.jianshu.com/p/4811f11aed27)
     
     self.view.backgroundColor = [UIColor whiteColor];
     
