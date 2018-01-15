@@ -23,10 +23,6 @@
 
 // 定义字符串
 const NSString *ScreenStr = @"横竖屏";
-//const NSString *BaiduMapStr = @"百度地图";
-//const NSString *SystemMapStr = @"系统(高德)地图";
-//const NSString *GoogleMapStr = @"谷歌地图";
-//const NSString *YahooMapEstr = @"YahooMap";
 const NSString *ScaleStr = @"自动比例约束布局";
 const NSString *BlueToothStr = @"蓝牙(系统)";
 const NSString *BabyBLEStr = @"蓝牙(三方)";
