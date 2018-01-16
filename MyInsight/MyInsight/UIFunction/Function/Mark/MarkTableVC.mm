@@ -24,7 +24,7 @@
 const NSString *BaiduMapStr = @"百度地图";
 const NSString *SystemMapStr = @"系统(高德)地图";
 const NSString *GoogleMapStr = @"谷歌地图";
-const NSString *YahooMapEstr = @"YahooMap";
+const NSString *YahooMapsStr = @"YahooMap";
 
 @implementation MarkTableVC
 
@@ -51,7 +51,7 @@ const NSString *YahooMapEstr = @"YahooMap";
     self.title = @"地图";
     self.view.backgroundColor = [UIColor whiteColor];
     // 初始化数组
-    self.dataArray = [NSMutableArray arrayWithArray:@[BaiduMapStr, SystemMapStr, GoogleMapStr, YahooMapEstr]];
+    self.dataArray = [NSMutableArray arrayWithArray:@[BaiduMapStr, SystemMapStr, GoogleMapStr, YahooMapsStr]];
     // 设置tableview
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"mapcell"];
     // 清空多余cell
@@ -106,7 +106,7 @@ const NSString *YahooMapEstr = @"YahooMap";
         googleMapVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:googleMapVC animated:YES];
     }
-    if ([indexString isEqual:YahooMapEstr]) {
+    if ([indexString isEqual:YahooMapsStr]) {
         // 雅虎地图
         YahooMapVC *yahooMapVC = [[YahooMapVC alloc] init];
         yahooMapVC.hidesBottomBarWhenPushed = YES;
