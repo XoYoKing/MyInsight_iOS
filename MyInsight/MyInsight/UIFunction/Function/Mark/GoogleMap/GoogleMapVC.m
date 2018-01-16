@@ -7,12 +7,22 @@
 //
 
 #import "GoogleMapVC.h"
+#import <GoogleMaps/GoogleMaps.h> //引入谷歌地图
+
+
 
 @interface GoogleMapVC ()
 
 @end
 
 @implementation GoogleMapVC
+
+/*
+ 谷歌地图
+ [iOS Google地图SDK入门教程](https://www.jianshu.com/p/dc7d267d63d0)
+ 
+ */
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
