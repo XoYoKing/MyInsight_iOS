@@ -55,7 +55,11 @@
     UIApplicationShortcutIcon *userIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeSearch];
     UIApplicationShortcutItem *userItem = [[UIApplicationShortcutItem alloc] initWithType:@"userAnchor" localizedTitle:@"用户" localizedSubtitle:@"" icon:userIcon userInfo:nil];
     
-    [UIApplication sharedApplication].shortcutItems = @[homeItem, playItem, userItem];
+    // UIApplicationShortcutIconTypeShare
+    UIApplicationShortcutIcon *shareIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeShare];
+    UIApplicationShortcutItem *shareItem = [[UIApplicationShortcutItem alloc] initWithType:@"shareAnchor" localizedTitle:@"用户" localizedSubtitle:@"" icon:shareIcon userInfo:nil];
+    
+    [UIApplication sharedApplication].shortcutItems = @[homeItem, playItem, userItem, shareItem];
 }
 
 
@@ -69,6 +73,9 @@
     }
     if ([shortcutItem.type isEqualToString:@"userAnchor"]) {
         NSLog(@"个人用户");
+    }
+    if ([shortcutItem.type isEqualToString:@"shareAnchor"]) {
+        NSLog(@"分享用户啊");
     }
 }
 
