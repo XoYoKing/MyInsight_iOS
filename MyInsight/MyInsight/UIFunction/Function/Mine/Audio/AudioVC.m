@@ -1,19 +1,17 @@
+
 //
-//  MineVC.m
+//  AudioVC.m
 //  MyInsight
 //
-//  Created by SongMenglong on 2017/12/1.
-//  Copyright © 2017年 SongMenglong. All rights reserved.
+//  Created by SongMenglong on 2018/1/18.
+//  Copyright © 2018年 SongMenglong. All rights reserved.
 //
 
-#import "MineVC.h"
-#import <SWRevealViewController.h>
-#import <Masonry.h>
-#import "MineCell.h"
 #import "AudioVC.h"
+#import <Masonry.h>
 
-@interface MineVC ()<UITableViewDelegate, UITableViewDataSource>
-
+@interface AudioVC ()<UITableViewDelegate, UITableViewDataSource>
+// 列表
 @property (nonatomic, strong) UITableView *tableView;
 // 数组
 @property (nonatomic, strong) NSArray *dataArray;
@@ -21,46 +19,44 @@
 @end
 
 /*
- 设定功能：
- 音频学习
+ 定义功能
+ 音频：
+ 音效
+ 音乐
+ 音频会话
+ 录音
+ 音频队列服务
+ 
+ 视频：
+ 
+ 摄像头：
  */
-const NSString *AudioStr = @"Audio";
 
-@implementation MineVC
+const NSString *YinXiaoStr = @"音效";
+const NSString *YinYueStr = @"音乐";
+const NSString *HuiHuaStr = @"音频会话";
+const NSString *LuYin_Str = @"录音";
+const NSString *DuiLieStr = @"音频队列服务";
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    if ([self revealViewController] != NULL) {
-        [[self revealViewController] tapGestureRecognizer];
-        [self.view addGestureRecognizer:[self revealViewController].panGestureRecognizer];
-    }
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    
-    if ([self revealViewController] != NULL) {
-        [self.view removeGestureRecognizer:[self revealViewController].panGestureRecognizer];
-    }
-}
+@implementation AudioVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title  = @"个人";
+    self.title = @"音频学习";
     
-    self.dataArray = @[AudioStr];
+    self.view.backgroundColor = [UIColor whiteColor];
     
-    // 创建TableView
+    self.dataArray = @[YinXiaoStr, YinYueStr, HuiHuaStr, LuYin_Str, DuiLieStr];
+    
+    // 创建列表
     [self creatTableView];
     // 代码约束布局
     [self masonryLayoutSubview];
 }
 
-// 创建TableView
+#pragma mark 创建列表页面
 - (void)creatTableView {
-    // 初始化
     self.tableView = [[UITableView alloc] init];
     [self.view addSubview:self.tableView];
     // 设置代理
@@ -69,11 +65,11 @@ const NSString *AudioStr = @"Audio";
     // 清空多余cell
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     // 注册cell
-    [self.tableView registerNib:[UINib nibWithNibName:@"MineCell" bundle:nil] forCellReuseIdentifier:@"MineCell"];
-    //[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+    //[self.tableView registerNib:[UINib nibWithNibName:@"MineCell" bundle:nil] forCellReuseIdentifier:@"MineCell"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
 }
 
-// 实现TableView的代理协议
+#pragma mark 实现TableView的代理协议
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -83,27 +79,20 @@ const NSString *AudioStr = @"Audio";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MineCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MineCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
     if (cell == nil) {
-        cell = [[[NSBundle mainBundle]loadNibNamed:@"MineCell" owner:self options:nil]lastObject];
+        //cell = [[[NSBundle mainBundle]loadNibNamed:@"MineCell" owner:self options:nil]lastObject];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
     }
-    // 赋值
-    cell.titleLabel.text = self.dataArray[indexPath.row];
+    // 赋值    
+    cell.textLabel.text = self.dataArray[indexPath.row];
     
     return cell;
 }
 
-// 选中cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *selectStr = self.dataArray[indexPath.row];
-    if ([selectStr isEqual:AudioStr]) {
-        NSLog(@"搞一搞饮品啊");
-        AudioVC *audioVC = [[AudioVC alloc] init];
-        audioVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:audioVC animated:YES];
-    }
+    NSLog(@"选中cell");
 }
-
 
 // 代码约束布局
 - (void)masonryLayoutSubview {
@@ -115,7 +104,6 @@ const NSString *AudioStr = @"Audio";
         make.bottom.equalTo(self.view.mas_bottom).offset(0.0f);
     }];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

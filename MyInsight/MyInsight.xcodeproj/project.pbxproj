@@ -75,6 +75,9 @@
 		A2A30BA62008BC5F00C974B7 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30BA52008BC5F00C974B7 /* libiconv.tbd */; };
 		A2A30BA82008C03E00C974B7 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30BA72008C03E00C974B7 /* libbz2.tbd */; };
 		A2A30BAA2008C04F00C974B7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30BA92008C04F00C974B7 /* libz.tbd */; };
+		A2CB7F662010806E00232FC5 /* MineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CB7F642010806E00232FC5 /* MineCell.m */; };
+		A2CB7F672010806E00232FC5 /* MineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2CB7F652010806E00232FC5 /* MineCell.xib */; };
+		A2CB7F6B2010875400232FC5 /* AudioVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CB7F6A2010875400232FC5 /* AudioVC.m */; };
 		A2D1DA351FF0E65B00D2F7AE /* BlueToothVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D1DA341FF0E65B00D2F7AE /* BlueToothVC.m */; };
 		A2E4E6022003431800EC3D63 /* FFmpegVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E4E6012003431800EC3D63 /* FFmpegVC.m */; };
 		A2E4E61520034A9400EC3D63 /* CallOutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E4E60F20034A9400EC3D63 /* CallOutAnnotationView.m */; };
@@ -206,6 +209,11 @@
 		A2A30BA52008BC5F00C974B7 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		A2A30BA72008C03E00C974B7 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		A2A30BA92008C04F00C974B7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		A2CB7F632010806E00232FC5 /* MineCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineCell.h; sourceTree = "<group>"; };
+		A2CB7F642010806E00232FC5 /* MineCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineCell.m; sourceTree = "<group>"; };
+		A2CB7F652010806E00232FC5 /* MineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineCell.xib; sourceTree = "<group>"; };
+		A2CB7F692010875400232FC5 /* AudioVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioVC.h; sourceTree = "<group>"; };
+		A2CB7F6A2010875400232FC5 /* AudioVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioVC.m; sourceTree = "<group>"; };
 		A2D1DA331FF0E65B00D2F7AE /* BlueToothVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlueToothVC.h; sourceTree = "<group>"; };
 		A2D1DA341FF0E65B00D2F7AE /* BlueToothVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueToothVC.m; sourceTree = "<group>"; };
 		A2E4E6002003431800EC3D63 /* FFmpegVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFmpegVC.h; sourceTree = "<group>"; };
@@ -662,8 +670,29 @@
 			children = (
 				A28ED5391FD15D9A00A74551 /* MineVC.h */,
 				A28ED53A1FD15D9A00A74551 /* MineVC.m */,
+				A2CB7F682010873D00232FC5 /* Audio */,
+				A2CB7F6220107F4C00232FC5 /* View */,
 			);
 			path = Mine;
+			sourceTree = "<group>";
+		};
+		A2CB7F6220107F4C00232FC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2CB7F632010806E00232FC5 /* MineCell.h */,
+				A2CB7F642010806E00232FC5 /* MineCell.m */,
+				A2CB7F652010806E00232FC5 /* MineCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2CB7F682010873D00232FC5 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				A2CB7F692010875400232FC5 /* AudioVC.h */,
+				A2CB7F6A2010875400232FC5 /* AudioVC.m */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		A2D1DA321FF0E64800D2F7AE /* BlueTooth */ = {
@@ -1083,6 +1112,7 @@
 				A22C4DC51FFC777A0079F7C2 /* pin_red_s@2x.png in Resources */,
 				A22C4DC11FFC777A0079F7C2 /* pin_head_s.png in Resources */,
 				A20D5E001FD14549000E191D /* Main.storyboard in Resources */,
+				A2CB7F672010806E00232FC5 /* MineCell.xib in Resources */,
 				A22C4DC41FFC777A0079F7C2 /* pin_purple_s.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1267,10 +1297,12 @@
 				A20D5E231FD14E37000E191D /* RightRevealVC.m in Sources */,
 				A20D5E1D1FD14C7A000E191D /* MainRevealVC.m in Sources */,
 				A22C4D791FFB14AA0079F7C2 /* OpenCVVC.mm in Sources */,
+				A2CB7F662010806E00232FC5 /* MineCell.m in Sources */,
 				A2064FA81FECDBA700ED1C4B /* LandscapeScreenVC.m in Sources */,
 				A20D5DFE1FD14549000E191D /* AppDelegate.m in Sources */,
 				A22C4D391FF4CECE0079F7C2 /* BluetoothCell.m in Sources */,
 				A20D5DFD1FD14549000E191D /* main.m in Sources */,
+				A2CB7F6B2010875400232FC5 /* AudioVC.m in Sources */,
 				A28ED5381FD15D8800A74551 /* MarkTableVC.mm in Sources */,
 				A2E4E61B20034ABE00EC3D63 /* GoogleMapVC.m in Sources */,
 				A2D1DA351FF0E65B00D2F7AE /* BlueToothVC.m in Sources */,

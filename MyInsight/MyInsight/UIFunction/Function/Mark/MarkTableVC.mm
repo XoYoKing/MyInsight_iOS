@@ -14,7 +14,6 @@
 #import "GoogleMapVC.h" // 谷歌地图
 
 @interface MarkTableVC ()
-
 // 数据数组
 @property (nonatomic, strong) NSArray *dataArray;
 
