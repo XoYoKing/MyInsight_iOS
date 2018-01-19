@@ -9,6 +9,8 @@
 
 #import "AudioVC.h"
 #import <Masonry.h>
+#import "SoundVC.h" // 音效
+#import "MusicVC.h"
 
 @interface AudioVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -92,6 +94,19 @@ const NSString *DuiLieStr = @"音频队列服务";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"选中cell");
+    NSString *selectStr = self.dataArray[indexPath.row];
+    if ([selectStr isEqual:YinXiaoStr]) {
+        // 音效
+        SoundVC *soundVC = [[SoundVC alloc] init];
+        soundVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:soundVC animated:YES];
+    }
+    if ([selectStr isEqual:YinYueStr]) {
+        // 音乐
+        MusicVC *musicVC = [[MusicVC alloc] init];
+        musicVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:musicVC animated:YES];
+    }
 }
 
 // 代码约束布局

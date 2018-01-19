@@ -21,6 +21,8 @@
 		A20D5E111FD147CD000E191D /* TabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D5E101FD147CD000E191D /* TabBarVC.m */; };
 		A20D5E1D1FD14C7A000E191D /* MainRevealVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D5E1C1FD14C7A000E191D /* MainRevealVC.m */; };
 		A20D5E231FD14E37000E191D /* RightRevealVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D5E221FD14E37000E191D /* RightRevealVC.m */; };
+		A2127918201184630059ED1F /* SoundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2127917201184630059ED1F /* SoundVC.m */; };
+		A212791B201189BC0059ED1F /* MusicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A212791A201189BC0059ED1F /* MusicVC.m */; };
 		A22C4D301FF4A3EF0079F7C2 /* BabyBleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A22C4D2F1FF4A3EF0079F7C2 /* BabyBleVC.m */; };
 		A22C4D391FF4CECE0079F7C2 /* BluetoothCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A22C4D371FF4CECE0079F7C2 /* BluetoothCell.m */; };
 		A22C4D3A1FF4CECE0079F7C2 /* BluetoothCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A22C4D381FF4CECE0079F7C2 /* BluetoothCell.xib */; };
@@ -145,6 +147,10 @@
 		A20D5E1C1FD14C7A000E191D /* MainRevealVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainRevealVC.m; sourceTree = "<group>"; };
 		A20D5E211FD14E37000E191D /* RightRevealVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RightRevealVC.h; sourceTree = "<group>"; };
 		A20D5E221FD14E37000E191D /* RightRevealVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RightRevealVC.m; sourceTree = "<group>"; };
+		A2127916201184630059ED1F /* SoundVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoundVC.h; sourceTree = "<group>"; };
+		A2127917201184630059ED1F /* SoundVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundVC.m; sourceTree = "<group>"; };
+		A2127919201189BC0059ED1F /* MusicVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicVC.h; sourceTree = "<group>"; };
+		A212791A201189BC0059ED1F /* MusicVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicVC.m; sourceTree = "<group>"; };
 		A22C4D2E1FF4A3EF0079F7C2 /* BabyBleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyBleVC.h; sourceTree = "<group>"; };
 		A22C4D2F1FF4A3EF0079F7C2 /* BabyBleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyBleVC.m; sourceTree = "<group>"; };
 		A22C4D361FF4CECE0079F7C2 /* BluetoothCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluetoothCell.h; sourceTree = "<group>"; };
@@ -564,6 +570,17 @@
 			path = Function;
 			sourceTree = "<group>";
 		};
+		A2127915201184360059ED1F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A2127916201184630059ED1F /* SoundVC.h */,
+				A2127917201184630059ED1F /* SoundVC.m */,
+				A2127919201189BC0059ED1F /* MusicVC.h */,
+				A212791A201189BC0059ED1F /* MusicVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		A22C4D761FFB14960079F7C2 /* OpenCVView */ = {
 			isa = PBXGroup;
 			children = (
@@ -691,6 +708,7 @@
 			children = (
 				A2CB7F692010875400232FC5 /* AudioVC.h */,
 				A2CB7F6A2010875400232FC5 /* AudioVC.m */,
+				A2127915201184360059ED1F /* Controller */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -1297,11 +1315,13 @@
 				A20D5E231FD14E37000E191D /* RightRevealVC.m in Sources */,
 				A20D5E1D1FD14C7A000E191D /* MainRevealVC.m in Sources */,
 				A22C4D791FFB14AA0079F7C2 /* OpenCVVC.mm in Sources */,
+				A2127918201184630059ED1F /* SoundVC.m in Sources */,
 				A2CB7F662010806E00232FC5 /* MineCell.m in Sources */,
 				A2064FA81FECDBA700ED1C4B /* LandscapeScreenVC.m in Sources */,
 				A20D5DFE1FD14549000E191D /* AppDelegate.m in Sources */,
 				A22C4D391FF4CECE0079F7C2 /* BluetoothCell.m in Sources */,
 				A20D5DFD1FD14549000E191D /* main.m in Sources */,
+				A212791B201189BC0059ED1F /* MusicVC.m in Sources */,
 				A2CB7F6B2010875400232FC5 /* AudioVC.m in Sources */,
 				A28ED5381FD15D8800A74551 /* MarkTableVC.mm in Sources */,
 				A2E4E61B20034ABE00EC3D63 /* GoogleMapVC.m in Sources */,
