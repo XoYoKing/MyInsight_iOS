@@ -32,6 +32,13 @@
     
 }
 
+
+// 播放音乐
+- (void)palyMusic {
+    
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
