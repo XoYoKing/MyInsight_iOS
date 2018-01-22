@@ -103,8 +103,10 @@ const NSString *DuiLieStr = @"音频队列服务";
     }
     if ([selectStr isEqual:YinYueStr]) {
         // 音乐
-        MusicVC *musicVC = [[MusicVC alloc] init];
+        MusicVC *musicVC = [[UIStoryboard storyboardWithName:@"Mine" bundle:NULL] instantiateViewControllerWithIdentifier:@"MusicVC"];
+        //MusicVC *musicVC = [[MusicVC alloc] init];
         musicVC.hidesBottomBarWhenPushed = YES;
+        // MusicVC
         [self.navigationController pushViewController:musicVC animated:YES];
     }
 }

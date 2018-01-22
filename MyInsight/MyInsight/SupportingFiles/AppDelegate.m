@@ -23,8 +23,6 @@
     
     // 设置3D Touch功能
     [self setup3DTouch];
-    // 初始化百度地图
-    [self setupBaiduMaps];
     
     // 设置根视图
     //[self setupRootController];
@@ -36,11 +34,6 @@
     [self.window makeKeyAndVisible];
     
     return YES;
-}
-
-// 设置百度地图
-- (void)setupBaiduMaps {
-    
 }
 
 #pragma mark - 设置3Dtouch功能
