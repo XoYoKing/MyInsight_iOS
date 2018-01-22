@@ -10,7 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 
 
-#define kMusicFile @"刘若英 - 原来你也在这里.mp3"
+#define kMusicFile @"1967"
 #define kMusicSinger @"刘若英"
 #define kMusicTitle @"原来你也在这里"
 
@@ -67,11 +67,11 @@
  */
 - (AVAudioPlayer *)audioPlayer {
     if (!_audioPlayer) {
-        NSString *urlStr = [[NSBundle mainBundle]pathForResource:kMusicFile ofType:nil];
+        NSString *urlStr = [[NSBundle mainBundle] pathForResource:kMusicFile ofType:@"mp3"];
         NSURL *url = [NSURL fileURLWithPath:urlStr];
         NSError *error = nil;
         //初始化播放器，注意这里的Url参数只能时文件路径，不支持HTTP Url
-        _audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:url error:&error];
+        _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
         //设置播放器属性
         _audioPlayer.numberOfLoops = 0;//设置为0不循环
         _audioPlayer.delegate = self;

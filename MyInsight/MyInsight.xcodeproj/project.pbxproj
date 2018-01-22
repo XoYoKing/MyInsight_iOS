@@ -96,6 +96,7 @@
 		A2E4E7212004BFDF00EC3D63 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E71A2004BFDE00EC3D63 /* libavdevice.a */; };
 		A2E4E7222004BFDF00EC3D63 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E71B2004BFDE00EC3D63 /* libswresample.a */; };
 		A2E4E7232004BFDF00EC3D63 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E71C2004BFDE00EC3D63 /* libswscale.a */; };
+		A2F78DB3201630FD00CB4B7B /* 1967.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A2F78DB2201630FD00CB4B7B /* 1967.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -354,6 +355,7 @@
 		A2E4E71A2004BFDE00EC3D63 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavdevice.a; sourceTree = "<group>"; };
 		A2E4E71B2004BFDE00EC3D63 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswresample.a; sourceTree = "<group>"; };
 		A2E4E71C2004BFDE00EC3D63 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswscale.a; sourceTree = "<group>"; };
+		A2F78DB2201630FD00CB4B7B /* 1967.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1967.mp3; sourceTree = "<group>"; };
 		B34F5016CAA45D7BD71933A9 /* Pods-MyInsightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyInsightTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyInsightTests/Pods-MyInsightTests.release.xcconfig"; sourceTree = "<group>"; };
 		D110F761EC3A481896E9E0EB /* libPods-MyInsight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyInsight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -593,6 +595,7 @@
 		A22C4D7A1FFB1B680079F7C2 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				A2F78DB1201630F000CB4B7B /* Music */,
 				A2E4E69F2004BFDD00EC3D63 /* FFmpeg-iOS */,
 				A22C4DA61FFC77790079F7C2 /* YahooMap */,
 				A22C4D7B1FFB1B890079F7C2 /* OpenCV */,
@@ -973,6 +976,15 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		A2F78DB1201630F000CB4B7B /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				A2F78DB2201630FD00CB4B7B /* 1967.mp3 */,
+			);
+			name = Music;
+			path = MyInsight/Music;
+			sourceTree = SOURCE_ROOT;
+		};
 		BC4E574407F0D74F905E6702 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1102,6 +1114,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2F78DB3201630FD00CB4B7B /* 1967.mp3 in Resources */,
 				A22C4DD11FFC777A0079F7C2 /* purple_arrow.png in Resources */,
 				A22C4D3A1FF4CECE0079F7C2 /* BluetoothCell.xib in Resources */,
 				A20D5DFC1FD14549000E191D /* Assets.xcassets in Resources */,
