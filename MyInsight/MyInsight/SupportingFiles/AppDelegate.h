@@ -16,3 +16,12 @@
 
 @end
 
+
+/*
+ 基础：
+ ViewController生命周期
+ 运行时RunTime的知识运用
+ 
+ 
+ */
+
