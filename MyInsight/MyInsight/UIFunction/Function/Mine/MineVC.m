@@ -48,7 +48,7 @@ const NSString *AudioStr = @"Audio";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title  = @"个人";
+    //self.title  = @"个人";
     
     self.dataArray = @[AudioStr];
     

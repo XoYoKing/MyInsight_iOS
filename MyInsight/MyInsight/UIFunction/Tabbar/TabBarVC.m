@@ -12,6 +12,11 @@
 #import "MarkTableVC.h"
 #import "MineVC.h"
 
+#import "BasicVC.h"
+#import "AdvanceVC.h"
+#import "SeniorVC.h"
+#import "OtherVC.h"
+
 @interface TabBarVC ()
 
 @end
@@ -20,30 +25,53 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Demo地址
+    // https://github.com/NJHu/iOSProject
+    
     self.view.backgroundColor = [UIColor whiteColor];
-    // 主页
-    HomeTableVC *homeTableVC = [[HomeTableVC alloc] init];
-    UINavigationController *homeTableNavi = [[UINavigationController alloc] initWithRootViewController:homeTableVC];
-    // 书签
-    MarkTableVC *markTableVC = [[MarkTableVC alloc] init];
-    UINavigationController *markTableNAvi = [[UINavigationController alloc] initWithRootViewController:markTableVC];
-    // 个人
-    MineVC *mineVC = [[MineVC alloc] init];
-    UINavigationController *mineNavi = [[UINavigationController alloc] initWithRootViewController:mineVC];
+    // 基础
+    //HomeTableVC *homeTableVC = [[HomeTableVC alloc] init];
+    //UINavigationController *homeTableNavi = [[UINavigationController alloc] initWithRootViewController:homeTableVC];
+    BasicVC *basicVC = [[BasicVC alloc] init];
+    UINavigationController *basicNavi = [[UINavigationController alloc] initWithRootViewController:basicVC];
+    // 进阶
+    //MarkTableVC *markTableVC = [[MarkTableVC alloc] init];
+    //UINavigationController *markTableNAvi = [[UINavigationController alloc] initWithRootViewController:markTableVC];
+    AdvanceVC *advanceVC = [[AdvanceVC alloc] init];
+    UINavigationController *advanceNavi = [[UINavigationController alloc] initWithRootViewController:advanceVC];
+    // 高级
+    //MineVC *mineVC = [[MineVC alloc] init];
+    //UINavigationController *mineNavi = [[UINavigationController alloc] initWithRootViewController:mineVC];
+    SeniorVC *seniorVC = [[SeniorVC alloc] init];
+    UINavigationController *seniorNavi = [[UINavigationController alloc] initWithRootViewController:seniorVC];
+    // 其他
+    OtherVC *otherVC = [[OtherVC alloc] init];
+    UINavigationController *otherNavi = [[UINavigationController alloc] initWithRootViewController:otherVC];
+    
     // 设置各个tabbar
-    homeTableVC.tabBarItem.image = [UIImage imageNamed:@"home_nor"];
-    homeTableVC.tabBarItem.selectedImage = [UIImage imageNamed:@"home_sel"];
-    homeTableVC.tabBarItem.title = @"主页";
-    markTableVC.tabBarItem.image = [UIImage imageNamed:@"mark_nor"];
-    markTableVC.tabBarItem.selectedImage = [UIImage imageNamed:@"mark_sel"];
-    markTableVC.tabBarItem.title = @"地图";
-    mineVC.tabBarItem.image = [UIImage imageNamed:@"mine_nor"];
-    mineVC.tabBarItem.selectedImage = [UIImage imageNamed:@"mine_sel"];
-    mineVC.tabBarItem.title = @"个人";
+    // 基础
+    basicVC.tabBarItem.image = [UIImage imageNamed:@"home_nor"];
+    basicVC.tabBarItem.selectedImage = [UIImage imageNamed:@"home_sel"];
+    basicVC.tabBarItem.title = @"基础";
+    basicVC.title = basicVC.tabBarItem.title;
+    // 进阶
+    advanceVC.tabBarItem.image = [UIImage imageNamed:@"mark_nor"];
+    advanceVC.tabBarItem.selectedImage = [UIImage imageNamed:@"mark_sel"];
+    advanceVC.tabBarItem.title = @"进阶";
+    advanceVC.title = advanceVC.tabBarItem.title;
+    // 高级
+    seniorVC.tabBarItem.image = [UIImage imageNamed:@"mine_nor"];
+    seniorVC.tabBarItem.selectedImage = [UIImage imageNamed:@"mine_sel"];
+    seniorVC.tabBarItem.title = @"高级";
+    seniorVC.title = seniorVC.tabBarItem.title;
+    // 其他
+    otherVC.tabBarItem.image = [UIImage imageNamed:@"mine_nor"];
+    otherVC.tabBarItem.selectedImage = [UIImage imageNamed:@"mine_sel"];
+    otherVC.tabBarItem.title = @"其他";
+    otherVC.title = otherVC.tabBarItem.title;
     
     // 设置tabbar
-    [self setViewControllers:@[homeTableNavi, markTableNAvi, mineNavi] animated:YES];
-    //[self setViewControllers:@[homeTableVC, markTableVC, mineVC] animated:YES];
+    [self setViewControllers:@[basicNavi, advanceNavi, seniorNavi, otherNavi] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

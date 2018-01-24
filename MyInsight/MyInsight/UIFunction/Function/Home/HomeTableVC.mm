@@ -51,7 +51,7 @@ const NSString *FFmpegStr = @"FFmpeg";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"主页";
+    //self.title = @"主页";
     // 初始化数组
     self.handleDataArray = [NSMutableArray arrayWithArray:@[BlueToothStr, BabyBLEStr, ScreenStr, ScaleStr, OpenCVStr, FFmpegStr]];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];

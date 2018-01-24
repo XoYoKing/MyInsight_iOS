@@ -47,7 +47,7 @@ const NSString *YahooMapsStr = @"YahooMap";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"地图";
+    //self.title = @"地图";
     self.view.backgroundColor = [UIColor whiteColor];
     // 初始化数组
     self.dataArray = [NSMutableArray arrayWithArray:@[BaiduMapStr, SystemMapStr, GoogleMapStr, YahooMapsStr]];
