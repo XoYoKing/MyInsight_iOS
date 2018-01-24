@@ -7,17 +7,63 @@
 //
 
 #import "SeniorVC.h"
+#import <Masonry.h>
 
-@interface SeniorVC ()
-
+@interface SeniorVC ()<UITableViewDelegate, UITableViewDataSource>
+// 列表
+@property (nonatomic, strong) UITableView *tableView;
+// 数组数据
+@property (nonatomic, strong) NSArray *dataArray;
 @end
 
 @implementation SeniorVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // 处理数据
+    [self handleTableViewData];
+    // 创建列表
+    [self creatTableView];
 }
+
+// 处理数据
+- (void)handleTableViewData {
+    
+}
+
+#pragma mark - 创建TableView
+- (void)creatTableView {
+    self.tableView = [[UITableView alloc] init];
+    [self.view addSubview:self.tableView];
+    // 设置代理
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+}
+
+#pragma mark - 实现TableView的代理协议
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+// 生成cell
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NULL;
+}
+
+// 选中cell
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
