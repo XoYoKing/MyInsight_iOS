@@ -65,8 +65,8 @@
     seniorVC.tabBarItem.title = @"高级";
     seniorVC.title = seniorVC.tabBarItem.title;
     // 其他
-    otherVC.tabBarItem.image = [UIImage imageNamed:@"mine_nor"];
-    otherVC.tabBarItem.selectedImage = [UIImage imageNamed:@"mine_sel"];
+    otherVC.tabBarItem.image = [UIImage imageNamed:@"setting_nor"];
+    otherVC.tabBarItem.selectedImage = [UIImage imageNamed:@"setting_sel"];
     otherVC.tabBarItem.title = @"其他";
     otherVC.title = otherVC.tabBarItem.title;
     
