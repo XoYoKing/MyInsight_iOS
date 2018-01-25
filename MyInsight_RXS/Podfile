@@ -6,16 +6,16 @@ target 'MyInsight_RXS' do
   use_frameworks!
 
   # Pods for MyInsight_RXS
-  pod 'RxSwift',    '~> 4.0'
-  pod 'RxCocoa',    '~> 4.0'
-  pod 'Moya/RxSwift' # 网络请求
+  #pod 'RxSwift',    '~> 4.0'
+  #pod 'RxCocoa',    '~> 4.0'
+  #pod 'Moya/RxSwift' # 网络请求
 
   target 'MyInsight_RXSTests' do
     inherit! :search_paths
     # Pods for testing
     
-    pod 'RxBlocking', '~> 4.0'
-    pod 'RxTest',     '~> 4.0'
+    #pod 'RxBlocking', '~> 4.0'
+    #pod 'RxTest',     '~> 4.0'
     
   end
 

@@ -10,8 +10,8 @@ target 'MyInsight_S' do
   target 'MyInsight_STests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'Alamofire', '~> 4.5' # 网络请求
-    pod 'SnapKit', '~> 4.0.0' # 约束布局
+    #pod 'Alamofire', '~> 4.5' # 网络请求
+    #pod 'SnapKit', '~> 4.0.0' # 约束布局
     
     
   end

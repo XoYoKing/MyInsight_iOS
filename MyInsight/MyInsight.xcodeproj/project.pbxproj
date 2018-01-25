@@ -68,6 +68,15 @@
 		A26CE4892018A09A0012EC69 /* OtherVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE4882018A09A0012EC69 /* OtherVC.m */; };
 		A26CE48C2018A0AD0012EC69 /* SeniorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE48B2018A0AD0012EC69 /* SeniorVC.m */; };
 		A26CE48F2018A0BE0012EC69 /* AdvanceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE48E2018A0BE0012EC69 /* AdvanceVC.m */; };
+		A26CE4A3201971C50012EC69 /* BaiduMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE493201971C50012EC69 /* BaiduMapVC.m */; };
+		A26CE4A4201971C50012EC69 /* GoogleMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE496201971C50012EC69 /* GoogleMapVC.m */; };
+		A26CE4A5201971C50012EC69 /* CallOutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE49C201971C50012EC69 /* CallOutAnnotationView.m */; };
+		A26CE4A6201971C50012EC69 /* CustomPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE49D201971C50012EC69 /* CustomPointAnnotation.m */; };
+		A26CE4A7201971C50012EC69 /* YahooMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE49E201971C50012EC69 /* YahooMapVC.m */; };
+		A26CE4A8201971C50012EC69 /* CalloutMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE49F201971C50012EC69 /* CalloutMapAnnotation.m */; };
+		A26CE4A9201971C50012EC69 /* SystemMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE4A2201971C50012EC69 /* SystemMapVC.m */; };
+		A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE4AB201971DC0012EC69 /* MapsVC.m */; };
+		A27E87212019D4B7003E712C /* LiftCycleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E87202019D4B7003E712C /* LiftCycleVC.m */; };
 		A288FB431FEFC7AE00CF85B4 /* ScaleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A288FB421FEFC7AE00CF85B4 /* ScaleVC.m */; };
 		A28ED52F1FD156B600A74551 /* RearRevealVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A28ED52E1FD156B600A74551 /* RearRevealVC.m */; };
 		A28ED5351FD15D7B00A74551 /* HomeTableVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = A28ED5341FD15D7B00A74551 /* HomeTableVC.mm */; };
@@ -86,13 +95,6 @@
 		A2CB7F6B2010875400232FC5 /* AudioVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CB7F6A2010875400232FC5 /* AudioVC.m */; };
 		A2D1DA351FF0E65B00D2F7AE /* BlueToothVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D1DA341FF0E65B00D2F7AE /* BlueToothVC.m */; };
 		A2E4E6022003431800EC3D63 /* FFmpegVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E4E6012003431800EC3D63 /* FFmpegVC.m */; };
-		A2E4E61520034A9400EC3D63 /* CallOutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E4E60F20034A9400EC3D63 /* CallOutAnnotationView.m */; };
-		A2E4E61620034A9400EC3D63 /* CustomPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E4E61020034A9400EC3D63 /* CustomPointAnnotation.m */; };
-		A2E4E61720034A9400EC3D63 /* YahooMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E4E61120034A9400EC3D63 /* YahooMapVC.m */; };
-		A2E4E61820034A9400EC3D63 /* CalloutMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E4E61220034A9400EC3D63 /* CalloutMapAnnotation.m */; };
-		A2E4E61B20034ABE00EC3D63 /* GoogleMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E4E61A20034ABE00EC3D63 /* GoogleMapVC.m */; };
-		A2E4E61E20034B4B00EC3D63 /* BaiduMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E4E61D20034B4B00EC3D63 /* BaiduMapVC.m */; };
-		A2E4E62120034C3D00EC3D63 /* SystemMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E4E62020034C3D00EC3D63 /* SystemMapVC.m */; };
 		A2E4E71D2004BFDF00EC3D63 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7162004BFDE00EC3D63 /* libavutil.a */; };
 		A2E4E71E2004BFDF00EC3D63 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7172004BFDE00EC3D63 /* libavfilter.a */; };
 		A2E4E71F2004BFDF00EC3D63 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7182004BFDE00EC3D63 /* libavcodec.a */; };
@@ -207,6 +209,24 @@
 		A26CE48B2018A0AD0012EC69 /* SeniorVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeniorVC.m; sourceTree = "<group>"; };
 		A26CE48D2018A0BE0012EC69 /* AdvanceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdvanceVC.h; sourceTree = "<group>"; };
 		A26CE48E2018A0BE0012EC69 /* AdvanceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdvanceVC.m; sourceTree = "<group>"; };
+		A26CE492201971C50012EC69 /* BaiduMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMapVC.h; sourceTree = "<group>"; };
+		A26CE493201971C50012EC69 /* BaiduMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiduMapVC.m; sourceTree = "<group>"; };
+		A26CE495201971C50012EC69 /* GoogleMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleMapVC.h; sourceTree = "<group>"; };
+		A26CE496201971C50012EC69 /* GoogleMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleMapVC.m; sourceTree = "<group>"; };
+		A26CE498201971C50012EC69 /* YahooMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YahooMapVC.h; sourceTree = "<group>"; };
+		A26CE499201971C50012EC69 /* CustomPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPointAnnotation.h; sourceTree = "<group>"; };
+		A26CE49A201971C50012EC69 /* CallOutAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallOutAnnotationView.h; sourceTree = "<group>"; };
+		A26CE49B201971C50012EC69 /* CalloutMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalloutMapAnnotation.h; sourceTree = "<group>"; };
+		A26CE49C201971C50012EC69 /* CallOutAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallOutAnnotationView.m; sourceTree = "<group>"; };
+		A26CE49D201971C50012EC69 /* CustomPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPointAnnotation.m; sourceTree = "<group>"; };
+		A26CE49E201971C50012EC69 /* YahooMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YahooMapVC.m; sourceTree = "<group>"; };
+		A26CE49F201971C50012EC69 /* CalloutMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalloutMapAnnotation.m; sourceTree = "<group>"; };
+		A26CE4A1201971C50012EC69 /* SystemMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemMapVC.h; sourceTree = "<group>"; };
+		A26CE4A2201971C50012EC69 /* SystemMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemMapVC.m; sourceTree = "<group>"; };
+		A26CE4AA201971DC0012EC69 /* MapsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapsVC.h; sourceTree = "<group>"; };
+		A26CE4AB201971DC0012EC69 /* MapsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapsVC.m; sourceTree = "<group>"; };
+		A27E871F2019D4B7003E712C /* LiftCycleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiftCycleVC.h; sourceTree = "<group>"; };
+		A27E87202019D4B7003E712C /* LiftCycleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiftCycleVC.m; sourceTree = "<group>"; };
 		A288FB411FEFC7AE00CF85B4 /* ScaleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScaleVC.h; sourceTree = "<group>"; };
 		A288FB421FEFC7AE00CF85B4 /* ScaleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScaleVC.m; sourceTree = "<group>"; };
 		A28ED52D1FD156B600A74551 /* RearRevealVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RearRevealVC.h; sourceTree = "<group>"; };
@@ -237,20 +257,6 @@
 		A2D1DA341FF0E65B00D2F7AE /* BlueToothVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueToothVC.m; sourceTree = "<group>"; };
 		A2E4E6002003431800EC3D63 /* FFmpegVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFmpegVC.h; sourceTree = "<group>"; };
 		A2E4E6012003431800EC3D63 /* FFmpegVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFmpegVC.m; sourceTree = "<group>"; };
-		A2E4E60B20034A9400EC3D63 /* YahooMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YahooMapVC.h; sourceTree = "<group>"; };
-		A2E4E60C20034A9400EC3D63 /* CustomPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPointAnnotation.h; sourceTree = "<group>"; };
-		A2E4E60D20034A9400EC3D63 /* CallOutAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallOutAnnotationView.h; sourceTree = "<group>"; };
-		A2E4E60E20034A9400EC3D63 /* CalloutMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalloutMapAnnotation.h; sourceTree = "<group>"; };
-		A2E4E60F20034A9400EC3D63 /* CallOutAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallOutAnnotationView.m; sourceTree = "<group>"; };
-		A2E4E61020034A9400EC3D63 /* CustomPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPointAnnotation.m; sourceTree = "<group>"; };
-		A2E4E61120034A9400EC3D63 /* YahooMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YahooMapVC.m; sourceTree = "<group>"; };
-		A2E4E61220034A9400EC3D63 /* CalloutMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalloutMapAnnotation.m; sourceTree = "<group>"; };
-		A2E4E61920034ABE00EC3D63 /* GoogleMapVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleMapVC.h; sourceTree = "<group>"; };
-		A2E4E61A20034ABE00EC3D63 /* GoogleMapVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogleMapVC.m; sourceTree = "<group>"; };
-		A2E4E61C20034B4B00EC3D63 /* BaiduMapVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaiduMapVC.h; sourceTree = "<group>"; };
-		A2E4E61D20034B4B00EC3D63 /* BaiduMapVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaiduMapVC.m; sourceTree = "<group>"; };
-		A2E4E61F20034C3D00EC3D63 /* SystemMapVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemMapVC.h; sourceTree = "<group>"; };
-		A2E4E62020034C3D00EC3D63 /* SystemMapVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemMapVC.m; sourceTree = "<group>"; };
 		A2E4E6A22004BFDD00EC3D63 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		A2E4E6A32004BFDD00EC3D63 /* buffersrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersrc.h; sourceTree = "<group>"; };
 		A2E4E6A42004BFDD00EC3D63 /* buffersink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersink.h; sourceTree = "<group>"; };
@@ -670,6 +676,7 @@
 			children = (
 				A26CE48D2018A0BE0012EC69 /* AdvanceVC.h */,
 				A26CE48E2018A0BE0012EC69 /* AdvanceVC.m */,
+				A26CE490201971C50012EC69 /* Maps */,
 			);
 			path = Advance;
 			sourceTree = "<group>";
@@ -679,6 +686,8 @@
 			children = (
 				A26CE4842018A0880012EC69 /* BasicVC.h */,
 				A26CE4852018A0880012EC69 /* BasicVC.m */,
+				A27E871F2019D4B7003E712C /* LiftCycleVC.h */,
+				A27E87202019D4B7003E712C /* LiftCycleVC.m */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -699,6 +708,61 @@
 				A26CE4882018A09A0012EC69 /* OtherVC.m */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		A26CE490201971C50012EC69 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				A26CE4AA201971DC0012EC69 /* MapsVC.h */,
+				A26CE4AB201971DC0012EC69 /* MapsVC.m */,
+				A26CE491201971C50012EC69 /* BaiduMap */,
+				A26CE494201971C50012EC69 /* GoogleMap */,
+				A26CE497201971C50012EC69 /* YahooMap */,
+				A26CE4A0201971C50012EC69 /* SystemMap */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
+		A26CE491201971C50012EC69 /* BaiduMap */ = {
+			isa = PBXGroup;
+			children = (
+				A26CE492201971C50012EC69 /* BaiduMapVC.h */,
+				A26CE493201971C50012EC69 /* BaiduMapVC.m */,
+			);
+			path = BaiduMap;
+			sourceTree = "<group>";
+		};
+		A26CE494201971C50012EC69 /* GoogleMap */ = {
+			isa = PBXGroup;
+			children = (
+				A26CE495201971C50012EC69 /* GoogleMapVC.h */,
+				A26CE496201971C50012EC69 /* GoogleMapVC.m */,
+			);
+			path = GoogleMap;
+			sourceTree = "<group>";
+		};
+		A26CE497201971C50012EC69 /* YahooMap */ = {
+			isa = PBXGroup;
+			children = (
+				A26CE498201971C50012EC69 /* YahooMapVC.h */,
+				A26CE499201971C50012EC69 /* CustomPointAnnotation.h */,
+				A26CE49A201971C50012EC69 /* CallOutAnnotationView.h */,
+				A26CE49B201971C50012EC69 /* CalloutMapAnnotation.h */,
+				A26CE49C201971C50012EC69 /* CallOutAnnotationView.m */,
+				A26CE49D201971C50012EC69 /* CustomPointAnnotation.m */,
+				A26CE49E201971C50012EC69 /* YahooMapVC.m */,
+				A26CE49F201971C50012EC69 /* CalloutMapAnnotation.m */,
+			);
+			path = YahooMap;
+			sourceTree = "<group>";
+		};
+		A26CE4A0201971C50012EC69 /* SystemMap */ = {
+			isa = PBXGroup;
+			children = (
+				A26CE4A1201971C50012EC69 /* SystemMapVC.h */,
+				A26CE4A2201971C50012EC69 /* SystemMapVC.m */,
+			);
+			path = SystemMap;
 			sourceTree = "<group>";
 		};
 		A288FB401FEFC77200CF85B4 /* ScaleView */ = {
@@ -729,10 +793,6 @@
 			children = (
 				A28ED5361FD15D8800A74551 /* MarkTableVC.h */,
 				A28ED5371FD15D8800A74551 /* MarkTableVC.mm */,
-				A2E4E60620034A9300EC3D63 /* BaiduMap */,
-				A2E4E60920034A9300EC3D63 /* GoogleMap */,
-				A2E4E60320034A9300EC3D63 /* SystemMap */,
-				A2E4E60A20034A9400EC3D63 /* YahooMap */,
 			);
 			path = Mark;
 			sourceTree = "<group>";
@@ -789,48 +849,6 @@
 				A2E4E6012003431800EC3D63 /* FFmpegVC.m */,
 			);
 			path = FFmpeg;
-			sourceTree = "<group>";
-		};
-		A2E4E60320034A9300EC3D63 /* SystemMap */ = {
-			isa = PBXGroup;
-			children = (
-				A2E4E61F20034C3D00EC3D63 /* SystemMapVC.h */,
-				A2E4E62020034C3D00EC3D63 /* SystemMapVC.m */,
-			);
-			path = SystemMap;
-			sourceTree = "<group>";
-		};
-		A2E4E60620034A9300EC3D63 /* BaiduMap */ = {
-			isa = PBXGroup;
-			children = (
-				A2E4E61C20034B4B00EC3D63 /* BaiduMapVC.h */,
-				A2E4E61D20034B4B00EC3D63 /* BaiduMapVC.m */,
-			);
-			path = BaiduMap;
-			sourceTree = "<group>";
-		};
-		A2E4E60920034A9300EC3D63 /* GoogleMap */ = {
-			isa = PBXGroup;
-			children = (
-				A2E4E61920034ABE00EC3D63 /* GoogleMapVC.h */,
-				A2E4E61A20034ABE00EC3D63 /* GoogleMapVC.m */,
-			);
-			path = GoogleMap;
-			sourceTree = "<group>";
-		};
-		A2E4E60A20034A9400EC3D63 /* YahooMap */ = {
-			isa = PBXGroup;
-			children = (
-				A2E4E60B20034A9400EC3D63 /* YahooMapVC.h */,
-				A2E4E61120034A9400EC3D63 /* YahooMapVC.m */,
-				A2E4E60C20034A9400EC3D63 /* CustomPointAnnotation.h */,
-				A2E4E60D20034A9400EC3D63 /* CallOutAnnotationView.h */,
-				A2E4E60E20034A9400EC3D63 /* CalloutMapAnnotation.h */,
-				A2E4E60F20034A9400EC3D63 /* CallOutAnnotationView.m */,
-				A2E4E61020034A9400EC3D63 /* CustomPointAnnotation.m */,
-				A2E4E61220034A9400EC3D63 /* CalloutMapAnnotation.m */,
-			);
-			path = YahooMap;
 			sourceTree = "<group>";
 		};
 		A2E4E69F2004BFDD00EC3D63 /* FFmpeg-iOS */ = {
@@ -1373,16 +1391,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A22C4D301FF4A3EF0079F7C2 /* BabyBleVC.m in Sources */,
-				A2E4E62120034C3D00EC3D63 /* SystemMapVC.m in Sources */,
-				A2E4E61720034A9400EC3D63 /* YahooMapVC.m in Sources */,
-				A2E4E61620034A9400EC3D63 /* CustomPointAnnotation.m in Sources */,
+				A26CE4A6201971C50012EC69 /* CustomPointAnnotation.m in Sources */,
 				A2064FA91FECDBA700ED1C4B /* PortraitScreenVC.m in Sources */,
 				A26CE4892018A09A0012EC69 /* OtherVC.m in Sources */,
 				A20D5E231FD14E37000E191D /* RightRevealVC.m in Sources */,
+				A26CE4A8201971C50012EC69 /* CalloutMapAnnotation.m in Sources */,
 				A20D5E1D1FD14C7A000E191D /* MainRevealVC.m in Sources */,
+				A26CE4A4201971C50012EC69 /* GoogleMapVC.m in Sources */,
 				A22C4D791FFB14AA0079F7C2 /* OpenCVVC.mm in Sources */,
 				A26CE4862018A0880012EC69 /* BasicVC.m in Sources */,
+				A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */,
 				A2127918201184630059ED1F /* SoundVC.m in Sources */,
+				A27E87212019D4B7003E712C /* LiftCycleVC.m in Sources */,
 				A2CB7F662010806E00232FC5 /* MineCell.m in Sources */,
 				A26CE48C2018A0AD0012EC69 /* SeniorVC.m in Sources */,
 				A2064FA81FECDBA700ED1C4B /* LandscapeScreenVC.m in Sources */,
@@ -1390,20 +1410,20 @@
 				A22C4D391FF4CECE0079F7C2 /* BluetoothCell.m in Sources */,
 				A20D5DFD1FD14549000E191D /* main.m in Sources */,
 				A26CE48F2018A0BE0012EC69 /* AdvanceVC.m in Sources */,
+				A26CE4A5201971C50012EC69 /* CallOutAnnotationView.m in Sources */,
 				A212791B201189BC0059ED1F /* MusicVC.m in Sources */,
 				A2CB7F6B2010875400232FC5 /* AudioVC.m in Sources */,
 				A28ED5381FD15D8800A74551 /* MarkTableVC.mm in Sources */,
-				A2E4E61B20034ABE00EC3D63 /* GoogleMapVC.m in Sources */,
+				A26CE4A7201971C50012EC69 /* YahooMapVC.m in Sources */,
 				A2D1DA351FF0E65B00D2F7AE /* BlueToothVC.m in Sources */,
-				A2E4E61820034A9400EC3D63 /* CalloutMapAnnotation.m in Sources */,
+				A26CE4A9201971C50012EC69 /* SystemMapVC.m in Sources */,
 				A28ED52F1FD156B600A74551 /* RearRevealVC.m in Sources */,
-				A2E4E61520034A9400EC3D63 /* CallOutAnnotationView.m in Sources */,
+				A26CE4A3201971C50012EC69 /* BaiduMapVC.m in Sources */,
 				A2E4E6022003431800EC3D63 /* FFmpegVC.m in Sources */,
 				A28ED53B1FD15D9A00A74551 /* MineVC.m in Sources */,
 				A28ED5351FD15D7B00A74551 /* HomeTableVC.mm in Sources */,
 				A288FB431FEFC7AE00CF85B4 /* ScaleVC.m in Sources */,
 				A20D5E111FD147CD000E191D /* TabBarVC.m in Sources */,
-				A2E4E61E20034B4B00EC3D63 /* BaiduMapVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
