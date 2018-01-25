@@ -25,11 +25,13 @@
     [self handleTableViewData];
     // 创建列表
     [self creatTableView];
+    // 代码约束布局
+    [self masonryLayoutSubview];
 }
 
 // 处理数据
 - (void)handleTableViewData {
-    
+    self.dataArray = @[@"Socket"];
 }
 
 #pragma mark - 创建TableView
@@ -39,7 +41,11 @@
     // 设置代理
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
+    // 清空多余cell
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    // 注册cell
+    //[self.tableView registerNib:[UINib nibWithNibName:@"MineCell" bundle:nil] forCellReuseIdentifier:@"MineCell"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
 }
 
 #pragma mark - 实现TableView的代理协议
@@ -49,12 +55,22 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.dataArray.count;
 }
 
 // 生成cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return NULL;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    if (cell == nil) {
+        //cell = [[[NSBundle mainBundle]loadNibNamed:@"MineCell" owner:self options:nil] lastObject];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
+    }
+    
+    // 赋值
+    cell.textLabel.text = self.dataArray[indexPath.row];
+    cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+    
+    return cell;
 }
 
 // 选中cell
@@ -62,7 +78,16 @@
     
 }
 
-
+#pragma mark - 代码约束布局
+- (void)masonryLayoutSubview {
+    // TableView
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).offset(0.0f);
+        make.left.equalTo(self.view.mas_left).offset(0.0f);
+        make.right.equalTo(self.view.mas_right).offset(0.0f);
+        make.bottom.equalTo(self.view.mas_bottom).offset(0.0f);
+    }];
+}
 
 
 - (void)didReceiveMemoryWarning {
