@@ -7,7 +7,9 @@
 //
 
 #import "BasicVC.h"
+#import <SWRevealViewController.h>
 #import <Masonry.h>
+#import "LiftCycleVC.h" // 生命周期
 
 @interface BasicVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -19,11 +21,22 @@
 
 @implementation BasicVC
 
-/*
- 生命周期
- 
- */
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    if ([self revealViewController] != NULL) {
+        [[self revealViewController] tapGestureRecognizer];
+        [self.view addGestureRecognizer:[self revealViewController].panGestureRecognizer];
+    }
+}
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    if ([self revealViewController] != NULL) {
+        [self.view removeGestureRecognizer:[self revealViewController].panGestureRecognizer];
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -56,10 +69,12 @@
 }
 
 #pragma mark - 实现TableView的代理协议
+// section个数
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
+// section中cell个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataArray.count;
 }
@@ -82,6 +97,10 @@
 // 选中cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    LiftCycleVC *liftCycleVC = [[LiftCycleVC alloc] init];
+    // 隐藏底部
+    liftCycleVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:liftCycleVC animated:YES];
 }
 
 #pragma mark 代码约束布局

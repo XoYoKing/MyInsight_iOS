@@ -7,6 +7,7 @@
 //
 
 #import "SeniorVC.h"
+#import <SWRevealViewController.h>
 #import <Masonry.h>
 
 @interface SeniorVC ()<UITableViewDelegate, UITableViewDataSource>
@@ -17,6 +18,23 @@
 @end
 
 @implementation SeniorVC
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    if ([self revealViewController] != NULL) {
+        [[self revealViewController] tapGestureRecognizer];
+        [self.view addGestureRecognizer:[self revealViewController].panGestureRecognizer];
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    if ([self revealViewController] != NULL) {
+        [self.view removeGestureRecognizer:[self revealViewController].panGestureRecognizer];
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
