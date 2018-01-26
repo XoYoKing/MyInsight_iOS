@@ -8,9 +8,11 @@
 
 #import "LiftCycleVC.h"
 #import <Masonry.h>
+#import "CommonTool.h" // 共同工具
+#import "Header.h"
 
 @interface LiftCycleVC ()
-// 输出
+// 输出页面
 @property (weak, nonatomic) UITextView *inputTextView;
 
 @end
@@ -20,6 +22,8 @@
 - (void)loadView {
     [super loadView];
     
+    [self life:__FUNCTION__];
+    NSLog(@"%s", __FUNCTION__);
 }
 
 #pragma mark - 生命周期
@@ -29,71 +33,95 @@
     self.title = @"生命周期";
     self.view.backgroundColor = [UIColor whiteColor];
     
+    [self life:__FUNCTION__];
+    NSLog(@"%s", __FUNCTION__);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    
+    [self life:__FUNCTION__];
+    NSLog(@"%s", __FUNCTION__);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
+    [self life:__FUNCTION__];
+    NSLog(@"%s", __FUNCTION__);
 }
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
-    
+    [self life:__FUNCTION__];
+    NSLog(@"%s", __FUNCTION__);
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    
+    [self life:__FUNCTION__];
+    NSLog(@"%s", __FUNCTION__);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    
+    [self life:__FUNCTION__];
+    NSLog(@"%s", __FUNCTION__);
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
-    
+    [self life:__FUNCTION__];
+    NSLog(@"%s", __FUNCTION__);
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     
-    
+    [self life:__FUNCTION__];
+    NSLog(@"%s", __FUNCTION__);
 }
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     
+    [self life:__FUNCTION__];
+    NSLog(@"%s", __FUNCTION__);
 }
 
 // 打印输出函数
-- (void)life:(const char *)fun {
+- (void)life:(const char *)func {
     
+    NSMutableString *strM = [NSMutableString stringWithFormat:@"%@", self.inputTextView.text ?: @""];
+    
+    [strM appendString:[NSString stringWithUTF8String:func]];
+    
+    self.inputTextView.text = [strM.copy stringByAppendingString:@"\n"];
 }
 
 // inputTextView的getter方法
 - (UITextView *)inputTextView {
-    if (self.inputTextView == NULL) {
+    
+    if (_inputTextView == nil) {
         UITextView *textView = [[UITextView alloc] init];
         [self.view addSubview:textView];
         // 代码约束布局
         [textView mas_makeConstraints:^(MASConstraintMaker *make) {
-            
+            make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
         }];
+        
+        textView.backgroundColor = [CommonTool RandomColor]; // 随机颜色
+        textView.textColor = [CommonTool RandomColor];
+        textView.font = AdaptedFontSize(16);
+        
+        _inputTextView = textView;
     }
     
-    return self.inputTextView;
+    return _inputTextView;
 }
 
 /*

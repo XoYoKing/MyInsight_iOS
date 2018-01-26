@@ -77,6 +77,8 @@
 		A26CE4A9201971C50012EC69 /* SystemMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE4A2201971C50012EC69 /* SystemMapVC.m */; };
 		A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE4AB201971DC0012EC69 /* MapsVC.m */; };
 		A27E87212019D4B7003E712C /* LiftCycleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E87202019D4B7003E712C /* LiftCycleVC.m */; };
+		A27E8725201AC49B003E712C /* CommonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E8724201AC49B003E712C /* CommonTool.m */; };
+		A27E8728201AC53C003E712C /* 1967.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A27E8727201AC53C003E712C /* 1967.mp3 */; };
 		A288FB431FEFC7AE00CF85B4 /* ScaleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A288FB421FEFC7AE00CF85B4 /* ScaleVC.m */; };
 		A28ED52F1FD156B600A74551 /* RearRevealVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A28ED52E1FD156B600A74551 /* RearRevealVC.m */; };
 		A28ED5351FD15D7B00A74551 /* HomeTableVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = A28ED5341FD15D7B00A74551 /* HomeTableVC.mm */; };
@@ -102,7 +104,6 @@
 		A2E4E7212004BFDF00EC3D63 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E71A2004BFDE00EC3D63 /* libavdevice.a */; };
 		A2E4E7222004BFDF00EC3D63 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E71B2004BFDE00EC3D63 /* libswresample.a */; };
 		A2E4E7232004BFDF00EC3D63 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E71C2004BFDE00EC3D63 /* libswscale.a */; };
-		A2F78DB3201630FD00CB4B7B /* 1967.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A2F78DB2201630FD00CB4B7B /* 1967.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,6 +228,10 @@
 		A26CE4AB201971DC0012EC69 /* MapsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapsVC.m; sourceTree = "<group>"; };
 		A27E871F2019D4B7003E712C /* LiftCycleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiftCycleVC.h; sourceTree = "<group>"; };
 		A27E87202019D4B7003E712C /* LiftCycleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiftCycleVC.m; sourceTree = "<group>"; };
+		A27E8723201AC49B003E712C /* CommonTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonTool.h; sourceTree = "<group>"; };
+		A27E8724201AC49B003E712C /* CommonTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonTool.m; sourceTree = "<group>"; };
+		A27E8727201AC53C003E712C /* 1967.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1967.mp3; sourceTree = "<group>"; };
+		A27E8729201AC717003E712C /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		A288FB411FEFC7AE00CF85B4 /* ScaleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScaleVC.h; sourceTree = "<group>"; };
 		A288FB421FEFC7AE00CF85B4 /* ScaleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScaleVC.m; sourceTree = "<group>"; };
 		A28ED52D1FD156B600A74551 /* RearRevealVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RearRevealVC.h; sourceTree = "<group>"; };
@@ -373,7 +378,6 @@
 		A2E4E71A2004BFDE00EC3D63 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavdevice.a; sourceTree = "<group>"; };
 		A2E4E71B2004BFDE00EC3D63 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswresample.a; sourceTree = "<group>"; };
 		A2E4E71C2004BFDE00EC3D63 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswscale.a; sourceTree = "<group>"; };
-		A2F78DB2201630FD00CB4B7B /* 1967.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1967.mp3; sourceTree = "<group>"; };
 		B34F5016CAA45D7BD71933A9 /* Pods-MyInsightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyInsightTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyInsightTests/Pods-MyInsightTests.release.xcconfig"; sourceTree = "<group>"; };
 		D110F761EC3A481896E9E0EB /* libPods-MyInsight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyInsight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -498,6 +502,7 @@
 		A20D5D6D1FCFFB37000E191D /* MyInsight */ = {
 			isa = PBXGroup;
 			children = (
+				A27E8722201AC471003E712C /* General */,
 				A20D5DF61FD14549000E191D /* UIFunction */,
 				A20D5DF41FD14549000E191D /* StoryBoard */,
 				A20D5DED1FD14549000E191D /* SupportingFiles */,
@@ -617,7 +622,7 @@
 		A22C4D7A1FFB1B680079F7C2 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				A2F78DB1201630F000CB4B7B /* Music */,
+				A27E8726201AC53C003E712C /* Music */,
 				A2E4E69F2004BFDD00EC3D63 /* FFmpeg-iOS */,
 				A22C4DA61FFC77790079F7C2 /* YahooMap */,
 				A22C4D7B1FFB1B890079F7C2 /* OpenCV */,
@@ -763,6 +768,24 @@
 				A26CE4A2201971C50012EC69 /* SystemMapVC.m */,
 			);
 			path = SystemMap;
+			sourceTree = "<group>";
+		};
+		A27E8722201AC471003E712C /* General */ = {
+			isa = PBXGroup;
+			children = (
+				A27E8723201AC49B003E712C /* CommonTool.h */,
+				A27E8724201AC49B003E712C /* CommonTool.m */,
+				A27E8729201AC717003E712C /* Header.h */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		A27E8726201AC53C003E712C /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				A27E8727201AC53C003E712C /* 1967.mp3 */,
+			);
+			path = Music;
 			sourceTree = "<group>";
 		};
 		A288FB401FEFC77200CF85B4 /* ScaleView */ = {
@@ -1046,15 +1069,6 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
-		A2F78DB1201630F000CB4B7B /* Music */ = {
-			isa = PBXGroup;
-			children = (
-				A2F78DB2201630FD00CB4B7B /* 1967.mp3 */,
-			);
-			name = Music;
-			path = MyInsight/Music;
-			sourceTree = SOURCE_ROOT;
-		};
 		BC4E574407F0D74F905E6702 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1184,7 +1198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2F78DB3201630FD00CB4B7B /* 1967.mp3 in Resources */,
+				A27E8728201AC53C003E712C /* 1967.mp3 in Resources */,
 				A22C4DD11FFC777A0079F7C2 /* purple_arrow.png in Resources */,
 				A22C4D3A1FF4CECE0079F7C2 /* BluetoothCell.xib in Resources */,
 				A20D5DFC1FD14549000E191D /* Assets.xcassets in Resources */,
@@ -1406,6 +1420,7 @@
 				A2CB7F662010806E00232FC5 /* MineCell.m in Sources */,
 				A26CE48C2018A0AD0012EC69 /* SeniorVC.m in Sources */,
 				A2064FA81FECDBA700ED1C4B /* LandscapeScreenVC.m in Sources */,
+				A27E8725201AC49B003E712C /* CommonTool.m in Sources */,
 				A20D5DFE1FD14549000E191D /* AppDelegate.m in Sources */,
 				A22C4D391FF4CECE0079F7C2 /* BluetoothCell.m in Sources */,
 				A20D5DFD1FD14549000E191D /* main.m in Sources */,
