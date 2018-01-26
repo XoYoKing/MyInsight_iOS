@@ -8,10 +8,6 @@
 
 #import "TabBarVC.h"
 
-#import "HomeTableVC.h"
-#import "MarkTableVC.h"
-#import "MineVC.h"
-
 #import "BasicVC.h"
 #import "AdvanceVC.h"
 #import "SeniorVC.h"
@@ -30,18 +26,12 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     // 基础
-    //HomeTableVC *homeTableVC = [[HomeTableVC alloc] init];
-    //UINavigationController *homeTableNavi = [[UINavigationController alloc] initWithRootViewController:homeTableVC];
     BasicVC *basicVC = [[BasicVC alloc] init];
     UINavigationController *basicNavi = [[UINavigationController alloc] initWithRootViewController:basicVC];
     // 进阶
-    //MarkTableVC *markTableVC = [[MarkTableVC alloc] init];
-    //UINavigationController *markTableNAvi = [[UINavigationController alloc] initWithRootViewController:markTableVC];
     AdvanceVC *advanceVC = [[AdvanceVC alloc] init];
     UINavigationController *advanceNavi = [[UINavigationController alloc] initWithRootViewController:advanceVC];
     // 高级
-    //MineVC *mineVC = [[MineVC alloc] init];
-    //UINavigationController *mineNavi = [[UINavigationController alloc] initWithRootViewController:mineVC];
     SeniorVC *seniorVC = [[SeniorVC alloc] init];
     UINavigationController *seniorNavi = [[UINavigationController alloc] initWithRootViewController:seniorVC];
     // 其他

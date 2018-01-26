@@ -1,33 +1,25 @@
 //
-//  MapsVC.m
+//  RunTimeVC.m
 //  MyInsight
 //
-//  Created by SongMenglong on 2018/1/25.
+//  Created by SongMenglong on 2018/1/26.
 //  Copyright © 2018年 SongMenglong. All rights reserved.
 //
 
-#import "MapsVC.h"
+#import "RunTimeVC.h"
 
-@interface MapsVC ()
+@interface RunTimeVC ()
 
-// 数据数组
-@property (nonatomic, strong) NSArray *dataArray;
+// 输出
+@property (weak, nonatomic) UITextView *inputTextView;
 
 @end
 
-// 定义字符串
-const NSString *BaiduMapStr = @"百度地图";
-const NSString *SystemMapStr = @"系统(高德)地图";
-const NSString *GoogleMapStr = @"谷歌地图";
-const NSString *YahooMapsStr = @"YahooMap";
+@implementation RunTimeVC
 
-@implementation MapsVC
-
+#pragma mark - 运行时
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // 初始化数组
-    self.dataArray = [NSMutableArray arrayWithArray:@[BaiduMapStr, SystemMapStr, GoogleMapStr, YahooMapsStr]];
     
 }
 

@@ -10,6 +10,10 @@
 #import <SWRevealViewController.h>
 #import <Masonry.h>
 #import "MapsVC.h" // 地图
+#import "PortraitScreenVC.h" // 竖屏
+#import "ScaleVC.h" // 三等分约束布局
+#import "BlueToothVC.h" // 蓝牙(系统)
+#import "BabyBleVC.h" // 蓝牙(三方)
 
 @interface AdvanceVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -18,6 +22,12 @@
 @property (nonatomic, strong) NSArray *dataArray;
 
 @end
+
+// 定义字符串
+const NSString *ScreenStr = @"横竖屏";
+const NSString *ScaleStr = @"自动比例约束布局";
+const NSString *BlueToothStr = @"蓝牙(系统)";
+const NSString *BabyBLEStr = @"蓝牙(三方)";
 
 @implementation AdvanceVC
 
@@ -50,7 +60,7 @@
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[@"指纹解锁", @"地图"];
+    self.dataArray = @[@"指纹解锁", @"地图", BlueToothStr, BabyBLEStr, ScreenStr, ScaleStr];
 }
 
 #pragma mark - 创建TableView
@@ -95,7 +105,33 @@
 
 // 选中cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 获取字符串
+    NSString *indexString = [self.dataArray objectAtIndex:indexPath.row];
     
+    if ([indexString isEqual:ScreenStr]) {
+        // 横竖屏
+        PortraitScreenVC *portraitScreenVC = [[PortraitScreenVC alloc] init];
+        portraitScreenVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:portraitScreenVC animated:YES];
+    }
+    if ([indexString isEqual:ScaleStr]) {
+        // 等分布局
+        ScaleVC *scaleVC = [[UIStoryboard storyboardWithName:@"Home" bundle:NULL] instantiateViewControllerWithIdentifier:@"ScaleVC"];
+        scaleVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:scaleVC animated:YES];
+    }
+    if ([indexString isEqual:BlueToothStr]) {
+        // 蓝牙(系统)
+        BlueToothVC *blueToothVC = [[BlueToothVC alloc] init];
+        blueToothVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:blueToothVC animated:YES];
+    }
+    if ([indexString isEqual:BabyBLEStr]) {
+        // 蓝牙(三方)
+        BabyBleVC *babyBleVC = [[BabyBleVC alloc] init];
+        babyBleVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:babyBleVC animated:YES];
+    }
 }
 
 #pragma mark - 代码约束布局

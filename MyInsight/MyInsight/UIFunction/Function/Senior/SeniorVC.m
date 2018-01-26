@@ -9,6 +9,9 @@
 #import "SeniorVC.h"
 #import <SWRevealViewController.h>
 #import <Masonry.h>
+#import "OpenCVVC.h" // OpenCV
+#import "FFmpegVC.h" // FFmpegVC
+#import "AudioVC.h"
 
 @interface SeniorVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -16,6 +19,14 @@
 // 数组数据
 @property (nonatomic, strong) NSArray *dataArray;
 @end
+
+const NSString *OpenCVStr = @"OpenCV";
+const NSString *FFmpegStr = @"FFmpeg";
+/*
+ 设定功能：
+ 音频学习
+ */
+const NSString *AudioStr = @"Audio";
 
 @implementation SeniorVC
 
@@ -49,7 +60,7 @@
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[@"Socket"];
+    self.dataArray = @[@"Socket", OpenCVStr, FFmpegStr, AudioStr];
 }
 
 #pragma mark - 创建TableView
@@ -93,7 +104,27 @@
 
 // 选中cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 获取字符串
+    NSString *indexString = [self.dataArray objectAtIndex:indexPath.row];
     
+    if ([indexString isEqual:OpenCVStr]) {
+        // OpenCV
+        OpenCVVC *openCVVC = [[UIStoryboard storyboardWithName:@"Home" bundle:NULL] instantiateViewControllerWithIdentifier:@"OpenCVVC"];
+        openCVVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:openCVVC animated:YES];
+    }
+    if ([indexString isEqual:FFmpegStr]) {
+        // FFmpeg
+        FFmpegVC *ffmpegVC = [[FFmpegVC alloc] init];
+        ffmpegVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:ffmpegVC animated:YES];
+    }
+    if ([indexString isEqual:AudioStr]) {
+        NSLog(@"搞一搞饮品啊");
+        AudioVC *audioVC = [[AudioVC alloc] init];
+        audioVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:audioVC animated:YES];
+    }
 }
 
 #pragma mark - 代码约束布局
