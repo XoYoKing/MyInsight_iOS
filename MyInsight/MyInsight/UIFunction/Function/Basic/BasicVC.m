@@ -13,6 +13,12 @@
 #import "RunTimeVC.h"
 
 @interface BasicVC ()<UITableViewDelegate, UITableViewDataSource>
+
+// LEFT
+@property (nonatomic, strong) UIBarButtonItem *leftBarButtonItem;
+// RIGHT
+@property (nonatomic, strong) UIBarButtonItem *rightBarButtonItem;
+
 // 列表
 @property (nonatomic, strong) UITableView *tableView;
 // 数组数据
@@ -41,6 +47,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // 左右button
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"左边" style:UIBarButtonItemStylePlain target:[self revealViewController] action:@selector(revealToggle:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Right" style:UIBarButtonItemStylePlain target:[self revealViewController] action:@selector(rightRevealToggle:)];
     
     // 处理数据
     [self handleTableViewData];

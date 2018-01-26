@@ -238,6 +238,7 @@
 		A27E8759201AD2B2003E712C /* MusicVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicVC.h; sourceTree = "<group>"; };
 		A27E875A201AD2B2003E712C /* SoundVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundVC.h; sourceTree = "<group>"; };
 		A27E875B201AD2B2003E712C /* AudioVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioVC.m; sourceTree = "<group>"; };
+		A27E875F201AD490003E712C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		A28ED52D1FD156B600A74551 /* RearRevealVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RearRevealVC.h; sourceTree = "<group>"; };
 		A28ED52E1FD156B600A74551 /* RearRevealVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RearRevealVC.m; sourceTree = "<group>"; };
 		A28ED53C1FD2494800A74551 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -739,6 +740,7 @@
 				A27E8723201AC49B003E712C /* CommonTool.h */,
 				A27E8724201AC49B003E712C /* CommonTool.m */,
 				A27E8729201AC717003E712C /* Header.h */,
+				A27E875F201AD490003E712C /* PrefixHeader.pch */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -1539,6 +1541,8 @@
 					"$(PROJECT_DIR)/MyInsight/Vendors/YahooMap",
 				);
 				GCC_INPUT_FILETYPE = automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MyInsight/General/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MyInsight/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1572,6 +1576,8 @@
 					"$(PROJECT_DIR)/MyInsight/Vendors/YahooMap",
 				);
 				GCC_INPUT_FILETYPE = automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MyInsight/General/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MyInsight/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
