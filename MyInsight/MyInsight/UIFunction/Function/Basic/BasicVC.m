@@ -26,6 +26,11 @@
 
 @end
 
+const NSString *LiftCycleStr = @"ViewController生命周期";
+const NSString *RunTimeStr = @"运行时RunTime";
+//const NSString *BlueToothStr = @"蓝牙(系统)";
+//const NSString *BabyBLEStr = @"蓝牙(三方)";
+
 @implementation BasicVC
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -62,7 +67,7 @@
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[@"ViewController生命周期", @"运行时RunTime", @"协议"];
+    self.dataArray = @[LiftCycleStr, RunTimeStr, @"协议"];
 }
 
 #pragma mark - 创建TableView
@@ -107,11 +112,21 @@
 
 // 选中cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 获取到当前cell的字符串
+    NSString *indexString = [self.dataArray objectAtIndex:indexPath.row];
     
-    LiftCycleVC *liftCycleVC = [[LiftCycleVC alloc] init];
-    // 隐藏底部
-    liftCycleVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:liftCycleVC animated:YES];
+    // 生命周期
+    if ([indexString isEqual:LiftCycleStr]) {
+        LiftCycleVC *liftCycleVC = [[LiftCycleVC alloc] init];
+        // 隐藏底部
+        liftCycleVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:liftCycleVC animated:YES];
+    }
+    // 运行时
+    if ([indexString isEqual:RunTimeStr]) {
+        
+    }
+    
 }
 
 #pragma mark 代码约束布局
