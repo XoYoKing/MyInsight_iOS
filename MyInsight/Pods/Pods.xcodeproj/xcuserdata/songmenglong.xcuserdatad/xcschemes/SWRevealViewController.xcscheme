@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "45A56536F77CCF5E649F4CADF6A0A279"
+               BlueprintIdentifier = "4D19AA92D107ACD0B72C31570B6DD842"
                BuildableName = "libSWRevealViewController.a"
                BlueprintName = "SWRevealViewController"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "45A56536F77CCF5E649F4CADF6A0A279"
+            BlueprintIdentifier = "4D19AA92D107ACD0B72C31570B6DD842"
             BuildableName = "libSWRevealViewController.a"
             BlueprintName = "SWRevealViewController"
             ReferencedContainer = "container:Pods.xcodeproj">

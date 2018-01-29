@@ -12,6 +12,7 @@ target 'MyInsight' do
   pod 'BaiduMapKit' #百度地图SDK
   pod 'GoogleMaps' # Goole地图
   pod 'BabyBluetooth' # 蓝牙
+  pod 'AFNetworking', '~> 3.0' # 网络请求
   
   target 'MyInsightTests' do
     inherit! :search_paths
