@@ -774,13 +774,13 @@
 		A27E873D201ACF6A003E712C /* BlueTooth */ = {
 			isa = PBXGroup;
 			children = (
-				A27E873E201ACF6A003E712C /* BlueToothVC.m */,
-				A27E873F201ACF6A003E712C /* BabyBleVC.m */,
-				A27E8740201ACF6A003E712C /* BluetoothCell.xib */,
-				A27E8741201ACF6A003E712C /* BluetoothCell.h */,
-				A27E8742201ACF6A003E712C /* BabyBleVC.h */,
 				A27E8743201ACF6A003E712C /* BlueToothVC.h */,
+				A27E873E201ACF6A003E712C /* BlueToothVC.m */,
+				A27E8742201ACF6A003E712C /* BabyBleVC.h */,
+				A27E873F201ACF6A003E712C /* BabyBleVC.m */,
+				A27E8741201ACF6A003E712C /* BluetoothCell.h */,
 				A27E8744201ACF6A003E712C /* BluetoothCell.m */,
+				A27E8740201ACF6A003E712C /* BluetoothCell.xib */,
 			);
 			path = BlueTooth;
 			sourceTree = "<group>";
