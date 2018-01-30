@@ -1,29 +1,21 @@
-# MyInsight_iOS
-My insght Demo of iOS
+# iOS DEMO小集
+关于iOS知识和功能的DEMO小集合，代码语言OC，关于Swift版本的Demo小集合尚未整理。
 
+基础：
 
+生命周期、RunTime、协议
 
+进阶：
 
+抽屉、横竖屏切换、蓝牙、地图、网络请求、数据解析
 
-MyInsight:
+高级：
 
-用OC整理iOS常用的方方面面；
+OpenCV、ffmpeg、音频、Socket
 
-有抽屉、横竖屏切换、各种地图、蓝牙、网络请求、数据解析、OpenCV、ffmpeg等
+其他：
 
-
-
-
-
-MyInsight_RXS:
-
-准备写RXSwfit有关的demo
-
-
-
-MyInsight_S：
-
-用swift整理iOS常用的知识面：
+百思不得姐、糗事百科
 
 
 
