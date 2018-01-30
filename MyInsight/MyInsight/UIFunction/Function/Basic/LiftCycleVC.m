@@ -23,7 +23,6 @@
     [super loadView];
     
     [self life:__FUNCTION__];
-    NSLog(@"%s", __FUNCTION__);
 }
 
 #pragma mark - 生命周期
@@ -34,67 +33,60 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self life:__FUNCTION__];
-    NSLog(@"%s", __FUNCTION__);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     [self life:__FUNCTION__];
-    NSLog(@"%s", __FUNCTION__);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
     [self life:__FUNCTION__];
-    NSLog(@"%s", __FUNCTION__);
 }
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
     [self life:__FUNCTION__];
-    NSLog(@"%s", __FUNCTION__);
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
     [self life:__FUNCTION__];
-    NSLog(@"%s", __FUNCTION__);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     [self life:__FUNCTION__];
-    NSLog(@"%s", __FUNCTION__);
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
     [self life:__FUNCTION__];
-    NSLog(@"%s", __FUNCTION__);
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     
     [self life:__FUNCTION__];
-    NSLog(@"%s", __FUNCTION__);
 }
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     
     [self life:__FUNCTION__];
-    NSLog(@"%s", __FUNCTION__);
 }
 
 // 打印输出函数
 - (void)life:(const char *)func {
+    
+    NSLog(@"%s", __FUNCTION__);
     
     NSMutableString *strM = [NSMutableString stringWithFormat:@"%@", self.inputTextView.text ?: @""];
     

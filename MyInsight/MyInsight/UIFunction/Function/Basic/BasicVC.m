@@ -10,7 +10,7 @@
 #import <SWRevealViewController.h>
 #import <Masonry.h>
 #import "LiftCycleVC.h" // 生命周期
-#import "RunTimeVC.h"
+#import "RunTimeVC.h" // 运行时
 
 @interface BasicVC ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -28,8 +28,9 @@
 
 const NSString *LiftCycleStr = @"ViewController生命周期";
 const NSString *RunTimeStr = @"运行时RunTime";
-//const NSString *BlueToothStr = @"蓝牙(系统)";
-//const NSString *BabyBLEStr = @"蓝牙(三方)";
+const NSString *ShouShiStr = @"手势";
+const NSString *XieYiStr = @"协议";
+const NSString *DongHuaStr = @"动画";
 
 @implementation BasicVC
 
@@ -67,7 +68,7 @@ const NSString *RunTimeStr = @"运行时RunTime";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[LiftCycleStr, RunTimeStr, @"协议"];
+    self.dataArray = @[LiftCycleStr, RunTimeStr, ShouShiStr, XieYiStr, DongHuaStr];
 }
 
 #pragma mark - 创建TableView
