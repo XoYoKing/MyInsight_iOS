@@ -1,5 +1,5 @@
-# iOS DEMO小集合
-关于iOS知识和功能的DEMO小集合，代码语言OC，关于Swift版本的Demo小集合尚未整理。
+# iOS DEMO合集
+关于iOS知识和功能的DEMO合集，代码语言OC，关于Swift版本的Demo合集尚未整理。
 
 基础：
 
