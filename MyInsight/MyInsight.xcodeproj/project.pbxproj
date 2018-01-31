@@ -93,6 +93,7 @@
 		A2A30BA62008BC5F00C974B7 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30BA52008BC5F00C974B7 /* libiconv.tbd */; };
 		A2A30BA82008C03E00C974B7 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30BA72008C03E00C974B7 /* libbz2.tbd */; };
 		A2A30BAA2008C04F00C974B7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30BA92008C04F00C974B7 /* libz.tbd */; };
+		A2CA807E2021568D00D81845 /* TouchIDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA807D2021568D00D81845 /* TouchIDVC.m */; };
 		A2E4E71D2004BFDF00EC3D63 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7162004BFDE00EC3D63 /* libavutil.a */; };
 		A2E4E71E2004BFDF00EC3D63 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7172004BFDE00EC3D63 /* libavfilter.a */; };
 		A2E4E71F2004BFDF00EC3D63 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7182004BFDE00EC3D63 /* libavcodec.a */; };
@@ -252,6 +253,8 @@
 		A2A30BA52008BC5F00C974B7 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		A2A30BA72008C03E00C974B7 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		A2A30BA92008C04F00C974B7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		A2CA807C2021568D00D81845 /* TouchIDVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchIDVC.h; sourceTree = "<group>"; };
+		A2CA807D2021568D00D81845 /* TouchIDVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIDVC.m; sourceTree = "<group>"; };
 		A2E4E6A22004BFDD00EC3D63 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		A2E4E6A32004BFDD00EC3D63 /* buffersrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersrc.h; sourceTree = "<group>"; };
 		A2E4E6A42004BFDD00EC3D63 /* buffersink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersink.h; sourceTree = "<group>"; };
@@ -637,6 +640,7 @@
 			children = (
 				A26CE48D2018A0BE0012EC69 /* AdvanceVC.h */,
 				A26CE48E2018A0BE0012EC69 /* AdvanceVC.m */,
+				A2CA807B2021567600D81845 /* TouchID */,
 				A27E873D201ACF6A003E712C /* BlueTooth */,
 				A27E874A201ACF6A003E712C /* ScaleView */,
 				A27E8745201ACF6A003E712C /* Screen */,
@@ -824,6 +828,15 @@
 				A27E875A201AD2B2003E712C /* SoundVC.h */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A2CA807B2021567600D81845 /* TouchID */ = {
+			isa = PBXGroup;
+			children = (
+				A2CA807C2021568D00D81845 /* TouchIDVC.h */,
+				A2CA807D2021568D00D81845 /* TouchIDVC.m */,
+			);
+			path = TouchID;
 			sourceTree = "<group>";
 		};
 		A2E4E69F2004BFDD00EC3D63 /* FFmpeg-iOS */ = {
@@ -1358,6 +1371,7 @@
 				A27E874D201ACF6A003E712C /* BlueToothVC.m in Sources */,
 				A27E8751201ACF6A003E712C /* LandscapeScreenVC.m in Sources */,
 				A26CE4A6201971C50012EC69 /* CustomPointAnnotation.m in Sources */,
+				A2CA807E2021568D00D81845 /* TouchIDVC.m in Sources */,
 				A27E873C201ACD5E003E712C /* FFmpegVC.m in Sources */,
 				A26CE4892018A09A0012EC69 /* OtherVC.m in Sources */,
 				A27E875E201AD2B2003E712C /* AudioVC.m in Sources */,

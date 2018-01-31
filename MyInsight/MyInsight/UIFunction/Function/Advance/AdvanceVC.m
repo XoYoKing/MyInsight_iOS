@@ -9,6 +9,7 @@
 #import "AdvanceVC.h"
 #import <SWRevealViewController.h>
 #import <Masonry.h>
+#import "TouchIDVC.h" // TouchID
 #import "MapsVC.h" // 地图
 #import "PortraitScreenVC.h" // 竖屏
 #import "ScaleVC.h" // 三等分约束布局
@@ -24,6 +25,8 @@
 @end
 
 // 定义字符串
+const NSString *TouchIDStr = @"TouchID";
+const NSString *MapsStr = @"地图";
 const NSString *ScreenStr = @"横竖屏";
 const NSString *ScaleStr = @"自动比例约束布局";
 const NSString *BlueToothStr = @"蓝牙(系统)";
@@ -65,7 +68,7 @@ const NSString *BabyBLEStr = @"蓝牙(三方)";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[@"指纹解锁", @"地图", BlueToothStr, BabyBLEStr, ScreenStr, ScaleStr];
+    self.dataArray = @[TouchIDStr, MapsStr, BlueToothStr, BabyBLEStr, ScreenStr, ScaleStr];
 }
 
 #pragma mark - 创建TableView
@@ -113,6 +116,12 @@ const NSString *BabyBLEStr = @"蓝牙(三方)";
     // 获取字符串
     NSString *indexString = [self.dataArray objectAtIndex:indexPath.row];
     
+    if ([indexString isEqual:TouchIDStr]) {
+        // TouchID
+        TouchIDVC *touchIDVC = [[TouchIDVC alloc] init];
+        touchIDVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:touchIDVC animated:YES];
+    }
     if ([indexString isEqual:ScreenStr]) {
         // 横竖屏
         PortraitScreenVC *portraitScreenVC = [[PortraitScreenVC alloc] init];
