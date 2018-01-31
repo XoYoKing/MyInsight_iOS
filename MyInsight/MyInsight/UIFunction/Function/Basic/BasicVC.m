@@ -11,6 +11,7 @@
 #import <Masonry.h>
 #import "LiftCycleVC.h" // 生命周期
 #import "RunTimeVC.h" // 运行时
+#import "AnimationVC.h"
 
 @interface BasicVC ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -30,7 +31,7 @@ const NSString *LiftCycleStr = @"ViewController生命周期";
 const NSString *RunTimeStr = @"运行时RunTime";
 const NSString *ShouShiStr = @"手势";
 const NSString *XieYiStr = @"协议";
-const NSString *DongHuaStr = @"动画";
+const NSString *AnimationStr = @"动画";
 
 @implementation BasicVC
 
@@ -68,7 +69,7 @@ const NSString *DongHuaStr = @"动画";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[LiftCycleStr, RunTimeStr, ShouShiStr, XieYiStr, DongHuaStr];
+    self.dataArray = @[LiftCycleStr, RunTimeStr, ShouShiStr, XieYiStr, AnimationStr];
 }
 
 #pragma mark - 创建TableView
@@ -107,6 +108,7 @@ const NSString *DongHuaStr = @"动画";
     // 赋值
     cell.textLabel.text = self.dataArray[indexPath.row];
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }
@@ -116,16 +118,24 @@ const NSString *DongHuaStr = @"动画";
     // 获取到当前cell的字符串
     NSString *indexString = [self.dataArray objectAtIndex:indexPath.row];
     
-    // 生命周期
     if ([indexString isEqual:LiftCycleStr]) {
+        // 生命周期
         LiftCycleVC *liftCycleVC = [[LiftCycleVC alloc] init];
-        // 隐藏底部
         liftCycleVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:liftCycleVC animated:YES];
     }
-    // 运行时
+    
     if ([indexString isEqual:RunTimeStr]) {
-        
+        // 运行时
+        RunTimeVC *runTimeVC = [[RunTimeVC alloc] init];
+        runTimeVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:runTimeVC animated:YES];
+    }
+    if ([indexString isEqual:AnimationStr]) {
+        // 动画
+        AnimationVC *animationVC = [[AnimationVC alloc] init];
+        animationVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:animationVC animated:YES];
     }
     
 }
