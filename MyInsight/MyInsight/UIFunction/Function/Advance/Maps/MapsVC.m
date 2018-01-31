@@ -7,9 +7,15 @@
 //
 
 #import "MapsVC.h"
+#import <Masonry.h>
+#import "BaiduMapVC.h"
+#import "SystemMapVC.h"
+#import "GoogleMapVC.h"
+#import "YahooMapVC.h"
 
-@interface MapsVC ()
-
+@interface MapsVC ()<UITableViewDelegate, UITableViewDataSource>
+// 列表
+@property (nonatomic, strong) UITableView *tableView;
 // 数据数组
 @property (nonatomic, strong) NSArray *dataArray;
 
@@ -26,9 +32,101 @@ const NSString *YahooMapsStr = @"YahooMap";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"地图";
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self handleTableViewData];
+    
+    [self creatTableView];
+    
+    [self masonryLayoutSubview];
+}
+
+// 处理数据
+- (void)handleTableViewData {
     // 初始化数组
     self.dataArray = [NSMutableArray arrayWithArray:@[BaiduMapStr, SystemMapStr, GoogleMapStr, YahooMapsStr]];
+}
+
+#pragma mark - 创建TableView
+- (void)creatTableView {
+    self.tableView = [[UITableView alloc] init];
+    [self.view addSubview:self.tableView];
+    // 设置代理
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    // 清空多余cell
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    // 注册cell
+    //[self.tableView registerNib:[UINib nibWithNibName:@"MineCell" bundle:nil] forCellReuseIdentifier:@"MineCell"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+}
+
+#pragma mark - 实现TableView的代理协议
+// section个数
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+// section中cell的个数
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArray.count;
+}
+
+// 生成cell
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    if (cell == nil) {
+        //cell = [[[NSBundle mainBundle]loadNibNamed:@"MineCell" owner:self options:nil] lastObject];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
+    }
     
+    // 赋值
+    cell.textLabel.text = self.dataArray[indexPath.row];
+    cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+    
+    return cell;
+}
+
+// 选中cell
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 获取字符串
+    NSString *indexString = [self.dataArray objectAtIndex:indexPath.row];
+    if ([indexString isEqual:BaiduMapStr]) {
+        // BaiDu
+        BaiduMapVC *baiduMapVC = [[BaiduMapVC alloc] init];
+        baiduMapVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:baiduMapVC animated:YES];
+    }
+    if ([indexString isEqual:SystemMapStr]) {
+        //
+        SystemMapVC *systemMapVC = [[SystemMapVC alloc] init];
+        systemMapVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:systemMapVC animated:YES];
+    }
+    if ([indexString isEqual:GoogleMapStr]) {
+        // Google
+        GoogleMapVC *googleMapVC = [[GoogleMapVC alloc] init];
+        googleMapVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:googleMapVC animated:YES];
+    }
+    if ([indexString isEqual:YahooMapsStr]) {
+        // Yahoo
+        YahooMapVC *yahooMapVC = [[YahooMapVC alloc] init];
+        yahooMapVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:yahooMapVC animated:YES];
+    }
+}
+
+#pragma mark - 代码约束布局
+- (void)masonryLayoutSubview {
+    // TableView
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).offset(0.0f);
+        make.left.equalTo(self.view.mas_left).offset(0.0f);
+        make.right.equalTo(self.view.mas_right).offset(0.0f);
+        make.bottom.equalTo(self.view.mas_bottom).offset(0.0f);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

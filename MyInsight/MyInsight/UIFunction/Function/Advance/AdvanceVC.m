@@ -122,6 +122,12 @@ const NSString *BabyBLEStr = @"蓝牙(三方)";
         touchIDVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:touchIDVC animated:YES];
     }
+    if ([indexString isEqual:MapsStr]) {
+        //  地图
+        MapsVC *mapsVC = [[MapsVC alloc] init];
+        mapsVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:mapsVC animated:YES];
+    }
     if ([indexString isEqual:ScreenStr]) {
         // 横竖屏
         PortraitScreenVC *portraitScreenVC = [[PortraitScreenVC alloc] init];
