@@ -12,6 +12,9 @@
 #import "LiftCycleVC.h" // 生命周期
 #import "RunTimeVC.h" // 运行时
 #import "AnimationVC.h"
+#import "DataBaseVC.h"
+#import "TableViewVC.h"
+#import "CollectionViewVC.h"
 
 @interface BasicVC ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -27,11 +30,14 @@
 
 @end
 
-const NSString *LiftCycleStr = @"ViewController生命周期";
+const NSString *LiftCycleStr = @"VC生命周期";
 const NSString *RunTimeStr = @"运行时RunTime";
 const NSString *ShouShiStr = @"手势";
 const NSString *XieYiStr = @"协议";
 const NSString *AnimationStr = @"动画";
+const NSString *TableViewStr = @"TableView";
+const NSString *CollectViewStr = @"CollectView";
+const NSString *DataBaseStr = @"数据库";
 
 @implementation BasicVC
 
@@ -69,7 +75,7 @@ const NSString *AnimationStr = @"动画";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[LiftCycleStr, RunTimeStr, ShouShiStr, XieYiStr, AnimationStr];
+    self.dataArray = @[LiftCycleStr, RunTimeStr, ShouShiStr, XieYiStr, AnimationStr, TableViewStr, CollectViewStr, DataBaseStr];
 }
 
 #pragma mark - 创建TableView
@@ -137,7 +143,24 @@ const NSString *AnimationStr = @"动画";
         animationVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:animationVC animated:YES];
     }
-    
+    if ([indexString isEqual:TableViewStr]) {
+        // 动画
+        TableViewVC *tableViewVC = [[TableViewVC alloc] init];
+        tableViewVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:tableViewVC animated:YES];
+    }
+    if ([indexString isEqual:CollectViewStr]) {
+        // 动画
+        CollectionViewVC *collectionViewVC = [[CollectionViewVC alloc] init];
+        collectionViewVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:collectionViewVC animated:YES];
+    }
+    if ([indexString isEqual:DataBaseStr]) {
+        // 动画
+        DataBaseVC *dataBaseVC = [[DataBaseVC alloc] init];
+        dataBaseVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:dataBaseVC animated:YES];
+    }
 }
 
 #pragma mark 代码约束布局

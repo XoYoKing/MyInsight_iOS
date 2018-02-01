@@ -56,6 +56,9 @@
 		A22C4DD41FFC777A0079F7C2 /* via.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBD1FFC77790079F7C2 /* via.png */; };
 		A22C4DD51FFC777A0079F7C2 /* route_start_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBE1FFC77790079F7C2 /* route_start_pin@2x.png */; };
 		A2419E89AB28D022C3D01AE0 /* libPods-MyInsight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D110F761EC3A481896E9E0EB /* libPods-MyInsight.a */; };
+		A25748252023058A000F7632 /* DataBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A25748242023058A000F7632 /* DataBaseVC.m */; };
+		A25748282023059D000F7632 /* CollectionViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A25748272023059D000F7632 /* CollectionViewVC.m */; };
+		A257482B202305B9000F7632 /* TableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A257482A202305B9000F7632 /* TableViewVC.m */; };
 		A26CE4862018A0880012EC69 /* BasicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE4852018A0880012EC69 /* BasicVC.m */; };
 		A26CE4892018A09A0012EC69 /* OtherVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE4882018A09A0012EC69 /* OtherVC.m */; };
 		A26CE48C2018A0AD0012EC69 /* SeniorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE48B2018A0AD0012EC69 /* SeniorVC.m */; };
@@ -185,6 +188,12 @@
 		A22C4DBC1FFC77790079F7C2 /* yback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yback.png; sourceTree = "<group>"; };
 		A22C4DBD1FFC77790079F7C2 /* via.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = via.png; sourceTree = "<group>"; };
 		A22C4DBE1FFC77790079F7C2 /* route_start_pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "route_start_pin@2x.png"; sourceTree = "<group>"; };
+		A25748232023058A000F7632 /* DataBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseVC.h; sourceTree = "<group>"; };
+		A25748242023058A000F7632 /* DataBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBaseVC.m; sourceTree = "<group>"; };
+		A25748262023059D000F7632 /* CollectionViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewVC.h; sourceTree = "<group>"; };
+		A25748272023059D000F7632 /* CollectionViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewVC.m; sourceTree = "<group>"; };
+		A2574829202305B9000F7632 /* TableViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewVC.h; sourceTree = "<group>"; };
+		A257482A202305B9000F7632 /* TableViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewVC.m; sourceTree = "<group>"; };
 		A26CE4842018A0880012EC69 /* BasicVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicVC.h; sourceTree = "<group>"; };
 		A26CE4852018A0880012EC69 /* BasicVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicVC.m; sourceTree = "<group>"; };
 		A26CE4872018A09A0012EC69 /* OtherVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherVC.h; sourceTree = "<group>"; };
@@ -638,6 +647,33 @@
 			path = image;
 			sourceTree = "<group>";
 		};
+		A25748202023056C000F7632 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				A25748262023059D000F7632 /* CollectionViewVC.h */,
+				A25748272023059D000F7632 /* CollectionViewVC.m */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		A25748212023056C000F7632 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				A2574829202305B9000F7632 /* TableViewVC.h */,
+				A257482A202305B9000F7632 /* TableViewVC.m */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		A25748222023056D000F7632 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				A25748232023058A000F7632 /* DataBaseVC.h */,
+				A25748242023058A000F7632 /* DataBaseVC.m */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
 		A26CE4802018A0730012EC69 /* Advance */ = {
 			isa = PBXGroup;
 			children = (
@@ -657,6 +693,9 @@
 			children = (
 				A26CE4842018A0880012EC69 /* BasicVC.h */,
 				A26CE4852018A0880012EC69 /* BasicVC.m */,
+				A25748202023056C000F7632 /* CollectionView */,
+				A25748222023056D000F7632 /* DataBase */,
+				A25748212023056C000F7632 /* TableView */,
 				A2CA8082202196E900D81845 /* Animation */,
 				A2CA8088202196E900D81845 /* LiftCycle */,
 				A2CA8085202196E900D81845 /* RunTime */,
@@ -1413,18 +1452,21 @@
 				A26CE4A4201971C50012EC69 /* GoogleMapVC.m in Sources */,
 				A26CE4862018A0880012EC69 /* BasicVC.m in Sources */,
 				A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */,
+				A25748252023058A000F7632 /* DataBaseVC.m in Sources */,
 				A26CE48C2018A0AD0012EC69 /* SeniorVC.m in Sources */,
 				A27E873B201ACD5E003E712C /* OpenCVVC.mm in Sources */,
 				A27E874E201ACF6A003E712C /* BabyBleVC.m in Sources */,
 				A27E8725201AC49B003E712C /* CommonTool.m in Sources */,
 				A27E875C201AD2B2003E712C /* MusicVC.m in Sources */,
 				A20D5DFE1FD14549000E191D /* AppDelegate.m in Sources */,
+				A257482B202305B9000F7632 /* TableViewVC.m in Sources */,
 				A27E8750201ACF6A003E712C /* BluetoothCell.m in Sources */,
 				A20D5DFD1FD14549000E191D /* main.m in Sources */,
 				A26CE48F2018A0BE0012EC69 /* AdvanceVC.m in Sources */,
 				A26CE4A5201971C50012EC69 /* CallOutAnnotationView.m in Sources */,
 				A27E8753201ACF6A003E712C /* ScaleVC.m in Sources */,
 				A26CE4A7201971C50012EC69 /* YahooMapVC.m in Sources */,
+				A25748282023059D000F7632 /* CollectionViewVC.m in Sources */,
 				A26CE4A9201971C50012EC69 /* SystemMapVC.m in Sources */,
 				A28ED52F1FD156B600A74551 /* RearRevealVC.m in Sources */,
 				A27E8752201ACF6A003E712C /* PortraitScreenVC.m in Sources */,
