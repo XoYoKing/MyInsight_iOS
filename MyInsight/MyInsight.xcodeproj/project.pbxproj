@@ -59,6 +59,7 @@
 		A25748252023058A000F7632 /* DataBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A25748242023058A000F7632 /* DataBaseVC.m */; };
 		A25748282023059D000F7632 /* CollectionViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A25748272023059D000F7632 /* CollectionViewVC.m */; };
 		A257482B202305B9000F7632 /* TableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A257482A202305B9000F7632 /* TableViewVC.m */; };
+		A257482F202315C0000F7632 /* RFQuiltLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A257482E202315C0000F7632 /* RFQuiltLayout.m */; };
 		A26CE4862018A0880012EC69 /* BasicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE4852018A0880012EC69 /* BasicVC.m */; };
 		A26CE4892018A09A0012EC69 /* OtherVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE4882018A09A0012EC69 /* OtherVC.m */; };
 		A26CE48C2018A0AD0012EC69 /* SeniorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE48B2018A0AD0012EC69 /* SeniorVC.m */; };
@@ -194,6 +195,8 @@
 		A25748272023059D000F7632 /* CollectionViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewVC.m; sourceTree = "<group>"; };
 		A2574829202305B9000F7632 /* TableViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewVC.h; sourceTree = "<group>"; };
 		A257482A202305B9000F7632 /* TableViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewVC.m; sourceTree = "<group>"; };
+		A257482D202315C0000F7632 /* RFQuiltLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFQuiltLayout.h; sourceTree = "<group>"; };
+		A257482E202315C0000F7632 /* RFQuiltLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFQuiltLayout.m; sourceTree = "<group>"; };
 		A26CE4842018A0880012EC69 /* BasicVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicVC.h; sourceTree = "<group>"; };
 		A26CE4852018A0880012EC69 /* BasicVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicVC.m; sourceTree = "<group>"; };
 		A26CE4872018A09A0012EC69 /* OtherVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherVC.h; sourceTree = "<group>"; };
@@ -593,6 +596,7 @@
 		A22C4D7A1FFB1B680079F7C2 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				A257482C202315A6000F7632 /* RFQuiltLayout */,
 				A27E8726201AC53C003E712C /* Music */,
 				A2E4E69F2004BFDD00EC3D63 /* FFmpeg-iOS */,
 				A22C4DA61FFC77790079F7C2 /* YahooMap */,
@@ -672,6 +676,15 @@
 				A25748242023058A000F7632 /* DataBaseVC.m */,
 			);
 			path = DataBase;
+			sourceTree = "<group>";
+		};
+		A257482C202315A6000F7632 /* RFQuiltLayout */ = {
+			isa = PBXGroup;
+			children = (
+				A257482D202315C0000F7632 /* RFQuiltLayout.h */,
+				A257482E202315C0000F7632 /* RFQuiltLayout.m */,
+			);
+			path = RFQuiltLayout;
 			sourceTree = "<group>";
 		};
 		A26CE4802018A0730012EC69 /* Advance */ = {
@@ -1441,6 +1454,7 @@
 				A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */,
 				A27E8751201ACF6A003E712C /* LandscapeScreenVC.m in Sources */,
 				A26CE4A6201971C50012EC69 /* CustomPointAnnotation.m in Sources */,
+				A257482F202315C0000F7632 /* RFQuiltLayout.m in Sources */,
 				A2CA807E2021568D00D81845 /* TouchIDVC.m in Sources */,
 				A27E873C201ACD5E003E712C /* FFmpegVC.m in Sources */,
 				A26CE4892018A09A0012EC69 /* OtherVC.m in Sources */,

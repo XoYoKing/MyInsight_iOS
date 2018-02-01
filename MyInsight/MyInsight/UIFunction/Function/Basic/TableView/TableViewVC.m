@@ -7,8 +7,11 @@
 //
 
 #import "TableViewVC.h"
+#import <Masonry.h> // 代码约束布局
 
 @interface TableViewVC ()
+// TableView
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -17,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"";
+    self.title = @"TableView";
     self.view.backgroundColor = [UIColor whiteColor];
 }
 

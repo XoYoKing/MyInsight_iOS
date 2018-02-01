@@ -17,7 +17,7 @@ OpenCV、ffmpeg、音频、Socket
 
 百思不得姐、糗事百科
 
-
+[小程序教程](https://www.zhihu.com/question/50907897)
 
 
 
