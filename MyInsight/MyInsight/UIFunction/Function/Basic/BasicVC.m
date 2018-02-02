@@ -144,19 +144,19 @@ const NSString *DataBaseStr = @"数据库";
         [self.navigationController pushViewController:animationVC animated:YES];
     }
     if ([indexString isEqual:TableViewStr]) {
-        // 动画
+        // TableView
         TableViewVC *tableViewVC = [[TableViewVC alloc] init];
         tableViewVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:tableViewVC animated:YES];
     }
     if ([indexString isEqual:CollectViewStr]) {
-        // 动画
+        //CollectionView
         CollectionViewVC *collectionViewVC = [[CollectionViewVC alloc] init];
         collectionViewVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:collectionViewVC animated:YES];
     }
     if ([indexString isEqual:DataBaseStr]) {
-        // 动画
+        // 数据库
         DataBaseVC *dataBaseVC = [[DataBaseVC alloc] init];
         dataBaseVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:dataBaseVC animated:YES];

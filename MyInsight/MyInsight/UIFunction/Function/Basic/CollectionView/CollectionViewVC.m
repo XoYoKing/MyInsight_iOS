@@ -24,9 +24,9 @@
     self.title = @"CollectionView";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self creatCollectionView];
+    //[self creatCollectionView];
     
-    [self masonryViewLayout];
+    //[self masonryViewLayout];
 }
 
 - (void)creatCollectionView {

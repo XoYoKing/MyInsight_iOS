@@ -20,6 +20,11 @@
     self.title = @"数据库";
     self.view.backgroundColor = [UIColor whiteColor];
     
+    /*
+     SQLite、Realm、CocoaData
+     */
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
