@@ -71,17 +71,17 @@
         NSURL *url = [NSURL fileURLWithPath:urlStr];
         NSError *error = nil;
         //初始化播放器，注意这里的Url参数只能时文件路径，不支持HTTP Url
-        _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
         //设置播放器属性
-        _audioPlayer.numberOfLoops = 0;//设置为0不循环
-        _audioPlayer.delegate = self;
-        [_audioPlayer prepareToPlay];//加载音频文件到缓存
+        self.audioPlayer.numberOfLoops = 0;//设置为0不循环
+        self.audioPlayer.delegate = self;
+        [self.audioPlayer prepareToPlay];//加载音频文件到缓存
         if(error){
             NSLog(@"初始化播放器过程发生错误,错误信息:%@",error.localizedDescription);
             return nil;
         }
     }
-    return _audioPlayer;
+    return self.audioPlayer;
 }
 
 /**

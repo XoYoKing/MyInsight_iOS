@@ -95,6 +95,7 @@
 		A2A30BA62008BC5F00C974B7 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30BA52008BC5F00C974B7 /* libiconv.tbd */; };
 		A2A30BA82008C03E00C974B7 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30BA72008C03E00C974B7 /* libbz2.tbd */; };
 		A2A30BAA2008C04F00C974B7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30BA92008C04F00C974B7 /* libz.tbd */; };
+		A2C1AB7D2025A1D80085A653 /* alarm4.m4r in Resources */ = {isa = PBXBuildFile; fileRef = A2C1AB7C2025A1D80085A653 /* alarm4.m4r */; };
 		A2CA807E2021568D00D81845 /* TouchIDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA807D2021568D00D81845 /* TouchIDVC.m */; };
 		A2CA808B202196EA00D81845 /* AnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA8083202196E900D81845 /* AnimationVC.m */; };
 		A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA8086202196E900D81845 /* RunTimeVC.m */; };
@@ -262,6 +263,7 @@
 		A2A30BA52008BC5F00C974B7 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		A2A30BA72008C03E00C974B7 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		A2A30BA92008C04F00C974B7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		A2C1AB7C2025A1D80085A653 /* alarm4.m4r */ = {isa = PBXFileReference; lastKnownFileType = file; path = alarm4.m4r; sourceTree = "<group>"; };
 		A2CA807C2021568D00D81845 /* TouchIDVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchIDVC.h; sourceTree = "<group>"; };
 		A2CA807D2021568D00D81845 /* TouchIDVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIDVC.m; sourceTree = "<group>"; };
 		A2CA8083202196E900D81845 /* AnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationVC.m; sourceTree = "<group>"; };
@@ -807,6 +809,7 @@
 			isa = PBXGroup;
 			children = (
 				A27E8727201AC53C003E712C /* 1967.mp3 */,
+				A2C1AB7C2025A1D80085A653 /* alarm4.m4r */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -876,10 +879,10 @@
 		A27E8756201AD2B2003E712C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A27E8757201AD2B2003E712C /* MusicVC.m */,
-				A27E8758201AD2B2003E712C /* SoundVC.m */,
 				A27E8759201AD2B2003E712C /* MusicVC.h */,
+				A27E8757201AD2B2003E712C /* MusicVC.m */,
 				A27E875A201AD2B2003E712C /* SoundVC.h */,
+				A27E8758201AD2B2003E712C /* SoundVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1271,6 +1274,7 @@
 				A22C4DC31FFC777A0079F7C2 /* pin_green_s.png in Resources */,
 				A22C4DCC1FFC777A0079F7C2 /* goal@2x.png in Resources */,
 				A22C4DC51FFC777A0079F7C2 /* pin_red_s@2x.png in Resources */,
+				A2C1AB7D2025A1D80085A653 /* alarm4.m4r in Resources */,
 				A22C4DC11FFC777A0079F7C2 /* pin_head_s.png in Resources */,
 				A20D5E001FD14549000E191D /* Main.storyboard in Resources */,
 				A22C4DC41FFC777A0079F7C2 /* pin_purple_s.png in Resources */,
