@@ -12,7 +12,14 @@
 
 @interface CollectionViewVC ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
+@property (nonatomic, strong) UIView *functionView;
+
+@property (nonatomic, strong) UIButton *normalButton;
+
+@property (nonatomic, strong) UIButton *pubuliuButton;
+
 @property (nonatomic, strong) UICollectionView *collectionView;
+
 
 @end
 
@@ -24,9 +31,28 @@
     self.title = @"CollectionView";
     self.view.backgroundColor = [UIColor whiteColor];
     
+    [self creatFunctionView];
+    
     //[self creatCollectionView];
     
-    //[self masonryViewLayout];
+    [self masonryViewLayout];
+}
+
+- (void)creatFunctionView {
+    self.functionView = [[UIView alloc] init];
+    [self.view addSubview:self.functionView];
+    self.functionView.backgroundColor = [UIColor blueColor];
+    
+    self.normalButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.functionView addSubview:self.normalButton];
+    [self.normalButton setTitle:@"普通" forState:UIControlStateNormal];
+    
+    self.pubuliuButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.functionView addSubview:self.pubuliuButton];
+    self.pubuliuButton.backgroundColor = [UIColor brownColor];
+    [self.pubuliuButton setTitle:@"瀑布流" forState:UIControlStateNormal];
+    
+    
 }
 
 - (void)creatCollectionView {
@@ -46,6 +72,27 @@
 
 - (void)masonryViewLayout {
     
+    [self.functionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).offset(64.0f);
+        make.left.equalTo(self.view.mas_left).offset(0.0f);
+        make.right.equalTo(self.view.mas_right).offset(0.0f);
+        make.height.offset(40.0f);
+    }];
+    
+    [self.normalButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.functionView.mas_top).offset(0.0f);
+        make.left.equalTo(self.functionView.mas_left).offset(0.0f);
+        make.bottom.equalTo(self.functionView.mas_bottom).offset(0.0f);
+        make.right.equalTo(self.pubuliuButton.mas_left).offset(0.0f);
+    }];
+    
+    [self.pubuliuButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.functionView.mas_top).offset(0.0f);
+        make.right.equalTo(self.functionView.mas_right).offset(0.0f);
+        make.bottom.equalTo(self.functionView.mas_bottom).offset(0.0f);
+        make.width.equalTo(self.normalButton.mas_width).multipliedBy(1.0f);
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,57 +109,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-- (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    return NULL;
-}
-
-- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 1;
-}
-
-- (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
-    
-}
-
-- (void)traitCollectionDidChange:(nullable UITraitCollection *)previousTraitCollection {
-    
-}
-
-- (void)preferredContentSizeDidChangeForChildContentContainer:(nonnull id<UIContentContainer>)container {
-    
-}
-
-- (CGSize)sizeForChildContentContainer:(nonnull id<UIContentContainer>)container withParentContainerSize:(CGSize)parentSize {
-    return CGSizeZero;
-}
-
-- (void)systemLayoutFittingSizeDidChangeForChildContentContainer:(nonnull id<UIContentContainer>)container {
-    
-}
-
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(nonnull id<UIViewControllerTransitionCoordinator>)coordinator {
-    
-}
-
-- (void)willTransitionToTraitCollection:(nonnull UITraitCollection *)newCollection withTransitionCoordinator:(nonnull id<UIViewControllerTransitionCoordinator>)coordinator {
-    
-}
-
-- (void)didUpdateFocusInContext:(nonnull UIFocusUpdateContext *)context withAnimationCoordinator:(nonnull UIFocusAnimationCoordinator *)coordinator {
-    
-}
-
-- (void)setNeedsFocusUpdate {
-    
-}
-
-- (BOOL)shouldUpdateFocusInContext:(nonnull UIFocusUpdateContext *)context {
-    return NO;
-}
-
-- (void)updateFocusIfNeeded {
-    
-}
 
 @end
