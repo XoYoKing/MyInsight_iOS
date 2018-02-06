@@ -46,28 +46,31 @@
     self.normalButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.functionView addSubview:self.normalButton];
     [self.normalButton setTitle:@"普通" forState:UIControlStateNormal];
+    [self.normalButton addTarget:self action:@selector(normalButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     
     self.pubuliuButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.functionView addSubview:self.pubuliuButton];
     self.pubuliuButton.backgroundColor = [UIColor brownColor];
     [self.pubuliuButton setTitle:@"瀑布流" forState:UIControlStateNormal];
-    
-    
+    [self.pubuliuButton addTarget:self action:@selector(pubuliuButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)normalButtonAction:(UIButton *)button {
+    NSLog(@"普通");
+    [self creatCollectionView];
+}
+
+- (void)pubuliuButtonAction:(UIButton *)button {
+    NSLog(@"瀑布流");
+    [self creatCollectionView];
 }
 
 - (void)creatCollectionView {
     
-    RFQuiltLayout* layout = (id)[self.collectionView collectionViewLayout];
-    layout.direction = UICollectionViewScrollDirectionVertical;
-    layout.blockPixels = CGSizeMake(75,75);
     
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
-    self.collectionView.delegate = self;
-    self.collectionView.dataSource = self;
     
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     
-    [self.collectionView reloadData];
+    
 }
 
 - (void)masonryViewLayout {
