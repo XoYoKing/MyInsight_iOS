@@ -57,11 +57,13 @@
 
 - (void)normalButtonAction:(UIButton *)button {
     NSLog(@"普通");
+    // 
     [self creatCollectionView];
 }
 
 - (void)pubuliuButtonAction:(UIButton *)button {
     NSLog(@"瀑布流");
+    //
     [self creatCollectionView];
 }
 
