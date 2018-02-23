@@ -9,13 +9,12 @@
 #import "DataBaseVC.h"
 #import <Masonry.h> //代码约束布局
 
-
 @interface DataBaseVC ()
-//
+// SQLite
 @property (nonatomic, strong) UIButton *sqliteButton;
-
+// Realm
 @property (nonatomic, strong) UIButton *realmButton;
-
+// CocoaData
 @property (nonatomic, strong) UIButton *cocoaDataButton;
 // 创建
 @property (nonatomic, strong) UIButton *creatButton;
@@ -25,27 +24,19 @@
 @property (nonatomic, strong) UIButton *readButton;
 // 删除
 @property (nonatomic, strong) UIButton *deleteButton;
-
+// 输出View
+@property (nonatomic, strong) UITextView *outputTextView;
 
 @end
 
 @implementation DataBaseVC
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
     
     self.title = @"数据库";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    /*
-     SQLite、Realm、CocoaData
-     CURD
-     */
-
     [self creatUI];
     
     [self masonrySubView];
@@ -92,6 +83,10 @@
     
     self.deleteButton.backgroundColor = [UIColor redColor];
     [self.deleteButton setTitle:@"删除" forState:UIControlStateNormal];
+    
+    self.outputTextView = [[UITextView alloc] init];
+    [self.view addSubview:self.outputTextView];
+    self.outputTextView.backgroundColor = [UIColor orangeColor];
 }
 
 #pragma mark - 代码约束布局
@@ -114,23 +109,30 @@
     
     // CURD按钮
     [self.creatButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(1.0f);
+        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(0.4f);
         make.centerY.equalTo(self.view.mas_centerY).multipliedBy(0.6f);
     }];
     
     [self.updateButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(1.0f);
-        make.centerY.equalTo(self.view.mas_centerY).multipliedBy(0.8f);
+        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(0.8f);
+        make.centerY.equalTo(self.view.mas_centerY).multipliedBy(0.6f);
     }];
     
     [self.readButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(1.0f);
-        make.centerY.equalTo(self.view.mas_centerY).multipliedBy(1.2f);
+        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(1.2f);
+        make.centerY.equalTo(self.view.mas_centerY).multipliedBy(0.6f);
     }];
     
     [self.deleteButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(1.0f);
-        make.centerY.equalTo(self.view.mas_centerY).multipliedBy(1.6f);
+        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(1.6f);
+        make.centerY.equalTo(self.view.mas_centerY).multipliedBy(0.6f);
+    }];
+    
+    [self.outputTextView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.creatButton.mas_bottom).offset(11.0f);
+        make.left.equalTo(self.view.mas_left).offset(0.0f);
+        make.right.equalTo(self.view.mas_right).offset(0.0f);
+        make.bottom.equalTo(self.view.mas_bottom).offset(0.0f);
     }];
 }
 
