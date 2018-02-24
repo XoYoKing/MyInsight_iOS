@@ -31,6 +31,12 @@
 
 @implementation DataBaseVC
 
+/*
+ 数据库：
+ 
+ 
+ */
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -87,6 +93,7 @@
     self.outputTextView = [[UITextView alloc] init];
     [self.view addSubview:self.outputTextView];
     self.outputTextView.backgroundColor = [UIColor orangeColor];
+    
 }
 
 #pragma mark - 代码约束布局

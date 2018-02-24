@@ -69,10 +69,6 @@
 
 - (void)creatCollectionView {
     
-    
-    
-    
-    
 }
 
 - (void)masonryViewLayout {
