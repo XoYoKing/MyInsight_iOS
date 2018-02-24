@@ -72,6 +72,8 @@
 		A26CE4A8201971C50012EC69 /* CalloutMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE49F201971C50012EC69 /* CalloutMapAnnotation.m */; };
 		A26CE4A9201971C50012EC69 /* SystemMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE4A2201971C50012EC69 /* SystemMapVC.m */; };
 		A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE4AB201971DC0012EC69 /* MapsVC.m */; };
+		A27B37E2204159BE00C25895 /* SQLiteHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A27B37E1204159BE00C25895 /* SQLiteHandle.m */; };
+		A27B37E52041603900C25895 /* DataBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A27B37E42041603900C25895 /* DataBaseModel.m */; };
 		A27E8725201AC49B003E712C /* CommonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E8724201AC49B003E712C /* CommonTool.m */; };
 		A27E8728201AC53C003E712C /* 1967.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A27E8727201AC53C003E712C /* 1967.mp3 */; };
 		A27E873B201ACD5E003E712C /* OpenCVVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = A27E8736201ACD5D003E712C /* OpenCVVC.mm */; };
@@ -222,6 +224,10 @@
 		A26CE4A2201971C50012EC69 /* SystemMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemMapVC.m; sourceTree = "<group>"; };
 		A26CE4AA201971DC0012EC69 /* MapsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapsVC.h; sourceTree = "<group>"; };
 		A26CE4AB201971DC0012EC69 /* MapsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapsVC.m; sourceTree = "<group>"; };
+		A27B37E0204159BE00C25895 /* SQLiteHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLiteHandle.h; sourceTree = "<group>"; };
+		A27B37E1204159BE00C25895 /* SQLiteHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLiteHandle.m; sourceTree = "<group>"; };
+		A27B37E32041603900C25895 /* DataBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseModel.h; sourceTree = "<group>"; };
+		A27B37E42041603900C25895 /* DataBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBaseModel.m; sourceTree = "<group>"; };
 		A27E8723201AC49B003E712C /* CommonTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonTool.h; sourceTree = "<group>"; };
 		A27E8724201AC49B003E712C /* CommonTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonTool.m; sourceTree = "<group>"; };
 		A27E8727201AC53C003E712C /* 1967.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1967.mp3; sourceTree = "<group>"; };
@@ -676,6 +682,10 @@
 			children = (
 				A25748232023058A000F7632 /* DataBaseVC.h */,
 				A25748242023058A000F7632 /* DataBaseVC.m */,
+				A27B37E0204159BE00C25895 /* SQLiteHandle.h */,
+				A27B37E1204159BE00C25895 /* SQLiteHandle.m */,
+				A27B37E32041603900C25895 /* DataBaseModel.h */,
+				A27B37E42041603900C25895 /* DataBaseModel.m */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -1454,6 +1464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A27E874D201ACF6A003E712C /* BlueToothVC.m in Sources */,
+				A27B37E2204159BE00C25895 /* SQLiteHandle.m in Sources */,
 				A2CA808B202196EA00D81845 /* AnimationVC.m in Sources */,
 				A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */,
 				A27E8751201ACF6A003E712C /* LandscapeScreenVC.m in Sources */,
@@ -1468,6 +1479,7 @@
 				A20D5E1D1FD14C7A000E191D /* MainRevealVC.m in Sources */,
 				A2CA808D202196EA00D81845 /* LiftCycleVC.m in Sources */,
 				A26CE4A4201971C50012EC69 /* GoogleMapVC.m in Sources */,
+				A27B37E52041603900C25895 /* DataBaseModel.m in Sources */,
 				A26CE4862018A0880012EC69 /* BasicVC.m in Sources */,
 				A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */,
 				A25748252023058A000F7632 /* DataBaseVC.m in Sources */,
