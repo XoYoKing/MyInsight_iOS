@@ -16,6 +16,10 @@
 
 @implementation SQLiteHandle
 
+/*
+ 数据库处理工具
+ 
+ */
 
 #pragma mark - 创建单例
 + (instancetype)shareDataHandle {
