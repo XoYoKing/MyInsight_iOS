@@ -10,6 +10,8 @@
 
 @interface WelcomeVC ()
 
+@property (nonatomic, strong) UIScrollView *scrollView;
+
 @end
 
 @implementation WelcomeVC
@@ -18,6 +20,8 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    
     
 }
 

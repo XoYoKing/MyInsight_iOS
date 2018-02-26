@@ -54,9 +54,15 @@
         
     } else {
         
-        MainRevealVC *mainRevealVC = [[MainRevealVC alloc] init];
+//        MainRevealVC *mainRevealVC = [[MainRevealVC alloc] init];
+//        // 设置根视图
+//        self.window.rootViewController = mainRevealVC;
+        
+        // 欢迎页
+        WelcomeVC *welcomeVC = [[WelcomeVC alloc] init];
         // 设置根视图
-        self.window.rootViewController = mainRevealVC;
+        self.window.rootViewController = welcomeVC;
+        
         NSLog(@"不是第一次启动");
     }
     
