@@ -27,9 +27,6 @@
     // 是否第一次加载
     [self isRightFirstLaunched];
     
-    // 设置根视图
-    //[self setupRootController];
-    
     // Window可见
     [self.window makeKeyAndVisible];
     
@@ -53,20 +50,11 @@
         self.window.rootViewController = welcomeVC;
         
     } else {
-        
-//        MainRevealVC *mainRevealVC = [[MainRevealVC alloc] init];
-//        // 设置根视图
-//        self.window.rootViewController = mainRevealVC;
-        
-        // 欢迎页
-        WelcomeVC *welcomeVC = [[WelcomeVC alloc] init];
+        MainRevealVC *mainRevealVC = [[MainRevealVC alloc] init];
         // 设置根视图
-        self.window.rootViewController = welcomeVC;
-        
+        self.window.rootViewController = mainRevealVC;
         NSLog(@"不是第一次启动");
     }
-    
-    
 }
 
 
@@ -104,14 +92,6 @@
     if ([shortcutItem.type isEqualToString:@"shareAnchor"]) {
         NSLog(@"分享用户啊");
     }
-}
-
-#pragma mark - 设置根视图
-- (void)setupRootController {
-    // TabbarNavi
-    UINavigationController *tabbarNavi = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"MainVC"];
-    // 设置根视图
-    self.window.rootViewController = tabbarNavi;
 }
 
 #pragma mark - 横竖屏切换
