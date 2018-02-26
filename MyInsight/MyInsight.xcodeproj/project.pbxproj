@@ -72,6 +72,7 @@
 		A26CE4A8201971C50012EC69 /* CalloutMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE49F201971C50012EC69 /* CalloutMapAnnotation.m */; };
 		A26CE4A9201971C50012EC69 /* SystemMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE4A2201971C50012EC69 /* SystemMapVC.m */; };
 		A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE4AB201971DC0012EC69 /* MapsVC.m */; };
+		A26D17302043A4880064DECF /* WelcomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26D172F2043A4880064DECF /* WelcomeVC.m */; };
 		A27B37E2204159BE00C25895 /* SQLiteHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A27B37E1204159BE00C25895 /* SQLiteHandle.m */; };
 		A27B37E52041603900C25895 /* DataBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A27B37E42041603900C25895 /* DataBaseModel.m */; };
 		A27E8725201AC49B003E712C /* CommonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E8724201AC49B003E712C /* CommonTool.m */; };
@@ -224,6 +225,8 @@
 		A26CE4A2201971C50012EC69 /* SystemMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemMapVC.m; sourceTree = "<group>"; };
 		A26CE4AA201971DC0012EC69 /* MapsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapsVC.h; sourceTree = "<group>"; };
 		A26CE4AB201971DC0012EC69 /* MapsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapsVC.m; sourceTree = "<group>"; };
+		A26D172E2043A4880064DECF /* WelcomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WelcomeVC.h; sourceTree = "<group>"; };
+		A26D172F2043A4880064DECF /* WelcomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomeVC.m; sourceTree = "<group>"; };
 		A27B37E0204159BE00C25895 /* SQLiteHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLiteHandle.h; sourceTree = "<group>"; };
 		A27B37E1204159BE00C25895 /* SQLiteHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLiteHandle.m; sourceTree = "<group>"; };
 		A27B37E32041603900C25895 /* DataBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseModel.h; sourceTree = "<group>"; };
@@ -510,8 +513,8 @@
 				A27E8722201AC471003E712C /* General */,
 				A20D5DF61FD14549000E191D /* UIFunction */,
 				A20D5DF41FD14549000E191D /* StoryBoard */,
-				A20D5DED1FD14549000E191D /* SupportingFiles */,
 				A22C4D7A1FFB1B680079F7C2 /* Vendors */,
+				A20D5DED1FD14549000E191D /* SupportingFiles */,
 			);
 			path = MyInsight;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 		A20D5DF61FD14549000E191D /* UIFunction */ = {
 			isa = PBXGroup;
 			children = (
+				A26D172D2043A3CA0064DECF /* Welcome */,
 				A20D5E031FD1471D000E191D /* Reveal */,
 				A20D5E041FD1471D000E191D /* Tabbar */,
 				A20D5E051FD1471D000E191D /* Function */,
@@ -802,6 +806,15 @@
 				A26CE4A2201971C50012EC69 /* SystemMapVC.m */,
 			);
 			path = SystemMap;
+			sourceTree = "<group>";
+		};
+		A26D172D2043A3CA0064DECF /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				A26D172E2043A4880064DECF /* WelcomeVC.h */,
+				A26D172F2043A4880064DECF /* WelcomeVC.m */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		A27E8722201AC471003E712C /* General */ = {
@@ -1496,6 +1509,7 @@
 				A26CE4A5201971C50012EC69 /* CallOutAnnotationView.m in Sources */,
 				A27E8753201ACF6A003E712C /* ScaleVC.m in Sources */,
 				A26CE4A7201971C50012EC69 /* YahooMapVC.m in Sources */,
+				A26D17302043A4880064DECF /* WelcomeVC.m in Sources */,
 				A25748282023059D000F7632 /* CollectionViewVC.m in Sources */,
 				A26CE4A9201971C50012EC69 /* SystemMapVC.m in Sources */,
 				A28ED52F1FD156B600A74551 /* RearRevealVC.m in Sources */,

@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainRevealVC.h" // 主页面
-
+#import "WelcomeVC.h" // 欢迎页面
 
 @interface AppDelegate ()
 
@@ -24,16 +24,43 @@
     // 设置3D Touch功能
     [self setup3DTouch];
     
+    // 是否第一次加载
+    [self isRightFirstLaunched];
+    
     // 设置根视图
     //[self setupRootController];
     
-    MainRevealVC *mainRevealVC = [[MainRevealVC alloc] init];
-    // 设置根视图
-    self.window.rootViewController = mainRevealVC;
     // Window可见
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+#pragma mark - 是否是第一次加载
+- (void)isRightFirstLaunched {
+    /*
+     若是第一次加载 进入欢迎页面 若不是直接进入主页面
+     */
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if (![userDefaults stringForKey:@"LauchAgree"]) {
+        // 设置值
+        [userDefaults setValue:@"sd" forKey:@"LauchAgree"];
+        NSLog(@"第一次启动");
+        // 欢迎页
+        WelcomeVC *welcomeVC = [[WelcomeVC alloc] init];
+        // 设置根视图
+        self.window.rootViewController = welcomeVC;
+        
+    } else {
+        
+        MainRevealVC *mainRevealVC = [[MainRevealVC alloc] init];
+        // 设置根视图
+        self.window.rootViewController = mainRevealVC;
+        NSLog(@"不是第一次启动");
+    }
+    
+    
 }
 
 
