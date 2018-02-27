@@ -13,7 +13,6 @@
 		A229556C203FAB890085BBC0 /* BasicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A229556B203FAB890085BBC0 /* BasicVC.swift */; };
 		A229556E203FABA10085BBC0 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A229556D203FABA10085BBC0 /* MainVC.swift */; };
 		A2E4E7432005B9FD00EC3D63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E4E7422005B9FD00EC3D63 /* AppDelegate.swift */; };
-		A2E4E7452005B9FD00EC3D63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E4E7442005B9FD00EC3D63 /* ViewController.swift */; };
 		A2E4E7482005B9FD00EC3D63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E4E7462005B9FD00EC3D63 /* Main.storyboard */; };
 		A2E4E74A2005B9FD00EC3D63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2E4E7492005B9FD00EC3D63 /* Assets.xcassets */; };
 		A2E4E74D2005B9FD00EC3D63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E4E74B2005B9FD00EC3D63 /* LaunchScreen.storyboard */; };
@@ -48,7 +47,6 @@
 		A229556D203FABA10085BBC0 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		A2E4E73F2005B9FD00EC3D63 /* MyInsight_S.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyInsight_S.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2E4E7422005B9FD00EC3D63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A2E4E7442005B9FD00EC3D63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A2E4E7472005B9FD00EC3D63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A2E4E7492005B9FD00EC3D63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2E4E74C2005B9FD00EC3D63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				A2E4E7422005B9FD00EC3D63 /* AppDelegate.swift */,
-				A2E4E7442005B9FD00EC3D63 /* ViewController.swift */,
 				A2295567203FAB6C0085BBC0 /* UIFunction */,
 				A2295566203FAB6C0085BBC0 /* StoryBoard */,
 				A2E4E7462005B9FD00EC3D63 /* Main.storyboard */,
@@ -405,13 +402,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyInsight_STests/Pods-MyInsight_STests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/EFQRCode/EFQRCode.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EFQRCode.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -508,7 +503,6 @@
 			files = (
 				A229556C203FAB890085BBC0 /* BasicVC.swift in Sources */,
 				A229556E203FABA10085BBC0 /* MainVC.swift in Sources */,
-				A2E4E7452005B9FD00EC3D63 /* ViewController.swift in Sources */,
 				A2E4E7432005B9FD00EC3D63 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
