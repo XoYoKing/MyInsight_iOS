@@ -15,6 +15,12 @@ target 'MyInsight' do
   pod 'AFNetworking' # 网络请求
   pod 'ReactiveCocoa','~>2.1.8' # 响应式编程
   
+  pod 'MQTTClient'
+  pod 'MQTTClient/Websocket'
+  pod 'SocketRocket'
+  # iOS之MQTT简单使用 https://www.jianshu.com/p/a12cb037dff5
+  # iOS MQTT----MQTTClient实战-看这篇的就够了 https://www.jianshu.com/p/80ea4507ca74
+  
   target 'MyInsightTests' do
     inherit! :search_paths
     # Pods for testing
