@@ -93,7 +93,6 @@
     self.outputTextView = [[UITextView alloc] init];
     [self.view addSubview:self.outputTextView];
     self.outputTextView.backgroundColor = [UIColor orangeColor];
-    
 }
 
 #pragma mark - 代码约束布局
