@@ -15,6 +15,7 @@
 #import "ScaleVC.h" // 三等分约束布局
 #import "BlueToothVC.h" // 蓝牙(系统)
 #import "BabyBleVC.h" // 蓝牙(三方)
+#import "MQTTVC.h"
 
 @interface AdvanceVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -31,6 +32,7 @@ const NSString *ScreenStr = @"横竖屏";
 const NSString *ScaleStr = @"自动比例约束布局";
 const NSString *BlueToothStr = @"蓝牙(系统)";
 const NSString *BabyBLEStr = @"蓝牙(三方)";
+const NSString *MQTTStr = @"MQTT";
 
 @implementation AdvanceVC
 
@@ -68,7 +70,7 @@ const NSString *BabyBLEStr = @"蓝牙(三方)";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[TouchIDStr, MapsStr, BlueToothStr, BabyBLEStr, ScreenStr, ScaleStr];
+    self.dataArray = @[TouchIDStr, MapsStr, BlueToothStr, BabyBLEStr, ScreenStr, ScaleStr, MQTTStr];
 }
 
 #pragma mark - 创建TableView
@@ -151,6 +153,12 @@ const NSString *BabyBLEStr = @"蓝牙(三方)";
         BabyBleVC *babyBleVC = [[BabyBleVC alloc] init];
         babyBleVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:babyBleVC animated:YES];
+    }
+    if ([indexString isEqual:MQTTStr]) {
+        // MQTT
+        MQTTVC *mqttVC = [[MQTTVC alloc] init];
+        mqttVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:mqttVC animated:YES];
     }
 }
 

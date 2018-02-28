@@ -56,6 +56,7 @@
 		A22C4DD41FFC777A0079F7C2 /* via.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBD1FFC77790079F7C2 /* via.png */; };
 		A22C4DD51FFC777A0079F7C2 /* route_start_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBE1FFC77790079F7C2 /* route_start_pin@2x.png */; };
 		A2419E89AB28D022C3D01AE0 /* libPods-MyInsight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D110F761EC3A481896E9E0EB /* libPods-MyInsight.a */; };
+		A241D22420468E68005A3BC5 /* MQTTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22320468E68005A3BC5 /* MQTTVC.m */; };
 		A25748252023058A000F7632 /* DataBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A25748242023058A000F7632 /* DataBaseVC.m */; };
 		A25748282023059D000F7632 /* CollectionViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A25748272023059D000F7632 /* CollectionViewVC.m */; };
 		A257482B202305B9000F7632 /* TableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A257482A202305B9000F7632 /* TableViewVC.m */; };
@@ -194,6 +195,8 @@
 		A22C4DBC1FFC77790079F7C2 /* yback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yback.png; sourceTree = "<group>"; };
 		A22C4DBD1FFC77790079F7C2 /* via.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = via.png; sourceTree = "<group>"; };
 		A22C4DBE1FFC77790079F7C2 /* route_start_pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "route_start_pin@2x.png"; sourceTree = "<group>"; };
+		A241D22220468E68005A3BC5 /* MQTTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQTTVC.h; sourceTree = "<group>"; };
+		A241D22320468E68005A3BC5 /* MQTTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQTTVC.m; sourceTree = "<group>"; };
 		A25748232023058A000F7632 /* DataBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseVC.h; sourceTree = "<group>"; };
 		A25748242023058A000F7632 /* DataBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBaseVC.m; sourceTree = "<group>"; };
 		A25748262023059D000F7632 /* CollectionViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewVC.h; sourceTree = "<group>"; };
@@ -667,6 +670,15 @@
 			path = image;
 			sourceTree = "<group>";
 		};
+		A241D22120468E52005A3BC5 /* MQTT */ = {
+			isa = PBXGroup;
+			children = (
+				A241D22220468E68005A3BC5 /* MQTTVC.h */,
+				A241D22320468E68005A3BC5 /* MQTTVC.m */,
+			);
+			path = MQTT;
+			sourceTree = "<group>";
+		};
 		A25748202023056C000F7632 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -712,6 +724,7 @@
 			children = (
 				A26CE48D2018A0BE0012EC69 /* AdvanceVC.h */,
 				A26CE48E2018A0BE0012EC69 /* AdvanceVC.m */,
+				A241D22120468E52005A3BC5 /* MQTT */,
 				A2CA807B2021567600D81845 /* TouchID */,
 				A27E873D201ACF6A003E712C /* BlueTooth */,
 				A27E874A201ACF6A003E712C /* ScaleView */,
@@ -1513,6 +1526,7 @@
 				A27E873B201ACD5E003E712C /* OpenCVVC.mm in Sources */,
 				A27E874E201ACF6A003E712C /* BabyBleVC.m in Sources */,
 				A27E8725201AC49B003E712C /* CommonTool.m in Sources */,
+				A241D22420468E68005A3BC5 /* MQTTVC.m in Sources */,
 				A27E875C201AD2B2003E712C /* MusicVC.m in Sources */,
 				A20D5DFE1FD14549000E191D /* AppDelegate.m in Sources */,
 				A26D17342043BDB80064DECF /* LoginVC.m in Sources */,

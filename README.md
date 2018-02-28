@@ -1,5 +1,11 @@
 # iOS DEMO合集
+###**呦呦鹿(YoYoDeer)**
+
+
+
 关于iOS知识和功能的DEMO合集，代码语言OC，关于Swift版本的Demo合集尚未整理。
+
+
 
 基础：
 
@@ -20,7 +26,4 @@ OpenCV、ffmpeg、音频、Socket
 [小程序教程](https://www.zhihu.com/question/50907897)
 
 
-在家过年 好无聊
 
-
-每天都要好好努力！！加油！！2018年02月25日！
