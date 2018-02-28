@@ -57,7 +57,6 @@
     }
 }
 
-
 #pragma mark - 设置3Dtouch功能
 - (void)setup3DTouch {
     // 3DTouch实用演练 http://www.sohu.com/a/200417763_208051
