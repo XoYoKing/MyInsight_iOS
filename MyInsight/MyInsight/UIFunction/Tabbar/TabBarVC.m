@@ -60,6 +60,9 @@
     otherVC.tabBarItem.title = @"其他";
     otherVC.title = otherVC.tabBarItem.title;
     
+    // 设置徽标
+    [basicVC.navigationController.tabBarItem setBadgeValue:@"2"];
+    
     // 设置tabbar
     [self setViewControllers:@[basicNavi, advanceNavi, seniorNavi, otherNavi] animated:YES];
 }
