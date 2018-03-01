@@ -8,9 +8,8 @@
 
 #import "LiftCycleVC.h"
 #import <Masonry.h>
-//#import "CommonTool.h" // 共同工具
 #import "Header.h"
-#import "UIColor+ColorCategory.h"
+#import "UIColor+Category.h"
 
 @interface LiftCycleVC ()
 // 输出页面

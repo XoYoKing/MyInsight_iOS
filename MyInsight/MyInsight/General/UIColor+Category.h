@@ -1,5 +1,5 @@
 //
-//  UIColor+ColorCategory.h
+//  UIColor+Category.h
 //  MyInsight
 //
 //  Created by SongMenglong on 2018/3/1.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIColor (ColorCategory)
+@interface UIColor (Category)
 
 /**
  *  @brief  随机颜色
