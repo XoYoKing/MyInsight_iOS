@@ -57,6 +57,7 @@
 		A22C4DD51FFC777A0079F7C2 /* route_start_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBE1FFC77790079F7C2 /* route_start_pin@2x.png */; };
 		A2419E89AB28D022C3D01AE0 /* libPods-MyInsight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D110F761EC3A481896E9E0EB /* libPods-MyInsight.a */; };
 		A241D22420468E68005A3BC5 /* MQTTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22320468E68005A3BC5 /* MQTTVC.m */; };
+		A241D22820479F75005A3BC5 /* UIColor+ColorCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22720479F75005A3BC5 /* UIColor+ColorCategory.m */; };
 		A25748252023058A000F7632 /* DataBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A25748242023058A000F7632 /* DataBaseVC.m */; };
 		A25748282023059D000F7632 /* CollectionViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A25748272023059D000F7632 /* CollectionViewVC.m */; };
 		A257482B202305B9000F7632 /* TableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A257482A202305B9000F7632 /* TableViewVC.m */; };
@@ -197,6 +198,8 @@
 		A22C4DBE1FFC77790079F7C2 /* route_start_pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "route_start_pin@2x.png"; sourceTree = "<group>"; };
 		A241D22220468E68005A3BC5 /* MQTTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQTTVC.h; sourceTree = "<group>"; };
 		A241D22320468E68005A3BC5 /* MQTTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQTTVC.m; sourceTree = "<group>"; };
+		A241D22620479F75005A3BC5 /* UIColor+ColorCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorCategory.h"; sourceTree = "<group>"; };
+		A241D22720479F75005A3BC5 /* UIColor+ColorCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorCategory.m"; sourceTree = "<group>"; };
 		A25748232023058A000F7632 /* DataBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseVC.h; sourceTree = "<group>"; };
 		A25748242023058A000F7632 /* DataBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBaseVC.m; sourceTree = "<group>"; };
 		A25748262023059D000F7632 /* CollectionViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewVC.h; sourceTree = "<group>"; };
@@ -850,6 +853,8 @@
 				A27E8724201AC49B003E712C /* CommonTool.m */,
 				A27E8729201AC717003E712C /* Header.h */,
 				A27E875F201AD490003E712C /* PrefixHeader.pch */,
+				A241D22620479F75005A3BC5 /* UIColor+ColorCategory.h */,
+				A241D22720479F75005A3BC5 /* UIColor+ColorCategory.m */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -1545,6 +1550,7 @@
 				A26CE4A3201971C50012EC69 /* BaiduMapVC.m in Sources */,
 				A20D5E111FD147CD000E191D /* TabBarVC.m in Sources */,
 				A27E875D201AD2B2003E712C /* SoundVC.m in Sources */,
+				A241D22820479F75005A3BC5 /* UIColor+ColorCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

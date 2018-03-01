@@ -8,8 +8,9 @@
 
 #import "LiftCycleVC.h"
 #import <Masonry.h>
-#import "CommonTool.h" // 共同工具
+//#import "CommonTool.h" // 共同工具
 #import "Header.h"
+#import "UIColor+ColorCategory.h"
 
 @interface LiftCycleVC ()
 // 输出页面
@@ -106,8 +107,8 @@
             make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
         }];
         
-        textView.backgroundColor = [CommonTool RandomColor]; // 随机颜色
-        textView.textColor = [CommonTool RandomColor];
+        textView.backgroundColor = [UIColor RandomColor]; // 随机颜色
+        textView.textColor = [UIColor RandomColor]; // 随机颜色
         textView.font = AdaptedFontSize(16);
         
         _inputTextView = textView;

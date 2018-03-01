@@ -12,6 +12,5 @@
 
 @interface CommonTool : NSObject
 
-+ (UIColor *)RandomColor;
 
 @end
