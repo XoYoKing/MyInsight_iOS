@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    /*
+     微信第三方登录
+     */
     
     
     
