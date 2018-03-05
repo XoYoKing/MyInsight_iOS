@@ -914,8 +914,8 @@
 		A27E874A201ACF6A003E712C /* ScaleView */ = {
 			isa = PBXGroup;
 			children = (
-				A27E874B201ACF6A003E712C /* ScaleVC.m */,
 				A27E874C201ACF6A003E712C /* ScaleVC.h */,
+				A27E874B201ACF6A003E712C /* ScaleVC.m */,
 			);
 			path = ScaleView;
 			sourceTree = "<group>";
