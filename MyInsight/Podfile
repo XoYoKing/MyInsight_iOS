@@ -21,6 +21,9 @@ target 'MyInsight' do
   # iOS之MQTT简单使用 https://www.jianshu.com/p/a12cb037dff5
   # iOS MQTT----MQTTClient实战-看这篇的就够了 https://www.jianshu.com/p/80ea4507ca74
   
+  #pod 'AsyncDisplayKit'
+  
+  
   target 'MyInsightTests' do
     inherit! :search_paths
     # Pods for testing
