@@ -25,7 +25,8 @@ target 'MyInsight' do
   
   # 微信第三方登录
   pod 'WechatOpenSDK'
-  # 1e860f261f083d47afcbe5305541d4b6
+  # AppID:wxd0f6b34b0b7430a4
+  # AppSecret:1e860f261f083d47afcbe5305541d4b6
   
   target 'MyInsightTests' do
     inherit! :search_paths

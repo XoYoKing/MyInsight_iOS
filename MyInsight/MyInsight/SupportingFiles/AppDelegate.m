@@ -9,8 +9,9 @@
 #import "AppDelegate.h"
 #import "MainRevealVC.h" // 主页面
 #import "WelcomeVC.h" // 欢迎页面
+#import <WXApi.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<WXApiDelegate>
 
 @end
 
@@ -20,6 +21,8 @@
     
     UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window = window;
+    
+    [WXApi registerApp:@"wxd0f6b34b0b7430a4"];
     
     // 设置3D Touch功能
     [self setup3DTouch];
@@ -101,6 +104,14 @@
         return UIInterfaceOrientationMaskPortrait;
     }
 }
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    // 这个方法是用于从微信返回第三方App，无论是第三方登录还是分享都用到
+    [WXApi handleOpenURL:url delegate:self];
+    
+    return YES;
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     

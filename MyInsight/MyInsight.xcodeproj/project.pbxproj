@@ -113,6 +113,7 @@
 		A2E4E7212004BFDF00EC3D63 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E71A2004BFDE00EC3D63 /* libavdevice.a */; };
 		A2E4E7222004BFDF00EC3D63 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E71B2004BFDE00EC3D63 /* libswresample.a */; };
 		A2E4E7232004BFDF00EC3D63 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E71C2004BFDE00EC3D63 /* libswscale.a */; };
+		A2FFC681204F7B07005C9CFB /* WeChatLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FFC680204F7B07005C9CFB /* WeChatLoginVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -406,6 +407,8 @@
 		A2E4E71A2004BFDE00EC3D63 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavdevice.a; sourceTree = "<group>"; };
 		A2E4E71B2004BFDE00EC3D63 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswresample.a; sourceTree = "<group>"; };
 		A2E4E71C2004BFDE00EC3D63 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswscale.a; sourceTree = "<group>"; };
+		A2FFC67F204F7B07005C9CFB /* WeChatLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatLoginVC.h; sourceTree = "<group>"; };
+		A2FFC680204F7B07005C9CFB /* WeChatLoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatLoginVC.m; sourceTree = "<group>"; };
 		B34F5016CAA45D7BD71933A9 /* Pods-MyInsightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyInsightTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyInsightTests/Pods-MyInsightTests.release.xcconfig"; sourceTree = "<group>"; };
 		D110F761EC3A481896E9E0EB /* libPods-MyInsight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyInsight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -769,6 +772,8 @@
 			children = (
 				A26CE4872018A09A0012EC69 /* OtherVC.h */,
 				A26CE4882018A09A0012EC69 /* OtherVC.m */,
+				A2FFC67F204F7B07005C9CFB /* WeChatLoginVC.h */,
+				A2FFC680204F7B07005C9CFB /* WeChatLoginVC.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -1538,6 +1543,7 @@
 				A257482B202305B9000F7632 /* TableViewVC.m in Sources */,
 				A27E8750201ACF6A003E712C /* BluetoothCell.m in Sources */,
 				A20D5DFD1FD14549000E191D /* main.m in Sources */,
+				A2FFC681204F7B07005C9CFB /* WeChatLoginVC.m in Sources */,
 				A26CE48F2018A0BE0012EC69 /* AdvanceVC.m in Sources */,
 				A26CE4A5201971C50012EC69 /* CallOutAnnotationView.m in Sources */,
 				A27E8753201ACF6A003E712C /* ScaleVC.m in Sources */,
