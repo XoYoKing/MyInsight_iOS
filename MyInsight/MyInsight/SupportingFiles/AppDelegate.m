@@ -24,6 +24,7 @@
     
     [WXApi registerApp:@"wxd0f6b34b0b7430a4"];
     
+    
     // 设置3D Touch功能
     [self setup3DTouch];
     
