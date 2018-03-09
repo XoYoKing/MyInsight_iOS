@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "WelcomeVC.h" // 欢迎页面
+#import "TabBarVC.h" //
 
 @interface AppDelegate ()
 
@@ -16,8 +18,40 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window = window;
+    // Window可见
+    [self.window makeKeyAndVisible];
+    
+    //第一次启动
+    [self isFirstLaunched];
+    
     return YES;
+}
+
+#pragma mark 是否第一次启动
+- (void)isFirstLaunched {
+    /*
+     若是第一次加载 进入欢迎页面 若不是直接进入主页面
+     */
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if (![userDefaults stringForKey:@"LauchAgree"]) {
+        // 设置值
+        [userDefaults setValue:@"sd" forKey:@"LauchAgree"];
+        NSLog(@"第一次启动");
+        // 欢迎页
+        WelcomeVC *welcomeVC = [[WelcomeVC alloc] init];
+        // 设置根视图
+        self.window.rootViewController = welcomeVC;
+        
+    } else {
+        TabBarVC *mainRevealVC = [[TabBarVC alloc] init];
+        // 设置根视图
+        self.window.rootViewController = mainRevealVC;
+        NSLog(@"不是第一次启动");
+    }
 }
 
 
