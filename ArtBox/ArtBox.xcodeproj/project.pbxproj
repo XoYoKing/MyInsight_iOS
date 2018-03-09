@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A279839A205222FC00FBAD32 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2798399205222FC00FBAD32 /* AppDelegate.m */; };
+		A279839D205222FC00FBAD32 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A279839C205222FC00FBAD32 /* ViewController.m */; };
+		A27983A0205222FC00FBAD32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A279839E205222FC00FBAD32 /* Main.storyboard */; };
+		A27983A2205222FC00FBAD32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A27983A1205222FC00FBAD32 /* Assets.xcassets */; };
+		A27983A5205222FC00FBAD32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A27983A3205222FC00FBAD32 /* LaunchScreen.storyboard */; };
+		A27983A8205222FC00FBAD32 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A27983A7205222FC00FBAD32 /* main.m */; };
+		A27983B2205222FC00FBAD32 /* ArtBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A27983B1205222FC00FBAD32 /* ArtBoxTests.m */; };
+		A27983BD205222FD00FBAD32 /* ArtBoxUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A27983BC205222FD00FBAD32 /* ArtBoxUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A27983AE205222FC00FBAD32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A279838D205222FC00FBAD32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2798394205222FC00FBAD32;
+			remoteInfo = ArtBox;
+		};
+		A27983B9205222FD00FBAD32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A279838D205222FC00FBAD32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2798394205222FC00FBAD32;
+			remoteInfo = ArtBox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A2798395205222FC00FBAD32 /* ArtBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2798398205222FC00FBAD32 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A2798399205222FC00FBAD32 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A279839B205222FC00FBAD32 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A279839C205222FC00FBAD32 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A279839F205222FC00FBAD32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A27983A1205222FC00FBAD32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A27983A4205222FC00FBAD32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A27983A6205222FC00FBAD32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A27983A7205222FC00FBAD32 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A27983AD205222FC00FBAD32 /* ArtBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A27983B1205222FC00FBAD32 /* ArtBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtBoxTests.m; sourceTree = "<group>"; };
+		A27983B3205222FC00FBAD32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A27983B8205222FD00FBAD32 /* ArtBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A27983BC205222FD00FBAD32 /* ArtBoxUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtBoxUITests.m; sourceTree = "<group>"; };
+		A27983BE205222FD00FBAD32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2798392205222FC00FBAD32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A27983AA205222FC00FBAD32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A27983B5205222FD00FBAD32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A279838C205222FC00FBAD32 = {
+			isa = PBXGroup;
+			children = (
+				A2798397205222FC00FBAD32 /* ArtBox */,
+				A27983B0205222FC00FBAD32 /* ArtBoxTests */,
+				A27983BB205222FD00FBAD32 /* ArtBoxUITests */,
+				A2798396205222FC00FBAD32 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2798396205222FC00FBAD32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2798395205222FC00FBAD32 /* ArtBox.app */,
+				A27983AD205222FC00FBAD32 /* ArtBoxTests.xctest */,
+				A27983B8205222FD00FBAD32 /* ArtBoxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2798397205222FC00FBAD32 /* ArtBox */ = {
+			isa = PBXGroup;
+			children = (
+				A2798398205222FC00FBAD32 /* AppDelegate.h */,
+				A2798399205222FC00FBAD32 /* AppDelegate.m */,
+				A279839B205222FC00FBAD32 /* ViewController.h */,
+				A279839C205222FC00FBAD32 /* ViewController.m */,
+				A279839E205222FC00FBAD32 /* Main.storyboard */,
+				A27983A1205222FC00FBAD32 /* Assets.xcassets */,
+				A27983A3205222FC00FBAD32 /* LaunchScreen.storyboard */,
+				A27983A6205222FC00FBAD32 /* Info.plist */,
+				A27983A7205222FC00FBAD32 /* main.m */,
+			);
+			path = ArtBox;
+			sourceTree = "<group>";
+		};
+		A27983B0205222FC00FBAD32 /* ArtBoxTests */ = {
+			isa = PBXGroup;
+			children = (
+				A27983B1205222FC00FBAD32 /* ArtBoxTests.m */,
+				A27983B3205222FC00FBAD32 /* Info.plist */,
+			);
+			path = ArtBoxTests;
+			sourceTree = "<group>";
+		};
+		A27983BB205222FD00FBAD32 /* ArtBoxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A27983BC205222FD00FBAD32 /* ArtBoxUITests.m */,
+				A27983BE205222FD00FBAD32 /* Info.plist */,
+			);
+			path = ArtBoxUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2798394205222FC00FBAD32 /* ArtBox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A27983C1205222FD00FBAD32 /* Build configuration list for PBXNativeTarget "ArtBox" */;
+			buildPhases = (
+				A2798391205222FC00FBAD32 /* Sources */,
+				A2798392205222FC00FBAD32 /* Frameworks */,
+				A2798393205222FC00FBAD32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArtBox;
+			productName = ArtBox;
+			productReference = A2798395205222FC00FBAD32 /* ArtBox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A27983AC205222FC00FBAD32 /* ArtBoxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A27983C4205222FD00FBAD32 /* Build configuration list for PBXNativeTarget "ArtBoxTests" */;
+			buildPhases = (
+				A27983A9205222FC00FBAD32 /* Sources */,
+				A27983AA205222FC00FBAD32 /* Frameworks */,
+				A27983AB205222FC00FBAD32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A27983AF205222FC00FBAD32 /* PBXTargetDependency */,
+			);
+			name = ArtBoxTests;
+			productName = ArtBoxTests;
+			productReference = A27983AD205222FC00FBAD32 /* ArtBoxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A27983B7205222FD00FBAD32 /* ArtBoxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A27983C7205222FD00FBAD32 /* Build configuration list for PBXNativeTarget "ArtBoxUITests" */;
+			buildPhases = (
+				A27983B4205222FD00FBAD32 /* Sources */,
+				A27983B5205222FD00FBAD32 /* Frameworks */,
+				A27983B6205222FD00FBAD32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A27983BA205222FD00FBAD32 /* PBXTargetDependency */,
+			);
+			name = ArtBoxUITests;
+			productName = ArtBoxUITests;
+			productReference = A27983B8205222FD00FBAD32 /* ArtBoxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A279838D205222FC00FBAD32 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = SongMenglong;
+				TargetAttributes = {
+					A2798394205222FC00FBAD32 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					A27983AC205222FC00FBAD32 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A2798394205222FC00FBAD32;
+					};
+					A27983B7205222FD00FBAD32 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A2798394205222FC00FBAD32;
+					};
+				};
+			};
+			buildConfigurationList = A2798390205222FC00FBAD32 /* Build configuration list for PBXProject "ArtBox" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A279838C205222FC00FBAD32;
+			productRefGroup = A2798396205222FC00FBAD32 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2798394205222FC00FBAD32 /* ArtBox */,
+				A27983AC205222FC00FBAD32 /* ArtBoxTests */,
+				A27983B7205222FD00FBAD32 /* ArtBoxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2798393205222FC00FBAD32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A27983A5205222FC00FBAD32 /* LaunchScreen.storyboard in Resources */,
+				A27983A2205222FC00FBAD32 /* Assets.xcassets in Resources */,
+				A27983A0205222FC00FBAD32 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A27983AB205222FC00FBAD32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A27983B6205222FD00FBAD32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2798391205222FC00FBAD32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A279839D205222FC00FBAD32 /* ViewController.m in Sources */,
+				A27983A8205222FC00FBAD32 /* main.m in Sources */,
+				A279839A205222FC00FBAD32 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A27983A9205222FC00FBAD32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A27983B2205222FC00FBAD32 /* ArtBoxTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A27983B4205222FD00FBAD32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A27983BD205222FD00FBAD32 /* ArtBoxUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A27983AF205222FC00FBAD32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2798394205222FC00FBAD32 /* ArtBox */;
+			targetProxy = A27983AE205222FC00FBAD32 /* PBXContainerItemProxy */;
+		};
+		A27983BA205222FD00FBAD32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2798394205222FC00FBAD32 /* ArtBox */;
+			targetProxy = A27983B9205222FD00FBAD32 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A279839E205222FC00FBAD32 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A279839F205222FC00FBAD32 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A27983A3205222FC00FBAD32 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A27983A4205222FC00FBAD32 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A27983BF205222FD00FBAD32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A27983C0205222FD00FBAD32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A27983C2205222FD00FBAD32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ArtBox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uascent.ArtBox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A27983C3205222FD00FBAD32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ArtBox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uascent.ArtBox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A27983C5205222FD00FBAD32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ArtBoxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uascent.ArtBoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtBox.app/ArtBox";
+			};
+			name = Debug;
+		};
+		A27983C6205222FD00FBAD32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ArtBoxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uascent.ArtBoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtBox.app/ArtBox";
+			};
+			name = Release;
+		};
+		A27983C8205222FD00FBAD32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ArtBoxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uascent.ArtBoxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ArtBox;
+			};
+			name = Debug;
+		};
+		A27983C9205222FD00FBAD32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ArtBoxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uascent.ArtBoxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ArtBox;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2798390205222FC00FBAD32 /* Build configuration list for PBXProject "ArtBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A27983BF205222FD00FBAD32 /* Debug */,
+				A27983C0205222FD00FBAD32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A27983C1205222FD00FBAD32 /* Build configuration list for PBXNativeTarget "ArtBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A27983C2205222FD00FBAD32 /* Debug */,
+				A27983C3205222FD00FBAD32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A27983C4205222FD00FBAD32 /* Build configuration list for PBXNativeTarget "ArtBoxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A27983C5205222FD00FBAD32 /* Debug */,
+				A27983C6205222FD00FBAD32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A27983C7205222FD00FBAD32 /* Build configuration list for PBXNativeTarget "ArtBoxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A27983C8205222FD00FBAD32 /* Debug */,
+				A27983C9205222FD00FBAD32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A279838D205222FC00FBAD32 /* Project object */;
+}
