@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CFA0B93677B402831F37953CAF1869AC'
+               BlueprintIdentifier = 'FFEF36754FA254248F3AB688A076C114'
                BlueprintName = 'Pods-ArtBox'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-ArtBox.a'>

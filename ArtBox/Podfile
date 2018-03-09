@@ -6,7 +6,8 @@ target 'ArtBox' do
   # use_frameworks!
 
   # Pods for ArtBox
-  
+  pod 'Masonry' # 约束布局
+  pod 'AFNetworking' # 网络请求
   
   
   
