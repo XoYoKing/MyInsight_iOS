@@ -18,11 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"第一次启动");
-    
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
