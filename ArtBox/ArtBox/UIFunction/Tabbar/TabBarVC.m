@@ -35,7 +35,7 @@
     JinShiVC *jinshiVC = [[JinShiVC alloc] init];
     jinshiVC.tabBarItem.image = [UIImage imageNamed:@"home_nor"];
     jinshiVC.tabBarItem.selectedImage = [UIImage imageNamed:@"home_sel"];
-    jinshiVC.tabBarItem.title = @"基础";
+    jinshiVC.tabBarItem.title = @"金石";
     jinshiVC.title = jinshiVC.tabBarItem.title;
     UINavigationController *basicNavi = [[UINavigationController alloc] initWithRootViewController:jinshiVC];
     
@@ -43,21 +43,21 @@
     ShuFaVC *shufaVC = [[ShuFaVC alloc] init];
     shufaVC.tabBarItem.image = [UIImage imageNamed:@"mark_nor"];
     shufaVC.tabBarItem.selectedImage = [UIImage imageNamed:@"mark_sel"];
-    shufaVC.tabBarItem.title = @"进阶";
+    shufaVC.tabBarItem.title = @"书法";
     shufaVC.title = shufaVC.tabBarItem.title;
     UINavigationController *advanceNavi = [[UINavigationController alloc] initWithRootViewController:shufaVC];
     // 陶瓷
     TaoCiVC *taociVC = [[TaoCiVC alloc] init];
     taociVC.tabBarItem.image = [UIImage imageNamed:@"mine_nor"];
     taociVC.tabBarItem.selectedImage = [UIImage imageNamed:@"mine_sel"];
-    taociVC.tabBarItem.title = @"高级";
+    taociVC.tabBarItem.title = @"陶瓷";
     taociVC.title = taociVC.tabBarItem.title;
     UINavigationController *seniorNavi = [[UINavigationController alloc] initWithRootViewController:taociVC];
     // 油画
     YouHuaVC *youhuaVC = [[YouHuaVC alloc] init];
     youhuaVC.tabBarItem.image = [UIImage imageNamed:@"setting_nor"];
     youhuaVC.tabBarItem.selectedImage = [UIImage imageNamed:@"setting_sel"];
-    youhuaVC.tabBarItem.title = @"其他";
+    youhuaVC.tabBarItem.title = @"油画";
     youhuaVC.title = youhuaVC.tabBarItem.title;
     UINavigationController *otherNavi = [[UINavigationController alloc] initWithRootViewController:youhuaVC];
     
