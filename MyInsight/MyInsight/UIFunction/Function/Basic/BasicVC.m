@@ -40,6 +40,12 @@ const NSString *TableViewStr = @"TableView";
 const NSString *CollectViewStr = @"CollectView";
 const NSString *DataBaseStr = @"数据库";
 
+/*
+ [IOS单选框RadioButton实现](https://www.jianshu.com/p/4971424c693b)
+ [Radio Button——iOS单选按钮](https://www.jianshu.com/p/b349428b40ab)
+ */
+
+
 @implementation BasicVC
 
 - (void)viewWillAppear:(BOOL)animated {
