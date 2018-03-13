@@ -16,6 +16,7 @@
 #import "DataBaseVC.h"
 #import "TableViewVC.h"
 #import "CollectionViewVC.h"
+#import "RadioButtonVC.h"
 
 @interface BasicVC ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -39,6 +40,8 @@ const NSString *AnimationStr = @"动画";
 const NSString *TableViewStr = @"TableView";
 const NSString *CollectViewStr = @"CollectView";
 const NSString *DataBaseStr = @"数据库";
+const NSString *radioButtonStr = @"单选按钮🔘";
+
 
 /*
  [IOS单选框RadioButton实现](https://www.jianshu.com/p/4971424c693b)
@@ -82,7 +85,7 @@ const NSString *DataBaseStr = @"数据库";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[LiftCycleStr, RunTimeStr, ShouShiStr, XieYiStr, AnimationStr, TableViewStr, CollectViewStr, DataBaseStr];
+    self.dataArray = @[LiftCycleStr, RunTimeStr, ShouShiStr, XieYiStr, AnimationStr, TableViewStr, CollectViewStr, DataBaseStr, radioButtonStr];
 }
 
 #pragma mark - 创建TableView
@@ -129,44 +132,53 @@ const NSString *DataBaseStr = @"数据库";
 // 选中cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 获取到当前cell的字符串
-    NSString *indexString = [self.dataArray objectAtIndex:indexPath.row];
+    NSString *cellString = [self.dataArray objectAtIndex:indexPath.row];
     
-    if ([indexString isEqual:LiftCycleStr]) {
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationController.navigationBar.tintColor = [UIColor redColor];  
+    
+    if ([cellString isEqual:LiftCycleStr]) {
         // 生命周期
         LiftCycleVC *liftCycleVC = [[LiftCycleVC alloc] init];
         liftCycleVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:liftCycleVC animated:YES];
     }
     
-    if ([indexString isEqual:RunTimeStr]) {
+    if ([cellString isEqual:RunTimeStr]) {
         // 运行时
         RunTimeVC *runTimeVC = [[RunTimeVC alloc] init];
         runTimeVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:runTimeVC animated:YES];
     }
-    if ([indexString isEqual:AnimationStr]) {
+    if ([cellString isEqual:AnimationStr]) {
         // 动画
         AnimationVC *animationVC = [[AnimationVC alloc] init];
         animationVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:animationVC animated:YES];
     }
-    if ([indexString isEqual:TableViewStr]) {
+    if ([cellString isEqual:TableViewStr]) {
         // TableView
         TableViewVC *tableViewVC = [[TableViewVC alloc] init];
         tableViewVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:tableViewVC animated:YES];
     }
-    if ([indexString isEqual:CollectViewStr]) {
+    if ([cellString isEqual:CollectViewStr]) {
         //CollectionView
         CollectionViewVC *collectionViewVC = [[CollectionViewVC alloc] init];
         collectionViewVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:collectionViewVC animated:YES];
     }
-    if ([indexString isEqual:DataBaseStr]) {
+    if ([cellString isEqual:DataBaseStr]) {
         // 数据库
         DataBaseVC *dataBaseVC = [[DataBaseVC alloc] init];
         dataBaseVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:dataBaseVC animated:YES];
+    }
+    if ([cellString isEqual:radioButtonStr]) {
+        // 单选button
+        RadioButtonVC *radioButtonVC = [[RadioButtonVC alloc] init];
+        radioButtonVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:radioButtonVC animated:YES];
     }
 }
 

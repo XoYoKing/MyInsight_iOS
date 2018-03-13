@@ -104,6 +104,8 @@
 		A2A30BA62008BC5F00C974B7 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30BA52008BC5F00C974B7 /* libiconv.tbd */; };
 		A2A30BA82008C03E00C974B7 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30BA72008C03E00C974B7 /* libbz2.tbd */; };
 		A2A30BAA2008C04F00C974B7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30BA92008C04F00C974B7 /* libz.tbd */; };
+		A2A516042057634400EC5AA6 /* RadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A516032057634400EC5AA6 /* RadioButton.m */; };
+		A2B43C3320575EE700FEAE58 /* RadioButtonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B43C3220575EE700FEAE58 /* RadioButtonVC.m */; };
 		A2C1AB7D2025A1D80085A653 /* alarm4.m4r in Resources */ = {isa = PBXBuildFile; fileRef = A2C1AB7C2025A1D80085A653 /* alarm4.m4r */; };
 		A2CA807E2021568D00D81845 /* TouchIDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA807D2021568D00D81845 /* TouchIDVC.m */; };
 		A2CA808B202196EA00D81845 /* AnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA8083202196E900D81845 /* AnimationVC.m */; };
@@ -288,6 +290,10 @@
 		A2A30BA52008BC5F00C974B7 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		A2A30BA72008C03E00C974B7 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		A2A30BA92008C04F00C974B7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		A2A516022057634400EC5AA6 /* RadioButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadioButton.h; sourceTree = "<group>"; };
+		A2A516032057634400EC5AA6 /* RadioButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadioButton.m; sourceTree = "<group>"; };
+		A2B43C3120575EE700FEAE58 /* RadioButtonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadioButtonVC.h; sourceTree = "<group>"; };
+		A2B43C3220575EE700FEAE58 /* RadioButtonVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadioButtonVC.m; sourceTree = "<group>"; };
 		A2C1AB7C2025A1D80085A653 /* alarm4.m4r */ = {isa = PBXFileReference; lastKnownFileType = file; path = alarm4.m4r; sourceTree = "<group>"; };
 		A2CA807C2021568D00D81845 /* TouchIDVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchIDVC.h; sourceTree = "<group>"; };
 		A2CA807D2021568D00D81845 /* TouchIDVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIDVC.m; sourceTree = "<group>"; };
@@ -757,6 +763,7 @@
 			children = (
 				A26CE4842018A0880012EC69 /* BasicVC.h */,
 				A26CE4852018A0880012EC69 /* BasicVC.m */,
+				A2B43C3020575ECD00FEAE58 /* RadioButton */,
 				A25748202023056C000F7632 /* CollectionView */,
 				A25748222023056D000F7632 /* DataBase */,
 				A25748212023056C000F7632 /* TableView */,
@@ -956,6 +963,17 @@
 				A27E8758201AD2B2003E712C /* SoundVC.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A2B43C3020575ECD00FEAE58 /* RadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				A2B43C3120575EE700FEAE58 /* RadioButtonVC.h */,
+				A2B43C3220575EE700FEAE58 /* RadioButtonVC.m */,
+				A2A516022057634400EC5AA6 /* RadioButton.h */,
+				A2A516032057634400EC5AA6 /* RadioButton.m */,
+			);
+			path = RadioButton;
 			sourceTree = "<group>";
 		};
 		A2CA807B2021567600D81845 /* TouchID */ = {
@@ -1526,6 +1544,7 @@
 			files = (
 				A27E874D201ACF6A003E712C /* BlueToothVC.m in Sources */,
 				A27B37E2204159BE00C25895 /* SQLiteHandle.m in Sources */,
+				A2A516042057634400EC5AA6 /* RadioButton.m in Sources */,
 				A2CA808B202196EA00D81845 /* AnimationVC.m in Sources */,
 				A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */,
 				A27E8751201ACF6A003E712C /* LandscapeScreenVC.m in Sources */,
@@ -1542,6 +1561,7 @@
 				A26CE4A4201971C50012EC69 /* GoogleMapVC.m in Sources */,
 				A27B37E52041603900C25895 /* DataBaseModel.m in Sources */,
 				A26CE4862018A0880012EC69 /* BasicVC.m in Sources */,
+				A2B43C3320575EE700FEAE58 /* RadioButtonVC.m in Sources */,
 				A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */,
 				A25748252023058A000F7632 /* DataBaseVC.m in Sources */,
 				A26CE48C2018A0AD0012EC69 /* SeniorVC.m in Sources */,
