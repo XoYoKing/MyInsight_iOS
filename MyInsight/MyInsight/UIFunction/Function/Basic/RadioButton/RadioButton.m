@@ -11,8 +11,7 @@
 @implementation RadioButton
 
 #pragma mark - 重写初始化方法
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         [self setupContentUI];
@@ -20,8 +19,7 @@
     return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         [self setupContentUI];
@@ -29,8 +27,7 @@
     return self;
 }
 
-- (instancetype)initWithCoder:(NSCoder *)coder
-{
+- (instancetype)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
     if (self) {
         [self setupContentUI];
@@ -40,6 +37,36 @@
 
 #pragma mark - 初始化UI
 - (void)setupContentUI {
+    //
+    [self addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    self.titleLabel.numberOfLines = 0;
+    
+    [self setTitleColor:UIColorFromHex(0x0a83c6) forState:UIControlStateSelected];
+    [self setTitleColor:UIColorFromHex(0x333333) forState:UIControlStateNormal];
+    
+    if (self.selected) {
+        self.titleLabel.font = [UIFont boldSystemFontOfSize:15.0f];
+    } else {
+        self.titleLabel.font = [UIFont boldSystemFontOfSize:15.0f];
+    }
+    
+}
+
+
+- (void)buttonClicked:(UIButton *)button {
+    NSLog(@"选中复选框button");
+    button.selected = !button.selected;
+    
+    if (self.selected) {
+        self.titleLabel.font = [UIFont boldSystemFontOfSize:15.0f];
+    } else {
+        self.titleLabel.font = [UIFont boldSystemFontOfSize:15.0f];
+    }
+    
+    // 闭包 block传出
+    
+    
+    
     
 }
 

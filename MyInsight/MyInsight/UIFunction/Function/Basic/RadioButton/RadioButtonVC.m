@@ -7,8 +7,12 @@
 //
 
 #import "RadioButtonVC.h"
+#import "RadioButton.h"
+#import <Masonry.h>
 
 @interface RadioButtonVC ()
+
+@property (nonatomic, strong) RadioButton *testButton;
 
 @end
 
@@ -20,6 +24,20 @@
     
     self.view.backgroundColor =  [UIColor whiteColor];
     
+    self.testButton = [RadioButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:self.testButton];
+    [self.testButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.view.mas_centerY).multipliedBy(1.0f);
+        make.left.equalTo(self.view.mas_left).offset(40.0f);
+        make.right.equalTo(self.view.mas_right).offset(-35.0f);
+        make.height.offset(40.0f);
+    }];
+    
+    //self.testButton.backgroundColor = [UIColor blueColor];
+    [self.testButton setImage:[UIImage imageNamed:@"selectoff_btn"] forState:UIControlStateNormal];
+    [self.testButton setImage:[UIImage imageNamed:@"selecton_btn"] forState:UIControlStateSelected];
+    
+    [self.testButton setTitle:@"滚滚长江东逝水" forState:UIControlStateNormal];
     
 }
 
