@@ -10,4 +10,10 @@
 
 @interface RadioButton : UIButton
 
+// 取消或者确定block 默认NO=cancel YES=enter
+typedef void (^ ClickedAction)(RadioButton *button, BOOL selected);
+
+// block属性
+@property (nonatomic, copy) ClickedAction clickedAction;
+
 @end

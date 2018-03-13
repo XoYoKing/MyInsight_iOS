@@ -18,6 +18,11 @@
 
 @implementation RadioButtonVC
 
+/*
+ [IOS单选框RadioButton实现](https://www.jianshu.com/p/4971424c693b)
+ [Radio Button——iOS单选按钮](https://www.jianshu.com/p/b349428b40ab)
+ */
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"单选🔘";
@@ -33,11 +38,18 @@
         make.height.offset(40.0f);
     }];
     
-    //self.testButton.backgroundColor = [UIColor blueColor];
     [self.testButton setImage:[UIImage imageNamed:@"selectoff_btn"] forState:UIControlStateNormal];
     [self.testButton setImage:[UIImage imageNamed:@"selecton_btn"] forState:UIControlStateSelected];
     
     [self.testButton setTitle:@"滚滚长江东逝水" forState:UIControlStateNormal];
+    
+    [self.testButton setClickedAction:^(RadioButton *button, BOOL selected) {
+        if (selected) {
+            NSLog(@"选中button");
+        } else{
+            NSLog(@"没选中button");
+        }
+    }];
     
 }
 

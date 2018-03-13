@@ -10,6 +10,20 @@
 
 @implementation RadioButton
 
+// 重写setter方法
+- (BOOL)isSelected {
+    return [super isSelected];
+}
+
+- (void)setSelected:(BOOL)selected {
+    super.selected = selected;
+    if (self.selected) {
+        self.titleLabel.font = [UIFont boldSystemFontOfSize:15.0f];
+    } else {
+        self.titleLabel.font = [UIFont boldSystemFontOfSize:15.0f];
+    }
+}
+
 #pragma mark - 重写初始化方法
 - (instancetype)init {
     self = [super init];
@@ -64,7 +78,9 @@
     }
     
     // 闭包 block传出
-    
+    if (self.clickedAction) {
+        self.clickedAction(self, self.selected);
+    }
     
     
     
