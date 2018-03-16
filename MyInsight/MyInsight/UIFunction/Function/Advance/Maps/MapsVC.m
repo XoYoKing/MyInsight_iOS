@@ -91,26 +91,31 @@ const NSString *YahooMapsStr = @"YahooMap";
 // 选中cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 获取字符串
-    NSString *indexString = [self.dataArray objectAtIndex:indexPath.row];
-    if ([indexString isEqual:BaiduMapStr]) {
+    NSString *cellString = [self.dataArray objectAtIndex:indexPath.row];
+    
+    // 设置返回button的样式
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationController.navigationBar.tintColor = [UIColor redColor];
+    
+    if ([cellString isEqual:BaiduMapStr]) {
         // BaiDu
         BaiduMapVC *baiduMapVC = [[BaiduMapVC alloc] init];
         baiduMapVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:baiduMapVC animated:YES];
     }
-    if ([indexString isEqual:SystemMapStr]) {
+    if ([cellString isEqual:SystemMapStr]) {
         //
         SystemMapVC *systemMapVC = [[SystemMapVC alloc] init];
         systemMapVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:systemMapVC animated:YES];
     }
-    if ([indexString isEqual:GoogleMapStr]) {
+    if ([cellString isEqual:GoogleMapStr]) {
         // Google
         GoogleMapVC *googleMapVC = [[GoogleMapVC alloc] init];
         googleMapVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:googleMapVC animated:YES];
     }
-    if ([indexString isEqual:YahooMapsStr]) {
+    if ([cellString isEqual:YahooMapsStr]) {
         // Yahoo
         YahooMapVC *yahooMapVC = [[YahooMapVC alloc] init];
         yahooMapVC.hidesBottomBarWhenPushed = YES;
