@@ -116,45 +116,49 @@ const NSString *MQTTStr = @"MQTT";
 // 选中cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 获取字符串
-    NSString *indexString = [self.dataArray objectAtIndex:indexPath.row];
+    NSString *cellString = [self.dataArray objectAtIndex:indexPath.row];
     
-    if ([indexString isEqual:TouchIDStr]) {
+    // 设置返回button的样式
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationController.navigationBar.tintColor = [UIColor redColor];
+    
+    if ([cellString isEqual:TouchIDStr]) {
         // TouchID
         TouchIDVC *touchIDVC = [[TouchIDVC alloc] init];
         touchIDVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:touchIDVC animated:YES];
     }
-    if ([indexString isEqual:MapsStr]) {
+    if ([cellString isEqual:MapsStr]) {
         //  地图
         MapsVC *mapsVC = [[MapsVC alloc] init];
         mapsVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:mapsVC animated:YES];
     }
-    if ([indexString isEqual:ScreenStr]) {
+    if ([cellString isEqual:ScreenStr]) {
         // 横竖屏
         PortraitScreenVC *portraitScreenVC = [[PortraitScreenVC alloc] init];
         portraitScreenVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:portraitScreenVC animated:YES];
     }
-    if ([indexString isEqual:ScaleStr]) {
+    if ([cellString isEqual:ScaleStr]) {
         // 等分布局
         ScaleVC *scaleVC = [[UIStoryboard storyboardWithName:@"Home" bundle:NULL] instantiateViewControllerWithIdentifier:@"ScaleVC"];
         scaleVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:scaleVC animated:YES];
     }
-    if ([indexString isEqual:BlueToothStr]) {
+    if ([cellString isEqual:BlueToothStr]) {
         // 蓝牙(系统)
         BlueToothVC *blueToothVC = [[BlueToothVC alloc] init];
         blueToothVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:blueToothVC animated:YES];
     }
-    if ([indexString isEqual:BabyBLEStr]) {
+    if ([cellString isEqual:BabyBLEStr]) {
         // 蓝牙(三方)
         BabyBleVC *babyBleVC = [[BabyBleVC alloc] init];
         babyBleVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:babyBleVC animated:YES];
     }
-    if ([indexString isEqual:MQTTStr]) {
+    if ([cellString isEqual:MQTTStr]) {
         // MQTT
         MQTTVC *mqttVC = [[MQTTVC alloc] init];
         mqttVC.hidesBottomBarWhenPushed = YES;

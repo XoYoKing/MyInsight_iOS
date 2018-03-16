@@ -108,22 +108,25 @@ const NSString *AudioStr = @"Audio";
 // 选中cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 获取字符串
-    NSString *indexString = [self.dataArray objectAtIndex:indexPath.row];
+    NSString *cellString = [self.dataArray objectAtIndex:indexPath.row];
     
-    if ([indexString isEqual:OpenCVStr]) {
+    // 设置返回button的样式
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationController.navigationBar.tintColor = [UIColor redColor];
+    
+    if ([cellString isEqual:OpenCVStr]) {
         // OpenCV
         OpenCVVC *openCVVC = [[UIStoryboard storyboardWithName:@"Home" bundle:NULL] instantiateViewControllerWithIdentifier:@"OpenCVVC"];
         openCVVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:openCVVC animated:YES];
     }
-    if ([indexString isEqual:FFmpegStr]) {
+    if ([cellString isEqual:FFmpegStr]) {
         // FFmpeg
         FFmpegVC *ffmpegVC = [[FFmpegVC alloc] init];
         ffmpegVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:ffmpegVC animated:YES];
     }
-    if ([indexString isEqual:AudioStr]) {
-        NSLog(@"搞一搞饮品啊");
+    if ([cellString isEqual:AudioStr]) {
         AudioVC *audioVC = [[AudioVC alloc] init];
         audioVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:audioVC animated:YES];

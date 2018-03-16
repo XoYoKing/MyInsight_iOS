@@ -102,6 +102,11 @@ const NSString *WeChatLoginStr = @"微信第三方登录";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 获取cell的字符串
     NSString *cellString = [self.dataArray objectAtIndex:indexPath.row];
+    
+    // 设置返回button样式
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationController.navigationBar.tintColor = [UIColor redColor];
+    
     if ([cellString isEqual:WeChatLoginStr]) {
         // 微信第三方登录页面
         WeChatLoginVC *weChatLoginVC = [[WeChatLoginVC alloc] init];
