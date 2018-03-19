@@ -1,5 +1,5 @@
 //
-//  MultiThreadVC.h
+//  GCDVC.h
 //  MyInsight
 //
 //  Created by SongMenglong on 2018/3/19.
@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseTableVC.h"
-#import "BaseViewController.h"
 
-@interface MultiThreadVC : BaseTableVC
+@interface GCDVC : UIViewController
 
 @end

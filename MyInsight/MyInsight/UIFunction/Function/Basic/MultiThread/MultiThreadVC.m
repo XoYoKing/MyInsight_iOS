@@ -7,10 +7,21 @@
 //
 
 #import "MultiThreadVC.h"
+#import "ThreadVC.h"
+#import "GCDVC.h"
+#import "OperationVC.h"
+#import "LockVC.h"
 
 @interface MultiThreadVC ()
 
+@property (nonatomic, strong) NSArray *dataArray;
+
 @end
+
+const NSString *NSThreadStr = @"NSThread线程";
+const NSString *GCDStr = @"GCD多线程";
+const NSString *NSOperationStr = @"NSOperation多线程";
+const NSString *LockStr = @"同步锁知识";
 
 @implementation MultiThreadVC
 
@@ -21,11 +32,76 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    /*
-     
-     */
+    self.dataArray = @[NSThreadStr, GCDStr, NSOperationStr, LockStr];
     
     
+    [self setupTableView];
+}
+
+- (void)setupTableView {
+    // 去掉多余的cell
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    // 注册cell
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
+    }
+    
+    // 赋值
+    cell.textLabel.text = self.dataArray[indexPath.row];
+    cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 获取到当前cell的字符串
+    NSString *cellString = [self.dataArray objectAtIndex:indexPath.row];
+    
+    // 设置返回button的样式
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationController.navigationBar.tintColor = [UIColor redColor];
+    
+    if ([cellString isEqual:NSThreadStr]) {
+        // NSThread多线程
+        ThreadVC *threadVC = [[ThreadVC alloc] init];
+        threadVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:threadVC animated:YES];
+    }
+    
+    if ([cellString isEqual:GCDStr]) {
+        // GCD多线程
+        GCDVC *gcdVC = [[GCDVC alloc] init];
+        gcdVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:gcdVC animated:YES];
+    }
+    
+    if ([cellString isEqual:NSOperationStr]) {
+        // NSOperation多线程
+        OperationVC *operationVC = [[OperationVC alloc] init];
+        operationVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:operationVC animated:YES];
+    }
+    
+    if ([cellString isEqual:LockStr]) {
+        // 同步锁
+        LockVC *lockVC = [[LockVC alloc] init];
+        lockVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:lockVC animated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
