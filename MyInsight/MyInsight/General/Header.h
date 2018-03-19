@@ -14,5 +14,4 @@
 //#define AdaptedFontSize(R)     [UIFont systemFontOfSize:AdaptedWidth(R)]
 #define AdaptedFontSize(R)     [UIFont systemFontOfSize:(R)]
 
-
 #endif /* Header_h */
