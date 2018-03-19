@@ -17,6 +17,7 @@
 #import "TableViewVC.h"
 #import "CollectionViewVC.h"
 #import "RadioButtonVC.h"
+#import "MultiThreadVC.h" //多线程
 
 @interface BasicVC ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -41,6 +42,9 @@ const NSString *TableViewStr = @"TableView";
 const NSString *CollectViewStr = @"CollectView";
 const NSString *DataBaseStr = @"数据库";
 const NSString *radioButtonStr = @"单选按钮🔘";
+const NSString *MultiThreadString = @"多线程";
+const NSString *numberString = @"";
+
 
 /*
  */
@@ -81,7 +85,7 @@ const NSString *radioButtonStr = @"单选按钮🔘";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[LiftCycleStr, RunTimeStr, ShouShiStr, XieYiStr, AnimationStr, TableViewStr, CollectViewStr, DataBaseStr, radioButtonStr];
+    self.dataArray = @[LiftCycleStr, RunTimeStr, ShouShiStr, XieYiStr, AnimationStr, TableViewStr, CollectViewStr, DataBaseStr, radioButtonStr, MultiThreadString];
 }
 
 #pragma mark - 创建TableView
@@ -176,6 +180,14 @@ const NSString *radioButtonStr = @"单选按钮🔘";
         radioButtonVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:radioButtonVC animated:YES];
     }
+    if ([cellString isEqual:MultiThreadString]) {
+        // 多线程
+        MultiThreadVC *multiThreadVC = [[MultiThreadVC alloc] init];
+        multiThreadVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:multiThreadVC animated:YES];
+    }
+    
+    
 }
 
 #pragma mark 代码约束布局
