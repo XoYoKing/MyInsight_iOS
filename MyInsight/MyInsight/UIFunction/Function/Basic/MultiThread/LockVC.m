@@ -11,6 +11,12 @@
 
 @interface LockVC ()
 
+@property (nonatomic, strong) NSMutableArray *myMutableList;
+//要运用atomic 线程安全 只能是相对安全 只有这个属性也会出现线程问题
+@property (strong, nonatomic) NSMutableArray *myThreadList;
+// 安全
+@property (strong, atomic) NSLock *mylock;
+
 @end
 
 @implementation LockVC
