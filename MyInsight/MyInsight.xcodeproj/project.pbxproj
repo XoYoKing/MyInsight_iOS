@@ -106,6 +106,8 @@
 		A2A30BAA2008C04F00C974B7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30BA92008C04F00C974B7 /* libz.tbd */; };
 		A2A516042057634400EC5AA6 /* RadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A516032057634400EC5AA6 /* RadioButton.m */; };
 		A2B43C3320575EE700FEAE58 /* RadioButtonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B43C3220575EE700FEAE58 /* RadioButtonVC.m */; };
+		A2B9927420623D0E002A73B1 /* SocketVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B9927320623D0E002A73B1 /* SocketVC.m */; };
+		A2B9927820623EA3002A73B1 /* OpenGLVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B9927720623EA3002A73B1 /* OpenGLVC.m */; };
 		A2BDD423205F557C008AD133 /* MultiThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD422205F557C008AD133 /* MultiThreadVC.m */; };
 		A2BDD42A205F5742008AD133 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD429205F5742008AD133 /* BaseViewController.m */; };
 		A2BDD42D205F5754008AD133 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD42C205F5754008AD133 /* BaseModel.m */; };
@@ -304,6 +306,10 @@
 		A2A516032057634400EC5AA6 /* RadioButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadioButton.m; sourceTree = "<group>"; };
 		A2B43C3120575EE700FEAE58 /* RadioButtonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadioButtonVC.h; sourceTree = "<group>"; };
 		A2B43C3220575EE700FEAE58 /* RadioButtonVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadioButtonVC.m; sourceTree = "<group>"; };
+		A2B9927220623D0E002A73B1 /* SocketVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketVC.h; sourceTree = "<group>"; };
+		A2B9927320623D0E002A73B1 /* SocketVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketVC.m; sourceTree = "<group>"; };
+		A2B9927620623EA3002A73B1 /* OpenGLVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLVC.h; sourceTree = "<group>"; };
+		A2B9927720623EA3002A73B1 /* OpenGLVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGLVC.m; sourceTree = "<group>"; };
 		A2BDD421205F557C008AD133 /* MultiThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadVC.h; sourceTree = "<group>"; };
 		A2BDD422205F557C008AD133 /* MultiThreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiThreadVC.m; sourceTree = "<group>"; };
 		A2BDD428205F5742008AD133 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -810,9 +816,11 @@
 			children = (
 				A26CE48A2018A0AD0012EC69 /* SeniorVC.h */,
 				A26CE48B2018A0AD0012EC69 /* SeniorVC.m */,
+				A2B9927120623CF3002A73B1 /* Socket */,
 				A27E8754201AD2B2003E712C /* Audio */,
 				A27E8738201ACD5D003E712C /* FFmpeg */,
-				A27E8735201ACD5D003E712C /* OpenCVView */,
+				A2B9927520623E8B002A73B1 /* OpenGL */,
+				A27E8735201ACD5D003E712C /* OpenCV */,
 			);
 			path = Senior;
 			sourceTree = "<group>";
@@ -924,13 +932,13 @@
 			path = Music;
 			sourceTree = "<group>";
 		};
-		A27E8735201ACD5D003E712C /* OpenCVView */ = {
+		A27E8735201ACD5D003E712C /* OpenCV */ = {
 			isa = PBXGroup;
 			children = (
 				A27E8736201ACD5D003E712C /* OpenCVVC.mm */,
 				A27E8737201ACD5D003E712C /* OpenCVVC.h */,
 			);
-			path = OpenCVView;
+			path = OpenCV;
 			sourceTree = "<group>";
 		};
 		A27E8738201ACD5D003E712C /* FFmpeg */ = {
@@ -1006,6 +1014,24 @@
 				A2A516032057634400EC5AA6 /* RadioButton.m */,
 			);
 			path = RadioButton;
+			sourceTree = "<group>";
+		};
+		A2B9927120623CF3002A73B1 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				A2B9927220623D0E002A73B1 /* SocketVC.h */,
+				A2B9927320623D0E002A73B1 /* SocketVC.m */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
+		A2B9927520623E8B002A73B1 /* OpenGL */ = {
+			isa = PBXGroup;
+			children = (
+				A2B9927620623EA3002A73B1 /* OpenGLVC.h */,
+				A2B9927720623EA3002A73B1 /* OpenGLVC.m */,
+			);
+			path = OpenGL;
 			sourceTree = "<group>";
 		};
 		A2BDD420205F5550008AD133 /* MultiThread */ = {
@@ -1637,6 +1663,7 @@
 				A2A516042057634400EC5AA6 /* RadioButton.m in Sources */,
 				A2CA808B202196EA00D81845 /* AnimationVC.m in Sources */,
 				A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */,
+				A2B9927820623EA3002A73B1 /* OpenGLVC.m in Sources */,
 				A27E8751201ACF6A003E712C /* LandscapeScreenVC.m in Sources */,
 				A26CE4A6201971C50012EC69 /* CustomPointAnnotation.m in Sources */,
 				A257482F202315C0000F7632 /* RFQuiltLayout.m in Sources */,
@@ -1687,6 +1714,7 @@
 				A20D5E111FD147CD000E191D /* TabBarVC.m in Sources */,
 				A27E875D201AD2B2003E712C /* SoundVC.m in Sources */,
 				A2BDD42A205F5742008AD133 /* BaseViewController.m in Sources */,
+				A2B9927420623D0E002A73B1 /* SocketVC.m in Sources */,
 				A2BDD42D205F5754008AD133 /* BaseModel.m in Sources */,
 				A241D22B2047A32A005A3BC5 /* UIColor+Category.m in Sources */,
 			);

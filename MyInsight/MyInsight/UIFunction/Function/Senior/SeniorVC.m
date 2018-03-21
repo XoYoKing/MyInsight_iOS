@@ -12,6 +12,8 @@
 #import "OpenCVVC.h" // OpenCV
 #import "FFmpegVC.h" // FFmpegVC
 #import "AudioVC.h"
+#import "SocketVC.h"
+#import "OpenGLVC.h"
 
 @interface SeniorVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -20,8 +22,11 @@
 @property (nonatomic, strong) NSArray *dataArray;
 @end
 
+const NSString *SocketStr = @"Socket通讯";
 const NSString *OpenCVStr = @"OpenCV";
 const NSString *FFmpegStr = @"FFmpeg";
+const NSString *OpenGLStr = @"OpenGL";
+
 /*
  设定功能：
  音频学习
@@ -63,7 +68,7 @@ const NSString *AudioStr = @"Audio";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[@"Socket", OpenCVStr, FFmpegStr, AudioStr];
+    self.dataArray = @[SocketStr, OpenCVStr, FFmpegStr, AudioStr, OpenGLStr];
 }
 
 #pragma mark - 创建TableView
@@ -114,11 +119,23 @@ const NSString *AudioStr = @"Audio";
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationController.navigationBar.tintColor = [UIColor redColor];
     
+    if ([cellString isEqual:SocketStr]) {
+        // Socket通讯
+        SocketVC *socketVC = [[SocketVC alloc] init];
+        socketVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:socketVC animated:YES];
+    }
     if ([cellString isEqual:OpenCVStr]) {
         // OpenCV
         OpenCVVC *openCVVC = [[UIStoryboard storyboardWithName:@"Home" bundle:NULL] instantiateViewControllerWithIdentifier:@"OpenCVVC"];
         openCVVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:openCVVC animated:YES];
+    }
+    if ([cellString isEqual:OpenGLStr]) {
+        // OpenGL
+        OpenGLVC *openGLVC = [[OpenGLVC alloc] init];
+        openGLVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:openGLVC animated:YES];
     }
     if ([cellString isEqual:FFmpegStr]) {
         // FFmpeg
