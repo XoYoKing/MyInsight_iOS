@@ -108,6 +108,8 @@
 		A2B43C3320575EE700FEAE58 /* RadioButtonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B43C3220575EE700FEAE58 /* RadioButtonVC.m */; };
 		A2B9927420623D0E002A73B1 /* SocketVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B9927320623D0E002A73B1 /* SocketVC.m */; };
 		A2B9927820623EA3002A73B1 /* OpenGLVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B9927720623EA3002A73B1 /* OpenGLVC.m */; };
+		A2B9927A20624F00002A73B1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B9927920624F00002A73B1 /* OpenGLES.framework */; };
+		A2B9927C20624F07002A73B1 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B9927B20624F07002A73B1 /* GLKit.framework */; };
 		A2BDD423205F557C008AD133 /* MultiThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD422205F557C008AD133 /* MultiThreadVC.m */; };
 		A2BDD42A205F5742008AD133 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD429205F5742008AD133 /* BaseViewController.m */; };
 		A2BDD42D205F5754008AD133 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD42C205F5754008AD133 /* BaseModel.m */; };
@@ -310,6 +312,8 @@
 		A2B9927320623D0E002A73B1 /* SocketVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketVC.m; sourceTree = "<group>"; };
 		A2B9927620623EA3002A73B1 /* OpenGLVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLVC.h; sourceTree = "<group>"; };
 		A2B9927720623EA3002A73B1 /* OpenGLVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGLVC.m; sourceTree = "<group>"; };
+		A2B9927920624F00002A73B1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		A2B9927B20624F07002A73B1 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		A2BDD421205F557C008AD133 /* MultiThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadVC.h; sourceTree = "<group>"; };
 		A2BDD422205F557C008AD133 /* MultiThreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiThreadVC.m; sourceTree = "<group>"; };
 		A2BDD428205F5742008AD133 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -466,6 +470,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2B9927C20624F07002A73B1 /* GLKit.framework in Frameworks */,
+				A2B9927A20624F00002A73B1 /* OpenGLES.framework in Frameworks */,
 				A27983692051108F00FBAD32 /* libsqlite3.0.tbd in Frameworks */,
 				A27983672051107100FBAD32 /* SystemConfiguration.framework in Frameworks */,
 				A27983652051106300FBAD32 /* CoreTelephony.framework in Frameworks */,
@@ -521,6 +527,8 @@
 		6EADE52EE3D33EACA00B1056 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A2B9927B20624F07002A73B1 /* GLKit.framework */,
+				A2B9927920624F00002A73B1 /* OpenGLES.framework */,
 				A27983682051108F00FBAD32 /* libsqlite3.0.tbd */,
 				A27983662051107000FBAD32 /* SystemConfiguration.framework */,
 				A27983642051106300FBAD32 /* CoreTelephony.framework */,

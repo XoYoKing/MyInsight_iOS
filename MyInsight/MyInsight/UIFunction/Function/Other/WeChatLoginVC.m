@@ -8,7 +8,6 @@
 //
 
 #import "WeChatLoginVC.h"
-#import <WXApi.h> // 微信头文件
 #import <Masonry.h>
 
 @interface WeChatLoginVC ()
@@ -42,21 +41,8 @@
 
 - (void)loginButtonAction:(UIButton *)button {
     NSLog(@"WeChat Login Action");
-    if ([WXApi isWXAppInstalled]) {
-        // 是否安装了微信
-        NSLog(@"安装了微信");
-        SendAuthReq *req = [[SendAuthReq alloc] init];
-        req.scope = @"";
-        req.state = @"";
-        
-        [WXApi sendReq:req];
-    } else {
-        NSLog(@"没有安装微信");
-    }
-    
+   
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

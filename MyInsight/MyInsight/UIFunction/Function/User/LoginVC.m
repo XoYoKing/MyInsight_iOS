@@ -7,7 +7,6 @@
 //
 
 #import "LoginVC.h"
-#import <WXApi.h>
 
 @interface LoginVC ()
 
@@ -17,14 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    /*
-     微信第三方登录
-     */
-    
-    [WXApi registerApp:@"" enableMTA:YES];
-    
-    
     
 }
 
