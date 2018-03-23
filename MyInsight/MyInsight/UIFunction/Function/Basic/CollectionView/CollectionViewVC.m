@@ -24,6 +24,14 @@
 
 @implementation CollectionViewVC
 
+/*
+ 纯代码创建UICollectionView步骤以及简单使用
+ https://www.jianshu.com/p/16c9d466f88c
+ 
+ iOS之流布局UICollectionView全系列教程
+ https://blog.csdn.net/lvxiangan/article/details/73826108
+ */
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -56,27 +64,30 @@
 
 - (void)normalButtonAction:(UIButton *)button {
     NSLog(@"普通");
-    // 
-    [self creatCollectionView];
+    //[self creatCollectionView];
 }
 
 - (void)pubuliuButtonAction:(UIButton *)button {
     NSLog(@"瀑布流");
-    //
-    [self creatCollectionView];
+    //[self creatCollectionView];
 }
 
 #pragma mark - 创建CollectionView
 - (void)creatCollectionView {
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical; //竖直滑动
+    flowLayout.itemSize = CGSizeMake(110, 150);
+    flowLayout.headerReferenceSize = CGSizeMake(self.view.bounds.size.width, 100);
     
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
     [self.view addSubview:self.collectionView];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+    self.collectionView.backgroundColor = [UIColor redColor];
     
-    
+    // 注册cell
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -89,7 +100,11 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return NULL;
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
+    
+    cell.backgroundColor = [UIColor blueColor];
+    
+    return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
