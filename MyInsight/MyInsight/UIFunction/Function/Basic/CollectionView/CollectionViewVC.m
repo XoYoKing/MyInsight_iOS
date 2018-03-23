@@ -17,9 +17,8 @@
 @property (nonatomic, strong) UIButton *normalButton;
 
 @property (nonatomic, strong) UIButton *pubuliuButton;
-
+// 集合视图
 @property (nonatomic, strong) UICollectionView *collectionView;
-
 
 @end
 
@@ -31,9 +30,9 @@
     self.title = @"CollectionView";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self creatFunctionView];
+    //[self creatFunctionView];
     
-    //[self creatCollectionView];
+    [self creatCollectionView];
     
     [self masonryViewLayout];
 }
@@ -67,8 +66,34 @@
     [self creatCollectionView];
 }
 
+#pragma mark - 创建CollectionView
 - (void)creatCollectionView {
     
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    
+    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
+    [self.view addSubview:self.collectionView];
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
+    
+    
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 20;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return NULL;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"选中cell");
 }
 
 - (void)masonryViewLayout {
