@@ -9,7 +9,6 @@
 #import "OtherVC.h"
 #import <SWRevealViewController.h>
 #import <Masonry.h>
-#import "WeChatLoginVC.h"
 
 @interface OtherVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -19,7 +18,6 @@
 
 @end
 
-const NSString *WeChatLoginStr = @"微信第三方登录";
 
 @implementation OtherVC
 
@@ -56,7 +54,7 @@ const NSString *WeChatLoginStr = @"微信第三方登录";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[@"百思不得姐", @"糗事百科", @"妹纸", WeChatLoginStr];
+    self.dataArray = @[@"百思不得姐", @"糗事百科", @"妹纸"];
 }
 
 #pragma mark - 创建TableView
@@ -107,12 +105,11 @@ const NSString *WeChatLoginStr = @"微信第三方登录";
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationController.navigationBar.tintColor = [UIColor redColor];
     
-    if ([cellString isEqual:WeChatLoginStr]) {
-        // 微信第三方登录页面
-        WeChatLoginVC *weChatLoginVC = [[WeChatLoginVC alloc] init];
-        weChatLoginVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:weChatLoginVC animated:YES];
+    if ([cellString isEqual:@""]) {
+        
     }
+    
+    
 }
 
 #pragma mark - 代码约束布局
