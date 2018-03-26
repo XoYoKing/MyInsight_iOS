@@ -7,6 +7,13 @@
 //
 
 #import "ChatVC.h"
+#import <Masonry.h>
+#import "ChatTextCell.h"
+#import "ChatImageCell.h"
+#import "ChatAudioCell.h"
+#import "ChatVideoCell.h"
+#import "ChatTipCell.h"
+#import "ChatFileCell.h"
 
 @interface ChatVC ()
 
@@ -16,8 +23,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.title = @"隔壁王大叔";
+    self.view.backgroundColor = [UIColor whiteColor];
+    
 }
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -7,8 +7,13 @@
 //
 
 #import "ChatListVC.h"
+#import <Masonry.h>
+#import "ChatListCell.h"
+#import "ChatVC.h"
 
-@interface ChatListVC ()
+@interface ChatListVC ()<UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -23,10 +28,51 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"";
+    self.title = @"聊天列表";
     self.view.backgroundColor = [UIColor whiteColor];
     
     
+    self.tableView = [[UITableView alloc] init];
+    [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).offset(0.0f);
+        make.left.equalTo(self.view.mas_left).offset(0.0f);
+        make.right.equalTo(self.view.mas_right).offset(0.0f);
+        make.bottom.equalTo(self.view.mas_bottom).offset(0.0f);
+    }];
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    // 注册cell
+    [self.tableView registerNib:[UINib nibWithNibName:@"ChatListCell" bundle:nil] forCellReuseIdentifier:@"ChatListCell"];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+-  (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChatListCell" forIndexPath:indexPath];
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"ChatListCell" owner:self options:nil] lastObject];
+        //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
+    }
+    return cell;
+}
+
+// 选中cell
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"选中聊天啦");
+    
+    
+    ChatVC *chatVC = [[ChatVC alloc] init];
+    chatVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:chatVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
