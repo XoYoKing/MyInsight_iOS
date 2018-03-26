@@ -108,8 +108,6 @@
     if ([cellString isEqual:@""]) {
         
     }
-    
-    
 }
 
 #pragma mark - 代码约束布局
