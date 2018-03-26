@@ -110,6 +110,22 @@
 		A2B9927820623EA3002A73B1 /* OpenGLVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B9927720623EA3002A73B1 /* OpenGLVC.m */; };
 		A2B9927A20624F00002A73B1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B9927920624F00002A73B1 /* OpenGLES.framework */; };
 		A2B9927C20624F07002A73B1 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B9927B20624F07002A73B1 /* GLKit.framework */; };
+		A2B992802068F0B9002A73B1 /* ChatListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B9927F2068F0B9002A73B1 /* ChatListVC.m */; };
+		A2B992832068F0C7002A73B1 /* ChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B992822068F0C7002A73B1 /* ChatVC.m */; };
+		A2B9928D2068F3A6002A73B1 /* ChatListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B9928B2068F3A6002A73B1 /* ChatListCell.m */; };
+		A2B9928E2068F3A6002A73B1 /* ChatListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B9928C2068F3A6002A73B1 /* ChatListCell.xib */; };
+		A2B992922068F3CA002A73B1 /* ChatTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B992902068F3CA002A73B1 /* ChatTextCell.m */; };
+		A2B992932068F3CA002A73B1 /* ChatTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B992912068F3CA002A73B1 /* ChatTextCell.xib */; };
+		A2B992972068F3E4002A73B1 /* ChatImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B992952068F3E4002A73B1 /* ChatImageCell.m */; };
+		A2B992982068F3E4002A73B1 /* ChatImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B992962068F3E4002A73B1 /* ChatImageCell.xib */; };
+		A2B9929C2068F40D002A73B1 /* ChatAudioCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B9929A2068F40D002A73B1 /* ChatAudioCell.m */; };
+		A2B9929D2068F40D002A73B1 /* ChatAudioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B9929B2068F40D002A73B1 /* ChatAudioCell.xib */; };
+		A2B992A12068F42F002A73B1 /* ChatVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B9929F2068F42F002A73B1 /* ChatVideoCell.m */; };
+		A2B992A22068F42F002A73B1 /* ChatVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B992A02068F42F002A73B1 /* ChatVideoCell.xib */; };
+		A2B992A62068F441002A73B1 /* ChatFileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B992A42068F441002A73B1 /* ChatFileCell.m */; };
+		A2B992A72068F441002A73B1 /* ChatFileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B992A52068F441002A73B1 /* ChatFileCell.xib */; };
+		A2B992AB2068F45B002A73B1 /* ChatTipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B992A92068F45B002A73B1 /* ChatTipCell.m */; };
+		A2B992AC2068F45B002A73B1 /* ChatTipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B992AA2068F45B002A73B1 /* ChatTipCell.xib */; };
 		A2BDD423205F557C008AD133 /* MultiThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD422205F557C008AD133 /* MultiThreadVC.m */; };
 		A2BDD42A205F5742008AD133 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD429205F5742008AD133 /* BaseViewController.m */; };
 		A2BDD42D205F5754008AD133 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD42C205F5754008AD133 /* BaseModel.m */; };
@@ -313,6 +329,31 @@
 		A2B9927720623EA3002A73B1 /* OpenGLVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGLVC.m; sourceTree = "<group>"; };
 		A2B9927920624F00002A73B1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		A2B9927B20624F07002A73B1 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		A2B9927E2068F0B9002A73B1 /* ChatListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatListVC.h; sourceTree = "<group>"; };
+		A2B9927F2068F0B9002A73B1 /* ChatListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatListVC.m; sourceTree = "<group>"; };
+		A2B992812068F0C7002A73B1 /* ChatVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatVC.h; sourceTree = "<group>"; };
+		A2B992822068F0C7002A73B1 /* ChatVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatVC.m; sourceTree = "<group>"; };
+		A2B9928A2068F3A6002A73B1 /* ChatListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatListCell.h; sourceTree = "<group>"; };
+		A2B9928B2068F3A6002A73B1 /* ChatListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatListCell.m; sourceTree = "<group>"; };
+		A2B9928C2068F3A6002A73B1 /* ChatListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatListCell.xib; sourceTree = "<group>"; };
+		A2B9928F2068F3CA002A73B1 /* ChatTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatTextCell.h; sourceTree = "<group>"; };
+		A2B992902068F3CA002A73B1 /* ChatTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatTextCell.m; sourceTree = "<group>"; };
+		A2B992912068F3CA002A73B1 /* ChatTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTextCell.xib; sourceTree = "<group>"; };
+		A2B992942068F3E4002A73B1 /* ChatImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatImageCell.h; sourceTree = "<group>"; };
+		A2B992952068F3E4002A73B1 /* ChatImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatImageCell.m; sourceTree = "<group>"; };
+		A2B992962068F3E4002A73B1 /* ChatImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatImageCell.xib; sourceTree = "<group>"; };
+		A2B992992068F40D002A73B1 /* ChatAudioCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatAudioCell.h; sourceTree = "<group>"; };
+		A2B9929A2068F40D002A73B1 /* ChatAudioCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatAudioCell.m; sourceTree = "<group>"; };
+		A2B9929B2068F40D002A73B1 /* ChatAudioCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatAudioCell.xib; sourceTree = "<group>"; };
+		A2B9929E2068F42F002A73B1 /* ChatVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatVideoCell.h; sourceTree = "<group>"; };
+		A2B9929F2068F42F002A73B1 /* ChatVideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatVideoCell.m; sourceTree = "<group>"; };
+		A2B992A02068F42F002A73B1 /* ChatVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatVideoCell.xib; sourceTree = "<group>"; };
+		A2B992A32068F441002A73B1 /* ChatFileCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatFileCell.h; sourceTree = "<group>"; };
+		A2B992A42068F441002A73B1 /* ChatFileCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatFileCell.m; sourceTree = "<group>"; };
+		A2B992A52068F441002A73B1 /* ChatFileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatFileCell.xib; sourceTree = "<group>"; };
+		A2B992A82068F45B002A73B1 /* ChatTipCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatTipCell.h; sourceTree = "<group>"; };
+		A2B992A92068F45B002A73B1 /* ChatTipCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatTipCell.m; sourceTree = "<group>"; };
+		A2B992AA2068F45B002A73B1 /* ChatTipCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTipCell.xib; sourceTree = "<group>"; };
 		A2BDD421205F557C008AD133 /* MultiThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadVC.h; sourceTree = "<group>"; };
 		A2BDD422205F557C008AD133 /* MultiThreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiThreadVC.m; sourceTree = "<group>"; };
 		A2BDD428205F5742008AD133 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -835,6 +876,7 @@
 			children = (
 				A26CE4872018A09A0012EC69 /* OtherVC.h */,
 				A26CE4882018A09A0012EC69 /* OtherVC.m */,
+				A2B9927D2068F09C002A73B1 /* Chat */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -1035,6 +1077,62 @@
 				A2B9927720623EA3002A73B1 /* OpenGLVC.m */,
 			);
 			path = OpenGL;
+			sourceTree = "<group>";
+		};
+		A2B9927D2068F09C002A73B1 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				A2B9927E2068F0B9002A73B1 /* ChatListVC.h */,
+				A2B9927F2068F0B9002A73B1 /* ChatListVC.m */,
+				A2B992812068F0C7002A73B1 /* ChatVC.h */,
+				A2B992822068F0C7002A73B1 /* ChatVC.m */,
+				A2B992842068F372002A73B1 /* View */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		A2B992842068F372002A73B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2B992852068F372002A73B1 /* ChatListCell */,
+				A2B992862068F372002A73B1 /* ChatCells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2B992852068F372002A73B1 /* ChatListCell */ = {
+			isa = PBXGroup;
+			children = (
+				A2B9928A2068F3A6002A73B1 /* ChatListCell.h */,
+				A2B9928B2068F3A6002A73B1 /* ChatListCell.m */,
+				A2B9928C2068F3A6002A73B1 /* ChatListCell.xib */,
+			);
+			path = ChatListCell;
+			sourceTree = "<group>";
+		};
+		A2B992862068F372002A73B1 /* ChatCells */ = {
+			isa = PBXGroup;
+			children = (
+				A2B9928F2068F3CA002A73B1 /* ChatTextCell.h */,
+				A2B992902068F3CA002A73B1 /* ChatTextCell.m */,
+				A2B992912068F3CA002A73B1 /* ChatTextCell.xib */,
+				A2B992942068F3E4002A73B1 /* ChatImageCell.h */,
+				A2B992952068F3E4002A73B1 /* ChatImageCell.m */,
+				A2B992962068F3E4002A73B1 /* ChatImageCell.xib */,
+				A2B992992068F40D002A73B1 /* ChatAudioCell.h */,
+				A2B9929A2068F40D002A73B1 /* ChatAudioCell.m */,
+				A2B9929B2068F40D002A73B1 /* ChatAudioCell.xib */,
+				A2B9929E2068F42F002A73B1 /* ChatVideoCell.h */,
+				A2B9929F2068F42F002A73B1 /* ChatVideoCell.m */,
+				A2B992A02068F42F002A73B1 /* ChatVideoCell.xib */,
+				A2B992A32068F441002A73B1 /* ChatFileCell.h */,
+				A2B992A42068F441002A73B1 /* ChatFileCell.m */,
+				A2B992A52068F441002A73B1 /* ChatFileCell.xib */,
+				A2B992A82068F45B002A73B1 /* ChatTipCell.h */,
+				A2B992A92068F45B002A73B1 /* ChatTipCell.m */,
+				A2B992AA2068F45B002A73B1 /* ChatTipCell.xib */,
+			);
+			path = ChatCells;
 			sourceTree = "<group>";
 		};
 		A2BDD420205F5550008AD133 /* MultiThread */ = {
@@ -1455,8 +1553,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2B992A72068F441002A73B1 /* ChatFileCell.xib in Resources */,
 				A27E8728201AC53C003E712C /* 1967.mp3 in Resources */,
 				A22C4DD11FFC777A0079F7C2 /* purple_arrow.png in Resources */,
+				A2B992AC2068F45B002A73B1 /* ChatTipCell.xib in Resources */,
 				A20D5DFC1FD14549000E191D /* Assets.xcassets in Resources */,
 				A22C4DD51FFC777A0079F7C2 /* route_start_pin@2x.png in Resources */,
 				A28ED53F1FD2495300A74551 /* Mark.storyboard in Resources */,
@@ -1472,19 +1572,24 @@
 				A22C4DC01FFC777A0079F7C2 /* route_pin.png in Resources */,
 				A22C4DC91FFC777A0079F7C2 /* compass48@2x.png in Resources */,
 				A22C4DD01FFC777A0079F7C2 /* pin_red_s.png in Resources */,
+				A2B992A22068F42F002A73B1 /* ChatVideoCell.xib in Resources */,
 				A22C4DC71FFC777A0079F7C2 /* route_goal_pin.png in Resources */,
+				A2B9929D2068F40D002A73B1 /* ChatAudioCell.xib in Resources */,
 				A22C4DC81FFC777A0079F7C2 /* pin_green_s@2x.png in Resources */,
 				A22C4DC21FFC777A0079F7C2 /* goal.png in Resources */,
 				A22C4DCB1FFC777A0079F7C2 /* route_pin@2x.png in Resources */,
 				A28ED5411FD2495F00A74551 /* Mine.storyboard in Resources */,
 				A22C4DCA1FFC777A0079F7C2 /* compass48.png in Resources */,
+				A2B992982068F3E4002A73B1 /* ChatImageCell.xib in Resources */,
 				A27E874F201ACF6A003E712C /* BluetoothCell.xib in Resources */,
 				A22C4DC31FFC777A0079F7C2 /* pin_green_s.png in Resources */,
 				A22C4DCC1FFC777A0079F7C2 /* goal@2x.png in Resources */,
 				A22C4DC51FFC777A0079F7C2 /* pin_red_s@2x.png in Resources */,
 				A2C1AB7D2025A1D80085A653 /* alarm4.m4r in Resources */,
 				A22C4DC11FFC777A0079F7C2 /* pin_head_s.png in Resources */,
+				A2B9928E2068F3A6002A73B1 /* ChatListCell.xib in Resources */,
 				A20D5E001FD14549000E191D /* Main.storyboard in Resources */,
+				A2B992932068F3CA002A73B1 /* ChatTextCell.xib in Resources */,
 				A22C4DC41FFC777A0079F7C2 /* pin_purple_s.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1665,6 +1770,7 @@
 				A27B37E2204159BE00C25895 /* SQLiteHandle.m in Sources */,
 				A2A516042057634400EC5AA6 /* RadioButton.m in Sources */,
 				A2CA808B202196EA00D81845 /* AnimationVC.m in Sources */,
+				A2B992922068F3CA002A73B1 /* ChatTextCell.m in Sources */,
 				A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */,
 				A2B9927820623EA3002A73B1 /* OpenGLVC.m in Sources */,
 				A27E8751201ACF6A003E712C /* LandscapeScreenVC.m in Sources */,
@@ -1677,6 +1783,7 @@
 				A2BDD436205F5BAB008AD133 /* BaseTableVC.m in Sources */,
 				A20D5E231FD14E37000E191D /* RightRevealVC.m in Sources */,
 				A26CE4A8201971C50012EC69 /* CalloutMapAnnotation.m in Sources */,
+				A2B9928D2068F3A6002A73B1 /* ChatListCell.m in Sources */,
 				A20D5E1D1FD14C7A000E191D /* MainRevealVC.m in Sources */,
 				A2CA808D202196EA00D81845 /* LiftCycleVC.m in Sources */,
 				A26CE4A4201971C50012EC69 /* GoogleMapVC.m in Sources */,
@@ -1687,13 +1794,18 @@
 				A2B43C3320575EE700FEAE58 /* RadioButtonVC.m in Sources */,
 				A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */,
 				A25748252023058A000F7632 /* DataBaseVC.m in Sources */,
+				A2B9929C2068F40D002A73B1 /* ChatAudioCell.m in Sources */,
+				A2B992A62068F441002A73B1 /* ChatFileCell.m in Sources */,
 				A26CE48C2018A0AD0012EC69 /* SeniorVC.m in Sources */,
 				A27E873B201ACD5E003E712C /* OpenCVVC.mm in Sources */,
+				A2B992972068F3E4002A73B1 /* ChatImageCell.m in Sources */,
 				A2BDD43C205F636C008AD133 /* GCDVC.m in Sources */,
 				A27E874E201ACF6A003E712C /* BabyBleVC.m in Sources */,
 				A27E8725201AC49B003E712C /* CommonTool.m in Sources */,
 				A241D22420468E68005A3BC5 /* MQTTVC.m in Sources */,
+				A2B992802068F0B9002A73B1 /* ChatListVC.m in Sources */,
 				A2BDD433205F578F008AD133 /* BaseNaviController.m in Sources */,
+				A2B992AB2068F45B002A73B1 /* ChatTipCell.m in Sources */,
 				A27E875C201AD2B2003E712C /* MusicVC.m in Sources */,
 				A20D5DFE1FD14549000E191D /* AppDelegate.m in Sources */,
 				A26D17342043BDB80064DECF /* LoginVC.m in Sources */,
@@ -1708,6 +1820,7 @@
 				A26CE4A7201971C50012EC69 /* YahooMapVC.m in Sources */,
 				A2BDD423205F557C008AD133 /* MultiThreadVC.m in Sources */,
 				A26D17302043A4880064DECF /* WelcomeVC.m in Sources */,
+				A2B992832068F0C7002A73B1 /* ChatVC.m in Sources */,
 				A25748282023059D000F7632 /* CollectionViewVC.m in Sources */,
 				A26CE4A9201971C50012EC69 /* SystemMapVC.m in Sources */,
 				A28ED52F1FD156B600A74551 /* RearRevealVC.m in Sources */,
@@ -1718,6 +1831,7 @@
 				A2BDD42A205F5742008AD133 /* BaseViewController.m in Sources */,
 				A2B9927420623D0E002A73B1 /* SocketVC.m in Sources */,
 				A2BDD42D205F5754008AD133 /* BaseModel.m in Sources */,
+				A2B992A12068F42F002A73B1 /* ChatVideoCell.m in Sources */,
 				A241D22B2047A32A005A3BC5 /* UIColor+Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

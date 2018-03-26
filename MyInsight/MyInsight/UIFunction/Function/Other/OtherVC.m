@@ -9,6 +9,7 @@
 #import "OtherVC.h"
 #import <SWRevealViewController.h>
 #import <Masonry.h>
+#import "ChatListVC.h"
 
 @interface OtherVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -18,6 +19,8 @@
 
 @end
 
+// 聊天UI
+const NSString *ChatUIStr = @"聊天界面";
 
 @implementation OtherVC
 
@@ -54,7 +57,7 @@
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[@"百思不得姐", @"糗事百科", @"妹纸"];
+    self.dataArray = @[@"百思不得姐", @"糗事百科", @"妹纸", ChatUIStr];
 }
 
 #pragma mark - 创建TableView
@@ -105,13 +108,11 @@
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationController.navigationBar.tintColor = [UIColor redColor];
     
-    if ([cellString isEqual:@""]) {
-        
+    if ([cellString isEqual:ChatUIStr]) {
+        ChatListVC *chatListVC = [[ChatListVC alloc] init];
+        chatListVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:chatListVC animated:YES];
     }
-<<<<<<< HEAD
-=======
-    
->>>>>>> 6c7f9f01a632008882f8eb80ee397ce310cb3608
 }
 
 #pragma mark - 代码约束布局
