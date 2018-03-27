@@ -18,9 +18,7 @@
 @end
 
 /*
- 
  https://github.com/coderMyy/CocoaAsyncSocket_Demo
- 
  */
 
 @implementation ChatListVC
@@ -30,7 +28,6 @@
     
     self.title = @"聊天列表";
     self.view.backgroundColor = [UIColor whiteColor];
-    
     
     self.tableView = [[UITableView alloc] init];
     [self.view addSubview:self.tableView];
@@ -68,7 +65,6 @@
 // 选中cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"选中聊天啦");
-    
     
     ChatVC *chatVC = [[ChatVC alloc] init];
     chatVC.hidesBottomBarWhenPushed = YES;
