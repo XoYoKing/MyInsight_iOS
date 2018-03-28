@@ -126,6 +126,8 @@
 		A2B992A72068F441002A73B1 /* ChatFileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B992A52068F441002A73B1 /* ChatFileCell.xib */; };
 		A2B992AB2068F45B002A73B1 /* ChatTipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B992A92068F45B002A73B1 /* ChatTipCell.m */; };
 		A2B992AC2068F45B002A73B1 /* ChatTipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B992AA2068F45B002A73B1 /* ChatTipCell.xib */; };
+		A2B992B02069F447002A73B1 /* ChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B992AF2069F447002A73B1 /* ChatModel.m */; };
+		A2B992B32069F4FB002A73B1 /* ChatContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B992B22069F4FB002A73B1 /* ChatContentModel.m */; };
 		A2BDD423205F557C008AD133 /* MultiThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD422205F557C008AD133 /* MultiThreadVC.m */; };
 		A2BDD42A205F5742008AD133 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD429205F5742008AD133 /* BaseViewController.m */; };
 		A2BDD42D205F5754008AD133 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD42C205F5754008AD133 /* BaseModel.m */; };
@@ -354,6 +356,10 @@
 		A2B992A82068F45B002A73B1 /* ChatTipCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatTipCell.h; sourceTree = "<group>"; };
 		A2B992A92068F45B002A73B1 /* ChatTipCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatTipCell.m; sourceTree = "<group>"; };
 		A2B992AA2068F45B002A73B1 /* ChatTipCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTipCell.xib; sourceTree = "<group>"; };
+		A2B992AE2069F447002A73B1 /* ChatModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatModel.h; sourceTree = "<group>"; };
+		A2B992AF2069F447002A73B1 /* ChatModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatModel.m; sourceTree = "<group>"; };
+		A2B992B12069F4FB002A73B1 /* ChatContentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatContentModel.h; sourceTree = "<group>"; };
+		A2B992B22069F4FB002A73B1 /* ChatContentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatContentModel.m; sourceTree = "<group>"; };
 		A2BDD421205F557C008AD133 /* MultiThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadVC.h; sourceTree = "<group>"; };
 		A2BDD422205F557C008AD133 /* MultiThreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiThreadVC.m; sourceTree = "<group>"; };
 		A2BDD428205F5742008AD133 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -1086,6 +1092,7 @@
 				A2B9927F2068F0B9002A73B1 /* ChatListVC.m */,
 				A2B992812068F0C7002A73B1 /* ChatVC.h */,
 				A2B992822068F0C7002A73B1 /* ChatVC.m */,
+				A2B992AD2069F42B002A73B1 /* Model */,
 				A2B992842068F372002A73B1 /* View */,
 			);
 			path = Chat;
@@ -1133,6 +1140,17 @@
 				A2B992AA2068F45B002A73B1 /* ChatTipCell.xib */,
 			);
 			path = ChatCells;
+			sourceTree = "<group>";
+		};
+		A2B992AD2069F42B002A73B1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2B992AE2069F447002A73B1 /* ChatModel.h */,
+				A2B992AF2069F447002A73B1 /* ChatModel.m */,
+				A2B992B12069F4FB002A73B1 /* ChatContentModel.h */,
+				A2B992B22069F4FB002A73B1 /* ChatContentModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A2BDD420205F5550008AD133 /* MultiThread */ = {
@@ -1794,6 +1812,7 @@
 				A2B43C3320575EE700FEAE58 /* RadioButtonVC.m in Sources */,
 				A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */,
 				A25748252023058A000F7632 /* DataBaseVC.m in Sources */,
+				A2B992B32069F4FB002A73B1 /* ChatContentModel.m in Sources */,
 				A2B9929C2068F40D002A73B1 /* ChatAudioCell.m in Sources */,
 				A2B992A62068F441002A73B1 /* ChatFileCell.m in Sources */,
 				A26CE48C2018A0AD0012EC69 /* SeniorVC.m in Sources */,
@@ -1829,6 +1848,7 @@
 				A20D5E111FD147CD000E191D /* TabBarVC.m in Sources */,
 				A27E875D201AD2B2003E712C /* SoundVC.m in Sources */,
 				A2BDD42A205F5742008AD133 /* BaseViewController.m in Sources */,
+				A2B992B02069F447002A73B1 /* ChatModel.m in Sources */,
 				A2B9927420623D0E002A73B1 /* SocketVC.m in Sources */,
 				A2BDD42D205F5754008AD133 /* BaseModel.m in Sources */,
 				A2B992A12068F42F002A73B1 /* ChatVideoCell.m in Sources */,
