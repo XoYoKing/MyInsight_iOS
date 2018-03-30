@@ -112,7 +112,6 @@
 }
 
 - (void)masonryViewLayout {
-    
     [self.functionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_top).offset(64.0f);
         make.left.equalTo(self.view.mas_left).offset(0.0f);
