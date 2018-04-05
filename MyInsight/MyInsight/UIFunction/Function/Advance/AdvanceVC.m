@@ -105,6 +105,7 @@ const NSString *MQTTStr = @"MQTT";
         //cell = [[[NSBundle mainBundle]loadNibNamed:@"MineCell" owner:self options:nil] lastObject];
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
     }
+    
     // 赋值
     cell.textLabel.text = self.dataArray[indexPath.row];
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
