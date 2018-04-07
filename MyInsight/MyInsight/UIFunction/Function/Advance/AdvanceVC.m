@@ -106,6 +106,8 @@ const NSString *MQTTStr = @"MQTT";
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
     }
     
+    
+    
     // 赋值
     cell.textLabel.text = self.dataArray[indexPath.row];
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
