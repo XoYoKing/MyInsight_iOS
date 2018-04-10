@@ -18,6 +18,7 @@
 #import "CollectionViewVC.h"
 #import "RadioButtonVC.h"
 #import "MultiThreadVC.h" //多线程
+#import "CYuYanVC.h"
 
 @interface BasicVC ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -44,6 +45,8 @@ const NSString *DataBaseStr = @"数据库";
 const NSString *radioButtonStr = @"单选按钮🔘";
 const NSString *MultiThreadString = @"多线程";
 const NSString *numberString = @"";
+const NSString *CYuYanString = @"C语言";
+
 
 
 /*
@@ -85,7 +88,7 @@ const NSString *numberString = @"";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[LiftCycleStr, RunTimeStr, ShouShiStr, XieYiStr, AnimationStr, TableViewStr, CollectViewStr, DataBaseStr, radioButtonStr, MultiThreadString];
+    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, ShouShiStr, XieYiStr, AnimationStr, TableViewStr, CollectViewStr, DataBaseStr, radioButtonStr, MultiThreadString];
 }
 
 #pragma mark - 创建TableView
@@ -136,6 +139,13 @@ const NSString *numberString = @"";
     // 设置返回button的样式
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationController.navigationBar.tintColor = [UIColor redColor];  
+    
+    if ([cellString isEqual:CYuYanString]) {
+        // C语言
+        CYuYanVC *cYuYanVC = [[CYuYanVC alloc] init];
+        cYuYanVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:cYuYanVC animated:YES];
+    }
     
     if ([cellString isEqual:LiftCycleStr]) {
         // 生命周期
