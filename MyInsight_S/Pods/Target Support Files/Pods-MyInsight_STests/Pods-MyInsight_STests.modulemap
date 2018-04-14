@@ -1,6 +1,0 @@
-framework module Pods_MyInsight_STests {
-  umbrella header "Pods-MyInsight_STests-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -6,7 +6,6 @@
 关于iOS知识和功能的DEMO合集，代码语言OC，关于Swift版本的Demo合集尚未整理。
 
 
-
 基础：
 
 生命周期、RunTime、协议
@@ -25,5 +24,6 @@ OpenCV、ffmpeg、音频、Socket
 
 [小程序教程](https://www.zhihu.com/question/50907897)
 
+微信第三方登录及其他功能 由于需要企业码 暂时先不实现。
 
 

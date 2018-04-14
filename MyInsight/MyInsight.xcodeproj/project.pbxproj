@@ -128,6 +128,7 @@
 		A2B992AC2068F45B002A73B1 /* ChatTipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B992AA2068F45B002A73B1 /* ChatTipCell.xib */; };
 		A2B992B02069F447002A73B1 /* ChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B992AF2069F447002A73B1 /* ChatModel.m */; };
 		A2B992B32069F4FB002A73B1 /* ChatContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B992B22069F4FB002A73B1 /* ChatContentModel.m */; };
+		A2BA3564207C9F4C006D1B00 /* CYuYanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BA3563207C9F4C006D1B00 /* CYuYanVC.m */; };
 		A2BDD423205F557C008AD133 /* MultiThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD422205F557C008AD133 /* MultiThreadVC.m */; };
 		A2BDD42A205F5742008AD133 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD429205F5742008AD133 /* BaseViewController.m */; };
 		A2BDD42D205F5754008AD133 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD42C205F5754008AD133 /* BaseModel.m */; };
@@ -360,6 +361,8 @@
 		A2B992AF2069F447002A73B1 /* ChatModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatModel.m; sourceTree = "<group>"; };
 		A2B992B12069F4FB002A73B1 /* ChatContentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatContentModel.h; sourceTree = "<group>"; };
 		A2B992B22069F4FB002A73B1 /* ChatContentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatContentModel.m; sourceTree = "<group>"; };
+		A2BA3562207C9F4C006D1B00 /* CYuYanVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYuYanVC.h; sourceTree = "<group>"; };
+		A2BA3563207C9F4C006D1B00 /* CYuYanVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYuYanVC.m; sourceTree = "<group>"; };
 		A2BDD421205F557C008AD133 /* MultiThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadVC.h; sourceTree = "<group>"; };
 		A2BDD422205F557C008AD133 /* MultiThreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiThreadVC.m; sourceTree = "<group>"; };
 		A2BDD428205F5742008AD133 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -1156,6 +1159,8 @@
 		A2BDD420205F5550008AD133 /* MultiThread */ = {
 			isa = PBXGroup;
 			children = (
+				A2BA3562207C9F4C006D1B00 /* CYuYanVC.h */,
+				A2BA3563207C9F4C006D1B00 /* CYuYanVC.m */,
 				A2BDD421205F557C008AD133 /* MultiThreadVC.h */,
 				A2BDD422205F557C008AD133 /* MultiThreadVC.m */,
 				A2BDD437205F6354008AD133 /* ThreadVC.h */,
@@ -1831,6 +1836,7 @@
 				A257482B202305B9000F7632 /* TableViewVC.m in Sources */,
 				A27E8750201ACF6A003E712C /* BluetoothCell.m in Sources */,
 				A20D5DFD1FD14549000E191D /* main.m in Sources */,
+				A2BA3564207C9F4C006D1B00 /* CYuYanVC.m in Sources */,
 				A2BDD442205F639E008AD133 /* LockVC.m in Sources */,
 				A26CE48F2018A0BE0012EC69 /* AdvanceVC.m in Sources */,
 				A26CE4A5201971C50012EC69 /* CallOutAnnotationView.m in Sources */,
