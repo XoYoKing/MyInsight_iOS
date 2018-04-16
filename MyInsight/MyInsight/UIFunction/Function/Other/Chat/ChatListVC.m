@@ -83,7 +83,6 @@
         chatModel.unreadCount = @(index);
         //chatModel.lastTimeString = [NSDate timeStringWithTimeInterval:chatModel.sendTime];
         [self.messagesArray addObject:chatModel];
-        
     }
 }
 
