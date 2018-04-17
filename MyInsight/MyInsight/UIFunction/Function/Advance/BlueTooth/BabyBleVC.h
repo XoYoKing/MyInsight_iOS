@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BabyBluetooth.h"
+//#import "BabyBluetooth.h"
 
 @interface BabyBleVC : UITableViewController
 
-@property (nonatomic, strong) BabyBluetooth *babyBluetooth;
+//@property (nonatomic, strong) BabyBluetooth *babyBluetooth;
 
-@property (nonatomic, strong) CBPeripheral *peripheral;
-@property (nonatomic, strong) CBCharacteristic *characteristicWrite;
-@property (nonatomic, strong) CBCharacteristic *characteristicRead;
+//@property (nonatomic, strong) CBPeripheral *peripheral;
+//@property (nonatomic, strong) CBCharacteristic *characteristicWrite;
+//@property (nonatomic, strong) CBCharacteristic *characteristicRead;
 
 @end
