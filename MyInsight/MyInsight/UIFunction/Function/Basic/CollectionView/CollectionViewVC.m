@@ -9,6 +9,7 @@
 #import "CollectionViewVC.h"
 #import "RFQuiltLayout.h" // 瀑布流
 #import <Masonry.h>
+#import "MultiTypeFlowLayoutVC.h" //多种布局方式的集合视图
 
 @interface CollectionViewVC ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -30,6 +31,14 @@
  
  iOS之流布局UICollectionView全系列教程
  https://blog.csdn.net/lvxiangan/article/details/73826108
+ 
+ 三种不同方式的布局
+ 
+ 瀑布流1
+ 
+ 水平瀑布流
+ 
+ 垂直瀑布流
  */
 
 - (void)viewDidLoad {
@@ -107,8 +116,16 @@
     return cell;
 }
 
+//
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"选中cell");
+    //NSLog(@"选中cell");
+    // 设置返回button的样式
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationController.navigationBar.tintColor = [UIColor redColor];
+    // 多种布局
+    MultiTypeFlowLayoutVC *multiTypeFlowLayoutVC = [[MultiTypeFlowLayoutVC alloc] init];
+    multiTypeFlowLayoutVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:multiTypeFlowLayoutVC animated:YES];
 }
 
 - (void)masonryViewLayout {
@@ -132,7 +149,6 @@
         make.bottom.equalTo(self.functionView.mas_bottom).offset(0.0f);
         make.width.equalTo(self.normalButton.mas_width).multipliedBy(1.0f);
     }];
-    
 }
 
 - (void)didReceiveMemoryWarning {

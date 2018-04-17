@@ -55,6 +55,10 @@
 		A22C4DD31FFC777A0079F7C2 /* yback.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBC1FFC77790079F7C2 /* yback.png */; };
 		A22C4DD41FFC777A0079F7C2 /* via.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBD1FFC77790079F7C2 /* via.png */; };
 		A22C4DD51FFC777A0079F7C2 /* route_start_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBE1FFC77790079F7C2 /* route_start_pin@2x.png */; };
+		A239CE1A208595C30033646A /* MultiTypeFlowLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A239CE19208595C30033646A /* MultiTypeFlowLayoutVC.m */; };
+		A239CE202085D4410033646A /* MIGirdLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A239CE1F2085D4410033646A /* MIGirdLayout.m */; };
+		A239CE232085D8990033646A /* MICircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A239CE222085D8990033646A /* MICircleLayout.m */; };
+		A239CE262085D8B20033646A /* MILineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A239CE252085D8B20033646A /* MILineLayout.m */; };
 		A2419E89AB28D022C3D01AE0 /* libPods-MyInsight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D110F761EC3A481896E9E0EB /* libPods-MyInsight.a */; };
 		A241D22420468E68005A3BC5 /* MQTTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22320468E68005A3BC5 /* MQTTVC.m */; };
 		A241D22B2047A32A005A3BC5 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22A2047A32A005A3BC5 /* UIColor+Category.m */; };
@@ -234,6 +238,14 @@
 		A22C4DBC1FFC77790079F7C2 /* yback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yback.png; sourceTree = "<group>"; };
 		A22C4DBD1FFC77790079F7C2 /* via.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = via.png; sourceTree = "<group>"; };
 		A22C4DBE1FFC77790079F7C2 /* route_start_pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "route_start_pin@2x.png"; sourceTree = "<group>"; };
+		A239CE18208595C30033646A /* MultiTypeFlowLayoutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiTypeFlowLayoutVC.h; sourceTree = "<group>"; };
+		A239CE19208595C30033646A /* MultiTypeFlowLayoutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiTypeFlowLayoutVC.m; sourceTree = "<group>"; };
+		A239CE1E2085D4410033646A /* MIGirdLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIGirdLayout.h; sourceTree = "<group>"; };
+		A239CE1F2085D4410033646A /* MIGirdLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIGirdLayout.m; sourceTree = "<group>"; };
+		A239CE212085D8990033646A /* MICircleLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MICircleLayout.h; sourceTree = "<group>"; };
+		A239CE222085D8990033646A /* MICircleLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MICircleLayout.m; sourceTree = "<group>"; };
+		A239CE242085D8B20033646A /* MILineLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MILineLayout.h; sourceTree = "<group>"; };
+		A239CE252085D8B20033646A /* MILineLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MILineLayout.m; sourceTree = "<group>"; };
 		A241D22220468E68005A3BC5 /* MQTTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQTTVC.h; sourceTree = "<group>"; };
 		A241D22320468E68005A3BC5 /* MQTTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQTTVC.m; sourceTree = "<group>"; };
 		A241D2292047A32A005A3BC5 /* UIColor+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
@@ -785,6 +797,35 @@
 			path = image;
 			sourceTree = "<group>";
 		};
+		A239CE15208595580033646A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A239CE18208595C30033646A /* MultiTypeFlowLayoutVC.h */,
+				A239CE19208595C30033646A /* MultiTypeFlowLayoutVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A239CE16208595590033646A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A239CE1E2085D4410033646A /* MIGirdLayout.h */,
+				A239CE1F2085D4410033646A /* MIGirdLayout.m */,
+				A239CE212085D8990033646A /* MICircleLayout.h */,
+				A239CE222085D8990033646A /* MICircleLayout.m */,
+				A239CE242085D8B20033646A /* MILineLayout.h */,
+				A239CE252085D8B20033646A /* MILineLayout.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A239CE17208595590033646A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A241D22120468E52005A3BC5 /* MQTT */ = {
 			isa = PBXGroup;
 			children = (
@@ -799,6 +840,9 @@
 			children = (
 				A25748262023059D000F7632 /* CollectionViewVC.h */,
 				A25748272023059D000F7632 /* CollectionViewVC.m */,
+				A239CE15208595580033646A /* Controller */,
+				A239CE17208595590033646A /* Model */,
+				A239CE16208595590033646A /* View */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -1794,6 +1838,7 @@
 				A2A516042057634400EC5AA6 /* RadioButton.m in Sources */,
 				A2CA808B202196EA00D81845 /* AnimationVC.m in Sources */,
 				A2B992922068F3CA002A73B1 /* ChatTextCell.m in Sources */,
+				A239CE1A208595C30033646A /* MultiTypeFlowLayoutVC.m in Sources */,
 				A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */,
 				A2B9927820623EA3002A73B1 /* OpenGLVC.m in Sources */,
 				A27E8751201ACF6A003E712C /* LandscapeScreenVC.m in Sources */,
@@ -1831,7 +1876,9 @@
 				A2BDD433205F578F008AD133 /* BaseNaviController.m in Sources */,
 				A2B992AB2068F45B002A73B1 /* ChatTipCell.m in Sources */,
 				A27E875C201AD2B2003E712C /* MusicVC.m in Sources */,
+				A239CE202085D4410033646A /* MIGirdLayout.m in Sources */,
 				A20D5DFE1FD14549000E191D /* AppDelegate.m in Sources */,
+				A239CE262085D8B20033646A /* MILineLayout.m in Sources */,
 				A26D17342043BDB80064DECF /* LoginVC.m in Sources */,
 				A257482B202305B9000F7632 /* TableViewVC.m in Sources */,
 				A27E8750201ACF6A003E712C /* BluetoothCell.m in Sources */,
@@ -1855,6 +1902,7 @@
 				A27E875D201AD2B2003E712C /* SoundVC.m in Sources */,
 				A2BDD42A205F5742008AD133 /* BaseViewController.m in Sources */,
 				A2B992B02069F447002A73B1 /* ChatModel.m in Sources */,
+				A239CE232085D8990033646A /* MICircleLayout.m in Sources */,
 				A2B9927420623D0E002A73B1 /* SocketVC.m in Sources */,
 				A2BDD42D205F5754008AD133 /* BaseModel.m in Sources */,
 				A2B992A12068F42F002A73B1 /* ChatVideoCell.m in Sources */,
