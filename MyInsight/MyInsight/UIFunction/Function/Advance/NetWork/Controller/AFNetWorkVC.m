@@ -1,0 +1,59 @@
+
+//
+//  AFNetWorkVC.m
+//  MyInsight
+//
+//  Created by SongMenglong on 2018/4/17.
+//  Copyright © 2018年 SongMenglong. All rights reserved.
+//
+
+#import "AFNetWorkVC.h"
+#import <AFNetworking/AFNetworking.h>
+
+@interface AFNetWorkVC ()
+
+
+@end
+
+@implementation AFNetWorkVC
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.title = @"AFNET网络请求";
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self handleAFNetWorkData];
+}
+
+#pragma mark - 处理网络数据
+- (void)handleAFNetWorkData {
+    NSLog(@"处理网络数据。。。。。");
+    // https://www.windblew.cn/index/index/dearMeng
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    [manager GET:@"https://www.windblew.cn/index/index/dearMeng" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"成功了--%@--%@",[responseObject class],responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"失败了--%@", error);
+    }];
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

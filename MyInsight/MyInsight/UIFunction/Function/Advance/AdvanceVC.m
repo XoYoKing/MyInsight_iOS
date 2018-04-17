@@ -16,6 +16,7 @@
 #import "BlueToothVC.h" // 蓝牙(系统)
 #import "BabyBleVC.h" // 蓝牙(三方)
 #import "MQTTVC.h"
+#import "NetWorkVC.h" // 网络请求
 
 @interface AdvanceVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -33,6 +34,7 @@ const NSString *ScaleStr = @"自动比例约束布局";
 const NSString *BlueToothStr = @"蓝牙(系统)";
 const NSString *BabyBLEStr = @"蓝牙(三方)";
 const NSString *MQTTStr = @"MQTT";
+const NSString *NetWorkStr = @"网络请求";
 
 @implementation AdvanceVC
 
@@ -70,7 +72,7 @@ const NSString *MQTTStr = @"MQTT";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[TouchIDStr, MapsStr, BlueToothStr, BabyBLEStr, ScreenStr, ScaleStr, MQTTStr];
+    self.dataArray = @[TouchIDStr, MapsStr, BlueToothStr, BabyBLEStr, ScreenStr, ScaleStr, MQTTStr, NetWorkStr];
 }
 
 #pragma mark - 创建TableView
@@ -165,6 +167,12 @@ const NSString *MQTTStr = @"MQTT";
         MQTTVC *mqttVC = [[MQTTVC alloc] init];
         mqttVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:mqttVC animated:YES];
+    }
+    if ([cellString isEqual:NetWorkStr]) {
+        // 网络请求
+        NetWorkVC *netWorkVC = [[NetWorkVC alloc] init];
+        netWorkVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:netWorkVC animated:YES];
     }
 }
 

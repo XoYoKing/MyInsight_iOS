@@ -8,6 +8,10 @@
 
 #import "MICircleLayout.h"
 
+@interface MICircleLayout()
+
+@end
+
 @implementation MICircleLayout
 
 @end
