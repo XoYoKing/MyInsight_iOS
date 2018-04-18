@@ -22,7 +22,6 @@
     [super viewDidLoad];
     
     self.title = @"音效";
-    self.view.backgroundColor = [UIColor whiteColor];
     
     [self creatSubViews];
     

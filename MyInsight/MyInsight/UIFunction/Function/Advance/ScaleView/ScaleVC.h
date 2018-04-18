@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface ScaleVC : UIViewController
+@interface ScaleVC : BaseViewController
 
 @end

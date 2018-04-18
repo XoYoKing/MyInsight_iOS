@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface NetWorkVC : UIViewController
+@interface NetWorkVC : BaseViewController
 
 @end

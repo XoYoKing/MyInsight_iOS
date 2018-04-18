@@ -18,7 +18,6 @@
     [super viewDidLoad];
     
     self.title = @"Socket通讯";
-    self.view.backgroundColor = [UIColor whiteColor];
     
 }
 

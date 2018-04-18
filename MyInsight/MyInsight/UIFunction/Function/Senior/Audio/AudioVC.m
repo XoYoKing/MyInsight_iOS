@@ -47,9 +47,7 @@ const NSString *DuiLieStr = @"音频队列服务";
     [super viewDidLoad];
     
     self.title = @"音频学习";
-    
-    self.view.backgroundColor = [UIColor whiteColor];
-    
+        
     self.dataArray = @[YinXiaoStr, YinYueStr, HuiHuaStr, LuYin_Str, DuiLieStr];
     
     // 创建列表

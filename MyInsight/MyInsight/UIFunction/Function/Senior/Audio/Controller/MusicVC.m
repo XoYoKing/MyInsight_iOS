@@ -39,7 +39,6 @@
     [super viewDidLoad];
     
     self.title = @"音乐";
-    self.view.backgroundColor = [UIColor whiteColor];
     
     
     [self setupUI];

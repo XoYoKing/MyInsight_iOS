@@ -1021,12 +1021,12 @@
 			isa = PBXGroup;
 			children = (
 				A26CE498201971C50012EC69 /* YahooMapVC.h */,
+				A26CE49E201971C50012EC69 /* YahooMapVC.m */,
 				A26CE499201971C50012EC69 /* CustomPointAnnotation.h */,
 				A26CE49A201971C50012EC69 /* CallOutAnnotationView.h */,
 				A26CE49B201971C50012EC69 /* CalloutMapAnnotation.h */,
 				A26CE49C201971C50012EC69 /* CallOutAnnotationView.m */,
 				A26CE49D201971C50012EC69 /* CustomPointAnnotation.m */,
-				A26CE49E201971C50012EC69 /* YahooMapVC.m */,
 				A26CE49F201971C50012EC69 /* CalloutMapAnnotation.m */,
 			);
 			path = YahooMap;
@@ -1085,8 +1085,8 @@
 		A27E8735201ACD5D003E712C /* OpenCV */ = {
 			isa = PBXGroup;
 			children = (
-				A27E8736201ACD5D003E712C /* OpenCVVC.mm */,
 				A27E8737201ACD5D003E712C /* OpenCVVC.h */,
+				A27E8736201ACD5D003E712C /* OpenCVVC.mm */,
 			);
 			path = OpenCV;
 			sourceTree = "<group>";
@@ -1118,9 +1118,9 @@
 			isa = PBXGroup;
 			children = (
 				A27E8746201ACF6A003E712C /* PortraitScreenVC.h */,
-				A27E8747201ACF6A003E712C /* LandscapeScreenVC.m */,
 				A27E8748201ACF6A003E712C /* PortraitScreenVC.m */,
 				A27E8749201ACF6A003E712C /* LandscapeScreenVC.h */,
+				A27E8747201ACF6A003E712C /* LandscapeScreenVC.m */,
 			);
 			path = Screen;
 			sourceTree = "<group>";

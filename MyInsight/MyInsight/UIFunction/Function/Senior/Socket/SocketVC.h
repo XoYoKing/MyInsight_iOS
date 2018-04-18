@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface SocketVC : UIViewController
+@interface SocketVC : BaseViewController
 
 @end

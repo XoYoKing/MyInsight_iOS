@@ -23,8 +23,6 @@
     // 竖屏
     self.title = @"竖屏";
     
-    self.view.backgroundColor = [UIColor whiteColor];
-    
     self.nextButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:self.nextButton];
     [self.nextButton setTitle:@"横屏页面" forState:UIControlStateNormal];

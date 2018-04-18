@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface MapsVC : UIViewController
+@interface MapsVC : BaseViewController
 
 @end

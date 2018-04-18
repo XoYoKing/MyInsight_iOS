@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface YahooMapVC : UIViewController
+@interface YahooMapVC : BaseViewController
 
 @end

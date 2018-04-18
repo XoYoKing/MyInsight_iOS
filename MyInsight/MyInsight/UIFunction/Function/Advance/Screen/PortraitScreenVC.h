@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface PortraitScreenVC : UIViewController
+@interface PortraitScreenVC : BaseViewController
 
 @end

@@ -41,7 +41,6 @@
     [super viewDidLoad];
     
     self.title = @"聊天列表";
-    self.view.backgroundColor = [UIColor whiteColor];
     
     self.tableView = [[UITableView alloc] init];
     [self.view addSubview:self.tableView];

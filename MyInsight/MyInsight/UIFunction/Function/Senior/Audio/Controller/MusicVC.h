@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface MusicVC : UIViewController
+@interface MusicVC : BaseViewController
 
 @end

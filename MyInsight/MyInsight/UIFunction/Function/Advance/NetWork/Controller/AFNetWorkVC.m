@@ -21,7 +21,6 @@
     [super viewDidLoad];
     
     self.title = @"AFNET网络请求";
-    self.view.backgroundColor = [UIColor whiteColor];
     
     [self handleAFNetWorkData];
 }
@@ -32,6 +31,9 @@
     // https://www.windblew.cn/index/index/dearMeng
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    // 设置解析
+    [manager.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil]];
     
     [manager GET:@"https://www.windblew.cn/index/index/dearMeng" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"成功了--%@--%@",[responseObject class],responseObject);

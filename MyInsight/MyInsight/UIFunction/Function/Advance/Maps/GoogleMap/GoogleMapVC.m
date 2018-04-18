@@ -20,7 +20,6 @@
 /*
  谷歌地图
  [iOS Google地图SDK入门教程](https://www.jianshu.com/p/dc7d267d63d0)
- 
  */
 
 
@@ -28,7 +27,6 @@
     [super viewDidLoad];
     
     self.title = @"谷歌地图";
-    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {

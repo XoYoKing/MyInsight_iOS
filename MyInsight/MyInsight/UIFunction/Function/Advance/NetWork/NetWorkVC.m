@@ -19,7 +19,6 @@
     [super viewDidLoad];
     
     self.title = @"网络请求";
-    self.view.backgroundColor = [UIColor whiteColor];
     
     [self afNetWorkButton];
 }

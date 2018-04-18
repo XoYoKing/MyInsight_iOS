@@ -33,7 +33,6 @@
 
 #pragma mark 创建Yahoo地图
 - (void)creatYahooMap {
-    self.view.backgroundColor = [UIColor whiteColor];
     // key
     NSString *YAHOO_APP_KEY = @"dj0zaiZpPXNUeEh5WHNZYkFzUyZzPWNvbnN1bWVyc2VjcmV0Jng9NmQ-";
     // 初始化地图

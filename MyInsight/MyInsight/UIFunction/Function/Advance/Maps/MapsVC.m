@@ -33,7 +33,6 @@ const NSString *YahooMapsStr = @"YahooMap";
     [super viewDidLoad];
     
     self.title = @"地图";
-    self.view.backgroundColor = [UIColor whiteColor];
     
     [self handleTableViewData];
     

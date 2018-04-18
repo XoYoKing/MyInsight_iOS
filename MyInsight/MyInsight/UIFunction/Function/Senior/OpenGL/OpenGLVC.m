@@ -41,7 +41,6 @@ const SceneVertex vertices []  =
     [super viewDidLoad];
     
     self.title = @"OpenGL";
-    self.view.backgroundColor = [UIColor whiteColor];
     
     GLKView *view = (GLKView *)self.view;
     NSAssert([view isKindOfClass:[GLKView class]], @"ViewController's view is not a GLKView");

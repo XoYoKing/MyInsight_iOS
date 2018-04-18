@@ -52,7 +52,6 @@
     // 横向屏幕
     
     self.title = @"竖屏";
-    self.view.backgroundColor = [UIColor whiteColor];
     
     AppDelegate *appdele = (AppDelegate *)[UIApplication sharedApplication].delegate;
     appdele.isSupportHori = YES;
