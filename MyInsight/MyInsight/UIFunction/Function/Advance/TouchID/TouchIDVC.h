@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface TouchIDVC : UIViewController
+@interface TouchIDVC : BaseViewController
 
 @end

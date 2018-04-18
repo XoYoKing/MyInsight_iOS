@@ -93,10 +93,6 @@
 		A27E8728201AC53C003E712C /* 1967.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A27E8727201AC53C003E712C /* 1967.mp3 */; };
 		A27E873B201ACD5E003E712C /* OpenCVVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = A27E8736201ACD5D003E712C /* OpenCVVC.mm */; };
 		A27E873C201ACD5E003E712C /* FFmpegVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E873A201ACD5D003E712C /* FFmpegVC.m */; };
-		A27E874D201ACF6A003E712C /* BlueToothVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E873E201ACF6A003E712C /* BlueToothVC.m */; };
-		A27E874E201ACF6A003E712C /* BabyBleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E873F201ACF6A003E712C /* BabyBleVC.m */; };
-		A27E874F201ACF6A003E712C /* BluetoothCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A27E8740201ACF6A003E712C /* BluetoothCell.xib */; };
-		A27E8750201ACF6A003E712C /* BluetoothCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E8744201ACF6A003E712C /* BluetoothCell.m */; };
 		A27E8751201ACF6A003E712C /* LandscapeScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E8747201ACF6A003E712C /* LandscapeScreenVC.m */; };
 		A27E8752201ACF6A003E712C /* PortraitScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E8748201ACF6A003E712C /* PortraitScreenVC.m */; };
 		A27E8753201ACF6A003E712C /* ScaleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E874B201ACF6A003E712C /* ScaleVC.m */; };
@@ -152,6 +148,11 @@
 		A2CA808B202196EA00D81845 /* AnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA8083202196E900D81845 /* AnimationVC.m */; };
 		A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA8086202196E900D81845 /* RunTimeVC.m */; };
 		A2CA808D202196EA00D81845 /* LiftCycleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA8089202196E900D81845 /* LiftCycleVC.m */; };
+		A2D8849B208719CC005116A6 /* HTTPTOOL.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D8849A208719CC005116A6 /* HTTPTOOL.m */; };
+		A2D884A520872322005116A6 /* BluetoothCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2D8849D20872322005116A6 /* BluetoothCell.xib */; };
+		A2D884A620872322005116A6 /* BluetoothCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D8849F20872322005116A6 /* BluetoothCell.m */; };
+		A2D884A720872322005116A6 /* BlueToothVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884A120872322005116A6 /* BlueToothVC.m */; };
+		A2D884A820872322005116A6 /* BabyBleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884A220872322005116A6 /* BabyBleVC.m */; };
 		A2E4E71D2004BFDF00EC3D63 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7162004BFDE00EC3D63 /* libavutil.a */; };
 		A2E4E71E2004BFDF00EC3D63 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7172004BFDE00EC3D63 /* libavfilter.a */; };
 		A2E4E71F2004BFDF00EC3D63 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7182004BFDE00EC3D63 /* libavcodec.a */; };
@@ -313,13 +314,6 @@
 		A27E8737201ACD5D003E712C /* OpenCVVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVVC.h; sourceTree = "<group>"; };
 		A27E8739201ACD5D003E712C /* FFmpegVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFmpegVC.h; sourceTree = "<group>"; };
 		A27E873A201ACD5D003E712C /* FFmpegVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFmpegVC.m; sourceTree = "<group>"; };
-		A27E873E201ACF6A003E712C /* BlueToothVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueToothVC.m; sourceTree = "<group>"; };
-		A27E873F201ACF6A003E712C /* BabyBleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyBleVC.m; sourceTree = "<group>"; };
-		A27E8740201ACF6A003E712C /* BluetoothCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BluetoothCell.xib; sourceTree = "<group>"; };
-		A27E8741201ACF6A003E712C /* BluetoothCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothCell.h; sourceTree = "<group>"; };
-		A27E8742201ACF6A003E712C /* BabyBleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyBleVC.h; sourceTree = "<group>"; };
-		A27E8743201ACF6A003E712C /* BlueToothVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueToothVC.h; sourceTree = "<group>"; };
-		A27E8744201ACF6A003E712C /* BluetoothCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothCell.m; sourceTree = "<group>"; };
 		A27E8746201ACF6A003E712C /* PortraitScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortraitScreenVC.h; sourceTree = "<group>"; };
 		A27E8747201ACF6A003E712C /* LandscapeScreenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandscapeScreenVC.m; sourceTree = "<group>"; };
 		A27E8748201ACF6A003E712C /* PortraitScreenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortraitScreenVC.m; sourceTree = "<group>"; };
@@ -416,6 +410,15 @@
 		A2CA8087202196E900D81845 /* RunTimeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunTimeVC.h; sourceTree = "<group>"; };
 		A2CA8089202196E900D81845 /* LiftCycleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiftCycleVC.m; sourceTree = "<group>"; };
 		A2CA808A202196EA00D81845 /* LiftCycleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiftCycleVC.h; sourceTree = "<group>"; };
+		A2D88499208719CC005116A6 /* HTTPTOOL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPTOOL.h; sourceTree = "<group>"; };
+		A2D8849A208719CC005116A6 /* HTTPTOOL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPTOOL.m; sourceTree = "<group>"; };
+		A2D8849D20872322005116A6 /* BluetoothCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BluetoothCell.xib; sourceTree = "<group>"; };
+		A2D8849E20872322005116A6 /* BluetoothCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothCell.h; sourceTree = "<group>"; };
+		A2D8849F20872322005116A6 /* BluetoothCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothCell.m; sourceTree = "<group>"; };
+		A2D884A120872322005116A6 /* BlueToothVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueToothVC.m; sourceTree = "<group>"; };
+		A2D884A220872322005116A6 /* BabyBleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyBleVC.m; sourceTree = "<group>"; };
+		A2D884A320872322005116A6 /* BabyBleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyBleVC.h; sourceTree = "<group>"; };
+		A2D884A420872322005116A6 /* BlueToothVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueToothVC.h; sourceTree = "<group>"; };
 		A2E4E6A22004BFDD00EC3D63 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		A2E4E6A32004BFDD00EC3D63 /* buffersrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersrc.h; sourceTree = "<group>"; };
 		A2E4E6A42004BFDD00EC3D63 /* buffersink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersink.h; sourceTree = "<group>"; };
@@ -1063,6 +1066,7 @@
 			isa = PBXGroup;
 			children = (
 				A2BDD424205F56F1008AD133 /* Base */,
+				A2D88498208719CC005116A6 /* Tool */,
 				A27E8723201AC49B003E712C /* CommonTool.h */,
 				A27E8724201AC49B003E712C /* CommonTool.m */,
 				A27E8729201AC717003E712C /* Header.h */,
@@ -1103,13 +1107,8 @@
 		A27E873D201ACF6A003E712C /* BlueTooth */ = {
 			isa = PBXGroup;
 			children = (
-				A27E8743201ACF6A003E712C /* BlueToothVC.h */,
-				A27E873E201ACF6A003E712C /* BlueToothVC.m */,
-				A27E8742201ACF6A003E712C /* BabyBleVC.h */,
-				A27E873F201ACF6A003E712C /* BabyBleVC.m */,
-				A27E8741201ACF6A003E712C /* BluetoothCell.h */,
-				A27E8744201ACF6A003E712C /* BluetoothCell.m */,
-				A27E8740201ACF6A003E712C /* BluetoothCell.xib */,
+				A2D884A020872322005116A6 /* Controller */,
+				A2D8849C20872322005116A6 /* View */,
 			);
 			path = BlueTooth;
 			sourceTree = "<group>";
@@ -1346,6 +1345,36 @@
 				A2CA8089202196E900D81845 /* LiftCycleVC.m */,
 			);
 			path = LiftCycle;
+			sourceTree = "<group>";
+		};
+		A2D88498208719CC005116A6 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				A2D88499208719CC005116A6 /* HTTPTOOL.h */,
+				A2D8849A208719CC005116A6 /* HTTPTOOL.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		A2D8849C20872322005116A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2D8849E20872322005116A6 /* BluetoothCell.h */,
+				A2D8849F20872322005116A6 /* BluetoothCell.m */,
+				A2D8849D20872322005116A6 /* BluetoothCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2D884A020872322005116A6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A2D884A420872322005116A6 /* BlueToothVC.h */,
+				A2D884A120872322005116A6 /* BlueToothVC.m */,
+				A2D884A320872322005116A6 /* BabyBleVC.h */,
+				A2D884A220872322005116A6 /* BabyBleVC.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		A2E4E69F2004BFDD00EC3D63 /* FFmpeg-iOS */ = {
@@ -1695,12 +1724,12 @@
 				A22C4DC71FFC777A0079F7C2 /* route_goal_pin.png in Resources */,
 				A2B9929D2068F40D002A73B1 /* ChatAudioCell.xib in Resources */,
 				A22C4DC81FFC777A0079F7C2 /* pin_green_s@2x.png in Resources */,
+				A2D884A520872322005116A6 /* BluetoothCell.xib in Resources */,
 				A22C4DC21FFC777A0079F7C2 /* goal.png in Resources */,
 				A22C4DCB1FFC777A0079F7C2 /* route_pin@2x.png in Resources */,
 				A28ED5411FD2495F00A74551 /* Mine.storyboard in Resources */,
 				A22C4DCA1FFC777A0079F7C2 /* compass48.png in Resources */,
 				A2B992982068F3E4002A73B1 /* ChatImageCell.xib in Resources */,
-				A27E874F201ACF6A003E712C /* BluetoothCell.xib in Resources */,
 				A22C4DC31FFC777A0079F7C2 /* pin_green_s.png in Resources */,
 				A22C4DCC1FFC777A0079F7C2 /* goal@2x.png in Resources */,
 				A22C4DC51FFC777A0079F7C2 /* pin_red_s@2x.png in Resources */,
@@ -1885,7 +1914,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A27E874D201ACF6A003E712C /* BlueToothVC.m in Sources */,
 				A27B37E2204159BE00C25895 /* SQLiteHandle.m in Sources */,
 				A2A516042057634400EC5AA6 /* RadioButton.m in Sources */,
 				A2CA808B202196EA00D81845 /* AnimationVC.m in Sources */,
@@ -1911,10 +1939,12 @@
 				A2BDD430205F5767008AD133 /* BaseView.m in Sources */,
 				A27B37E52041603900C25895 /* DataBaseModel.m in Sources */,
 				A2BDD439205F6354008AD133 /* ThreadVC.m in Sources */,
+				A2D884A720872322005116A6 /* BlueToothVC.m in Sources */,
 				A26CE4862018A0880012EC69 /* BasicVC.m in Sources */,
 				A2B43C3320575EE700FEAE58 /* RadioButtonVC.m in Sources */,
 				A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */,
 				A25748252023058A000F7632 /* DataBaseVC.m in Sources */,
+				A2D8849B208719CC005116A6 /* HTTPTOOL.m in Sources */,
 				A2B992B32069F4FB002A73B1 /* ChatContentModel.m in Sources */,
 				A2B9929C2068F40D002A73B1 /* ChatAudioCell.m in Sources */,
 				A2B992A62068F441002A73B1 /* ChatFileCell.m in Sources */,
@@ -1922,7 +1952,7 @@
 				A27E873B201ACD5E003E712C /* OpenCVVC.mm in Sources */,
 				A2B992972068F3E4002A73B1 /* ChatImageCell.m in Sources */,
 				A2BDD43C205F636C008AD133 /* GCDVC.m in Sources */,
-				A27E874E201ACF6A003E712C /* BabyBleVC.m in Sources */,
+				A2D884A820872322005116A6 /* BabyBleVC.m in Sources */,
 				A27E8725201AC49B003E712C /* CommonTool.m in Sources */,
 				A241D22420468E68005A3BC5 /* MQTTVC.m in Sources */,
 				A2B992802068F0B9002A73B1 /* ChatListVC.m in Sources */,
@@ -1932,9 +1962,9 @@
 				A239CE202085D4410033646A /* MIGirdLayout.m in Sources */,
 				A20D5DFE1FD14549000E191D /* AppDelegate.m in Sources */,
 				A239CE262085D8B20033646A /* MILineLayout.m in Sources */,
+				A2D884A620872322005116A6 /* BluetoothCell.m in Sources */,
 				A26D17342043BDB80064DECF /* LoginVC.m in Sources */,
 				A257482B202305B9000F7632 /* TableViewVC.m in Sources */,
-				A27E8750201ACF6A003E712C /* BluetoothCell.m in Sources */,
 				A20D5DFD1FD14549000E191D /* main.m in Sources */,
 				A239CE2D2085E4780033646A /* NetWorkVC.m in Sources */,
 				A2BA3564207C9F4C006D1B00 /* CYuYanVC.m in Sources */,

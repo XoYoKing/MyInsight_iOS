@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface MQTTVC : UIViewController
+@interface MQTTVC : BaseViewController
 
 @end

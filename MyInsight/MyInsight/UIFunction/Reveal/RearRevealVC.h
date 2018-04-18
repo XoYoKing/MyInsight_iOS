@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface RearRevealVC : UIViewController
+@interface RearRevealVC : BaseViewController
 
 @end

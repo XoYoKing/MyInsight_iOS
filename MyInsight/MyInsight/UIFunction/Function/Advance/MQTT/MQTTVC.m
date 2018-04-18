@@ -19,7 +19,6 @@
     [super viewDidLoad];
     
     self.title = @"MQTT";
-    self.view.backgroundColor = [UIColor whiteColor];
     
     // 创建一个传输对象
     //MQTTCFSocketTransport *transport = [[MQTTCFSocketTransport alloc] init];
@@ -35,17 +34,6 @@
     //
     
 }
-
-
-/*
- 断开连接
- */
-
-
-/*
- 关闭
- */
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

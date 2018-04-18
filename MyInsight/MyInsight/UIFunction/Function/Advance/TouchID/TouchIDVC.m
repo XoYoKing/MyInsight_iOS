@@ -20,7 +20,6 @@
     [super viewDidLoad];
     
     self.title = @"指纹识别&密码输入";
-    self.view.backgroundColor = [UIColor whiteColor];
     
     //创建LAContext
     LAContext *context = [LAContext new];
@@ -88,8 +87,6 @@
         
         NSLog(@"%@",error.localizedDescription);
     }
-    
-    
 }
 
 

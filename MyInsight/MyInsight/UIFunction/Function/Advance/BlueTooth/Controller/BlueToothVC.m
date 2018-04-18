@@ -44,8 +44,6 @@
     // 注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"BluetoothCell" bundle:nil]
          forCellReuseIdentifier:@"BluetoothCell"];
-    
-    
 }
 
 // 设置蓝牙
@@ -82,7 +80,6 @@
             break;
         }
     }
-    //        NSLog(@"新设备%@",peripheral);
     // 添加蓝牙到数组
     if (!hasExist) {
         // 添加到tableView最后一行
