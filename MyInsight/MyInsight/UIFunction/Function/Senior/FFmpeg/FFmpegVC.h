@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseViewController.h"
+#import "BaseVC.h"
 
-@interface FFmpegVC : BaseViewController
+@interface FFmpegVC : BaseVC
 
 @end
 

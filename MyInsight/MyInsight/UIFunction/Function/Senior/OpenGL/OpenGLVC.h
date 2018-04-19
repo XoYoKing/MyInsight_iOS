@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
-#import "BaseViewController.h"
+#import "BaseVC.h"
 
-@interface OpenGLVC : BaseViewController
+@interface OpenGLVC : BaseVC
 
 @end

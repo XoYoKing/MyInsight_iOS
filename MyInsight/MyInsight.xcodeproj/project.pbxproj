@@ -134,10 +134,8 @@
 		A2B992B32069F4FB002A73B1 /* ChatContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B992B22069F4FB002A73B1 /* ChatContentModel.m */; };
 		A2BA3564207C9F4C006D1B00 /* CYuYanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BA3563207C9F4C006D1B00 /* CYuYanVC.m */; };
 		A2BDD423205F557C008AD133 /* MultiThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD422205F557C008AD133 /* MultiThreadVC.m */; };
-		A2BDD42A205F5742008AD133 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD429205F5742008AD133 /* BaseViewController.m */; };
 		A2BDD42D205F5754008AD133 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD42C205F5754008AD133 /* BaseModel.m */; };
 		A2BDD430205F5767008AD133 /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD42F205F5767008AD133 /* BaseView.m */; };
-		A2BDD433205F578F008AD133 /* BaseNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD432205F578F008AD133 /* BaseNaviController.m */; };
 		A2BDD436205F5BAB008AD133 /* BaseTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD435205F5BAB008AD133 /* BaseTableVC.m */; };
 		A2BDD439205F6354008AD133 /* ThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD438205F6354008AD133 /* ThreadVC.m */; };
 		A2BDD43C205F636C008AD133 /* GCDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD43B205F636C008AD133 /* GCDVC.m */; };
@@ -153,6 +151,9 @@
 		A2D884A620872322005116A6 /* BluetoothCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D8849F20872322005116A6 /* BluetoothCell.m */; };
 		A2D884A720872322005116A6 /* BlueToothVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884A120872322005116A6 /* BlueToothVC.m */; };
 		A2D884A820872322005116A6 /* BabyBleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884A220872322005116A6 /* BabyBleVC.m */; };
+		A2D884E920886896005116A6 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884E820886896005116A6 /* BaseVC.m */; };
+		A2D884EC20886B96005116A6 /* BaseNaviVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884EB20886B96005116A6 /* BaseNaviVC.m */; };
+		A2D884F020887323005116A6 /* QRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884EF20887323005116A6 /* QRCodeVC.m */; };
 		A2E4E71D2004BFDF00EC3D63 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7162004BFDE00EC3D63 /* libavutil.a */; };
 		A2E4E71E2004BFDF00EC3D63 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7172004BFDE00EC3D63 /* libavfilter.a */; };
 		A2E4E71F2004BFDF00EC3D63 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7182004BFDE00EC3D63 /* libavcodec.a */; };
@@ -383,14 +384,10 @@
 		A2BA3563207C9F4C006D1B00 /* CYuYanVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYuYanVC.m; sourceTree = "<group>"; };
 		A2BDD421205F557C008AD133 /* MultiThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadVC.h; sourceTree = "<group>"; };
 		A2BDD422205F557C008AD133 /* MultiThreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiThreadVC.m; sourceTree = "<group>"; };
-		A2BDD428205F5742008AD133 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		A2BDD429205F5742008AD133 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		A2BDD42B205F5754008AD133 /* BaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		A2BDD42C205F5754008AD133 /* BaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		A2BDD42E205F5767008AD133 /* BaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
 		A2BDD42F205F5767008AD133 /* BaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
-		A2BDD431205F578F008AD133 /* BaseNaviController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNaviController.h; sourceTree = "<group>"; };
-		A2BDD432205F578F008AD133 /* BaseNaviController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNaviController.m; sourceTree = "<group>"; };
 		A2BDD434205F5BAB008AD133 /* BaseTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableVC.h; sourceTree = "<group>"; };
 		A2BDD435205F5BAB008AD133 /* BaseTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableVC.m; sourceTree = "<group>"; };
 		A2BDD437205F6354008AD133 /* ThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadVC.h; sourceTree = "<group>"; };
@@ -419,6 +416,12 @@
 		A2D884A220872322005116A6 /* BabyBleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyBleVC.m; sourceTree = "<group>"; };
 		A2D884A320872322005116A6 /* BabyBleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyBleVC.h; sourceTree = "<group>"; };
 		A2D884A420872322005116A6 /* BlueToothVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueToothVC.h; sourceTree = "<group>"; };
+		A2D884E720886896005116A6 /* BaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
+		A2D884E820886896005116A6 /* BaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
+		A2D884EA20886B96005116A6 /* BaseNaviVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNaviVC.h; sourceTree = "<group>"; };
+		A2D884EB20886B96005116A6 /* BaseNaviVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNaviVC.m; sourceTree = "<group>"; };
+		A2D884EE20887323005116A6 /* QRCodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeVC.h; sourceTree = "<group>"; };
+		A2D884EF20887323005116A6 /* QRCodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeVC.m; sourceTree = "<group>"; };
 		A2E4E6A22004BFDD00EC3D63 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		A2E4E6A32004BFDD00EC3D63 /* buffersrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersrc.h; sourceTree = "<group>"; };
 		A2E4E6A42004BFDD00EC3D63 /* buffersink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersink.h; sourceTree = "<group>"; };
@@ -961,6 +964,7 @@
 				A2CA8082202196E900D81845 /* Animation */,
 				A2CA8088202196E900D81845 /* LiftCycle */,
 				A2CA8085202196E900D81845 /* RunTime */,
+				A2D884ED20887312005116A6 /* QRCode */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -1301,10 +1305,10 @@
 		A2BDD427205F571E008AD133 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A2BDD428205F5742008AD133 /* BaseViewController.h */,
-				A2BDD429205F5742008AD133 /* BaseViewController.m */,
-				A2BDD431205F578F008AD133 /* BaseNaviController.h */,
-				A2BDD432205F578F008AD133 /* BaseNaviController.m */,
+				A2D884E720886896005116A6 /* BaseVC.h */,
+				A2D884E820886896005116A6 /* BaseVC.m */,
+				A2D884EA20886B96005116A6 /* BaseNaviVC.h */,
+				A2D884EB20886B96005116A6 /* BaseNaviVC.m */,
 				A2BDD434205F5BAB008AD133 /* BaseTableVC.h */,
 				A2BDD435205F5BAB008AD133 /* BaseTableVC.m */,
 			);
@@ -1375,6 +1379,15 @@
 				A2D884A220872322005116A6 /* BabyBleVC.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A2D884ED20887312005116A6 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				A2D884EE20887323005116A6 /* QRCodeVC.h */,
+				A2D884EF20887323005116A6 /* QRCodeVC.m */,
+			);
+			path = QRCode;
 			sourceTree = "<group>";
 		};
 		A2E4E69F2004BFDD00EC3D63 /* FFmpeg-iOS */ = {
@@ -1834,6 +1847,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyInsight/Pods-MyInsight-resources.sh",
 				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/HMQRCodeScanner/HMQRCodeScanner/QRCode/HMScanner.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -1937,6 +1951,7 @@
 				A2CA808D202196EA00D81845 /* LiftCycleVC.m in Sources */,
 				A26CE4A4201971C50012EC69 /* GoogleMapVC.m in Sources */,
 				A2BDD430205F5767008AD133 /* BaseView.m in Sources */,
+				A2D884E920886896005116A6 /* BaseVC.m in Sources */,
 				A27B37E52041603900C25895 /* DataBaseModel.m in Sources */,
 				A2BDD439205F6354008AD133 /* ThreadVC.m in Sources */,
 				A2D884A720872322005116A6 /* BlueToothVC.m in Sources */,
@@ -1954,9 +1969,9 @@
 				A2BDD43C205F636C008AD133 /* GCDVC.m in Sources */,
 				A2D884A820872322005116A6 /* BabyBleVC.m in Sources */,
 				A27E8725201AC49B003E712C /* CommonTool.m in Sources */,
+				A2D884EC20886B96005116A6 /* BaseNaviVC.m in Sources */,
 				A241D22420468E68005A3BC5 /* MQTTVC.m in Sources */,
 				A2B992802068F0B9002A73B1 /* ChatListVC.m in Sources */,
-				A2BDD433205F578F008AD133 /* BaseNaviController.m in Sources */,
 				A2B992AB2068F45B002A73B1 /* ChatTipCell.m in Sources */,
 				A27E875C201AD2B2003E712C /* MusicVC.m in Sources */,
 				A239CE202085D4410033646A /* MIGirdLayout.m in Sources */,
@@ -1985,11 +2000,11 @@
 				A26CE4A3201971C50012EC69 /* BaiduMapVC.m in Sources */,
 				A20D5E111FD147CD000E191D /* TabBarVC.m in Sources */,
 				A27E875D201AD2B2003E712C /* SoundVC.m in Sources */,
-				A2BDD42A205F5742008AD133 /* BaseViewController.m in Sources */,
 				A2B992B02069F447002A73B1 /* ChatModel.m in Sources */,
 				A239CE232085D8990033646A /* MICircleLayout.m in Sources */,
 				A2B9927420623D0E002A73B1 /* SocketVC.m in Sources */,
 				A239CE362085E4C30033646A /* AFNetWorkVC.m in Sources */,
+				A2D884F020887323005116A6 /* QRCodeVC.m in Sources */,
 				A2BDD42D205F5754008AD133 /* BaseModel.m in Sources */,
 				A2B992A12068F42F002A73B1 /* ChatVideoCell.m in Sources */,
 				A241D22B2047A32A005A3BC5 /* UIColor+Category.m in Sources */,

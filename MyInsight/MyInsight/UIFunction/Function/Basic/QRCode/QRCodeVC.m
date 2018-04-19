@@ -1,28 +1,32 @@
+
+
+
 //
-//  BaseViewController.m
+//  QRCodeVC.m
 //  MyInsight
 //
-//  Created by SongMenglong on 2018/3/19.
+//  Created by SongMenglong on 2018/4/19.
 //  Copyright © 2018年 SongMenglong. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "QRCodeVC.h"
 
-@interface BaseViewController ()
+@interface QRCodeVC ()
 
 @end
 
-@implementation BaseViewController
+@implementation QRCodeVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 设置默认背景颜色
-    self.view.backgroundColor = [UIColor whiteColor];
-    
+    self.title = @"二维码";
     
     
 }
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -1,22 +1,25 @@
 //
-//  BaseNaviController.m
+//  BaseVC.m
 //  MyInsight
 //
-//  Created by SongMenglong on 2018/3/19.
+//  Created by SongMenglong on 2018/4/19.
 //  Copyright © 2018年 SongMenglong. All rights reserved.
 //
 
-#import "BaseNaviController.h"
+#import "BaseVC.h"
 
-@interface BaseNaviController ()
+@interface BaseVC ()
 
 @end
 
-@implementation BaseNaviController
+@implementation BaseVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // 设置默认背景颜色
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {

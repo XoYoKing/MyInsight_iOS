@@ -14,6 +14,11 @@
 
 @implementation BaseTableVC
 
+/*
+ 设置列表的基类
+ 
+ */
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

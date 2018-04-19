@@ -30,6 +30,7 @@ target 'MyInsight' do
   # AppSecret:1e860f261f083d47afcbe5305541d4b6
   
   # 二维码
+  pod 'HMQRCodeScanner'
   
   target 'MyInsightTests' do
     inherit! :search_paths

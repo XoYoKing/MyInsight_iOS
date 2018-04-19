@@ -19,6 +19,7 @@
 #import "RadioButtonVC.h"
 #import "MultiThreadVC.h" //多线程
 #import "CYuYanVC.h"
+#import "QRCodeVC.h"
 
 @interface BasicVC ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -44,8 +45,9 @@ const NSString *CollectViewStr = @"CollectView";
 const NSString *DataBaseStr = @"数据库";
 const NSString *radioButtonStr = @"单选按钮🔘 基本表单";
 const NSString *MultiThreadString = @"多线程";
-const NSString *numberString = @"";
 const NSString *CYuYanString = @"C语言";
+const NSString *QRCodeString = @"二维码";
+
 
 /*
  */
@@ -86,8 +88,8 @@ const NSString *CYuYanString = @"C语言";
 
 // 处理数据
 - (void)handleTableViewData {
-    // 
-    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, ShouShiStr, XieYiStr, AnimationStr, TableViewStr, CollectViewStr, DataBaseStr, radioButtonStr, MultiThreadString];
+    // 数组
+    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, ShouShiStr, XieYiStr, AnimationStr, TableViewStr, CollectViewStr, DataBaseStr, radioButtonStr, MultiThreadString, QRCodeString];
 }
 
 #pragma mark - 创建TableView
@@ -195,7 +197,12 @@ const NSString *CYuYanString = @"C语言";
         multiThreadVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:multiThreadVC animated:YES];
     }
-    
+    if ([cellString isEqual:QRCodeString]) {
+        // 二维码
+        QRCodeVC *qrcodeVC = [[QRCodeVC alloc] init];
+        qrcodeVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:qrcodeVC animated:YES];
+    }
 }
 
 #pragma mark 代码约束布局

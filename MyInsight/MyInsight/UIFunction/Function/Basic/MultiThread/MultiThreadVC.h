@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseTableVC.h"
-#import "BaseViewController.h"
 
 @interface MultiThreadVC : BaseTableVC
 

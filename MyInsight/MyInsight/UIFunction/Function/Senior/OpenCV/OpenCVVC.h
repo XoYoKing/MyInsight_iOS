@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 //#import <opencv2/opencv.hpp>
 //#import "opencv2/highgui/ios.h"
-#import "BaseViewController.h"
+#import "BaseVC.h"
 
-@interface OpenCVVC : BaseViewController
+@interface OpenCVVC : BaseVC
 {
 //    cv::Mat cvImage;
 }

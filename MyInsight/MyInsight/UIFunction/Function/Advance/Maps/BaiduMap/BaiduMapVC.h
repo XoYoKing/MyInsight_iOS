@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseViewController.h"
+#import "BaseVC.h"
 
-@interface BaiduMapVC : BaseViewController
+@interface BaiduMapVC : BaseVC
 
 @end
