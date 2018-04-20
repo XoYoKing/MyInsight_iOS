@@ -95,7 +95,7 @@ const NSString *RunLoopString = @"RunLoop";
 
 #pragma mark - 创建TableView
 - (void)creatTableView {
-    self.tableView = [[UITableView alloc] init];
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     [self.view addSubview:self.tableView];
     // 设置代理
     self.tableView.delegate = self;
@@ -110,12 +110,16 @@ const NSString *RunLoopString = @"RunLoop";
 #pragma mark - 实现TableView的代理协议
 // section个数
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 3;
 }
 
 // section中cell个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataArray.count;
+    if (section == 0) {
+        return self.dataArray.count;
+    } else {
+        return 0;
+    }
 }
 
 // 生成cell
