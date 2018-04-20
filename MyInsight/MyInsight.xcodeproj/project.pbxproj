@@ -154,6 +154,7 @@
 		A2D884E920886896005116A6 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884E820886896005116A6 /* BaseVC.m */; };
 		A2D884EC20886B96005116A6 /* BaseNaviVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884EB20886B96005116A6 /* BaseNaviVC.m */; };
 		A2D884F020887323005116A6 /* QRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884EF20887323005116A6 /* QRCodeVC.m */; };
+		A2D884F420897942005116A6 /* RunLoopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884F320897942005116A6 /* RunLoopVC.m */; };
 		A2E4E71D2004BFDF00EC3D63 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7162004BFDE00EC3D63 /* libavutil.a */; };
 		A2E4E71E2004BFDF00EC3D63 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7172004BFDE00EC3D63 /* libavfilter.a */; };
 		A2E4E71F2004BFDF00EC3D63 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7182004BFDE00EC3D63 /* libavcodec.a */; };
@@ -422,6 +423,8 @@
 		A2D884EB20886B96005116A6 /* BaseNaviVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNaviVC.m; sourceTree = "<group>"; };
 		A2D884EE20887323005116A6 /* QRCodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeVC.h; sourceTree = "<group>"; };
 		A2D884EF20887323005116A6 /* QRCodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeVC.m; sourceTree = "<group>"; };
+		A2D884F220897942005116A6 /* RunLoopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopVC.h; sourceTree = "<group>"; };
+		A2D884F320897942005116A6 /* RunLoopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopVC.m; sourceTree = "<group>"; };
 		A2E4E6A22004BFDD00EC3D63 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		A2E4E6A32004BFDD00EC3D63 /* buffersrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersrc.h; sourceTree = "<group>"; };
 		A2E4E6A42004BFDD00EC3D63 /* buffersink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersink.h; sourceTree = "<group>"; };
@@ -964,6 +967,7 @@
 				A2CA8082202196E900D81845 /* Animation */,
 				A2CA8088202196E900D81845 /* LiftCycle */,
 				A2CA8085202196E900D81845 /* RunTime */,
+				A2D884F120897927005116A6 /* RunLoop */,
 				A2D884ED20887312005116A6 /* QRCode */,
 			);
 			path = Basic;
@@ -1388,6 +1392,15 @@
 				A2D884EF20887323005116A6 /* QRCodeVC.m */,
 			);
 			path = QRCode;
+			sourceTree = "<group>";
+		};
+		A2D884F120897927005116A6 /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				A2D884F220897942005116A6 /* RunLoopVC.h */,
+				A2D884F320897942005116A6 /* RunLoopVC.m */,
+			);
+			path = RunLoop;
 			sourceTree = "<group>";
 		};
 		A2E4E69F2004BFDD00EC3D63 /* FFmpeg-iOS */ = {
@@ -1958,6 +1971,7 @@
 				A26CE4862018A0880012EC69 /* BasicVC.m in Sources */,
 				A2B43C3320575EE700FEAE58 /* RadioButtonVC.m in Sources */,
 				A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */,
+				A2D884F420897942005116A6 /* RunLoopVC.m in Sources */,
 				A25748252023058A000F7632 /* DataBaseVC.m in Sources */,
 				A2D8849B208719CC005116A6 /* HTTPTOOL.m in Sources */,
 				A2B992B32069F4FB002A73B1 /* ChatContentModel.m in Sources */,

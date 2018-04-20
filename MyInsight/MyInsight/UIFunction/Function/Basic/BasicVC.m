@@ -12,6 +12,7 @@
 
 #import "LiftCycleVC.h" // 生命周期
 #import "RunTimeVC.h" // 运行时
+#import "RunLoopVC.h"
 #import "AnimationVC.h"
 #import "DataBaseVC.h"
 #import "TableViewVC.h"
@@ -47,7 +48,7 @@ const NSString *radioButtonStr = @"单选按钮🔘 基本表单";
 const NSString *MultiThreadString = @"多线程";
 const NSString *CYuYanString = @"C语言";
 const NSString *QRCodeString = @"二维码";
-
+const NSString *RunLoopString = @"RunLoop";
 
 /*
  */
@@ -89,7 +90,7 @@ const NSString *QRCodeString = @"二维码";
 // 处理数据
 - (void)handleTableViewData {
     // 数组
-    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, ShouShiStr, XieYiStr, AnimationStr, TableViewStr, CollectViewStr, DataBaseStr, radioButtonStr, MultiThreadString, QRCodeString];
+    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, ShouShiStr, XieYiStr, AnimationStr, TableViewStr, CollectViewStr, DataBaseStr, radioButtonStr, MultiThreadString, QRCodeString];
 }
 
 #pragma mark - 创建TableView
@@ -161,6 +162,14 @@ const NSString *QRCodeString = @"二维码";
         runTimeVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:runTimeVC animated:YES];
     }
+    
+    if ([cellString isEqual:RunLoopString]) {
+        // RunLoop
+        RunLoopVC *runLoopVC = [[RunLoopVC alloc] init];
+        runLoopVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:runLoopVC animated:YES];
+    }
+    
     if ([cellString isEqual:AnimationStr]) {
         // 动画
         AnimationVC *animationVC = [[AnimationVC alloc] init];

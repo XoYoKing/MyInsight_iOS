@@ -1,29 +1,27 @@
 //
-//  RunTimeVC.m
+//  RunLoopVC.m
 //  MyInsight
 //
-//  Created by SongMenglong on 2018/1/26.
+//  Created by SongMenglong on 2018/4/20.
 //  Copyright © 2018年 SongMenglong. All rights reserved.
 //
 
-#import "RunTimeVC.h"
+#import "RunLoopVC.h"
 
-@interface RunTimeVC ()
-
-// 输出
-@property (weak, nonatomic) UITextView *inputTextView;
+@interface RunLoopVC ()
 
 @end
 
-@implementation RunTimeVC
+@implementation RunLoopVC
 
-#pragma mark - 运行时
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"运行时RunTime";
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"RunLoop";
+    
 }
+
+
 
 
 - (void)didReceiveMemoryWarning {

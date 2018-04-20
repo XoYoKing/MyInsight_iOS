@@ -67,18 +67,16 @@
 
 #pragma mark 生成button动作方法
 - (void)createButtonAction:(UIButton *)button {
-    NSLog(@"%@", self.inputTextField.text);
-    NSLog(@"CREATE BUTTON ACTION");
-    
-    //
+    NSLog(@"输入框的字符串：%@", self.inputTextField.text);
+    // 二维码字符串
     NSString *qrcodeString;
     
     if (self.inputTextField.text.length == 0 || self.inputTextField.text == NULL) {
-        qrcodeString = @"滚滚长江东逝水";
+        qrcodeString = @"滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。";
     } else {
         qrcodeString = self.inputTextField.text;
     }
-    
+    // 生成二维码
     [HMScannerController cardImageWithCardName:qrcodeString avatar:nil scale:1.0 completion:^(UIImage *image) {
         self.qrcodeImgView.image = image;
     }];
@@ -86,20 +84,14 @@
 
 #pragma mark - 扫描button动作方法
 - (void)scanButtonAction:(UIButton *)button {
-    NSLog(@"SCAN BUTTON ACTION");
-    
+    // 打开扫描二维码 返回字符串
     HMScannerController *scanner = [HMScannerController scannerWithCardName:@"https://www.github.com/njhu" avatar:nil completion:^(NSString *stringValue) {
-        
-        NSLog(@"%@", stringValue);
-        
-        //weakself.sections.firstObject.items.firstObject.subTitle = stringValue;
-        //[weakself.tableView reloadRow:0 inSection:0 withRowAnimation:0];
+        NSLog(@"返回二维码字符串： %@", stringValue);
     }];
-    
-    [scanner setTitleColor:[UIColor whiteColor] tintColor:[UIColor greenColor]];
+    // 设置颜色
+    [scanner setTitleColor:[UIColor redColor] tintColor:[UIColor greenColor]];
     
     [self showDetailViewController:scanner sender:nil];
-    
 }
 
 #pragma mark - 代码约束布局
