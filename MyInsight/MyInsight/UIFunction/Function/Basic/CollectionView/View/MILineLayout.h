@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MILineLayout : UICollectionViewLayout
+//@class MILineFlowLayout;
+
+@protocol MILineFlowLayoutDelegate <NSObject>
+@optional
+
+@end
+
+@interface MILineLayout : UICollectionViewFlowLayout
+
+- (instancetype)initWithDelegate:(id<MILineFlowLayoutDelegate>)delegate;
+
++ (instancetype)lineLayoutWithDelegate:(id<MILineFlowLayoutDelegate>)delegate;
 
 @end
