@@ -22,16 +22,16 @@
 @property (nonatomic, strong) NSArray *dataArray;
 @end
 
-const NSString *SocketStr = @"Socket通讯";
-const NSString *OpenCVStr = @"OpenCV";
-const NSString *FFmpegStr = @"FFmpeg";
-const NSString *OpenGLStr = @"OpenGL";
+static const NSString *SocketStr = @"Socket通讯";
+static const NSString *OpenCVStr = @"OpenCV";
+static const NSString *FFmpegStr = @"FFmpeg";
+static const NSString *OpenGLStr = @"OpenGL";
 
 /*
  设定功能：
  音频学习
  */
-const NSString *AudioStr = @"Audio";
+static const NSString *AudioStr = @"Audio";
 
 @implementation SeniorVC
 
@@ -114,10 +114,6 @@ const NSString *AudioStr = @"Audio";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 获取字符串
     NSString *cellString = [self.dataArray objectAtIndex:indexPath.row];
-    
-    // 设置返回button的样式
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationController.navigationBar.tintColor = [UIColor redColor];
     
     if ([cellString isEqual:SocketStr]) {
         // Socket通讯

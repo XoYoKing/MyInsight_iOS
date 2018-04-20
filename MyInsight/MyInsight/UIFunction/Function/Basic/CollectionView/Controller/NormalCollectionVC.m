@@ -1,29 +1,30 @@
 //
-//  BaseVC.m
+//  NormalCollectionVC.m
 //  MyInsight
 //
-//  Created by SongMenglong on 2018/4/19.
+//  Created by SongMenglong on 2018/4/20.
 //  Copyright © 2018年 SongMenglong. All rights reserved.
 //
 
-#import "BaseVC.h"
+#import "NormalCollectionVC.h"
 
-@interface BaseVC ()
+@interface NormalCollectionVC ()
 
 @end
 
-@implementation BaseVC
+@implementation NormalCollectionVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
-    // 设置默认背景颜色
-    self.view.backgroundColor = [UIColor whiteColor];
     
-    // 设置返回button的样式
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationController.navigationBar.tintColor = [UIColor redColor];
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical; //竖直滑动
+    flowLayout.itemSize = CGSizeMake(110, 150);
+    flowLayout.headerReferenceSize = CGSizeMake(self.view.bounds.size.width, 100);
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

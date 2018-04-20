@@ -99,6 +99,11 @@
 		A27E875C201AD2B2003E712C /* MusicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E8757201AD2B2003E712C /* MusicVC.m */; };
 		A27E875D201AD2B2003E712C /* SoundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E8758201AD2B2003E712C /* SoundVC.m */; };
 		A27E875E201AD2B2003E712C /* AudioVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E875B201AD2B2003E712C /* AudioVC.m */; };
+		A288F97E2089D2CE00DD4CA0 /* NormalCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A288F97D2089D2CE00DD4CA0 /* NormalCollectionVC.m */; };
+		A288F9812089DB2800DD4CA0 /* HorizontalCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A288F9802089DB2800DD4CA0 /* HorizontalCollectionVC.m */; };
+		A288F9842089DB4100DD4CA0 /* VerticalCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A288F9832089DB4100DD4CA0 /* VerticalCollectionVC.m */; };
+		A288F98A2089DED600DD4CA0 /* MIHorizontalLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A288F9892089DED600DD4CA0 /* MIHorizontalLayout.m */; };
+		A288F98D2089E0F500DD4CA0 /* MIVerticalLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A288F98C2089E0F500DD4CA0 /* MIVerticalLayout.m */; };
 		A28ED52F1FD156B600A74551 /* RearRevealVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A28ED52E1FD156B600A74551 /* RearRevealVC.m */; };
 		A28ED53D1FD2494800A74551 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28ED53C1FD2494800A74551 /* Home.storyboard */; };
 		A28ED53F1FD2495300A74551 /* Mark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28ED53E1FD2495300A74551 /* Mark.storyboard */; };
@@ -329,6 +334,16 @@
 		A27E875A201AD2B2003E712C /* SoundVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundVC.h; sourceTree = "<group>"; };
 		A27E875B201AD2B2003E712C /* AudioVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioVC.m; sourceTree = "<group>"; };
 		A27E875F201AD490003E712C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		A288F97C2089D2CE00DD4CA0 /* NormalCollectionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalCollectionVC.h; sourceTree = "<group>"; };
+		A288F97D2089D2CE00DD4CA0 /* NormalCollectionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalCollectionVC.m; sourceTree = "<group>"; };
+		A288F97F2089DB2800DD4CA0 /* HorizontalCollectionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HorizontalCollectionVC.h; sourceTree = "<group>"; };
+		A288F9802089DB2800DD4CA0 /* HorizontalCollectionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HorizontalCollectionVC.m; sourceTree = "<group>"; };
+		A288F9822089DB4100DD4CA0 /* VerticalCollectionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VerticalCollectionVC.h; sourceTree = "<group>"; };
+		A288F9832089DB4100DD4CA0 /* VerticalCollectionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerticalCollectionVC.m; sourceTree = "<group>"; };
+		A288F9882089DED600DD4CA0 /* MIHorizontalLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIHorizontalLayout.h; sourceTree = "<group>"; };
+		A288F9892089DED600DD4CA0 /* MIHorizontalLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIHorizontalLayout.m; sourceTree = "<group>"; };
+		A288F98B2089E0F500DD4CA0 /* MIVerticalLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIVerticalLayout.h; sourceTree = "<group>"; };
+		A288F98C2089E0F500DD4CA0 /* MIVerticalLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIVerticalLayout.m; sourceTree = "<group>"; };
 		A28ED52D1FD156B600A74551 /* RearRevealVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RearRevealVC.h; sourceTree = "<group>"; };
 		A28ED52E1FD156B600A74551 /* RearRevealVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RearRevealVC.m; sourceTree = "<group>"; };
 		A28ED53C1FD2494800A74551 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -821,6 +836,12 @@
 		A239CE15208595580033646A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A288F97C2089D2CE00DD4CA0 /* NormalCollectionVC.h */,
+				A288F97D2089D2CE00DD4CA0 /* NormalCollectionVC.m */,
+				A288F97F2089DB2800DD4CA0 /* HorizontalCollectionVC.h */,
+				A288F9802089DB2800DD4CA0 /* HorizontalCollectionVC.m */,
+				A288F9822089DB4100DD4CA0 /* VerticalCollectionVC.h */,
+				A288F9832089DB4100DD4CA0 /* VerticalCollectionVC.m */,
 				A239CE18208595C30033646A /* MultiTypeFlowLayoutVC.h */,
 				A239CE19208595C30033646A /* MultiTypeFlowLayoutVC.m */,
 			);
@@ -836,15 +857,12 @@
 				A239CE222085D8990033646A /* MICircleLayout.m */,
 				A239CE242085D8B20033646A /* MILineLayout.h */,
 				A239CE252085D8B20033646A /* MILineLayout.m */,
+				A288F9882089DED600DD4CA0 /* MIHorizontalLayout.h */,
+				A288F9892089DED600DD4CA0 /* MIHorizontalLayout.m */,
+				A288F98B2089E0F500DD4CA0 /* MIVerticalLayout.h */,
+				A288F98C2089E0F500DD4CA0 /* MIVerticalLayout.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		A239CE17208595590033646A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		A239CE272085E44C0033646A /* NetWork */ = {
@@ -901,7 +919,6 @@
 				A25748262023059D000F7632 /* CollectionViewVC.h */,
 				A25748272023059D000F7632 /* CollectionViewVC.m */,
 				A239CE15208595580033646A /* Controller */,
-				A239CE17208595590033646A /* Model */,
 				A239CE16208595590033646A /* View */,
 			);
 			path = CollectionView;
@@ -1941,6 +1958,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A288F9842089DB4100DD4CA0 /* VerticalCollectionVC.m in Sources */,
 				A27B37E2204159BE00C25895 /* SQLiteHandle.m in Sources */,
 				A2A516042057634400EC5AA6 /* RadioButton.m in Sources */,
 				A2CA808B202196EA00D81845 /* AnimationVC.m in Sources */,
@@ -1948,6 +1966,7 @@
 				A239CE1A208595C30033646A /* MultiTypeFlowLayoutVC.m in Sources */,
 				A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */,
 				A2B9927820623EA3002A73B1 /* OpenGLVC.m in Sources */,
+				A288F97E2089D2CE00DD4CA0 /* NormalCollectionVC.m in Sources */,
 				A27E8751201ACF6A003E712C /* LandscapeScreenVC.m in Sources */,
 				A26CE4A6201971C50012EC69 /* CustomPointAnnotation.m in Sources */,
 				A257482F202315C0000F7632 /* RFQuiltLayout.m in Sources */,
@@ -2007,13 +2026,16 @@
 				A26D17302043A4880064DECF /* WelcomeVC.m in Sources */,
 				A2B992832068F0C7002A73B1 /* ChatVC.m in Sources */,
 				A239CE302085E4930033646A /* NetModel.m in Sources */,
+				A288F9812089DB2800DD4CA0 /* HorizontalCollectionVC.m in Sources */,
 				A25748282023059D000F7632 /* CollectionViewVC.m in Sources */,
 				A26CE4A9201971C50012EC69 /* SystemMapVC.m in Sources */,
 				A28ED52F1FD156B600A74551 /* RearRevealVC.m in Sources */,
 				A27E8752201ACF6A003E712C /* PortraitScreenVC.m in Sources */,
+				A288F98D2089E0F500DD4CA0 /* MIVerticalLayout.m in Sources */,
 				A26CE4A3201971C50012EC69 /* BaiduMapVC.m in Sources */,
 				A20D5E111FD147CD000E191D /* TabBarVC.m in Sources */,
 				A27E875D201AD2B2003E712C /* SoundVC.m in Sources */,
+				A288F98A2089DED600DD4CA0 /* MIHorizontalLayout.m in Sources */,
 				A2B992B02069F447002A73B1 /* ChatModel.m in Sources */,
 				A239CE232085D8990033646A /* MICircleLayout.m in Sources */,
 				A2B9927420623D0E002A73B1 /* SocketVC.m in Sources */,

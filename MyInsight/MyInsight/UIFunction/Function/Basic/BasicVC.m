@@ -36,19 +36,19 @@
 
 @end
 
-const NSString *LiftCycleStr = @"VC生命周期";
-const NSString *RunTimeStr = @"运行时RunTime";
-const NSString *ShouShiStr = @"手势";
-const NSString *XieYiStr = @"协议";
-const NSString *AnimationStr = @"动画";
-const NSString *TableViewStr = @"TableView";
-const NSString *CollectViewStr = @"CollectView";
-const NSString *DataBaseStr = @"数据库";
-const NSString *radioButtonStr = @"单选按钮🔘 基本表单";
-const NSString *MultiThreadString = @"多线程";
-const NSString *CYuYanString = @"C语言";
-const NSString *QRCodeString = @"二维码";
-const NSString *RunLoopString = @"RunLoop";
+static const NSString *LiftCycleStr = @"VC生命周期";
+static const NSString *RunTimeStr = @"运行时RunTime";
+static const NSString *ShouShiStr = @"手势";
+static const NSString *XieYiStr = @"协议";
+static const NSString *AnimationStr = @"动画";
+static const NSString *TableViewStr = @"TableView";
+static const NSString *CollectViewStr = @"CollectView";
+static const NSString *DataBaseStr = @"数据库";
+static const NSString *radioButtonStr = @"单选按钮🔘 基本表单";
+static const NSString *MultiThreadString = @"多线程";
+static const NSString *CYuYanString = @"C语言";
+static const NSString *QRCodeString = @"二维码";
+static const NSString *RunLoopString = @"RunLoop";
 
 /*
  */
@@ -142,9 +142,6 @@ const NSString *RunLoopString = @"RunLoop";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 获取到当前cell的字符串
     NSString *cellString = [self.dataArray objectAtIndex:indexPath.row];
-    // 设置返回button的样式
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationController.navigationBar.tintColor = [UIColor redColor];  
     
     if ([cellString isEqual:CYuYanString]) {
         // C语言

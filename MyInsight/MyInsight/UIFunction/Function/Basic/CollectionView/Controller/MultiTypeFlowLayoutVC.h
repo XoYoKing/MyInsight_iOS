@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseVC.h"
 
-@interface MultiTypeFlowLayoutVC : UIViewController
+@interface MultiTypeFlowLayoutVC : BaseVC
 
 @end

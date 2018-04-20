@@ -63,7 +63,7 @@
     
     self.changeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:self.changeButton];
-    [self.changeButton setTitle:@"CHANGE" forState:UIControlStateNormal];
+    [self.changeButton setTitle:@"点俺切换布局" forState:UIControlStateNormal];
     self.changeButton.backgroundColor = [UIColor orangeColor];
     [self.changeButton addTarget:self action:@selector(changeButtonAction:) forControlEvents:UIControlEventTouchUpInside];
 }

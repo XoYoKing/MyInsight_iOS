@@ -27,14 +27,14 @@
 @end
 
 // 定义字符串
-const NSString *TouchIDStr = @"TouchID";
-const NSString *MapsStr = @"地图";
-const NSString *ScreenStr = @"横竖屏";
-const NSString *ScaleStr = @"自动比例约束布局";
-const NSString *BlueToothStr = @"蓝牙(系统)";
-const NSString *BabyBLEStr = @"蓝牙(三方)";
-const NSString *MQTTStr = @"MQTT";
-const NSString *NetWorkStr = @"网络请求";
+static const NSString *TouchIDStr = @"TouchID";
+static const NSString *MapsStr = @"地图";
+static const NSString *ScreenStr = @"横竖屏";
+static const NSString *ScaleStr = @"自动比例约束布局";
+static const NSString *BlueToothStr = @"蓝牙(系统)";
+static const NSString *BabyBLEStr = @"蓝牙(三方)";
+static const NSString *MQTTStr = @"MQTT";
+static const NSString *NetWorkStr = @"网络请求";
 
 @implementation AdvanceVC
 
@@ -121,10 +121,6 @@ const NSString *NetWorkStr = @"网络请求";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 获取字符串
     NSString *cellString = [self.dataArray objectAtIndex:indexPath.row];
-    
-    // 设置返回button的样式
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationController.navigationBar.tintColor = [UIColor redColor];
     
     if ([cellString isEqual:TouchIDStr]) {
         // TouchID

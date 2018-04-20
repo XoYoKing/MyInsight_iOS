@@ -9,19 +9,24 @@
 #import "CollectionViewVC.h"
 #import "RFQuiltLayout.h" // 瀑布流
 #import <Masonry.h>
+#import "NormalCollectionVC.h" // 普通布局的layout
+#import "HorizontalCollectionVC.h" //
+#import "VerticalCollectionVC.h" //
 #import "MultiTypeFlowLayoutVC.h" //多种布局方式的集合视图
 
-@interface CollectionViewVC ()<UICollectionViewDelegate, UICollectionViewDataSource>
+@interface CollectionViewVC ()<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) UIView *functionView;
+@property (nonatomic, strong) UITableView *tableView;
 
-@property (nonatomic, strong) UIButton *normalButton;
-
-@property (nonatomic, strong) UIButton *pubuliuButton;
-// 集合视图
-@property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) NSArray *dataArray;
 
 @end
+
+static const NSString *NormalLayoutStr = @"普通布局CollectionView";
+static const NSString *WaterFlowStr = @"瀑布流布局";
+static const NSString *HorizontalFlowStr = @"水平流布局";
+static const NSString *VerticalFlowStr = @"垂直流布局";
+static const NSString *MultiTypeLayoutStr = @"多种布局(三种布局)";
 
 @implementation CollectionViewVC
 
@@ -31,124 +36,89 @@
  
  iOS之流布局UICollectionView全系列教程
  https://blog.csdn.net/lvxiangan/article/details/73826108
- 
- 三种不同方式的布局
- 
- 瀑布流1
- 
- 水平瀑布流
- 
- 垂直瀑布流
  */
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"CollectionView";
+    self.title = @"CollectionView分类";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    //[self creatFunctionView];
+    self.dataArray = @[NormalLayoutStr, WaterFlowStr, HorizontalFlowStr, VerticalFlowStr, MultiTypeLayoutStr];
     
-    [self creatCollectionView];
-    
-    [self masonryViewLayout];
+    [self creatTableView];
 }
 
-- (void)creatFunctionView {
-    self.functionView = [[UIView alloc] init];
-    [self.view addSubview:self.functionView];
-    self.functionView.backgroundColor = [UIColor blueColor];
+- (void)creatTableView {
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    [self.view addSubview:self.tableView];
     
-    self.normalButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.functionView addSubview:self.normalButton];
-    [self.normalButton setTitle:@"普通" forState:UIControlStateNormal];
-    [self.normalButton addTarget:self action:@selector(normalButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    
-    self.pubuliuButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.functionView addSubview:self.pubuliuButton];
-    self.pubuliuButton.backgroundColor = [UIColor brownColor];
-    [self.pubuliuButton setTitle:@"瀑布流" forState:UIControlStateNormal];
-    [self.pubuliuButton addTarget:self action:@selector(pubuliuButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    // 清空多余cell
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    //
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CollectionView"];
 }
 
-- (void)normalButtonAction:(UIButton *)button {
-    NSLog(@"普通");
-    //[self creatCollectionView];
-}
-
-- (void)pubuliuButtonAction:(UIButton *)button {
-    NSLog(@"瀑布流");
-    //[self creatCollectionView];
-}
-
-#pragma mark - 创建CollectionView
-- (void)creatCollectionView {
-    
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical; //竖直滑动
-    flowLayout.itemSize = CGSizeMake(110, 150);
-    flowLayout.headerReferenceSize = CGSizeMake(self.view.bounds.size.width, 100);
-    
-    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
-    [self.view addSubview:self.collectionView];
-    self.collectionView.delegate = self;
-    self.collectionView.dataSource = self;
-    self.collectionView.backgroundColor = [UIColor redColor];
-    
-    // 注册cell
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
-}
-
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+#pragma mark - 实现代理协议
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 20;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArray.count;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CollectionView" forIndexPath:indexPath];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CollectionView"];
+    }
     
-    cell.backgroundColor = [UIColor blueColor];
+    cell.textLabel.text = self.dataArray[indexPath.row];
+    cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }
 
-//
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    //NSLog(@"选中cell");
-    // 设置返回button的样式
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationController.navigationBar.tintColor = [UIColor redColor];
-    // 多种布局
-    MultiTypeFlowLayoutVC *multiTypeFlowLayoutVC = [[MultiTypeFlowLayoutVC alloc] init];
-    multiTypeFlowLayoutVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:multiTypeFlowLayoutVC animated:YES];
-}
-
-- (void)masonryViewLayout {
-    [self.functionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).offset(64.0f);
-        make.left.equalTo(self.view.mas_left).offset(0.0f);
-        make.right.equalTo(self.view.mas_right).offset(0.0f);
-        make.height.offset(40.0f);
-    }];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 获取到当前cell的字符串
+    NSString *cellString = [self.dataArray objectAtIndex:indexPath.row];
     
-    [self.normalButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.functionView.mas_top).offset(0.0f);
-        make.left.equalTo(self.functionView.mas_left).offset(0.0f);
-        make.bottom.equalTo(self.functionView.mas_bottom).offset(0.0f);
-        make.right.equalTo(self.pubuliuButton.mas_left).offset(0.0f);
-    }];
+    if ([cellString isEqual:NormalLayoutStr]) {
+        // 普通布局
+        NormalCollectionVC *normalCollectionVC = [[NormalCollectionVC alloc] init];
+        normalCollectionVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:normalCollectionVC animated:YES];
+    }
     
-    [self.pubuliuButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.functionView.mas_top).offset(0.0f);
-        make.right.equalTo(self.functionView.mas_right).offset(0.0f);
-        make.bottom.equalTo(self.functionView.mas_bottom).offset(0.0f);
-        make.width.equalTo(self.normalButton.mas_width).multipliedBy(1.0f);
-    }];
+    if ([cellString isEqual:WaterFlowStr]) {
+        //
+        
+    }
+    
+    if ([cellString isEqual:HorizontalFlowStr]) {
+        // 水平流布局
+        HorizontalCollectionVC *horizontalCollectionVC = [[HorizontalCollectionVC alloc] init];
+        horizontalCollectionVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:horizontalCollectionVC animated:YES];
+    }
+    
+    if ([cellString isEqual:VerticalFlowStr]) {
+        // 垂直流布局
+        VerticalCollectionVC *verticalCollectionVC = [[VerticalCollectionVC alloc] init];
+        verticalCollectionVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:verticalCollectionVC animated:YES];
+    }
+    
+    if ([cellString isEqual:MultiTypeLayoutStr]) {
+        // 多种布局
+        MultiTypeFlowLayoutVC *multiTypeFlowLayoutVC = [[MultiTypeFlowLayoutVC alloc] init];
+        multiTypeFlowLayoutVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:multiTypeFlowLayoutVC animated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -35,11 +35,11 @@
  
  */
 
-const NSString *YinXiaoStr = @"音效";
-const NSString *YinYueStr = @"音乐";
-const NSString *HuiHuaStr = @"音频会话";
-const NSString *LuYin_Str = @"录音";
-const NSString *DuiLieStr = @"音频队列服务";
+static const NSString *YinXiaoStr = @"音效";
+static const NSString *YinYueStr = @"音乐";
+static const NSString *HuiHuaStr = @"音频会话";
+static const NSString *LuYin_Str = @"录音";
+static const NSString *DuiLieStr = @"音频队列服务";
 
 @implementation AudioVC
 

@@ -1,29 +1,33 @@
 //
-//  BaseVC.m
+//  HorizontalCollectionVC.m
 //  MyInsight
 //
-//  Created by SongMenglong on 2018/4/19.
+//  Created by SongMenglong on 2018/4/20.
 //  Copyright © 2018年 SongMenglong. All rights reserved.
 //
 
-#import "BaseVC.h"
+#import "HorizontalCollectionVC.h"
 
-@interface BaseVC ()
+@interface HorizontalCollectionVC ()
+
+@property (nonatomic, strong) UICollectionView *collectionView;
 
 @end
 
-@implementation BaseVC
+@implementation HorizontalCollectionVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
-    // 设置默认背景颜色
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"水平流布局";
     
-    // 设置返回button的样式
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationController.navigationBar.tintColor = [UIColor redColor];
+    [self creatCollectionView];
+}
+
+- (void)creatCollectionView {
+    
+    
+    //self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:<#(nonnull UICollectionViewLayout *)#>]
 }
 
 - (void)didReceiveMemoryWarning {

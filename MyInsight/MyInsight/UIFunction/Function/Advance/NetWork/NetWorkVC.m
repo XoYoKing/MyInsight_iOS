@@ -34,9 +34,6 @@
 
 - (void)buttonAction {
     NSLog(@"点击button了 准备去处理数据分析");
-    // 设置返回button的样式
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationController.navigationBar.tintColor = [UIColor redColor];
     
     AFNetWorkVC *afnetWorkVC = [[AFNetWorkVC alloc] init];
     afnetWorkVC.hidesBottomBarWhenPushed = YES;

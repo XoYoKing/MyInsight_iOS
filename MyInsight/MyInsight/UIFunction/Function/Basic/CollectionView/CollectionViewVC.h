@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseVC.h"
 
-@interface CollectionViewVC : UIViewController
+@interface CollectionViewVC : BaseVC
 
 @end

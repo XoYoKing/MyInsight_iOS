@@ -20,7 +20,7 @@
 @end
 
 // 聊天UI
-const NSString *ChatUIStr = @"聊天界面";
+static const NSString *ChatUIStr = @"聊天界面";
 
 @implementation OtherVC
 
@@ -103,10 +103,6 @@ const NSString *ChatUIStr = @"聊天界面";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 获取cell的字符串
     NSString *cellString = [self.dataArray objectAtIndex:indexPath.row];
-    
-    // 设置返回button样式
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationController.navigationBar.tintColor = [UIColor redColor];
     
     if ([cellString isEqual:ChatUIStr]) {
         ChatListVC *chatListVC = [[ChatListVC alloc] init];

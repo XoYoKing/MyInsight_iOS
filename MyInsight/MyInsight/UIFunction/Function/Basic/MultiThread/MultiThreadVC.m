@@ -18,10 +18,10 @@
 
 @end
 
-const NSString *NSThreadStr = @"NSThread线程";
-const NSString *GCDStr = @"GCD多线程";
-const NSString *NSOperationStr = @"NSOperation多线程";
-const NSString *LockStr = @"同步锁知识";
+static const NSString *NSThreadStr = @"NSThread线程";
+static const NSString *GCDStr = @"GCD多线程";
+static const NSString *NSOperationStr = @"NSOperation多线程";
+static const NSString *LockStr = @"同步锁知识";
 
 @implementation MultiThreadVC
 
@@ -70,10 +70,6 @@ const NSString *LockStr = @"同步锁知识";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 获取到当前cell的字符串
     NSString *cellString = [self.dataArray objectAtIndex:indexPath.row];
-    
-    // 设置返回button的样式
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationController.navigationBar.tintColor = [UIColor redColor];
     
     if ([cellString isEqual:NSThreadStr]) {
         // NSThread多线程

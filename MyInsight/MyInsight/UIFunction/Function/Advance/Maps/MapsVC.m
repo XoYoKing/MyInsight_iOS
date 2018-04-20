@@ -22,10 +22,10 @@
 @end
 
 // 定义字符串
-const NSString *BaiduMapStr = @"百度地图";
-const NSString *SystemMapStr = @"系统(高德)地图";
-const NSString *GoogleMapStr = @"谷歌地图";
-const NSString *YahooMapsStr = @"YahooMap";
+static const NSString *BaiduMapStr = @"百度地图";
+static const NSString *SystemMapStr = @"系统(高德)地图";
+static const NSString *GoogleMapStr = @"谷歌地图";
+static const NSString *YahooMapsStr = @"YahooMap";
 
 @implementation MapsVC
 
@@ -91,10 +91,6 @@ const NSString *YahooMapsStr = @"YahooMap";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 获取字符串
     NSString *cellString = [self.dataArray objectAtIndex:indexPath.row];
-    
-    // 设置返回button的样式
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationController.navigationBar.tintColor = [UIColor redColor];
     
     if ([cellString isEqual:BaiduMapStr]) {
         // BaiDu
