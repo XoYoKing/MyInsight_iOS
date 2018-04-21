@@ -168,6 +168,9 @@
 		A2DDDC4F208AE6C300DC7A4A /* MasonryLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC4E208AE6C300DC7A4A /* MasonryLayoutVC.m */; };
 		A2DDDC52208AEC9000DC7A4A /* VFLLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC51208AEC9000DC7A4A /* VFLLayoutVC.m */; };
 		A2DDDC55208AECCD00DC7A4A /* AutoLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC54208AECCD00DC7A4A /* AutoLayoutVC.m */; };
+		A2DDDC5A208B074600DC7A4A /* FoldTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC59208B074600DC7A4A /* FoldTableVC.m */; };
+		A2DDDC5E208B084A00DC7A4A /* FoldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC5C208B084A00DC7A4A /* FoldTableViewCell.m */; };
+		A2DDDC5F208B084A00DC7A4A /* FoldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2DDDC5D208B084A00DC7A4A /* FoldTableViewCell.xib */; };
 		A2E4E71D2004BFDF00EC3D63 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7162004BFDE00EC3D63 /* libavutil.a */; };
 		A2E4E71E2004BFDF00EC3D63 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7172004BFDE00EC3D63 /* libavfilter.a */; };
 		A2E4E71F2004BFDF00EC3D63 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7182004BFDE00EC3D63 /* libavcodec.a */; };
@@ -464,6 +467,11 @@
 		A2DDDC51208AEC9000DC7A4A /* VFLLayoutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VFLLayoutVC.m; sourceTree = "<group>"; };
 		A2DDDC53208AECCD00DC7A4A /* AutoLayoutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoLayoutVC.h; sourceTree = "<group>"; };
 		A2DDDC54208AECCD00DC7A4A /* AutoLayoutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutVC.m; sourceTree = "<group>"; };
+		A2DDDC58208B074600DC7A4A /* FoldTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoldTableVC.h; sourceTree = "<group>"; };
+		A2DDDC59208B074600DC7A4A /* FoldTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoldTableVC.m; sourceTree = "<group>"; };
+		A2DDDC5B208B084A00DC7A4A /* FoldTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoldTableViewCell.h; sourceTree = "<group>"; };
+		A2DDDC5C208B084A00DC7A4A /* FoldTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoldTableViewCell.m; sourceTree = "<group>"; };
+		A2DDDC5D208B084A00DC7A4A /* FoldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoldTableViewCell.xib; sourceTree = "<group>"; };
 		A2E4E6A22004BFDD00EC3D63 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		A2E4E6A32004BFDD00EC3D63 /* buffersrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersrc.h; sourceTree = "<group>"; };
 		A2E4E6A42004BFDD00EC3D63 /* buffersink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersink.h; sourceTree = "<group>"; };
@@ -953,6 +961,8 @@
 			children = (
 				A2574829202305B9000F7632 /* TableViewVC.h */,
 				A257482A202305B9000F7632 /* TableViewVC.m */,
+				A2DDDC57208B072C00DC7A4A /* Controller */,
+				A2DDDC56208B072C00DC7A4A /* View */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -1484,6 +1494,25 @@
 			path = ScaleView;
 			sourceTree = "<group>";
 		};
+		A2DDDC56208B072C00DC7A4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2DDDC5B208B084A00DC7A4A /* FoldTableViewCell.h */,
+				A2DDDC5C208B084A00DC7A4A /* FoldTableViewCell.m */,
+				A2DDDC5D208B084A00DC7A4A /* FoldTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2DDDC57208B072C00DC7A4A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A2DDDC58208B074600DC7A4A /* FoldTableVC.h */,
+				A2DDDC59208B074600DC7A4A /* FoldTableVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		A2E4E69F2004BFDD00EC3D63 /* FFmpeg-iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -1808,6 +1837,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2DDDC5F208B084A00DC7A4A /* FoldTableViewCell.xib in Resources */,
 				A2B992A72068F441002A73B1 /* ChatFileCell.xib in Resources */,
 				A27E8728201AC53C003E712C /* 1967.mp3 in Resources */,
 				A22C4DD11FFC777A0079F7C2 /* purple_arrow.png in Resources */,
@@ -2101,12 +2131,14 @@
 				A2DDDC3B208AD9B200DC7A4A /* SQLiteDBVC.m in Sources */,
 				A26CE4A9201971C50012EC69 /* SystemMapVC.m in Sources */,
 				A2DDDC52208AEC9000DC7A4A /* VFLLayoutVC.m in Sources */,
+				A2DDDC5A208B074600DC7A4A /* FoldTableVC.m in Sources */,
 				A28ED52F1FD156B600A74551 /* RearRevealVC.m in Sources */,
 				A288F98D2089E0F500DD4CA0 /* MIVerticalLayout.m in Sources */,
 				A2DDDC41208ADA4C00DC7A4A /* CoreDataVC.m in Sources */,
 				A26CE4A3201971C50012EC69 /* BaiduMapVC.m in Sources */,
 				A20D5E111FD147CD000E191D /* TabBarVC.m in Sources */,
 				A27E875D201AD2B2003E712C /* SoundVC.m in Sources */,
+				A2DDDC5E208B084A00DC7A4A /* FoldTableViewCell.m in Sources */,
 				A288F98A2089DED600DD4CA0 /* MIHorizontalLayout.m in Sources */,
 				A2B992B02069F447002A73B1 /* ChatModel.m in Sources */,
 				A239CE232085D8990033646A /* MICircleLayout.m in Sources */,
