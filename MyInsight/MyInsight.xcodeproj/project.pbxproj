@@ -154,12 +154,20 @@
 		A2D884EC20886B96005116A6 /* BaseNaviVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884EB20886B96005116A6 /* BaseNaviVC.m */; };
 		A2D884F420897942005116A6 /* RunLoopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884F320897942005116A6 /* RunLoopVC.m */; };
 		A2DDDC19208ACDC000DC7A4A /* DataBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC10208ACDC000DC7A4A /* DataBaseVC.m */; };
-		A2DDDC1A208ACDC000DC7A4A /* SQLiteHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC11208ACDC000DC7A4A /* SQLiteHandle.m */; };
-		A2DDDC1B208ACDC000DC7A4A /* DataBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC12208ACDC000DC7A4A /* DataBaseModel.m */; };
 		A2DDDC1C208ACDC000DC7A4A /* QRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC17208ACDC000DC7A4A /* QRCodeVC.m */; };
 		A2DDDC25208ACEF600DC7A4A /* LandscapeScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC1F208ACEF600DC7A4A /* LandscapeScreenVC.m */; };
 		A2DDDC26208ACEF600DC7A4A /* PortraitScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC20208ACEF600DC7A4A /* PortraitScreenVC.m */; };
-		A2DDDC27208ACEF600DC7A4A /* ScaleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC23208ACEF600DC7A4A /* ScaleVC.m */; };
+		A2DDDC34208AD97200DC7A4A /* RealmDBVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC30208AD97100DC7A4A /* RealmDBVC.m */; };
+		A2DDDC35208AD97200DC7A4A /* DataBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC32208AD97200DC7A4A /* DataBaseModel.m */; };
+		A2DDDC38208AD99000DC7A4A /* SQLiteHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC37208AD99000DC7A4A /* SQLiteHandle.m */; };
+		A2DDDC3B208AD9B200DC7A4A /* SQLiteDBVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC3A208AD9B200DC7A4A /* SQLiteDBVC.m */; };
+		A2DDDC41208ADA4C00DC7A4A /* CoreDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC40208ADA4C00DC7A4A /* CoreDataVC.m */; };
+		A2DDDC44208ADC5C00DC7A4A /* FMDBVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC43208ADC5C00DC7A4A /* FMDBVC.m */; };
+		A2DDDC48208AE20B00DC7A4A /* ViewLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC47208AE20B00DC7A4A /* ViewLayoutVC.m */; };
+		A2DDDC4C208AE50A00DC7A4A /* ScaleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC4A208AE50A00DC7A4A /* ScaleVC.m */; };
+		A2DDDC4F208AE6C300DC7A4A /* MasonryLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC4E208AE6C300DC7A4A /* MasonryLayoutVC.m */; };
+		A2DDDC52208AEC9000DC7A4A /* VFLLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC51208AEC9000DC7A4A /* VFLLayoutVC.m */; };
+		A2DDDC55208AECCD00DC7A4A /* AutoLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC54208AECCD00DC7A4A /* AutoLayoutVC.m */; };
 		A2E4E71D2004BFDF00EC3D63 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7162004BFDE00EC3D63 /* libavutil.a */; };
 		A2E4E71E2004BFDF00EC3D63 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7172004BFDE00EC3D63 /* libavfilter.a */; };
 		A2E4E71F2004BFDF00EC3D63 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7182004BFDE00EC3D63 /* libavcodec.a */; };
@@ -427,19 +435,35 @@
 		A2D884F220897942005116A6 /* RunLoopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopVC.h; sourceTree = "<group>"; };
 		A2D884F320897942005116A6 /* RunLoopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopVC.m; sourceTree = "<group>"; };
 		A2DDDC10208ACDC000DC7A4A /* DataBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseVC.m; sourceTree = "<group>"; };
-		A2DDDC11208ACDC000DC7A4A /* SQLiteHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteHandle.m; sourceTree = "<group>"; };
-		A2DDDC12208ACDC000DC7A4A /* DataBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseModel.m; sourceTree = "<group>"; };
-		A2DDDC13208ACDC000DC7A4A /* SQLiteHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteHandle.h; sourceTree = "<group>"; };
 		A2DDDC14208ACDC000DC7A4A /* DataBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseVC.h; sourceTree = "<group>"; };
-		A2DDDC15208ACDC000DC7A4A /* DataBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseModel.h; sourceTree = "<group>"; };
 		A2DDDC17208ACDC000DC7A4A /* QRCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeVC.m; sourceTree = "<group>"; };
 		A2DDDC18208ACDC000DC7A4A /* QRCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeVC.h; sourceTree = "<group>"; };
 		A2DDDC1E208ACEF600DC7A4A /* PortraitScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortraitScreenVC.h; sourceTree = "<group>"; };
 		A2DDDC1F208ACEF600DC7A4A /* LandscapeScreenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandscapeScreenVC.m; sourceTree = "<group>"; };
 		A2DDDC20208ACEF600DC7A4A /* PortraitScreenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortraitScreenVC.m; sourceTree = "<group>"; };
 		A2DDDC21208ACEF600DC7A4A /* LandscapeScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandscapeScreenVC.h; sourceTree = "<group>"; };
-		A2DDDC23208ACEF600DC7A4A /* ScaleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleVC.m; sourceTree = "<group>"; };
-		A2DDDC24208ACEF600DC7A4A /* ScaleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleVC.h; sourceTree = "<group>"; };
+		A2DDDC2F208AD97100DC7A4A /* RealmDBVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmDBVC.h; sourceTree = "<group>"; };
+		A2DDDC30208AD97100DC7A4A /* RealmDBVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmDBVC.m; sourceTree = "<group>"; };
+		A2DDDC32208AD97200DC7A4A /* DataBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseModel.m; sourceTree = "<group>"; };
+		A2DDDC33208AD97200DC7A4A /* DataBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseModel.h; sourceTree = "<group>"; };
+		A2DDDC36208AD99000DC7A4A /* SQLiteHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteHandle.h; sourceTree = "<group>"; };
+		A2DDDC37208AD99000DC7A4A /* SQLiteHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteHandle.m; sourceTree = "<group>"; };
+		A2DDDC39208AD9B200DC7A4A /* SQLiteDBVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLiteDBVC.h; sourceTree = "<group>"; };
+		A2DDDC3A208AD9B200DC7A4A /* SQLiteDBVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLiteDBVC.m; sourceTree = "<group>"; };
+		A2DDDC3F208ADA4C00DC7A4A /* CoreDataVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataVC.h; sourceTree = "<group>"; };
+		A2DDDC40208ADA4C00DC7A4A /* CoreDataVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataVC.m; sourceTree = "<group>"; };
+		A2DDDC42208ADC5C00DC7A4A /* FMDBVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBVC.h; sourceTree = "<group>"; };
+		A2DDDC43208ADC5C00DC7A4A /* FMDBVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBVC.m; sourceTree = "<group>"; };
+		A2DDDC46208AE20B00DC7A4A /* ViewLayoutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewLayoutVC.h; sourceTree = "<group>"; };
+		A2DDDC47208AE20B00DC7A4A /* ViewLayoutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewLayoutVC.m; sourceTree = "<group>"; };
+		A2DDDC4A208AE50A00DC7A4A /* ScaleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleVC.m; sourceTree = "<group>"; };
+		A2DDDC4B208AE50A00DC7A4A /* ScaleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleVC.h; sourceTree = "<group>"; };
+		A2DDDC4D208AE6C300DC7A4A /* MasonryLayoutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryLayoutVC.h; sourceTree = "<group>"; };
+		A2DDDC4E208AE6C300DC7A4A /* MasonryLayoutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryLayoutVC.m; sourceTree = "<group>"; };
+		A2DDDC50208AEC9000DC7A4A /* VFLLayoutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VFLLayoutVC.h; sourceTree = "<group>"; };
+		A2DDDC51208AEC9000DC7A4A /* VFLLayoutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VFLLayoutVC.m; sourceTree = "<group>"; };
+		A2DDDC53208AECCD00DC7A4A /* AutoLayoutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoLayoutVC.h; sourceTree = "<group>"; };
+		A2DDDC54208AECCD00DC7A4A /* AutoLayoutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutVC.m; sourceTree = "<group>"; };
 		A2E4E6A22004BFDD00EC3D63 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		A2E4E6A32004BFDD00EC3D63 /* buffersrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersrc.h; sourceTree = "<group>"; };
 		A2E4E6A42004BFDD00EC3D63 /* buffersink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersink.h; sourceTree = "<group>"; };
@@ -963,12 +987,12 @@
 			children = (
 				A26CE4842018A0880012EC69 /* BasicVC.h */,
 				A26CE4852018A0880012EC69 /* BasicVC.m */,
+				A2DDDC45208AE1F600DC7A4A /* ViewLayout */,
 				A2BDD420205F5550008AD133 /* MultiThread */,
 				A2B43C3020575ECD00FEAE58 /* RadioButton */,
 				A25748202023056C000F7632 /* CollectionView */,
 				A25748212023056C000F7632 /* TableView */,
 				A2CA8082202196E900D81845 /* Animation */,
-				A2DDDC22208ACEF600DC7A4A /* ScaleView */,
 				A2DDDC1D208ACEF600DC7A4A /* Screen */,
 				A2CA8088202196E900D81845 /* LiftCycle */,
 				A2CA8085202196E900D81845 /* RunTime */,
@@ -1381,12 +1405,10 @@
 		A2DDDC0F208ACDC000DC7A4A /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
-				A2DDDC10208ACDC000DC7A4A /* DataBaseVC.m */,
-				A2DDDC11208ACDC000DC7A4A /* SQLiteHandle.m */,
-				A2DDDC12208ACDC000DC7A4A /* DataBaseModel.m */,
-				A2DDDC13208ACDC000DC7A4A /* SQLiteHandle.h */,
 				A2DDDC14208ACDC000DC7A4A /* DataBaseVC.h */,
-				A2DDDC15208ACDC000DC7A4A /* DataBaseModel.h */,
+				A2DDDC10208ACDC000DC7A4A /* DataBaseVC.m */,
+				A2DDDC2E208AD97100DC7A4A /* Controller */,
+				A2DDDC31208AD97200DC7A4A /* Model */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -1411,11 +1433,53 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
-		A2DDDC22208ACEF600DC7A4A /* ScaleView */ = {
+		A2DDDC2E208AD97100DC7A4A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A2DDDC23208ACEF600DC7A4A /* ScaleVC.m */,
-				A2DDDC24208ACEF600DC7A4A /* ScaleVC.h */,
+				A2DDDC39208AD9B200DC7A4A /* SQLiteDBVC.h */,
+				A2DDDC3A208AD9B200DC7A4A /* SQLiteDBVC.m */,
+				A2DDDC2F208AD97100DC7A4A /* RealmDBVC.h */,
+				A2DDDC30208AD97100DC7A4A /* RealmDBVC.m */,
+				A2DDDC42208ADC5C00DC7A4A /* FMDBVC.h */,
+				A2DDDC43208ADC5C00DC7A4A /* FMDBVC.m */,
+				A2DDDC3F208ADA4C00DC7A4A /* CoreDataVC.h */,
+				A2DDDC40208ADA4C00DC7A4A /* CoreDataVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A2DDDC31208AD97200DC7A4A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2DDDC36208AD99000DC7A4A /* SQLiteHandle.h */,
+				A2DDDC37208AD99000DC7A4A /* SQLiteHandle.m */,
+				A2DDDC32208AD97200DC7A4A /* DataBaseModel.m */,
+				A2DDDC33208AD97200DC7A4A /* DataBaseModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A2DDDC45208AE1F600DC7A4A /* ViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				A2DDDC46208AE20B00DC7A4A /* ViewLayoutVC.h */,
+				A2DDDC47208AE20B00DC7A4A /* ViewLayoutVC.m */,
+				A2DDDC49208AE50A00DC7A4A /* ScaleView */,
+			);
+			path = ViewLayout;
+			sourceTree = "<group>";
+		};
+		A2DDDC49208AE50A00DC7A4A /* ScaleView */ = {
+			isa = PBXGroup;
+			children = (
+				A2DDDC4B208AE50A00DC7A4A /* ScaleVC.h */,
+				A2DDDC4A208AE50A00DC7A4A /* ScaleVC.m */,
+				A2DDDC4D208AE6C300DC7A4A /* MasonryLayoutVC.h */,
+				A2DDDC4E208AE6C300DC7A4A /* MasonryLayoutVC.m */,
+				A2DDDC53208AECCD00DC7A4A /* AutoLayoutVC.h */,
+				A2DDDC54208AECCD00DC7A4A /* AutoLayoutVC.m */,
+				A2DDDC50208AEC9000DC7A4A /* VFLLayoutVC.h */,
+				A2DDDC51208AEC9000DC7A4A /* VFLLayoutVC.m */,
 			);
 			path = ScaleView;
 			sourceTree = "<group>";
@@ -1961,7 +2025,9 @@
 				A288F9842089DB4100DD4CA0 /* VerticalCollectionVC.m in Sources */,
 				A2A516042057634400EC5AA6 /* RadioButton.m in Sources */,
 				A2CA808B202196EA00D81845 /* AnimationVC.m in Sources */,
+				A2DDDC44208ADC5C00DC7A4A /* FMDBVC.m in Sources */,
 				A2B992922068F3CA002A73B1 /* ChatTextCell.m in Sources */,
+				A2DDDC55208AECCD00DC7A4A /* AutoLayoutVC.m in Sources */,
 				A239CE1A208595C30033646A /* MultiTypeFlowLayoutVC.m in Sources */,
 				A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */,
 				A2B9927820623EA3002A73B1 /* OpenGLVC.m in Sources */,
@@ -1978,6 +2044,7 @@
 				A20D5E231FD14E37000E191D /* RightRevealVC.m in Sources */,
 				A26CE4A8201971C50012EC69 /* CalloutMapAnnotation.m in Sources */,
 				A2B9928D2068F3A6002A73B1 /* ChatListCell.m in Sources */,
+				A2DDDC34208AD97200DC7A4A /* RealmDBVC.m in Sources */,
 				A20D5E1D1FD14C7A000E191D /* MainRevealVC.m in Sources */,
 				A2CA808D202196EA00D81845 /* LiftCycleVC.m in Sources */,
 				A26CE4A4201971C50012EC69 /* GoogleMapVC.m in Sources */,
@@ -1989,8 +2056,8 @@
 				A2B43C3320575EE700FEAE58 /* RadioButtonVC.m in Sources */,
 				A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */,
 				A2D884F420897942005116A6 /* RunLoopVC.m in Sources */,
-				A2DDDC27208ACEF600DC7A4A /* ScaleVC.m in Sources */,
 				A2DDDC19208ACDC000DC7A4A /* DataBaseVC.m in Sources */,
+				A2DDDC48208AE20B00DC7A4A /* ViewLayoutVC.m in Sources */,
 				A2D8849B208719CC005116A6 /* HTTPTOOL.m in Sources */,
 				A2B992B32069F4FB002A73B1 /* ChatContentModel.m in Sources */,
 				A2B9929C2068F40D002A73B1 /* ChatAudioCell.m in Sources */,
@@ -2000,14 +2067,16 @@
 				A2B992972068F3E4002A73B1 /* ChatImageCell.m in Sources */,
 				A2BDD43C205F636C008AD133 /* GCDVC.m in Sources */,
 				A2D884A820872322005116A6 /* BabyBleVC.m in Sources */,
+				A2DDDC4F208AE6C300DC7A4A /* MasonryLayoutVC.m in Sources */,
 				A27E8725201AC49B003E712C /* CommonTool.m in Sources */,
 				A2D884EC20886B96005116A6 /* BaseNaviVC.m in Sources */,
 				A2DDDC1C208ACDC000DC7A4A /* QRCodeVC.m in Sources */,
 				A241D22420468E68005A3BC5 /* MQTTVC.m in Sources */,
-				A2DDDC1A208ACDC000DC7A4A /* SQLiteHandle.m in Sources */,
+				A2DDDC38208AD99000DC7A4A /* SQLiteHandle.m in Sources */,
 				A2B992802068F0B9002A73B1 /* ChatListVC.m in Sources */,
 				A2B992AB2068F45B002A73B1 /* ChatTipCell.m in Sources */,
 				A27E875C201AD2B2003E712C /* MusicVC.m in Sources */,
+				A2DDDC4C208AE50A00DC7A4A /* ScaleVC.m in Sources */,
 				A239CE202085D4410033646A /* MIGirdLayout.m in Sources */,
 				A20D5DFE1FD14549000E191D /* AppDelegate.m in Sources */,
 				A239CE262085D8B20033646A /* MILineLayout.m in Sources */,
@@ -2029,9 +2098,12 @@
 				A239CE302085E4930033646A /* NetModel.m in Sources */,
 				A288F9812089DB2800DD4CA0 /* HorizontalCollectionVC.m in Sources */,
 				A25748282023059D000F7632 /* CollectionViewVC.m in Sources */,
+				A2DDDC3B208AD9B200DC7A4A /* SQLiteDBVC.m in Sources */,
 				A26CE4A9201971C50012EC69 /* SystemMapVC.m in Sources */,
+				A2DDDC52208AEC9000DC7A4A /* VFLLayoutVC.m in Sources */,
 				A28ED52F1FD156B600A74551 /* RearRevealVC.m in Sources */,
 				A288F98D2089E0F500DD4CA0 /* MIVerticalLayout.m in Sources */,
+				A2DDDC41208ADA4C00DC7A4A /* CoreDataVC.m in Sources */,
 				A26CE4A3201971C50012EC69 /* BaiduMapVC.m in Sources */,
 				A20D5E111FD147CD000E191D /* TabBarVC.m in Sources */,
 				A27E875D201AD2B2003E712C /* SoundVC.m in Sources */,
@@ -2042,7 +2114,7 @@
 				A239CE362085E4C30033646A /* AFNetWorkVC.m in Sources */,
 				A2BDD42D205F5754008AD133 /* BaseModel.m in Sources */,
 				A2B992A12068F42F002A73B1 /* ChatVideoCell.m in Sources */,
-				A2DDDC1B208ACDC000DC7A4A /* DataBaseModel.m in Sources */,
+				A2DDDC35208AD97200DC7A4A /* DataBaseModel.m in Sources */,
 				A241D22B2047A32A005A3BC5 /* UIColor+Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

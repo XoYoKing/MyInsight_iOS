@@ -19,14 +19,12 @@
 @property (nonatomic, strong) UIView *view3;
 @property (nonatomic, strong) UIView *bottomView;
 
-
 @end
 
 @implementation ScaleVC
 
 /*
  代码约束等分布局
- 
  */
 
 - (void)viewDidLoad {
@@ -35,7 +33,6 @@
     self.title = @"等分布局";
     
     [self creatFunctionViewView];
-    
 }
 
 // 创建buttons的view
@@ -50,11 +47,6 @@
         make.right.equalTo(self.view.mas_right).offset(0);
         make.height.offset(40.0f);
     }];
-}
-
-// 代码约束布局
-- (void)viewDidLayoutSubviews {
-   
 }
 
 - (void)viewLayoutMarginsDidChange {

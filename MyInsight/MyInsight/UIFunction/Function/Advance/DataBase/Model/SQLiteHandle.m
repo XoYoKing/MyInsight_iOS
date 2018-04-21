@@ -195,5 +195,4 @@ static sqlite3 *db;
     }
 }
 
-
 @end

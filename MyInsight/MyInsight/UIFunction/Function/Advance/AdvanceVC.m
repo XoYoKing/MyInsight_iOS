@@ -107,9 +107,6 @@ static const NSString *QRCodeString = @"二维码";
         //cell = [[[NSBundle mainBundle]loadNibNamed:@"MineCell" owner:self options:nil] lastObject];
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
     }
-    
-    
-    
     // 赋值
     cell.textLabel.text = self.dataArray[indexPath.row];
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
@@ -134,7 +131,6 @@ static const NSString *QRCodeString = @"二维码";
         mapsVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:mapsVC animated:YES];
     }
-   
     if ([cellString isEqual:DataBaseStr]) {
         // 数据库
         DataBaseVC *dataBaseVC = [[DataBaseVC alloc] init];

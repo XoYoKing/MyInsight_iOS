@@ -20,15 +20,13 @@
 #import "MultiThreadVC.h" //多线程
 #import "CYuYanVC.h"
 #import "PortraitScreenVC.h" // 竖屏
-#import "ScaleVC.h" // 三等分约束布局
+#import "ViewLayoutVC.h"
 
 @interface BasicVC ()<UITableViewDelegate, UITableViewDataSource>
-
 // LEFT
 @property (nonatomic, strong) UIBarButtonItem *leftBarButtonItem;
 // RIGHT
 @property (nonatomic, strong) UIBarButtonItem *rightBarButtonItem;
-
 // 列表
 @property (nonatomic, strong) UITableView *tableView;
 // 数组数据
@@ -48,7 +46,7 @@ static const NSString *MultiThreadString = @"多线程";
 static const NSString *CYuYanString = @"C语言";
 static const NSString *RunLoopString = @"RunLoop";
 static const NSString *ScreenStr = @"横竖屏";
-static const NSString *ScaleStr = @"自动比例约束布局";
+static const NSString *ViewLayoutStr = @"约束布局";
 
 @implementation BasicVC
 
@@ -87,7 +85,7 @@ static const NSString *ScaleStr = @"自动比例约束布局";
 // 处理数据
 - (void)handleTableViewData {
     // 数组
-    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, ShouShiStr, XieYiStr, AnimationStr, TableViewStr, CollectViewStr, radioButtonStr, ScreenStr, ScaleStr, MultiThreadString];
+    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, ShouShiStr, XieYiStr, AnimationStr, TableViewStr, CollectViewStr, radioButtonStr, ScreenStr, MultiThreadString, ViewLayoutStr];
 }
 
 #pragma mark - 创建TableView
@@ -126,7 +124,6 @@ static const NSString *ScaleStr = @"自动比例约束布局";
         //cell = [[[NSBundle mainBundle]loadNibNamed:@"MineCell" owner:self options:nil] lastObject];
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
     }
-    
     // 赋值
     cell.textLabel.text = self.dataArray[indexPath.row];
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
@@ -146,28 +143,24 @@ static const NSString *ScaleStr = @"自动比例约束布局";
         cYuYanVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:cYuYanVC animated:YES];
     }
-    
     if ([cellString isEqual:LiftCycleStr]) {
         // 生命周期
         LiftCycleVC *liftCycleVC = [[LiftCycleVC alloc] init];
         liftCycleVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:liftCycleVC animated:YES];
     }
-    
     if ([cellString isEqual:RunTimeStr]) {
         // 运行时
         RunTimeVC *runTimeVC = [[RunTimeVC alloc] init];
         runTimeVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:runTimeVC animated:YES];
     }
-    
     if ([cellString isEqual:RunLoopString]) {
         // RunLoop
         RunLoopVC *runLoopVC = [[RunLoopVC alloc] init];
         runLoopVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:runLoopVC animated:YES];
     }
-    
     if ([cellString isEqual:AnimationStr]) {
         // 动画
         AnimationVC *animationVC = [[AnimationVC alloc] init];
@@ -204,11 +197,11 @@ static const NSString *ScaleStr = @"自动比例约束布局";
         portraitScreenVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:portraitScreenVC animated:YES];
     }
-    if ([cellString isEqual:ScaleStr]) {
-        // 等分布局
-        ScaleVC *scaleVC = [[UIStoryboard storyboardWithName:@"Home" bundle:NULL] instantiateViewControllerWithIdentifier:@"ScaleVC"];
-        scaleVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:scaleVC animated:YES];
+    if ([cellString isEqual:ViewLayoutStr]) {
+        // 约束布局
+        ViewLayoutVC *viewLayoutVC = [[ViewLayoutVC alloc] init];
+        viewLayoutVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:viewLayoutVC animated:YES];
     }
 }
 
