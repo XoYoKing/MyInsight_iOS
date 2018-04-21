@@ -11,12 +11,12 @@
 #import <Masonry.h>
 #import "TouchIDVC.h" // TouchID
 #import "MapsVC.h" // 地图
-#import "PortraitScreenVC.h" // 竖屏
-#import "ScaleVC.h" // 三等分约束布局
 #import "BlueToothVC.h" // 蓝牙(系统)
 #import "BabyBleVC.h" // 蓝牙(三方)
 #import "MQTTVC.h"
 #import "NetWorkVC.h" // 网络请求
+#import "DataBaseVC.h"
+#import "QRCodeVC.h"
 
 @interface AdvanceVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -29,12 +29,12 @@
 // 定义字符串
 static const NSString *TouchIDStr = @"TouchID";
 static const NSString *MapsStr = @"地图";
-static const NSString *ScreenStr = @"横竖屏";
-static const NSString *ScaleStr = @"自动比例约束布局";
 static const NSString *BlueToothStr = @"蓝牙(系统)";
 static const NSString *BabyBLEStr = @"蓝牙(三方)";
 static const NSString *MQTTStr = @"MQTT";
 static const NSString *NetWorkStr = @"网络请求";
+static const NSString *DataBaseStr = @"数据库";
+static const NSString *QRCodeString = @"二维码";
 
 @implementation AdvanceVC
 
@@ -72,7 +72,7 @@ static const NSString *NetWorkStr = @"网络请求";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[TouchIDStr, MapsStr, BlueToothStr, BabyBLEStr, ScreenStr, ScaleStr, MQTTStr, NetWorkStr];
+    self.dataArray = @[TouchIDStr, MapsStr, BlueToothStr, BabyBLEStr, MQTTStr, DataBaseStr, NetWorkStr, QRCodeString];
 }
 
 #pragma mark - 创建TableView
@@ -134,17 +134,12 @@ static const NSString *NetWorkStr = @"网络请求";
         mapsVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:mapsVC animated:YES];
     }
-    if ([cellString isEqual:ScreenStr]) {
-        // 横竖屏
-        PortraitScreenVC *portraitScreenVC = [[PortraitScreenVC alloc] init];
-        portraitScreenVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:portraitScreenVC animated:YES];
-    }
-    if ([cellString isEqual:ScaleStr]) {
-        // 等分布局
-        ScaleVC *scaleVC = [[UIStoryboard storyboardWithName:@"Home" bundle:NULL] instantiateViewControllerWithIdentifier:@"ScaleVC"];
-        scaleVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:scaleVC animated:YES];
+   
+    if ([cellString isEqual:DataBaseStr]) {
+        // 数据库
+        DataBaseVC *dataBaseVC = [[DataBaseVC alloc] init];
+        dataBaseVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:dataBaseVC animated:YES];
     }
     if ([cellString isEqual:BlueToothStr]) {
         // 蓝牙(系统)
@@ -169,6 +164,12 @@ static const NSString *NetWorkStr = @"网络请求";
         NetWorkVC *netWorkVC = [[NetWorkVC alloc] init];
         netWorkVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:netWorkVC animated:YES];
+    }
+    if ([cellString isEqual:QRCodeString]) {
+        // 二维码
+        QRCodeVC *qrcodeVC = [[QRCodeVC alloc] init];
+        qrcodeVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:qrcodeVC animated:YES];
     }
 }
 

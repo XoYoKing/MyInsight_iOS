@@ -14,13 +14,13 @@
 #import "RunTimeVC.h" // 运行时
 #import "RunLoopVC.h"
 #import "AnimationVC.h"
-#import "DataBaseVC.h"
 #import "TableViewVC.h"
 #import "CollectionViewVC.h"
 #import "RadioButtonVC.h"
 #import "MultiThreadVC.h" //多线程
 #import "CYuYanVC.h"
-#import "QRCodeVC.h"
+#import "PortraitScreenVC.h" // 竖屏
+#import "ScaleVC.h" // 三等分约束布局
 
 @interface BasicVC ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -43,15 +43,12 @@ static const NSString *XieYiStr = @"协议";
 static const NSString *AnimationStr = @"动画";
 static const NSString *TableViewStr = @"TableView";
 static const NSString *CollectViewStr = @"CollectView";
-static const NSString *DataBaseStr = @"数据库";
 static const NSString *radioButtonStr = @"单选按钮🔘 基本表单";
 static const NSString *MultiThreadString = @"多线程";
 static const NSString *CYuYanString = @"C语言";
-static const NSString *QRCodeString = @"二维码";
 static const NSString *RunLoopString = @"RunLoop";
-
-/*
- */
+static const NSString *ScreenStr = @"横竖屏";
+static const NSString *ScaleStr = @"自动比例约束布局";
 
 @implementation BasicVC
 
@@ -90,7 +87,7 @@ static const NSString *RunLoopString = @"RunLoop";
 // 处理数据
 - (void)handleTableViewData {
     // 数组
-    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, ShouShiStr, XieYiStr, AnimationStr, TableViewStr, CollectViewStr, DataBaseStr, radioButtonStr, MultiThreadString, QRCodeString];
+    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, ShouShiStr, XieYiStr, AnimationStr, TableViewStr, CollectViewStr, radioButtonStr, ScreenStr, ScaleStr, MultiThreadString];
 }
 
 #pragma mark - 创建TableView
@@ -189,12 +186,6 @@ static const NSString *RunLoopString = @"RunLoop";
         collectionViewVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:collectionViewVC animated:YES];
     }
-    if ([cellString isEqual:DataBaseStr]) {
-        // 数据库
-        DataBaseVC *dataBaseVC = [[DataBaseVC alloc] init];
-        dataBaseVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:dataBaseVC animated:YES];
-    }
     if ([cellString isEqual:radioButtonStr]) {
         // 单选button
         RadioButtonVC *radioButtonVC = [[RadioButtonVC alloc] init];
@@ -207,11 +198,17 @@ static const NSString *RunLoopString = @"RunLoop";
         multiThreadVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:multiThreadVC animated:YES];
     }
-    if ([cellString isEqual:QRCodeString]) {
-        // 二维码
-        QRCodeVC *qrcodeVC = [[QRCodeVC alloc] init];
-        qrcodeVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:qrcodeVC animated:YES];
+    if ([cellString isEqual:ScreenStr]) {
+        // 横竖屏
+        PortraitScreenVC *portraitScreenVC = [[PortraitScreenVC alloc] init];
+        portraitScreenVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:portraitScreenVC animated:YES];
+    }
+    if ([cellString isEqual:ScaleStr]) {
+        // 等分布局
+        ScaleVC *scaleVC = [[UIStoryboard storyboardWithName:@"Home" bundle:NULL] instantiateViewControllerWithIdentifier:@"ScaleVC"];
+        scaleVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:scaleVC animated:YES];
     }
 }
 

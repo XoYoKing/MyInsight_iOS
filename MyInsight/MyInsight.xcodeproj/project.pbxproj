@@ -66,7 +66,6 @@
 		A2419E89AB28D022C3D01AE0 /* libPods-MyInsight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D110F761EC3A481896E9E0EB /* libPods-MyInsight.a */; };
 		A241D22420468E68005A3BC5 /* MQTTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22320468E68005A3BC5 /* MQTTVC.m */; };
 		A241D22B2047A32A005A3BC5 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22A2047A32A005A3BC5 /* UIColor+Category.m */; };
-		A25748252023058A000F7632 /* DataBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A25748242023058A000F7632 /* DataBaseVC.m */; };
 		A25748282023059D000F7632 /* CollectionViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A25748272023059D000F7632 /* CollectionViewVC.m */; };
 		A257482B202305B9000F7632 /* TableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A257482A202305B9000F7632 /* TableViewVC.m */; };
 		A257482F202315C0000F7632 /* RFQuiltLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A257482E202315C0000F7632 /* RFQuiltLayout.m */; };
@@ -87,15 +86,10 @@
 		A27983652051106300FBAD32 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A27983642051106300FBAD32 /* CoreTelephony.framework */; };
 		A27983672051107100FBAD32 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A27983662051107000FBAD32 /* SystemConfiguration.framework */; };
 		A27983692051108F00FBAD32 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A27983682051108F00FBAD32 /* libsqlite3.0.tbd */; };
-		A27B37E2204159BE00C25895 /* SQLiteHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A27B37E1204159BE00C25895 /* SQLiteHandle.m */; };
-		A27B37E52041603900C25895 /* DataBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A27B37E42041603900C25895 /* DataBaseModel.m */; };
 		A27E8725201AC49B003E712C /* CommonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E8724201AC49B003E712C /* CommonTool.m */; };
 		A27E8728201AC53C003E712C /* 1967.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A27E8727201AC53C003E712C /* 1967.mp3 */; };
 		A27E873B201ACD5E003E712C /* OpenCVVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = A27E8736201ACD5D003E712C /* OpenCVVC.mm */; };
 		A27E873C201ACD5E003E712C /* FFmpegVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E873A201ACD5D003E712C /* FFmpegVC.m */; };
-		A27E8751201ACF6A003E712C /* LandscapeScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E8747201ACF6A003E712C /* LandscapeScreenVC.m */; };
-		A27E8752201ACF6A003E712C /* PortraitScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E8748201ACF6A003E712C /* PortraitScreenVC.m */; };
-		A27E8753201ACF6A003E712C /* ScaleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E874B201ACF6A003E712C /* ScaleVC.m */; };
 		A27E875C201AD2B2003E712C /* MusicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E8757201AD2B2003E712C /* MusicVC.m */; };
 		A27E875D201AD2B2003E712C /* SoundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E8758201AD2B2003E712C /* SoundVC.m */; };
 		A27E875E201AD2B2003E712C /* AudioVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A27E875B201AD2B2003E712C /* AudioVC.m */; };
@@ -158,8 +152,14 @@
 		A2D884A820872322005116A6 /* BabyBleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884A220872322005116A6 /* BabyBleVC.m */; };
 		A2D884E920886896005116A6 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884E820886896005116A6 /* BaseVC.m */; };
 		A2D884EC20886B96005116A6 /* BaseNaviVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884EB20886B96005116A6 /* BaseNaviVC.m */; };
-		A2D884F020887323005116A6 /* QRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884EF20887323005116A6 /* QRCodeVC.m */; };
 		A2D884F420897942005116A6 /* RunLoopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884F320897942005116A6 /* RunLoopVC.m */; };
+		A2DDDC19208ACDC000DC7A4A /* DataBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC10208ACDC000DC7A4A /* DataBaseVC.m */; };
+		A2DDDC1A208ACDC000DC7A4A /* SQLiteHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC11208ACDC000DC7A4A /* SQLiteHandle.m */; };
+		A2DDDC1B208ACDC000DC7A4A /* DataBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC12208ACDC000DC7A4A /* DataBaseModel.m */; };
+		A2DDDC1C208ACDC000DC7A4A /* QRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC17208ACDC000DC7A4A /* QRCodeVC.m */; };
+		A2DDDC25208ACEF600DC7A4A /* LandscapeScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC1F208ACEF600DC7A4A /* LandscapeScreenVC.m */; };
+		A2DDDC26208ACEF600DC7A4A /* PortraitScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC20208ACEF600DC7A4A /* PortraitScreenVC.m */; };
+		A2DDDC27208ACEF600DC7A4A /* ScaleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC23208ACEF600DC7A4A /* ScaleVC.m */; };
 		A2E4E71D2004BFDF00EC3D63 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7162004BFDE00EC3D63 /* libavutil.a */; };
 		A2E4E71E2004BFDF00EC3D63 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7172004BFDE00EC3D63 /* libavfilter.a */; };
 		A2E4E71F2004BFDF00EC3D63 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E7182004BFDE00EC3D63 /* libavcodec.a */; };
@@ -270,8 +270,6 @@
 		A241D22320468E68005A3BC5 /* MQTTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQTTVC.m; sourceTree = "<group>"; };
 		A241D2292047A32A005A3BC5 /* UIColor+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
 		A241D22A2047A32A005A3BC5 /* UIColor+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
-		A25748232023058A000F7632 /* DataBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseVC.h; sourceTree = "<group>"; };
-		A25748242023058A000F7632 /* DataBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBaseVC.m; sourceTree = "<group>"; };
 		A25748262023059D000F7632 /* CollectionViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewVC.h; sourceTree = "<group>"; };
 		A25748272023059D000F7632 /* CollectionViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewVC.m; sourceTree = "<group>"; };
 		A2574829202305B9000F7632 /* TableViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewVC.h; sourceTree = "<group>"; };
@@ -309,10 +307,6 @@
 		A27983642051106300FBAD32 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		A27983662051107000FBAD32 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A27983682051108F00FBAD32 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		A27B37E0204159BE00C25895 /* SQLiteHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLiteHandle.h; sourceTree = "<group>"; };
-		A27B37E1204159BE00C25895 /* SQLiteHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLiteHandle.m; sourceTree = "<group>"; };
-		A27B37E32041603900C25895 /* DataBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseModel.h; sourceTree = "<group>"; };
-		A27B37E42041603900C25895 /* DataBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBaseModel.m; sourceTree = "<group>"; };
 		A27E8723201AC49B003E712C /* CommonTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonTool.h; sourceTree = "<group>"; };
 		A27E8724201AC49B003E712C /* CommonTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonTool.m; sourceTree = "<group>"; };
 		A27E8727201AC53C003E712C /* 1967.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1967.mp3; sourceTree = "<group>"; };
@@ -321,12 +315,6 @@
 		A27E8737201ACD5D003E712C /* OpenCVVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVVC.h; sourceTree = "<group>"; };
 		A27E8739201ACD5D003E712C /* FFmpegVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFmpegVC.h; sourceTree = "<group>"; };
 		A27E873A201ACD5D003E712C /* FFmpegVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFmpegVC.m; sourceTree = "<group>"; };
-		A27E8746201ACF6A003E712C /* PortraitScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortraitScreenVC.h; sourceTree = "<group>"; };
-		A27E8747201ACF6A003E712C /* LandscapeScreenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandscapeScreenVC.m; sourceTree = "<group>"; };
-		A27E8748201ACF6A003E712C /* PortraitScreenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortraitScreenVC.m; sourceTree = "<group>"; };
-		A27E8749201ACF6A003E712C /* LandscapeScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandscapeScreenVC.h; sourceTree = "<group>"; };
-		A27E874B201ACF6A003E712C /* ScaleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleVC.m; sourceTree = "<group>"; };
-		A27E874C201ACF6A003E712C /* ScaleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleVC.h; sourceTree = "<group>"; };
 		A27E8755201AD2B2003E712C /* AudioVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioVC.h; sourceTree = "<group>"; };
 		A27E8757201AD2B2003E712C /* MusicVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicVC.m; sourceTree = "<group>"; };
 		A27E8758201AD2B2003E712C /* SoundVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundVC.m; sourceTree = "<group>"; };
@@ -436,10 +424,22 @@
 		A2D884E820886896005116A6 /* BaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
 		A2D884EA20886B96005116A6 /* BaseNaviVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNaviVC.h; sourceTree = "<group>"; };
 		A2D884EB20886B96005116A6 /* BaseNaviVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNaviVC.m; sourceTree = "<group>"; };
-		A2D884EE20887323005116A6 /* QRCodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeVC.h; sourceTree = "<group>"; };
-		A2D884EF20887323005116A6 /* QRCodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeVC.m; sourceTree = "<group>"; };
 		A2D884F220897942005116A6 /* RunLoopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopVC.h; sourceTree = "<group>"; };
 		A2D884F320897942005116A6 /* RunLoopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopVC.m; sourceTree = "<group>"; };
+		A2DDDC10208ACDC000DC7A4A /* DataBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseVC.m; sourceTree = "<group>"; };
+		A2DDDC11208ACDC000DC7A4A /* SQLiteHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteHandle.m; sourceTree = "<group>"; };
+		A2DDDC12208ACDC000DC7A4A /* DataBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseModel.m; sourceTree = "<group>"; };
+		A2DDDC13208ACDC000DC7A4A /* SQLiteHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteHandle.h; sourceTree = "<group>"; };
+		A2DDDC14208ACDC000DC7A4A /* DataBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseVC.h; sourceTree = "<group>"; };
+		A2DDDC15208ACDC000DC7A4A /* DataBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseModel.h; sourceTree = "<group>"; };
+		A2DDDC17208ACDC000DC7A4A /* QRCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeVC.m; sourceTree = "<group>"; };
+		A2DDDC18208ACDC000DC7A4A /* QRCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeVC.h; sourceTree = "<group>"; };
+		A2DDDC1E208ACEF600DC7A4A /* PortraitScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortraitScreenVC.h; sourceTree = "<group>"; };
+		A2DDDC1F208ACEF600DC7A4A /* LandscapeScreenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandscapeScreenVC.m; sourceTree = "<group>"; };
+		A2DDDC20208ACEF600DC7A4A /* PortraitScreenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortraitScreenVC.m; sourceTree = "<group>"; };
+		A2DDDC21208ACEF600DC7A4A /* LandscapeScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandscapeScreenVC.h; sourceTree = "<group>"; };
+		A2DDDC23208ACEF600DC7A4A /* ScaleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleVC.m; sourceTree = "<group>"; };
+		A2DDDC24208ACEF600DC7A4A /* ScaleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleVC.h; sourceTree = "<group>"; };
 		A2E4E6A22004BFDD00EC3D63 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		A2E4E6A32004BFDD00EC3D63 /* buffersrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersrc.h; sourceTree = "<group>"; };
 		A2E4E6A42004BFDD00EC3D63 /* buffersink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersink.h; sourceTree = "<group>"; };
@@ -933,19 +933,6 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
-		A25748222023056D000F7632 /* DataBase */ = {
-			isa = PBXGroup;
-			children = (
-				A25748232023058A000F7632 /* DataBaseVC.h */,
-				A25748242023058A000F7632 /* DataBaseVC.m */,
-				A27B37E0204159BE00C25895 /* SQLiteHandle.h */,
-				A27B37E1204159BE00C25895 /* SQLiteHandle.m */,
-				A27B37E32041603900C25895 /* DataBaseModel.h */,
-				A27B37E42041603900C25895 /* DataBaseModel.m */,
-			);
-			path = DataBase;
-			sourceTree = "<group>";
-		};
 		A257482C202315A6000F7632 /* RFQuiltLayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -963,9 +950,9 @@
 				A241D22120468E52005A3BC5 /* MQTT */,
 				A2CA807B2021567600D81845 /* TouchID */,
 				A27E873D201ACF6A003E712C /* BlueTooth */,
-				A27E874A201ACF6A003E712C /* ScaleView */,
 				A239CE272085E44C0033646A /* NetWork */,
-				A27E8745201ACF6A003E712C /* Screen */,
+				A2DDDC0F208ACDC000DC7A4A /* DataBase */,
+				A2DDDC16208ACDC000DC7A4A /* QRCode */,
 				A26CE490201971C50012EC69 /* Maps */,
 			);
 			path = Advance;
@@ -979,13 +966,13 @@
 				A2BDD420205F5550008AD133 /* MultiThread */,
 				A2B43C3020575ECD00FEAE58 /* RadioButton */,
 				A25748202023056C000F7632 /* CollectionView */,
-				A25748222023056D000F7632 /* DataBase */,
 				A25748212023056C000F7632 /* TableView */,
 				A2CA8082202196E900D81845 /* Animation */,
+				A2DDDC22208ACEF600DC7A4A /* ScaleView */,
+				A2DDDC1D208ACEF600DC7A4A /* Screen */,
 				A2CA8088202196E900D81845 /* LiftCycle */,
 				A2CA8085202196E900D81845 /* RunTime */,
 				A2D884F120897927005116A6 /* RunLoop */,
-				A2D884ED20887312005116A6 /* QRCode */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -1136,26 +1123,6 @@
 				A2D8849C20872322005116A6 /* View */,
 			);
 			path = BlueTooth;
-			sourceTree = "<group>";
-		};
-		A27E8745201ACF6A003E712C /* Screen */ = {
-			isa = PBXGroup;
-			children = (
-				A27E8746201ACF6A003E712C /* PortraitScreenVC.h */,
-				A27E8748201ACF6A003E712C /* PortraitScreenVC.m */,
-				A27E8749201ACF6A003E712C /* LandscapeScreenVC.h */,
-				A27E8747201ACF6A003E712C /* LandscapeScreenVC.m */,
-			);
-			path = Screen;
-			sourceTree = "<group>";
-		};
-		A27E874A201ACF6A003E712C /* ScaleView */ = {
-			isa = PBXGroup;
-			children = (
-				A27E874C201ACF6A003E712C /* ScaleVC.h */,
-				A27E874B201ACF6A003E712C /* ScaleVC.m */,
-			);
-			path = ScaleView;
 			sourceTree = "<group>";
 		};
 		A27E8754201AD2B2003E712C /* Audio */ = {
@@ -1402,15 +1369,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		A2D884ED20887312005116A6 /* QRCode */ = {
-			isa = PBXGroup;
-			children = (
-				A2D884EE20887323005116A6 /* QRCodeVC.h */,
-				A2D884EF20887323005116A6 /* QRCodeVC.m */,
-			);
-			path = QRCode;
-			sourceTree = "<group>";
-		};
 		A2D884F120897927005116A6 /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
@@ -1418,6 +1376,48 @@
 				A2D884F320897942005116A6 /* RunLoopVC.m */,
 			);
 			path = RunLoop;
+			sourceTree = "<group>";
+		};
+		A2DDDC0F208ACDC000DC7A4A /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				A2DDDC10208ACDC000DC7A4A /* DataBaseVC.m */,
+				A2DDDC11208ACDC000DC7A4A /* SQLiteHandle.m */,
+				A2DDDC12208ACDC000DC7A4A /* DataBaseModel.m */,
+				A2DDDC13208ACDC000DC7A4A /* SQLiteHandle.h */,
+				A2DDDC14208ACDC000DC7A4A /* DataBaseVC.h */,
+				A2DDDC15208ACDC000DC7A4A /* DataBaseModel.h */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		A2DDDC16208ACDC000DC7A4A /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				A2DDDC17208ACDC000DC7A4A /* QRCodeVC.m */,
+				A2DDDC18208ACDC000DC7A4A /* QRCodeVC.h */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		A2DDDC1D208ACEF600DC7A4A /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				A2DDDC1E208ACEF600DC7A4A /* PortraitScreenVC.h */,
+				A2DDDC1F208ACEF600DC7A4A /* LandscapeScreenVC.m */,
+				A2DDDC20208ACEF600DC7A4A /* PortraitScreenVC.m */,
+				A2DDDC21208ACEF600DC7A4A /* LandscapeScreenVC.h */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		A2DDDC22208ACEF600DC7A4A /* ScaleView */ = {
+			isa = PBXGroup;
+			children = (
+				A2DDDC23208ACEF600DC7A4A /* ScaleVC.m */,
+				A2DDDC24208ACEF600DC7A4A /* ScaleVC.h */,
+			);
+			path = ScaleView;
 			sourceTree = "<group>";
 		};
 		A2E4E69F2004BFDD00EC3D63 /* FFmpeg-iOS */ = {
@@ -1959,7 +1959,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A288F9842089DB4100DD4CA0 /* VerticalCollectionVC.m in Sources */,
-				A27B37E2204159BE00C25895 /* SQLiteHandle.m in Sources */,
 				A2A516042057634400EC5AA6 /* RadioButton.m in Sources */,
 				A2CA808B202196EA00D81845 /* AnimationVC.m in Sources */,
 				A2B992922068F3CA002A73B1 /* ChatTextCell.m in Sources */,
@@ -1967,9 +1966,9 @@
 				A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */,
 				A2B9927820623EA3002A73B1 /* OpenGLVC.m in Sources */,
 				A288F97E2089D2CE00DD4CA0 /* NormalCollectionVC.m in Sources */,
-				A27E8751201ACF6A003E712C /* LandscapeScreenVC.m in Sources */,
 				A26CE4A6201971C50012EC69 /* CustomPointAnnotation.m in Sources */,
 				A257482F202315C0000F7632 /* RFQuiltLayout.m in Sources */,
+				A2DDDC26208ACEF600DC7A4A /* PortraitScreenVC.m in Sources */,
 				A239CE332085E49F0033646A /* SomeView.m in Sources */,
 				A2CA807E2021568D00D81845 /* TouchIDVC.m in Sources */,
 				A27E873C201ACD5E003E712C /* FFmpegVC.m in Sources */,
@@ -1984,14 +1983,14 @@
 				A26CE4A4201971C50012EC69 /* GoogleMapVC.m in Sources */,
 				A2BDD430205F5767008AD133 /* BaseView.m in Sources */,
 				A2D884E920886896005116A6 /* BaseVC.m in Sources */,
-				A27B37E52041603900C25895 /* DataBaseModel.m in Sources */,
 				A2BDD439205F6354008AD133 /* ThreadVC.m in Sources */,
 				A2D884A720872322005116A6 /* BlueToothVC.m in Sources */,
 				A26CE4862018A0880012EC69 /* BasicVC.m in Sources */,
 				A2B43C3320575EE700FEAE58 /* RadioButtonVC.m in Sources */,
 				A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */,
 				A2D884F420897942005116A6 /* RunLoopVC.m in Sources */,
-				A25748252023058A000F7632 /* DataBaseVC.m in Sources */,
+				A2DDDC27208ACEF600DC7A4A /* ScaleVC.m in Sources */,
+				A2DDDC19208ACDC000DC7A4A /* DataBaseVC.m in Sources */,
 				A2D8849B208719CC005116A6 /* HTTPTOOL.m in Sources */,
 				A2B992B32069F4FB002A73B1 /* ChatContentModel.m in Sources */,
 				A2B9929C2068F40D002A73B1 /* ChatAudioCell.m in Sources */,
@@ -2003,7 +2002,9 @@
 				A2D884A820872322005116A6 /* BabyBleVC.m in Sources */,
 				A27E8725201AC49B003E712C /* CommonTool.m in Sources */,
 				A2D884EC20886B96005116A6 /* BaseNaviVC.m in Sources */,
+				A2DDDC1C208ACDC000DC7A4A /* QRCodeVC.m in Sources */,
 				A241D22420468E68005A3BC5 /* MQTTVC.m in Sources */,
+				A2DDDC1A208ACDC000DC7A4A /* SQLiteHandle.m in Sources */,
 				A2B992802068F0B9002A73B1 /* ChatListVC.m in Sources */,
 				A2B992AB2068F45B002A73B1 /* ChatTipCell.m in Sources */,
 				A27E875C201AD2B2003E712C /* MusicVC.m in Sources */,
@@ -2013,13 +2014,13 @@
 				A2D884A620872322005116A6 /* BluetoothCell.m in Sources */,
 				A26D17342043BDB80064DECF /* LoginVC.m in Sources */,
 				A257482B202305B9000F7632 /* TableViewVC.m in Sources */,
+				A2DDDC25208ACEF600DC7A4A /* LandscapeScreenVC.m in Sources */,
 				A20D5DFD1FD14549000E191D /* main.m in Sources */,
 				A239CE2D2085E4780033646A /* NetWorkVC.m in Sources */,
 				A2BA3564207C9F4C006D1B00 /* CYuYanVC.m in Sources */,
 				A2BDD442205F639E008AD133 /* LockVC.m in Sources */,
 				A26CE48F2018A0BE0012EC69 /* AdvanceVC.m in Sources */,
 				A26CE4A5201971C50012EC69 /* CallOutAnnotationView.m in Sources */,
-				A27E8753201ACF6A003E712C /* ScaleVC.m in Sources */,
 				A2BDD43F205F6392008AD133 /* OperationVC.m in Sources */,
 				A26CE4A7201971C50012EC69 /* YahooMapVC.m in Sources */,
 				A2BDD423205F557C008AD133 /* MultiThreadVC.m in Sources */,
@@ -2030,7 +2031,6 @@
 				A25748282023059D000F7632 /* CollectionViewVC.m in Sources */,
 				A26CE4A9201971C50012EC69 /* SystemMapVC.m in Sources */,
 				A28ED52F1FD156B600A74551 /* RearRevealVC.m in Sources */,
-				A27E8752201ACF6A003E712C /* PortraitScreenVC.m in Sources */,
 				A288F98D2089E0F500DD4CA0 /* MIVerticalLayout.m in Sources */,
 				A26CE4A3201971C50012EC69 /* BaiduMapVC.m in Sources */,
 				A20D5E111FD147CD000E191D /* TabBarVC.m in Sources */,
@@ -2040,9 +2040,9 @@
 				A239CE232085D8990033646A /* MICircleLayout.m in Sources */,
 				A2B9927420623D0E002A73B1 /* SocketVC.m in Sources */,
 				A239CE362085E4C30033646A /* AFNetWorkVC.m in Sources */,
-				A2D884F020887323005116A6 /* QRCodeVC.m in Sources */,
 				A2BDD42D205F5754008AD133 /* BaseModel.m in Sources */,
 				A2B992A12068F42F002A73B1 /* ChatVideoCell.m in Sources */,
+				A2DDDC1B208ACDC000DC7A4A /* DataBaseModel.m in Sources */,
 				A241D22B2047A32A005A3BC5 /* UIColor+Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
