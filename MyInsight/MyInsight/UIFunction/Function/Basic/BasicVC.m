@@ -20,6 +20,7 @@
 #import "PortraitScreenVC.h" // 竖屏
 #import "ViewLayoutVC.h"
 #import "CoreAnimationVC.h" // 核心动画
+#import "PhysicalVC.h"
 
 @interface BasicVC ()<UITableViewDelegate, UITableViewDataSource>
 // LEFT
@@ -46,6 +47,7 @@ static const NSString *RunLoopString = @"RunLoop";
 static const NSString *ScreenStr = @"横竖屏";
 static const NSString *ViewLayoutStr = @"约束布局";
 static const NSString *CoreAnimationStr = @"核心动画";
+static const NSString *PhysicalStr = @"物理仿真";
 
 @implementation BasicVC
 
@@ -84,7 +86,7 @@ static const NSString *CoreAnimationStr = @"核心动画";
 // 处理数据
 - (void)handleTableViewData {
     // 数组
-    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, ShouShiStr, XieYiStr, CoreAnimationStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, MultiThreadString, ViewLayoutStr];
+    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, ShouShiStr, XieYiStr, PhysicalStr, CoreAnimationStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, MultiThreadString, ViewLayoutStr];
 }
 
 #pragma mark - 创建TableView
@@ -159,6 +161,12 @@ static const NSString *CoreAnimationStr = @"核心动画";
         RunLoopVC *runLoopVC = [[RunLoopVC alloc] init];
         runLoopVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:runLoopVC animated:YES];
+    }
+    if ([cellString isEqual:PhysicalStr]) {
+        // 物理仿真
+        PhysicalVC *physicalVC = [[PhysicalVC alloc] init];
+        physicalVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:physicalVC animated:YES];
     }
     if ([cellString isEqual:CoreAnimationStr]) {
         // 核心动画

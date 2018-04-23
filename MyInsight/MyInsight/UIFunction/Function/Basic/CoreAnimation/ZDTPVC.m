@@ -94,7 +94,6 @@
             
             self.topView.layer.transform = CATransform3DIdentity;
             self.gradientL.opacity = 0;
-            
         } completion:^(BOOL finished) {
             
         }];

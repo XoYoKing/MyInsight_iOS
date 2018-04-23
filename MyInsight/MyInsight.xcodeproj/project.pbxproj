@@ -162,6 +162,7 @@
 		A2CDD253208DC64A006DF86E /* CoreAnimation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CDD252208DC64A006DF86E /* CoreAnimation.storyboard */; };
 		A2CDD256208DD022006DF86E /* 小新.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2CDD255208DD021006DF86E /* 小新.jpg */; };
 		A2CDD258208DD3CA006DF86E /* 卡哇伊.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2CDD257208DD3CA006DF86E /* 卡哇伊.jpg */; };
+		A2CDD25C208DDC2C006DF86E /* PhysicalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD25B208DDC2C006DF86E /* PhysicalVC.m */; };
 		A2D8849B208719CC005116A6 /* HTTPTOOL.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D8849A208719CC005116A6 /* HTTPTOOL.m */; };
 		A2D884A520872322005116A6 /* BluetoothCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2D8849D20872322005116A6 /* BluetoothCell.xib */; };
 		A2D884A620872322005116A6 /* BluetoothCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D8849F20872322005116A6 /* BluetoothCell.m */; };
@@ -470,6 +471,8 @@
 		A2CDD252208DC64A006DF86E /* CoreAnimation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoreAnimation.storyboard; sourceTree = "<group>"; };
 		A2CDD255208DD021006DF86E /* 小新.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "小新.jpg"; sourceTree = "<group>"; };
 		A2CDD257208DD3CA006DF86E /* 卡哇伊.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "卡哇伊.jpg"; sourceTree = "<group>"; };
+		A2CDD25A208DDC2C006DF86E /* PhysicalVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhysicalVC.h; sourceTree = "<group>"; };
+		A2CDD25B208DDC2C006DF86E /* PhysicalVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhysicalVC.m; sourceTree = "<group>"; };
 		A2D88499208719CC005116A6 /* HTTPTOOL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPTOOL.h; sourceTree = "<group>"; };
 		A2D8849A208719CC005116A6 /* HTTPTOOL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPTOOL.m; sourceTree = "<group>"; };
 		A2D8849D20872322005116A6 /* BluetoothCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BluetoothCell.xib; sourceTree = "<group>"; };
@@ -1089,6 +1092,7 @@
 				A2B43C3020575ECD00FEAE58 /* RadioButton */,
 				A25748202023056C000F7632 /* CollectionView */,
 				A25748212023056C000F7632 /* TableView */,
+				A2CDD259208DDC1A006DF86E /* Physical */,
 				A23B3520208D7299001D71F2 /* CoreAnimation */,
 				A2DDDC1D208ACEF600DC7A4A /* Screen */,
 				A2CA8088202196E900D81845 /* LiftCycle */,
@@ -1458,6 +1462,15 @@
 				A2CDD255208DD021006DF86E /* 小新.jpg */,
 			);
 			path = image;
+			sourceTree = "<group>";
+		};
+		A2CDD259208DDC1A006DF86E /* Physical */ = {
+			isa = PBXGroup;
+			children = (
+				A2CDD25A208DDC2C006DF86E /* PhysicalVC.h */,
+				A2CDD25B208DDC2C006DF86E /* PhysicalVC.m */,
+			);
+			path = Physical;
 			sourceTree = "<group>";
 		};
 		A2D88498208719CC005116A6 /* Tool */ = {
@@ -2170,6 +2183,7 @@
 				A2B9928D2068F3A6002A73B1 /* ChatListCell.m in Sources */,
 				A2DDDC34208AD97200DC7A4A /* RealmDBVC.m in Sources */,
 				A20D5E1D1FD14C7A000E191D /* MainRevealVC.m in Sources */,
+				A2CDD25C208DDC2C006DF86E /* PhysicalVC.m in Sources */,
 				A2CA808D202196EA00D81845 /* LiftCycleVC.m in Sources */,
 				A26CE4A4201971C50012EC69 /* GoogleMapVC.m in Sources */,
 				A2BDD430205F5767008AD133 /* BaseView.m in Sources */,
