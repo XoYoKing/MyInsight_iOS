@@ -37,7 +37,7 @@ typedef NS_ENUM(NSUInteger, bodyStyle) {
  *  @param url       网址
  *  @param body      body
  *  @param bodyStyle body数据类型
- *  @param head      请求头
+ *  @param header      请求头
  *  @param style     返回数据类型
  *  @param success   请求成功
  *  @param fail      请求失败

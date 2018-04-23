@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CALayerVC.h"
 
-@interface CAClockVC : UIViewController
+@interface CAClockVC : CALayerVC
 
 @end

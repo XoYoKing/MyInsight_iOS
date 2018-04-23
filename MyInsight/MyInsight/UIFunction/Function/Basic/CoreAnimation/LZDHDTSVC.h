@@ -1,5 +1,5 @@
 //
-//  CALayerYSDHVC.h
+//  LZDHDTSVC.h
 //  MyInsight
 //
 //  Created by SongMenglong on 2018/4/23.
@@ -9,6 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "CALayerVC.h"
 
-@interface CALayerYSDHVC : CALayerVC
+@interface LZDHDTSVC : CALayerVC
 
 @end
+
+@interface LZDHDTSDrawView : UIView
+
+- (void)startAnim;
+
+- (void)reDraw;
+
+@end
+

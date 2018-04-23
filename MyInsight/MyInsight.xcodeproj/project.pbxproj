@@ -147,9 +147,21 @@
 		A2BDD442205F639E008AD133 /* LockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD441205F639E008AD133 /* LockVC.m */; };
 		A2C1AB7D2025A1D80085A653 /* alarm4.m4r in Resources */ = {isa = PBXBuildFile; fileRef = A2C1AB7C2025A1D80085A653 /* alarm4.m4r */; };
 		A2CA807E2021568D00D81845 /* TouchIDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA807D2021568D00D81845 /* TouchIDVC.m */; };
-		A2CA808B202196EA00D81845 /* AnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA8083202196E900D81845 /* AnimationVC.m */; };
 		A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA8086202196E900D81845 /* RunTimeVC.m */; };
 		A2CA808D202196EA00D81845 /* LiftCycleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA8089202196E900D81845 /* LiftCycleVC.m */; };
+		A2CDD230208DB0AA006DF86E /* CABasicAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD22F208DB0AA006DF86E /* CABasicAnimationVC.m */; };
+		A2CDD233208DB0CA006DF86E /* CAKeyFrameAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD232208DB0CA006DF86E /* CAKeyFrameAnimationVC.m */; };
+		A2CDD236208DB0E2006DF86E /* CATransitionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD235208DB0E2006DF86E /* CATransitionVC.m */; };
+		A2CDD239208DB0F9006DF86E /* CAAnimationGroupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD238208DB0F9006DF86E /* CAAnimationGroupVC.m */; };
+		A2CDD23F208DB6CA006DF86E /* ZDTPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD23E208DB6C9006DF86E /* ZDTPVC.m */; };
+		A2CDD242208DB6EA006DF86E /* YinLZDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD241208DB6EA006DF86E /* YinLZDTVC.m */; };
+		A2CDD245208DB743006DF86E /* HDZSQVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD244208DB743006DF86E /* HDZSQVC.m */; };
+		A2CDD24B208DB770006DF86E /* LZDHDTSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD24A208DB770006DF86E /* LZDHDTSVC.m */; };
+		A2CDD24E208DB789006DF86E /* DaoYingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD24D208DB789006DF86E /* DaoYingVC.m */; };
+		A2CDD251208DB878006DF86E /* LZDHDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD250208DB878006DF86E /* LZDHDTVC.m */; };
+		A2CDD253208DC64A006DF86E /* CoreAnimation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CDD252208DC64A006DF86E /* CoreAnimation.storyboard */; };
+		A2CDD256208DD022006DF86E /* 小新.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2CDD255208DD021006DF86E /* 小新.jpg */; };
+		A2CDD258208DD3CA006DF86E /* 卡哇伊.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2CDD257208DD3CA006DF86E /* 卡哇伊.jpg */; };
 		A2D8849B208719CC005116A6 /* HTTPTOOL.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D8849A208719CC005116A6 /* HTTPTOOL.m */; };
 		A2D884A520872322005116A6 /* BluetoothCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2D8849D20872322005116A6 /* BluetoothCell.xib */; };
 		A2D884A620872322005116A6 /* BluetoothCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D8849F20872322005116A6 /* BluetoothCell.m */; };
@@ -431,12 +443,33 @@
 		A2C1AB7C2025A1D80085A653 /* alarm4.m4r */ = {isa = PBXFileReference; lastKnownFileType = file; path = alarm4.m4r; sourceTree = "<group>"; };
 		A2CA807C2021568D00D81845 /* TouchIDVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchIDVC.h; sourceTree = "<group>"; };
 		A2CA807D2021568D00D81845 /* TouchIDVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIDVC.m; sourceTree = "<group>"; };
-		A2CA8083202196E900D81845 /* AnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationVC.m; sourceTree = "<group>"; };
-		A2CA8084202196E900D81845 /* AnimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationVC.h; sourceTree = "<group>"; };
 		A2CA8086202196E900D81845 /* RunTimeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunTimeVC.m; sourceTree = "<group>"; };
 		A2CA8087202196E900D81845 /* RunTimeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunTimeVC.h; sourceTree = "<group>"; };
 		A2CA8089202196E900D81845 /* LiftCycleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiftCycleVC.m; sourceTree = "<group>"; };
 		A2CA808A202196EA00D81845 /* LiftCycleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiftCycleVC.h; sourceTree = "<group>"; };
+		A2CDD22E208DB0AA006DF86E /* CABasicAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CABasicAnimationVC.h; sourceTree = "<group>"; };
+		A2CDD22F208DB0AA006DF86E /* CABasicAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CABasicAnimationVC.m; sourceTree = "<group>"; };
+		A2CDD231208DB0CA006DF86E /* CAKeyFrameAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAKeyFrameAnimationVC.h; sourceTree = "<group>"; };
+		A2CDD232208DB0CA006DF86E /* CAKeyFrameAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAKeyFrameAnimationVC.m; sourceTree = "<group>"; };
+		A2CDD234208DB0E2006DF86E /* CATransitionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CATransitionVC.h; sourceTree = "<group>"; };
+		A2CDD235208DB0E2006DF86E /* CATransitionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATransitionVC.m; sourceTree = "<group>"; };
+		A2CDD237208DB0F9006DF86E /* CAAnimationGroupVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAnimationGroupVC.h; sourceTree = "<group>"; };
+		A2CDD238208DB0F9006DF86E /* CAAnimationGroupVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAAnimationGroupVC.m; sourceTree = "<group>"; };
+		A2CDD23D208DB6C9006DF86E /* ZDTPVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDTPVC.h; sourceTree = "<group>"; };
+		A2CDD23E208DB6C9006DF86E /* ZDTPVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDTPVC.m; sourceTree = "<group>"; };
+		A2CDD240208DB6EA006DF86E /* YinLZDTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YinLZDTVC.h; sourceTree = "<group>"; };
+		A2CDD241208DB6EA006DF86E /* YinLZDTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YinLZDTVC.m; sourceTree = "<group>"; };
+		A2CDD243208DB743006DF86E /* HDZSQVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDZSQVC.h; sourceTree = "<group>"; };
+		A2CDD244208DB743006DF86E /* HDZSQVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDZSQVC.m; sourceTree = "<group>"; };
+		A2CDD249208DB770006DF86E /* LZDHDTSVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZDHDTSVC.h; sourceTree = "<group>"; };
+		A2CDD24A208DB770006DF86E /* LZDHDTSVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZDHDTSVC.m; sourceTree = "<group>"; };
+		A2CDD24C208DB789006DF86E /* DaoYingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DaoYingVC.h; sourceTree = "<group>"; };
+		A2CDD24D208DB789006DF86E /* DaoYingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DaoYingVC.m; sourceTree = "<group>"; };
+		A2CDD24F208DB878006DF86E /* LZDHDTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZDHDTVC.h; sourceTree = "<group>"; };
+		A2CDD250208DB878006DF86E /* LZDHDTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZDHDTVC.m; sourceTree = "<group>"; };
+		A2CDD252208DC64A006DF86E /* CoreAnimation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoreAnimation.storyboard; sourceTree = "<group>"; };
+		A2CDD255208DD021006DF86E /* 小新.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "小新.jpg"; sourceTree = "<group>"; };
+		A2CDD257208DD3CA006DF86E /* 卡哇伊.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "卡哇伊.jpg"; sourceTree = "<group>"; };
 		A2D88499208719CC005116A6 /* HTTPTOOL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPTOOL.h; sourceTree = "<group>"; };
 		A2D8849A208719CC005116A6 /* HTTPTOOL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPTOOL.m; sourceTree = "<group>"; };
 		A2D8849D20872322005116A6 /* BluetoothCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BluetoothCell.xib; sourceTree = "<group>"; };
@@ -758,6 +791,7 @@
 			children = (
 				A20D5DEF1FD14549000E191D /* AppDelegate.h */,
 				A20D5DF21FD14549000E191D /* AppDelegate.m */,
+				A2CDD254208DD021006DF86E /* image */,
 				A20D5DF01FD14549000E191D /* Assets.xcassets */,
 				A20D5DF11FD14549000E191D /* main.m */,
 				A20D5DF31FD14549000E191D /* Info.plist */,
@@ -773,6 +807,7 @@
 				A28ED53C1FD2494800A74551 /* Home.storyboard */,
 				A28ED53E1FD2495300A74551 /* Mark.storyboard */,
 				A28ED5401FD2495F00A74551 /* Mine.storyboard */,
+				A2CDD252208DC64A006DF86E /* CoreAnimation.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -964,6 +999,26 @@
 				A23B352B208D7EC8001D71F2 /* CALayerYSDHVC.m */,
 				A23B352D208D81C0001D71F2 /* CAClockVC.h */,
 				A23B352E208D81C0001D71F2 /* CAClockVC.m */,
+				A2CDD22E208DB0AA006DF86E /* CABasicAnimationVC.h */,
+				A2CDD22F208DB0AA006DF86E /* CABasicAnimationVC.m */,
+				A2CDD231208DB0CA006DF86E /* CAKeyFrameAnimationVC.h */,
+				A2CDD232208DB0CA006DF86E /* CAKeyFrameAnimationVC.m */,
+				A2CDD234208DB0E2006DF86E /* CATransitionVC.h */,
+				A2CDD235208DB0E2006DF86E /* CATransitionVC.m */,
+				A2CDD237208DB0F9006DF86E /* CAAnimationGroupVC.h */,
+				A2CDD238208DB0F9006DF86E /* CAAnimationGroupVC.m */,
+				A2CDD23D208DB6C9006DF86E /* ZDTPVC.h */,
+				A2CDD23E208DB6C9006DF86E /* ZDTPVC.m */,
+				A2CDD240208DB6EA006DF86E /* YinLZDTVC.h */,
+				A2CDD241208DB6EA006DF86E /* YinLZDTVC.m */,
+				A2CDD243208DB743006DF86E /* HDZSQVC.h */,
+				A2CDD244208DB743006DF86E /* HDZSQVC.m */,
+				A2CDD24F208DB878006DF86E /* LZDHDTVC.h */,
+				A2CDD250208DB878006DF86E /* LZDHDTVC.m */,
+				A2CDD249208DB770006DF86E /* LZDHDTSVC.h */,
+				A2CDD24A208DB770006DF86E /* LZDHDTSVC.m */,
+				A2CDD24C208DB789006DF86E /* DaoYingVC.h */,
+				A2CDD24D208DB789006DF86E /* DaoYingVC.m */,
 			);
 			path = CoreAnimation;
 			sourceTree = "<group>";
@@ -1035,7 +1090,6 @@
 				A25748202023056C000F7632 /* CollectionView */,
 				A25748212023056C000F7632 /* TableView */,
 				A23B3520208D7299001D71F2 /* CoreAnimation */,
-				A2CA8082202196E900D81845 /* Animation */,
 				A2DDDC1D208ACEF600DC7A4A /* Screen */,
 				A2CA8088202196E900D81845 /* LiftCycle */,
 				A2CA8085202196E900D81845 /* RunTime */,
@@ -1379,15 +1433,6 @@
 			path = TouchID;
 			sourceTree = "<group>";
 		};
-		A2CA8082202196E900D81845 /* Animation */ = {
-			isa = PBXGroup;
-			children = (
-				A2CA8084202196E900D81845 /* AnimationVC.h */,
-				A2CA8083202196E900D81845 /* AnimationVC.m */,
-			);
-			path = Animation;
-			sourceTree = "<group>";
-		};
 		A2CA8085202196E900D81845 /* RunTime */ = {
 			isa = PBXGroup;
 			children = (
@@ -1404,6 +1449,15 @@
 				A2CA8089202196E900D81845 /* LiftCycleVC.m */,
 			);
 			path = LiftCycle;
+			sourceTree = "<group>";
+		};
+		A2CDD254208DD021006DF86E /* image */ = {
+			isa = PBXGroup;
+			children = (
+				A2CDD257208DD3CA006DF86E /* 卡哇伊.jpg */,
+				A2CDD255208DD021006DF86E /* 小新.jpg */,
+			);
+			path = image;
 			sourceTree = "<group>";
 		};
 		A2D88498208719CC005116A6 /* Tool */ = {
@@ -1878,6 +1932,7 @@
 				A20D5DFC1FD14549000E191D /* Assets.xcassets in Resources */,
 				A22C4DD51FFC777A0079F7C2 /* route_start_pin@2x.png in Resources */,
 				A28ED53F1FD2495300A74551 /* Mark.storyboard in Resources */,
+				A2CDD256208DD022006DF86E /* 小新.jpg in Resources */,
 				A22C4DCF1FFC777A0079F7C2 /* pin_head_l.png in Resources */,
 				A22C4DCE1FFC777A0079F7C2 /* route_goal_pin@2x.png in Resources */,
 				A22C4DD41FFC777A0079F7C2 /* via.png in Resources */,
@@ -1894,10 +1949,12 @@
 				A22C4DC71FFC777A0079F7C2 /* route_goal_pin.png in Resources */,
 				A2B9929D2068F40D002A73B1 /* ChatAudioCell.xib in Resources */,
 				A22C4DC81FFC777A0079F7C2 /* pin_green_s@2x.png in Resources */,
+				A2CDD253208DC64A006DF86E /* CoreAnimation.storyboard in Resources */,
 				A2D884A520872322005116A6 /* BluetoothCell.xib in Resources */,
 				A22C4DC21FFC777A0079F7C2 /* goal.png in Resources */,
 				A22C4DCB1FFC777A0079F7C2 /* route_pin@2x.png in Resources */,
 				A28ED5411FD2495F00A74551 /* Mine.storyboard in Resources */,
+				A2CDD258208DD3CA006DF86E /* 卡哇伊.jpg in Resources */,
 				A22C4DCA1FFC777A0079F7C2 /* compass48.png in Resources */,
 				A2B992982068F3E4002A73B1 /* ChatImageCell.xib in Resources */,
 				A22C4DC31FFC777A0079F7C2 /* pin_green_s.png in Resources */,
@@ -2087,20 +2144,23 @@
 			files = (
 				A288F9842089DB4100DD4CA0 /* VerticalCollectionVC.m in Sources */,
 				A2A516042057634400EC5AA6 /* RadioButton.m in Sources */,
-				A2CA808B202196EA00D81845 /* AnimationVC.m in Sources */,
 				A2DDDC44208ADC5C00DC7A4A /* FMDBVC.m in Sources */,
+				A2CDD23F208DB6CA006DF86E /* ZDTPVC.m in Sources */,
 				A2B992922068F3CA002A73B1 /* ChatTextCell.m in Sources */,
+				A2CDD242208DB6EA006DF86E /* YinLZDTVC.m in Sources */,
 				A23B3523208D72B5001D71F2 /* CoreAnimationVC.m in Sources */,
 				A2DDDC55208AECCD00DC7A4A /* AutoLayoutVC.m in Sources */,
 				A239CE1A208595C30033646A /* MultiTypeFlowLayoutVC.m in Sources */,
 				A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */,
 				A2B9927820623EA3002A73B1 /* OpenGLVC.m in Sources */,
+				A2CDD239208DB0F9006DF86E /* CAAnimationGroupVC.m in Sources */,
 				A288F97E2089D2CE00DD4CA0 /* NormalCollectionVC.m in Sources */,
 				A26CE4A6201971C50012EC69 /* CustomPointAnnotation.m in Sources */,
 				A257482F202315C0000F7632 /* RFQuiltLayout.m in Sources */,
 				A2DDDC26208ACEF600DC7A4A /* PortraitScreenVC.m in Sources */,
 				A239CE332085E49F0033646A /* SomeView.m in Sources */,
 				A2CA807E2021568D00D81845 /* TouchIDVC.m in Sources */,
+				A2CDD233208DB0CA006DF86E /* CAKeyFrameAnimationVC.m in Sources */,
 				A27E873C201ACD5E003E712C /* FFmpegVC.m in Sources */,
 				A26CE4892018A09A0012EC69 /* OtherVC.m in Sources */,
 				A27E875E201AD2B2003E712C /* AudioVC.m in Sources */,
@@ -2116,6 +2176,7 @@
 				A2D884E920886896005116A6 /* BaseVC.m in Sources */,
 				A2BDD439205F6354008AD133 /* ThreadVC.m in Sources */,
 				A2D884A720872322005116A6 /* BlueToothVC.m in Sources */,
+				A2CDD245208DB743006DF86E /* HDZSQVC.m in Sources */,
 				A26CE4862018A0880012EC69 /* BasicVC.m in Sources */,
 				A2B43C3320575EE700FEAE58 /* RadioButtonVC.m in Sources */,
 				A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */,
@@ -2136,9 +2197,11 @@
 				A27E8725201AC49B003E712C /* CommonTool.m in Sources */,
 				A2D884EC20886B96005116A6 /* BaseNaviVC.m in Sources */,
 				A2DDDC1C208ACDC000DC7A4A /* QRCodeVC.m in Sources */,
+				A2CDD24E208DB789006DF86E /* DaoYingVC.m in Sources */,
 				A241D22420468E68005A3BC5 /* MQTTVC.m in Sources */,
 				A2DDDC38208AD99000DC7A4A /* SQLiteHandle.m in Sources */,
 				A2B992802068F0B9002A73B1 /* ChatListVC.m in Sources */,
+				A2CDD230208DB0AA006DF86E /* CABasicAnimationVC.m in Sources */,
 				A2B992AB2068F45B002A73B1 /* ChatTipCell.m in Sources */,
 				A27E875C201AD2B2003E712C /* MusicVC.m in Sources */,
 				A2DDDC4C208AE50A00DC7A4A /* ScaleVC.m in Sources */,
@@ -2157,6 +2220,7 @@
 				A26CE48F2018A0BE0012EC69 /* AdvanceVC.m in Sources */,
 				A26CE4A5201971C50012EC69 /* CallOutAnnotationView.m in Sources */,
 				A2BDD43F205F6392008AD133 /* OperationVC.m in Sources */,
+				A2CDD236208DB0E2006DF86E /* CATransitionVC.m in Sources */,
 				A26CE4A7201971C50012EC69 /* YahooMapVC.m in Sources */,
 				A2BDD423205F557C008AD133 /* MultiThreadVC.m in Sources */,
 				A26D17302043A4880064DECF /* WelcomeVC.m in Sources */,
@@ -2170,6 +2234,7 @@
 				A2DDDC52208AEC9000DC7A4A /* VFLLayoutVC.m in Sources */,
 				A2DDDC5A208B074600DC7A4A /* FoldTableVC.m in Sources */,
 				A28ED52F1FD156B600A74551 /* RearRevealVC.m in Sources */,
+				A2CDD251208DB878006DF86E /* LZDHDTVC.m in Sources */,
 				A288F98D2089E0F500DD4CA0 /* MIVerticalLayout.m in Sources */,
 				A2DDDC41208ADA4C00DC7A4A /* CoreDataVC.m in Sources */,
 				A26CE4A3201971C50012EC69 /* BaiduMapVC.m in Sources */,
@@ -2182,6 +2247,7 @@
 				A2B9927420623D0E002A73B1 /* SocketVC.m in Sources */,
 				A239CE362085E4C30033646A /* AFNetWorkVC.m in Sources */,
 				A2BDD42D205F5754008AD133 /* BaseModel.m in Sources */,
+				A2CDD24B208DB770006DF86E /* LZDHDTSVC.m in Sources */,
 				A2B992A12068F42F002A73B1 /* ChatVideoCell.m in Sources */,
 				A23B352F208D81C0001D71F2 /* CAClockVC.m in Sources */,
 				A2DDDC35208AD97200DC7A4A /* DataBaseModel.m in Sources */,

@@ -1,5 +1,5 @@
 //
-//  CALayerYSDHVC.h
+//  HDZSQVC.h
 //  MyInsight
 //
 //  Created by SongMenglong on 2018/4/23.
@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "CALayerVC.h"
 
-@interface CALayerYSDHVC : CALayerVC
+@interface HDZSQVC : CALayerVC
 
 @end

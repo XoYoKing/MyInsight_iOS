@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseVC.h"
 
-@interface CALayerVC : UIViewController
+@interface CALayerVC : BaseVC
+
+@property (weak, nonatomic) UIView *redView;
+
+@property (weak, nonatomic) CALayer *blueLayer;
 
 @end

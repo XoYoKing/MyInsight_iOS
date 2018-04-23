@@ -9,11 +9,9 @@
 #import "BasicVC.h"
 #import <SWRevealViewController.h>
 #import <Masonry.h>
-
 #import "LiftCycleVC.h" // 生命周期
 #import "RunTimeVC.h" // 运行时
 #import "RunLoopVC.h"
-#import "AnimationVC.h"
 #import "TableViewVC.h"
 #import "CollectionViewVC.h"
 #import "RadioButtonVC.h"
@@ -39,7 +37,6 @@ static const NSString *LiftCycleStr = @"VC生命周期";
 static const NSString *RunTimeStr = @"运行时RunTime";
 static const NSString *ShouShiStr = @"手势";
 static const NSString *XieYiStr = @"协议";
-static const NSString *AnimationStr = @"动画";
 static const NSString *TableViewStr = @"TableView";
 static const NSString *CollectViewStr = @"CollectView";
 static const NSString *RadioButtonStr = @"单选按钮🔘 基本表单";
@@ -87,7 +84,7 @@ static const NSString *CoreAnimationStr = @"核心动画";
 // 处理数据
 - (void)handleTableViewData {
     // 数组
-    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, ShouShiStr, XieYiStr, AnimationStr, CoreAnimationStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, MultiThreadString, ViewLayoutStr];
+    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, ShouShiStr, XieYiStr, CoreAnimationStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, MultiThreadString, ViewLayoutStr];
 }
 
 #pragma mark - 创建TableView
@@ -162,12 +159,6 @@ static const NSString *CoreAnimationStr = @"核心动画";
         RunLoopVC *runLoopVC = [[RunLoopVC alloc] init];
         runLoopVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:runLoopVC animated:YES];
-    }
-    if ([cellString isEqual:AnimationStr]) {
-        // 动画
-        AnimationVC *animationVC = [[AnimationVC alloc] init];
-        animationVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:animationVC animated:YES];
     }
     if ([cellString isEqual:CoreAnimationStr]) {
         // 核心动画

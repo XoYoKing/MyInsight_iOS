@@ -1,24 +1,23 @@
 //
-//  AnimationVC.m
+//  CAKeyFrameAnimationVC.m
 //  MyInsight
 //
-//  Created by SongMenglong on 2018/1/31.
+//  Created by SongMenglong on 2018/4/23.
 //  Copyright © 2018年 SongMenglong. All rights reserved.
 //
 
-#import "AnimationVC.h"
+#import "CAKeyFrameAnimationVC.h"
 
-@interface AnimationVC ()
+@interface CAKeyFrameAnimationVC ()
 
 @end
 
-@implementation AnimationVC
+@implementation CAKeyFrameAnimationVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"动画";
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"关键帧动画CAKeyFrameA";
     
 }
 
