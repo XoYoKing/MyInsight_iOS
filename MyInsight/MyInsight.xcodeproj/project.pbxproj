@@ -63,6 +63,11 @@
 		A239CE302085E4930033646A /* NetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A239CE2F2085E4930033646A /* NetModel.m */; };
 		A239CE332085E49F0033646A /* SomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A239CE322085E49F0033646A /* SomeView.m */; };
 		A239CE362085E4C30033646A /* AFNetWorkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A239CE352085E4C30033646A /* AFNetWorkVC.m */; };
+		A23B3523208D72B5001D71F2 /* CoreAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A23B3522208D72B5001D71F2 /* CoreAnimationVC.m */; };
+		A23B3526208D7E16001D71F2 /* CALayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A23B3525208D7E16001D71F2 /* CALayerVC.m */; };
+		A23B3529208D7E2E001D71F2 /* CALayerBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A23B3528208D7E2E001D71F2 /* CALayerBaseVC.m */; };
+		A23B352C208D7EC8001D71F2 /* CALayerYSDHVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A23B352B208D7EC8001D71F2 /* CALayerYSDHVC.m */; };
+		A23B352F208D81C0001D71F2 /* CAClockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A23B352E208D81C0001D71F2 /* CAClockVC.m */; };
 		A2419E89AB28D022C3D01AE0 /* libPods-MyInsight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D110F761EC3A481896E9E0EB /* libPods-MyInsight.a */; };
 		A241D22420468E68005A3BC5 /* MQTTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22320468E68005A3BC5 /* MQTTVC.m */; };
 		A241D22B2047A32A005A3BC5 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22A2047A32A005A3BC5 /* UIColor+Category.m */; };
@@ -277,6 +282,16 @@
 		A239CE322085E49F0033646A /* SomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SomeView.m; sourceTree = "<group>"; };
 		A239CE342085E4C30033646A /* AFNetWorkVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNetWorkVC.h; sourceTree = "<group>"; };
 		A239CE352085E4C30033646A /* AFNetWorkVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFNetWorkVC.m; sourceTree = "<group>"; };
+		A23B3521208D72B5001D71F2 /* CoreAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreAnimationVC.h; sourceTree = "<group>"; };
+		A23B3522208D72B5001D71F2 /* CoreAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationVC.m; sourceTree = "<group>"; };
+		A23B3524208D7E15001D71F2 /* CALayerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CALayerVC.h; sourceTree = "<group>"; };
+		A23B3525208D7E16001D71F2 /* CALayerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CALayerVC.m; sourceTree = "<group>"; };
+		A23B3527208D7E2E001D71F2 /* CALayerBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CALayerBaseVC.h; sourceTree = "<group>"; };
+		A23B3528208D7E2E001D71F2 /* CALayerBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CALayerBaseVC.m; sourceTree = "<group>"; };
+		A23B352A208D7EC8001D71F2 /* CALayerYSDHVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CALayerYSDHVC.h; sourceTree = "<group>"; };
+		A23B352B208D7EC8001D71F2 /* CALayerYSDHVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CALayerYSDHVC.m; sourceTree = "<group>"; };
+		A23B352D208D81C0001D71F2 /* CAClockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAClockVC.h; sourceTree = "<group>"; };
+		A23B352E208D81C0001D71F2 /* CAClockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAClockVC.m; sourceTree = "<group>"; };
 		A241D22220468E68005A3BC5 /* MQTTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQTTVC.h; sourceTree = "<group>"; };
 		A241D22320468E68005A3BC5 /* MQTTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQTTVC.m; sourceTree = "<group>"; };
 		A241D2292047A32A005A3BC5 /* UIColor+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
@@ -936,6 +951,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A23B3520208D7299001D71F2 /* CoreAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				A23B3521208D72B5001D71F2 /* CoreAnimationVC.h */,
+				A23B3522208D72B5001D71F2 /* CoreAnimationVC.m */,
+				A23B3524208D7E15001D71F2 /* CALayerVC.h */,
+				A23B3525208D7E16001D71F2 /* CALayerVC.m */,
+				A23B3527208D7E2E001D71F2 /* CALayerBaseVC.h */,
+				A23B3528208D7E2E001D71F2 /* CALayerBaseVC.m */,
+				A23B352A208D7EC8001D71F2 /* CALayerYSDHVC.h */,
+				A23B352B208D7EC8001D71F2 /* CALayerYSDHVC.m */,
+				A23B352D208D81C0001D71F2 /* CAClockVC.h */,
+				A23B352E208D81C0001D71F2 /* CAClockVC.m */,
+			);
+			path = CoreAnimation;
+			sourceTree = "<group>";
+		};
 		A241D22120468E52005A3BC5 /* MQTT */ = {
 			isa = PBXGroup;
 			children = (
@@ -1002,6 +1034,7 @@
 				A2B43C3020575ECD00FEAE58 /* RadioButton */,
 				A25748202023056C000F7632 /* CollectionView */,
 				A25748212023056C000F7632 /* TableView */,
+				A23B3520208D7299001D71F2 /* CoreAnimation */,
 				A2CA8082202196E900D81845 /* Animation */,
 				A2DDDC1D208ACEF600DC7A4A /* Screen */,
 				A2CA8088202196E900D81845 /* LiftCycle */,
@@ -2057,6 +2090,7 @@
 				A2CA808B202196EA00D81845 /* AnimationVC.m in Sources */,
 				A2DDDC44208ADC5C00DC7A4A /* FMDBVC.m in Sources */,
 				A2B992922068F3CA002A73B1 /* ChatTextCell.m in Sources */,
+				A23B3523208D72B5001D71F2 /* CoreAnimationVC.m in Sources */,
 				A2DDDC55208AECCD00DC7A4A /* AutoLayoutVC.m in Sources */,
 				A239CE1A208595C30033646A /* MultiTypeFlowLayoutVC.m in Sources */,
 				A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */,
@@ -2098,6 +2132,7 @@
 				A2BDD43C205F636C008AD133 /* GCDVC.m in Sources */,
 				A2D884A820872322005116A6 /* BabyBleVC.m in Sources */,
 				A2DDDC4F208AE6C300DC7A4A /* MasonryLayoutVC.m in Sources */,
+				A23B3529208D7E2E001D71F2 /* CALayerBaseVC.m in Sources */,
 				A27E8725201AC49B003E712C /* CommonTool.m in Sources */,
 				A2D884EC20886B96005116A6 /* BaseNaviVC.m in Sources */,
 				A2DDDC1C208ACDC000DC7A4A /* QRCodeVC.m in Sources */,
@@ -2109,6 +2144,7 @@
 				A2DDDC4C208AE50A00DC7A4A /* ScaleVC.m in Sources */,
 				A239CE202085D4410033646A /* MIGirdLayout.m in Sources */,
 				A20D5DFE1FD14549000E191D /* AppDelegate.m in Sources */,
+				A23B3526208D7E16001D71F2 /* CALayerVC.m in Sources */,
 				A239CE262085D8B20033646A /* MILineLayout.m in Sources */,
 				A2D884A620872322005116A6 /* BluetoothCell.m in Sources */,
 				A26D17342043BDB80064DECF /* LoginVC.m in Sources */,
@@ -2125,6 +2161,7 @@
 				A2BDD423205F557C008AD133 /* MultiThreadVC.m in Sources */,
 				A26D17302043A4880064DECF /* WelcomeVC.m in Sources */,
 				A2B992832068F0C7002A73B1 /* ChatVC.m in Sources */,
+				A23B352C208D7EC8001D71F2 /* CALayerYSDHVC.m in Sources */,
 				A239CE302085E4930033646A /* NetModel.m in Sources */,
 				A288F9812089DB2800DD4CA0 /* HorizontalCollectionVC.m in Sources */,
 				A25748282023059D000F7632 /* CollectionViewVC.m in Sources */,
@@ -2146,6 +2183,7 @@
 				A239CE362085E4C30033646A /* AFNetWorkVC.m in Sources */,
 				A2BDD42D205F5754008AD133 /* BaseModel.m in Sources */,
 				A2B992A12068F42F002A73B1 /* ChatVideoCell.m in Sources */,
+				A23B352F208D81C0001D71F2 /* CAClockVC.m in Sources */,
 				A2DDDC35208AD97200DC7A4A /* DataBaseModel.m in Sources */,
 				A241D22B2047A32A005A3BC5 /* UIColor+Category.m in Sources */,
 			);

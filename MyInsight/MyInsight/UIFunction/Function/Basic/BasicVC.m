@@ -21,6 +21,7 @@
 #import "CYuYanVC.h"
 #import "PortraitScreenVC.h" // 竖屏
 #import "ViewLayoutVC.h"
+#import "CoreAnimationVC.h" // 核心动画
 
 @interface BasicVC ()<UITableViewDelegate, UITableViewDataSource>
 // LEFT
@@ -41,12 +42,13 @@ static const NSString *XieYiStr = @"协议";
 static const NSString *AnimationStr = @"动画";
 static const NSString *TableViewStr = @"TableView";
 static const NSString *CollectViewStr = @"CollectView";
-static const NSString *radioButtonStr = @"单选按钮🔘 基本表单";
+static const NSString *RadioButtonStr = @"单选按钮🔘 基本表单";
 static const NSString *MultiThreadString = @"多线程";
 static const NSString *CYuYanString = @"C语言";
 static const NSString *RunLoopString = @"RunLoop";
 static const NSString *ScreenStr = @"横竖屏";
 static const NSString *ViewLayoutStr = @"约束布局";
+static const NSString *CoreAnimationStr = @"核心动画";
 
 @implementation BasicVC
 
@@ -85,7 +87,7 @@ static const NSString *ViewLayoutStr = @"约束布局";
 // 处理数据
 - (void)handleTableViewData {
     // 数组
-    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, ShouShiStr, XieYiStr, AnimationStr, TableViewStr, CollectViewStr, radioButtonStr, ScreenStr, MultiThreadString, ViewLayoutStr];
+    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, ShouShiStr, XieYiStr, AnimationStr, CoreAnimationStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, MultiThreadString, ViewLayoutStr];
 }
 
 #pragma mark - 创建TableView
@@ -167,6 +169,12 @@ static const NSString *ViewLayoutStr = @"约束布局";
         animationVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:animationVC animated:YES];
     }
+    if ([cellString isEqual:CoreAnimationStr]) {
+        // 核心动画
+        CoreAnimationVC *coreAnimationVC = [[CoreAnimationVC alloc] init];
+        coreAnimationVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:coreAnimationVC animated:YES];
+    }
     if ([cellString isEqual:TableViewStr]) {
         // TableView
         TableViewVC *tableViewVC = [[TableViewVC alloc] init];
@@ -179,7 +187,7 @@ static const NSString *ViewLayoutStr = @"约束布局";
         collectionViewVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:collectionViewVC animated:YES];
     }
-    if ([cellString isEqual:radioButtonStr]) {
+    if ([cellString isEqual:RadioButtonStr]) {
         // 单选button
         RadioButtonVC *radioButtonVC = [[RadioButtonVC alloc] init];
         radioButtonVC.hidesBottomBarWhenPushed = YES;
