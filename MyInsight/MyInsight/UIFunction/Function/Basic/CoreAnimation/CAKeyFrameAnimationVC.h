@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CALayerVC.h"
 
-@interface CAKeyFrameAnimationVC : UIViewController
+@interface CAKeyFrameAnimationVC : CALayerVC
+
+@end
+
+@interface DrawView : UIView
 
 @end

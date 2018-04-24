@@ -163,6 +163,16 @@
 		A2CDD256208DD022006DF86E /* 小新.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2CDD255208DD021006DF86E /* 小新.jpg */; };
 		A2CDD258208DD3CA006DF86E /* 卡哇伊.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2CDD257208DD3CA006DF86E /* 卡哇伊.jpg */; };
 		A2CDD25C208DDC2C006DF86E /* PhysicalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD25B208DDC2C006DF86E /* PhysicalVC.m */; };
+		A2CDD260208EC6D7006DF86E /* CATransition3.png in Resources */ = {isa = PBXBuildFile; fileRef = A2CDD25D208EC6D6006DF86E /* CATransition3.png */; };
+		A2CDD261208EC6D7006DF86E /* CATransition1.png in Resources */ = {isa = PBXBuildFile; fileRef = A2CDD25E208EC6D6006DF86E /* CATransition1.png */; };
+		A2CDD262208EC6D7006DF86E /* CATransition2.png in Resources */ = {isa = PBXBuildFile; fileRef = A2CDD25F208EC6D7006DF86E /* CATransition2.png */; };
+		A2CDD266208ED1DE006DF86E /* PSBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD265208ED1DE006DF86E /* PSBaseView.m */; };
+		A2CDD269208ED1F5006DF86E /* PSSnapView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD268208ED1F5006DF86E /* PSSnapView.m */; };
+		A2CDD26C208ED20B006DF86E /* PSPushView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD26B208ED20B006DF86E /* PSPushView.m */; };
+		A2CDD26F208ED220006DF86E /* PSAttachmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD26E208ED220006DF86E /* PSAttachmentView.m */; };
+		A2CDD272208ED232006DF86E /* PSSpringView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD271208ED232006DF86E /* PSSpringView.m */; };
+		A2CDD275208ED245006DF86E /* PSCollisionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD274208ED245006DF86E /* PSCollisionView.m */; };
+		A2CDD27B208ED7A1006DF86E /* PSDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD27A208ED7A1006DF86E /* PSDemoVC.m */; };
 		A2D8849B208719CC005116A6 /* HTTPTOOL.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D8849A208719CC005116A6 /* HTTPTOOL.m */; };
 		A2D884A520872322005116A6 /* BluetoothCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2D8849D20872322005116A6 /* BluetoothCell.xib */; };
 		A2D884A620872322005116A6 /* BluetoothCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D8849F20872322005116A6 /* BluetoothCell.m */; };
@@ -473,6 +483,23 @@
 		A2CDD257208DD3CA006DF86E /* 卡哇伊.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "卡哇伊.jpg"; sourceTree = "<group>"; };
 		A2CDD25A208DDC2C006DF86E /* PhysicalVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhysicalVC.h; sourceTree = "<group>"; };
 		A2CDD25B208DDC2C006DF86E /* PhysicalVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhysicalVC.m; sourceTree = "<group>"; };
+		A2CDD25D208EC6D6006DF86E /* CATransition3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CATransition3.png; sourceTree = "<group>"; };
+		A2CDD25E208EC6D6006DF86E /* CATransition1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CATransition1.png; sourceTree = "<group>"; };
+		A2CDD25F208EC6D7006DF86E /* CATransition2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CATransition2.png; sourceTree = "<group>"; };
+		A2CDD264208ED1DE006DF86E /* PSBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSBaseView.h; sourceTree = "<group>"; };
+		A2CDD265208ED1DE006DF86E /* PSBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSBaseView.m; sourceTree = "<group>"; };
+		A2CDD267208ED1F5006DF86E /* PSSnapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSSnapView.h; sourceTree = "<group>"; };
+		A2CDD268208ED1F5006DF86E /* PSSnapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSSnapView.m; sourceTree = "<group>"; };
+		A2CDD26A208ED20B006DF86E /* PSPushView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSPushView.h; sourceTree = "<group>"; };
+		A2CDD26B208ED20B006DF86E /* PSPushView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSPushView.m; sourceTree = "<group>"; };
+		A2CDD26D208ED220006DF86E /* PSAttachmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAttachmentView.h; sourceTree = "<group>"; };
+		A2CDD26E208ED220006DF86E /* PSAttachmentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAttachmentView.m; sourceTree = "<group>"; };
+		A2CDD270208ED232006DF86E /* PSSpringView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSSpringView.h; sourceTree = "<group>"; };
+		A2CDD271208ED232006DF86E /* PSSpringView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSSpringView.m; sourceTree = "<group>"; };
+		A2CDD273208ED245006DF86E /* PSCollisionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSCollisionView.h; sourceTree = "<group>"; };
+		A2CDD274208ED245006DF86E /* PSCollisionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSCollisionView.m; sourceTree = "<group>"; };
+		A2CDD279208ED7A0006DF86E /* PSDemoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSDemoVC.h; sourceTree = "<group>"; };
+		A2CDD27A208ED7A1006DF86E /* PSDemoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSDemoVC.m; sourceTree = "<group>"; };
 		A2D88499208719CC005116A6 /* HTTPTOOL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPTOOL.h; sourceTree = "<group>"; };
 		A2D8849A208719CC005116A6 /* HTTPTOOL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPTOOL.m; sourceTree = "<group>"; };
 		A2D8849D20872322005116A6 /* BluetoothCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BluetoothCell.xib; sourceTree = "<group>"; };
@@ -1458,6 +1485,9 @@
 		A2CDD254208DD021006DF86E /* image */ = {
 			isa = PBXGroup;
 			children = (
+				A2CDD25E208EC6D6006DF86E /* CATransition1.png */,
+				A2CDD25F208EC6D7006DF86E /* CATransition2.png */,
+				A2CDD25D208EC6D6006DF86E /* CATransition3.png */,
 				A2CDD257208DD3CA006DF86E /* 卡哇伊.jpg */,
 				A2CDD255208DD021006DF86E /* 小新.jpg */,
 			);
@@ -1469,8 +1499,30 @@
 			children = (
 				A2CDD25A208DDC2C006DF86E /* PhysicalVC.h */,
 				A2CDD25B208DDC2C006DF86E /* PhysicalVC.m */,
+				A2CDD279208ED7A0006DF86E /* PSDemoVC.h */,
+				A2CDD27A208ED7A1006DF86E /* PSDemoVC.m */,
+				A2CDD263208ED1BA006DF86E /* View */,
 			);
 			path = Physical;
+			sourceTree = "<group>";
+		};
+		A2CDD263208ED1BA006DF86E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2CDD264208ED1DE006DF86E /* PSBaseView.h */,
+				A2CDD265208ED1DE006DF86E /* PSBaseView.m */,
+				A2CDD267208ED1F5006DF86E /* PSSnapView.h */,
+				A2CDD268208ED1F5006DF86E /* PSSnapView.m */,
+				A2CDD26A208ED20B006DF86E /* PSPushView.h */,
+				A2CDD26B208ED20B006DF86E /* PSPushView.m */,
+				A2CDD26D208ED220006DF86E /* PSAttachmentView.h */,
+				A2CDD26E208ED220006DF86E /* PSAttachmentView.m */,
+				A2CDD270208ED232006DF86E /* PSSpringView.h */,
+				A2CDD271208ED232006DF86E /* PSSpringView.m */,
+				A2CDD273208ED245006DF86E /* PSCollisionView.h */,
+				A2CDD274208ED245006DF86E /* PSCollisionView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A2D88498208719CC005116A6 /* Tool */ = {
@@ -1956,6 +2008,7 @@
 				A20D5DFB1FD14549000E191D /* LaunchScreen.storyboard in Resources */,
 				A22C4DD21FFC777A0079F7C2 /* pin_purple_s@2x.png in Resources */,
 				A22C4DC01FFC777A0079F7C2 /* route_pin.png in Resources */,
+				A2CDD262208EC6D7006DF86E /* CATransition2.png in Resources */,
 				A22C4DC91FFC777A0079F7C2 /* compass48@2x.png in Resources */,
 				A22C4DD01FFC777A0079F7C2 /* pin_red_s.png in Resources */,
 				A2B992A22068F42F002A73B1 /* ChatVideoCell.xib in Resources */,
@@ -1977,6 +2030,8 @@
 				A22C4DC11FFC777A0079F7C2 /* pin_head_s.png in Resources */,
 				A2B9928E2068F3A6002A73B1 /* ChatListCell.xib in Resources */,
 				A20D5E001FD14549000E191D /* Main.storyboard in Resources */,
+				A2CDD261208EC6D7006DF86E /* CATransition1.png in Resources */,
+				A2CDD260208EC6D7006DF86E /* CATransition3.png in Resources */,
 				A2B992932068F3CA002A73B1 /* ChatTextCell.xib in Resources */,
 				A22C4DC41FFC777A0079F7C2 /* pin_purple_s.png in Resources */,
 			);
@@ -2155,11 +2210,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2CDD266208ED1DE006DF86E /* PSBaseView.m in Sources */,
 				A288F9842089DB4100DD4CA0 /* VerticalCollectionVC.m in Sources */,
 				A2A516042057634400EC5AA6 /* RadioButton.m in Sources */,
 				A2DDDC44208ADC5C00DC7A4A /* FMDBVC.m in Sources */,
 				A2CDD23F208DB6CA006DF86E /* ZDTPVC.m in Sources */,
 				A2B992922068F3CA002A73B1 /* ChatTextCell.m in Sources */,
+				A2CDD272208ED232006DF86E /* PSSpringView.m in Sources */,
 				A2CDD242208DB6EA006DF86E /* YinLZDTVC.m in Sources */,
 				A23B3523208D72B5001D71F2 /* CoreAnimationVC.m in Sources */,
 				A2DDDC55208AECCD00DC7A4A /* AutoLayoutVC.m in Sources */,
@@ -2168,6 +2225,7 @@
 				A2B9927820623EA3002A73B1 /* OpenGLVC.m in Sources */,
 				A2CDD239208DB0F9006DF86E /* CAAnimationGroupVC.m in Sources */,
 				A288F97E2089D2CE00DD4CA0 /* NormalCollectionVC.m in Sources */,
+				A2CDD275208ED245006DF86E /* PSCollisionView.m in Sources */,
 				A26CE4A6201971C50012EC69 /* CustomPointAnnotation.m in Sources */,
 				A257482F202315C0000F7632 /* RFQuiltLayout.m in Sources */,
 				A2DDDC26208ACEF600DC7A4A /* PortraitScreenVC.m in Sources */,
@@ -2196,7 +2254,9 @@
 				A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */,
 				A2D884F420897942005116A6 /* RunLoopVC.m in Sources */,
 				A2DDDC19208ACDC000DC7A4A /* DataBaseVC.m in Sources */,
+				A2CDD27B208ED7A1006DF86E /* PSDemoVC.m in Sources */,
 				A2DDDC48208AE20B00DC7A4A /* ViewLayoutVC.m in Sources */,
+				A2CDD26F208ED220006DF86E /* PSAttachmentView.m in Sources */,
 				A2D8849B208719CC005116A6 /* HTTPTOOL.m in Sources */,
 				A2B992B32069F4FB002A73B1 /* ChatContentModel.m in Sources */,
 				A2B9929C2068F40D002A73B1 /* ChatAudioCell.m in Sources */,
@@ -2227,8 +2287,10 @@
 				A26D17342043BDB80064DECF /* LoginVC.m in Sources */,
 				A257482B202305B9000F7632 /* TableViewVC.m in Sources */,
 				A2DDDC25208ACEF600DC7A4A /* LandscapeScreenVC.m in Sources */,
+				A2CDD26C208ED20B006DF86E /* PSPushView.m in Sources */,
 				A20D5DFD1FD14549000E191D /* main.m in Sources */,
 				A239CE2D2085E4780033646A /* NetWorkVC.m in Sources */,
+				A2CDD269208ED1F5006DF86E /* PSSnapView.m in Sources */,
 				A2BA3564207C9F4C006D1B00 /* CYuYanVC.m in Sources */,
 				A2BDD442205F639E008AD133 /* LockVC.m in Sources */,
 				A26CE48F2018A0BE0012EC69 /* AdvanceVC.m in Sources */,

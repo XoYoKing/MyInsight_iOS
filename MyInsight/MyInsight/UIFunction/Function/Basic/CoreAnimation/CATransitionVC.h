@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CALayerVC.h"
 
-@interface CATransitionVC : UIViewController
+@interface CATransitionVC : CALayerVC
 
 @end

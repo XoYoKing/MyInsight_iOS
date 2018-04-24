@@ -54,7 +54,7 @@
 #pragma mark - 设置蓝牙协议哦
 -(void)setupBabyBluetoothDelegate {
     // 设置扫描到设备的委托
-    __weak typeof(self) weakSelf = self;
+    //__weak typeof(self) weakSelf = self;
     // 发现设备
 //    [self.babyBluetooth setBlockOnDiscoverToPeripherals:^(CBCentralManager *central, CBPeripheral *peripheral, NSDictionary *advertisementData, NSNumber *RSSI) {
 //        // 初始化数组

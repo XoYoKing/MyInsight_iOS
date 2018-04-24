@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CALayerVC.h"
 
-
-@interface CABasicAnimationVC : UIViewController
+@interface CABasicAnimationVC : CALayerVC
 
 @end
