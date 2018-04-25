@@ -71,6 +71,8 @@
 		A2419E89AB28D022C3D01AE0 /* libPods-MyInsight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D110F761EC3A481896E9E0EB /* libPods-MyInsight.a */; };
 		A241D22420468E68005A3BC5 /* MQTTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22320468E68005A3BC5 /* MQTTVC.m */; };
 		A241D22B2047A32A005A3BC5 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22A2047A32A005A3BC5 /* UIColor+Category.m */; };
+		A242C1B2209019A100A6A9F7 /* RSAEncryptVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A242C1B1209019A100A6A9F7 /* RSAEncryptVC.m */; };
+		A242C1B620902BFA00A6A9F7 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = A242C1B520902BFA00A6A9F7 /* RSA.m */; };
 		A25748282023059D000F7632 /* CollectionViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A25748272023059D000F7632 /* CollectionViewVC.m */; };
 		A257482B202305B9000F7632 /* TableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A257482A202305B9000F7632 /* TableViewVC.m */; };
 		A257482F202315C0000F7632 /* RFQuiltLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A257482E202315C0000F7632 /* RFQuiltLayout.m */; };
@@ -319,6 +321,10 @@
 		A241D22320468E68005A3BC5 /* MQTTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQTTVC.m; sourceTree = "<group>"; };
 		A241D2292047A32A005A3BC5 /* UIColor+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
 		A241D22A2047A32A005A3BC5 /* UIColor+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
+		A242C1B0209019A100A6A9F7 /* RSAEncryptVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSAEncryptVC.h; sourceTree = "<group>"; };
+		A242C1B1209019A100A6A9F7 /* RSAEncryptVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSAEncryptVC.m; sourceTree = "<group>"; };
+		A242C1B420902BFA00A6A9F7 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+		A242C1B520902BFA00A6A9F7 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
 		A25748262023059D000F7632 /* CollectionViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewVC.h; sourceTree = "<group>"; };
 		A25748272023059D000F7632 /* CollectionViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewVC.m; sourceTree = "<group>"; };
 		A2574829202305B9000F7632 /* TableViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewVC.h; sourceTree = "<group>"; };
@@ -1062,6 +1068,25 @@
 			path = MQTT;
 			sourceTree = "<group>";
 		};
+		A242C1AF2090197900A6A9F7 /* RSAEncrypt */ = {
+			isa = PBXGroup;
+			children = (
+				A242C1B0209019A100A6A9F7 /* RSAEncryptVC.h */,
+				A242C1B1209019A100A6A9F7 /* RSAEncryptVC.m */,
+				A242C1B320902BE400A6A9F7 /* RSATools */,
+			);
+			path = RSAEncrypt;
+			sourceTree = "<group>";
+		};
+		A242C1B320902BE400A6A9F7 /* RSATools */ = {
+			isa = PBXGroup;
+			children = (
+				A242C1B420902BFA00A6A9F7 /* RSA.h */,
+				A242C1B520902BFA00A6A9F7 /* RSA.m */,
+			);
+			path = RSATools;
+			sourceTree = "<group>";
+		};
 		A25748202023056C000F7632 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1100,6 +1125,7 @@
 				A26CE48E2018A0BE0012EC69 /* AdvanceVC.m */,
 				A241D22120468E52005A3BC5 /* MQTT */,
 				A2CA807B2021567600D81845 /* TouchID */,
+				A242C1AF2090197900A6A9F7 /* RSAEncrypt */,
 				A27E873D201ACF6A003E712C /* BlueTooth */,
 				A239CE272085E44C0033646A /* NetWork */,
 				A2DDDC0F208ACDC000DC7A4A /* DataBase */,
@@ -2216,6 +2242,7 @@
 				A2DDDC44208ADC5C00DC7A4A /* FMDBVC.m in Sources */,
 				A2CDD23F208DB6CA006DF86E /* ZDTPVC.m in Sources */,
 				A2B992922068F3CA002A73B1 /* ChatTextCell.m in Sources */,
+				A242C1B620902BFA00A6A9F7 /* RSA.m in Sources */,
 				A2CDD272208ED232006DF86E /* PSSpringView.m in Sources */,
 				A2CDD242208DB6EA006DF86E /* YinLZDTVC.m in Sources */,
 				A23B3523208D72B5001D71F2 /* CoreAnimationVC.m in Sources */,
@@ -2280,6 +2307,7 @@
 				A27E875C201AD2B2003E712C /* MusicVC.m in Sources */,
 				A2DDDC4C208AE50A00DC7A4A /* ScaleVC.m in Sources */,
 				A239CE202085D4410033646A /* MIGirdLayout.m in Sources */,
+				A242C1B2209019A100A6A9F7 /* RSAEncryptVC.m in Sources */,
 				A20D5DFE1FD14549000E191D /* AppDelegate.m in Sources */,
 				A23B3526208D7E16001D71F2 /* CALayerVC.m in Sources */,
 				A239CE262085D8B20033646A /* MILineLayout.m in Sources */,
