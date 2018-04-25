@@ -14,6 +14,12 @@
 
 @implementation CYuYanVC
 
+/*
+ iOS Enum-枚举的正确使用
+ https://blog.csdn.net/snow_xuey/article/details/55258875
+ 
+ */
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
