@@ -3,6 +3,14 @@
 
 
 
+
+
+首先感谢NJHu大神提供的[iOSProject](https://github.com/NJHu/iOSProject)这个demo模版。我在原demo的基础上套用了自己的工程结构，并添加了一些其他的功能如:蓝牙、地图等。
+
+其次集成我的这个iOSdemo时候，多处借鉴N多大神的源码，在此一一谢过，我的一路走来，感谢每位大神和师长。
+
+
+
 关于iOS知识和功能的DEMO合集，代码语言OC，关于Swift版本的Demo合集尚未整理。
 
 
