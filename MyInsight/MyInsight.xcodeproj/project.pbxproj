@@ -212,6 +212,7 @@
 		A2E9DA222091BD210061B1E7 /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA212091BD210061B1E7 /* NSData+AES.m */; };
 		A2E9DA2B2091C50A0061B1E7 /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA2A2091C50A0061B1E7 /* NSData+AES256.m */; };
 		A2E9DA2E2091C5580061B1E7 /* NSString+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA2D2091C5580061B1E7 /* NSString+AES256.m */; };
+		A2E9DA312091D3FB0061B1E7 /* RSAUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA2F2091D3FA0061B1E7 /* RSAUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -684,6 +685,8 @@
 		A2E9DA2A2091C50A0061B1E7 /* NSData+AES256.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES256.m"; sourceTree = "<group>"; };
 		A2E9DA2C2091C5580061B1E7 /* NSString+AES256.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+AES256.h"; sourceTree = "<group>"; };
 		A2E9DA2D2091C5580061B1E7 /* NSString+AES256.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+AES256.m"; sourceTree = "<group>"; };
+		A2E9DA2F2091D3FA0061B1E7 /* RSAUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAUtil.m; sourceTree = "<group>"; };
+		A2E9DA302091D3FA0061B1E7 /* RSAUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAUtil.h; sourceTree = "<group>"; };
 		B34F5016CAA45D7BD71933A9 /* Pods-MyInsightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyInsightTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyInsightTests/Pods-MyInsightTests.release.xcconfig"; sourceTree = "<group>"; };
 		D110F761EC3A481896E9E0EB /* libPods-MyInsight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyInsight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1086,18 +1089,20 @@
 				A242C1B0209019A100A6A9F7 /* RSAEncryptVC.h */,
 				A242C1B1209019A100A6A9F7 /* RSAEncryptVC.m */,
 				A2E9DA1C2091BCE20061B1E7 /* AES */,
-				A242C1B320902BE400A6A9F7 /* RSATools */,
+				A242C1B320902BE400A6A9F7 /* RSA */,
 			);
 			path = RSAEncrypt;
 			sourceTree = "<group>";
 		};
-		A242C1B320902BE400A6A9F7 /* RSATools */ = {
+		A242C1B320902BE400A6A9F7 /* RSA */ = {
 			isa = PBXGroup;
 			children = (
+				A2E9DA302091D3FA0061B1E7 /* RSAUtil.h */,
+				A2E9DA2F2091D3FA0061B1E7 /* RSAUtil.m */,
 				A242C1B420902BFA00A6A9F7 /* RSA.h */,
 				A242C1B520902BFA00A6A9F7 /* RSA.m */,
 			);
-			path = RSATools;
+			path = RSA;
 			sourceTree = "<group>";
 		};
 		A25748202023056C000F7632 /* CollectionView */ = {
@@ -2231,6 +2236,7 @@
 				A2CDD245208DB743006DF86E /* HDZSQVC.m in Sources */,
 				A26CE4862018A0880012EC69 /* BasicVC.m in Sources */,
 				A2B43C3320575EE700FEAE58 /* RadioButtonVC.m in Sources */,
+				A2E9DA312091D3FB0061B1E7 /* RSAUtil.m in Sources */,
 				A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */,
 				A2D884F420897942005116A6 /* RunLoopVC.m in Sources */,
 				A2DDDC19208ACDC000DC7A4A /* DataBaseVC.m in Sources */,

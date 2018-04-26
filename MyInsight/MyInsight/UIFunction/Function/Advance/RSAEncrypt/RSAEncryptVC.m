@@ -13,11 +13,21 @@
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonCryptor.h> // DES加密
 #import <GTMBase64.h> // DES加密
+#import "NSString+AES.h" // AES加密
+#import "RSAUtil.h" // RSA加密
 
 //密钥
 #define gkey            @"mobilewinx@easipass@1234"
 //偏移量
 #define gIv             @"01234567"
+
+#define AES_KEY @"12345678"
+
+// 公钥
+#define RSA_Public_key         @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCxuWhp6EgQfrrSBtxlBwbU35lhjC67X0Y1KrhqolIfYo3/yWV1eryYVUhk5xeHsbKg9RHD9TpIZRUWIW5a8MrMBcgr1A/dgIHi2EM28drH4JRTmkTLVHReggFbb046k0ISpLW3XVW0jHB3/z3S1c/NT9V63SQK6WJ65/YP5xISNQIDAQAB"
+
+// 私钥
+#define RSA_Privite_key        @"MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBALG5aGnoSBB+utIG3GUHBtTfmWGMLrtfRjUquGqiUh9ijf/JZXV6vJhVSGTnF4exsqD1EcP1OkhlFRYhblrwyswFyCvUD92AgeLYQzbx2sfglFOaRMtUdF6CAVtvTjqTQhKktbddVbSMcHf/PdLVz81P1XrdJArpYnrn9g/nEhI1AgMBAAECgYBEbsMAvLs69sFS6+djU1BTGYIC6Kp55ZawFDIMhVIf2aAZ1N+nW8pQ0c3dZIpP6qGAjrz3em6lv55d9iN7Cura/g57Rk4S3SRo5u4hWUd16NeIVP+HfreKIgZ6jwKQTfXt2KzDuIAHudvwT2UJBePgIIDQoKMEq4khtFiRGS1UgQJBAN/KpSOiRiGup8h/Iqespwfxyrqn5/4iyw1tpJCWzHddP7nJGpYmOL+ELWs/pReYclAOqH9ZIzOT2K8ZLt6yBOECQQDLTXZowK8wFgMudAE5TStC/zl3TAKMu/Gu5wlXSMoa+nwSy/FSIQZyypGeHR2X8QhbZ1Qz+uBCJm7gEGOWMWPVAkEAp5ajsFm3V0XqE/VRSGu88fAaN0nCK8h2cunm0Ph8ye6k6EY3iLW6zYD4WlZhFZhuEpHHkQZ5nAhdvlKHjPGXQQJAYOtF1rx9B/SGgb/F0ZZrWF4p/ChdUtBKcHIt7tGBoAjn22IkYl3iIBlYAEOrFwNOU5zX9IvWG1MNKn5Fq5VSHQJBAJG5xSY0IKzXWDsGnPIa9XlSTv1zl7RCGNDo7O1zh+5J/kjDpU9M2fIXEtzvGYHiOffz9FBh5ka69JJNFWoWAiw="
 
 // 加密的枚举值
 /*
@@ -424,22 +434,36 @@ typedef NS_ENUM(NSUInteger, EncryptType) {
  [iOS AES的加密解密](https://blog.csdn.net/quanqinyang/article/details/40111309)
  [【安全篇】iOS中使用AES 256对称加密](https://blog.methodname.com/ioszhong-shi-yong-aes-256dui-cheng-jia-mi/)
  [iOS开发之Objective-c的AES加密和解密算法的实现](https://www.lidaren.com/archives/1470)
+ [iOS开发探索-AES加解密](https://www.jianshu.com/p/3f524fcd3aaf)
+ [iOS CommonCrypto 对称加密 AES ecb,cbc](https://www.cnblogs.com/cocoajin/p/6150203.html)
  */
 - (void)aesEncrypt {
     NSLog(@"AES加密");
+    //self.encryptTextView.text = [self.originTextField.text AES256_Encrypt:AES_KEY];
+    self.encryptTextView.text = [[[self.originTextField.text dataUsingEncoding:NSUTF8StringEncoding] AES256_Encrypt:AES_KEY] newStringInBase64FromData];
 }
 
 - (void)aesDecrypt {
     NSLog(@"AES解密");
+    //self.decryptTextView.text = [self.encryptTextView.text AES256_Decrypt:AES_KEY];
+    self.decryptTextView.text = [[NSString alloc] initWithData:[[[self.originTextField.text dataUsingEncoding:NSUTF8StringEncoding] AES256_Encrypt:AES_KEY] AES256_Decrypt:AES_KEY] encoding:NSUTF8StringEncoding];
 }
 
 #pragma mark - RSA加密
+/*
+ 好像这RSA两个文件他么的一样的
+ */
+// 公钥加密数据
 - (void)rsaEncrypt {
     NSLog(@"RSA加密");
+    // 生成一个随机的8位字符串，作为des加密数据的key,对数据进行des加密，对加密后的数据用公钥再进行一次rsa加密
+    self.encryptTextView.text = [RSAUtil encryptString:self.originTextField.text publicKey:RSA_Public_key];
 }
 
+// 私钥解密数据
 - (void)rsaDecryPt {
     NSLog(@"RSA解密");
+    self.decryptTextView.text = [RSAUtil decryptString:self.encryptTextView.text privateKey:RSA_Privite_key];
 }
 
 #pragma mark - RSA JAVA加密
