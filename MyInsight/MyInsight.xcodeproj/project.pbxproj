@@ -208,6 +208,10 @@
 		A2E4E7212004BFDF00EC3D63 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E71A2004BFDE00EC3D63 /* libavdevice.a */; };
 		A2E4E7222004BFDF00EC3D63 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E71B2004BFDE00EC3D63 /* libswresample.a */; };
 		A2E4E7232004BFDF00EC3D63 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E71C2004BFDE00EC3D63 /* libswscale.a */; };
+		A2E9DA1F2091BD0E0061B1E7 /* NSString+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA1E2091BD0E0061B1E7 /* NSString+AES.m */; };
+		A2E9DA222091BD210061B1E7 /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA212091BD210061B1E7 /* NSData+AES.m */; };
+		A2E9DA2B2091C50A0061B1E7 /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA2A2091C50A0061B1E7 /* NSData+AES256.m */; };
+		A2E9DA2E2091C5580061B1E7 /* NSString+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA2D2091C5580061B1E7 /* NSString+AES256.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -672,6 +676,14 @@
 		A2E4E71A2004BFDE00EC3D63 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavdevice.a; sourceTree = "<group>"; };
 		A2E4E71B2004BFDE00EC3D63 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswresample.a; sourceTree = "<group>"; };
 		A2E4E71C2004BFDE00EC3D63 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswscale.a; sourceTree = "<group>"; };
+		A2E9DA1D2091BD0E0061B1E7 /* NSString+AES.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+AES.h"; sourceTree = "<group>"; };
+		A2E9DA1E2091BD0E0061B1E7 /* NSString+AES.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+AES.m"; sourceTree = "<group>"; };
+		A2E9DA202091BD210061B1E7 /* NSData+AES.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+AES.h"; sourceTree = "<group>"; };
+		A2E9DA212091BD210061B1E7 /* NSData+AES.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES.m"; sourceTree = "<group>"; };
+		A2E9DA292091C50A0061B1E7 /* NSData+AES256.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+AES256.h"; sourceTree = "<group>"; };
+		A2E9DA2A2091C50A0061B1E7 /* NSData+AES256.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES256.m"; sourceTree = "<group>"; };
+		A2E9DA2C2091C5580061B1E7 /* NSString+AES256.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+AES256.h"; sourceTree = "<group>"; };
+		A2E9DA2D2091C5580061B1E7 /* NSString+AES256.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+AES256.m"; sourceTree = "<group>"; };
 		B34F5016CAA45D7BD71933A9 /* Pods-MyInsightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyInsightTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyInsightTests/Pods-MyInsightTests.release.xcconfig"; sourceTree = "<group>"; };
 		D110F761EC3A481896E9E0EB /* libPods-MyInsight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyInsight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1073,6 +1085,7 @@
 			children = (
 				A242C1B0209019A100A6A9F7 /* RSAEncryptVC.h */,
 				A242C1B1209019A100A6A9F7 /* RSAEncryptVC.m */,
+				A2E9DA1C2091BCE20061B1E7 /* AES */,
 				A242C1B320902BE400A6A9F7 /* RSATools */,
 			);
 			path = RSAEncrypt;
@@ -1886,6 +1899,21 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		A2E9DA1C2091BCE20061B1E7 /* AES */ = {
+			isa = PBXGroup;
+			children = (
+				A2E9DA1D2091BD0E0061B1E7 /* NSString+AES.h */,
+				A2E9DA1E2091BD0E0061B1E7 /* NSString+AES.m */,
+				A2E9DA202091BD210061B1E7 /* NSData+AES.h */,
+				A2E9DA212091BD210061B1E7 /* NSData+AES.m */,
+				A2E9DA292091C50A0061B1E7 /* NSData+AES256.h */,
+				A2E9DA2A2091C50A0061B1E7 /* NSData+AES256.m */,
+				A2E9DA2C2091C5580061B1E7 /* NSString+AES256.h */,
+				A2E9DA2D2091C5580061B1E7 /* NSString+AES256.m */,
+			);
+			path = AES;
+			sourceTree = "<group>";
+		};
 		BC4E574407F0D74F905E6702 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2168,6 +2196,7 @@
 				A2CDD272208ED232006DF86E /* PSSpringView.m in Sources */,
 				A2CDD242208DB6EA006DF86E /* YinLZDTVC.m in Sources */,
 				A23B3523208D72B5001D71F2 /* CoreAnimationVC.m in Sources */,
+				A2E9DA222091BD210061B1E7 /* NSData+AES.m in Sources */,
 				A2DDDC55208AECCD00DC7A4A /* AutoLayoutVC.m in Sources */,
 				A239CE1A208595C30033646A /* MultiTypeFlowLayoutVC.m in Sources */,
 				A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */,
@@ -2178,6 +2207,7 @@
 				A26CE4A6201971C50012EC69 /* CustomPointAnnotation.m in Sources */,
 				A257482F202315C0000F7632 /* RFQuiltLayout.m in Sources */,
 				A2DDDC26208ACEF600DC7A4A /* PortraitScreenVC.m in Sources */,
+				A2E9DA2E2091C5580061B1E7 /* NSString+AES256.m in Sources */,
 				A239CE332085E49F0033646A /* SomeView.m in Sources */,
 				A2CA807E2021568D00D81845 /* TouchIDVC.m in Sources */,
 				A2CDD233208DB0CA006DF86E /* CAKeyFrameAnimationVC.m in Sources */,
@@ -2185,6 +2215,7 @@
 				A26CE4892018A09A0012EC69 /* OtherVC.m in Sources */,
 				A27E875E201AD2B2003E712C /* AudioVC.m in Sources */,
 				A2BDD436205F5BAB008AD133 /* BaseTableVC.m in Sources */,
+				A2E9DA1F2091BD0E0061B1E7 /* NSString+AES.m in Sources */,
 				A20D5E231FD14E37000E191D /* RightRevealVC.m in Sources */,
 				A26CE4A8201971C50012EC69 /* CalloutMapAnnotation.m in Sources */,
 				A2B9928D2068F3A6002A73B1 /* ChatListCell.m in Sources */,
@@ -2244,6 +2275,7 @@
 				A2BA3564207C9F4C006D1B00 /* CYuYanVC.m in Sources */,
 				A2BDD442205F639E008AD133 /* LockVC.m in Sources */,
 				A26CE48F2018A0BE0012EC69 /* AdvanceVC.m in Sources */,
+				A2E9DA2B2091C50A0061B1E7 /* NSData+AES256.m in Sources */,
 				A26CE4A5201971C50012EC69 /* CallOutAnnotationView.m in Sources */,
 				A2BDD43F205F6392008AD133 /* OperationVC.m in Sources */,
 				A2CDD236208DB0E2006DF86E /* CATransitionVC.m in Sources */,

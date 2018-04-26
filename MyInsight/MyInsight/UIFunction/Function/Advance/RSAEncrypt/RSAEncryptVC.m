@@ -11,7 +11,13 @@
 #import "UIColor+Category.h"
 #import "RSA.h"
 #import <CommonCrypto/CommonDigest.h>
-#import <CommonCrypto/CommonCryptor.h> //
+#import <CommonCrypto/CommonCryptor.h> // DES加密
+#import <GTMBase64.h> // DES加密
+
+//密钥
+#define gkey            @"mobilewinx@easipass@1234"
+//偏移量
+#define gIv             @"01234567"
 
 // 加密的枚举值
 /*
@@ -102,6 +108,7 @@ typedef NS_ENUM(NSUInteger, EncryptType) {
     self.encryptTextView = [[UITextView alloc] init];
     [self.view addSubview:self.encryptTextView];
     self.encryptTextView.backgroundColor = [UIColor RandomColor];
+    self.encryptTextView.editable = NO; // 不可编辑
     
     // 生成解密数据Label
     self.decryptLabel = [[UILabel alloc] init];
@@ -113,6 +120,7 @@ typedef NS_ENUM(NSUInteger, EncryptType) {
     self.decryptTextView = [[UITextView alloc] init];
     [self.view addSubview:self.decryptTextView];
     self.decryptTextView.backgroundColor = [UIColor RandomColor];
+    self.decryptTextView.editable = NO; // 不可编辑
     
     // 生成加密数据Button
     self.encryptButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -188,15 +196,19 @@ typedef NS_ENUM(NSUInteger, EncryptType) {
             break;
         case EncryptTypeDES:
             NSLog(@"生成密文 DES");
+            [self desEncrypt];
             break;
         case EncryptTypeAES:
             NSLog(@"生成密文 AES");
+            [self aesEncrypt];
             break;
         case EncryptTypeRSA:
             NSLog(@"生成密文 RSA");
+            [self rsaEncrypt];
             break;
         case EncryptTypeRSA_JAVA:
             NSLog(@"生成密文 RSA_JAVA");
+            [self rsaJavaEncrypt];
             break;
         default:
             break;
@@ -220,15 +232,19 @@ typedef NS_ENUM(NSUInteger, EncryptType) {
             break;
         case EncryptTypeDES:
             NSLog(@"解密密文 DES");
+            [self desDecrypt];
             break;
         case EncryptTypeAES:
             NSLog(@"解密密文 AES");
+            [self aesDecrypt];
             break;
         case EncryptTypeRSA:
             NSLog(@"解密密文 RSA");
+            [self rsaDecryPt];
             break;
         case EncryptTypeRSA_JAVA:
             NSLog(@"解密密文 RSA_JAVA");
+            [self rsaJavaDecrypt];
             break;
         default:
             break;
@@ -320,13 +336,119 @@ typedef NS_ENUM(NSUInteger, EncryptType) {
 }
 
 /************     DES 加密      ************/
+/*
+ [iOS开发中如何使用DES加密](https://www.jianshu.com/p/4d3545674a50)
+ [iOS开发－DES加密解密算法。](https://www.jianshu.com/p/d5f932967818)
+ [iOS之DES加密](https://www.jianshu.com/p/e5df70409c73)
+ */
 #pragma mark - DES 加密
 - (void)desEncrypt {
-    
+    self.encryptTextView.text = [self encrypt:self.originTextField.text];
 }
 
 - (void)desDecrypt {
+    self.decryptTextView.text = [self decrypt:self.encryptTextView.text];
+}
+
+- (NSString*)encrypt:(NSString*)plainText {
+    NSData* data = [plainText dataUsingEncoding:NSUTF8StringEncoding];
+    size_t plainTextBufferSize = [data length];
+    const void *vplainText = (const void *)[data bytes];
     
+    CCCryptorStatus ccStatus;
+    uint8_t *bufferPtr = NULL;
+    size_t bufferPtrSize = 0;
+    size_t movedBytes = 0;
+    
+    bufferPtrSize = (plainTextBufferSize + kCCBlockSize3DES) & ~(kCCBlockSize3DES - 1);
+    bufferPtr = malloc( bufferPtrSize * sizeof(uint8_t));
+    memset((void *)bufferPtr, 0x0, bufferPtrSize);
+    
+    const void *vkey = (const void *) [gkey UTF8String];
+    const void *vinitVec = (const void *) [gIv UTF8String];
+    
+    ccStatus = CCCrypt(kCCEncrypt,
+                       kCCAlgorithm3DES,
+                       kCCOptionPKCS7Padding,
+                       vkey,
+                       kCCKeySize3DES,
+                       vinitVec,
+                       vplainText,
+                       plainTextBufferSize,
+                       (void *)bufferPtr,
+                       bufferPtrSize,
+                       &movedBytes);
+    
+    NSData *myData = [NSData dataWithBytes:(const void *)bufferPtr length:(NSUInteger)movedBytes];
+    NSString *result = [GTMBase64 stringByEncodingData:myData];
+    return result;
+}
+
+- (NSString*)decrypt:(NSString*)encryptText {
+    NSData *encryptData = [GTMBase64 decodeData:[encryptText dataUsingEncoding:NSUTF8StringEncoding]];
+    size_t plainTextBufferSize = [encryptData length];
+    const void *vplainText = [encryptData bytes];
+    
+    CCCryptorStatus ccStatus;
+    uint8_t *bufferPtr = NULL;
+    size_t bufferPtrSize = 0;
+    size_t movedBytes = 0;
+    
+    bufferPtrSize = (plainTextBufferSize + kCCBlockSize3DES) & ~(kCCBlockSize3DES - 1);
+    bufferPtr = malloc( bufferPtrSize * sizeof(uint8_t));
+    memset((void *)bufferPtr, 0x0, bufferPtrSize);
+    
+    const void *vkey = (const void *) [gkey UTF8String];
+    const void *vinitVec = (const void *) [gIv UTF8String];
+    
+    ccStatus = CCCrypt(kCCDecrypt,
+                       kCCAlgorithm3DES,
+                       kCCOptionPKCS7Padding,
+                       vkey,
+                       kCCKeySize3DES,
+                       vinitVec,
+                       vplainText,
+                       plainTextBufferSize,
+                       (void *)bufferPtr,
+                       bufferPtrSize,
+                       &movedBytes);
+    
+    NSString *result = [[NSString alloc] initWithData:[NSData dataWithBytes:(const void *)bufferPtr
+                                                                     length:(NSUInteger)movedBytes] encoding:NSUTF8StringEncoding];
+    return result;
+}
+
+#pragma mark - AES加密
+/*
+ [iOS开发之AES+Base64数据混合加密与解密](http://ios.jobbole.com/84483/)
+ [iOS AES的加密解密](https://blog.csdn.net/quanqinyang/article/details/40111309)
+ [【安全篇】iOS中使用AES 256对称加密](https://blog.methodname.com/ioszhong-shi-yong-aes-256dui-cheng-jia-mi/)
+ [iOS开发之Objective-c的AES加密和解密算法的实现](https://www.lidaren.com/archives/1470)
+ */
+- (void)aesEncrypt {
+    NSLog(@"AES加密");
+}
+
+- (void)aesDecrypt {
+    NSLog(@"AES解密");
+}
+
+#pragma mark - RSA加密
+- (void)rsaEncrypt {
+    NSLog(@"RSA加密");
+}
+
+- (void)rsaDecryPt {
+    NSLog(@"RSA解密");
+}
+
+#pragma mark - RSA JAVA加密
+- (void)rsaJavaEncrypt {
+    NSLog(@"RSA JAVA加密");
+}
+
+- (void)rsaJavaDecrypt {
+    NSLog(@"RSA JAVA解密");
 }
 
 #pragma mark - 代码约束布局
