@@ -49,6 +49,7 @@
 @property (nonatomic) NSUInteger maxWindowSize;
 @property (nonatomic) NSUInteger maxSize;
 @property (nonatomic) NSUInteger maxMessages;
+@property (strong, nonatomic) NSString *streamSSLLevel;
 
 @property (strong, nonatomic) NSDictionary<NSString *, NSNumber *> *internalSubscriptions;
 @property (strong, nonatomic) NSDictionary<NSString *, NSNumber *> *effectiveSubscriptions;
@@ -58,9 +59,20 @@
 
 #define RECONNECT_TIMER 1.0
 #define RECONNECT_TIMER_MAX_DEFAULT 64.0
-#define BACKGROUND_DISCONNECT_AFTER 8.0
 
 @implementation MQTTSessionManager
+
+- (instancetype)init {
+    self = [self initWithPersistence:MQTT_PERSISTENT
+                       maxWindowSize:MQTT_MAX_WINDOW_SIZE
+                         maxMessages:MQTT_MAX_MESSAGES
+                             maxSize:MQTT_MAX_SIZE
+          maxConnectionRetryInterval:RECONNECT_TIMER_MAX_DEFAULT
+                 connectInForeground:YES
+                      streamSSLLevel:(NSString *)kCFStreamSocketSecurityLevelNegotiatedSSL
+                               queue:dispatch_get_main_queue()];
+    return self;
+}
 
 - (MQTTSessionManager *)initWithPersistence:(BOOL)persistent
                               maxWindowSize:(NSUInteger)maxWindowSize
@@ -68,9 +80,10 @@
                                     maxSize:(NSUInteger)maxSize
                  maxConnectionRetryInterval:(NSTimeInterval)maxRetryInterval
                         connectInForeground:(BOOL)connectInForeground
+                             streamSSLLevel:(NSString *)streamSSLLevel
                                       queue:(dispatch_queue_t)queue {
     self = [super init];
-    
+    self.streamSSLLevel = streamSSLLevel;
     self.queue = queue;
     [self updateState:MQTTSessionManagerStateStarting];
     self.internalSubscriptions = [[NSMutableDictionary alloc] init];
@@ -85,7 +98,7 @@
                                                        maxRetryInterval:maxRetryInterval
                                                                   queue:self.queue
                                                          reconnectBlock:^{
-                                                             [weakSelf reconnect];
+                                                             [weakSelf reconnect:nil];
                                                          }];
 #if TARGET_OS_IPHONE == 1
     if (connectInForeground) {
@@ -95,144 +108,6 @@
     self.subscriptionLock = [[NSLock alloc] init];
     
     return self;
-}
-
-- (MQTTSessionManager *)initWithPersistence:(BOOL)persistent
-                              maxWindowSize:(NSUInteger)maxWindowSize
-                                maxMessages:(NSUInteger)maxMessages
-                                    maxSize:(NSUInteger)maxSize
-                        connectInForeground:(BOOL)connectInForeground
-                                      queue:(dispatch_queue_t)queue {
-    self = [self initWithPersistence:persistent
-                       maxWindowSize:maxWindowSize
-                         maxMessages:maxMessages
-                             maxSize:maxSize
-          maxConnectionRetryInterval:RECONNECT_TIMER_MAX_DEFAULT
-                 connectInForeground:connectInForeground
-                               queue:queue];
-    return self;
-}
-
-- (instancetype)init {
-    self = [self initWithPersistence:MQTT_PERSISTENT
-                       maxWindowSize:MQTT_MAX_WINDOW_SIZE
-                         maxMessages:MQTT_MAX_MESSAGES
-                             maxSize:MQTT_MAX_SIZE
-          maxConnectionRetryInterval:RECONNECT_TIMER_MAX_DEFAULT
-                 connectInForeground:YES
-                               queue:dispatch_get_main_queue()];
-    return self;
-}
-
-- (MQTTSessionManager *)initWithPersistence:(BOOL)persistent
-                              maxWindowSize:(NSUInteger)maxWindowSize
-                                maxMessages:(NSUInteger)maxMessages
-                                    maxSize:(NSUInteger)maxSize {
-    self = [self initWithPersistence:persistent
-                       maxWindowSize:maxWindowSize
-                         maxMessages:maxMessages
-                             maxSize:maxSize
-          maxConnectionRetryInterval:RECONNECT_TIMER_MAX_DEFAULT
-                 connectInForeground:YES
-                               queue:dispatch_get_main_queue()];
-    return self;
-}
-
-- (void)connectTo:(NSString *)host
-             port:(NSInteger)port
-              tls:(BOOL)tls
-        keepalive:(NSInteger)keepalive
-            clean:(BOOL)clean
-             auth:(BOOL)auth
-             user:(NSString *)user
-             pass:(NSString *)pass
-        willTopic:(NSString *)willTopic
-             will:(NSData *)will
-          willQos:(MQTTQosLevel)willQos
-   willRetainFlag:(BOOL)willRetainFlag
-     withClientId:(NSString *)clientId {
-    [self connectTo:host
-               port:port
-                tls:tls
-          keepalive:keepalive
-              clean:clean
-               auth:auth
-               user:user
-               pass:pass
-               will:YES
-          willTopic:willTopic
-            willMsg:will
-            willQos:willQos
-     willRetainFlag:willRetainFlag
-       withClientId:clientId];
-}
-
-- (void)connectTo:(NSString *)host
-             port:(NSInteger)port
-              tls:(BOOL)tls
-        keepalive:(NSInteger)keepalive
-            clean:(BOOL)clean
-             auth:(BOOL)auth
-             user:(NSString *)user
-             pass:(NSString *)pass
-             will:(BOOL)will
-        willTopic:(NSString *)willTopic
-          willMsg:(NSData *)willMsg
-          willQos:(MQTTQosLevel)willQos
-   willRetainFlag:(BOOL)willRetainFlag
-     withClientId:(NSString *)clientId {
-    [self connectTo:host
-               port:port
-                tls:tls
-          keepalive:keepalive
-              clean:clean
-               auth:auth
-               user:user
-               pass:pass
-               will:will
-          willTopic:willTopic
-            willMsg:willMsg
-            willQos:willQos
-     willRetainFlag:willRetainFlag
-       withClientId:clientId
-     securityPolicy:nil
-       certificates:nil];
-}
-
-- (void)connectTo:(NSString *)host
-             port:(NSInteger)port
-              tls:(BOOL)tls
-        keepalive:(NSInteger)keepalive
-            clean:(BOOL)clean
-             auth:(BOOL)auth
-             user:(NSString *)user
-             pass:(NSString *)pass
-             will:(BOOL)will
-        willTopic:(NSString *)willTopic
-          willMsg:(NSData *)willMsg
-          willQos:(MQTTQosLevel)willQos
-   willRetainFlag:(BOOL)willRetainFlag
-     withClientId:(NSString *)clientId
-   securityPolicy:(MQTTSSLSecurityPolicy *)securityPolicy
-     certificates:(NSArray *)certificates {
-    [self connectTo:host
-               port:port
-                tls:tls
-          keepalive:keepalive
-              clean:clean
-               auth:auth
-               user:user
-               pass:pass
-               will:will
-          willTopic:willTopic
-            willMsg:willMsg
-            willQos:willQos
-     willRetainFlag:willRetainFlag
-       withClientId:clientId
-     securityPolicy:securityPolicy
-       certificates:certificates
-      protocolLevel:MQTTProtocolVersion311 // use this level as default, keeps it backwards compatible
-    ];
 }
 
 - (void)connectTo:(NSString *)host
@@ -251,7 +126,8 @@
      withClientId:(NSString *)clientId
    securityPolicy:(MQTTSSLSecurityPolicy *)securityPolicy
      certificates:(NSArray *)certificates
-    protocolLevel:(MQTTProtocolVersion)protocolLevel {
+    protocolLevel:(MQTTProtocolVersion)protocolLevel
+   connectHandler:(MQTTConnectHandler)connectHandler {
     DDLogVerbose(@"MQTTSessionManager connectTo:%@", host);
     BOOL shouldReconnect = self.session != nil;
     if (!self.session ||
@@ -299,35 +175,35 @@
                                                      willQoS:willQos
                                               willRetainFlag:willRetainFlag
                                                protocolLevel:protocolLevel
-                                                     queue:self.queue
+                                                       queue:self.queue
                                               securityPolicy:securityPolicy
                                                 certificates:certificates];
-
+        self.session.streamSSLLevel = self.streamSSLLevel;
         MQTTCoreDataPersistence *persistence = [[MQTTCoreDataPersistence alloc] init];
-
+        
         persistence.persistent = self.persistent;
         persistence.maxWindowSize = self.maxWindowSize;
         persistence.maxSize = self.maxSize;
         persistence.maxMessages = self.maxMessages;
-
+        
         self.session.persistence = persistence;
-
+        
         self.session.delegate = self;
         self.reconnectFlag = FALSE;
     }
     if (shouldReconnect) {
         DDLogVerbose(@"[MQTTSessionManager] reconnecting");
-        [self disconnect];
-        [self reconnect];
+        [self disconnectWithDisconnectHandler:nil];
+        [self reconnect:connectHandler];
     } else {
         DDLogVerbose(@"[MQTTSessionManager] connecting");
-        [self connectToInternal];
+        [self connectToInternal:connectHandler];
     }
 }
 
 - (UInt16)sendData:(NSData *)data topic:(NSString *)topic qos:(MQTTQosLevel)qos retain:(BOOL)retainFlag {
     if (self.state != MQTTSessionManagerStateConnected) {
-        [self connectToLast];
+        [self connectToLast:nil];
     }
     UInt16 msgId = [self.session publishData:data
                                      onTopic:topic
@@ -336,9 +212,9 @@
     return msgId;
 }
 
-- (void)disconnect {
+- (void)disconnectWithDisconnectHandler:(MQTTDisconnectHandler)disconnectHandler {
     [self updateState:MQTTSessionManagerStateClosing];
-    [self.session close];
+    [self.session closeWithDisconnectHandler:disconnectHandler];
     [self.reconnectTimer stop];
 }
 
@@ -453,26 +329,27 @@
 }
 
 
-- (void)connectToInternal {
+- (void)connectToInternal:(MQTTConnectHandler)connectHandler {
     if (self.session && self.state == MQTTSessionManagerStateStarting) {
         [self updateState:MQTTSessionManagerStateConnecting];
         [self.session connectToHost:self.host
                                port:self.port
-                           usingSSL:self.tls];
+                           usingSSL:self.tls
+                     connectHandler:connectHandler];
     }
 }
 
-- (void)reconnect {
+- (void)reconnect:(MQTTConnectHandler)connectHandler {
     [self updateState:MQTTSessionManagerStateStarting];
-    [self connectToInternal];
+    [self connectToInternal:connectHandler];
 }
 
-- (void)connectToLast {
+- (void)connectToLast:(MQTTConnectHandler)connectHandler {
     if (self.state == MQTTSessionManagerStateConnected) {
         return;
     }
     [self.reconnectTimer resetRetryInterval];
-    [self reconnect];
+    [self reconnect:connectHandler];
 }
 
 - (void)triggerDelayedReconnect {

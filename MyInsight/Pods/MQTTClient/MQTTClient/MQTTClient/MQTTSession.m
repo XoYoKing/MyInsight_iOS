@@ -12,7 +12,7 @@
 #import "MQTTProperties.h"
 #import "MQTTMessage.h"
 #import "MQTTCoreDataPersistence.h"
-#import "Timer.h"
+#import "GCDTimer.h"
 
 @class MQTTSSLSecurityPolicy;
 
@@ -25,10 +25,10 @@ NSString * const MQTTSessionErrorDomain = @"MQTT";
 @property (nonatomic, readwrite) MQTTSessionStatus status;
 @property (nonatomic, readwrite) BOOL sessionPresent;
 
-@property (strong, nonatomic) Timer *keepAliveTimer;
+@property (strong, nonatomic) GCDTimer *keepAliveTimer;
 @property (strong, nonatomic) NSNumber *serverKeepAlive;
 @property (nonatomic) UInt16 effectiveKeepAlive;
-@property (strong, nonatomic) Timer *checkDupTimer;
+@property (strong, nonatomic) GCDTimer *checkDupTimer;
 
 @property (strong, nonatomic) MQTTDecoder *decoder;
 
@@ -89,6 +89,7 @@ NSString * const MQTTSessionErrorDomain = @"MQTT";
     self.protocolLevel = MQTTProtocolVersion311;
     self.queue = dispatch_get_main_queue();
     self.status = MQTTSessionStatusCreated;
+    self.streamSSLLevel = (NSString *)kCFStreamSocketSecurityLevelNegotiatedSSL;
     return self;
 }
 
@@ -111,6 +112,11 @@ NSString * const MQTTSessionErrorDomain = @"MQTT";
     }
 
     _clientId = clientId;
+}
+
+- (void)setStreamSSLLevel:(NSString *)streamSSLLevel {
+    _streamSSLLevel = streamSSLLevel;
+    self.transport.streamSSLLevel = self.streamSSLLevel;
 }
 
 - (UInt16)subscribeToTopic:(NSString *)topic
@@ -784,11 +790,12 @@ NSString * const MQTTSessionErrorDomain = @"MQTT";
                                     self.sessionPresent = false;
                                 }
                                 __weak typeof(self) weakSelf = self;
-                                self.checkDupTimer = [Timer scheduledTimerWithTimeInterval:DUPLOOP
-                                                                                   repeats:YES
-                                                                                     queue:self.queue
-                                                                                     block:^{
-                                                                                         [weakSelf checkDup];                                                                                     }];
+                                self.checkDupTimer = [GCDTimer scheduledTimerWithTimeInterval:DUPLOOP
+                                                                                      repeats:YES
+                                                                                        queue:self.queue
+                                                                                        block:^{
+                                                                                            [weakSelf checkDup];
+                                                                                        }];
                                 [self checkDup];
 
                                 if (message.properties) {
@@ -801,12 +808,12 @@ NSString * const MQTTSessionErrorDomain = @"MQTT";
                                 }
 
                                 if (self.effectiveKeepAlive > 0) {
-                                    self.keepAliveTimer = [Timer scheduledTimerWithTimeInterval:self.effectiveKeepAlive
-                                                                                        repeats:YES
-                                                                                          queue: self.queue
-                                                                                          block:^() {
-                                                                                              [weakSelf keepAlive];
-                                                                                          }];
+                                    self.keepAliveTimer = [GCDTimer scheduledTimerWithTimeInterval:self.effectiveKeepAlive
+                                                                                           repeats:YES
+                                                                                             queue: self.queue
+                                                                                             block:^() {
+                                                                                                 [weakSelf keepAlive];
+                                                                                             }];
                                 }
 
                                 if ([self.delegate respondsToSelector:@selector(handleEvent:event:error:)]) {

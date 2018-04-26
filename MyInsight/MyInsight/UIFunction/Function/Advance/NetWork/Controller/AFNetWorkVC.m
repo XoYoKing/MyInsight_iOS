@@ -36,7 +36,7 @@
     [manager.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil]];
     
     [manager GET:@"https://www.windblew.cn/index/index/dearMeng" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"成功了--%@--%@",[responseObject class],responseObject);
+        NSLog(@"成功了--%@--%@", [responseObject class], responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"失败了--%@", error);
     }];

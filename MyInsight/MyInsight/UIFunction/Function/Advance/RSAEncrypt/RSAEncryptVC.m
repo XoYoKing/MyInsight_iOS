@@ -10,6 +10,8 @@
 #import <Masonry.h>
 #import "UIColor+Category.h"
 #import "RSA.h"
+#import <CommonCrypto/CommonDigest.h>
+#import <CommonCrypto/CommonCryptor.h> //
 
 // 加密的枚举值
 /*
@@ -44,7 +46,7 @@ typedef NS_ENUM(NSUInteger, EncryptType) {
 @property (nonatomic, strong) UIButton *encryptButton;
 // 解密button
 @property (nonatomic, strong) UIButton *decryptButton;
-
+// 解密类型 枚举值
 @property (nonatomic, assign) EncryptType encryptType;
 
 @end
@@ -160,7 +162,7 @@ typedef NS_ENUM(NSUInteger, EncryptType) {
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
     }];
     
-    [alertController addAction:action0];
+    //[alertController addAction:action0];
     [alertController addAction:action1];
     [alertController addAction:action2];
     [alertController addAction:action3];
@@ -179,6 +181,28 @@ typedef NS_ENUM(NSUInteger, EncryptType) {
         [self.typeButton setTitle:@"MD5加密" forState:UIControlStateNormal];
     }
     
+    switch (self.encryptType) {
+        case EncryptTypeMD5:
+            NSLog(@"生成密文 MD5");
+            [self md5Encrypt];
+            break;
+        case EncryptTypeDES:
+            NSLog(@"生成密文 DES");
+            break;
+        case EncryptTypeAES:
+            NSLog(@"生成密文 AES");
+            break;
+        case EncryptTypeRSA:
+            NSLog(@"生成密文 RSA");
+            break;
+        case EncryptTypeRSA_JAVA:
+            NSLog(@"生成密文 RSA_JAVA");
+            break;
+        default:
+            break;
+    }
+    
+    NSLog(@"原始数据：%@", self.originTextField.text);
 }
 
 // 解密
@@ -189,73 +213,182 @@ typedef NS_ENUM(NSUInteger, EncryptType) {
         [self.typeButton setTitle:@"MD5加密" forState:UIControlStateNormal];
     }
     
+    switch (self.encryptType) {
+        case EncryptTypeMD5:
+            NSLog(@"解密密文 MD5");
+            [self md5Decrypt];
+            break;
+        case EncryptTypeDES:
+            NSLog(@"解密密文 DES");
+            break;
+        case EncryptTypeAES:
+            NSLog(@"解密密文 AES");
+            break;
+        case EncryptTypeRSA:
+            NSLog(@"解密密文 RSA");
+            break;
+        case EncryptTypeRSA_JAVA:
+            NSLog(@"解密密文 RSA_JAVA");
+            break;
+        default:
+            break;
+    }
+    
+    NSLog(@"原始数据：%@", self.originTextField.text);
+    
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES]; // 回收键盘
+}
 
-/**************         MD5加密方法        ***************/
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"点击结束啊");
+}
 
+/**************         MD5方法        ***************/
+/*
+ [MD5不是加密](https://juejin.im/entry/5807294f67f3560058dad715)
+ [iOS MD5和 base64加密](https://www.jianshu.com/p/a2d0ebbbb754)
+ [iOS MD5加密](https://www.jianshu.com/p/02a2946d4e97)
+ [iOS中使用MD5加密](https://www.jianshu.com/p/bb04989a0998)
+ */
+#pragma mark - MD5加密 加密后显示在view上
+- (void)md5Encrypt {
+    // 回收键盘
+    [self.view endEditing:YES];
+    self.encryptTextView.text = [NSString stringWithFormat:
+                                 @"原始数据：%@ \nMD5加密32位小写：%@ \nMD5加密32位大写：%@ \nMD5加密16位小写：%@ \nMD5加密16位大写：%@",
+                                 self.originTextField.text,
+                                 [self MD5ForLower32Bate:self.originTextField.text],
+                                 [self MD5ForUpper32Bate:self.originTextField.text],
+                                 [self MD5ForLower16Bate:self.originTextField.text],
+                                 [self MD5ForUpper16Bate:self.originTextField.text]];
+}
+#pragma mark - MD5解密 MD5加密是不可逆
+- (void)md5Decrypt {
+    self.decryptTextView.text = @"MD5从严格意义上讲不属于加密算法，因为它没有解密过程，MD5有两个最主要的特征：1.加密的不可逆性，只能加密，不能解密；2.任意长度的明文经过加密之后得到长度都是固定的，长度为16进制32位。";
+}
+#pragma mark - 32位 小写
+- (NSString *)MD5ForLower32Bate:(NSString *)str {
+    //要进行UTF8的转码
+    const char* input = [str UTF8String];
+    unsigned char result[CC_MD5_DIGEST_LENGTH];
+    CC_MD5(input, (CC_LONG)strlen(input), result);
+    
+    NSMutableString *digest = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+    for (NSInteger i = 0; i < CC_MD5_DIGEST_LENGTH; i++) {
+        [digest appendFormat:@"%02x", result[i]];
+    }
+    return digest;
+}
+#pragma mark - 32位 大写
+- (NSString *)MD5ForUpper32Bate:(NSString *)str {
+    //要进行UTF8的转码
+    const char* input = [str UTF8String];
+    unsigned char result[CC_MD5_DIGEST_LENGTH];
+    CC_MD5(input, (CC_LONG)strlen(input), result);
+    
+    NSMutableString *digest = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+    for (NSInteger i = 0; i < CC_MD5_DIGEST_LENGTH; i++) {
+        [digest appendFormat:@"%02X", result[i]];
+    }
+    
+    return digest;
+}
+#pragma mark - 16位 大写
+- (NSString *)MD5ForUpper16Bate:(NSString *)str {
+    
+    NSString *md5Str = [self MD5ForUpper32Bate:str];
+    
+    NSString  *string;
+    for (int i=0; i<24; i++) {
+        string=[md5Str substringWithRange:NSMakeRange(8, 16)];
+    }
+    return string;
+}
+#pragma mark - 16位 小写
+- (NSString *)MD5ForLower16Bate:(NSString *)str {
+    
+    NSString *md5Str = [self MD5ForLower32Bate:str];
+    
+    NSString  *string;
+    for (int i=0; i<24; i++) {
+        string=[md5Str substringWithRange:NSMakeRange(8, 16)];
+    }
+    return string;
+}
 
+/************     DES 加密      ************/
+#pragma mark - DES 加密
+- (void)desEncrypt {
+    
+}
+
+- (void)desDecrypt {
+    
+}
 
 #pragma mark - 代码约束布局
 - (void)masonryLayout {
     // 选择类型Label
     [self.typeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).offset(20.0f+64.0f);
+        make.top.equalTo(self.view.mas_top).offset(10.0f+64.0f);
         make.left.equalTo(self.view.mas_left).offset(20.0f);
         make.width.offset(150.0f);
         make.height.offset(40.0f);
     }];
     // 选择加密解密的类型
     [self.typeButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).offset(20.0f+64.0f);
+        make.top.equalTo(self.view.mas_top).offset(10.0f+64.0f);
         make.left.equalTo(self.typeLabel.mas_right).offset(20.0f);
         make.right.equalTo(self.view.mas_right).offset(-20.0f);
         make.height.offset(40.0f);
     }];
     // 原始数据Label
     [self.originLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.typeLabel.mas_bottom).offset(20.0f);
+        make.top.equalTo(self.typeLabel.mas_bottom).offset(10.0f);
         make.left.equalTo(self.view.mas_left).offset(20.0f);
         make.width.offset(150.0f);
         make.height.offset(40.0f);
     }];
     // 原始数据输入框
     [self.originTextField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.typeLabel.mas_bottom).offset(20.0f);
-        make.left.equalTo(self.originLabel.mas_right).offset(20.0f);
+        make.top.equalTo(self.originLabel.mas_bottom).offset(10.0f);
+        make.left.equalTo(self.view.mas_left).offset(20.0f);
         make.right.equalTo(self.view.mas_right).offset(-20.0f);
         make.height.offset(40.0f);
     }];
     // 生成加密数据Label
     [self.encryptLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.originTextField.mas_bottom).offset(20.0f);
+        make.top.equalTo(self.originTextField.mas_bottom).offset(10.0f);
         make.left.equalTo(self.view.mas_left).offset(20.0f);
         make.right.equalTo(self.view.mas_right).offset(-20.0f);
         make.height.offset(40.0f);
     }];
     // 生成加密内容
     [self.encryptTextView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.encryptLabel.mas_bottom).offset(20.0f);
+        make.top.equalTo(self.encryptLabel.mas_bottom).offset(10.0f);
         make.left.equalTo(self.view.mas_left).offset(20.0f);
         make.right.equalTo(self.view.mas_right).offset(-20.0f);
     }];
     // 生成解密数据Label
     [self.decryptLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.encryptTextView.mas_bottom).offset(20.0f);
+        make.top.equalTo(self.encryptTextView.mas_bottom).offset(10.0f);
         make.left.equalTo(self.view.mas_left).offset(20.0f);
         make.right.equalTo(self.view.mas_right).offset(-20.0f);
         make.height.offset(40.0f);
     }];
     // 生成解密内容
     [self.decryptTextView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.decryptLabel.mas_bottom).offset(20.0f);
+        make.top.equalTo(self.decryptLabel.mas_bottom).offset(10.0f);
         make.left.equalTo(self.view.mas_left).offset(20.0f);
         make.right.equalTo(self.view.mas_right).offset(-20.0f);
         make.height.equalTo(self.encryptTextView.mas_height).multipliedBy(1.0f);
     }];
     // 点击进行加密
     [self.encryptButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.decryptTextView.mas_bottom).offset(20.0f);
+        make.top.equalTo(self.decryptTextView.mas_bottom).offset(10.0f);
         make.left.equalTo(self.view.mas_left).offset(20.0f);
         make.height.offset(40.0f);
         make.bottom.equalTo(self.view.mas_bottom).offset(-20.0f);

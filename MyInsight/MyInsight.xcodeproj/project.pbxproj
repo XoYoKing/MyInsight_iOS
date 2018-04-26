@@ -1910,7 +1910,6 @@
 				A20D5D671FCFFB37000E191D /* Sources */,
 				A20D5D681FCFFB37000E191D /* Frameworks */,
 				A20D5D691FCFFB37000E191D /* Resources */,
-				FAC14E2A153CBAABD9DEB137 /* [CP] Embed Pods Frameworks */,
 				81910368D1D5D2FC8A86B579 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -1930,8 +1929,6 @@
 				A20D5D7F1FCFFB37000E191D /* Sources */,
 				A20D5D801FCFFB37000E191D /* Frameworks */,
 				A20D5D811FCFFB37000E191D /* Resources */,
-				FDD122129E0B042628BC88E7 /* [CP] Embed Pods Frameworks */,
-				4E47FC38FACFAD7202F79AC5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1951,8 +1948,6 @@
 				A20D5D8A1FCFFB37000E191D /* Sources */,
 				A20D5D8B1FCFFB37000E191D /* Frameworks */,
 				A20D5D8C1FCFFB37000E191D /* Resources */,
-				F6EE3626CF4B30B332E2A224 /* [CP] Embed Pods Frameworks */,
-				60597E61A26350EEF37BA2E7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2080,36 +2075,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4E47FC38FACFAD7202F79AC5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyInsightTests/Pods-MyInsightTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		60597E61A26350EEF37BA2E7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyInsightUITests/Pods-MyInsightUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		631455492D819634486DE8B2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2159,7 +2124,9 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mapapi.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HMScanner.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2182,51 +2149,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6EE3626CF4B30B332E2A224 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyInsightUITests/Pods-MyInsightUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FAC14E2A153CBAABD9DEB137 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyInsight/Pods-MyInsight-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FDD122129E0B042628BC88E7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyInsightTests/Pods-MyInsightTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2506,7 +2428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X7MN57NBAB;
+				DEVELOPMENT_TEAM = LYW4U2TVKK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyInsight/UIFunction/Function/BaiduMaps/BaiduMapSDK",
@@ -2541,7 +2463,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X7MN57NBAB;
+				DEVELOPMENT_TEAM = LYW4U2TVKK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyInsight/UIFunction/Function/BaiduMaps/BaiduMapSDK",

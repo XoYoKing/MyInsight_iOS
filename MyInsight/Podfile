@@ -10,7 +10,7 @@ target 'MyInsight' do
   pod 'MBProgressHUD' # 菊花加载
   pod 'SWRevealViewController' # 侧边抽屉
   pod 'BaiduMapKit' #百度地图SDK
-  pod 'GoogleMaps' # Goole地图
+  pod 'GoogleMaps' #, '= 2.5.0' # Goole地图
   #pod 'BabyBluetooth' # 蓝牙
   # 网络请求
   pod 'AFNetworking'
@@ -31,6 +31,9 @@ target 'MyInsight' do
   
   # 二维码
   pod 'HMQRCodeScanner'
+  # DES加密所需第三方库
+  pod 'GTMBase64'
+  
   
   target 'MyInsightTests' do
     inherit! :search_paths
