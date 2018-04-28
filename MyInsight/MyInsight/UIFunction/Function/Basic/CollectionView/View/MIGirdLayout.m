@@ -26,7 +26,6 @@
 - (void)prepareLayout {
     [super prepareLayout];
     
-    NSLog(@"------------------");
     [self.array removeAllObjects];
     
     NSUInteger count = [self.collectionView numberOfItemsInSection:0];

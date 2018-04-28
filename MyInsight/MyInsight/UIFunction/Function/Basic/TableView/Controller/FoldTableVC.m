@@ -21,8 +21,12 @@
     
     self.title = @"折叠Table";
     
+    [self creatTableView];
 }
 
+- (void)creatTableView {
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
