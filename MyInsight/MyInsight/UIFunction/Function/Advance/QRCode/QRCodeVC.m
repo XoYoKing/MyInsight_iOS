@@ -14,7 +14,6 @@
 #import <Masonry.h>
 
 @interface QRCodeVC ()
-
 // 二维码
 @property (nonatomic, strong) UIImageView *qrcodeImgView;
 // 生成二维码的字符串
@@ -49,7 +48,6 @@
     [self.view addSubview:self.inputTextField];
     self.inputTextField.backgroundColor = [UIColor orangeColor];
     self.inputTextField.placeholder = @"Input Text";
-    
     // 创建button
     self.createButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:self.createButton];
@@ -64,6 +62,9 @@
     [self.scanButton addTarget:self action:@selector(scanButtonAction:) forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
 
 #pragma mark 生成button动作方法
 - (void)createButtonAction:(UIButton *)button {
@@ -72,7 +73,7 @@
     NSString *qrcodeString;
     
     if (self.inputTextField.text.length == 0 || self.inputTextField.text == NULL) {
-        qrcodeString = @"滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。";
+        qrcodeString = @"滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。安稳锦衾今夜梦，月明好渡江湖，相思休问定何如，明知春去后，管得落花无。";
     } else {
         qrcodeString = self.inputTextField.text;
     }

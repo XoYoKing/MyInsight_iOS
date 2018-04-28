@@ -8,8 +8,14 @@
 
 #import "TouchIDVC.h"
 #import <LocalAuthentication/LocalAuthentication.h>
+#import <Masonry.h>
+#import "UIColor+Category.h"
 
 @interface TouchIDVC ()
+//
+@property (nonatomic, strong) UIButton *touchIDButton;
+
+@property (nonatomic, strong) UIButton *passwordButton;
 
 @end
 
@@ -21,6 +27,26 @@
     
     self.title = @"指纹识别&密码输入";
     
+    [self creatContentView];
+    
+    [self masonryLayout];
+}
+
+- (void)creatContentView {
+    self.touchIDButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:self.touchIDButton];
+    [self.touchIDButton setTitle:@"TouchID验证" forState:UIControlStateNormal];
+    self.touchIDButton.backgroundColor = [UIColor RandomColor];
+    [self.touchIDButton addTarget:self action:@selector(touchIDButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.passwordButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:self.passwordButton];
+    [self.passwordButton setTitle:@"密码验证" forState:UIControlStateNormal];
+    self.passwordButton.backgroundColor = [UIColor RandomColor];
+    [self.passwordButton addTarget:self action:@selector(passwordButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)touchIDButtonAction:(UIButton *)button {
     //创建LAContext
     LAContext *context = [LAContext new];
     
@@ -33,7 +59,7 @@
         [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"请按home键指纹解锁" reply:^(BOOL success, NSError * _Nullable error) {
             if (success) {
                 NSLog(@"验证成功 刷新主界面");
-            }else{
+            } else {
                 NSLog(@"%@",error.localizedDescription);
                 switch (error.code) {
                     case LAErrorSystemCancel:
@@ -54,15 +80,13 @@
                     case LAErrorTouchIDNotEnrolled:
                         NSLog(@"设备Touch ID不可用，用户未录入");
                         break;
-                    case LAErrorUserFallback:
-                    {
+                    case LAErrorUserFallback: {
                         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                             NSLog(@"用户选择输入密码，切换主线程处理");
                         }];
                         break;
                     }
-                    default:
-                    {
+                    default: {
                         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                             NSLog(@"其他情况，切换主线程处理");
                         }];
@@ -71,7 +95,7 @@
                 }
             }
         }];
-    }else{
+    } else {
         NSLog(@"不支持指纹识别");
         switch (error.code) {
             case LAErrorTouchIDNotEnrolled:
@@ -84,13 +108,11 @@
                 NSLog(@"TouchID not available");
                 break;
         }
-        
         NSLog(@"%@",error.localizedDescription);
     }
 }
 
-
-- (void)evaluateAuthenticate {
+- (void)passwordButtonAction:(UIButton *)button {
     //创建LAContext
     LAContext* context = [[LAContext alloc] init];
     NSError* error = nil;
@@ -158,6 +180,22 @@
         
         NSLog(@"%@",error.localizedDescription);
     }
+}
+
+- (void)masonryLayout {
+    [self.touchIDButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(1.0f);
+        make.centerY.equalTo(self.view.mas_centerY).multipliedBy(0.8f);
+        make.width.equalTo(self.view.mas_width).multipliedBy(0.4f);
+        make.height.equalTo(self.touchIDButton.mas_width).multipliedBy(0.4f);
+    }];
+    
+    [self.passwordButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(1.0f);
+        make.centerY.equalTo(self.view.mas_centerY).multipliedBy(1.2f);
+        make.width.equalTo(self.view.mas_width).multipliedBy(0.4f);
+        make.height.equalTo(self.passwordButton.mas_width).multipliedBy(0.4f);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

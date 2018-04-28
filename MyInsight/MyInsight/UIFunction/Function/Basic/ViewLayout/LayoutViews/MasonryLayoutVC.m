@@ -71,12 +71,9 @@
         UIButton *btn = [[UIButton alloc] init];
         [btn setBackgroundColor:[UIColor RandomColor]];
         [self.view addSubview:btn];
-        
         [btn setTitle:strings[i] forState:UIControlStateNormal];
-        
         [btnM addObject:btn];
         btn.tag = i;
-        
         [btn addTarget:self action:@selector(show:) forControlEvents:UIControlEventTouchUpInside];
     }
     
@@ -94,19 +91,14 @@
 
 - (void)masonryLabels {
     UILabel *myLabel = [[UILabel alloc] init];
-    
     myLabel.backgroundColor = [UIColor RandomColor];
-    
     myLabel.text = @"不设置高度和宽度约束";
     
     [self.view addSubview:myLabel];
     
     UILabel *mySenondLabel = [[UILabel alloc] init];
-    
     mySenondLabel.backgroundColor = [UIColor RandomColor];
-    
     mySenondLabel.text = @"确认";
-    
     [self.view addSubview:mySenondLabel];
     
     [myLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -123,22 +115,14 @@
 - (void)masonryLabels2 {
     
     UILabel *myLabel = [[UILabel alloc] init];
-    
     myLabel.backgroundColor = [UIColor RandomColor];
-    
     myLabel.text = @"距离右边最少80, 文字多多多多多多多多多多多多多多多多多多";
-    
     [self.view addSubview:myLabel];
     
-    
     UILabel *mySenondLabel = [[UILabel alloc] init];
-    
     mySenondLabel.backgroundColor = [UIColor RandomColor];
-    
     mySenondLabel.text = @"确认";
-    
     [self.view addSubview:mySenondLabel];
-    
     [myLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(190);
         make.left.mas_equalTo(10);
@@ -151,24 +135,17 @@
         // 最少80
         make.right.mas_lessThanOrEqualTo(-80).priorityHigh();
     }];
-    
 }
 
 - (void)masonryLabels3 {
     UILabel *myLabel = [[UILabel alloc] init];
-    
     myLabel.backgroundColor = [UIColor RandomColor];
-    
     myLabel.text = @"距离右边最少80, 文字少";
-    
     [self.view addSubview:myLabel];
     
     UILabel *mySenondLabel = [[UILabel alloc] init];
-    
     mySenondLabel.backgroundColor = [UIColor RandomColor];
-    
     mySenondLabel.text = @"确认";
-    
     [self.view addSubview:mySenondLabel];
     
     [myLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -179,7 +156,6 @@
     [mySenondLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(myLabel.mas_right).offset(10);
         make.top.mas_equalTo(myLabel.mas_top);
-        
         make.width.mas_equalTo(44);
         // 最少80
         make.right.mas_lessThanOrEqualTo(-80).priorityHigh();
@@ -189,11 +165,8 @@
 
 - (void)masonryEdgeCenter {
     UIView *myView = [[UIView alloc] init];
-    
     myView.backgroundColor = [UIColor RandomColor];
-    
     [self.view addSubview:myView];
-    
     [myView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(10);
         make.top.mas_equalTo(250);
@@ -201,11 +174,8 @@
     }];
     
     UIView *myInView = [[UIView alloc] init];
-    
     myInView.backgroundColor = [UIColor RandomColor];
-    
     [myView addSubview:myInView];
-    
     [myInView mas_makeConstraints:^(MASConstraintMaker *make) {
         //make.edges.mas_equalTo(UIEdgeInsetsMake(10, 5, 15, 5));
         make.edges.mas_equalTo(myView).insets(UIEdgeInsetsMake(10, 5, 15, 5));
@@ -213,9 +183,7 @@
     
     UIView *myCenterView = [[UIView alloc] init];
     myCenterView.backgroundColor = [UIColor RandomColor];
-    
     [myView addSubview:myCenterView];
-    
     [myCenterView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(50, 44));
         make.center.mas_equalTo(myView).centerOffset(CGPointMake(-10, 10));
@@ -224,7 +192,6 @@
 
 - (void)masonryScrollView {
     UIScrollView *scrollView = [[UIScrollView alloc] init];
-    
     scrollView.backgroundColor = [UIColor RandomColor];
     scrollView.bounces = YES;
     scrollView.showsVerticalScrollIndicator = scrollView.showsHorizontalScrollIndicator = YES;
@@ -240,9 +207,7 @@
     
     // 添加一个 containerView, containerView里边放子控件,通过子控件约束 containerView 大小
     UIView *containerView = [[UIView alloc] init];
-    
     containerView.backgroundColor = [UIColor RandomColor];
-    
     [scrollView addSubview:containerView];
     
     [containerView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -293,11 +258,8 @@
 
 - (void)masonryUpdate {
     UIView *myView = [[UIView alloc] init];
-    
     myView.backgroundColor = [UIColor RandomColor];
-    
     [self.view addSubview:myView];
-    
     [myView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(10);
         make.bottom.offset(-100);
@@ -305,15 +267,30 @@
     }];
     
     UIView *myInView = [[UIView alloc] init];
-    
     myInView.backgroundColor = [UIColor RandomColor];
-    
     [myView addSubview:myInView];
-    
     [myInView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(myView).insets(UIEdgeInsetsMake(10, 5, 15, 5));
     }];
     
+    [myView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapShoushi:)]];
+}
+
+- (void)tapShoushi:(UITapGestureRecognizer *)recognizer {
+    // 关于内部的小view
+    UIView *myInView = recognizer.view.subviews[0];
+//    [myInView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.mas_equalTo(UIEdgeInsetsMake(arc4random() & 50 + 1, arc4random() & 50 + 1, arc4random() & 50 + 1, arc4random() & 50 + 1));
+//    }];
+    
+    [myInView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsMake(arc4random() & 50 + 1, arc4random() & 50 + 1, arc4random() & 50 + 1, arc4random() & 50 + 1));
+    }];
+    
+    // 添加动画
+    [UIView animateWithDuration:1 animations:^{
+        [myInView layoutIfNeeded];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -322,13 +299,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

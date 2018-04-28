@@ -1,45 +1,40 @@
 //
-//  TableViewVC.m
+//  DragTableVC.m
 //  MyInsight
 //
-//  Created by SongMenglong on 2018/2/1.
+//  Created by SongMenglong on 2018/4/28.
 //  Copyright © 2018年 SongMenglong. All rights reserved.
 //
 
-#import "TableViewVC.h"
-#import <Masonry.h> // 代码约束布局
-#import "FoldTableVC.h"
 #import "DragTableVC.h"
 
-@interface TableViewVC ()<UITableViewDelegate, UITableViewDataSource>
-// TableView
+@interface DragTableVC ()<UITableViewDelegate, UITableViewDataSource>
+
 @property (nonatomic, strong) UITableView *tableView;
-// 数据数组
+
 @property (nonatomic, strong) NSArray *dataArray;
 
 @end
 
-static const NSString *FoldTableStr = @"折叠TableView";
-static const NSString *DragTableStr = @"拖拽TableView";
-
-@implementation TableViewVC
+@implementation DragTableVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"TableView";
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"拖拽TableView";
     
-    self.dataArray = @[FoldTableStr, DragTableStr];
+    self.dataArray = @[@"春有百花秋有月", @"夏有凉风冬有雪", @"若无闲事在心头", @"便是人间好时节", @"滚滚长江东逝水", @"浪花淘尽英雄", @"是非成败转头空", @"青山依旧在", @"几度夕阳红", @"白发渔樵江渚上", @"惯看秋月春风", @"一壶浊酒喜相逢", @"古今多少事", @"都付笑谈中"];
     
     [self creatTableView];
 }
 
+#pragma mark - 创建TableView
 - (void)creatTableView {
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    //
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
 }
@@ -65,22 +60,17 @@ static const NSString *DragTableStr = @"拖拽TableView";
     return cell;
 }
 
+// 可以编辑
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"选中cell");
-    // 获取到当前cell的字符串
-    NSString *cellString = [self.dataArray objectAtIndex:indexPath.row];
-    if ([cellString isEqual:FoldTableStr]) {
-        // 折叠
-        FoldTableVC *foldTableVC = [[FoldTableVC alloc] init];
-        foldTableVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:foldTableVC animated:YES];
-    }
-    if ([cellString isEqual:DragTableStr]) {
-        // 拖拽
-        DragTableVC *dragTableVC = [[DragTableVC alloc] init];
-        dragTableVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:dragTableVC animated:YES];
-    }
+    NSLog(@"DID SELECT CELL");
 }
 
 - (void)didReceiveMemoryWarning {
