@@ -17,7 +17,7 @@
 #import "NetWorkVC.h" // 网络请求
 #import "DataBaseVC.h"
 #import "QRCodeVC.h"
-#import "RSAEncryptVC.h" //RSAEncrypt加密解密
+#import "EncryptVC.h" //RSAEncrypt加密解密
 
 @interface AdvanceVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -36,7 +36,7 @@ static const NSString *MQTTStr = @"MQTT";
 static const NSString *NetWorkStr = @"网络请求";
 static const NSString *DataBaseStr = @"数据库";
 static const NSString *QRCodeString = @"二维码";
-static const NSString *RSAEncryptStr = @"RSA加密";
+static const NSString *RSAEncryptStr = @"数据加密";
 
 @implementation AdvanceVC
 
@@ -170,10 +170,10 @@ static const NSString *RSAEncryptStr = @"RSA加密";
         [self.navigationController pushViewController:qrcodeVC animated:YES];
     }
     if ([cellString isEqual:RSAEncryptStr]) {
-        // RSA加密解密
-        RSAEncryptVC *rsaEncryptVC= [[RSAEncryptVC alloc] init];
-        rsaEncryptVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:rsaEncryptVC animated:YES];
+        // 数据加密解密
+        EncryptVC *encryptVC= [[EncryptVC alloc] init];
+        encryptVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:encryptVC animated:YES];
     }
 }
 

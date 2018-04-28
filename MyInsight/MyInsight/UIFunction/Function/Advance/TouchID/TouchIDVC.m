@@ -59,7 +59,7 @@
         [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"请按home键指纹解锁" reply:^(BOOL success, NSError * _Nullable error) {
             if (success) {
                 NSLog(@"验证成功 刷新主界面");
-            }else{
+            } else {
                 NSLog(@"%@",error.localizedDescription);
                 switch (error.code) {
                     case LAErrorSystemCancel:
@@ -80,15 +80,13 @@
                     case LAErrorTouchIDNotEnrolled:
                         NSLog(@"设备Touch ID不可用，用户未录入");
                         break;
-                    case LAErrorUserFallback:
-                    {
+                    case LAErrorUserFallback: {
                         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                             NSLog(@"用户选择输入密码，切换主线程处理");
                         }];
                         break;
                     }
-                    default:
-                    {
+                    default: {
                         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                             NSLog(@"其他情况，切换主线程处理");
                         }];
@@ -97,7 +95,7 @@
                 }
             }
         }];
-    }else{
+    } else {
         NSLog(@"不支持指纹识别");
         switch (error.code) {
             case LAErrorTouchIDNotEnrolled:
@@ -110,7 +108,6 @@
                 NSLog(@"TouchID not available");
                 break;
         }
-        
         NSLog(@"%@",error.localizedDescription);
     }
 }

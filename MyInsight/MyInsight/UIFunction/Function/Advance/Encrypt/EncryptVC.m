@@ -1,12 +1,12 @@
 //
-//  RSAEncryptVC.m
+//  EncryptVC.m
 //  MyInsight
 //
-//  Created by SongMengLong on 2018/4/25.
+//  Created by SongMenglong on 2018/4/28.
 //  Copyright © 2018年 SongMenglong. All rights reserved.
 //
 
-#import "RSAEncryptVC.h"
+#import "EncryptVC.h"
 #import <Masonry.h>
 #import "UIColor+Category.h"
 #import "RSA.h"
@@ -15,7 +15,6 @@
 #import <GTMBase64.h> // DES加密
 #import "NSString+AES.h" // AES加密
 #import "RSAUtil.h" // RSA加密
-
 //密钥
 #define gkey            @"mobilewinx@easipass@1234"
 //偏移量
@@ -41,7 +40,8 @@ typedef NS_ENUM(NSUInteger, EncryptType) {
     EncryptTypeRSA_JAVA,
 };
 
-@interface RSAEncryptVC ()
+@interface EncryptVC ()
+
 // 选择类型button
 @property (nonatomic, strong) UILabel *typeLabel;
 // 选择类型button
@@ -67,10 +67,11 @@ typedef NS_ENUM(NSUInteger, EncryptType) {
 
 @end
 
-@implementation RSAEncryptVC
+@implementation EncryptVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     
     self.title = @"RSAEncrypt加密解密";
     
@@ -593,6 +594,7 @@ typedef NS_ENUM(NSUInteger, EncryptType) {
     decWithPublicKey = [RSA decryptString:encWithPrivKey publicKey:pubkey];
     NSLog(@"(PHP enc)Decrypted with public key: %@", decWithPublicKey);
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
