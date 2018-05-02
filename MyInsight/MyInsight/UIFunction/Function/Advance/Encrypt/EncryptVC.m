@@ -154,10 +154,10 @@ typedef NS_ENUM(NSUInteger, EncryptType) {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"选择加密类型" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     
     // MD5加密 DES加密 AES加密 RSA加密 RSA&JavaServer加密
-    UIAlertAction *action0 = [UIAlertAction actionWithTitle:@"BASE64加密" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self.typeButton setTitle:@"BASE64加密" forState:UIControlStateNormal];
-        self.encryptType = EncryptTypeMD5;
-    }];
+//    UIAlertAction *action0 = [UIAlertAction actionWithTitle:@"BASE64加密" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        [self.typeButton setTitle:@"BASE64加密" forState:UIControlStateNormal];
+//        self.encryptType = EncryptTypeMD5;
+//    }];
     UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"MD5加密" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self.typeButton setTitle:@"MD5加密" forState:UIControlStateNormal];
         self.encryptType = EncryptTypeMD5;

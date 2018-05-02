@@ -11,9 +11,4 @@
 
 @interface AudioVC : BaseVC
 
-/*
- [iOS开发系列--音频播放、录音、视频播放、拍照、视频录制](http://www.cnblogs.com/kenshincui/p/4186022.html)
- 
- */
-
 @end

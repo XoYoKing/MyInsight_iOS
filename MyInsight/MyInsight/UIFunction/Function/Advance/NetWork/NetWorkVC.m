@@ -26,8 +26,9 @@
 - (void)afNetWorkButton {
     UIButton *afNetButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:afNetButton];
-    afNetButton.frame = CGRectMake(100, 100, 100, 100);
+    afNetButton.frame = CGRectMake(100, 100, 150, 50);
     afNetButton.backgroundColor = [UIColor orangeColor];
+    [afNetButton setTitle:@"AFN数据请求" forState:UIControlStateNormal];
     // 添加手势
     [afNetButton addTarget:self action:@selector(buttonAction) forControlEvents:UIControlEventTouchUpInside];
 }
