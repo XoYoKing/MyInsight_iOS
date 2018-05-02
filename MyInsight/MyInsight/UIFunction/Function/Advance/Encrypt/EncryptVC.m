@@ -470,10 +470,16 @@ typedef NS_ENUM(NSUInteger, EncryptType) {
 #pragma mark - RSA JAVA加密
 - (void)rsaJavaEncrypt {
     NSLog(@"RSA JAVA加密");
+    self.encryptTextView.text = [RSAUtil encryptString:self.originTextField.text publicKey:RSA_Public_key];
+    
 }
 
 - (void)rsaJavaDecrypt {
     NSLog(@"RSA JAVA解密");
+    
+    
+    
+    
 }
 
 #pragma mark - 代码约束布局
