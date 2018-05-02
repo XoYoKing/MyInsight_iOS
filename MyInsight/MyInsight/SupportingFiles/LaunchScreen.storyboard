@@ -20,9 +20,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快看，有头鹿！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXf-wU-FMR">
-                                <rect key="frame" x="99" y="155.5" width="177.5" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快看，这有鹿！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXf-wU-FMR">
+                                <rect key="frame" x="116" y="166.5" width="143" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -39,7 +39,7 @@
                             <constraint firstItem="V8d-Bh-wyh" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="0.8" id="LGn-4F-6TY"/>
                             <constraint firstItem="V8d-Bh-wyh" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.3" id="PLq-Cr-TAJ"/>
                             <constraint firstItem="AXf-wU-FMR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fa9-Vf-up2"/>
-                            <constraint firstItem="V8d-Bh-wyh" firstAttribute="top" secondItem="AXf-wU-FMR" secondAttribute="bottom" constant="25" id="lKl-FC-bEY"/>
+                            <constraint firstItem="V8d-Bh-wyh" firstAttribute="top" secondItem="AXf-wU-FMR" secondAttribute="bottom" constant="20" id="lKl-FC-bEY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

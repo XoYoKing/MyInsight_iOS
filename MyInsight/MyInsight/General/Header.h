@@ -17,13 +17,10 @@
 #endif /* Header_h */
 
 /*
-
  Instruments的Leaks检测内存泄漏
  http://blog.csdn.net/kevintang158/article/details/79027274
  
  关于Instruments工具中TimeProfiler和Leaks的归纳总结
  http://blog.csdn.net/huanglinxiao/article/details/79524331
- 
- 
  */
 

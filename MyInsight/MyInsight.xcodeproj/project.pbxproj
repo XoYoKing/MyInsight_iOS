@@ -74,6 +74,7 @@
 		A242C1B620902BFA00A6A9F7 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = A242C1B520902BFA00A6A9F7 /* RSA.m */; };
 		A2561DBC2094123400D4E2E5 /* EncryptVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DBB2094123400D4E2E5 /* EncryptVC.m */; };
 		A2561DBF2094725100D4E2E5 /* DragTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DBE2094725100D4E2E5 /* DragTableVC.m */; };
+		A2561DC3209953B200D4E2E5 /* PushMsgVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DC2209953B200D4E2E5 /* PushMsgVC.m */; };
 		A25748282023059D000F7632 /* CollectionViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A25748272023059D000F7632 /* CollectionViewVC.m */; };
 		A257482B202305B9000F7632 /* TableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A257482A202305B9000F7632 /* TableViewVC.m */; };
 		A257482F202315C0000F7632 /* RFQuiltLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A257482E202315C0000F7632 /* RFQuiltLayout.m */; };
@@ -333,6 +334,8 @@
 		A2561DBB2094123400D4E2E5 /* EncryptVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncryptVC.m; sourceTree = "<group>"; };
 		A2561DBD2094725100D4E2E5 /* DragTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragTableVC.h; sourceTree = "<group>"; };
 		A2561DBE2094725100D4E2E5 /* DragTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragTableVC.m; sourceTree = "<group>"; };
+		A2561DC1209953B200D4E2E5 /* PushMsgVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushMsgVC.h; sourceTree = "<group>"; };
+		A2561DC2209953B200D4E2E5 /* PushMsgVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushMsgVC.m; sourceTree = "<group>"; };
 		A25748262023059D000F7632 /* CollectionViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewVC.h; sourceTree = "<group>"; };
 		A25748272023059D000F7632 /* CollectionViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewVC.m; sourceTree = "<group>"; };
 		A2574829202305B9000F7632 /* TableViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewVC.h; sourceTree = "<group>"; };
@@ -1108,6 +1111,15 @@
 			path = RSA;
 			sourceTree = "<group>";
 		};
+		A2561DC02099539E00D4E2E5 /* PushMsg */ = {
+			isa = PBXGroup;
+			children = (
+				A2561DC1209953B200D4E2E5 /* PushMsgVC.h */,
+				A2561DC2209953B200D4E2E5 /* PushMsgVC.m */,
+			);
+			path = PushMsg;
+			sourceTree = "<group>";
+		};
 		A25748202023056C000F7632 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1151,6 +1163,7 @@
 				A239CE272085E44C0033646A /* NetWork */,
 				A2DDDC0F208ACDC000DC7A4A /* DataBase */,
 				A2DDDC16208ACDC000DC7A4A /* QRCode */,
+				A2561DC02099539E00D4E2E5 /* PushMsg */,
 				A26CE490201971C50012EC69 /* Maps */,
 			);
 			path = Advance;
@@ -2210,6 +2223,7 @@
 				A2DDDC55208AECCD00DC7A4A /* AutoLayoutVC.m in Sources */,
 				A239CE1A208595C30033646A /* MultiTypeFlowLayoutVC.m in Sources */,
 				A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */,
+				A2561DC3209953B200D4E2E5 /* PushMsgVC.m in Sources */,
 				A2B9927820623EA3002A73B1 /* OpenGLVC.m in Sources */,
 				A2CDD239208DB0F9006DF86E /* CAAnimationGroupVC.m in Sources */,
 				A288F97E2089D2CE00DD4CA0 /* NormalCollectionVC.m in Sources */,
@@ -2472,7 +2486,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LYW4U2TVKK;
+				DEVELOPMENT_TEAM = X7MN57NBAB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyInsight/UIFunction/Function/BaiduMaps/BaiduMapSDK",
@@ -2507,7 +2521,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LYW4U2TVKK;
+				DEVELOPMENT_TEAM = X7MN57NBAB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyInsight/UIFunction/Function/BaiduMaps/BaiduMapSDK",

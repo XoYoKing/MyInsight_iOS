@@ -18,6 +18,7 @@
 #import "DataBaseVC.h"
 #import "QRCodeVC.h"
 #import "EncryptVC.h" //RSAEncrypt加密解密
+#import "PushMsgVC.h"
 
 @interface AdvanceVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -37,6 +38,7 @@ static const NSString *NetWorkStr = @"网络请求";
 static const NSString *DataBaseStr = @"数据库";
 static const NSString *QRCodeString = @"二维码";
 static const NSString *RSAEncryptStr = @"数据加密";
+static const NSString *PushMsgStr = @"推送消息";
 
 @implementation AdvanceVC
 
@@ -74,7 +76,7 @@ static const NSString *RSAEncryptStr = @"数据加密";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[TouchIDStr, MapsStr, BlueToothStr, BabyBLEStr, MQTTStr, DataBaseStr, NetWorkStr, QRCodeString, RSAEncryptStr];
+    self.dataArray = @[TouchIDStr, MapsStr, BlueToothStr, BabyBLEStr, MQTTStr, DataBaseStr, NetWorkStr, QRCodeString, RSAEncryptStr, PushMsgStr];
 }
 
 #pragma mark - 创建TableView
@@ -174,6 +176,12 @@ static const NSString *RSAEncryptStr = @"数据加密";
         EncryptVC *encryptVC= [[EncryptVC alloc] init];
         encryptVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:encryptVC animated:YES];
+    }
+    if ([cellString isEqual:PushMsgStr]) {
+        // 推送消息
+        PushMsgVC *pushMsgVC= [[PushMsgVC alloc] init];
+        pushMsgVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:pushMsgVC animated:YES];
     }
 }
 

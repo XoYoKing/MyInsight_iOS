@@ -15,6 +15,12 @@
 
 @implementation MQTTVC
 
+/*
+ [(iOS)MQTT连接 遗嘱 双向认证](https://www.jianshu.com/p/4676834ac3c4)
+ [iOS MQTT----MQTTClient实战-看这篇的就够了](https://www.jianshu.com/p/80ea4507ca74)
+ [Apollo-mqtt](https://github.com/ReReReReReRe/Apollo-mqtt)
+ */
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

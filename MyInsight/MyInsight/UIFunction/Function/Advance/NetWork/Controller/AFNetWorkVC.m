@@ -10,9 +10,11 @@
 #import "AFNetWorkVC.h"
 #import <AFNetworking/AFNetworking.h>
 #import "HTTPTOOL.h"
+#import "UIColor+Category.h"
 
 @interface AFNetWorkVC ()
 
+@property (nonatomic, strong) UITextView *textView;
 
 @end
 
@@ -22,6 +24,11 @@
     [super viewDidLoad];
     
     self.title = @"AFNET网络请求";
+    
+    self.textView = [[UITextView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:self.textView];
+    self.textView.backgroundColor = [UIColor RandomColor];
+    self.textView.textColor = [UIColor RandomColor];
     
     [self handleAFNetWorkData];
 }
@@ -44,8 +51,10 @@
     // 第三方工具再封装 自定义的轮子
     [HTTPTOOL GETWithURL:@"https://www.windblew.cn/index/index/dearMeng" body:nil httpHead:nil resoponseStyle:JSON success:^(id result) {
         NSLog(@"成功了又如何？：%@", result);
+        self.textView.text = [NSString stringWithFormat:@"请求成功返回数据：\n %@", result];
     } fail:^(NSError *error) {
         NSLog(@"失败了又怎样？：%@", error);
+        self.textView.text = [NSString stringWithFormat:@"请求失败返回数据：\n %@", error];
     }];
     
 }

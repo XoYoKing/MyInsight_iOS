@@ -9,8 +9,9 @@
 #import "AppDelegate.h"
 #import "MainRevealVC.h" // 主页面
 #import "WelcomeVC.h" // 欢迎页面
+#import <UserNotifications/UserNotifications.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
 @end
 
@@ -21,9 +22,38 @@
     UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window = window;
     
+    /***************************************************/
+    // 设置本地通知 https://zjqian.github.io/2017/04/14/localNotification/
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0 &&
+        [[UIDevice currentDevice].systemVersion floatValue] < 10.0) {
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeSound  categories:nil];
+        [application registerUserNotificationSettings:settings];
+    }
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 10.0) {
+        // iOS系统大于10.0
+        // 使用 UNUserNotificationCenter 来管理通知
+        if (@available(iOS 10.0, *)) {
+            UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+            //监听回调事件
+            center.delegate = self;
+            
+            //iOS 10 使用以下方法注册，才能得到授权
+            [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound + UNAuthorizationOptionBadge)
+                                  completionHandler:^(BOOL granted, NSError * _Nullable error) {
+                                      // Enable or disable features based on authorization.
+                                  }];
+            
+            NSLog(@"滚滚长江东逝水");
+        } else {
+            // Fallback on earlier versions
+            NSLog(@"浪花淘尽英雄");
+        }
+    }
+    
+    /**************************************************/
+    
     // 设置3D Touch功能
     [self setup3DTouch];
-    
     // 是否第一次加载
     [self isRightFirstLaunched];
     
