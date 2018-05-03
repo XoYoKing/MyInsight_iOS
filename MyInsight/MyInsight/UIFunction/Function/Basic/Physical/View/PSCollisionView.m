@@ -37,12 +37,10 @@
         [self addSubview:redView];
         redView.alpha = 0.4;
         
-        
         // 4. 手动添加碰撞, 通过bezierPath 模拟 边界
         UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRect:CGRectMake(redView.frame.origin.x + 10, redView.frame.origin.y - 10, redView.frame.size.width + 10, redView.frame.size.height + 10)];
         [collision addBoundaryWithIdentifier:@"redBoundary" forPath:bezierPath];
         [self.animator addBehavior:collision];
-        
         
         // 5. 物体的属性行为
         UIDynamicItemBehavior *item = [[UIDynamicItemBehavior alloc] initWithItems:@[self.boxView]];

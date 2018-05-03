@@ -33,18 +33,23 @@
     switch (self.function) {
         case FunctionSnap:
             baseView = [[PSSnapView alloc] init];
+            self.title = @"吸附行为";
             break;
         case FunctionPush:
             baseView = [[PSPushView alloc] init];
+            self.title = @"推动行为";
             break;
         case FunctionAttachment:
             baseView = [[PSAttachmentView alloc] init];
+            self.title = @"刚性附着行为";
             break;
         case FunctionSpring:
             baseView = [[PSSpringView alloc] init];
+            self.title = @"弹性附着行为";
             break;
         case FunctionCollision:
             baseView = [[PSCollisionView alloc] init];
+            self.title = @"碰撞测试";
             break;
         default:
             break;

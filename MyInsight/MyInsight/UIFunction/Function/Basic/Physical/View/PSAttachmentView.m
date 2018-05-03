@@ -12,7 +12,6 @@
 {
     // 附着点图片框
     UIImageView *_anchorImgView;
-    
     // 参考点图片框（boxView 内部）
     UIImageView *_offsetImgView;
 }

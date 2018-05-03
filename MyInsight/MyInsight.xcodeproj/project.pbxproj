@@ -75,6 +75,7 @@
 		A2561DBC2094123400D4E2E5 /* EncryptVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DBB2094123400D4E2E5 /* EncryptVC.m */; };
 		A2561DBF2094725100D4E2E5 /* DragTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DBE2094725100D4E2E5 /* DragTableVC.m */; };
 		A2561DC3209953B200D4E2E5 /* PushMsgVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DC2209953B200D4E2E5 /* PushMsgVC.m */; };
+		A2561DC7209AB7A300D4E2E5 /* CoreGraphicsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DC6209AB7A300D4E2E5 /* CoreGraphicsVC.m */; };
 		A25748282023059D000F7632 /* CollectionViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A25748272023059D000F7632 /* CollectionViewVC.m */; };
 		A257482B202305B9000F7632 /* TableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A257482A202305B9000F7632 /* TableViewVC.m */; };
 		A257482F202315C0000F7632 /* RFQuiltLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A257482E202315C0000F7632 /* RFQuiltLayout.m */; };
@@ -336,6 +337,8 @@
 		A2561DBE2094725100D4E2E5 /* DragTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragTableVC.m; sourceTree = "<group>"; };
 		A2561DC1209953B200D4E2E5 /* PushMsgVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushMsgVC.h; sourceTree = "<group>"; };
 		A2561DC2209953B200D4E2E5 /* PushMsgVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushMsgVC.m; sourceTree = "<group>"; };
+		A2561DC5209AB7A300D4E2E5 /* CoreGraphicsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreGraphicsVC.h; sourceTree = "<group>"; };
+		A2561DC6209AB7A300D4E2E5 /* CoreGraphicsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreGraphicsVC.m; sourceTree = "<group>"; };
 		A25748262023059D000F7632 /* CollectionViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewVC.h; sourceTree = "<group>"; };
 		A25748272023059D000F7632 /* CollectionViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewVC.m; sourceTree = "<group>"; };
 		A2574829202305B9000F7632 /* TableViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewVC.h; sourceTree = "<group>"; };
@@ -1120,6 +1123,15 @@
 			path = PushMsg;
 			sourceTree = "<group>";
 		};
+		A2561DC4209AB77500D4E2E5 /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				A2561DC5209AB7A300D4E2E5 /* CoreGraphicsVC.h */,
+				A2561DC6209AB7A300D4E2E5 /* CoreGraphicsVC.m */,
+			);
+			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
 		A25748202023056C000F7632 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1181,6 +1193,7 @@
 				A25748212023056C000F7632 /* TableView */,
 				A2CDD259208DDC1A006DF86E /* Physical */,
 				A23B3520208D7299001D71F2 /* CoreAnimation */,
+				A2561DC4209AB77500D4E2E5 /* CoreGraphics */,
 				A2DDDC1D208ACEF600DC7A4A /* Screen */,
 				A2CA8088202196E900D81845 /* LiftCycle */,
 				A2CA8085202196E900D81845 /* RunTime */,
@@ -2335,6 +2348,7 @@
 				A2B992A12068F42F002A73B1 /* ChatVideoCell.m in Sources */,
 				A23B352F208D81C0001D71F2 /* CAClockVC.m in Sources */,
 				A2DDDC35208AD97200DC7A4A /* DataBaseModel.m in Sources */,
+				A2561DC7209AB7A300D4E2E5 /* CoreGraphicsVC.m in Sources */,
 				A241D22B2047A32A005A3BC5 /* UIColor+Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

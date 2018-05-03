@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PSBaseView.h"
+#import "PSAttachmentView.h"
 
-@interface PSSpringView : PSBaseView
+@interface PSSpringView : PSAttachmentView
 
 @end
