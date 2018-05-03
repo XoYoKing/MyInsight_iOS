@@ -21,7 +21,6 @@
     [super viewDidLoad];
     
     self.title = @"CATransition转场动画";
-    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

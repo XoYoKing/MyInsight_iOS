@@ -1,21 +1,24 @@
+
 //
-//  BaseNaviVC.m
+//  CutOutImageVC.m
 //  MyInsight
 //
-//  Created by SongMenglong on 2018/4/19.
+//  Created by SongMenglong on 2018/5/3.
 //  Copyright © 2018年 SongMenglong. All rights reserved.
 //
 
-#import "BaseNaviVC.h"
+#import "CutOutImageVC.h"
 
-@interface BaseNaviVC ()
+@interface CutOutImageVC ()
 
 @end
 
-@implementation BaseNaviVC
+@implementation CutOutImageVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"截取图片";
     
 }
 

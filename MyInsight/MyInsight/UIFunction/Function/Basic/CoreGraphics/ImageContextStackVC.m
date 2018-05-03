@@ -1,21 +1,23 @@
 //
-//  BaseNaviVC.m
+//  ImageContextStackVC.m
 //  MyInsight
 //
-//  Created by SongMenglong on 2018/4/19.
+//  Created by SongMenglong on 2018/5/3.
 //  Copyright © 2018年 SongMenglong. All rights reserved.
 //
 
-#import "BaseNaviVC.h"
+#import "ImageContextStackVC.h"
 
-@interface BaseNaviVC ()
+@interface ImageContextStackVC ()
 
 @end
 
-@implementation BaseNaviVC
+@implementation ImageContextStackVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"图形上下文栈";
     
 }
 

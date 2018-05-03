@@ -76,6 +76,8 @@
 		A2561DBF2094725100D4E2E5 /* DragTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DBE2094725100D4E2E5 /* DragTableVC.m */; };
 		A2561DC3209953B200D4E2E5 /* PushMsgVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DC2209953B200D4E2E5 /* PushMsgVC.m */; };
 		A2561DC7209AB7A300D4E2E5 /* CoreGraphicsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DC6209AB7A300D4E2E5 /* CoreGraphicsVC.m */; };
+		A2561DCA209AE49100D4E2E5 /* JiugonggeUnlockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DC9209AE49100D4E2E5 /* JiugonggeUnlockVC.m */; };
+		A2561DCD209AE4F200D4E2E5 /* DrawBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DCC209AE4F200D4E2E5 /* DrawBaseVC.m */; };
 		A25748282023059D000F7632 /* CollectionViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A25748272023059D000F7632 /* CollectionViewVC.m */; };
 		A257482B202305B9000F7632 /* TableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A257482A202305B9000F7632 /* TableViewVC.m */; };
 		A257482F202315C0000F7632 /* RFQuiltLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A257482E202315C0000F7632 /* RFQuiltLayout.m */; };
@@ -110,7 +112,6 @@
 		A288F98D2089E0F500DD4CA0 /* MIVerticalLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A288F98C2089E0F500DD4CA0 /* MIVerticalLayout.m */; };
 		A28ED52F1FD156B600A74551 /* RearRevealVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A28ED52E1FD156B600A74551 /* RearRevealVC.m */; };
 		A28ED53D1FD2494800A74551 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28ED53C1FD2494800A74551 /* Home.storyboard */; };
-		A28ED53F1FD2495300A74551 /* Mark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28ED53E1FD2495300A74551 /* Mark.storyboard */; };
 		A28ED5411FD2495F00A74551 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28ED5401FD2495F00A74551 /* Mine.storyboard */; };
 		A2A30B9C2008B2FC00C974B7 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30B9B2008B2FC00C974B7 /* VideoToolbox.framework */; };
 		A2A30B9E2008B42B00C974B7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30B9D2008B42B00C974B7 /* AudioToolbox.framework */; };
@@ -216,6 +217,20 @@
 		A2E9DA2B2091C50A0061B1E7 /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA2A2091C50A0061B1E7 /* NSData+AES256.m */; };
 		A2E9DA2E2091C5580061B1E7 /* NSString+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA2D2091C5580061B1E7 /* NSString+AES256.m */; };
 		A2E9DA312091D3FB0061B1E7 /* RSAUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA2F2091D3FA0061B1E7 /* RSAUtil.m */; };
+		A2F002F9209AFC5200F449EE /* BasicDrawingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F002F8209AFC5200F449EE /* BasicDrawingVC.m */; };
+		A2F002FC209AFCA400F449EE /* DownloadProgressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F002FB209AFCA400F449EE /* DownloadProgressVC.m */; };
+		A2F002FF209AFD4800F449EE /* PieChartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F002FE209AFD4800F449EE /* PieChartVC.m */; };
+		A2F00302209AFD6F00F449EE /* HistogramVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F00301209AFD6F00F449EE /* HistogramVC.m */; };
+		A2F00305209AFD8700F449EE /* ImageAndTextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F00304209AFD8700F449EE /* ImageAndTextVC.m */; };
+		A2F00308209AFDAA00F449EE /* SnowTimerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F00307209AFDAA00F449EE /* SnowTimerVC.m */; };
+		A2F0030B209AFDBF00F449EE /* ImageContextStackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F0030A209AFDBF00F449EE /* ImageContextStackVC.m */; };
+		A2F0030E209AFDD200F449EE /* MatrixOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F0030D209AFDD200F449EE /* MatrixOperationVC.m */; };
+		A2F00311209AFDE400F449EE /* ImageWaterMarkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F00310209AFDE400F449EE /* ImageWaterMarkVC.m */; };
+		A2F00314209AFDFB00F449EE /* CorpImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F00313209AFDFB00F449EE /* CorpImageVC.m */; };
+		A2F00317209AFE1100F449EE /* ImageErasureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F00316209AFE1100F449EE /* ImageErasureVC.m */; };
+		A2F0031A209AFE2700F449EE /* DrawingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F00319209AFE2700F449EE /* DrawingVC.m */; };
+		A2F0031D209B08B200F449EE /* ScreenShotVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F0031C209B08B200F449EE /* ScreenShotVC.m */; };
+		A2F00320209B08C800F449EE /* CutOutImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F0031F209B08C800F449EE /* CutOutImageVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -339,6 +354,10 @@
 		A2561DC2209953B200D4E2E5 /* PushMsgVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushMsgVC.m; sourceTree = "<group>"; };
 		A2561DC5209AB7A300D4E2E5 /* CoreGraphicsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreGraphicsVC.h; sourceTree = "<group>"; };
 		A2561DC6209AB7A300D4E2E5 /* CoreGraphicsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreGraphicsVC.m; sourceTree = "<group>"; };
+		A2561DC8209AE49000D4E2E5 /* JiugonggeUnlockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JiugonggeUnlockVC.h; sourceTree = "<group>"; };
+		A2561DC9209AE49100D4E2E5 /* JiugonggeUnlockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JiugonggeUnlockVC.m; sourceTree = "<group>"; };
+		A2561DCB209AE4F200D4E2E5 /* DrawBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawBaseVC.h; sourceTree = "<group>"; };
+		A2561DCC209AE4F200D4E2E5 /* DrawBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawBaseVC.m; sourceTree = "<group>"; };
 		A25748262023059D000F7632 /* CollectionViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewVC.h; sourceTree = "<group>"; };
 		A25748272023059D000F7632 /* CollectionViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewVC.m; sourceTree = "<group>"; };
 		A2574829202305B9000F7632 /* TableViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewVC.h; sourceTree = "<group>"; };
@@ -404,7 +423,6 @@
 		A28ED52D1FD156B600A74551 /* RearRevealVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RearRevealVC.h; sourceTree = "<group>"; };
 		A28ED52E1FD156B600A74551 /* RearRevealVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RearRevealVC.m; sourceTree = "<group>"; };
 		A28ED53C1FD2494800A74551 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		A28ED53E1FD2495300A74551 /* Mark.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mark.storyboard; sourceTree = "<group>"; };
 		A28ED5401FD2495F00A74551 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		A2A30B9B2008B2FC00C974B7 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		A2A30B9D2008B42B00C974B7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -696,6 +714,34 @@
 		A2E9DA2D2091C5580061B1E7 /* NSString+AES256.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+AES256.m"; sourceTree = "<group>"; };
 		A2E9DA2F2091D3FA0061B1E7 /* RSAUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAUtil.m; sourceTree = "<group>"; };
 		A2E9DA302091D3FA0061B1E7 /* RSAUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAUtil.h; sourceTree = "<group>"; };
+		A2F002F7209AFC5200F449EE /* BasicDrawingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicDrawingVC.h; sourceTree = "<group>"; };
+		A2F002F8209AFC5200F449EE /* BasicDrawingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicDrawingVC.m; sourceTree = "<group>"; };
+		A2F002FA209AFCA400F449EE /* DownloadProgressVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadProgressVC.h; sourceTree = "<group>"; };
+		A2F002FB209AFCA400F449EE /* DownloadProgressVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadProgressVC.m; sourceTree = "<group>"; };
+		A2F002FD209AFD4800F449EE /* PieChartVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PieChartVC.h; sourceTree = "<group>"; };
+		A2F002FE209AFD4800F449EE /* PieChartVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PieChartVC.m; sourceTree = "<group>"; };
+		A2F00300209AFD6F00F449EE /* HistogramVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistogramVC.h; sourceTree = "<group>"; };
+		A2F00301209AFD6F00F449EE /* HistogramVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistogramVC.m; sourceTree = "<group>"; };
+		A2F00303209AFD8700F449EE /* ImageAndTextVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageAndTextVC.h; sourceTree = "<group>"; };
+		A2F00304209AFD8700F449EE /* ImageAndTextVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageAndTextVC.m; sourceTree = "<group>"; };
+		A2F00306209AFDAA00F449EE /* SnowTimerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnowTimerVC.h; sourceTree = "<group>"; };
+		A2F00307209AFDAA00F449EE /* SnowTimerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnowTimerVC.m; sourceTree = "<group>"; };
+		A2F00309209AFDBF00F449EE /* ImageContextStackVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageContextStackVC.h; sourceTree = "<group>"; };
+		A2F0030A209AFDBF00F449EE /* ImageContextStackVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageContextStackVC.m; sourceTree = "<group>"; };
+		A2F0030C209AFDD200F449EE /* MatrixOperationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatrixOperationVC.h; sourceTree = "<group>"; };
+		A2F0030D209AFDD200F449EE /* MatrixOperationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatrixOperationVC.m; sourceTree = "<group>"; };
+		A2F0030F209AFDE400F449EE /* ImageWaterMarkVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageWaterMarkVC.h; sourceTree = "<group>"; };
+		A2F00310209AFDE400F449EE /* ImageWaterMarkVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageWaterMarkVC.m; sourceTree = "<group>"; };
+		A2F00312209AFDFB00F449EE /* CorpImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CorpImageVC.h; sourceTree = "<group>"; };
+		A2F00313209AFDFB00F449EE /* CorpImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CorpImageVC.m; sourceTree = "<group>"; };
+		A2F00315209AFE1100F449EE /* ImageErasureVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageErasureVC.h; sourceTree = "<group>"; };
+		A2F00316209AFE1100F449EE /* ImageErasureVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageErasureVC.m; sourceTree = "<group>"; };
+		A2F00318209AFE2600F449EE /* DrawingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawingVC.h; sourceTree = "<group>"; };
+		A2F00319209AFE2700F449EE /* DrawingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingVC.m; sourceTree = "<group>"; };
+		A2F0031B209B08B200F449EE /* ScreenShotVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenShotVC.h; sourceTree = "<group>"; };
+		A2F0031C209B08B200F449EE /* ScreenShotVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenShotVC.m; sourceTree = "<group>"; };
+		A2F0031E209B08C800F449EE /* CutOutImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CutOutImageVC.h; sourceTree = "<group>"; };
+		A2F0031F209B08C800F449EE /* CutOutImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CutOutImageVC.m; sourceTree = "<group>"; };
 		B34F5016CAA45D7BD71933A9 /* Pods-MyInsightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyInsightTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyInsightTests/Pods-MyInsightTests.release.xcconfig"; sourceTree = "<group>"; };
 		D110F761EC3A481896E9E0EB /* libPods-MyInsight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyInsight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -865,7 +911,6 @@
 			children = (
 				A20D5DF51FD14549000E191D /* Main.storyboard */,
 				A28ED53C1FD2494800A74551 /* Home.storyboard */,
-				A28ED53E1FD2495300A74551 /* Mark.storyboard */,
 				A28ED5401FD2495F00A74551 /* Mine.storyboard */,
 				A2CDD252208DC64A006DF86E /* CoreAnimation.storyboard */,
 			);
@@ -1128,6 +1173,38 @@
 			children = (
 				A2561DC5209AB7A300D4E2E5 /* CoreGraphicsVC.h */,
 				A2561DC6209AB7A300D4E2E5 /* CoreGraphicsVC.m */,
+				A2561DCB209AE4F200D4E2E5 /* DrawBaseVC.h */,
+				A2561DCC209AE4F200D4E2E5 /* DrawBaseVC.m */,
+				A2F002F7209AFC5200F449EE /* BasicDrawingVC.h */,
+				A2F002F8209AFC5200F449EE /* BasicDrawingVC.m */,
+				A2F002FA209AFCA400F449EE /* DownloadProgressVC.h */,
+				A2F002FB209AFCA400F449EE /* DownloadProgressVC.m */,
+				A2F002FD209AFD4800F449EE /* PieChartVC.h */,
+				A2F002FE209AFD4800F449EE /* PieChartVC.m */,
+				A2F00300209AFD6F00F449EE /* HistogramVC.h */,
+				A2F00301209AFD6F00F449EE /* HistogramVC.m */,
+				A2F00303209AFD8700F449EE /* ImageAndTextVC.h */,
+				A2F00304209AFD8700F449EE /* ImageAndTextVC.m */,
+				A2F00306209AFDAA00F449EE /* SnowTimerVC.h */,
+				A2F00307209AFDAA00F449EE /* SnowTimerVC.m */,
+				A2F00309209AFDBF00F449EE /* ImageContextStackVC.h */,
+				A2F0030A209AFDBF00F449EE /* ImageContextStackVC.m */,
+				A2F0030C209AFDD200F449EE /* MatrixOperationVC.h */,
+				A2F0030D209AFDD200F449EE /* MatrixOperationVC.m */,
+				A2F0030F209AFDE400F449EE /* ImageWaterMarkVC.h */,
+				A2F00310209AFDE400F449EE /* ImageWaterMarkVC.m */,
+				A2F00312209AFDFB00F449EE /* CorpImageVC.h */,
+				A2F00313209AFDFB00F449EE /* CorpImageVC.m */,
+				A2F0031B209B08B200F449EE /* ScreenShotVC.h */,
+				A2F0031C209B08B200F449EE /* ScreenShotVC.m */,
+				A2F0031E209B08C800F449EE /* CutOutImageVC.h */,
+				A2F0031F209B08C800F449EE /* CutOutImageVC.m */,
+				A2F00315209AFE1100F449EE /* ImageErasureVC.h */,
+				A2F00316209AFE1100F449EE /* ImageErasureVC.m */,
+				A2F00318209AFE2600F449EE /* DrawingVC.h */,
+				A2F00319209AFE2700F449EE /* DrawingVC.m */,
+				A2561DC8209AE49000D4E2E5 /* JiugonggeUnlockVC.h */,
+				A2561DC9209AE49100D4E2E5 /* JiugonggeUnlockVC.m */,
 			);
 			path = CoreGraphics;
 			sourceTree = "<group>";
@@ -2081,7 +2158,6 @@
 				A2B992AC2068F45B002A73B1 /* ChatTipCell.xib in Resources */,
 				A20D5DFC1FD14549000E191D /* Assets.xcassets in Resources */,
 				A22C4DD51FFC777A0079F7C2 /* route_start_pin@2x.png in Resources */,
-				A28ED53F1FD2495300A74551 /* Mark.storyboard in Resources */,
 				A2CDD256208DD022006DF86E /* 小新.jpg in Resources */,
 				A22C4DCF1FFC777A0079F7C2 /* pin_head_l.png in Resources */,
 				A22C4DCE1FFC777A0079F7C2 /* route_goal_pin@2x.png in Resources */,
@@ -2240,9 +2316,12 @@
 				A2B9927820623EA3002A73B1 /* OpenGLVC.m in Sources */,
 				A2CDD239208DB0F9006DF86E /* CAAnimationGroupVC.m in Sources */,
 				A288F97E2089D2CE00DD4CA0 /* NormalCollectionVC.m in Sources */,
+				A2F0031D209B08B200F449EE /* ScreenShotVC.m in Sources */,
 				A2CDD275208ED245006DF86E /* PSCollisionView.m in Sources */,
 				A26CE4A6201971C50012EC69 /* CustomPointAnnotation.m in Sources */,
+				A2F00305209AFD8700F449EE /* ImageAndTextVC.m in Sources */,
 				A257482F202315C0000F7632 /* RFQuiltLayout.m in Sources */,
+				A2F002FC209AFCA400F449EE /* DownloadProgressVC.m in Sources */,
 				A2DDDC26208ACEF600DC7A4A /* PortraitScreenVC.m in Sources */,
 				A2E9DA2E2091C5580061B1E7 /* NSString+AES256.m in Sources */,
 				A239CE332085E49F0033646A /* SomeView.m in Sources */,
@@ -2251,7 +2330,9 @@
 				A27E873C201ACD5E003E712C /* FFmpegVC.m in Sources */,
 				A26CE4892018A09A0012EC69 /* OtherVC.m in Sources */,
 				A27E875E201AD2B2003E712C /* AudioVC.m in Sources */,
+				A2561DCA209AE49100D4E2E5 /* JiugonggeUnlockVC.m in Sources */,
 				A2BDD436205F5BAB008AD133 /* BaseTableVC.m in Sources */,
+				A2F0030B209AFDBF00F449EE /* ImageContextStackVC.m in Sources */,
 				A2E9DA1F2091BD0E0061B1E7 /* NSString+AES.m in Sources */,
 				A20D5E231FD14E37000E191D /* RightRevealVC.m in Sources */,
 				A26CE4A8201971C50012EC69 /* CalloutMapAnnotation.m in Sources */,
@@ -2261,6 +2342,7 @@
 				A2CDD25C208DDC2C006DF86E /* PhysicalVC.m in Sources */,
 				A2CA808D202196EA00D81845 /* LiftCycleVC.m in Sources */,
 				A26CE4A4201971C50012EC69 /* GoogleMapVC.m in Sources */,
+				A2F00317209AFE1100F449EE /* ImageErasureVC.m in Sources */,
 				A2BDD430205F5767008AD133 /* BaseView.m in Sources */,
 				A2D884E920886896005116A6 /* BaseVC.m in Sources */,
 				A2BDD439205F6354008AD133 /* ThreadVC.m in Sources */,
@@ -2270,7 +2352,9 @@
 				A2B43C3320575EE700FEAE58 /* RadioButtonVC.m in Sources */,
 				A2E9DA312091D3FB0061B1E7 /* RSAUtil.m in Sources */,
 				A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */,
+				A2F002F9209AFC5200F449EE /* BasicDrawingVC.m in Sources */,
 				A2D884F420897942005116A6 /* RunLoopVC.m in Sources */,
+				A2F0031A209AFE2700F449EE /* DrawingVC.m in Sources */,
 				A2DDDC19208ACDC000DC7A4A /* DataBaseVC.m in Sources */,
 				A2CDD27B208ED7A1006DF86E /* PSDemoVC.m in Sources */,
 				A2DDDC48208AE20B00DC7A4A /* ViewLayoutVC.m in Sources */,
@@ -2297,6 +2381,7 @@
 				A2CDD230208DB0AA006DF86E /* CABasicAnimationVC.m in Sources */,
 				A2B992AB2068F45B002A73B1 /* ChatTipCell.m in Sources */,
 				A27E875C201AD2B2003E712C /* MusicVC.m in Sources */,
+				A2F00314209AFDFB00F449EE /* CorpImageVC.m in Sources */,
 				A2DDDC4C208AE50A00DC7A4A /* ScaleVC.m in Sources */,
 				A239CE202085D4410033646A /* MIGirdLayout.m in Sources */,
 				A20D5DFE1FD14549000E191D /* AppDelegate.m in Sources */,
@@ -2307,6 +2392,7 @@
 				A257482B202305B9000F7632 /* TableViewVC.m in Sources */,
 				A2DDDC25208ACEF600DC7A4A /* LandscapeScreenVC.m in Sources */,
 				A2CDD26C208ED20B006DF86E /* PSPushView.m in Sources */,
+				A2F00308209AFDAA00F449EE /* SnowTimerVC.m in Sources */,
 				A20D5DFD1FD14549000E191D /* main.m in Sources */,
 				A239CE2D2085E4780033646A /* NetWorkVC.m in Sources */,
 				A2CDD269208ED1F5006DF86E /* PSSnapView.m in Sources */,
@@ -2318,13 +2404,16 @@
 				A2BDD43F205F6392008AD133 /* OperationVC.m in Sources */,
 				A2CDD236208DB0E2006DF86E /* CATransitionVC.m in Sources */,
 				A26CE4A7201971C50012EC69 /* YahooMapVC.m in Sources */,
+				A2F00320209B08C800F449EE /* CutOutImageVC.m in Sources */,
 				A2BDD423205F557C008AD133 /* MultiThreadVC.m in Sources */,
 				A26D17302043A4880064DECF /* WelcomeVC.m in Sources */,
 				A2B992832068F0C7002A73B1 /* ChatVC.m in Sources */,
 				A23B352C208D7EC8001D71F2 /* CALayerYSDHVC.m in Sources */,
 				A239CE302085E4930033646A /* NetModel.m in Sources */,
 				A2561DBC2094123400D4E2E5 /* EncryptVC.m in Sources */,
+				A2F00302209AFD6F00F449EE /* HistogramVC.m in Sources */,
 				A288F9812089DB2800DD4CA0 /* HorizontalCollectionVC.m in Sources */,
+				A2F00311209AFDE400F449EE /* ImageWaterMarkVC.m in Sources */,
 				A25748282023059D000F7632 /* CollectionViewVC.m in Sources */,
 				A2DDDC3B208AD9B200DC7A4A /* SQLiteDBVC.m in Sources */,
 				A26CE4A9201971C50012EC69 /* SystemMapVC.m in Sources */,
@@ -2333,7 +2422,9 @@
 				A28ED52F1FD156B600A74551 /* RearRevealVC.m in Sources */,
 				A2CDD251208DB878006DF86E /* LZDHDTVC.m in Sources */,
 				A288F98D2089E0F500DD4CA0 /* MIVerticalLayout.m in Sources */,
+				A2F002FF209AFD4800F449EE /* PieChartVC.m in Sources */,
 				A2DDDC41208ADA4C00DC7A4A /* CoreDataVC.m in Sources */,
+				A2561DCD209AE4F200D4E2E5 /* DrawBaseVC.m in Sources */,
 				A26CE4A3201971C50012EC69 /* BaiduMapVC.m in Sources */,
 				A20D5E111FD147CD000E191D /* TabBarVC.m in Sources */,
 				A27E875D201AD2B2003E712C /* SoundVC.m in Sources */,
@@ -2350,6 +2441,7 @@
 				A2DDDC35208AD97200DC7A4A /* DataBaseModel.m in Sources */,
 				A2561DC7209AB7A300D4E2E5 /* CoreGraphicsVC.m in Sources */,
 				A241D22B2047A32A005A3BC5 /* UIColor+Category.m in Sources */,
+				A2F0030E209AFDD200F449EE /* MatrixOperationVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

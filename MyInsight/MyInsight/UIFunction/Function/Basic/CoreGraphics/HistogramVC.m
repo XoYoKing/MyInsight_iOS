@@ -1,21 +1,23 @@
 //
-//  BaseNaviVC.m
+//  HistogramVC.m
 //  MyInsight
 //
-//  Created by SongMenglong on 2018/4/19.
+//  Created by SongMenglong on 2018/5/3.
 //  Copyright © 2018年 SongMenglong. All rights reserved.
 //
 
-#import "BaseNaviVC.h"
+#import "HistogramVC.h"
 
-@interface BaseNaviVC ()
+@interface HistogramVC ()
 
 @end
 
-@implementation BaseNaviVC
+@implementation HistogramVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"柱状图";
     
 }
 

@@ -16,7 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     // 设置默认背景颜色
     self.view.backgroundColor = [UIColor whiteColor];

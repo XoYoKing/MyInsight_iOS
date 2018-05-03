@@ -36,7 +36,6 @@
         blueLayer.backgroundColor = [UIColor blueColor].CGColor;
         _blueLayer = blueLayer;
         blueLayer.frame = CGRectMake(50, 350, 100, 70);
-        
     }
     return _blueLayer;
 }

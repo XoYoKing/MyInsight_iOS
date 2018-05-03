@@ -18,7 +18,6 @@
     [super viewDidLoad];
     
     self.title = @"粒子动画单条";
-    
 }
 
 - (IBAction)startAni:(UIButton *)sender {

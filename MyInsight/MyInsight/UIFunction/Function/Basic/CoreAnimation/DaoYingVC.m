@@ -21,11 +21,9 @@
     
     self.title = @"倒影";
     
-    
     CAReplicatorLayer *layer =  (CAReplicatorLayer *)_repView.layer;
     
     layer.instanceCount = 2;
-    
     
     CATransform3D transform = CATransform3DMakeTranslation(0, _repView.bounds.size.height, 0);
     // 绕着X轴旋转

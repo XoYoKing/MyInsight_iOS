@@ -71,7 +71,6 @@
     repL.instanceTransform = CATransform3DMakeRotation(angle, 0, 0, 1);
     
     repL.instanceDelay = duration / count;
-    
 }
 
 - (void)didReceiveMemoryWarning {

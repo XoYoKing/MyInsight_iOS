@@ -1,21 +1,24 @@
+
 //
-//  BaseNaviVC.m
+//  DrawingVC.m
 //  MyInsight
 //
-//  Created by SongMenglong on 2018/4/19.
+//  Created by SongMenglong on 2018/5/3.
 //  Copyright © 2018年 SongMenglong. All rights reserved.
 //
 
-#import "BaseNaviVC.h"
+#import "DrawingVC.h"
 
-@interface BaseNaviVC ()
+@interface DrawingVC ()
 
 @end
 
-@implementation BaseNaviVC
+@implementation DrawingVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"绘图";
     
 }
 

@@ -1,21 +1,24 @@
+
 //
-//  BaseNaviVC.m
+//  SnowTimerVC.m
 //  MyInsight
 //
-//  Created by SongMenglong on 2018/4/19.
+//  Created by SongMenglong on 2018/5/3.
 //  Copyright © 2018年 SongMenglong. All rights reserved.
 //
 
-#import "BaseNaviVC.h"
+#import "SnowTimerVC.h"
 
-@interface BaseNaviVC ()
+@interface SnowTimerVC ()
 
 @end
 
-@implementation BaseNaviVC
+@implementation SnowTimerVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"下雪生成器";
     
 }
 

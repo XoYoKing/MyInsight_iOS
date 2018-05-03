@@ -27,13 +27,10 @@
 #define angle2radion(a) ((a) / 180.0 * M_PI)
 // 一秒钟秒针转6°
 #define perSecondA 6
-
 // 一分钟分针转6°
 #define perMinuteA 6
-
 // 一小时时针转30°
 #define perHourA 30
-
 // 每分钟时针转多少度
 #define perMinuteHourA 0.5
 

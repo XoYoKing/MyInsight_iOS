@@ -1,21 +1,24 @@
+
 //
-//  BaseNaviVC.m
+//  MatrixOperationVC.m
 //  MyInsight
 //
-//  Created by SongMenglong on 2018/4/19.
+//  Created by SongMenglong on 2018/5/3.
 //  Copyright © 2018年 SongMenglong. All rights reserved.
 //
 
-#import "BaseNaviVC.h"
+#import "MatrixOperationVC.h"
 
-@interface BaseNaviVC ()
+@interface MatrixOperationVC ()
 
 @end
 
-@implementation BaseNaviVC
+@implementation MatrixOperationVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"矩阵操作";
     
 }
 

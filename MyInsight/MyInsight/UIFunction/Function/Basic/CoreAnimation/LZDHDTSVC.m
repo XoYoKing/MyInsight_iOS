@@ -18,7 +18,6 @@
     [super viewDidLoad];
     
     self.title = @"粒子动画多条";
-    
 }
 
 - (IBAction)startAni:(UIButton *)sender {
@@ -30,7 +29,6 @@
     LZDHDTSDrawView *view = (LZDHDTSDrawView *)self.view;
     [view reDraw];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

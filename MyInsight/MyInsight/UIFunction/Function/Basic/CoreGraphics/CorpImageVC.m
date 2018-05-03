@@ -1,21 +1,24 @@
+
 //
-//  BaseNaviVC.m
+//  CorpImageVC.m
 //  MyInsight
 //
-//  Created by SongMenglong on 2018/4/19.
+//  Created by SongMenglong on 2018/5/3.
 //  Copyright © 2018年 SongMenglong. All rights reserved.
 //
 
-#import "BaseNaviVC.h"
+#import "CorpImageVC.h"
 
-@interface BaseNaviVC ()
+@interface CorpImageVC ()
 
 @end
 
-@implementation BaseNaviVC
+@implementation CorpImageVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"裁剪图片";
     
 }
 

@@ -56,38 +56,29 @@
 
 @implementation DrawView
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     // touch
     UITouch *touch = [touches anyObject];
-    
     // 获取手指的触摸点
     CGPoint curP = [touch locationInView:self];
-    
     // 创建路径
     UIBezierPath *path = [UIBezierPath bezierPath];
     _path = path;
-    
     // 设置起点
     [path moveToPoint:curP];
-    
 }
 
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     // touch
     UITouch *touch = [touches anyObject];
-    
     // 获取手指的触摸点
     CGPoint curP = [touch locationInView:self];
-    
     [_path addLineToPoint:curP];
     
     [self setNeedsDisplay];
 }
 
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     static BOOL isValue;
     // 给imageView添加核心动画
     // 添加核心动画

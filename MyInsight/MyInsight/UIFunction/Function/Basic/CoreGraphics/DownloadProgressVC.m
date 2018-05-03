@@ -1,21 +1,25 @@
+
 //
-//  BaseNaviVC.m
+//  DownloadProgressVC.m
 //  MyInsight
 //
-//  Created by SongMenglong on 2018/4/19.
+//  Created by SongMenglong on 2018/5/3.
 //  Copyright © 2018年 SongMenglong. All rights reserved.
 //
 
-#import "BaseNaviVC.h"
+#import "DownloadProgressVC.h"
 
-@interface BaseNaviVC ()
+@interface DownloadProgressVC ()
 
 @end
 
-@implementation BaseNaviVC
+@implementation DownloadProgressVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"下载进度";
+    
     
 }
 
