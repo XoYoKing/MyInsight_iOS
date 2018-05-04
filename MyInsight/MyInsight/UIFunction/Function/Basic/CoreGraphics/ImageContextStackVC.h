@@ -12,3 +12,7 @@
 @interface ImageContextStackVC : DrawBaseVC
 
 @end
+
+@interface ImageContextStackView : UIView
+
+@end

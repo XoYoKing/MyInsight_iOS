@@ -12,3 +12,7 @@
 @interface MatrixOperationVC : DrawBaseVC
 
 @end
+
+@interface MatrixOperatioView : UIView
+
+@end

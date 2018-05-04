@@ -93,7 +93,6 @@ static const NSString *JiugonggeUnlockStr = @"九宫格解锁";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"");
     // 获取到当前cell的字符串
     NSString *cellString = [self.dataArray objectAtIndex:indexPath.row];
     

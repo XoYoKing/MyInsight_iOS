@@ -12,3 +12,7 @@
 @interface SnowTimerVC : DrawBaseVC
 
 @end
+
+@interface SnowTimerView : UIView
+
+@end

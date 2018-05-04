@@ -217,6 +217,7 @@
 		A2E9DA2B2091C50A0061B1E7 /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA2A2091C50A0061B1E7 /* NSData+AES256.m */; };
 		A2E9DA2E2091C5580061B1E7 /* NSString+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA2D2091C5580061B1E7 /* NSString+AES256.m */; };
 		A2E9DA312091D3FB0061B1E7 /* RSAUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA2F2091D3FA0061B1E7 /* RSAUtil.m */; };
+		A2EE0F50209BF3E00073495A /* 雪花.png in Resources */ = {isa = PBXBuildFile; fileRef = A2EE0F4F209BF3E00073495A /* 雪花.png */; };
 		A2F002F9209AFC5200F449EE /* BasicDrawingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F002F8209AFC5200F449EE /* BasicDrawingVC.m */; };
 		A2F002FC209AFCA400F449EE /* DownloadProgressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F002FB209AFCA400F449EE /* DownloadProgressVC.m */; };
 		A2F002FF209AFD4800F449EE /* PieChartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F002FE209AFD4800F449EE /* PieChartVC.m */; };
@@ -714,6 +715,7 @@
 		A2E9DA2D2091C5580061B1E7 /* NSString+AES256.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+AES256.m"; sourceTree = "<group>"; };
 		A2E9DA2F2091D3FA0061B1E7 /* RSAUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAUtil.m; sourceTree = "<group>"; };
 		A2E9DA302091D3FA0061B1E7 /* RSAUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAUtil.h; sourceTree = "<group>"; };
+		A2EE0F4F209BF3E00073495A /* 雪花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "雪花.png"; sourceTree = "<group>"; };
 		A2F002F7209AFC5200F449EE /* BasicDrawingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicDrawingVC.h; sourceTree = "<group>"; };
 		A2F002F8209AFC5200F449EE /* BasicDrawingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicDrawingVC.m; sourceTree = "<group>"; };
 		A2F002FA209AFCA400F449EE /* DownloadProgressVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadProgressVC.h; sourceTree = "<group>"; };
@@ -1635,6 +1637,7 @@
 		A2CDD254208DD021006DF86E /* image */ = {
 			isa = PBXGroup;
 			children = (
+				A2EE0F4F209BF3E00073495A /* 雪花.png */,
 				A2CDD25E208EC6D6006DF86E /* CATransition1.png */,
 				A2CDD25F208EC6D7006DF86E /* CATransition2.png */,
 				A2CDD25D208EC6D6006DF86E /* CATransition3.png */,
@@ -2156,6 +2159,7 @@
 				A27E8728201AC53C003E712C /* 1967.mp3 in Resources */,
 				A22C4DD11FFC777A0079F7C2 /* purple_arrow.png in Resources */,
 				A2B992AC2068F45B002A73B1 /* ChatTipCell.xib in Resources */,
+				A2EE0F50209BF3E00073495A /* 雪花.png in Resources */,
 				A20D5DFC1FD14549000E191D /* Assets.xcassets in Resources */,
 				A22C4DD51FFC777A0079F7C2 /* route_start_pin@2x.png in Resources */,
 				A2CDD256208DD022006DF86E /* 小新.jpg in Resources */,

@@ -12,3 +12,7 @@
 @interface HistogramVC : DrawBaseVC
 
 @end
+
+@interface HistogramView : UIView
+
+@end

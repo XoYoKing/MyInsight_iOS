@@ -12,3 +12,7 @@
 @interface ImageAndTextVC : DrawBaseVC
 
 @end
+
+@interface ImageAndTextView : UIView
+
+@end
