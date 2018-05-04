@@ -217,6 +217,7 @@
 		A2E9DA2B2091C50A0061B1E7 /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA2A2091C50A0061B1E7 /* NSData+AES256.m */; };
 		A2E9DA2E2091C5580061B1E7 /* NSString+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA2D2091C5580061B1E7 /* NSString+AES256.m */; };
 		A2E9DA312091D3FB0061B1E7 /* RSAUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA2F2091D3FA0061B1E7 /* RSAUtil.m */; };
+		A2E9DA34209CB6A20061B1E7 /* EncryptUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA33209CB6A20061B1E7 /* EncryptUtils.m */; };
 		A2EE0F50209BF3E00073495A /* 雪花.png in Resources */ = {isa = PBXBuildFile; fileRef = A2EE0F4F209BF3E00073495A /* 雪花.png */; };
 		A2F002F9209AFC5200F449EE /* BasicDrawingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F002F8209AFC5200F449EE /* BasicDrawingVC.m */; };
 		A2F002FC209AFCA400F449EE /* DownloadProgressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F002FB209AFCA400F449EE /* DownloadProgressVC.m */; };
@@ -715,6 +716,8 @@
 		A2E9DA2D2091C5580061B1E7 /* NSString+AES256.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+AES256.m"; sourceTree = "<group>"; };
 		A2E9DA2F2091D3FA0061B1E7 /* RSAUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAUtil.m; sourceTree = "<group>"; };
 		A2E9DA302091D3FA0061B1E7 /* RSAUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAUtil.h; sourceTree = "<group>"; };
+		A2E9DA32209CB6A20061B1E7 /* EncryptUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncryptUtils.h; sourceTree = "<group>"; };
+		A2E9DA33209CB6A20061B1E7 /* EncryptUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncryptUtils.m; sourceTree = "<group>"; };
 		A2EE0F4F209BF3E00073495A /* 雪花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "雪花.png"; sourceTree = "<group>"; };
 		A2F002F7209AFC5200F449EE /* BasicDrawingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicDrawingVC.h; sourceTree = "<group>"; };
 		A2F002F8209AFC5200F449EE /* BasicDrawingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicDrawingVC.m; sourceTree = "<group>"; };
@@ -1144,6 +1147,8 @@
 			children = (
 				A2561DBA2094123400D4E2E5 /* EncryptVC.h */,
 				A2561DBB2094123400D4E2E5 /* EncryptVC.m */,
+				A2E9DA32209CB6A20061B1E7 /* EncryptUtils.h */,
+				A2E9DA33209CB6A20061B1E7 /* EncryptUtils.m */,
 				A2E9DA1C2091BCE20061B1E7 /* AES */,
 				A242C1B320902BE400A6A9F7 /* RSA */,
 			);
@@ -2387,6 +2392,7 @@
 				A27E875C201AD2B2003E712C /* MusicVC.m in Sources */,
 				A2F00314209AFDFB00F449EE /* CorpImageVC.m in Sources */,
 				A2DDDC4C208AE50A00DC7A4A /* ScaleVC.m in Sources */,
+				A2E9DA34209CB6A20061B1E7 /* EncryptUtils.m in Sources */,
 				A239CE202085D4410033646A /* MIGirdLayout.m in Sources */,
 				A20D5DFE1FD14549000E191D /* AppDelegate.m in Sources */,
 				A23B3526208D7E16001D71F2 /* CALayerVC.m in Sources */,

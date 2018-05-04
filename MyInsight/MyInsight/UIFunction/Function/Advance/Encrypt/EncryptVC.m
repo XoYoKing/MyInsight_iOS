@@ -15,6 +15,9 @@
 #import <GTMBase64.h> // DES加密
 #import "NSString+AES.h" // AES加密
 #import "RSAUtil.h" // RSA加密
+#import <AFNetworking.h>
+#import "EncryptUtils.h"
+
 //密钥
 #define gkey            @"mobilewinx@easipass@1234"
 //偏移量
@@ -27,6 +30,10 @@
 
 // 私钥
 #define RSA_Privite_key        @"MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBALG5aGnoSBB+utIG3GUHBtTfmWGMLrtfRjUquGqiUh9ijf/JZXV6vJhVSGTnF4exsqD1EcP1OkhlFRYhblrwyswFyCvUD92AgeLYQzbx2sfglFOaRMtUdF6CAVtvTjqTQhKktbddVbSMcHf/PdLVz81P1XrdJArpYnrn9g/nEhI1AgMBAAECgYBEbsMAvLs69sFS6+djU1BTGYIC6Kp55ZawFDIMhVIf2aAZ1N+nW8pQ0c3dZIpP6qGAjrz3em6lv55d9iN7Cura/g57Rk4S3SRo5u4hWUd16NeIVP+HfreKIgZ6jwKQTfXt2KzDuIAHudvwT2UJBePgIIDQoKMEq4khtFiRGS1UgQJBAN/KpSOiRiGup8h/Iqespwfxyrqn5/4iyw1tpJCWzHddP7nJGpYmOL+ELWs/pReYclAOqH9ZIzOT2K8ZLt6yBOECQQDLTXZowK8wFgMudAE5TStC/zl3TAKMu/Gu5wlXSMoa+nwSy/FSIQZyypGeHR2X8QhbZ1Qz+uBCJm7gEGOWMWPVAkEAp5ajsFm3V0XqE/VRSGu88fAaN0nCK8h2cunm0Ph8ye6k6EY3iLW6zYD4WlZhFZhuEpHHkQZ5nAhdvlKHjPGXQQJAYOtF1rx9B/SGgb/F0ZZrWF4p/ChdUtBKcHIt7tGBoAjn22IkYl3iIBlYAEOrFwNOU5zX9IvWG1MNKn5Fq5VSHQJBAJG5xSY0IKzXWDsGnPIa9XlSTv1zl7RCGNDo7O1zh+5J/kjDpU9M2fIXEtzvGYHiOffz9FBh5ka69JJNFWoWAiw="
+
+#define ENCRYPT_KEY     @"MfsKyo8IEMb"
+
+#define RSA_Test_secret      @"lXOjdiMhPZjxDGF2eUzv7yD6zEFTLjyclrmPNTdMyEYCQC45d4ruo4QbV9jMN5lKfTxz3dxPIPaT06KxqU5CQVZqkX4Ttrw/anZencm4WnVUs96GIgpI3uY7ohOaG36Ak3cGvkQF6DvCO88MPrdS38DxUa2OSG4G5DVl4c74M4g="
 
 // 加密的枚举值
 /*
@@ -472,13 +479,30 @@ typedef NS_ENUM(NSUInteger, EncryptType) {
     NSLog(@"RSA JAVA加密");
     self.encryptTextView.text = [RSAUtil encryptString:self.originTextField.text publicKey:RSA_Public_key];
     
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer =[AFJSONResponseSerializer serializer];
+    
+    NSString * timeStamp = [EncryptUtils getSysTimeStamp];
+    NSString * originKey = [NSString stringWithFormat:@"%@%@", timeStamp, ENCRYPT_KEY];
+    NSString * encryptKey = [EncryptUtils md5:originKey];
+    NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:timeStamp,@"time", encryptKey, @"md5", self.encryptTextView.text, @"content", self.encryptTextView.text, @"ciphertext", nil];
+    [manager POST:@"http://192.168.1.127:8080/DesAndRsaDemo/rsa/testRsa.do" parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSLog(@"123");
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    
 }
 
 - (void)rsaJavaDecrypt {
     NSLog(@"RSA JAVA解密");
-    
-    
-    
+    self.decryptTextView.text = [RSAUtil decryptString:RSA_Test_secret publicKey:RSA_Public_key];
     
 }
 
@@ -600,7 +624,6 @@ typedef NS_ENUM(NSUInteger, EncryptType) {
     decWithPublicKey = [RSA decryptString:encWithPrivKey publicKey:pubkey];
     NSLog(@"(PHP enc)Decrypted with public key: %@", decWithPublicKey);
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
