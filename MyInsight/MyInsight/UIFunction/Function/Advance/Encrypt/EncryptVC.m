@@ -490,9 +490,7 @@ typedef NS_ENUM(NSUInteger, EncryptType) {
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
-        
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
         NSLog(@"123");
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
