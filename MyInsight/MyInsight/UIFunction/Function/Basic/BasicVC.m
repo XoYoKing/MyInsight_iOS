@@ -22,6 +22,7 @@
 #import "CoreAnimationVC.h" // 核心动画
 #import "CoreGraphicsVC.h"
 #import "PhysicalVC.h"
+#import "GestureVC.h"
 
 @interface BasicVC ()<UITableViewDelegate, UITableViewDataSource>
 // LEFT
@@ -37,7 +38,7 @@
 
 static const NSString *LiftCycleStr = @"VC生命周期";
 static const NSString *RunTimeStr = @"运行时RunTime";
-static const NSString *ShouShiStr = @"手势";
+static const NSString *GestureStr = @"手势";
 static const NSString *XieYiStr = @"协议";
 static const NSString *TableViewStr = @"TableView";
 static const NSString *CollectViewStr = @"CollectView";
@@ -88,7 +89,7 @@ static const NSString *CoreGraphicsStr = @"绘画2D";
 // 处理数据
 - (void)handleTableViewData {
     // 数组
-    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, ShouShiStr, XieYiStr, PhysicalStr, CoreAnimationStr, CoreGraphicsStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, MultiThreadString, ViewLayoutStr];
+    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, GestureStr, XieYiStr, PhysicalStr, CoreAnimationStr, CoreGraphicsStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, MultiThreadString, ViewLayoutStr];
 }
 
 #pragma mark - 创建TableView
@@ -181,6 +182,12 @@ static const NSString *CoreGraphicsStr = @"绘画2D";
         CoreGraphicsVC *coreGraphicsVC = [[CoreGraphicsVC alloc] init];
         coreGraphicsVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:coreGraphicsVC animated:YES];
+    }
+    if ([cellString isEqual:GestureStr]) {
+        // 手势
+        GestureVC *gestureVC = [[GestureVC alloc] init];
+        gestureVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:gestureVC animated:YES];
     }
     if ([cellString isEqual:TableViewStr]) {
         // TableView

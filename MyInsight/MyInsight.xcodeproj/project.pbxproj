@@ -187,6 +187,7 @@
 		A2D884E920886896005116A6 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884E820886896005116A6 /* BaseVC.m */; };
 		A2D884EC20886B96005116A6 /* BaseNaviVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884EB20886B96005116A6 /* BaseNaviVC.m */; };
 		A2D884F420897942005116A6 /* RunLoopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D884F320897942005116A6 /* RunLoopVC.m */; };
+		A2D8BDF2209FE9EB00AD4FF0 /* GestureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D8BDF1209FE9EB00AD4FF0 /* GestureVC.m */; };
 		A2DDDC19208ACDC000DC7A4A /* DataBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC10208ACDC000DC7A4A /* DataBaseVC.m */; };
 		A2DDDC1C208ACDC000DC7A4A /* QRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC17208ACDC000DC7A4A /* QRCodeVC.m */; };
 		A2DDDC25208ACEF600DC7A4A /* LandscapeScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DDDC1F208ACEF600DC7A4A /* LandscapeScreenVC.m */; };
@@ -555,6 +556,8 @@
 		A2D884EB20886B96005116A6 /* BaseNaviVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNaviVC.m; sourceTree = "<group>"; };
 		A2D884F220897942005116A6 /* RunLoopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopVC.h; sourceTree = "<group>"; };
 		A2D884F320897942005116A6 /* RunLoopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopVC.m; sourceTree = "<group>"; };
+		A2D8BDF0209FE9EB00AD4FF0 /* GestureVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureVC.h; sourceTree = "<group>"; };
+		A2D8BDF1209FE9EB00AD4FF0 /* GestureVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureVC.m; sourceTree = "<group>"; };
 		A2DDDC10208ACDC000DC7A4A /* DataBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseVC.m; sourceTree = "<group>"; };
 		A2DDDC14208ACDC000DC7A4A /* DataBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseVC.h; sourceTree = "<group>"; };
 		A2DDDC17208ACDC000DC7A4A /* QRCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeVC.m; sourceTree = "<group>"; };
@@ -1279,6 +1282,7 @@
 				A23B3520208D7299001D71F2 /* CoreAnimation */,
 				A2561DC4209AB77500D4E2E5 /* CoreGraphics */,
 				A2DDDC1D208ACEF600DC7A4A /* Screen */,
+				A2D8BDED209FE9C300AD4FF0 /* Gesture */,
 				A2CA8088202196E900D81845 /* LiftCycle */,
 				A2CA8085202196E900D81845 /* RunTime */,
 				A2D884F120897927005116A6 /* RunLoop */,
@@ -1720,6 +1724,15 @@
 				A2D884F320897942005116A6 /* RunLoopVC.m */,
 			);
 			path = RunLoop;
+			sourceTree = "<group>";
+		};
+		A2D8BDED209FE9C300AD4FF0 /* Gesture */ = {
+			isa = PBXGroup;
+			children = (
+				A2D8BDF0209FE9EB00AD4FF0 /* GestureVC.h */,
+				A2D8BDF1209FE9EB00AD4FF0 /* GestureVC.m */,
+			);
+			path = Gesture;
 			sourceTree = "<group>";
 		};
 		A2DDDC0F208ACDC000DC7A4A /* DataBase */ = {
@@ -2445,6 +2458,7 @@
 				A2B9927420623D0E002A73B1 /* SocketVC.m in Sources */,
 				A239CE362085E4C30033646A /* AFNetWorkVC.m in Sources */,
 				A2BDD42D205F5754008AD133 /* BaseModel.m in Sources */,
+				A2D8BDF2209FE9EB00AD4FF0 /* GestureVC.m in Sources */,
 				A2CDD24B208DB770006DF86E /* LZDHDTSVC.m in Sources */,
 				A2B992A12068F42F002A73B1 /* ChatVideoCell.m in Sources */,
 				A23B352F208D81C0001D71F2 /* CAClockVC.m in Sources */,

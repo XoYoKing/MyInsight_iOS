@@ -14,10 +14,11 @@ target 'MyInsight' do
   #pod 'BabyBluetooth' # 蓝牙
   # 网络请求
   pod 'AFNetworking'
-  pod 'ReactiveCocoa','~>2.1.8' # 响应式编程
+  #pod 'ReactiveCocoa','~>2.1.8' # 响应式编程
   
   pod 'MQTTClient'
-  pod 'MQTTClient/Websocket'
+  #pod 'MQTTClient/Websocket'
+  #pod 'MQTTKit' # 这个框架很久没更新了
   pod 'SocketRocket'
   # iOS之MQTT简单使用 https://www.jianshu.com/p/a12cb037dff5
   # iOS MQTT----MQTTClient实战-看这篇的就够了 https://www.jianshu.com/p/80ea4507ca74
@@ -46,3 +47,8 @@ target 'MyInsight' do
   end
 
 end
+
+#
+#[CocoaPods使用总结](https://www.jianshu.com/p/e2806f9d9e6f)
+#
+
