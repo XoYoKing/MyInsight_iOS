@@ -28,6 +28,10 @@
     // 右边侧滑页
     RightRevealVC *rightRevealVC = [[RightRevealVC alloc] init];
     
+    //  左右抽屉显示宽度
+    self.rearViewRevealWidth = [UIScreen mainScreen].bounds.size.width*0.70f;
+    self.rightViewRevealWidth = [UIScreen mainScreen].bounds.size.width*0.70f;
+    
     // 添加手势
     tabbarVC.view.userInteractionEnabled = YES;
     [tabbarVC.view addGestureRecognizer:[self panGestureRecognizer]];
