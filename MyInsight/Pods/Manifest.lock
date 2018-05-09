@@ -16,6 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - BabyBluetooth (0.7.0)
   - BaiduMapKit (3.4.2)
+  - CocoaAsyncSocket (7.6.3)
   - GoogleMaps (2.5.0):
     - GoogleMaps/Maps (= 2.5.0)
   - GoogleMaps/Base (2.5.0)
@@ -40,6 +41,7 @@ DEPENDENCIES:
   - AFNetworking
   - BabyBluetooth
   - BaiduMapKit
+  - CocoaAsyncSocket
   - GoogleMaps
   - GTMBase64
   - HMQRCodeScanner
@@ -54,6 +56,7 @@ SPEC REPOS:
     - AFNetworking
     - BabyBluetooth
     - BaiduMapKit
+    - CocoaAsyncSocket
     - GoogleMaps
     - GTMBase64
     - HMQRCodeScanner
@@ -67,6 +70,7 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   BabyBluetooth: d50758aecf24d4a0ab9271d69f0f116d6bee51c9
   BaiduMapKit: f61b19ecf07a3f2deede72b221b366bf698739ed
+  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
   HMQRCodeScanner: 8db2d317c0e5cbe3b4709fe2b9f26c107d66554e
@@ -76,6 +80,6 @@ SPEC CHECKSUMS:
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
 
-PODFILE CHECKSUM: 671802c10b51d281cd3223e724ef7c2269f08b6e
+PODFILE CHECKSUM: 451a3ea16a64ae3a8b6dd12baf5a0d618c53261c
 
 COCOAPODS: 1.5.0

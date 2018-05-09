@@ -14,6 +14,19 @@
 
 @implementation SocketVC
 
+/*
+ [<iOS开发>之CocoaAsyncSocket使用](https://www.jianshu.com/p/321bc95d077f)
+ 
+ 原生，不使用第三方类库
+ [iOS 开发 网络编程详解之Socket详解](https://blog.csdn.net/kuangdacaikuang/article/details/53386782)
+ [iOS socket通信（不使用框架的简单实例）](https://www.jianshu.com/p/e86a4b6568fa)
+ 
+ c语言：
+ [linux下socket通信，server和client简单例子](https://www.oschina.net/code/snippet_97047_675)
+ [Linux下C语言实现的一个多线程Socket服务器端](http://starlight36.com/post/linux_c_language_muti_thread_socket)
+ [Linux下C编写基本的多线程socket服务器](https://www.cnblogs.com/nerohwang/p/3602233.html)
+ */
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

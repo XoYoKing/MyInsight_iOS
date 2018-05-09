@@ -86,8 +86,8 @@
                 break;
             }
         }
-        NSLog(@"新设备%@",peripheral);
-        NSLog(@"广播数据：%@", advertisementData);
+        //NSLog(@"新设备%@",peripheral);
+        //NSLog(@"广播数据：%@", advertisementData);
         // 添加蓝牙到数组
         if (!hasExist) {
             // 添加到tableView最后一行

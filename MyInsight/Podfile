@@ -24,7 +24,7 @@ target 'MyInsight' do
   # iOS MQTT----MQTTClient实战-看这篇的就够了 https://www.jianshu.com/p/80ea4507ca74
   
   #pod 'AsyncDisplayKit'
-  
+  pod 'CocoaAsyncSocket' # socket通信
   # 微信第三方登录
   # pod 'WechatOpenSDK'
   # AppID:wxd0f6b34b0b7430a4
