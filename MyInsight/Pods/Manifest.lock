@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - BabyBluetooth (0.7.0)
   - BaiduMapKit (3.4.2)
   - GoogleMaps (2.5.0):
     - GoogleMaps/Maps (= 2.5.0)
@@ -37,6 +38,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - BabyBluetooth
   - BaiduMapKit
   - GoogleMaps
   - GTMBase64
@@ -50,6 +52,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
+    - BabyBluetooth
     - BaiduMapKit
     - GoogleMaps
     - GTMBase64
@@ -62,6 +65,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  BabyBluetooth: d50758aecf24d4a0ab9271d69f0f116d6bee51c9
   BaiduMapKit: f61b19ecf07a3f2deede72b221b366bf698739ed
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
@@ -72,6 +76,6 @@ SPEC CHECKSUMS:
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
 
-PODFILE CHECKSUM: cd616b5714de5a5559ee3b320cfaa372954a005f
+PODFILE CHECKSUM: 671802c10b51d281cd3223e724ef7c2269f08b6e
 
 COCOAPODS: 1.5.0

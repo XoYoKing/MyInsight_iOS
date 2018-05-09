@@ -11,7 +11,7 @@ target 'MyInsight' do
   pod 'SWRevealViewController' # 侧边抽屉
   pod 'BaiduMapKit' #百度地图SDK
   pod 'GoogleMaps' #, '= 2.5.0' # Goole地图
-  #pod 'BabyBluetooth' # 蓝牙
+  pod 'BabyBluetooth' # 蓝牙
   # 网络请求
   pod 'AFNetworking'
   #pod 'ReactiveCocoa','~>2.1.8' # 响应式编程

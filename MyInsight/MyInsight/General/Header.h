@@ -24,3 +24,8 @@
  http://blog.csdn.net/huanglinxiao/article/details/79524331
  */
 
+// 蓝牙 服务 特征
+#define Data_Service @"FFFF"
+#define Data_Character_Write @"FFFE"
+#define Data_Character_Read @"FFFD" // Notice
+

@@ -8,8 +8,18 @@
 
 #import "BlueToothVC.h"
 #import "BluetoothCell.h"
+#import  <CoreBluetooth/CoreBluetooth.h>
 
 @interface BlueToothVC ()<CBCentralManagerDelegate, CBPeripheralDelegate>
+// 中心管理者
+@property (nonatomic, strong) CBCentralManager *manager;
+// 外设
+@property (nonatomic, strong) CBPeripheral *peripheral;
+// 特征写
+@property (nonatomic, strong) CBCharacteristic *characteristicWrite;
+// 特征读
+@property (nonatomic, strong) CBCharacteristic *characteristicRead;
+
 // 蓝牙可变数组
 @property (nonatomic, strong) NSMutableArray *bluetoothArray;
 
@@ -96,8 +106,6 @@
         // 更新列表数据
         [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
     }
-    
-    
 }
 
 // 查询蓝牙服务
@@ -131,7 +139,21 @@
     // Label显示名字
     cell.bleNameLabel.text = peripheralName;
     
+    // 信号值
+    cell.rssiLabel.text = [NSString stringWithFormat:@"RSSI:%@", [item objectForKey:@"RSSI"]];
+    // 设备的标识符
+    cell.identifierLabel.text = [NSString stringWithFormat:@"%@", peripheral.identifier];
+    // 广播数据
+    NSDictionary *dict = [item objectForKey:@"advertisementData"];
+    // 设备的广播中的服务uuid
+    cell.serviceUUIDLabel.text = [NSString stringWithFormat:@"Service UUID:%@", [dict objectForKey:@"kCBAdvDataServiceUUIDs"][0]];
+    // 广播传播的数据
+    
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 90.0f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

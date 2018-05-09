@@ -9,7 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface BluetoothCell : UITableViewCell
-
+// 蓝牙名字
 @property (weak, nonatomic) IBOutlet UILabel *bleNameLabel;
+// 设备信号值
+@property (weak, nonatomic) IBOutlet UILabel *rssiLabel;
+// 设备identifier
+@property (weak, nonatomic) IBOutlet UILabel *identifierLabel;
+// 广播中的设备服务UUID
+@property (weak, nonatomic) IBOutlet UILabel *serviceUUIDLabel;
+
 
 @end
