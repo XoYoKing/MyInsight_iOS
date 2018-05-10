@@ -19,7 +19,6 @@
 @property (nonatomic, strong) CBCharacteristic *characteristicWrite;
 // 特征读
 @property (nonatomic, strong) CBCharacteristic *characteristicRead;
-
 // 蓝牙可变数组
 @property (nonatomic, strong) NSMutableArray *bluetoothArray;
 
