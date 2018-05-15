@@ -23,7 +23,7 @@
 //setp4. 声明变量
 //UIDocumentInteractionController : 一个文件交互控制器,提供应用程序管理与本地系统中的文件的用户交互的支持
 //dirArray : 存储沙盒子里面的所有文件
-@property (nonatomic,retain) NSMutableArray *dirArray;
+@property (nonatomic, retain) NSMutableArray *dirArray;
 @property (nonatomic, strong) UIDocumentInteractionController *docInteractionController;
 
 @property (nonatomic, strong) UITableView *readTable;
