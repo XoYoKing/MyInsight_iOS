@@ -19,6 +19,7 @@
 #import "QRCodeVC.h"
 #import "EncryptVC.h" //RSAEncrypt加密解密
 #import "PushMsgVC.h"
+#import "FileSharedVC.h"
 
 @interface AdvanceVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -39,6 +40,7 @@ static const NSString *DataBaseStr = @"数据库";
 static const NSString *QRCodeString = @"二维码";
 static const NSString *RSAEncryptStr = @"数据加密";
 static const NSString *PushMsgStr = @"推送消息";
+static const NSString *FileSharedStr = @"文件共享";
 
 @implementation AdvanceVC
 
@@ -76,7 +78,7 @@ static const NSString *PushMsgStr = @"推送消息";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[TouchIDStr, MapsStr, BlueToothStr, BabyBLEStr, MQTTStr, DataBaseStr, NetWorkStr, QRCodeString, RSAEncryptStr, PushMsgStr];
+    self.dataArray = @[TouchIDStr, MapsStr, BlueToothStr, BabyBLEStr, MQTTStr, DataBaseStr, NetWorkStr, QRCodeString, RSAEncryptStr, PushMsgStr, FileSharedStr];
 }
 
 #pragma mark - 创建TableView
@@ -182,6 +184,12 @@ static const NSString *PushMsgStr = @"推送消息";
         PushMsgVC *pushMsgVC= [[PushMsgVC alloc] init];
         pushMsgVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:pushMsgVC animated:YES];
+    }
+    if ([cellString isEqual:FileSharedStr]) {
+        // 文件共享
+        FileSharedVC *fileSharedVC= [[FileSharedVC alloc] init];
+        fileSharedVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:fileSharedVC animated:YES];
     }
 }
 

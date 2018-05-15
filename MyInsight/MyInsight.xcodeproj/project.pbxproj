@@ -152,6 +152,8 @@
 		A2BDD43F205F6392008AD133 /* OperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD43E205F6392008AD133 /* OperationVC.m */; };
 		A2BDD442205F639E008AD133 /* LockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BDD441205F639E008AD133 /* LockVC.m */; };
 		A2C1AB7D2025A1D80085A653 /* alarm4.m4r in Resources */ = {isa = PBXBuildFile; fileRef = A2C1AB7C2025A1D80085A653 /* alarm4.m4r */; };
+		A2C84E8020AA78F9000FD685 /* FileSharedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C84E7F20AA78F9000FD685 /* FileSharedVC.m */; };
+		A2C84E8220AA7A5A000FD685 /* testPic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2C84E8120AA7A5A000FD685 /* testPic.jpg */; };
 		A2CA807E2021568D00D81845 /* TouchIDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA807D2021568D00D81845 /* TouchIDVC.m */; };
 		A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA8086202196E900D81845 /* RunTimeVC.m */; };
 		A2CA808D202196EA00D81845 /* LiftCycleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA8089202196E900D81845 /* LiftCycleVC.m */; };
@@ -493,6 +495,9 @@
 		A2BDD440205F639E008AD133 /* LockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockVC.h; sourceTree = "<group>"; };
 		A2BDD441205F639E008AD133 /* LockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockVC.m; sourceTree = "<group>"; };
 		A2C1AB7C2025A1D80085A653 /* alarm4.m4r */ = {isa = PBXFileReference; lastKnownFileType = file; path = alarm4.m4r; sourceTree = "<group>"; };
+		A2C84E7E20AA78F9000FD685 /* FileSharedVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileSharedVC.h; sourceTree = "<group>"; };
+		A2C84E7F20AA78F9000FD685 /* FileSharedVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileSharedVC.m; sourceTree = "<group>"; };
+		A2C84E8120AA7A5A000FD685 /* testPic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testPic.jpg; sourceTree = "<group>"; };
 		A2CA807C2021568D00D81845 /* TouchIDVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchIDVC.h; sourceTree = "<group>"; };
 		A2CA807D2021568D00D81845 /* TouchIDVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIDVC.m; sourceTree = "<group>"; };
 		A2CA8086202196E900D81845 /* RunTimeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunTimeVC.m; sourceTree = "<group>"; };
@@ -1264,6 +1269,7 @@
 				A2DDDC16208ACDC000DC7A4A /* QRCode */,
 				A2561DC02099539E00D4E2E5 /* PushMsg */,
 				A26CE490201971C50012EC69 /* Maps */,
+				A2C84E7D20AA78DD000FD685 /* FileShared */,
 			);
 			path = Advance;
 			sourceTree = "<group>";
@@ -1616,6 +1622,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		A2C84E7D20AA78DD000FD685 /* FileShared */ = {
+			isa = PBXGroup;
+			children = (
+				A2C84E7E20AA78F9000FD685 /* FileSharedVC.h */,
+				A2C84E7F20AA78F9000FD685 /* FileSharedVC.m */,
+			);
+			path = FileShared;
+			sourceTree = "<group>";
+		};
 		A2CA807B2021567600D81845 /* TouchID */ = {
 			isa = PBXGroup;
 			children = (
@@ -1646,6 +1661,7 @@
 		A2CDD254208DD021006DF86E /* image */ = {
 			isa = PBXGroup;
 			children = (
+				A2C84E8120AA7A5A000FD685 /* testPic.jpg */,
 				A2EE0F4F209BF3E00073495A /* 雪花.png */,
 				A2CDD25E208EC6D6006DF86E /* CATransition1.png */,
 				A2CDD25F208EC6D7006DF86E /* CATransition2.png */,
@@ -2186,6 +2202,7 @@
 				A22C4DD41FFC777A0079F7C2 /* via.png in Resources */,
 				A28ED53D1FD2494800A74551 /* Home.storyboard in Resources */,
 				A22C4DCD1FFC777A0079F7C2 /* via@2x.png in Resources */,
+				A2C84E8220AA7A5A000FD685 /* testPic.jpg in Resources */,
 				A22C4DC61FFC777A0079F7C2 /* route_start_pin.png in Resources */,
 				A22C4DD31FFC777A0079F7C2 /* yback.png in Resources */,
 				A20D5DFB1FD14549000E191D /* LaunchScreen.storyboard in Resources */,
@@ -2409,6 +2426,7 @@
 				A239CE202085D4410033646A /* MIGirdLayout.m in Sources */,
 				A20D5DFE1FD14549000E191D /* AppDelegate.m in Sources */,
 				A23B3526208D7E16001D71F2 /* CALayerVC.m in Sources */,
+				A2C84E8020AA78F9000FD685 /* FileSharedVC.m in Sources */,
 				A239CE262085D8B20033646A /* MILineLayout.m in Sources */,
 				A2D884A620872322005116A6 /* BluetoothCell.m in Sources */,
 				A26D17342043BDB80064DECF /* LoginVC.m in Sources */,
@@ -2616,7 +2634,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LYW4U2TVKK;
+				DEVELOPMENT_TEAM = X7MN57NBAB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyInsight/UIFunction/Function/BaiduMaps/BaiduMapSDK",
@@ -2651,7 +2669,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LYW4U2TVKK;
+				DEVELOPMENT_TEAM = X7MN57NBAB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyInsight/UIFunction/Function/BaiduMaps/BaiduMapSDK",
