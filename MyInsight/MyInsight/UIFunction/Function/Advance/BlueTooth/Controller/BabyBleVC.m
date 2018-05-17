@@ -10,6 +10,7 @@
 #import "BluetoothCell.h"
 #import "BabyBluetooth.h"
 #import "Header.h"
+#import "BlueToothDataVC.h"
 
 @interface BabyBleVC ()
 
@@ -223,6 +224,19 @@
     // 广播传播的数据
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"选择cell");
+    BlueToothDataVC *blueToothDataVC = [[BlueToothDataVC alloc] init];
+    blueToothDataVC.hidesBottomBarWhenPushed = YES;
+    
+    NSDictionary *item = [self.bluetoothArray objectAtIndex:indexPath.row];
+    CBPeripheral *peripheral = [item objectForKey:@"peripheral"];
+    
+    blueToothDataVC.peripheral = peripheral;
+    
+    [self.navigationController pushViewController:blueToothDataVC animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

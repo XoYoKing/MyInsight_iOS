@@ -62,8 +62,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"选中Cell");
-    
-    
     BlueToothDataVC *blueToothDataVC = [[BlueToothDataVC alloc] init];
     blueToothDataVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:blueToothDataVC animated:YES];

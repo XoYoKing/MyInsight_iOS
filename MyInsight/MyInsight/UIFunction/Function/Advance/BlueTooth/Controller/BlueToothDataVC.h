@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseVC.h"
+#import  <CoreBluetooth/CoreBluetooth.h>
 
 @interface BlueToothDataVC : BaseVC
+
+// 传过来的设备
+@property (nonatomic, strong) CBPeripheral *peripheral;
 
 @end

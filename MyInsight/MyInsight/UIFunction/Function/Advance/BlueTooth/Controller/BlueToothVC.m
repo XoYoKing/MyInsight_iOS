@@ -9,6 +9,7 @@
 #import "BlueToothVC.h"
 #import "BluetoothCell.h"
 #import  <CoreBluetooth/CoreBluetooth.h>
+#import "BlueToothDataVC.h"
 
 @interface BlueToothVC ()<CBCentralManagerDelegate, CBPeripheralDelegate>
 // 中心管理者
@@ -127,7 +128,7 @@
         cell = [[[NSBundle mainBundle]loadNibNamed:@"BluetoothCell" owner:self options:nil]lastObject];
     }
     
-    NSDictionary *item = [_bluetoothArray objectAtIndex:indexPath.row];
+    NSDictionary *item = [self.bluetoothArray objectAtIndex:indexPath.row];
     CBPeripheral *peripheral = [item objectForKey:@"peripheral"];
     NSString *peripheralName;
     if (peripheral.name.length > 0) {
@@ -157,6 +158,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"选中cell");
+    BlueToothDataVC *blueToothDataVC = [[BlueToothDataVC alloc] init];
+    blueToothDataVC.hidesBottomBarWhenPushed = YES;
+    
+    NSDictionary *item = [self.bluetoothArray objectAtIndex:indexPath.row];
+    CBPeripheral *peripheral = [item objectForKey:@"peripheral"];
+    blueToothDataVC.peripheral = peripheral;
+    [self.navigationController pushViewController:blueToothDataVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
