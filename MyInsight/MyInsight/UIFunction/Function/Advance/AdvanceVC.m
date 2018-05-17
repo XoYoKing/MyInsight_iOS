@@ -20,6 +20,7 @@
 #import "EncryptVC.h" //RSAEncrypt加密解密
 #import "PushMsgVC.h"
 #import "FileSharedVC.h"
+#import "BLEScannerVC.h"
 
 @interface AdvanceVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -34,6 +35,7 @@ static const NSString *TouchIDStr = @"TouchID";
 static const NSString *MapsStr = @"地图";
 static const NSString *BlueToothStr = @"蓝牙(系统)";
 static const NSString *BabyBLEStr = @"蓝牙(三方)";
+static const NSString *BLEDataStr = @"蓝牙数据";
 static const NSString *MQTTStr = @"MQTT";
 static const NSString *NetWorkStr = @"网络请求";
 static const NSString *DataBaseStr = @"数据库";
@@ -78,7 +80,7 @@ static const NSString *FileSharedStr = @"文件共享";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[TouchIDStr, MapsStr, BlueToothStr, BabyBLEStr, MQTTStr, DataBaseStr, NetWorkStr, QRCodeString, RSAEncryptStr, PushMsgStr, FileSharedStr];
+    self.dataArray = @[TouchIDStr, MapsStr, BlueToothStr, BabyBLEStr, BLEDataStr, MQTTStr, DataBaseStr, NetWorkStr, QRCodeString, RSAEncryptStr, PushMsgStr, FileSharedStr];
 }
 
 #pragma mark - 创建TableView
@@ -154,6 +156,12 @@ static const NSString *FileSharedStr = @"文件共享";
         BabyBleVC *babyBleVC = [[BabyBleVC alloc] init];
         babyBleVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:babyBleVC animated:YES];
+    }
+    if ([cellString isEqual:BLEDataStr]) {
+        // 蓝牙数据
+        BLEScannerVC *bleScannerVC = [[BLEScannerVC alloc] init];
+        bleScannerVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:bleScannerVC animated:YES];
     }
     if ([cellString isEqual:MQTTStr]) {
         // MQTT

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseTableVC.h"
 
-@interface BlueToothVC : UITableViewController
+@interface BlueToothVC : BaseTableVC
 
 
 @end

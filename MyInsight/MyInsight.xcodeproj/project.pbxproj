@@ -154,6 +154,8 @@
 		A2C1AB7D2025A1D80085A653 /* alarm4.m4r in Resources */ = {isa = PBXBuildFile; fileRef = A2C1AB7C2025A1D80085A653 /* alarm4.m4r */; };
 		A2C84E8020AA78F9000FD685 /* FileSharedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C84E7F20AA78F9000FD685 /* FileSharedVC.m */; };
 		A2C84E8220AA7A5A000FD685 /* testPic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2C84E8120AA7A5A000FD685 /* testPic.jpg */; };
+		A2C84E8C20AD3589000FD685 /* BlueToothDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C84E8B20AD3589000FD685 /* BlueToothDataVC.m */; };
+		A2C84E8F20AD3633000FD685 /* BLEScannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C84E8E20AD3633000FD685 /* BLEScannerVC.m */; };
 		A2CA807E2021568D00D81845 /* TouchIDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA807D2021568D00D81845 /* TouchIDVC.m */; };
 		A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA8086202196E900D81845 /* RunTimeVC.m */; };
 		A2CA808D202196EA00D81845 /* LiftCycleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA8089202196E900D81845 /* LiftCycleVC.m */; };
@@ -498,6 +500,10 @@
 		A2C84E7E20AA78F9000FD685 /* FileSharedVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileSharedVC.h; sourceTree = "<group>"; };
 		A2C84E7F20AA78F9000FD685 /* FileSharedVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileSharedVC.m; sourceTree = "<group>"; };
 		A2C84E8120AA7A5A000FD685 /* testPic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testPic.jpg; sourceTree = "<group>"; };
+		A2C84E8A20AD3589000FD685 /* BlueToothDataVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlueToothDataVC.h; sourceTree = "<group>"; };
+		A2C84E8B20AD3589000FD685 /* BlueToothDataVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueToothDataVC.m; sourceTree = "<group>"; };
+		A2C84E8D20AD3633000FD685 /* BLEScannerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEScannerVC.h; sourceTree = "<group>"; };
+		A2C84E8E20AD3633000FD685 /* BLEScannerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEScannerVC.m; sourceTree = "<group>"; };
 		A2CA807C2021568D00D81845 /* TouchIDVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchIDVC.h; sourceTree = "<group>"; };
 		A2CA807D2021568D00D81845 /* TouchIDVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIDVC.m; sourceTree = "<group>"; };
 		A2CA8086202196E900D81845 /* RunTimeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunTimeVC.m; sourceTree = "<group>"; };
@@ -1729,6 +1735,10 @@
 				A2D884A120872322005116A6 /* BlueToothVC.m */,
 				A2D884A320872322005116A6 /* BabyBleVC.h */,
 				A2D884A220872322005116A6 /* BabyBleVC.m */,
+				A2C84E8D20AD3633000FD685 /* BLEScannerVC.h */,
+				A2C84E8E20AD3633000FD685 /* BLEScannerVC.m */,
+				A2C84E8A20AD3589000FD685 /* BlueToothDataVC.h */,
+				A2C84E8B20AD3589000FD685 /* BlueToothDataVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2400,6 +2410,7 @@
 				A2CDD26F208ED220006DF86E /* PSAttachmentView.m in Sources */,
 				A2D8849B208719CC005116A6 /* HTTPTOOL.m in Sources */,
 				A2B992B32069F4FB002A73B1 /* ChatContentModel.m in Sources */,
+				A2C84E8C20AD3589000FD685 /* BlueToothDataVC.m in Sources */,
 				A2B9929C2068F40D002A73B1 /* ChatAudioCell.m in Sources */,
 				A2B992A62068F441002A73B1 /* ChatFileCell.m in Sources */,
 				A26CE48C2018A0AD0012EC69 /* SeniorVC.m in Sources */,
@@ -2416,6 +2427,7 @@
 				A2561DBF2094725100D4E2E5 /* DragTableVC.m in Sources */,
 				A241D22420468E68005A3BC5 /* MQTTVC.m in Sources */,
 				A2DDDC38208AD99000DC7A4A /* SQLiteHandle.m in Sources */,
+				A2C84E8F20AD3633000FD685 /* BLEScannerVC.m in Sources */,
 				A2B992802068F0B9002A73B1 /* ChatListVC.m in Sources */,
 				A2CDD230208DB0AA006DF86E /* CABasicAnimationVC.m in Sources */,
 				A2B992AB2068F45B002A73B1 /* ChatTipCell.m in Sources */,

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseTableVC.h"
 
-@interface BabyBleVC : UITableViewController
+@interface BabyBleVC : BaseTableVC
 
 @end
