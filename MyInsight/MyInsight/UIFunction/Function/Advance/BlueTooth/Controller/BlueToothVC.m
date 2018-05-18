@@ -157,12 +157,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"选中cell");
     BlueToothDataVC *blueToothDataVC = [[BlueToothDataVC alloc] init];
     blueToothDataVC.hidesBottomBarWhenPushed = YES;
-    
     NSDictionary *item = [self.bluetoothArray objectAtIndex:indexPath.row];
     CBPeripheral *peripheral = [item objectForKey:@"peripheral"];
+    // 下一页面的蓝牙设备
     blueToothDataVC.peripheral = peripheral;
     [self.navigationController pushViewController:blueToothDataVC animated:YES];
 }

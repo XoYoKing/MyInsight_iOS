@@ -15,6 +15,8 @@
 @property (nonatomic, strong) CBCharacteristic *characteristicWrite;
 // 特征读
 @property (nonatomic, strong) CBCharacteristic *characteristicRead;
+// 特征数组
+@property (nonatomic, strong) NSMutableArray *characteristicsArray;
 
 @end
 
@@ -34,6 +36,13 @@
     
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+    // 断开蓝牙设备
+    [self.centralManager cancelPeripheralConnection:self.peripheral];
+}
+
 #pragma mark - 实现代理协议
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
     NSLog(@"更新状态");
@@ -41,30 +50,35 @@
 }
 
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *,id> *)advertisementData RSSI:(NSNumber *)RSSI {
-    NSLog(@"%@ %@ %@", peripheral, advertisementData, RSSI);
-    
     if ([peripheral.identifier.UUIDString isEqual:self.peripheral.identifier.UUIDString]) {
-        // 连接设备
+        // 保存该设备 必须要保存遍历到的设备
+        self.peripheral = peripheral;
+        // 蓝牙设备设置代理
         peripheral.delegate = self;
+        // 连接蓝牙设备
         [central connectPeripheral:peripheral options:nil];
     }
 }
 
+// 已经连接设备
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
     NSLog(@"已经连接设备");
     // 扫描外部设备的服务
     [peripheral discoverServices:nil];
+    // 停止扫描
+    [central stopScan];
 }
 
 - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
-    NSLog(@"连接设备失败");
+    NSLog(@"连接设备失败 设备：%@ 错误：%@", peripheral, error);
 }
 
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
-    NSLog(@"断开设备连接");
+    NSLog(@"断开设备连接 设备：%@ 错误：%@", peripheral, error);
 }
 
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
+    //NSLog(@"设备所带的服务：%@", peripheral.services);
     // 遍历设备自带的特征
     for (CBService *service in peripheral.services) {
         // 扫描发现特征 特征设置为空 便可扫描所有
@@ -73,9 +87,19 @@
 }
 
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
-    
+    NSLog(@"服务的特征：%@", service.characteristics);
+    // 初始化数组
+    if (self.characteristicsArray == NULL) {
+        self.characteristicsArray = [[NSMutableArray alloc] init];
+    }
+    // 遍历特征
+    for (CBCharacteristic *characteristic in service.characteristics) {
+        if ([self.characteristicsArray containsObject:characteristic] == NO) {
+            // 特征数组不包含该特征 就加入到数组
+            [self.characteristicsArray addObject:characteristic];
+        }
+    }
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
