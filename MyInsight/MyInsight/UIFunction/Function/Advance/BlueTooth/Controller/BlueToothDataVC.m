@@ -7,8 +7,10 @@
 //
 
 #import "BlueToothDataVC.h"
+#import <Masonry.h>
+#import "UIColor+Category.h"
 
-@interface BlueToothDataVC ()<CBCentralManagerDelegate, CBPeripheralDelegate>
+@interface BlueToothDataVC ()<CBCentralManagerDelegate, CBPeripheralDelegate, UITableViewDelegate, UITableViewDataSource>
 // 中心管理者
 @property (nonatomic, strong) CBCentralManager *centralManager;
 // 特征写
@@ -17,6 +19,29 @@
 @property (nonatomic, strong) CBCharacteristic *characteristicRead;
 // 特征数组
 @property (nonatomic, strong) NSMutableArray *characteristicsArray;
+// UI控件
+// 功能View
+@property (nonatomic, strong) UIView *sendDataView;
+// 特征写
+@property (nonatomic, strong) UIButton *characteristicReadButton;
+// 特征读
+@property (nonatomic, strong) UIButton *characteristicWriteButton;
+// 连接状态button
+@property (nonatomic, strong) UIButton *connectStateButton;
+// 发送数据的列表
+@property (nonatomic, strong) UITableView *tableView;
+// 接收区
+@property (nonatomic, strong) UIView *receiveView;
+// 命令+ 最后一行
+@property (nonatomic, strong) UIButton *cmdAddButton;
+// 命令- 最后一行
+@property (nonatomic, strong) UIButton *cmdSubButton;
+// 清除button
+@property (nonatomic, strong) UIButton *cleanButton;
+// 循环发送button
+@property (nonatomic, strong) UIButton *loopSendButton;
+// 接收区文本
+@property (nonatomic, strong) UITextView *receiveTextView;
 
 @end
 
@@ -31,16 +56,187 @@
     [super viewDidLoad];
     
     self.title = @"蓝牙设备内容";
-    
+    // 创建蓝牙中心
     self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:dispatch_get_main_queue()];
     
+    // 创建UI
+    [self creatContentUI];
+    // 代码约束布局
+    [self masonryLayout];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    
     // 断开蓝牙设备
     [self.centralManager cancelPeripheralConnection:self.peripheral];
+}
+
+#pragma mark - 创建UI控件
+- (void)creatContentUI {
+    self.automaticallyAdjustsScrollViewInsets = YES;
+    self.navigationController.navigationBar.translucent = NO;
+    // 功能View
+    self.sendDataView = [[UIView alloc] init];
+    [self.view addSubview:self.sendDataView];
+    self.view.backgroundColor = [UIColor RandomColor]; // 随机颜色
+    // 连接状态
+    self.connectStateButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.sendDataView addSubview:self.connectStateButton];
+    [self.connectStateButton setTitle:@"已连接" forState:UIControlStateNormal];
+    self.connectStateButton.backgroundColor = [UIColor RandomColor];
+    self.connectStateButton.titleLabel.textColor = [UIColor RandomColor];
+    self.connectStateButton.titleLabel.font = [UIFont systemFontOfSize:14.0f];
+    [self.connectStateButton addTarget:self action:@selector(connectStateButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    // 特征写
+    self.characteristicWriteButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.sendDataView addSubview:self.characteristicWriteButton];
+    [self.characteristicWriteButton setTitle:@"设置特征写" forState:UIControlStateNormal];
+    self.characteristicWriteButton.backgroundColor = [UIColor RandomColor];
+    self.characteristicWriteButton.titleLabel.textColor = [UIColor RandomColor];
+    self.characteristicWriteButton.titleLabel.font = [UIFont systemFontOfSize:14.0f];
+    [self.characteristicWriteButton addTarget:self action:@selector(characteristicWriteButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    // 特征读
+    self.characteristicReadButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.sendDataView addSubview:self.characteristicReadButton];
+    [self.characteristicReadButton setTitle:@"设置特征读/通知" forState:UIControlStateNormal];
+    self.characteristicReadButton.backgroundColor = [UIColor RandomColor];
+    self.characteristicReadButton.tintColor = [UIColor RandomColor];
+    self.characteristicReadButton.titleLabel.font = [UIFont systemFontOfSize:14.0f];
+    [self.characteristicReadButton addTarget:self action:@selector(characteristicReadButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    // 命令列表
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    [self.view addSubview:self.tableView];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero]; // 清除多余cell
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"]; // 注册cell
+    // 接收区域
+    self.receiveView = [[UIView alloc] init];
+    [self.view addSubview:self.receiveView];
+    self.receiveView.backgroundColor = [UIColor RandomColor];
+    // 清除button
+    self.cleanButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.receiveView addSubview:self.cleanButton];
+    [self.cleanButton setTitle:@"清除" forState:UIControlStateNormal];
+    self.cleanButton.backgroundColor = [UIColor RandomColor];
+    self.cleanButton.titleLabel.textColor = [UIColor RandomColor];
+    self.cleanButton.titleLabel.font = [UIFont systemFontOfSize:14.0f];
+    [self.cleanButton addTarget:self action:@selector(cleanButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    // 命令+
+    
+    
+    // 命令-
+    
+    
+    // 循环发送输入框
+    
+    // 循环发送button
+    self.loopSendButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.receiveView addSubview:self.loopSendButton];
+    [self.loopSendButton setTitle:@"循环发送" forState:UIControlStateNormal];
+    self.loopSendButton.backgroundColor = [UIColor RandomColor];
+    self.loopSendButton.titleLabel.font = [UIFont systemFontOfSize:14.0f];
+    [self.loopSendButton addTarget:self action:@selector(loopSendButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    // 接收区域文本
+    self.receiveTextView = [[UITextView alloc] init];
+    [self.view addSubview:self.receiveTextView];
+    self.receiveTextView.backgroundColor = [UIColor RandomColor];
+}
+
+#pragma mark - 代码约束布局
+- (void)masonryLayout {
+    // 发送区View
+    [self.sendDataView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).offset(0.0f);
+        make.left.equalTo(self.view.mas_left).offset(0.0f);
+        make.right.equalTo(self.view.mas_right).offset(0.0f);
+        make.height.offset(40.0f);
+    }];
+    // 连接button
+    [self.connectStateButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.characteristicWriteButton.mas_left).offset(-10.0f);
+        make.centerY.equalTo(self.sendDataView.mas_centerY).multipliedBy(1.0f);
+    }];
+    // 特征写button
+    [self.characteristicWriteButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.characteristicReadButton.mas_left).offset(-10.0f);
+        make.centerY.equalTo(self.sendDataView.mas_centerY).multipliedBy(1.0f);
+    }];
+    // 特征读button
+    [self.characteristicReadButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.sendDataView.mas_right).offset(-10.0f);
+        make.centerY.equalTo(self.sendDataView.mas_centerY).multipliedBy(1.0f);
+    }];
+    // 列表
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.sendDataView.mas_bottom).offset(0.0f);
+        make.left.equalTo(self.view.mas_left).offset(0.0f);
+        make.right.equalTo(self.view.mas_right).offset(0.0f);
+    }];
+    // 接收View
+    [self.receiveView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.tableView.mas_bottom).offset(0.0f);
+        make.left.equalTo(self.view.mas_left).offset(0.0f);
+        make.right.equalTo(self.view.mas_right).offset(0.0f);
+        make.height.offset(40.0f);
+    }];
+    // 清除button
+    [self.cleanButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.loopSendButton.mas_left).offset(-10.0f);
+        make.centerY.equalTo(self.receiveView.mas_centerY).multipliedBy(1.0f);
+    }];
+    // 循环发送 button
+    [self.loopSendButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.receiveView.mas_right).offset(-10.0f);
+        make.centerY.equalTo(self.receiveView.mas_centerY).multipliedBy(1.0f);
+    }];
+    // 接收显示文本
+    [self.receiveTextView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.receiveView.mas_bottom).offset(0.0f);
+        make.left.equalTo(self.view.mas_left).offset(0.0f);
+        make.right.equalTo(self.view.mas_right).offset(0.0f);
+        make.bottom.equalTo(self.view.mas_bottom).offset(0.0f);
+        make.height.equalTo(self.view.mas_height).multipliedBy(0.3f);
+    }];
+}
+
+#pragma mark - 按钮动作
+// 连接状态
+- (void)connectStateButtonAction:(UIButton *)button {
+    NSLog(@"是否连接");
+}
+// 特征写
+- (void)characteristicWriteButtonAction:(UIButton *)button {
+    NSLog(@"特征写");
+}
+// 特征读
+- (void)characteristicReadButtonAction:(UIButton *)button {
+    NSLog(@"特征读");
+}
+// 清除
+- (void)cleanButtonAction:(UIButton *)button {
+    NSLog(@"清除");
+}
+// 循环发送
+- (void)loopSendButtonAction:(UIButton *)button {
+    NSLog(@"循环发送");
+}
+
+#pragma mark - 实现TableView的协议方法
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    return cell;
 }
 
 #pragma mark - 实现代理协议
