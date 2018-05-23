@@ -29,3 +29,6 @@
 #define Data_Character_Write @"FFFE"
 #define Data_Character_Read @"FFFD" // Notice
 
+
+//iOS10 权限崩溃问题
+//https://www.jianshu.com/p/83db0b4f0bfe

@@ -22,12 +22,16 @@
 // UI控件
 // 功能View
 @property (nonatomic, strong) UIView *sendDataView;
+// 连接状态button
+@property (nonatomic, strong) UIButton *connectStateButton;
 // 特征写
 @property (nonatomic, strong) UIButton *characteristicReadButton;
 // 特征读
 @property (nonatomic, strong) UIButton *characteristicWriteButton;
-// 连接状态button
-@property (nonatomic, strong) UIButton *connectStateButton;
+// 循环发送时间间隔输入框
+@property (nonatomic, strong) UITextField *loopSendTextField;
+// 循环发送button
+@property (nonatomic, strong) UIButton *loopSendButton;
 // 发送数据的列表
 @property (nonatomic, strong) UITableView *tableView;
 // 接收区
@@ -38,8 +42,6 @@
 @property (nonatomic, strong) UIButton *cmdSubButton;
 // 清除button
 @property (nonatomic, strong) UIButton *cleanButton;
-// 循环发送button
-@property (nonatomic, strong) UIButton *loopSendButton;
 // 接收区文本
 @property (nonatomic, strong) UITextView *receiveTextView;
 
@@ -103,6 +105,17 @@
     self.characteristicReadButton.tintColor = [UIColor RandomColor];
     self.characteristicReadButton.titleLabel.font = [UIFont systemFontOfSize:14.0f];
     [self.characteristicReadButton addTarget:self action:@selector(characteristicReadButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    // 循环发送输入框
+    self.loopSendTextField = [[UITextField alloc] init];
+    [self.sendDataView addSubview:self.loopSendTextField];
+    self.loopSendTextField.placeholder = @"1";
+    // 循环发送button
+    self.loopSendButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.sendDataView addSubview:self.loopSendButton];
+    [self.loopSendButton setTitle:@"循环发送" forState:UIControlStateNormal];
+    self.loopSendButton.backgroundColor = [UIColor RandomColor];
+    self.loopSendButton.titleLabel.font = [UIFont systemFontOfSize:14.0f];
+    [self.loopSendButton addTarget:self action:@selector(loopSendButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     // 命令列表
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
@@ -123,20 +136,19 @@
     self.cleanButton.titleLabel.font = [UIFont systemFontOfSize:14.0f];
     [self.cleanButton addTarget:self action:@selector(cleanButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     // 命令+
-    
-    
+    self.cmdAddButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.receiveView addSubview:self.cmdAddButton];
+    self.cmdAddButton.backgroundColor = [UIColor RandomColor];
+    [self.cmdAddButton setTitle:@"指令+" forState:UIControlStateNormal];
+    self.cmdAddButton.titleLabel.font = [UIFont systemFontOfSize:14.0f];
+    [self.cmdAddButton addTarget:self action:@selector(cmdAddButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     // 命令-
-    
-    
-    // 循环发送输入框
-    
-    // 循环发送button
-    self.loopSendButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.receiveView addSubview:self.loopSendButton];
-    [self.loopSendButton setTitle:@"循环发送" forState:UIControlStateNormal];
-    self.loopSendButton.backgroundColor = [UIColor RandomColor];
-    self.loopSendButton.titleLabel.font = [UIFont systemFontOfSize:14.0f];
-    [self.loopSendButton addTarget:self action:@selector(loopSendButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    self.cmdSubButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.receiveView addSubview:self.cmdSubButton];
+    self.cmdSubButton.backgroundColor = [UIColor RandomColor];
+    [self.cmdSubButton setTitle:@"指令-" forState:UIControlStateNormal];
+    self.cmdSubButton.titleLabel.font = [UIFont systemFontOfSize:14.0f];
+    [self.cmdSubButton addTarget:self action:@selector(cmdSubButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     // 接收区域文本
     self.receiveTextView = [[UITextView alloc] init];
     [self.view addSubview:self.receiveTextView];
@@ -164,6 +176,16 @@
     }];
     // 特征读button
     [self.characteristicReadButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.loopSendTextField.mas_left).offset(-10.0f);
+        make.centerY.equalTo(self.sendDataView.mas_centerY).multipliedBy(1.0f);
+    }];
+    // 循环发送 时间间隔 输入框
+    [self.loopSendTextField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.loopSendButton.mas_left).offset(-10.0f);
+        make.centerY.equalTo(self.sendDataView.mas_centerY).multipliedBy(1.0f);
+    }];
+    // 循环发送 button
+    [self.loopSendButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.sendDataView.mas_right).offset(-10.0f);
         make.centerY.equalTo(self.sendDataView.mas_centerY).multipliedBy(1.0f);
     }];
@@ -182,11 +204,16 @@
     }];
     // 清除button
     [self.cleanButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.loopSendButton.mas_left).offset(-10.0f);
+        make.right.equalTo(self.cmdSubButton.mas_left).offset(-10.0f);
         make.centerY.equalTo(self.receiveView.mas_centerY).multipliedBy(1.0f);
     }];
-    // 循环发送 button
-    [self.loopSendButton mas_makeConstraints:^(MASConstraintMaker *make) {
+    // 指令-
+    [self.cmdSubButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.cmdAddButton.mas_left).offset(-10.0f);
+        make.centerY.equalTo(self.receiveView.mas_centerY).multipliedBy(1.0f);
+    }];
+    // 指令+
+    [self.cmdAddButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.receiveView.mas_right).offset(-10.0f);
         make.centerY.equalTo(self.receiveView.mas_centerY).multipliedBy(1.0f);
     }];
@@ -220,6 +247,14 @@
 // 循环发送
 - (void)loopSendButtonAction:(UIButton *)button {
     NSLog(@"循环发送");
+}
+// 指令+
+- (void)cmdAddButtonAction:(UIButton *)button {
+    NSLog(@"指令+");
+}
+// 指令-
+- (void)cmdSubButtonAction:(UIButton *)button {
+    NSLog(@"指令-");
 }
 
 #pragma mark - 实现TableView的协议方法
