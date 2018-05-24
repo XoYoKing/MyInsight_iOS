@@ -94,7 +94,7 @@ static const NSString *CoreGraphicsStr = @"绘画2D";
 
 #pragma mark - 创建TableView
 - (void)creatTableView {
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     // 设置代理
     self.tableView.delegate = self;
