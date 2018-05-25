@@ -57,7 +57,7 @@
         // 此时蓝牙连接设备
     } else {
         // 设置委托后直接可以使用，无需等待CBCentralManagerStatePoweredOn状态，扫描设备
-        [_babyBluetooth.centralManager scanForPeripheralsWithServices:nil options:nil];
+        [_babyBluetooth.centralManager scanForPeripheralsWithServices:NULL options:NULL];
         
     }
 }
@@ -87,8 +87,7 @@
                 break;
             }
         }
-        //NSLog(@"新设备%@",peripheral);
-        //NSLog(@"广播数据：%@", advertisementData);
+        
         // 添加蓝牙到数组
         if (!hasExist) {
             // 添加到tableView最后一行
@@ -150,10 +149,6 @@
                 
                 NSLog(@"写入特征 %@", weakSelf.characteristicWrite);
                 // 写入密码
-                //NSLog(@"发送密码指令前的密码指令：%@", weakSelf.passwordString);
-                
-                //NSData *sendData = [HandleTool sendCMD:0x08 contentString:weakSelf.passwordString];
-                //[weakSelf.peripheral writeValue:sendData forCharacteristic:weakSelf.characteristicWrite type:CBCharacteristicWriteWithoutResponse];
             }
         }
     }];
@@ -164,8 +159,8 @@
             [weakSelf.peripheral autoContentAccessingProxy];
             return;
         }
-        // 处理蓝牙指令返回的数据
-        //[weakSelf handlePeripheralResponseData:characteristic];
+        
+        
     }];
 }
 

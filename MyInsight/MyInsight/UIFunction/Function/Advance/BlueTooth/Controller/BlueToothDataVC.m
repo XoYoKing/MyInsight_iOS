@@ -19,7 +19,7 @@
 @property (nonatomic, strong) CBCharacteristic *characteristicRead;
 // 特征数组
 @property (nonatomic, strong) NSMutableArray *characteristicsArray;
-// UI控件
+// *********************** UI控件 ***************************
 // 功能View
 @property (nonatomic, strong) UIView *sendDataView;
 // 连接状态button
