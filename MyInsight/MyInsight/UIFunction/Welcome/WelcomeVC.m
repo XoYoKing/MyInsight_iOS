@@ -11,11 +11,11 @@
 #import "MainRevealVC.h"
 
 @interface WelcomeVC ()<UIScrollViewDelegate>
-//
+// 滑动View
 @property (nonatomic, strong) UIScrollView *scrollView;
-//
+// 页面控制
 @property (nonatomic, strong) UIPageControl *pageControl;
-
+// 图片数组
 @property (nonatomic, strong) NSArray *pageArray;
 
 @end
@@ -72,7 +72,6 @@
             [startButton addTarget:self action:@selector(startButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         }
     }
-    
     // page
     self.pageControl = [[UIPageControl alloc] init];
     [self.view addSubview:self.pageControl];
@@ -98,6 +97,7 @@
     int pageNum = offsetWidth / [[UIScreen mainScreen] bounds].size.width;
     self.pageControl.currentPage = pageNum;
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
