@@ -19,6 +19,10 @@
 		A20D5E111FD147CD000E191D /* TabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D5E101FD147CD000E191D /* TabBarVC.m */; };
 		A20D5E1D1FD14C7A000E191D /* MainRevealVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D5E1C1FD14C7A000E191D /* MainRevealVC.m */; };
 		A20D5E231FD14E37000E191D /* RightRevealVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D5E221FD14E37000E191D /* RightRevealVC.m */; };
+		A2250B0F20E10C3C00CCBB29 /* EmojiTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A2250B0E20E10C3C00CCBB29 /* EmojiTool.m */; };
+		A2250B1320E10D6800CCBB29 /* NSString+Characters.m in Sources */ = {isa = PBXBuildFile; fileRef = A2250B1220E10D6800CCBB29 /* NSString+Characters.m */; };
+		A2250B1720E112EF00CCBB29 /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = A2250B1620E112EF00CCBB29 /* UIImage+Blur.m */; };
+		A2250B1B20E1145600CCBB29 /* BlurViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2250B1A20E1145600CCBB29 /* BlurViewVC.m */; };
 		A22C4D7F1FFB1BB00079F7C2 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A22C4D7E1FFB1BB00079F7C2 /* libjpeg.a */; };
 		A22C4D811FFB1C3F0079F7C2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A22C4D801FFB1C3F0079F7C2 /* libc++.tbd */; };
 		A22C4D831FFB1C4E0079F7C2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A22C4D821FFB1C4E0079F7C2 /* AVFoundation.framework */; };
@@ -284,6 +288,14 @@
 		A20D5E1C1FD14C7A000E191D /* MainRevealVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainRevealVC.m; sourceTree = "<group>"; };
 		A20D5E211FD14E37000E191D /* RightRevealVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RightRevealVC.h; sourceTree = "<group>"; };
 		A20D5E221FD14E37000E191D /* RightRevealVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RightRevealVC.m; sourceTree = "<group>"; };
+		A2250B0D20E10C3C00CCBB29 /* EmojiTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmojiTool.h; sourceTree = "<group>"; };
+		A2250B0E20E10C3C00CCBB29 /* EmojiTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmojiTool.m; sourceTree = "<group>"; };
+		A2250B1120E10D6800CCBB29 /* NSString+Characters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Characters.h"; sourceTree = "<group>"; };
+		A2250B1220E10D6800CCBB29 /* NSString+Characters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Characters.m"; sourceTree = "<group>"; };
+		A2250B1520E112EF00CCBB29 /* UIImage+Blur.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Blur.h"; sourceTree = "<group>"; };
+		A2250B1620E112EF00CCBB29 /* UIImage+Blur.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Blur.m"; sourceTree = "<group>"; };
+		A2250B1920E1145600CCBB29 /* BlurViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlurViewVC.h; sourceTree = "<group>"; };
+		A2250B1A20E1145600CCBB29 /* BlurViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlurViewVC.m; sourceTree = "<group>"; };
 		A22C4D7E1FFB1BB00079F7C2 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjpeg.a; sourceTree = "<group>"; };
 		A22C4D801FFB1C3F0079F7C2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		A22C4D821FFB1C4E0079F7C2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -978,6 +990,42 @@
 			path = Function;
 			sourceTree = "<group>";
 		};
+		A2250B0A20E10BFA00CCBB29 /* EmojiTool */ = {
+			isa = PBXGroup;
+			children = (
+				A2250B0D20E10C3C00CCBB29 /* EmojiTool.h */,
+				A2250B0E20E10C3C00CCBB29 /* EmojiTool.m */,
+			);
+			path = EmojiTool;
+			sourceTree = "<group>";
+		};
+		A2250B1020E10D5000CCBB29 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				A2250B1120E10D6800CCBB29 /* NSString+Characters.h */,
+				A2250B1220E10D6800CCBB29 /* NSString+Characters.m */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		A2250B1420E112D400CCBB29 /* Blur */ = {
+			isa = PBXGroup;
+			children = (
+				A2250B1520E112EF00CCBB29 /* UIImage+Blur.h */,
+				A2250B1620E112EF00CCBB29 /* UIImage+Blur.m */,
+			);
+			path = Blur;
+			sourceTree = "<group>";
+		};
+		A2250B1820E1144200CCBB29 /* BlurView */ = {
+			isa = PBXGroup;
+			children = (
+				A2250B1920E1145600CCBB29 /* BlurViewVC.h */,
+				A2250B1A20E1145600CCBB29 /* BlurViewVC.m */,
+			);
+			path = BlurView;
+			sourceTree = "<group>";
+		};
 		A22C4D7A1FFB1B680079F7C2 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
@@ -1295,6 +1343,7 @@
 				A2CA8088202196E900D81845 /* LiftCycle */,
 				A2CA8085202196E900D81845 /* RunTime */,
 				A2D884F120897927005116A6 /* RunLoop */,
+				A2250B1820E1144200CCBB29 /* BlurView */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -1403,6 +1452,9 @@
 				A2D88498208719CC005116A6 /* Tool */,
 				A27E8723201AC49B003E712C /* CommonTool.h */,
 				A27E8724201AC49B003E712C /* CommonTool.m */,
+				A2250B0A20E10BFA00CCBB29 /* EmojiTool */,
+				A2250B1020E10D5000CCBB29 /* Characters */,
+				A2250B1420E112D400CCBB29 /* Blur */,
 				A27E8729201AC717003E712C /* Header.h */,
 				A27E875F201AD490003E712C /* PrefixHeader.pch */,
 				A241D2292047A32A005A3BC5 /* UIColor+Category.h */,
@@ -2342,6 +2394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2250B1B20E1145600CCBB29 /* BlurViewVC.m in Sources */,
 				A2CDD266208ED1DE006DF86E /* PSBaseView.m in Sources */,
 				A288F9842089DB4100DD4CA0 /* VerticalCollectionVC.m in Sources */,
 				A2A516042057634400EC5AA6 /* RadioButton.m in Sources */,
@@ -2407,6 +2460,7 @@
 				A2B992B32069F4FB002A73B1 /* ChatContentModel.m in Sources */,
 				A2C84E8C20AD3589000FD685 /* BlueToothDataVC.m in Sources */,
 				A2B9929C2068F40D002A73B1 /* ChatAudioCell.m in Sources */,
+				A2250B1320E10D6800CCBB29 /* NSString+Characters.m in Sources */,
 				A2B992A62068F441002A73B1 /* ChatFileCell.m in Sources */,
 				A26CE48C2018A0AD0012EC69 /* SeniorVC.m in Sources */,
 				A27E873B201ACD5E003E712C /* OpenCVVC.mm in Sources */,
@@ -2449,6 +2503,7 @@
 				A2E9DA2B2091C50A0061B1E7 /* NSData+AES256.m in Sources */,
 				A26CE4A5201971C50012EC69 /* CallOutAnnotationView.m in Sources */,
 				A2BDD43F205F6392008AD133 /* OperationVC.m in Sources */,
+				A2250B1720E112EF00CCBB29 /* UIImage+Blur.m in Sources */,
 				A2CDD236208DB0E2006DF86E /* CATransitionVC.m in Sources */,
 				A26CE4A7201971C50012EC69 /* YahooMapVC.m in Sources */,
 				A2F00320209B08C800F449EE /* CutOutImageVC.m in Sources */,
@@ -2488,6 +2543,7 @@
 				A23B352F208D81C0001D71F2 /* CAClockVC.m in Sources */,
 				A2DDDC35208AD97200DC7A4A /* DataBaseModel.m in Sources */,
 				A2561DC7209AB7A300D4E2E5 /* CoreGraphicsVC.m in Sources */,
+				A2250B0F20E10C3C00CCBB29 /* EmojiTool.m in Sources */,
 				A241D22B2047A32A005A3BC5 /* UIColor+Category.m in Sources */,
 				A2F0030E209AFDD200F449EE /* MatrixOperationVC.m in Sources */,
 			);
