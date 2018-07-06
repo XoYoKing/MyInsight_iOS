@@ -23,6 +23,11 @@
 		A2250B1320E10D6800CCBB29 /* NSString+Characters.m in Sources */ = {isa = PBXBuildFile; fileRef = A2250B1220E10D6800CCBB29 /* NSString+Characters.m */; };
 		A2250B1720E112EF00CCBB29 /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = A2250B1620E112EF00CCBB29 /* UIImage+Blur.m */; };
 		A2250B1B20E1145600CCBB29 /* BlurViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2250B1A20E1145600CCBB29 /* BlurViewVC.m */; };
+		A2250B1F20E1516500CCBB29 /* DrawingBoardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2250B1E20E1516500CCBB29 /* DrawingBoardVC.m */; };
+		A2250B2220E1551B00CCBB29 /* CancasView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2250B2120E1551B00CCBB29 /* CancasView.m */; };
+		A2250B2520E1554900CCBB29 /* CancasModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2250B2420E1554900CCBB29 /* CancasModel.m */; };
+		A2250B2820E155A300CCBB29 /* MIBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = A2250B2720E155A300CCBB29 /* MIBezierPath.m */; };
+		A2250B2B20E155ED00CCBB29 /* DrawPaletteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2250B2A20E155ED00CCBB29 /* DrawPaletteVC.m */; };
 		A22C4D7F1FFB1BB00079F7C2 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A22C4D7E1FFB1BB00079F7C2 /* libjpeg.a */; };
 		A22C4D811FFB1C3F0079F7C2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A22C4D801FFB1C3F0079F7C2 /* libc++.tbd */; };
 		A22C4D831FFB1C4E0079F7C2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A22C4D821FFB1C4E0079F7C2 /* AVFoundation.framework */; };
@@ -296,6 +301,16 @@
 		A2250B1620E112EF00CCBB29 /* UIImage+Blur.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Blur.m"; sourceTree = "<group>"; };
 		A2250B1920E1145600CCBB29 /* BlurViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlurViewVC.h; sourceTree = "<group>"; };
 		A2250B1A20E1145600CCBB29 /* BlurViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlurViewVC.m; sourceTree = "<group>"; };
+		A2250B1D20E1516500CCBB29 /* DrawingBoardVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawingBoardVC.h; sourceTree = "<group>"; };
+		A2250B1E20E1516500CCBB29 /* DrawingBoardVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingBoardVC.m; sourceTree = "<group>"; };
+		A2250B2020E1551B00CCBB29 /* CancasView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CancasView.h; sourceTree = "<group>"; };
+		A2250B2120E1551B00CCBB29 /* CancasView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CancasView.m; sourceTree = "<group>"; };
+		A2250B2320E1554900CCBB29 /* CancasModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CancasModel.h; sourceTree = "<group>"; };
+		A2250B2420E1554900CCBB29 /* CancasModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CancasModel.m; sourceTree = "<group>"; };
+		A2250B2620E155A300CCBB29 /* MIBezierPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBezierPath.h; sourceTree = "<group>"; };
+		A2250B2720E155A300CCBB29 /* MIBezierPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBezierPath.m; sourceTree = "<group>"; };
+		A2250B2920E155ED00CCBB29 /* DrawPaletteVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawPaletteVC.h; sourceTree = "<group>"; };
+		A2250B2A20E155ED00CCBB29 /* DrawPaletteVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawPaletteVC.m; sourceTree = "<group>"; };
 		A22C4D7E1FFB1BB00079F7C2 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjpeg.a; sourceTree = "<group>"; };
 		A22C4D801FFB1C3F0079F7C2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		A22C4D821FFB1C4E0079F7C2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -1026,6 +1041,23 @@
 			path = BlurView;
 			sourceTree = "<group>";
 		};
+		A2250B1C20E1515300CCBB29 /* DrawingBoard */ = {
+			isa = PBXGroup;
+			children = (
+				A2250B1D20E1516500CCBB29 /* DrawingBoardVC.h */,
+				A2250B1E20E1516500CCBB29 /* DrawingBoardVC.m */,
+				A2250B2020E1551B00CCBB29 /* CancasView.h */,
+				A2250B2120E1551B00CCBB29 /* CancasView.m */,
+				A2250B2320E1554900CCBB29 /* CancasModel.h */,
+				A2250B2420E1554900CCBB29 /* CancasModel.m */,
+				A2250B2620E155A300CCBB29 /* MIBezierPath.h */,
+				A2250B2720E155A300CCBB29 /* MIBezierPath.m */,
+				A2250B2920E155ED00CCBB29 /* DrawPaletteVC.h */,
+				A2250B2A20E155ED00CCBB29 /* DrawPaletteVC.m */,
+			);
+			path = DrawingBoard;
+			sourceTree = "<group>";
+		};
 		A22C4D7A1FFB1B680079F7C2 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
@@ -1342,6 +1374,7 @@
 				A2D8BDED209FE9C300AD4FF0 /* Gesture */,
 				A2CA8088202196E900D81845 /* LiftCycle */,
 				A2CA8085202196E900D81845 /* RunTime */,
+				A2250B1C20E1515300CCBB29 /* DrawingBoard */,
 				A2D884F120897927005116A6 /* RunLoop */,
 				A2250B1820E1144200CCBB29 /* BlurView */,
 			);
@@ -2396,6 +2429,7 @@
 			files = (
 				A2250B1B20E1145600CCBB29 /* BlurViewVC.m in Sources */,
 				A2CDD266208ED1DE006DF86E /* PSBaseView.m in Sources */,
+				A2250B2B20E155ED00CCBB29 /* DrawPaletteVC.m in Sources */,
 				A288F9842089DB4100DD4CA0 /* VerticalCollectionVC.m in Sources */,
 				A2A516042057634400EC5AA6 /* RadioButton.m in Sources */,
 				A2DDDC44208ADC5C00DC7A4A /* FMDBVC.m in Sources */,
@@ -2427,12 +2461,14 @@
 				A27E873C201ACD5E003E712C /* FFmpegVC.m in Sources */,
 				A26CE4892018A09A0012EC69 /* OtherVC.m in Sources */,
 				A27E875E201AD2B2003E712C /* AudioVC.m in Sources */,
+				A2250B2820E155A300CCBB29 /* MIBezierPath.m in Sources */,
 				A2561DCA209AE49100D4E2E5 /* JiugonggeUnlockVC.m in Sources */,
 				A2BDD436205F5BAB008AD133 /* BaseTableVC.m in Sources */,
 				A2F0030B209AFDBF00F449EE /* ImageContextStackVC.m in Sources */,
 				A2E9DA1F2091BD0E0061B1E7 /* NSString+AES.m in Sources */,
 				A20D5E231FD14E37000E191D /* RightRevealVC.m in Sources */,
 				A26CE4A8201971C50012EC69 /* CalloutMapAnnotation.m in Sources */,
+				A2250B2220E1551B00CCBB29 /* CancasView.m in Sources */,
 				A2B9928D2068F3A6002A73B1 /* ChatListCell.m in Sources */,
 				A2DDDC34208AD97200DC7A4A /* RealmDBVC.m in Sources */,
 				A20D5E1D1FD14C7A000E191D /* MainRevealVC.m in Sources */,
@@ -2497,11 +2533,13 @@
 				A20D5DFD1FD14549000E191D /* main.m in Sources */,
 				A239CE2D2085E4780033646A /* NetWorkVC.m in Sources */,
 				A2CDD269208ED1F5006DF86E /* PSSnapView.m in Sources */,
+				A2250B2520E1554900CCBB29 /* CancasModel.m in Sources */,
 				A2BA3564207C9F4C006D1B00 /* CYuYanVC.m in Sources */,
 				A2BDD442205F639E008AD133 /* LockVC.m in Sources */,
 				A26CE48F2018A0BE0012EC69 /* AdvanceVC.m in Sources */,
 				A2E9DA2B2091C50A0061B1E7 /* NSData+AES256.m in Sources */,
 				A26CE4A5201971C50012EC69 /* CallOutAnnotationView.m in Sources */,
+				A2250B1F20E1516500CCBB29 /* DrawingBoardVC.m in Sources */,
 				A2BDD43F205F6392008AD133 /* OperationVC.m in Sources */,
 				A2250B1720E112EF00CCBB29 /* UIImage+Blur.m in Sources */,
 				A2CDD236208DB0E2006DF86E /* CATransitionVC.m in Sources */,

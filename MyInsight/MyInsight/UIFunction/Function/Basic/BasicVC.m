@@ -24,6 +24,7 @@
 #import "PhysicalVC.h"
 #import "GestureVC.h"
 #import "BlurViewVC.h" // 毛玻璃效果
+#import "DrawingBoardVC.h" // 绘图板
 
 @interface BasicVC ()<UITableViewDelegate, UITableViewDataSource>
 // LEFT
@@ -53,7 +54,7 @@ static const NSString *CoreAnimationStr = @"核心动画";
 static const NSString *PhysicalStr = @"物理仿真";
 static const NSString *CoreGraphicsStr = @"绘画2D";
 static const NSString *BlurViewStr = @"毛玻璃效果";
-
+static const NSString *DrawingBoardStr = @"绘图板";
 
 @implementation BasicVC
 
@@ -92,7 +93,7 @@ static const NSString *BlurViewStr = @"毛玻璃效果";
 // 处理数据
 - (void)handleTableViewData {
     // 数组
-    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, GestureStr, XieYiStr, PhysicalStr, CoreAnimationStr, CoreGraphicsStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, MultiThreadString, ViewLayoutStr, BlurViewStr];
+    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, GestureStr, XieYiStr, PhysicalStr, CoreAnimationStr, CoreGraphicsStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, MultiThreadString, ViewLayoutStr, BlurViewStr, DrawingBoardStr];
 }
 
 #pragma mark - 创建TableView
@@ -234,7 +235,12 @@ static const NSString *BlurViewStr = @"毛玻璃效果";
         blurViewVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:blurViewVC animated:YES];
     }
-    
+    if ([cellString isEqual:DrawingBoardStr]) {
+        // 绘图板
+        DrawingBoardVC *drawingBoardVC = [[UIStoryboard storyboardWithName:@"Home" bundle:NULL] instantiateViewControllerWithIdentifier:@"DrawingBoardVC"];
+        drawingBoardVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:drawingBoardVC animated:YES];
+    }
 }
 
 #pragma mark 代码约束布局
