@@ -142,23 +142,59 @@
                                 </constraints>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="OlG-wC-59a"/>
-                                    <barButtonItem image="fa-save (alias)" id="rvd-Tf-wcZ"/>
+                                    <barButtonItem image="fa-save (alias)" id="rvd-Tf-wcZ">
+                                        <connections>
+                                            <action selector="saveToLocalButtonAction:" destination="4co-Xz-JB4" id="dAz-0v-ZN9"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Pce-cm-1u1"/>
-                                    <barButtonItem image="fa-folder-open-o" id="6b0-cf-tVh"/>
+                                    <barButtonItem image="fa-folder-open-o" id="6b0-cf-tVh">
+                                        <connections>
+                                            <action selector="openFileButtonAction:" destination="4co-Xz-JB4" id="9aa-7r-zhY"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="e2s-ZL-N3E"/>
-                                    <barButtonItem image="albumn" id="6dN-ZR-30y"/>
+                                    <barButtonItem image="albumn" id="6dN-ZR-30y">
+                                        <connections>
+                                            <action selector="saveButtonAction:" destination="4co-Xz-JB4" id="2zC-ji-DoM"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Da9-i1-zUX"/>
-                                    <barButtonItem image="fa-trash-o" id="JGh-Lb-qeh"/>
+                                    <barButtonItem image="fa-trash-o" id="JGh-Lb-qeh">
+                                        <connections>
+                                            <action selector="deleteButtonAction:" destination="4co-Xz-JB4" id="bxT-4t-C7r"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="zbf-CR-yut"/>
-                                    <barButtonItem image="rubber" id="deD-uc-Goi"/>
+                                    <barButtonItem image="rubber" id="deD-uc-Goi">
+                                        <connections>
+                                            <action selector="rubberButtonAction:" destination="4co-Xz-JB4" id="yLo-wn-Z3Y"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="160-dW-lVj"/>
-                                    <barButtonItem image="fa-mail-reply-all (alias)" id="JP6-T5-xaQ"/>
+                                    <barButtonItem image="fa-mail-reply-all (alias)" id="JP6-T5-xaQ">
+                                        <connections>
+                                            <action selector="replayAllButtonAction:" destination="4co-Xz-JB4" id="VQe-nh-a8y"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Ull-7g-eIJ"/>
-                                    <barButtonItem image="fa-mail-reply (alias)" id="yAu-Uu-NmS"/>
+                                    <barButtonItem image="fa-mail-reply (alias)" id="yAu-Uu-NmS">
+                                        <connections>
+                                            <action selector="replayButtonAction:" destination="4co-Xz-JB4" id="cdY-1e-0Ir"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ljA-zs-aeD"/>
-                                    <barButtonItem image="fa-mail-forward (alias)" id="MkF-0A-dPG"/>
+                                    <barButtonItem image="fa-mail-forward (alias)" id="MkF-0A-dPG">
+                                        <connections>
+                                            <action selector="forwardButtonAction:" destination="4co-Xz-JB4" id="LMf-mM-T56"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="iqW-eS-FfF"/>
-                                    <barButtonItem image="palette" id="QU9-S8-wkK"/>
+                                    <barButtonItem image="palette" id="QU9-S8-wkK">
+                                        <connections>
+                                            <action selector="paletteButtonAction:" destination="4co-Xz-JB4" id="cbw-I1-X86"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="haK-wM-TzK"/>
                                 </items>
                             </toolbar>
@@ -175,6 +211,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8cv-ZD-E0Q"/>
                     </view>
+                    <connections>
+                        <outlet property="canvasView" destination="aqz-IQ-d2i" id="om1-JN-pHF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Zg-bl-cZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -195,7 +234,11 @@
                                 </constraints>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="tMU-Px-q09"/>
-                                    <barButtonItem style="done" systemItem="done" id="Hgc-d0-y6A"/>
+                                    <barButtonItem style="done" systemItem="done" id="Hgc-d0-y6A">
+                                        <connections>
+                                            <action selector="doneClick:" destination="CNz-Ce-4ep" id="wN0-V9-xev"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stroke Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mf3-pO-zDM">
@@ -226,6 +269,9 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" red="1" green="0.13484958080000001" blue="0.00092539059730000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="slider:" destination="CNz-Ce-4ep" eventType="valueChanged" id="38K-VL-FFr"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -240,6 +286,9 @@
                                                 <rect key="frame" x="96" y="11" width="229" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.32551376240000002" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="slider:" destination="CNz-Ce-4ep" eventType="valueChanged" id="RPk-hV-T4P"/>
+                                                </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="G" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glx-8w-JN3">
                                                 <rect key="frame" x="19" y="14" width="42" height="21"/>
@@ -268,6 +317,9 @@
                                                 <rect key="frame" x="95" y="10" width="229" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="slider:" destination="CNz-Ce-4ep" eventType="valueChanged" id="wTo-6e-qJl"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -376,6 +428,9 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="72g-8Q-t9s">
                                         <rect key="frame" x="62" y="18" width="190" height="31"/>
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <connections>
+                                            <action selector="sizeSlider:" destination="CNz-Ce-4ep" eventType="valueChanged" id="R5t-jp-1tT"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -412,6 +467,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t8d-oQ-VAc"/>
                     </view>
+                    <connections>
+                        <outlet property="blueSlider" destination="Ay4-XU-8og" id="U4l-dZ-E35"/>
+                        <outlet property="greenSlider" destination="9Fp-tc-98f" id="peA-dV-fde"/>
+                        <outlet property="redSlider" destination="TFi-go-ugI" id="ve7-FK-rLy"/>
+                        <outlet property="showColorView" destination="rDC-ke-ELl" id="bxe-ao-rj8"/>
+                        <outlet property="show_size" destination="pCB-LI-R8u" id="ahc-qS-d2d"/>
+                        <outlet property="sizeSlider" destination="72g-8Q-t9s" id="ff0-LQ-IBh"/>
+                        <outlet property="toolBarView" destination="hN6-l2-TJ3" id="ad2-QF-nhl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Tn-ee-Pkp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

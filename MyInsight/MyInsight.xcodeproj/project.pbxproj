@@ -1046,14 +1046,14 @@
 			children = (
 				A2250B1D20E1516500CCBB29 /* DrawingBoardVC.h */,
 				A2250B1E20E1516500CCBB29 /* DrawingBoardVC.m */,
+				A2250B2920E155ED00CCBB29 /* DrawPaletteVC.h */,
+				A2250B2A20E155ED00CCBB29 /* DrawPaletteVC.m */,
 				A2250B2020E1551B00CCBB29 /* CancasView.h */,
 				A2250B2120E1551B00CCBB29 /* CancasView.m */,
 				A2250B2320E1554900CCBB29 /* CancasModel.h */,
 				A2250B2420E1554900CCBB29 /* CancasModel.m */,
 				A2250B2620E155A300CCBB29 /* MIBezierPath.h */,
 				A2250B2720E155A300CCBB29 /* MIBezierPath.m */,
-				A2250B2920E155ED00CCBB29 /* DrawPaletteVC.h */,
-				A2250B2A20E155ED00CCBB29 /* DrawPaletteVC.m */,
 			);
 			path = DrawingBoard;
 			sourceTree = "<group>";
@@ -1865,9 +1865,9 @@
 			isa = PBXGroup;
 			children = (
 				A2DDDC1E208ACEF600DC7A4A /* PortraitScreenVC.h */,
-				A2DDDC1F208ACEF600DC7A4A /* LandscapeScreenVC.m */,
 				A2DDDC20208ACEF600DC7A4A /* PortraitScreenVC.m */,
 				A2DDDC21208ACEF600DC7A4A /* LandscapeScreenVC.h */,
+				A2DDDC1F208ACEF600DC7A4A /* LandscapeScreenVC.m */,
 			);
 			path = Screen;
 			sourceTree = "<group>";

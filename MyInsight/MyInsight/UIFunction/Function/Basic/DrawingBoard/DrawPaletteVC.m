@@ -47,10 +47,44 @@
 }
 
 
+#pragma mark - 控件监听的事件
+
+//RGB的Slider监听获取对应的slider.value
+- (IBAction)slider:(UISlider *)sender {
+    if (sender.tag == 1) {
+        self.redSlider.value = sender.value;
+        
+    }else if (sender.tag == 2){
+        self.greenSlider.value = sender.value;
+        
+    }else if (sender.tag == 3){
+        self.blueSlider.value = sender.value;
+        
+    }
+    //设置showColorView和toolBaoView显示的颜色
+    self.showColorView.backgroundColor = [[UIColor alloc] initWithRed:self.redSlider.value green:self.greenSlider.value blue:self.blueSlider.value alpha:1];
+    self.toolBarView.backgroundColor = [[UIColor alloc] initWithRed:self.redSlider.value green:self.greenSlider.value blue:self.blueSlider.value alpha:1];
+    [self.model setRed:@(self.redSlider.value) green:@(self.greenSlider.value) blue:@(self.blueSlider.value)];
+}
+//设置画笔的粗细
+- (IBAction)sizeSlider:(UISlider *)sender {
+    self.show_size.text = [NSString stringWithFormat:@"%d",(int)sender.value];
+    self.model.size = @((int)sender.value);
+}
+//设置完毕，要退出当前Modal
+- (IBAction)doneClick:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 #pragma mark - 隐藏状态栏
 -(BOOL)prefersStatusBarHidden{
     return YES;
 }
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
