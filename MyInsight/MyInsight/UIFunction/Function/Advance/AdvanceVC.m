@@ -20,6 +20,7 @@
 #import "EncryptVC.h" //RSAEncrypt加密解密
 #import "PushMsgVC.h"
 #import "FileSharedVC.h"
+#import "PaymentVC.h" // 支付方式
 
 @interface AdvanceVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -41,6 +42,7 @@ static const NSString *QRCodeString = @"二维码";
 static const NSString *RSAEncryptStr = @"数据加密";
 static const NSString *PushMsgStr = @"推送消息";
 static const NSString *FileSharedStr = @"文件共享";
+static const NSString *PaymentStr = @"支付方式";
 
 @implementation AdvanceVC
 
@@ -78,7 +80,7 @@ static const NSString *FileSharedStr = @"文件共享";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[TouchIDStr, MapsStr, BlueToothStr, BabyBLEStr, MQTTStr, DataBaseStr, NetWorkStr, QRCodeString, RSAEncryptStr, PushMsgStr, FileSharedStr];
+    self.dataArray = @[TouchIDStr, MapsStr, BlueToothStr, BabyBLEStr, MQTTStr, DataBaseStr, NetWorkStr, QRCodeString, RSAEncryptStr, PushMsgStr, FileSharedStr, PaymentStr];
 }
 
 #pragma mark - 创建TableView
@@ -190,6 +192,12 @@ static const NSString *FileSharedStr = @"文件共享";
         FileSharedVC *fileSharedVC= [[FileSharedVC alloc] init];
         fileSharedVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:fileSharedVC animated:YES];
+    }
+    if ([cellString isEqual:PaymentStr]) {
+        // 支付方式
+        PaymentVC *paymentVC= [[PaymentVC alloc] init];
+        paymentVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:paymentVC animated:YES];
     }
 }
 

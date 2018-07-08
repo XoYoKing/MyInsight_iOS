@@ -35,6 +35,13 @@ target 'MyInsight' do
   # DES加密所需第三方库
   pod 'GTMBase64'
   
+  # 支付
+  # 微信支付
+  # 支付宝支付
+  # 银联支付
+  
+  
+  
   
   target 'MyInsightTests' do
     inherit! :search_paths

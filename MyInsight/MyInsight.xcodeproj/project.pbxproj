@@ -191,6 +191,7 @@
 		A2CDD272208ED232006DF86E /* PSSpringView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD271208ED232006DF86E /* PSSpringView.m */; };
 		A2CDD275208ED245006DF86E /* PSCollisionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD274208ED245006DF86E /* PSCollisionView.m */; };
 		A2CDD27B208ED7A1006DF86E /* PSDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD27A208ED7A1006DF86E /* PSDemoVC.m */; };
+		A2D292E320F25DF400E50DC7 /* PaymentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D292E220F25DF400E50DC7 /* PaymentVC.m */; };
 		A2D8849B208719CC005116A6 /* HTTPTOOL.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D8849A208719CC005116A6 /* HTTPTOOL.m */; };
 		A2D884A520872322005116A6 /* BluetoothCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2D8849D20872322005116A6 /* BluetoothCell.xib */; };
 		A2D884A620872322005116A6 /* BluetoothCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D8849F20872322005116A6 /* BluetoothCell.m */; };
@@ -576,6 +577,8 @@
 		A2CDD274208ED245006DF86E /* PSCollisionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSCollisionView.m; sourceTree = "<group>"; };
 		A2CDD279208ED7A0006DF86E /* PSDemoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSDemoVC.h; sourceTree = "<group>"; };
 		A2CDD27A208ED7A1006DF86E /* PSDemoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSDemoVC.m; sourceTree = "<group>"; };
+		A2D292E120F25DF400E50DC7 /* PaymentVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentVC.h; sourceTree = "<group>"; };
+		A2D292E220F25DF400E50DC7 /* PaymentVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentVC.m; sourceTree = "<group>"; };
 		A2D88499208719CC005116A6 /* HTTPTOOL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPTOOL.h; sourceTree = "<group>"; };
 		A2D8849A208719CC005116A6 /* HTTPTOOL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPTOOL.m; sourceTree = "<group>"; };
 		A2D8849D20872322005116A6 /* BluetoothCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BluetoothCell.xib; sourceTree = "<group>"; };
@@ -1353,6 +1356,7 @@
 				A2561DC02099539E00D4E2E5 /* PushMsg */,
 				A26CE490201971C50012EC69 /* Maps */,
 				A2C84E7D20AA78DD000FD685 /* FileShared */,
+				A2D292E020F25DDE00E50DC7 /* Payment */,
 			);
 			path = Advance;
 			sourceTree = "<group>";
@@ -1789,6 +1793,15 @@
 				A2CDD274208ED245006DF86E /* PSCollisionView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A2D292E020F25DDE00E50DC7 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				A2D292E120F25DF400E50DC7 /* PaymentVC.h */,
+				A2D292E220F25DF400E50DC7 /* PaymentVC.m */,
+			);
+			path = Payment;
 			sourceTree = "<group>";
 		};
 		A2D88498208719CC005116A6 /* Tool */ = {
@@ -2432,6 +2445,7 @@
 				A2250B2B20E155ED00CCBB29 /* DrawPaletteVC.m in Sources */,
 				A288F9842089DB4100DD4CA0 /* VerticalCollectionVC.m in Sources */,
 				A2A516042057634400EC5AA6 /* RadioButton.m in Sources */,
+				A2D292E320F25DF400E50DC7 /* PaymentVC.m in Sources */,
 				A2DDDC44208ADC5C00DC7A4A /* FMDBVC.m in Sources */,
 				A2CDD23F208DB6CA006DF86E /* ZDTPVC.m in Sources */,
 				A2B992922068F3CA002A73B1 /* ChatTextCell.m in Sources */,
