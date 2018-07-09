@@ -13,6 +13,7 @@
 #import "HorizontalCollectionVC.h" //
 #import "VerticalCollectionVC.h" //
 #import "MultiTypeFlowLayoutVC.h" //多种布局方式的集合视图
+#import "CollectionQuiltLayoutVC.h" // 另一种集合视图
 
 @interface CollectionViewVC ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -27,6 +28,7 @@ static const NSString *WaterFlowStr = @"瀑布流布局";
 static const NSString *HorizontalFlowStr = @"水平流布局";
 static const NSString *VerticalFlowStr = @"垂直流布局";
 static const NSString *MultiTypeLayoutStr = @"多种布局(三种布局)";
+static const NSString *QuiltLayoutStr = @"自定义布局";
 
 @implementation CollectionViewVC
 
@@ -44,7 +46,7 @@ static const NSString *MultiTypeLayoutStr = @"多种布局(三种布局)";
     self.title = @"CollectionView分类";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.dataArray = @[NormalLayoutStr, WaterFlowStr, HorizontalFlowStr, VerticalFlowStr, MultiTypeLayoutStr];
+    self.dataArray = @[NormalLayoutStr, WaterFlowStr, HorizontalFlowStr, VerticalFlowStr, MultiTypeLayoutStr, QuiltLayoutStr];
     
     [self creatTableView];
 }
@@ -118,6 +120,12 @@ static const NSString *MultiTypeLayoutStr = @"多种布局(三种布局)";
         MultiTypeFlowLayoutVC *multiTypeFlowLayoutVC = [[MultiTypeFlowLayoutVC alloc] init];
         multiTypeFlowLayoutVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:multiTypeFlowLayoutVC animated:YES];
+    }
+    if ([cellString isEqual:QuiltLayoutStr]) {
+        // 自定义布局
+        CollectionQuiltLayoutVC *collectionQuiltLayoutVC = [[CollectionQuiltLayoutVC alloc] init];
+        collectionQuiltLayoutVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:collectionQuiltLayoutVC animated:YES];
     }
 }
 

@@ -192,6 +192,8 @@
 		A2CDD275208ED245006DF86E /* PSCollisionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD274208ED245006DF86E /* PSCollisionView.m */; };
 		A2CDD27B208ED7A1006DF86E /* PSDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CDD27A208ED7A1006DF86E /* PSDemoVC.m */; };
 		A2D292E320F25DF400E50DC7 /* PaymentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D292E220F25DF400E50DC7 /* PaymentVC.m */; };
+		A2D54B4220F37F92009BFF4C /* MIQuiltLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D54B4120F37F92009BFF4C /* MIQuiltLayout.m */; };
+		A2D54B4520F3815D009BFF4C /* CollectionQuiltLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D54B4420F3815D009BFF4C /* CollectionQuiltLayoutVC.m */; };
 		A2D8849B208719CC005116A6 /* HTTPTOOL.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D8849A208719CC005116A6 /* HTTPTOOL.m */; };
 		A2D884A520872322005116A6 /* BluetoothCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2D8849D20872322005116A6 /* BluetoothCell.xib */; };
 		A2D884A620872322005116A6 /* BluetoothCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D8849F20872322005116A6 /* BluetoothCell.m */; };
@@ -579,6 +581,10 @@
 		A2CDD27A208ED7A1006DF86E /* PSDemoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSDemoVC.m; sourceTree = "<group>"; };
 		A2D292E120F25DF400E50DC7 /* PaymentVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentVC.h; sourceTree = "<group>"; };
 		A2D292E220F25DF400E50DC7 /* PaymentVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentVC.m; sourceTree = "<group>"; };
+		A2D54B4020F37F92009BFF4C /* MIQuiltLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIQuiltLayout.h; sourceTree = "<group>"; };
+		A2D54B4120F37F92009BFF4C /* MIQuiltLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIQuiltLayout.m; sourceTree = "<group>"; };
+		A2D54B4320F3815D009BFF4C /* CollectionQuiltLayoutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionQuiltLayoutVC.h; sourceTree = "<group>"; };
+		A2D54B4420F3815D009BFF4C /* CollectionQuiltLayoutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionQuiltLayoutVC.m; sourceTree = "<group>"; };
 		A2D88499208719CC005116A6 /* HTTPTOOL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPTOOL.h; sourceTree = "<group>"; };
 		A2D8849A208719CC005116A6 /* HTTPTOOL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPTOOL.m; sourceTree = "<group>"; };
 		A2D8849D20872322005116A6 /* BluetoothCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BluetoothCell.xib; sourceTree = "<group>"; };
@@ -1130,6 +1136,8 @@
 				A288F9832089DB4100DD4CA0 /* VerticalCollectionVC.m */,
 				A239CE18208595C30033646A /* MultiTypeFlowLayoutVC.h */,
 				A239CE19208595C30033646A /* MultiTypeFlowLayoutVC.m */,
+				A2D54B4320F3815D009BFF4C /* CollectionQuiltLayoutVC.h */,
+				A2D54B4420F3815D009BFF4C /* CollectionQuiltLayoutVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1147,6 +1155,8 @@
 				A288F9892089DED600DD4CA0 /* MIHorizontalLayout.m */,
 				A288F98B2089E0F500DD4CA0 /* MIVerticalLayout.h */,
 				A288F98C2089E0F500DD4CA0 /* MIVerticalLayout.m */,
+				A2D54B4020F37F92009BFF4C /* MIQuiltLayout.h */,
+				A2D54B4120F37F92009BFF4C /* MIQuiltLayout.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2446,6 +2456,7 @@
 				A288F9842089DB4100DD4CA0 /* VerticalCollectionVC.m in Sources */,
 				A2A516042057634400EC5AA6 /* RadioButton.m in Sources */,
 				A2D292E320F25DF400E50DC7 /* PaymentVC.m in Sources */,
+				A2D54B4520F3815D009BFF4C /* CollectionQuiltLayoutVC.m in Sources */,
 				A2DDDC44208ADC5C00DC7A4A /* FMDBVC.m in Sources */,
 				A2CDD23F208DB6CA006DF86E /* ZDTPVC.m in Sources */,
 				A2B992922068F3CA002A73B1 /* ChatTextCell.m in Sources */,
@@ -2519,6 +2530,7 @@
 				A2D884A820872322005116A6 /* BabyBleVC.m in Sources */,
 				A2DDDC4F208AE6C300DC7A4A /* MasonryLayoutVC.m in Sources */,
 				A23B3529208D7E2E001D71F2 /* CALayerBaseVC.m in Sources */,
+				A2D54B4220F37F92009BFF4C /* MIQuiltLayout.m in Sources */,
 				A27E8725201AC49B003E712C /* CommonTool.m in Sources */,
 				A2D884EC20886B96005116A6 /* BaseNaviVC.m in Sources */,
 				A2DDDC1C208ACDC000DC7A4A /* QRCodeVC.m in Sources */,
