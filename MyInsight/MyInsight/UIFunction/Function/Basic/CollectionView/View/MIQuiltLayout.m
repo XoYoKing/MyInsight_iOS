@@ -37,6 +37,10 @@
 
 @implementation MIQuiltLayout
 
+/*
+ *原文件名：RFQuiltLayout
+ */
+
 - (id)init {
     if((self = [super init]))
         [self initialize];

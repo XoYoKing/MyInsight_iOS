@@ -8,20 +8,18 @@
 //
 
 #import "CollectionQuiltLayoutVC.h"
-#import "RFQuiltLayout.h"
+#import "MIQuiltLayout.h"
 #import <Masonry.h>
 
-@interface CollectionQuiltLayoutVC ()<RFQuiltLayoutDelegate, UICollectionViewDelegate>
+@interface CollectionQuiltLayoutVC ()<MIQuiltLayoutDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
 {
     BOOL isAnimating;
 }
 // 集合View
 @property (nonatomic, strong) UICollectionView *collectionView;
-@property (nonatomic) NSMutableArray* numbers;
-@property (nonatomic) NSMutableArray* numberWidths;
-@property (nonatomic) NSMutableArray* numberHeights;
-
-//@property (nonatomic, assign) BOOL *isAnimating;
+@property (nonatomic) NSMutableArray *numbers;
+@property (nonatomic) NSMutableArray *numberWidths;
+@property (nonatomic) NSMutableArray *numberHeights;
 
 // 添加button
 @property (nonatomic, strong) UIButton *addButton;
@@ -45,37 +43,61 @@ int num = 0;
     
     self.title = @"自定义布局";
     
+     [self datasInit];
     //
     self.addButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:self.addButton];
+    self.addButton.backgroundColor = [UIColor orangeColor];
+    [self.addButton setTitle:@"Add" forState:UIControlStateNormal];
+    [self.addButton addTarget:self action:@selector(addButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     
     self.removeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:self.removeButton];
+    self.removeButton.backgroundColor = [UIColor orangeColor];
+    [self.removeButton setTitle:@"Remove" forState:UIControlStateNormal];
+    [self.removeButton addTarget:self action:@selector(removeButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     
     self.reloadButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:self.reloadButton];
+    self.reloadButton.backgroundColor = [UIColor orangeColor];
+    [self.reloadButton setTitle:@"Reload" forState:UIControlStateNormal];
+    [self.reloadButton addTarget:self action:@selector(reloadButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.addButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        
+        make.top.equalTo(self.view.mas_top).offset(64.0f+10.0f);
+        make.left.equalTo(self.view.mas_left).offset(10.0f);
+        make.width.offset(80.0f);
+        make.height.offset(30.0f);
     }];
     
     [self.removeButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        
+        make.top.equalTo(self.view.mas_top).offset(64.0f+10.0f);
+        make.left.equalTo(self.addButton.mas_right).offset(10.0f);
+        make.width.offset(80.0f);
+        make.height.offset(30.0f);
     }];
     
     [self.reloadButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        
+        make.top.equalTo(self.view.mas_top).offset(64.0f+10.0f);
+        make.right.equalTo(self.view.mas_right).offset(-10.0f);
+        make.width.offset(80.0f);
+        make.height.offset(30.0f);
     }];
     
-    RFQuiltLayout* layout = (id)[self.collectionView collectionViewLayout];
-    layout.direction = UICollectionViewScrollDirectionVertical;
+    MIQuiltLayout* layout = [[MIQuiltLayout alloc] init];
+    layout.direction = UICollectionViewScrollDirectionVertical; // 方向
     layout.blockPixels = CGSizeMake(75,75);
+    layout.delegate = self;
     
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
-    //self.collectionView.collectionViewLayout = layout;
+    
     [self.view addSubview:self.collectionView];
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
+    self.collectionView.backgroundColor = [UIColor whiteColor];
+    
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).offset(82.0f);
+        make.top.equalTo(self.view.mas_top).offset(64.0f+10.0f+30.0f+10.0f);
         make.left.equalTo(self.view.mas_left).offset(0.0f);
         make.right.equalTo(self.view.mas_right).offset(0.0f);
         make.bottom.equalTo(self.view.mas_bottom).offset(0.0f);
@@ -88,6 +110,7 @@ int num = 0;
 
 // 添加button动作方法
 - (void)addButtonAction:(UIButton *)button {
+    NSLog(@"添加动作");
     NSArray *visibleIndexPaths = [self.collectionView indexPathsForVisibleItems];
     if (visibleIndexPaths.count == 0) {
         [self addIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
@@ -100,6 +123,7 @@ int num = 0;
 
 // 移除button的动作方法
 - (void)removeButtonAction:(UIButton *)button {
+    NSLog(@"移除动作");
     if (!self.numbers.count) {
         return;
     }
@@ -111,6 +135,7 @@ int num = 0;
 
 // 重载button的动作方法
 - (void)reloadButtonAction:(UIButton *)button {
+    NSLog(@"重载动作");
     [self datasInit];
     [self.collectionView reloadData];
 }
@@ -121,6 +146,7 @@ int num = 0;
     self.numberWidths = @[].mutableCopy;
     self.numberHeights = @[].mutableCopy;
     for(; num<15; num++) {
+        //NSLog(@"........ %d ", num);
         [self.numbers addObject:@(num)];
         [self.numberWidths addObject:@([self randomLength])];
         [self.numberHeights addObject:@([self randomLength])];
@@ -128,23 +154,24 @@ int num = 0;
 }
 
 #pragma mark - UICollectionView Delegate
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [self removeIndexPath:indexPath];
 }
 
-- (UIColor*) colorForNumber:(NSNumber*)num {
+- (UIColor*)colorForNumber:(NSNumber*)num {
     return [UIColor colorWithHue:((19 * num.intValue) % 255)/255.f saturation:1.f brightness:1.f alpha:1.f];
 }
 
 #pragma mark - UICollectionView Datasource
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
+    //NSLog(@"选中cell %lu", (unsigned long)self.numbers.count);
     return self.numbers.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     cell.backgroundColor = [self colorForNumber:self.numbers[indexPath.row]];
+    //cell.backgroundColor = [UIColor redColor];
     
     UILabel* label = (id)[cell viewWithTag:5];
     if(!label) label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 30, 20)];
@@ -165,6 +192,7 @@ int num = 0;
     
     CGFloat width = [[self.numberWidths objectAtIndex:indexPath.row] floatValue];
     CGFloat height = [[self.numberHeights objectAtIndex:indexPath.row] floatValue];
+    //NSLog(@"小方块的高度什么的：%f %f", width, height);
     return CGSizeMake(width, height);
     
     //    if (indexPath.row % 10 == 0)

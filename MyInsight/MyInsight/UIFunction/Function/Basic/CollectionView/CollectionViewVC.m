@@ -7,7 +7,6 @@
 //
 
 #import "CollectionViewVC.h"
-#import "RFQuiltLayout.h" // 瀑布流
 #import <Masonry.h>
 #import "NormalCollectionVC.h" // 普通布局的layout
 #import "HorizontalCollectionVC.h" //
