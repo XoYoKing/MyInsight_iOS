@@ -51,6 +51,79 @@
 }
 
 /*
+ 另外的横竖屏切换
+ 
+ //http://www.jianshu.com/p/5f5d46e674a7
+
+ /注册一些通知,添加观察者 在APPDelegate中添加通知和以下方法,在需要全屏的界面强制全屏,需要勾选Targets->General->Deployment Info->Device Orientation->Landscape Left & Landscape Right
+ // 代理文件的代码如下：
+ - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+ // Override point for customization after application launch.
+ [self initializeTheNotificationCenter];
+ return YES;
+ }
+ 
+ 
+ #pragma mark    注册一些通知,添加观察者 在APPDelegate中添加通知和以下方法,在需要全屏的界面强制全屏,需要勾选Targets->General->Deployment Info->Device Orientation->Landscape Left & Landscape Right
+ 
+ - (void)initializeTheNotificationCenter
+ {
+ //在进入需要全屏的界面里面发送需要全屏的通知
+ [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startFullScreen) name:@"startFullScreen" object:nil];//进入全屏
+ 
+ //在退出需要全屏的界面里面发送退出全屏的通知
+ [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(endFullScreen) name:@"endFullScreen" object:nil];//退出全屏
+ }
+ 
+ #pragma mark 进入全屏
+ -(void)startFullScreen
+ {
+ AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+ appDelegate.allowRotation = YES;
+ }
+ 
+ #pragma mark    退出横屏
+ -(void)endFullScreen
+ {
+ AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+ appDelegate.allowRotation = NO;
+ 
+ //强制归正：
+ if ([[UIDevice currentDevice]   respondsToSelector:@selector(setOrientation:)]) {
+ SEL selector =     NSSelectorFromString(@"setOrientation:");
+ NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIDevice instanceMethodSignatureForSelector:selector]];
+ [invocation setSelector:selector];
+ [invocation setTarget:[UIDevice currentDevice]];
+ int val =UIInterfaceOrientationPortrait;
+ [invocation setArgument:&val atIndex:2];
+ [invocation invoke];
+ }
+ }
+ 
+ #pragma mark    禁止横屏
+ - (UIInterfaceOrientationMask )application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    if (self.allowRotation) {
+        return UIInterfaceOrientationMaskAll;
+    }
+    return UIInterfaceOrientationMaskPortrait;
+ }
+
+ 
+ 
+ //在需要横竖屏切换的控制器内代码如下：
+ - (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"endFullScreen" object:nil];
+ }
+ 
+ */
+
+
+
+
+
+
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation

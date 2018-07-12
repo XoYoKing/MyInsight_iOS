@@ -78,6 +78,22 @@
 		A23B352C208D7EC8001D71F2 /* CALayerYSDHVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A23B352B208D7EC8001D71F2 /* CALayerYSDHVC.m */; };
 		A23B352F208D81C0001D71F2 /* CAClockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A23B352E208D81C0001D71F2 /* CAClockVC.m */; };
 		A2419E89AB28D022C3D01AE0 /* libPods-MyInsight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D110F761EC3A481896E9E0EB /* libPods-MyInsight.a */; };
+		A241BF4720F739F70099E8A5 /* QuartzRendering.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BF2A20F739F70099E8A5 /* QuartzRendering.m */; };
+		A241BF4820F739F70099E8A5 /* QuartzLines.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BF2C20F739F70099E8A5 /* QuartzLines.m */; };
+		A241BF4920F739F70099E8A5 /* QuartzImages.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BF3320F739F70099E8A5 /* QuartzImages.m */; };
+		A241BF4A20F739F70099E8A5 /* QuartzBlending.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BF3520F739F70099E8A5 /* QuartzBlending.m */; };
+		A241BF4B20F739F70099E8A5 /* QuartzCurves.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BF3620F739F70099E8A5 /* QuartzCurves.m */; };
+		A241BF4C20F739F70099E8A5 /* QuartzPolygons.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BF3720F739F70099E8A5 /* QuartzPolygons.m */; };
+		A241BF4D20F739F70099E8A5 /* QuartzClipping.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BF3820F739F70099E8A5 /* QuartzClipping.m */; };
+		A241BF4E20F739F70099E8A5 /* QuartzView.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BF3920F739F70099E8A5 /* QuartzView.m */; };
+		A241BF4F20F739F70099E8A5 /* QuartzDashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BF3C20F739F70099E8A5 /* QuartzDashViewController.m */; };
+		A241BF5020F739F70099E8A5 /* QuartzPolyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BF3D20F739F70099E8A5 /* QuartzPolyViewController.m */; };
+		A241BF5220F739F70099E8A5 /* QuartzLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BF4120F739F70099E8A5 /* QuartzLineViewController.m */; };
+		A241BF5320F739F70099E8A5 /* QuartzGradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BF4520F739F70099E8A5 /* QuartzGradientViewController.m */; };
+		A241BF5420F739F70099E8A5 /* QuartzBlendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BF4620F739F70099E8A5 /* QuartzBlendingViewController.m */; };
+		A241BF5920F73DB60099E8A5 /* QuartzDraw.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A241BF5820F73DB60099E8A5 /* QuartzDraw.storyboard */; };
+		A241BF5C20F73DF70099E8A5 /* QuartzDrawVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BF5B20F73DF70099E8A5 /* QuartzDrawVC.m */; };
+		A241BF6020F740C30099E8A5 /* Quartz.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A241BF5F20F740C30099E8A5 /* Quartz.pdf */; };
 		A241D22420468E68005A3BC5 /* MQTTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22320468E68005A3BC5 /* MQTTVC.m */; };
 		A241D22B2047A32A005A3BC5 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22A2047A32A005A3BC5 /* UIColor+Category.m */; };
 		A242C1B620902BFA00A6A9F7 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = A242C1B520902BFA00A6A9F7 /* RSA.m */; };
@@ -375,6 +391,36 @@
 		A23B352B208D7EC8001D71F2 /* CALayerYSDHVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CALayerYSDHVC.m; sourceTree = "<group>"; };
 		A23B352D208D81C0001D71F2 /* CAClockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAClockVC.h; sourceTree = "<group>"; };
 		A23B352E208D81C0001D71F2 /* CAClockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAClockVC.m; sourceTree = "<group>"; };
+		A241BF2A20F739F70099E8A5 /* QuartzRendering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzRendering.m; sourceTree = "<group>"; };
+		A241BF2B20F739F70099E8A5 /* QuartzBlending.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzBlending.h; sourceTree = "<group>"; };
+		A241BF2C20F739F70099E8A5 /* QuartzLines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzLines.m; sourceTree = "<group>"; };
+		A241BF2D20F739F70099E8A5 /* QuartzImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzImages.h; sourceTree = "<group>"; };
+		A241BF2E20F739F70099E8A5 /* QuartzPolygons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzPolygons.h; sourceTree = "<group>"; };
+		A241BF2F20F739F70099E8A5 /* QuartzCurves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzCurves.h; sourceTree = "<group>"; };
+		A241BF3020F739F70099E8A5 /* QuartzView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzView.h; sourceTree = "<group>"; };
+		A241BF3120F739F70099E8A5 /* QuartzClipping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzClipping.h; sourceTree = "<group>"; };
+		A241BF3220F739F70099E8A5 /* QuartzRendering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzRendering.h; sourceTree = "<group>"; };
+		A241BF3320F739F70099E8A5 /* QuartzImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzImages.m; sourceTree = "<group>"; };
+		A241BF3420F739F70099E8A5 /* QuartzLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzLines.h; sourceTree = "<group>"; };
+		A241BF3520F739F70099E8A5 /* QuartzBlending.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzBlending.m; sourceTree = "<group>"; };
+		A241BF3620F739F70099E8A5 /* QuartzCurves.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzCurves.m; sourceTree = "<group>"; };
+		A241BF3720F739F70099E8A5 /* QuartzPolygons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzPolygons.m; sourceTree = "<group>"; };
+		A241BF3820F739F70099E8A5 /* QuartzClipping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzClipping.m; sourceTree = "<group>"; };
+		A241BF3920F739F70099E8A5 /* QuartzView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzView.m; sourceTree = "<group>"; };
+		A241BF3B20F739F70099E8A5 /* QuartzLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzLineViewController.h; sourceTree = "<group>"; };
+		A241BF3C20F739F70099E8A5 /* QuartzDashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzDashViewController.m; sourceTree = "<group>"; };
+		A241BF3D20F739F70099E8A5 /* QuartzPolyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzPolyViewController.m; sourceTree = "<group>"; };
+		A241BF3E20F739F70099E8A5 /* QuartzBlendingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzBlendingViewController.h; sourceTree = "<group>"; };
+		A241BF3F20F739F70099E8A5 /* QuartzGradientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzGradientViewController.h; sourceTree = "<group>"; };
+		A241BF4120F739F70099E8A5 /* QuartzLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzLineViewController.m; sourceTree = "<group>"; };
+		A241BF4220F739F70099E8A5 /* QuartzPolyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzPolyViewController.h; sourceTree = "<group>"; };
+		A241BF4320F739F70099E8A5 /* QuartzDashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzDashViewController.h; sourceTree = "<group>"; };
+		A241BF4520F739F70099E8A5 /* QuartzGradientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzGradientViewController.m; sourceTree = "<group>"; };
+		A241BF4620F739F70099E8A5 /* QuartzBlendingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzBlendingViewController.m; sourceTree = "<group>"; };
+		A241BF5820F73DB60099E8A5 /* QuartzDraw.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QuartzDraw.storyboard; sourceTree = "<group>"; };
+		A241BF5A20F73DF70099E8A5 /* QuartzDrawVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuartzDrawVC.h; sourceTree = "<group>"; };
+		A241BF5B20F73DF70099E8A5 /* QuartzDrawVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuartzDrawVC.m; sourceTree = "<group>"; };
+		A241BF5F20F740C30099E8A5 /* Quartz.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Quartz.pdf; sourceTree = "<group>"; };
 		A241D22220468E68005A3BC5 /* MQTTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQTTVC.h; sourceTree = "<group>"; };
 		A241D22320468E68005A3BC5 /* MQTTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQTTVC.m; sourceTree = "<group>"; };
 		A241D2292047A32A005A3BC5 /* UIColor+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
@@ -962,6 +1008,7 @@
 				A28ED53C1FD2494800A74551 /* Home.storyboard */,
 				A28ED5401FD2495F00A74551 /* Mine.storyboard */,
 				A2CDD252208DC64A006DF86E /* CoreAnimation.storyboard */,
+				A241BF5820F73DB60099E8A5 /* QuartzDraw.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -1233,6 +1280,57 @@
 			path = CoreAnimation;
 			sourceTree = "<group>";
 		};
+		A241BF2820F738090099E8A5 /* QuartzDraw */ = {
+			isa = PBXGroup;
+			children = (
+				A241BF3A20F739F70099E8A5 /* Controller */,
+				A241BF2920F739F70099E8A5 /* View */,
+			);
+			path = QuartzDraw;
+			sourceTree = "<group>";
+		};
+		A241BF2920F739F70099E8A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A241BF2B20F739F70099E8A5 /* QuartzBlending.h */,
+				A241BF3520F739F70099E8A5 /* QuartzBlending.m */,
+				A241BF3220F739F70099E8A5 /* QuartzRendering.h */,
+				A241BF2A20F739F70099E8A5 /* QuartzRendering.m */,
+				A241BF2D20F739F70099E8A5 /* QuartzImages.h */,
+				A241BF3320F739F70099E8A5 /* QuartzImages.m */,
+				A241BF3420F739F70099E8A5 /* QuartzLines.h */,
+				A241BF2C20F739F70099E8A5 /* QuartzLines.m */,
+				A241BF2E20F739F70099E8A5 /* QuartzPolygons.h */,
+				A241BF3720F739F70099E8A5 /* QuartzPolygons.m */,
+				A241BF2F20F739F70099E8A5 /* QuartzCurves.h */,
+				A241BF3620F739F70099E8A5 /* QuartzCurves.m */,
+				A241BF3020F739F70099E8A5 /* QuartzView.h */,
+				A241BF3920F739F70099E8A5 /* QuartzView.m */,
+				A241BF3120F739F70099E8A5 /* QuartzClipping.h */,
+				A241BF3820F739F70099E8A5 /* QuartzClipping.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A241BF3A20F739F70099E8A5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A241BF5A20F73DF70099E8A5 /* QuartzDrawVC.h */,
+				A241BF5B20F73DF70099E8A5 /* QuartzDrawVC.m */,
+				A241BF3E20F739F70099E8A5 /* QuartzBlendingViewController.h */,
+				A241BF3F20F739F70099E8A5 /* QuartzGradientViewController.h */,
+				A241BF3B20F739F70099E8A5 /* QuartzLineViewController.h */,
+				A241BF4120F739F70099E8A5 /* QuartzLineViewController.m */,
+				A241BF4220F739F70099E8A5 /* QuartzPolyViewController.h */,
+				A241BF3D20F739F70099E8A5 /* QuartzPolyViewController.m */,
+				A241BF3C20F739F70099E8A5 /* QuartzDashViewController.m */,
+				A241BF4320F739F70099E8A5 /* QuartzDashViewController.h */,
+				A241BF4520F739F70099E8A5 /* QuartzGradientViewController.m */,
+				A241BF4620F739F70099E8A5 /* QuartzBlendingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		A241D22120468E52005A3BC5 /* MQTT */ = {
 			isa = PBXGroup;
 			children = (
@@ -1369,6 +1467,7 @@
 				A25748202023056C000F7632 /* CollectionView */,
 				A25748212023056C000F7632 /* TableView */,
 				A2CDD259208DDC1A006DF86E /* Physical */,
+				A241BF2820F738090099E8A5 /* QuartzDraw */,
 				A23B3520208D7299001D71F2 /* CoreAnimation */,
 				A2561DC4209AB77500D4E2E5 /* CoreGraphics */,
 				A2DDDC1D208ACEF600DC7A4A /* Screen */,
@@ -1750,6 +1849,7 @@
 		A2CDD254208DD021006DF86E /* image */ = {
 			isa = PBXGroup;
 			children = (
+				A241BF5F20F740C30099E8A5 /* Quartz.pdf */,
 				A2C84E8120AA7A5A000FD685 /* testPic.jpg */,
 				A2EE0F4F209BF3E00073495A /* 雪花.png */,
 				A2CDD25E208EC6D6006DF86E /* CATransition1.png */,
@@ -2313,6 +2413,7 @@
 				A22C4DD01FFC777A0079F7C2 /* pin_red_s.png in Resources */,
 				A2B992A22068F42F002A73B1 /* ChatVideoCell.xib in Resources */,
 				A22C4DC71FFC777A0079F7C2 /* route_goal_pin.png in Resources */,
+				A241BF6020F740C30099E8A5 /* Quartz.pdf in Resources */,
 				A2B9929D2068F40D002A73B1 /* ChatAudioCell.xib in Resources */,
 				A22C4DC81FFC777A0079F7C2 /* pin_green_s@2x.png in Resources */,
 				A2CDD253208DC64A006DF86E /* CoreAnimation.storyboard in Resources */,
@@ -2320,6 +2421,7 @@
 				A22C4DC21FFC777A0079F7C2 /* goal.png in Resources */,
 				A22C4DCB1FFC777A0079F7C2 /* route_pin@2x.png in Resources */,
 				A28ED5411FD2495F00A74551 /* Mine.storyboard in Resources */,
+				A241BF5920F73DB60099E8A5 /* QuartzDraw.storyboard in Resources */,
 				A2CDD258208DD3CA006DF86E /* 卡哇伊.jpg in Resources */,
 				A22C4DCA1FFC777A0079F7C2 /* compass48.png in Resources */,
 				A2B992982068F3E4002A73B1 /* ChatImageCell.xib in Resources */,
@@ -2448,6 +2550,7 @@
 				A2CDD23F208DB6CA006DF86E /* ZDTPVC.m in Sources */,
 				A2B992922068F3CA002A73B1 /* ChatTextCell.m in Sources */,
 				A242C1B620902BFA00A6A9F7 /* RSA.m in Sources */,
+				A241BF5220F739F70099E8A5 /* QuartzLineViewController.m in Sources */,
 				A2CDD272208ED232006DF86E /* PSSpringView.m in Sources */,
 				A2CDD242208DB6EA006DF86E /* YinLZDTVC.m in Sources */,
 				A23B3523208D72B5001D71F2 /* CoreAnimationVC.m in Sources */,
@@ -2463,6 +2566,7 @@
 				A2CDD275208ED245006DF86E /* PSCollisionView.m in Sources */,
 				A26CE4A6201971C50012EC69 /* CustomPointAnnotation.m in Sources */,
 				A2F00305209AFD8700F449EE /* ImageAndTextVC.m in Sources */,
+				A241BF4920F739F70099E8A5 /* QuartzImages.m in Sources */,
 				A2F002FC209AFCA400F449EE /* DownloadProgressVC.m in Sources */,
 				A2DDDC26208ACEF600DC7A4A /* PortraitScreenVC.m in Sources */,
 				A2E9DA2E2091C5580061B1E7 /* NSString+AES256.m in Sources */,
@@ -2493,7 +2597,10 @@
 				A2D884A720872322005116A6 /* BlueToothVC.m in Sources */,
 				A2CDD245208DB743006DF86E /* HDZSQVC.m in Sources */,
 				A26CE4862018A0880012EC69 /* BasicVC.m in Sources */,
+				A241BF5C20F73DF70099E8A5 /* QuartzDrawVC.m in Sources */,
+				A241BF5420F739F70099E8A5 /* QuartzBlendingViewController.m in Sources */,
 				A2B43C3320575EE700FEAE58 /* RadioButtonVC.m in Sources */,
+				A241BF4C20F739F70099E8A5 /* QuartzPolygons.m in Sources */,
 				A2E9DA312091D3FB0061B1E7 /* RSAUtil.m in Sources */,
 				A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */,
 				A2F002F9209AFC5200F449EE /* BasicDrawingVC.m in Sources */,
@@ -2503,10 +2610,13 @@
 				A2CDD27B208ED7A1006DF86E /* PSDemoVC.m in Sources */,
 				A2DDDC48208AE20B00DC7A4A /* ViewLayoutVC.m in Sources */,
 				A2CDD26F208ED220006DF86E /* PSAttachmentView.m in Sources */,
+				A241BF5320F739F70099E8A5 /* QuartzGradientViewController.m in Sources */,
 				A2D8849B208719CC005116A6 /* HTTPTOOL.m in Sources */,
+				A241BF4B20F739F70099E8A5 /* QuartzCurves.m in Sources */,
 				A2B992B32069F4FB002A73B1 /* ChatContentModel.m in Sources */,
 				A2C84E8C20AD3589000FD685 /* BlueToothDataVC.m in Sources */,
 				A2B9929C2068F40D002A73B1 /* ChatAudioCell.m in Sources */,
+				A241BF4820F739F70099E8A5 /* QuartzLines.m in Sources */,
 				A2250B1320E10D6800CCBB29 /* NSString+Characters.m in Sources */,
 				A2B992A62068F441002A73B1 /* ChatFileCell.m in Sources */,
 				A26CE48C2018A0AD0012EC69 /* SeniorVC.m in Sources */,
@@ -2540,6 +2650,7 @@
 				A26D17342043BDB80064DECF /* LoginVC.m in Sources */,
 				A257482B202305B9000F7632 /* TableViewVC.m in Sources */,
 				A2DDDC25208ACEF600DC7A4A /* LandscapeScreenVC.m in Sources */,
+				A241BF4E20F739F70099E8A5 /* QuartzView.m in Sources */,
 				A2CDD26C208ED20B006DF86E /* PSPushView.m in Sources */,
 				A2F00308209AFDAA00F449EE /* SnowTimerVC.m in Sources */,
 				A20D5DFD1FD14549000E191D /* main.m in Sources */,
@@ -2557,6 +2668,7 @@
 				A2CDD236208DB0E2006DF86E /* CATransitionVC.m in Sources */,
 				A26CE4A7201971C50012EC69 /* YahooMapVC.m in Sources */,
 				A2F00320209B08C800F449EE /* CutOutImageVC.m in Sources */,
+				A241BF5020F739F70099E8A5 /* QuartzPolyViewController.m in Sources */,
 				A2BDD423205F557C008AD133 /* MultiThreadVC.m in Sources */,
 				A26D17302043A4880064DECF /* WelcomeVC.m in Sources */,
 				A2B992832068F0C7002A73B1 /* ChatVC.m in Sources */,
@@ -2571,23 +2683,27 @@
 				A26CE4A9201971C50012EC69 /* SystemMapVC.m in Sources */,
 				A2DDDC52208AEC9000DC7A4A /* VFLLayoutVC.m in Sources */,
 				A2DDDC5A208B074600DC7A4A /* FoldTableVC.m in Sources */,
+				A241BF4F20F739F70099E8A5 /* QuartzDashViewController.m in Sources */,
 				A28ED52F1FD156B600A74551 /* RearRevealVC.m in Sources */,
 				A2CDD251208DB878006DF86E /* LZDHDTVC.m in Sources */,
 				A288F98D2089E0F500DD4CA0 /* MIVerticalLayout.m in Sources */,
 				A2F002FF209AFD4800F449EE /* PieChartVC.m in Sources */,
 				A2DDDC41208ADA4C00DC7A4A /* CoreDataVC.m in Sources */,
 				A2561DCD209AE4F200D4E2E5 /* DrawBaseVC.m in Sources */,
+				A241BF4D20F739F70099E8A5 /* QuartzClipping.m in Sources */,
 				A26CE4A3201971C50012EC69 /* BaiduMapVC.m in Sources */,
 				A20D5E111FD147CD000E191D /* TabBarVC.m in Sources */,
 				A27E875D201AD2B2003E712C /* SoundVC.m in Sources */,
 				A2DDDC5E208B084A00DC7A4A /* FoldTableViewCell.m in Sources */,
 				A288F98A2089DED600DD4CA0 /* MIHorizontalLayout.m in Sources */,
+				A241BF4720F739F70099E8A5 /* QuartzRendering.m in Sources */,
 				A2B992B02069F447002A73B1 /* ChatModel.m in Sources */,
 				A239CE232085D8990033646A /* MICircleLayout.m in Sources */,
 				A2B9927420623D0E002A73B1 /* SocketVC.m in Sources */,
 				A239CE362085E4C30033646A /* AFNetWorkVC.m in Sources */,
 				A2BDD42D205F5754008AD133 /* BaseModel.m in Sources */,
 				A2D8BDF2209FE9EB00AD4FF0 /* GestureVC.m in Sources */,
+				A241BF4A20F739F70099E8A5 /* QuartzBlending.m in Sources */,
 				A2CDD24B208DB770006DF86E /* LZDHDTSVC.m in Sources */,
 				A2B992A12068F42F002A73B1 /* ChatVideoCell.m in Sources */,
 				A23B352F208D81C0001D71F2 /* CAClockVC.m in Sources */,

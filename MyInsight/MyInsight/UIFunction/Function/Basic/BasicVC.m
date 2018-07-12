@@ -55,6 +55,7 @@ static const NSString *PhysicalStr = @"物理仿真";
 static const NSString *CoreGraphicsStr = @"绘画2D";
 static const NSString *BlurViewStr = @"毛玻璃效果";
 static const NSString *DrawingBoardStr = @"绘图板";
+static const NSString *QuartzDrawStr = @"Quartz画线";
 
 @implementation BasicVC
 
@@ -93,7 +94,7 @@ static const NSString *DrawingBoardStr = @"绘图板";
 // 处理数据
 - (void)handleTableViewData {
     // 数组
-    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, GestureStr, XieYiStr, PhysicalStr, CoreAnimationStr, CoreGraphicsStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, MultiThreadString, ViewLayoutStr, BlurViewStr, DrawingBoardStr];
+    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, GestureStr, XieYiStr, PhysicalStr, CoreAnimationStr, CoreGraphicsStr, QuartzDrawStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, MultiThreadString, ViewLayoutStr, BlurViewStr, DrawingBoardStr];
 }
 
 #pragma mark - 创建TableView
@@ -186,6 +187,12 @@ static const NSString *DrawingBoardStr = @"绘图板";
         CoreGraphicsVC *coreGraphicsVC = [[CoreGraphicsVC alloc] init];
         coreGraphicsVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:coreGraphicsVC animated:YES];
+    }
+    if ([cellString isEqual:QuartzDrawStr]) {
+        // Quartz画线
+        UITableViewController *quartzDrawTableVC = [[UIStoryboard storyboardWithName:@"QuartzDraw" bundle:NULL] instantiateViewControllerWithIdentifier:@"QuartzDrawTableVC"];
+        quartzDrawTableVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:quartzDrawTableVC animated:YES];
     }
     if ([cellString isEqual:GestureStr]) {
         // 手势
