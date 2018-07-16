@@ -94,6 +94,8 @@
 		A241BF5920F73DB60099E8A5 /* QuartzDraw.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A241BF5820F73DB60099E8A5 /* QuartzDraw.storyboard */; };
 		A241BF5C20F73DF70099E8A5 /* QuartzDrawVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BF5B20F73DF70099E8A5 /* QuartzDrawVC.m */; };
 		A241BF6020F740C30099E8A5 /* Quartz.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A241BF5F20F740C30099E8A5 /* Quartz.pdf */; };
+		A241BF9E20FC7F0B0099E8A5 /* ColorPickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BF9D20FC7F0B0099E8A5 /* ColorPickerVC.m */; };
+		A241BFA120FC81E30099E8A5 /* ColorCompareView.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BFA020FC81E30099E8A5 /* ColorCompareView.m */; };
 		A241D22420468E68005A3BC5 /* MQTTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22320468E68005A3BC5 /* MQTTVC.m */; };
 		A241D22B2047A32A005A3BC5 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22A2047A32A005A3BC5 /* UIColor+Category.m */; };
 		A242C1B620902BFA00A6A9F7 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = A242C1B520902BFA00A6A9F7 /* RSA.m */; };
@@ -421,6 +423,10 @@
 		A241BF5A20F73DF70099E8A5 /* QuartzDrawVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuartzDrawVC.h; sourceTree = "<group>"; };
 		A241BF5B20F73DF70099E8A5 /* QuartzDrawVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuartzDrawVC.m; sourceTree = "<group>"; };
 		A241BF5F20F740C30099E8A5 /* Quartz.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Quartz.pdf; sourceTree = "<group>"; };
+		A241BF9C20FC7F0B0099E8A5 /* ColorPickerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPickerVC.h; sourceTree = "<group>"; };
+		A241BF9D20FC7F0B0099E8A5 /* ColorPickerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPickerVC.m; sourceTree = "<group>"; };
+		A241BF9F20FC81E30099E8A5 /* ColorCompareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorCompareView.h; sourceTree = "<group>"; };
+		A241BFA020FC81E30099E8A5 /* ColorCompareView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorCompareView.m; sourceTree = "<group>"; };
 		A241D22220468E68005A3BC5 /* MQTTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQTTVC.h; sourceTree = "<group>"; };
 		A241D22320468E68005A3BC5 /* MQTTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQTTVC.m; sourceTree = "<group>"; };
 		A241D2292047A32A005A3BC5 /* UIColor+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
@@ -1331,6 +1337,17 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		A241BF9B20FC7EB80099E8A5 /* ColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				A241BF9C20FC7F0B0099E8A5 /* ColorPickerVC.h */,
+				A241BF9D20FC7F0B0099E8A5 /* ColorPickerVC.m */,
+				A241BF9F20FC81E30099E8A5 /* ColorCompareView.h */,
+				A241BFA020FC81E30099E8A5 /* ColorCompareView.m */,
+			);
+			path = ColorPicker;
+			sourceTree = "<group>";
+		};
 		A241D22120468E52005A3BC5 /* MQTT */ = {
 			isa = PBXGroup;
 			children = (
@@ -1477,6 +1494,7 @@
 				A2250B1C20E1515300CCBB29 /* DrawingBoard */,
 				A2D884F120897927005116A6 /* RunLoop */,
 				A2250B1820E1144200CCBB29 /* BlurView */,
+				A241BF9B20FC7EB80099E8A5 /* ColorPicker */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -2567,6 +2585,7 @@
 				A26CE4A6201971C50012EC69 /* CustomPointAnnotation.m in Sources */,
 				A2F00305209AFD8700F449EE /* ImageAndTextVC.m in Sources */,
 				A241BF4920F739F70099E8A5 /* QuartzImages.m in Sources */,
+				A241BF9E20FC7F0B0099E8A5 /* ColorPickerVC.m in Sources */,
 				A2F002FC209AFCA400F449EE /* DownloadProgressVC.m in Sources */,
 				A2DDDC26208ACEF600DC7A4A /* PortraitScreenVC.m in Sources */,
 				A2E9DA2E2091C5580061B1E7 /* NSString+AES256.m in Sources */,
@@ -2661,6 +2680,7 @@
 				A2BDD442205F639E008AD133 /* LockVC.m in Sources */,
 				A26CE48F2018A0BE0012EC69 /* AdvanceVC.m in Sources */,
 				A2E9DA2B2091C50A0061B1E7 /* NSData+AES256.m in Sources */,
+				A241BFA120FC81E30099E8A5 /* ColorCompareView.m in Sources */,
 				A26CE4A5201971C50012EC69 /* CallOutAnnotationView.m in Sources */,
 				A2250B1F20E1516500CCBB29 /* DrawingBoardVC.m in Sources */,
 				A2BDD43F205F6392008AD133 /* OperationVC.m in Sources */,

@@ -25,6 +25,7 @@
 #import "GestureVC.h"
 #import "BlurViewVC.h" // 毛玻璃效果
 #import "DrawingBoardVC.h" // 绘图板
+#import "ColorPickerVC.h" // 颜色拾取器
 
 @interface BasicVC ()<UITableViewDelegate, UITableViewDataSource>
 // LEFT
@@ -56,6 +57,7 @@ static const NSString *CoreGraphicsStr = @"绘画2D";
 static const NSString *BlurViewStr = @"毛玻璃效果";
 static const NSString *DrawingBoardStr = @"绘图板";
 static const NSString *QuartzDrawStr = @"Quartz画线";
+static const NSString *ColorPickerStr = @"颜色拾取器";
 
 @implementation BasicVC
 
@@ -94,7 +96,7 @@ static const NSString *QuartzDrawStr = @"Quartz画线";
 // 处理数据
 - (void)handleTableViewData {
     // 数组
-    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, GestureStr, XieYiStr, PhysicalStr, CoreAnimationStr, CoreGraphicsStr, QuartzDrawStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, MultiThreadString, ViewLayoutStr, BlurViewStr, DrawingBoardStr];
+    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, GestureStr, XieYiStr, PhysicalStr, CoreAnimationStr, CoreGraphicsStr, QuartzDrawStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, MultiThreadString, ViewLayoutStr, BlurViewStr, DrawingBoardStr, ColorPickerStr];
 }
 
 #pragma mark - 创建TableView
@@ -247,6 +249,12 @@ static const NSString *QuartzDrawStr = @"Quartz画线";
         DrawingBoardVC *drawingBoardVC = [[UIStoryboard storyboardWithName:@"Home" bundle:NULL] instantiateViewControllerWithIdentifier:@"DrawingBoardVC"];
         drawingBoardVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:drawingBoardVC animated:YES];
+    }
+    if ([cellString isEqual:ColorPickerStr]) {
+        // 颜色拾取器
+        ColorPickerVC *colorPickerVC = [[ColorPickerVC alloc] init];
+        colorPickerVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:colorPickerVC animated:YES];
     }
 }
 
