@@ -10,7 +10,7 @@
 
 @implementation UIImage (Blur)
 
-#pragma mark --毛玻璃效果
+#pragma mark -- 毛玻璃效果
 -(UIImage *)boxblurImageWithBlur:(CGFloat)blur {
     
     NSData *imageData = UIImageJPEGRepresentation(self, 1); // convert to jpeg
