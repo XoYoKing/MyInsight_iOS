@@ -10,13 +10,24 @@
 		5292E29C18A01D56A757542E /* Pods_MyInsight_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B695D4DDBCB11B8FBCA2795 /* Pods_MyInsight_SwiftTests.framework */; };
 		54F0EEDE1BBD82A319DED67B /* Pods_MyInsight_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509CB801DC923C2371A0BBEC /* Pods_MyInsight_Swift.framework */; };
 		959EE1C5FEB44C844968DD51 /* Pods_MyInsight_SwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB4EA70B82CF0E7F97618C5 /* Pods_MyInsight_SwiftUITests.framework */; };
-		A241BF6E20FC78840099E8A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A241BF6D20FC78840099E8A5 /* AppDelegate.swift */; };
-		A241BF7020FC78840099E8A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A241BF6F20FC78840099E8A5 /* ViewController.swift */; };
-		A241BF7320FC78840099E8A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A241BF7120FC78840099E8A5 /* Main.storyboard */; };
-		A241BF7520FC78860099E8A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A241BF7420FC78860099E8A5 /* Assets.xcassets */; };
-		A241BF7820FC78860099E8A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A241BF7620FC78860099E8A5 /* LaunchScreen.storyboard */; };
 		A241BF8320FC78860099E8A5 /* MyInsight_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A241BF8220FC78860099E8A5 /* MyInsight_SwiftTests.swift */; };
 		A241BF8E20FC78860099E8A5 /* MyInsight_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A241BF8D20FC78860099E8A5 /* MyInsight_SwiftUITests.swift */; };
+		A2930B612104A08E006520FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2930B552104A08E006520FF /* Main.storyboard */; };
+		A2930B622104A08E006520FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2930B572104A08E006520FF /* LaunchScreen.storyboard */; };
+		A2930B632104A08E006520FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2930B582104A08E006520FF /* Assets.xcassets */; };
+		A2930B642104A08E006520FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B592104A08E006520FF /* AppDelegate.swift */; };
+		A2930B652104A08E006520FF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2930B5A2104A08E006520FF /* Info.plist */; };
+		A2930B6B2104AFBB006520FF /* MainRearVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B6A2104AFBB006520FF /* MainRearVC.swift */; };
+		A2930B6D2104B00A006520FF /* RearRevealVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B6C2104B00A006520FF /* RearRevealVC.swift */; };
+		A2930B6F2104B01D006520FF /* RightRevealVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B6E2104B01D006520FF /* RightRevealVC.swift */; };
+		A2930B712104B068006520FF /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B702104B068006520FF /* WelcomeVC.swift */; };
+		A2930B732104B0BE006520FF /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B722104B0BD006520FF /* TabBarVC.swift */; };
+		A2930B792104B171006520FF /* OtherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B782104B171006520FF /* OtherVC.swift */; };
+		A2930B7B2104B181006520FF /* SeniorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B7A2104B181006520FF /* SeniorVC.swift */; };
+		A2930B7D2104B192006520FF /* AdvanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B7C2104B192006520FF /* AdvanceVC.swift */; };
+		A2930B7F2104B19F006520FF /* BasicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B7E2104B19F006520FF /* BasicVC.swift */; };
+		A2930B812104B1D1006520FF /* CommonTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B802104B1D1006520FF /* CommonTool.swift */; };
+		A2930B832104B215006520FF /* ThirdPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B822104B215006520FF /* ThirdPart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,18 +54,29 @@
 		509CB801DC923C2371A0BBEC /* Pods_MyInsight_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyInsight_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B695D4DDBCB11B8FBCA2795 /* Pods_MyInsight_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyInsight_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A241BF6A20FC78840099E8A5 /* MyInsight_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyInsight_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A241BF6D20FC78840099E8A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A241BF6F20FC78840099E8A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A241BF7220FC78840099E8A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A241BF7420FC78860099E8A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A241BF7720FC78860099E8A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A241BF7920FC78860099E8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A241BF7E20FC78860099E8A5 /* MyInsight_SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyInsight_SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A241BF8220FC78860099E8A5 /* MyInsight_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInsight_SwiftTests.swift; sourceTree = "<group>"; };
 		A241BF8420FC78860099E8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A241BF8920FC78860099E8A5 /* MyInsight_SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyInsight_SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A241BF8D20FC78860099E8A5 /* MyInsight_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInsight_SwiftUITests.swift; sourceTree = "<group>"; };
 		A241BF8F20FC78860099E8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2930B552104A08E006520FF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A2930B572104A08E006520FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A2930B582104A08E006520FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2930B592104A08E006520FF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A2930B5A2104A08E006520FF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2930B662104AF38006520FF /* MyInsight_Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyInsight_Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		A2930B6A2104AFBB006520FF /* MainRearVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRearVC.swift; sourceTree = "<group>"; };
+		A2930B6C2104B00A006520FF /* RearRevealVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RearRevealVC.swift; sourceTree = "<group>"; };
+		A2930B6E2104B01D006520FF /* RightRevealVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightRevealVC.swift; sourceTree = "<group>"; };
+		A2930B702104B068006520FF /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		A2930B722104B0BD006520FF /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		A2930B782104B171006520FF /* OtherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherVC.swift; sourceTree = "<group>"; };
+		A2930B7A2104B181006520FF /* SeniorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeniorVC.swift; sourceTree = "<group>"; };
+		A2930B7C2104B192006520FF /* AdvanceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvanceVC.swift; sourceTree = "<group>"; };
+		A2930B7E2104B19F006520FF /* BasicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicVC.swift; sourceTree = "<group>"; };
+		A2930B802104B1D1006520FF /* CommonTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTool.swift; sourceTree = "<group>"; };
+		A2930B822104B215006520FF /* ThirdPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPart.swift; sourceTree = "<group>"; };
 		A9CB2AFDBCE902DE69FFC3A4 /* Pods-MyInsight_SwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyInsight_SwiftUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyInsight_SwiftUITests/Pods-MyInsight_SwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADB4EA70B82CF0E7F97618C5 /* Pods_MyInsight_SwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyInsight_SwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75E0E3F706CCB45F5D2FA5A /* Pods-MyInsight_SwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyInsight_SwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyInsight_SwiftTests/Pods-MyInsight_SwiftTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,12 +159,11 @@
 		A241BF6C20FC78840099E8A5 /* MyInsight_Swift */ = {
 			isa = PBXGroup;
 			children = (
-				A241BF6D20FC78840099E8A5 /* AppDelegate.swift */,
-				A241BF6F20FC78840099E8A5 /* ViewController.swift */,
-				A241BF7120FC78840099E8A5 /* Main.storyboard */,
-				A241BF7420FC78860099E8A5 /* Assets.xcassets */,
-				A241BF7620FC78860099E8A5 /* LaunchScreen.storyboard */,
-				A241BF7920FC78860099E8A5 /* Info.plist */,
+				A2930B5B2104A08E006520FF /* General */,
+				A2930B5C2104A08E006520FF /* UIFunction */,
+				A2930B542104A08E006520FF /* StoryBoard */,
+				A2930B532104A08E006520FF /* Vendors */,
+				A2930B562104A08E006520FF /* SupportingFiles */,
 			);
 			path = MyInsight_Swift;
 			sourceTree = "<group>";
@@ -163,6 +184,106 @@
 				A241BF8F20FC78860099E8A5 /* Info.plist */,
 			);
 			path = MyInsight_SwiftUITests;
+			sourceTree = "<group>";
+		};
+		A2930B532104A08E006520FF /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				A2930B822104B215006520FF /* ThirdPart.swift */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		A2930B542104A08E006520FF /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				A2930B552104A08E006520FF /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		A2930B562104A08E006520FF /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A2930B572104A08E006520FF /* LaunchScreen.storyboard */,
+				A2930B582104A08E006520FF /* Assets.xcassets */,
+				A2930B592104A08E006520FF /* AppDelegate.swift */,
+				A2930B5A2104A08E006520FF /* Info.plist */,
+				A2930B662104AF38006520FF /* MyInsight_Swift-Bridging-Header.h */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		A2930B5B2104A08E006520FF /* General */ = {
+			isa = PBXGroup;
+			children = (
+				A2930B802104B1D1006520FF /* CommonTool.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		A2930B5C2104A08E006520FF /* UIFunction */ = {
+			isa = PBXGroup;
+			children = (
+				A2930B5D2104A08E006520FF /* Reveal */,
+				A2930B5F2104A08E006520FF /* Function */,
+			);
+			path = UIFunction;
+			sourceTree = "<group>";
+		};
+		A2930B5D2104A08E006520FF /* Reveal */ = {
+			isa = PBXGroup;
+			children = (
+				A2930B6A2104AFBB006520FF /* MainRearVC.swift */,
+				A2930B6E2104B01D006520FF /* RightRevealVC.swift */,
+				A2930B6C2104B00A006520FF /* RearRevealVC.swift */,
+				A2930B702104B068006520FF /* WelcomeVC.swift */,
+				A2930B722104B0BD006520FF /* TabBarVC.swift */,
+			);
+			path = Reveal;
+			sourceTree = "<group>";
+		};
+		A2930B5F2104A08E006520FF /* Function */ = {
+			isa = PBXGroup;
+			children = (
+				A2930B742104B150006520FF /* Basic */,
+				A2930B762104B151006520FF /* Advance */,
+				A2930B772104B151006520FF /* Senior */,
+				A2930B752104B151006520FF /* Other */,
+			);
+			path = Function;
+			sourceTree = "<group>";
+		};
+		A2930B742104B150006520FF /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				A2930B7E2104B19F006520FF /* BasicVC.swift */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		A2930B752104B151006520FF /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				A2930B782104B171006520FF /* OtherVC.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		A2930B762104B151006520FF /* Advance */ = {
+			isa = PBXGroup;
+			children = (
+				A2930B7C2104B192006520FF /* AdvanceVC.swift */,
+			);
+			path = Advance;
+			sourceTree = "<group>";
+		};
+		A2930B772104B151006520FF /* Senior */ = {
+			isa = PBXGroup;
+			children = (
+				A2930B7A2104B181006520FF /* SeniorVC.swift */,
+			);
+			path = Senior;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +358,7 @@
 				TargetAttributes = {
 					A241BF6920FC78840099E8A5 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					A241BF7D20FC78860099E8A5 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -273,9 +395,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A241BF7820FC78860099E8A5 /* LaunchScreen.storyboard in Resources */,
-				A241BF7520FC78860099E8A5 /* Assets.xcassets in Resources */,
-				A241BF7320FC78840099E8A5 /* Main.storyboard in Resources */,
+				A2930B652104A08E006520FF /* Info.plist in Resources */,
+				A2930B612104A08E006520FF /* Main.storyboard in Resources */,
+				A2930B632104A08E006520FF /* Assets.xcassets in Resources */,
+				A2930B622104A08E006520FF /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,11 +427,17 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyInsight_Swift/Pods-MyInsight_Swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SWRevealViewController/SWRevealViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWRevealViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,8 +506,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A241BF7020FC78840099E8A5 /* ViewController.swift in Sources */,
-				A241BF6E20FC78840099E8A5 /* AppDelegate.swift in Sources */,
+				A2930B812104B1D1006520FF /* CommonTool.swift in Sources */,
+				A2930B792104B171006520FF /* OtherVC.swift in Sources */,
+				A2930B6F2104B01D006520FF /* RightRevealVC.swift in Sources */,
+				A2930B7B2104B181006520FF /* SeniorVC.swift in Sources */,
+				A2930B7F2104B19F006520FF /* BasicVC.swift in Sources */,
+				A2930B712104B068006520FF /* WelcomeVC.swift in Sources */,
+				A2930B7D2104B192006520FF /* AdvanceVC.swift in Sources */,
+				A2930B642104A08E006520FF /* AppDelegate.swift in Sources */,
+				A2930B832104B215006520FF /* ThirdPart.swift in Sources */,
+				A2930B6D2104B00A006520FF /* RearRevealVC.swift in Sources */,
+				A2930B732104B0BE006520FF /* TabBarVC.swift in Sources */,
+				A2930B6B2104AFBB006520FF /* MainRearVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,25 +551,6 @@
 			targetProxy = A241BF8A20FC78860099E8A5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		A241BF7120FC78840099E8A5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A241BF7220FC78840099E8A5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A241BF7620FC78860099E8A5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A241BF7720FC78860099E8A5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A241BF9020FC78860099E8A5 /* Debug */ = {
@@ -552,11 +672,17 @@
 			baseConfigurationReference = 4714283B2CB4E060EE7E4350 /* Pods-MyInsight_Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MyInsight_Swift/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INFOPLIST_FILE = "$(SRCROOT)/MyInsight_Swift/SupportingFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.magnumsong.MyInsight-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyInsight_Swift/SupportingFiles/MyInsight_Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -567,11 +693,16 @@
 			baseConfigurationReference = 1E6415C830F6854F3DABE9D2 /* Pods-MyInsight_Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MyInsight_Swift/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INFOPLIST_FILE = "$(SRCROOT)/MyInsight_Swift/SupportingFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.magnumsong.MyInsight-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyInsight_Swift/SupportingFiles/MyInsight_Swift-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -585,7 +716,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MyInsight_SwiftTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.magnumsong.MyInsight-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -602,7 +737,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MyInsight_SwiftTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.magnumsong.MyInsight-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -618,7 +757,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MyInsight_SwiftUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.magnumsong.MyInsight-SwiftUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -634,7 +777,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MyInsight_SwiftUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.magnumsong.MyInsight-SwiftUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

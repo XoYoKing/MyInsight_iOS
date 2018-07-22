@@ -7,6 +7,7 @@
 //
 
 #import "ColorPickerVC.h"
+#import "ColorPickerView.h"
 
 @interface ColorPickerVC ()
 
@@ -17,12 +18,25 @@
 // 原工程
 // https://github.com/alexrestrepo/KZColorPicker
 // [下载图片](https://raw.github.com/alexrestrepo/KZColorPicker/master/screen.png)
+/*
+ 颜色拾取器，用在工程中过，此处备份一下
+ */
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     self.title = @"颜色拾取器";
+    
+    self.view.backgroundColor = [UIColor purpleColor];
+    
+    //
+    
+    
+    
+    
+    
+    
     
     
     

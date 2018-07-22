@@ -96,6 +96,13 @@
 		A241BF6020F740C30099E8A5 /* Quartz.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A241BF5F20F740C30099E8A5 /* Quartz.pdf */; };
 		A241BF9E20FC7F0B0099E8A5 /* ColorPickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BF9D20FC7F0B0099E8A5 /* ColorPickerVC.m */; };
 		A241BFA120FC81E30099E8A5 /* ColorCompareView.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BFA020FC81E30099E8A5 /* ColorCompareView.m */; };
+		A241BFA420FC83E10099E8A5 /* ColorPickerUnitSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BFA320FC83E10099E8A5 /* ColorPickerUnitSlider.m */; };
+		A241BFA920FC86440099E8A5 /* ColorPickerHSV.c in Sources */ = {isa = PBXBuildFile; fileRef = A241BFA820FC86440099E8A5 /* ColorPickerHSV.c */; };
+		A241BFAC20FC879F0099E8A5 /* ColorPickerSwatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BFAB20FC879F0099E8A5 /* ColorPickerSwatchView.m */; };
+		A241BFAF20FC87B10099E8A5 /* ColorPickerHSWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BFAE20FC87B10099E8A5 /* ColorPickerHSWheel.m */; };
+		A241BFB220FC87C40099E8A5 /* ColorPickerBrightnessSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BFB120FC87C40099E8A5 /* ColorPickerBrightnessSlider.m */; };
+		A241BFB520FC87D50099E8A5 /* ColorPickerAlphaSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BFB420FC87D50099E8A5 /* ColorPickerAlphaSlider.m */; };
+		A241BFB820FCCB500099E8A5 /* ColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BFB720FCCB500099E8A5 /* ColorPickerView.m */; };
 		A241D22420468E68005A3BC5 /* MQTTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22320468E68005A3BC5 /* MQTTVC.m */; };
 		A241D22B2047A32A005A3BC5 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22A2047A32A005A3BC5 /* UIColor+Category.m */; };
 		A242C1B620902BFA00A6A9F7 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = A242C1B520902BFA00A6A9F7 /* RSA.m */; };
@@ -139,6 +146,8 @@
 		A28ED52F1FD156B600A74551 /* RearRevealVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A28ED52E1FD156B600A74551 /* RearRevealVC.m */; };
 		A28ED53D1FD2494800A74551 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28ED53C1FD2494800A74551 /* Home.storyboard */; };
 		A28ED5411FD2495F00A74551 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28ED5401FD2495F00A74551 /* Mine.storyboard */; };
+		A2930B502104906D006520FF /* meinv.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2930B4F2104906D006520FF /* meinv.jpg */; };
+		A2930B5221049071006520FF /* beijing.png in Resources */ = {isa = PBXBuildFile; fileRef = A2930B5121049071006520FF /* beijing.png */; };
 		A2A30B9C2008B2FC00C974B7 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30B9B2008B2FC00C974B7 /* VideoToolbox.framework */; };
 		A2A30B9E2008B42B00C974B7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30B9D2008B42B00C974B7 /* AudioToolbox.framework */; };
 		A2A30BA62008BC5F00C974B7 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30BA52008BC5F00C974B7 /* libiconv.tbd */; };
@@ -427,6 +436,20 @@
 		A241BF9D20FC7F0B0099E8A5 /* ColorPickerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPickerVC.m; sourceTree = "<group>"; };
 		A241BF9F20FC81E30099E8A5 /* ColorCompareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorCompareView.h; sourceTree = "<group>"; };
 		A241BFA020FC81E30099E8A5 /* ColorCompareView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorCompareView.m; sourceTree = "<group>"; };
+		A241BFA220FC83E10099E8A5 /* ColorPickerUnitSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPickerUnitSlider.h; sourceTree = "<group>"; };
+		A241BFA320FC83E10099E8A5 /* ColorPickerUnitSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPickerUnitSlider.m; sourceTree = "<group>"; };
+		A241BFA720FC86440099E8A5 /* ColorPickerHSV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPickerHSV.h; sourceTree = "<group>"; };
+		A241BFA820FC86440099E8A5 /* ColorPickerHSV.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ColorPickerHSV.c; sourceTree = "<group>"; };
+		A241BFAA20FC879F0099E8A5 /* ColorPickerSwatchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPickerSwatchView.h; sourceTree = "<group>"; };
+		A241BFAB20FC879F0099E8A5 /* ColorPickerSwatchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPickerSwatchView.m; sourceTree = "<group>"; };
+		A241BFAD20FC87B10099E8A5 /* ColorPickerHSWheel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPickerHSWheel.h; sourceTree = "<group>"; };
+		A241BFAE20FC87B10099E8A5 /* ColorPickerHSWheel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPickerHSWheel.m; sourceTree = "<group>"; };
+		A241BFB020FC87C40099E8A5 /* ColorPickerBrightnessSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPickerBrightnessSlider.h; sourceTree = "<group>"; };
+		A241BFB120FC87C40099E8A5 /* ColorPickerBrightnessSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPickerBrightnessSlider.m; sourceTree = "<group>"; };
+		A241BFB320FC87D50099E8A5 /* ColorPickerAlphaSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPickerAlphaSlider.h; sourceTree = "<group>"; };
+		A241BFB420FC87D50099E8A5 /* ColorPickerAlphaSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPickerAlphaSlider.m; sourceTree = "<group>"; };
+		A241BFB620FCCB500099E8A5 /* ColorPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPickerView.h; sourceTree = "<group>"; };
+		A241BFB720FCCB500099E8A5 /* ColorPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPickerView.m; sourceTree = "<group>"; };
 		A241D22220468E68005A3BC5 /* MQTTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQTTVC.h; sourceTree = "<group>"; };
 		A241D22320468E68005A3BC5 /* MQTTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQTTVC.m; sourceTree = "<group>"; };
 		A241D2292047A32A005A3BC5 /* UIColor+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
@@ -509,6 +532,9 @@
 		A28ED52E1FD156B600A74551 /* RearRevealVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RearRevealVC.m; sourceTree = "<group>"; };
 		A28ED53C1FD2494800A74551 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		A28ED5401FD2495F00A74551 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		A2930B4E210415F3006520FF /* emojis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emojis.h; sourceTree = "<group>"; };
+		A2930B4F2104906D006520FF /* meinv.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meinv.jpg; sourceTree = "<group>"; };
+		A2930B5121049071006520FF /* beijing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beijing.png; sourceTree = "<group>"; };
 		A2A30B9B2008B2FC00C974B7 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		A2A30B9D2008B42B00C974B7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A2A30B9F2008B43C00C974B7 /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
@@ -1069,6 +1095,7 @@
 			children = (
 				A2250B0D20E10C3C00CCBB29 /* EmojiTool.h */,
 				A2250B0E20E10C3C00CCBB29 /* EmojiTool.m */,
+				A2930B4E210415F3006520FF /* emojis.h */,
 			);
 			path = EmojiTool;
 			sourceTree = "<group>";
@@ -1342,8 +1369,22 @@
 			children = (
 				A241BF9C20FC7F0B0099E8A5 /* ColorPickerVC.h */,
 				A241BF9D20FC7F0B0099E8A5 /* ColorPickerVC.m */,
+				A241BFB620FCCB500099E8A5 /* ColorPickerView.h */,
+				A241BFB720FCCB500099E8A5 /* ColorPickerView.m */,
 				A241BF9F20FC81E30099E8A5 /* ColorCompareView.h */,
 				A241BFA020FC81E30099E8A5 /* ColorCompareView.m */,
+				A241BFA220FC83E10099E8A5 /* ColorPickerUnitSlider.h */,
+				A241BFA320FC83E10099E8A5 /* ColorPickerUnitSlider.m */,
+				A241BFB020FC87C40099E8A5 /* ColorPickerBrightnessSlider.h */,
+				A241BFB120FC87C40099E8A5 /* ColorPickerBrightnessSlider.m */,
+				A241BFB320FC87D50099E8A5 /* ColorPickerAlphaSlider.h */,
+				A241BFB420FC87D50099E8A5 /* ColorPickerAlphaSlider.m */,
+				A241BFA720FC86440099E8A5 /* ColorPickerHSV.h */,
+				A241BFA820FC86440099E8A5 /* ColorPickerHSV.c */,
+				A241BFAA20FC879F0099E8A5 /* ColorPickerSwatchView.h */,
+				A241BFAB20FC879F0099E8A5 /* ColorPickerSwatchView.m */,
+				A241BFAD20FC87B10099E8A5 /* ColorPickerHSWheel.h */,
+				A241BFAE20FC87B10099E8A5 /* ColorPickerHSWheel.m */,
 			);
 			path = ColorPicker;
 			sourceTree = "<group>";
@@ -1868,7 +1909,9 @@
 			isa = PBXGroup;
 			children = (
 				A241BF5F20F740C30099E8A5 /* Quartz.pdf */,
+				A2930B5121049071006520FF /* beijing.png */,
 				A2C84E8120AA7A5A000FD685 /* testPic.jpg */,
+				A2930B4F2104906D006520FF /* meinv.jpg */,
 				A2EE0F4F209BF3E00073495A /* 雪花.png */,
 				A2CDD25E208EC6D6006DF86E /* CATransition1.png */,
 				A2CDD25F208EC6D7006DF86E /* CATransition2.png */,
@@ -2428,6 +2471,7 @@
 				A22C4DC01FFC777A0079F7C2 /* route_pin.png in Resources */,
 				A2CDD262208EC6D7006DF86E /* CATransition2.png in Resources */,
 				A22C4DC91FFC777A0079F7C2 /* compass48@2x.png in Resources */,
+				A2930B5221049071006520FF /* beijing.png in Resources */,
 				A22C4DD01FFC777A0079F7C2 /* pin_red_s.png in Resources */,
 				A2B992A22068F42F002A73B1 /* ChatVideoCell.xib in Resources */,
 				A22C4DC71FFC777A0079F7C2 /* route_goal_pin.png in Resources */,
@@ -2446,6 +2490,7 @@
 				A22C4DC31FFC777A0079F7C2 /* pin_green_s.png in Resources */,
 				A22C4DCC1FFC777A0079F7C2 /* goal@2x.png in Resources */,
 				A22C4DC51FFC777A0079F7C2 /* pin_red_s@2x.png in Resources */,
+				A2930B502104906D006520FF /* meinv.jpg in Resources */,
 				A2C1AB7D2025A1D80085A653 /* alarm4.m4r in Resources */,
 				A22C4DC11FFC777A0079F7C2 /* pin_head_s.png in Resources */,
 				A2B9928E2068F3A6002A73B1 /* ChatListCell.xib in Resources */,
@@ -2557,6 +2602,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A241BFB520FC87D50099E8A5 /* ColorPickerAlphaSlider.m in Sources */,
 				A2250B1B20E1145600CCBB29 /* BlurViewVC.m in Sources */,
 				A2CDD266208ED1DE006DF86E /* PSBaseView.m in Sources */,
 				A2250B2B20E155ED00CCBB29 /* DrawPaletteVC.m in Sources */,
@@ -2584,6 +2630,7 @@
 				A2CDD275208ED245006DF86E /* PSCollisionView.m in Sources */,
 				A26CE4A6201971C50012EC69 /* CustomPointAnnotation.m in Sources */,
 				A2F00305209AFD8700F449EE /* ImageAndTextVC.m in Sources */,
+				A241BFA920FC86440099E8A5 /* ColorPickerHSV.c in Sources */,
 				A241BF4920F739F70099E8A5 /* QuartzImages.m in Sources */,
 				A241BF9E20FC7F0B0099E8A5 /* ColorPickerVC.m in Sources */,
 				A2F002FC209AFCA400F449EE /* DownloadProgressVC.m in Sources */,
@@ -2604,6 +2651,8 @@
 				A26CE4A8201971C50012EC69 /* CalloutMapAnnotation.m in Sources */,
 				A2250B2220E1551B00CCBB29 /* CancasView.m in Sources */,
 				A2B9928D2068F3A6002A73B1 /* ChatListCell.m in Sources */,
+				A241BFAC20FC879F0099E8A5 /* ColorPickerSwatchView.m in Sources */,
+				A241BFB820FCCB500099E8A5 /* ColorPickerView.m in Sources */,
 				A2DDDC34208AD97200DC7A4A /* RealmDBVC.m in Sources */,
 				A20D5E1D1FD14C7A000E191D /* MainRevealVC.m in Sources */,
 				A2CDD25C208DDC2C006DF86E /* PhysicalVC.m in Sources */,
@@ -2615,6 +2664,7 @@
 				A2BDD439205F6354008AD133 /* ThreadVC.m in Sources */,
 				A2D884A720872322005116A6 /* BlueToothVC.m in Sources */,
 				A2CDD245208DB743006DF86E /* HDZSQVC.m in Sources */,
+				A241BFAF20FC87B10099E8A5 /* ColorPickerHSWheel.m in Sources */,
 				A26CE4862018A0880012EC69 /* BasicVC.m in Sources */,
 				A241BF5C20F73DF70099E8A5 /* QuartzDrawVC.m in Sources */,
 				A241BF5420F739F70099E8A5 /* QuartzBlendingViewController.m in Sources */,
@@ -2679,6 +2729,7 @@
 				A2BA3564207C9F4C006D1B00 /* CYuYanVC.m in Sources */,
 				A2BDD442205F639E008AD133 /* LockVC.m in Sources */,
 				A26CE48F2018A0BE0012EC69 /* AdvanceVC.m in Sources */,
+				A241BFB220FC87C40099E8A5 /* ColorPickerBrightnessSlider.m in Sources */,
 				A2E9DA2B2091C50A0061B1E7 /* NSData+AES256.m in Sources */,
 				A241BFA120FC81E30099E8A5 /* ColorCompareView.m in Sources */,
 				A26CE4A5201971C50012EC69 /* CallOutAnnotationView.m in Sources */,
@@ -2719,6 +2770,7 @@
 				A241BF4720F739F70099E8A5 /* QuartzRendering.m in Sources */,
 				A2B992B02069F447002A73B1 /* ChatModel.m in Sources */,
 				A239CE232085D8990033646A /* MICircleLayout.m in Sources */,
+				A241BFA420FC83E10099E8A5 /* ColorPickerUnitSlider.m in Sources */,
 				A2B9927420623D0E002A73B1 /* SocketVC.m in Sources */,
 				A239CE362085E4C30033646A /* AFNetWorkVC.m in Sources */,
 				A2BDD42D205F5754008AD133 /* BaseModel.m in Sources */,

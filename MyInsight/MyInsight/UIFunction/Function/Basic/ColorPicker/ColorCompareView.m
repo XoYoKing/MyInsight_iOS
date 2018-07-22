@@ -18,9 +18,9 @@
 
 @implementation ColorCompareView
 
+// 颜色比较
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
-    
     
     
     return self;
