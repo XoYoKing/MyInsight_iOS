@@ -8,13 +8,33 @@
 
 import UIKit
 
-class TabBarVC: UIViewController {
+class TabBarVC: UITabBarController {
 
     // 底部导航栏
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // 设置背景颜色
+        self.view.backgroundColor = UIColor.white
+        
+        // 基础
+        let basicVC: BasicVC = BasicVC()
+        let basicNavi: UINavigationController = UINavigationController(rootViewController: basicVC)
+        
+        // 进阶
+        let advanceVC: AdvanceVC = AdvanceVC()
+        let advanceNavi: UINavigationController = UINavigationController(rootViewController: advanceVC)
+        
+        // 高级
+        let seniorVC: SeniorVC = SeniorVC()
+        let seniorNavi: UINavigationController = UINavigationController(rootViewController: seniorVC)
+        
+        // 其他
+        let otherVC: OtherVC = OtherVC()
+        let otherNavi: UINavigationController = UINavigationController(rootViewController: otherVC)
+        
+        // 设置
+        
+        self.setViewControllers([basicNavi, advanceNavi, seniorNavi, otherNavi], animated: true);
     }
 
     override func didReceiveMemoryWarning() {
