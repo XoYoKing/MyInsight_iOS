@@ -16,7 +16,6 @@
 		A2930B622104A08E006520FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2930B572104A08E006520FF /* LaunchScreen.storyboard */; };
 		A2930B632104A08E006520FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2930B582104A08E006520FF /* Assets.xcassets */; };
 		A2930B642104A08E006520FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B592104A08E006520FF /* AppDelegate.swift */; };
-		A2930B652104A08E006520FF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2930B5A2104A08E006520FF /* Info.plist */; };
 		A2930B6B2104AFBB006520FF /* MainRearVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B6A2104AFBB006520FF /* MainRearVC.swift */; };
 		A2930B6D2104B00A006520FF /* RearRevealVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B6C2104B00A006520FF /* RearRevealVC.swift */; };
 		A2930B6F2104B01D006520FF /* RightRevealVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B6E2104B01D006520FF /* RightRevealVC.swift */; };
@@ -28,6 +27,7 @@
 		A2930B7F2104B19F006520FF /* BasicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B7E2104B19F006520FF /* BasicVC.swift */; };
 		A2930B812104B1D1006520FF /* CommonTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B802104B1D1006520FF /* CommonTool.swift */; };
 		A2930B832104B215006520FF /* ThirdPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B822104B215006520FF /* ThirdPart.swift */; };
+		A2930B852105FF94006520FF /* RealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B842105FF94006520FF /* RealmStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +77,7 @@
 		A2930B7E2104B19F006520FF /* BasicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicVC.swift; sourceTree = "<group>"; };
 		A2930B802104B1D1006520FF /* CommonTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTool.swift; sourceTree = "<group>"; };
 		A2930B822104B215006520FF /* ThirdPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPart.swift; sourceTree = "<group>"; };
+		A2930B842105FF94006520FF /* RealmStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStore.swift; sourceTree = "<group>"; };
 		A9CB2AFDBCE902DE69FFC3A4 /* Pods-MyInsight_SwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyInsight_SwiftUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyInsight_SwiftUITests/Pods-MyInsight_SwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADB4EA70B82CF0E7F97618C5 /* Pods_MyInsight_SwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyInsight_SwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75E0E3F706CCB45F5D2FA5A /* Pods-MyInsight_SwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyInsight_SwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyInsight_SwiftTests/Pods-MyInsight_SwiftTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -218,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				A2930B802104B1D1006520FF /* CommonTool.swift */,
+				A2930B842105FF94006520FF /* RealmStore.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -395,7 +397,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2930B652104A08E006520FF /* Info.plist in Resources */,
 				A2930B612104A08E006520FF /* Main.storyboard in Resources */,
 				A2930B632104A08E006520FF /* Assets.xcassets in Resources */,
 				A2930B622104A08E006520FF /* LaunchScreen.storyboard in Resources */,
@@ -514,6 +515,7 @@
 				A2930B712104B068006520FF /* WelcomeVC.swift in Sources */,
 				A2930B7D2104B192006520FF /* AdvanceVC.swift in Sources */,
 				A2930B642104A08E006520FF /* AppDelegate.swift in Sources */,
+				A2930B852105FF94006520FF /* RealmStore.swift in Sources */,
 				A2930B832104B215006520FF /* ThirdPart.swift in Sources */,
 				A2930B6D2104B00A006520FF /* RearRevealVC.swift in Sources */,
 				A2930B732104B0BE006520FF /* TabBarVC.swift in Sources */,

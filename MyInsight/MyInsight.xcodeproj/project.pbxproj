@@ -148,6 +148,8 @@
 		A28ED5411FD2495F00A74551 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28ED5401FD2495F00A74551 /* Mine.storyboard */; };
 		A2930B502104906D006520FF /* meinv.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2930B4F2104906D006520FF /* meinv.jpg */; };
 		A2930B5221049071006520FF /* beijing.png in Resources */ = {isa = PBXBuildFile; fileRef = A2930B5121049071006520FF /* beijing.png */; };
+		A2930B882106089F006520FF /* BLETool.m in Sources */ = {isa = PBXBuildFile; fileRef = A2930B872106089F006520FF /* BLETool.m */; };
+		A2930B8B21060BB1006520FF /* BLEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2930B8A21060BB1006520FF /* BLEModel.m */; };
 		A2A30B9C2008B2FC00C974B7 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30B9B2008B2FC00C974B7 /* VideoToolbox.framework */; };
 		A2A30B9E2008B42B00C974B7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30B9D2008B42B00C974B7 /* AudioToolbox.framework */; };
 		A2A30BA62008BC5F00C974B7 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30BA52008BC5F00C974B7 /* libiconv.tbd */; };
@@ -535,6 +537,10 @@
 		A2930B4E210415F3006520FF /* emojis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emojis.h; sourceTree = "<group>"; };
 		A2930B4F2104906D006520FF /* meinv.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meinv.jpg; sourceTree = "<group>"; };
 		A2930B5121049071006520FF /* beijing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beijing.png; sourceTree = "<group>"; };
+		A2930B862106089F006520FF /* BLETool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLETool.h; sourceTree = "<group>"; };
+		A2930B872106089F006520FF /* BLETool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLETool.m; sourceTree = "<group>"; };
+		A2930B8921060BB1006520FF /* BLEModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEModel.h; sourceTree = "<group>"; };
+		A2930B8A21060BB1006520FF /* BLEModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEModel.m; sourceTree = "<group>"; };
 		A2A30B9B2008B2FC00C974B7 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		A2A30B9D2008B42B00C974B7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A2A30B9F2008B43C00C974B7 /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
@@ -1990,6 +1996,10 @@
 				A2D884A220872322005116A6 /* BabyBleVC.m */,
 				A2C84E8A20AD3589000FD685 /* BlueToothDataVC.h */,
 				A2C84E8B20AD3589000FD685 /* BlueToothDataVC.m */,
+				A2930B862106089F006520FF /* BLETool.h */,
+				A2930B872106089F006520FF /* BLETool.m */,
+				A2930B8921060BB1006520FF /* BLEModel.h */,
+				A2930B8A21060BB1006520FF /* BLEModel.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2667,6 +2677,7 @@
 				A241BFAF20FC87B10099E8A5 /* ColorPickerHSWheel.m in Sources */,
 				A26CE4862018A0880012EC69 /* BasicVC.m in Sources */,
 				A241BF5C20F73DF70099E8A5 /* QuartzDrawVC.m in Sources */,
+				A2930B8B21060BB1006520FF /* BLEModel.m in Sources */,
 				A241BF5420F739F70099E8A5 /* QuartzBlendingViewController.m in Sources */,
 				A2B43C3320575EE700FEAE58 /* RadioButtonVC.m in Sources */,
 				A241BF4C20F739F70099E8A5 /* QuartzPolygons.m in Sources */,
@@ -2768,6 +2779,7 @@
 				A2DDDC5E208B084A00DC7A4A /* FoldTableViewCell.m in Sources */,
 				A288F98A2089DED600DD4CA0 /* MIHorizontalLayout.m in Sources */,
 				A241BF4720F739F70099E8A5 /* QuartzRendering.m in Sources */,
+				A2930B882106089F006520FF /* BLETool.m in Sources */,
 				A2B992B02069F447002A73B1 /* ChatModel.m in Sources */,
 				A239CE232085D8990033646A /* MICircleLayout.m in Sources */,
 				A241BFA420FC83E10099E8A5 /* ColorPickerUnitSlider.m in Sources */,
