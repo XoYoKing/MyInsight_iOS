@@ -20,14 +20,11 @@
 
 @property (nonatomic,assign) BOOL isInitiativeDisconnect;//主动断开连接
 
-
-
 @end
 
 @implementation BLEModel
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         _centralMgr = [[CBCentralManager alloc]initWithDelegate:self queue:nil];
@@ -48,13 +45,9 @@
 /**
  *  停止扫描
  */
--(void)stopScan
-{
+-(void)stopScan {
     [_centralMgr stopScan];
-    
-    
 }
-
 
 #pragma mark -- CBCentralManagerDelegate
 #pragma mark- 扫描设备，连接
@@ -69,7 +62,6 @@
         return;
     }
     
-    
     /**
      当扫描到服务UUID与设备UUID相等时,进行蓝牙与设备链接
      */
@@ -80,53 +72,44 @@
         NSLog(@"connect peripheral:  %@",peripheral);
         [self.centralMgr connectPeripheral:peripheral options:nil];
     }
-    
 }
 
-
 #pragma mark - 蓝牙的状态
--(void)centralManagerDidUpdateState:(CBCentralManager *)central{
+-(void)centralManagerDidUpdateState:(CBCentralManager *)central {
     switch (central.state) {
-            case CBManagerStateUnknown:
-        {
+            case CBManagerStateUnknown: {
             //NSLog(@"无法获取设备的蓝牙状态");
             self.connectState = kCONNECTED_UNKNOWN_STATE;
         }
             break;
-            case CBManagerStateResetting:
-        {
+            case CBManagerStateResetting: {
             //NSLog(@"蓝牙重置");
             self.connectState = kCONNECTED_RESET;
         }
             break;
-            case CBManagerStateUnsupported:
-        {
+            case CBManagerStateUnsupported: {
             //NSLog(@"该设备不支持蓝牙");
             self.connectState = kCONNECTED_UNSUPPORTED;
         }
             break;
-            case CBManagerStateUnauthorized:
-        {
+            case CBManagerStateUnauthorized: {
             //NSLog(@"未授权蓝牙权限");
             self.connectState = kCONNECTED_UNAUTHORIZED;
         }
             break;
-            case CBManagerStatePoweredOff:
-        {
+            case CBManagerStatePoweredOff: {
             //NSLog(@"蓝牙已关闭");
             self.connectState = kCONNECTED_POWERED_OFF;
         }
             break;
-            case CBManagerStatePoweredOn:
-        {
+            case CBManagerStatePoweredOn: {
             //NSLog(@"蓝牙已打开");
             self.connectState = kCONNECTED_POWERD_ON;
             [_centralMgr scanForPeripheralsWithServices:nil options:nil];
         }
             break;
             
-        default:
-        {
+        default: {
             //NSLog(@"未知的蓝牙错误");
             self.connectState = kCONNECTED_ERROR;
         }
@@ -137,8 +120,7 @@
     
 }
 #pragma park- 连接成功,扫描services
-- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral
-{
+- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
     if (!peripheral) {
         return;
     }
@@ -152,12 +134,8 @@
     
 }
 
-
-
-
 #pragma mark - 扫描service
-- (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error
-{
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
     NSArray *services = nil;
     
     if (peripheral != self.discoveredPeripheral) {
@@ -232,8 +210,6 @@
             self.writeCharacteristic = c;
             [_discoveredPeripheral setNotifyValue:YES forCharacteristic:self.writeCharacteristic];
         }
-        
-        
     }
 }
 
@@ -299,6 +275,5 @@
     
     NSLog(@"write value success : %@", characteristic);
 }
-
 
 @end
