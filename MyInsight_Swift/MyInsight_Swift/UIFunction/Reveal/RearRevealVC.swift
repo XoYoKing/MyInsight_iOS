@@ -13,8 +13,8 @@ class RearRevealVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // 左侧面
+        self.view.backgroundColor = UIColor.orange
     }
 
     override func didReceiveMemoryWarning() {

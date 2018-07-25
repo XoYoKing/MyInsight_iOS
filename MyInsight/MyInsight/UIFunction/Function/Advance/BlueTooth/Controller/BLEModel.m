@@ -9,7 +9,7 @@
 
 #import "BLEModel.h"
 #import "BLETool.h"
-
+ 
 @interface BLEModel ()<CBCentralManagerDelegate,CBPeripheralDelegate>
 /**
  *  蓝牙连接必要对象
@@ -168,16 +168,13 @@
     }
     
 }
-- (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error
-{
-    if (error)
-    {
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
+    if (error) {
         NSLog(@"didDiscoverCharacteristicsForService error : %@", [error localizedDescription]);
         return;
     }
     
-    for (CBCharacteristic *c in service.characteristics)
-    {
+    for (CBCharacteristic *c in service.characteristics) {
         NSLog(@"\n>>>\t特征UUID FOUND(in 服务UUID:%@): %@ (data:%@)",service.UUID.description,c.UUID,c.UUID.data);
         /**
          >>>    特征UUID FOUND(in 服务UUID:FFE0): FFE1 (data:<ffe1>)
@@ -214,11 +211,9 @@
 }
 
 #pragma mark - 读取数据
-- (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
-{
+- (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
     
-    if (error)
-    {
+    if (error) {
         NSLog(@"didUpdateValueForCharacteristic error : %@", error.localizedDescription);
         return;
     }
@@ -238,10 +233,10 @@
     if (!self.isInitiativeDisconnect) {
         [self.centralMgr connectPeripheral:peripheral options:nil];
     }
-    
 }
+
 #pragma mark - 主动断开连接
--(void)cancelPeripheralConnection{
+-(void)cancelPeripheralConnection {
     
     self.isInitiativeDisconnect = YES;
     if (self.discoveredPeripheral) {//已经连接外设，则断开
@@ -249,14 +244,12 @@
     }else{//未连接，则停止搜索外设
         [self.centralMgr stopScan];
     }
-    
 }
 
 /**
  发送命令
  */
 - (void) sendData:(NSData *)data{
-    
     /**
      通过CBPeripheral 类 将数据写入蓝牙外设中,蓝牙外设所识别的数据为十六进制数据,在ios系统代理方法中将十六进制数据改为 NSData 类型 ,但是该数据形式必须为十六进制数 0*ff 0*ff格式 在iToll中有将 字符串转化为 十六进制 再转化为 NSData的方法
      */
@@ -265,7 +258,7 @@
 }
 
 //向peripheral中写入数据后的回调函数
-- (void)peripheral:(CBPeripheral*)peripheral didWriteValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error{
+- (void)peripheral:(CBPeripheral*)peripheral didWriteValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
     //该方法可以监听到写入外设数据后的状态
     if (error) {
         NSLog(@"didWriteValueForCharacteristic error : %@", error.localizedDescription);

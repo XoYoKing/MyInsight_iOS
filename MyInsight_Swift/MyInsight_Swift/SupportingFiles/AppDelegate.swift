@@ -30,10 +30,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          若是第一次加载，进入欢迎页面，若不是直接进入主页面
          */
         let userDefaults: UserDefaults = UserDefaults.standard;
+        debugPrint("是不是第一次启动")
         
-        
-        
-        
+        if (userDefaults.string(forKey: "LauchAgree") == nil) {
+            userDefaults.set(true, forKey: "LauchAgree")
+            debugPrint("首次启动 进入欢迎页面")
+            
+            let welcomeVC: WelcomeVC = WelcomeVC()
+            self.window?.rootViewController = welcomeVC
+        } else {
+            debugPrint("不是首次启动 进入主页面")
+            let mainRevealVC: MainRevealVC = MainRevealVC()
+            
+            self.window?.rootViewController = mainRevealVC
+        }
     }
     
     

@@ -33,8 +33,31 @@ class TabBarVC: UITabBarController {
         let otherNavi: UINavigationController = UINavigationController(rootViewController: otherVC)
         
         // 设置
+        basicVC.tabBarItem.title = "基础"
+        basicVC.title = basicVC.tabBarItem.title
+        basicVC.tabBarItem.image = UIImage.init(named: "")
+        basicVC.tabBarItem.selectedImage = UIImage.init(named: "")
+        
+        advanceVC.tabBarItem.title = "进阶"
+        advanceVC.title = advanceVC.tabBarItem.title
+        advanceVC.tabBarItem.image = UIImage.init(named: "")
+        advanceVC.tabBarItem.selectedImage = UIImage.init(named: "")
+        
+        seniorVC.tabBarItem.title = "高级"
+        seniorVC.title = seniorVC.tabBarItem.title
+        seniorVC.tabBarItem.image = UIImage.init(named: "")
+        seniorVC.tabBarItem.selectedImage = UIImage.init(named: "")
+        
+        otherVC.tabBarItem.title = "其他"
+        otherVC.title = otherVC.tabBarItem.title
+        otherVC.tabBarItem.image = UIImage.init(named: "")
+        otherVC.tabBarItem.selectedImage = UIImage.init(named: "")
         
         self.setViewControllers([basicNavi, advanceNavi, seniorNavi, otherNavi], animated: true);
+        
+        // 设置徽标
+        basicVC.navigationController?.tabBarItem.badgeValue = "7"
+        
     }
 
     override func didReceiveMemoryWarning() {

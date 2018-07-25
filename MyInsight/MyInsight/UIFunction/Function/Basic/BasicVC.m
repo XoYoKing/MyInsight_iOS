@@ -12,6 +12,7 @@
 #import "LiftCycleVC.h" // 生命周期
 #import "RunTimeVC.h" // 运行时
 #import "RunLoopVC.h"
+#import "ScrollViewVC.h"
 #import "TableViewVC.h"
 #import "CollectionViewVC.h"
 #import "RadioButtonVC.h"
@@ -43,6 +44,7 @@ static const NSString *LiftCycleStr = @"VC生命周期";
 static const NSString *RunTimeStr = @"运行时RunTime";
 static const NSString *GestureStr = @"手势";
 static const NSString *XieYiStr = @"协议";
+static const NSString *ScrollViewStr = @"ScrollView";
 static const NSString *TableViewStr = @"TableView";
 static const NSString *CollectViewStr = @"CollectView";
 static const NSString *RadioButtonStr = @"单选按钮🔘 基本表单";
@@ -96,7 +98,7 @@ static const NSString *ColorPickerStr = @"颜色拾取器";
 // 处理数据
 - (void)handleTableViewData {
     // 数组
-    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, GestureStr, XieYiStr, PhysicalStr, CoreAnimationStr, CoreGraphicsStr, QuartzDrawStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, MultiThreadString, ViewLayoutStr, BlurViewStr, DrawingBoardStr, ColorPickerStr];
+    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopString, GestureStr, XieYiStr, PhysicalStr, CoreAnimationStr, CoreGraphicsStr, QuartzDrawStr, ScrollViewStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, MultiThreadString, ViewLayoutStr, BlurViewStr, DrawingBoardStr, ColorPickerStr];
 }
 
 #pragma mark - 创建TableView
@@ -201,6 +203,12 @@ static const NSString *ColorPickerStr = @"颜色拾取器";
         GestureVC *gestureVC = [[GestureVC alloc] init];
         gestureVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:gestureVC animated:YES];
+    }
+    if ([cellString isEqual:ScrollViewStr]) {
+        // 滑动View
+        ScrollViewVC *scrollViewVC = [[ScrollViewVC alloc] init];
+        scrollViewVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:scrollViewVC animated:YES];
     }
     if ([cellString isEqual:TableViewStr]) {
         // TableView

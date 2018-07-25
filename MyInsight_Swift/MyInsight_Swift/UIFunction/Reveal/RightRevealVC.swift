@@ -12,8 +12,9 @@ class RightRevealVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // 右侧面
+        self.view.backgroundColor = UIColor.purple
+        
     }
 
     override func didReceiveMemoryWarning() {
