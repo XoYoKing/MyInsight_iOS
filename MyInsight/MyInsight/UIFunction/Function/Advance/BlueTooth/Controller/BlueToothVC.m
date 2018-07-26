@@ -65,6 +65,30 @@
 #pragma mark 设置蓝牙
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
     NSLog(@"更新中心管理状态");
+    if (central.state == CBCentralManagerStatePoweredOff) {
+        NSLog(@"蓝牙关闭, 弹出打开蓝牙提示");
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"蓝牙关闭，打开蓝牙？" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            NSLog(@"确定打开蓝牙");
+            // 打开设置页面
+            if ([UIDevice currentDevice].systemVersion.doubleValue <= 10) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=Bluetooth"]];
+            } else {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"App-Prefs:root=General&path=Bluetooth"]];
+            }
+        }];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            NSLog(@"取消打开蓝牙");
+        }];
+        
+        [alertController addAction:confirmAction];
+        [alertController addAction:cancelAction];
+        
+        [self presentViewController:alertController animated:YES completion:NULL];
+        return;
+    }
+    
     // 扫描蓝牙设备
     [self.manager scanForPeripheralsWithServices:NULL options:NULL];
 }
