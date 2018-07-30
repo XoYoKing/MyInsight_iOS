@@ -161,6 +161,10 @@
 		A2A30BA82008C03E00C974B7 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30BA72008C03E00C974B7 /* libbz2.tbd */; };
 		A2A30BAA2008C04F00C974B7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A30BA92008C04F00C974B7 /* libz.tbd */; };
 		A2A516042057634400EC5AA6 /* RadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A516032057634400EC5AA6 /* RadioButton.m */; };
+		A2A77544210EEA2800A11BBC /* XinHuaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A77543210EEA2800A11BBC /* XinHuaVC.m */; };
+		A2A77547210F2C5400A11BBC /* WordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A77546210F2C5400A11BBC /* WordModel.m */; };
+		A2A7754A210F2D1500A11BBC /* XieHouYuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A77549210F2D1500A11BBC /* XieHouYuModel.m */; };
+		A2A7754D210F2D2900A11BBC /* IdiomModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A7754C210F2D2900A11BBC /* IdiomModel.m */; };
 		A2B43C3320575EE700FEAE58 /* RadioButtonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B43C3220575EE700FEAE58 /* RadioButtonVC.m */; };
 		A2B9927420623D0E002A73B1 /* SocketVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B9927320623D0E002A73B1 /* SocketVC.m */; };
 		A2B9927820623EA3002A73B1 /* OpenGLVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B9927720623EA3002A73B1 /* OpenGLVC.m */; };
@@ -562,6 +566,14 @@
 		A2A30BA92008C04F00C974B7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A2A516022057634400EC5AA6 /* RadioButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadioButton.h; sourceTree = "<group>"; };
 		A2A516032057634400EC5AA6 /* RadioButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadioButton.m; sourceTree = "<group>"; };
+		A2A77542210EEA2800A11BBC /* XinHuaVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XinHuaVC.h; sourceTree = "<group>"; };
+		A2A77543210EEA2800A11BBC /* XinHuaVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XinHuaVC.m; sourceTree = "<group>"; };
+		A2A77545210F2C5400A11BBC /* WordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordModel.h; sourceTree = "<group>"; };
+		A2A77546210F2C5400A11BBC /* WordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordModel.m; sourceTree = "<group>"; };
+		A2A77548210F2D1500A11BBC /* XieHouYuModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XieHouYuModel.h; sourceTree = "<group>"; };
+		A2A77549210F2D1500A11BBC /* XieHouYuModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XieHouYuModel.m; sourceTree = "<group>"; };
+		A2A7754B210F2D2900A11BBC /* IdiomModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdiomModel.h; sourceTree = "<group>"; };
+		A2A7754C210F2D2900A11BBC /* IdiomModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdiomModel.m; sourceTree = "<group>"; };
 		A2B43C3120575EE700FEAE58 /* RadioButtonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadioButtonVC.h; sourceTree = "<group>"; };
 		A2B43C3220575EE700FEAE58 /* RadioButtonVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadioButtonVC.m; sourceTree = "<group>"; };
 		A2B9927220623D0E002A73B1 /* SocketVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketVC.h; sourceTree = "<group>"; };
@@ -1589,6 +1601,7 @@
 				A26CE4872018A09A0012EC69 /* OtherVC.h */,
 				A26CE4882018A09A0012EC69 /* OtherVC.m */,
 				A2B9927D2068F09C002A73B1 /* Chat */,
+				A2A77541210EEA1600A11BBC /* XinHua */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -1748,6 +1761,21 @@
 				A2930B8E2106DA33006520FF /* ScrollViewVC.m */,
 			);
 			path = ScrollView;
+			sourceTree = "<group>";
+		};
+		A2A77541210EEA1600A11BBC /* XinHua */ = {
+			isa = PBXGroup;
+			children = (
+				A2A77542210EEA2800A11BBC /* XinHuaVC.h */,
+				A2A77543210EEA2800A11BBC /* XinHuaVC.m */,
+				A2A77545210F2C5400A11BBC /* WordModel.h */,
+				A2A77546210F2C5400A11BBC /* WordModel.m */,
+				A2A77548210F2D1500A11BBC /* XieHouYuModel.h */,
+				A2A77549210F2D1500A11BBC /* XieHouYuModel.m */,
+				A2A7754B210F2D2900A11BBC /* IdiomModel.h */,
+				A2A7754C210F2D2900A11BBC /* IdiomModel.m */,
+			);
+			path = XinHua;
 			sourceTree = "<group>";
 		};
 		A2B43C3020575ECD00FEAE58 /* RadioButton */ = {
@@ -2706,6 +2734,7 @@
 				A2CA808D202196EA00D81845 /* LiftCycleVC.m in Sources */,
 				A26CE4A4201971C50012EC69 /* GoogleMapVC.m in Sources */,
 				A2F00317209AFE1100F449EE /* ImageErasureVC.m in Sources */,
+				A2A77544210EEA2800A11BBC /* XinHuaVC.m in Sources */,
 				A2930B8F2106DA34006520FF /* ScrollViewVC.m in Sources */,
 				A2BDD430205F5767008AD133 /* BaseView.m in Sources */,
 				A2D884E920886896005116A6 /* BaseVC.m in Sources */,
@@ -2717,6 +2746,7 @@
 				A241BF5C20F73DF70099E8A5 /* QuartzDrawVC.m in Sources */,
 				A2930B8B21060BB1006520FF /* BLEModel.m in Sources */,
 				A241BF5420F739F70099E8A5 /* QuartzBlendingViewController.m in Sources */,
+				A2A7754D210F2D2900A11BBC /* IdiomModel.m in Sources */,
 				A2B43C3320575EE700FEAE58 /* RadioButtonVC.m in Sources */,
 				A241BF4C20F739F70099E8A5 /* QuartzPolygons.m in Sources */,
 				A2E9DA312091D3FB0061B1E7 /* RSAUtil.m in Sources */,
@@ -2747,6 +2777,7 @@
 				A2D54B4220F37F92009BFF4C /* MIQuiltLayout.m in Sources */,
 				A27E8725201AC49B003E712C /* CommonTool.m in Sources */,
 				A2D884EC20886B96005116A6 /* BaseNaviVC.m in Sources */,
+				A2A77547210F2C5400A11BBC /* WordModel.m in Sources */,
 				A2DDDC1C208ACDC000DC7A4A /* QRCodeVC.m in Sources */,
 				A2CDD24E208DB789006DF86E /* DaoYingVC.m in Sources */,
 				A2561DBF2094725100D4E2E5 /* DragTableVC.m in Sources */,
@@ -2754,6 +2785,7 @@
 				A2DDDC38208AD99000DC7A4A /* SQLiteHandle.m in Sources */,
 				A2B992802068F0B9002A73B1 /* ChatListVC.m in Sources */,
 				A2CDD230208DB0AA006DF86E /* CABasicAnimationVC.m in Sources */,
+				A2A7754A210F2D1500A11BBC /* XieHouYuModel.m in Sources */,
 				A2B992AB2068F45B002A73B1 /* ChatTipCell.m in Sources */,
 				A27E875C201AD2B2003E712C /* MusicVC.m in Sources */,
 				A2F00314209AFDFB00F449EE /* CorpImageVC.m in Sources */,

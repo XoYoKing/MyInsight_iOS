@@ -9,12 +9,24 @@
 import UIKit
 
 class WelcomeVC: UIViewController {
-
+    // 滑动view
+    var scrollView: UIScrollView = UIScrollView()
+    // 页面控制
+    var pageControl: UIPageControl = UIPageControl()
+    // 图片数组
+    var pageArray: NSArray = NSArray()
+    
     // 欢迎页面
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.view.backgroundColor = UIColor.white;
+        
+        self.pageArray = ["launch_0", "launch_1", "launch_2", "launch_3"]
+        
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

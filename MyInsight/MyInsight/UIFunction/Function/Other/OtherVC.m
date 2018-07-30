@@ -10,6 +10,7 @@
 #import <SWRevealViewController.h>
 #import <Masonry.h>
 #import "ChatListVC.h"
+#import "XinHuaVC.h"
 
 @interface OtherVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -21,6 +22,7 @@
 
 // 聊天UI
 static const NSString *ChatUIStr = @"聊天界面";
+static const NSString *XinHuaStr = @"中华新华字典";
 
 @implementation OtherVC
 
@@ -57,7 +59,7 @@ static const NSString *ChatUIStr = @"聊天界面";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[@"百思不得姐", @"糗事百科", @"妹纸", ChatUIStr];
+    self.dataArray = @[@"百思不得姐", @"糗事百科", @"妹纸", ChatUIStr, XinHuaStr];
 }
 
 #pragma mark - 创建TableView
@@ -108,6 +110,12 @@ static const NSString *ChatUIStr = @"聊天界面";
         ChatListVC *chatListVC = [[ChatListVC alloc] init];
         chatListVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:chatListVC animated:YES];
+    }
+    if ([cellString isEqual:XinHuaStr]) {
+        // 中华新华字典
+        XinHuaVC *xinHuaVC = [[XinHuaVC alloc] init];
+        xinHuaVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:xinHuaVC animated:YES];
     }
 }
 

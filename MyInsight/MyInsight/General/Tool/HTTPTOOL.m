@@ -50,7 +50,7 @@
     
     /* GET 请求 */
     [manager GET:url parameters:body progress:^(NSProgress * _Nonnull downloadProgress) {
-        NSLog(@"这是什么鬼!!");
+        NSLog(@"GET请求缓存一下");
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //[netWorkManager stopMonitoring];
         success(responseObject);

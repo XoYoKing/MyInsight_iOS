@@ -35,29 +35,28 @@ class TabBarVC: UITabBarController {
         // 设置
         basicVC.tabBarItem.title = "基础"
         basicVC.title = basicVC.tabBarItem.title
-        basicVC.tabBarItem.image = UIImage.init(named: "")
-        basicVC.tabBarItem.selectedImage = UIImage.init(named: "")
+        basicVC.tabBarItem.image = UIImage.init(named: "home_nor")
+        basicVC.tabBarItem.selectedImage = UIImage.init(named: "home_sel")
         
         advanceVC.tabBarItem.title = "进阶"
         advanceVC.title = advanceVC.tabBarItem.title
-        advanceVC.tabBarItem.image = UIImage.init(named: "")
-        advanceVC.tabBarItem.selectedImage = UIImage.init(named: "")
+        advanceVC.tabBarItem.image = UIImage.init(named: "mark_nor")
+        advanceVC.tabBarItem.selectedImage = UIImage.init(named: "mark_sel")
         
         seniorVC.tabBarItem.title = "高级"
         seniorVC.title = seniorVC.tabBarItem.title
-        seniorVC.tabBarItem.image = UIImage.init(named: "")
-        seniorVC.tabBarItem.selectedImage = UIImage.init(named: "")
+        seniorVC.tabBarItem.image = UIImage.init(named: "mine_nor")
+        seniorVC.tabBarItem.selectedImage = UIImage.init(named: "mine_sel")
         
         otherVC.tabBarItem.title = "其他"
         otherVC.title = otherVC.tabBarItem.title
-        otherVC.tabBarItem.image = UIImage.init(named: "")
-        otherVC.tabBarItem.selectedImage = UIImage.init(named: "")
+        otherVC.tabBarItem.image = UIImage.init(named: "setting_nor")
+        otherVC.tabBarItem.selectedImage = UIImage.init(named: "setting_sel")
         
         self.setViewControllers([basicNavi, advanceNavi, seniorNavi, otherNavi], animated: true);
         
         // 设置徽标
         basicVC.navigationController?.tabBarItem.badgeValue = "7"
-        
     }
 
     override func didReceiveMemoryWarning() {
