@@ -24,20 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     self.title = @"颜色拾取器";
-    
-    self.view.backgroundColor = [UIColor purpleColor];
-    
-    //
-    
-    
-    
-    
-    
-    
-    
     
     
 }
