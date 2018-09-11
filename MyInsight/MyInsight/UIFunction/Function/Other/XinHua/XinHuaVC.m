@@ -67,13 +67,7 @@
 
 #pragma mark - 处理数据
 - (void)handleData {
-    NSLog(@"网络请求了");
-    
-    //AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    //[manager.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil]];
-    
-    
-    
+    // 中华新华字典数据库 开源API：https://github.com/pwxcoo/chinese-xinhua
     [HTTPTOOL GETWithURL:@"https://www.pwxcoo.com/dictionary" body:@{@"type":@"word", @"word":@"龙"} httpHead:nil resoponseStyle:JSON success:^(id result) {
         NSLog(@"%@", result);
         self.outputTextView.text = [NSString stringWithFormat:@"%@", result];

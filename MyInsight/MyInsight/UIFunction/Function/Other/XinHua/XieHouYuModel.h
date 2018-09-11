@@ -10,5 +10,9 @@
 
 @interface XieHouYuModel : NSObject
 // 歇后语Model
+// 谜语
+@property (nonatomic, strong) NSString *riddle;
+// 回答
+@property (nonatomic, strong) NSString *answer;
 
 @end

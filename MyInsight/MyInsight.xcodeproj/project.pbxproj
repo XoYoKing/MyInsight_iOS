@@ -64,6 +64,7 @@
 		A22C4DD31FFC777A0079F7C2 /* yback.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBC1FFC77790079F7C2 /* yback.png */; };
 		A22C4DD41FFC777A0079F7C2 /* via.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBD1FFC77790079F7C2 /* via.png */; };
 		A22C4DD51FFC777A0079F7C2 /* route_start_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBE1FFC77790079F7C2 /* route_start_pin@2x.png */; };
+		A236ED532139493100BF9189 /* ZhiHuDailyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A236ED522139493100BF9189 /* ZhiHuDailyVC.m */; };
 		A239CE1A208595C30033646A /* MultiTypeFlowLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A239CE19208595C30033646A /* MultiTypeFlowLayoutVC.m */; };
 		A239CE202085D4410033646A /* MIGirdLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A239CE1F2085D4410033646A /* MIGirdLayout.m */; };
 		A239CE232085D8990033646A /* MICircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A239CE222085D8990033646A /* MICircleLayout.m */; };
@@ -388,6 +389,8 @@
 		A22C4DBC1FFC77790079F7C2 /* yback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yback.png; sourceTree = "<group>"; };
 		A22C4DBD1FFC77790079F7C2 /* via.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = via.png; sourceTree = "<group>"; };
 		A22C4DBE1FFC77790079F7C2 /* route_start_pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "route_start_pin@2x.png"; sourceTree = "<group>"; };
+		A236ED512139493100BF9189 /* ZhiHuDailyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhiHuDailyVC.h; sourceTree = "<group>"; };
+		A236ED522139493100BF9189 /* ZhiHuDailyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhiHuDailyVC.m; sourceTree = "<group>"; };
 		A239CE18208595C30033646A /* MultiTypeFlowLayoutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiTypeFlowLayoutVC.h; sourceTree = "<group>"; };
 		A239CE19208595C30033646A /* MultiTypeFlowLayoutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiTypeFlowLayoutVC.m; sourceTree = "<group>"; };
 		A239CE1E2085D4410033646A /* MIGirdLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIGirdLayout.h; sourceTree = "<group>"; };
@@ -1233,6 +1236,15 @@
 			path = image;
 			sourceTree = "<group>";
 		};
+		A236ED502139491D00BF9189 /* ZhiHuDaily */ = {
+			isa = PBXGroup;
+			children = (
+				A236ED512139493100BF9189 /* ZhiHuDailyVC.h */,
+				A236ED522139493100BF9189 /* ZhiHuDailyVC.m */,
+			);
+			path = ZhiHuDaily;
+			sourceTree = "<group>";
+		};
 		A239CE15208595580033646A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -1605,6 +1617,7 @@
 			children = (
 				A26CE4872018A09A0012EC69 /* OtherVC.h */,
 				A26CE4882018A09A0012EC69 /* OtherVC.m */,
+				A236ED502139491D00BF9189 /* ZhiHuDaily */,
 				A2B9927D2068F09C002A73B1 /* Chat */,
 				A2A77541210EEA1600A11BBC /* XinHua */,
 			);
@@ -2756,6 +2769,7 @@
 				A241BF4C20F739F70099E8A5 /* QuartzPolygons.m in Sources */,
 				A2E9DA312091D3FB0061B1E7 /* RSAUtil.m in Sources */,
 				A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */,
+				A236ED532139493100BF9189 /* ZhiHuDailyVC.m in Sources */,
 				A2F002F9209AFC5200F449EE /* BasicDrawingVC.m in Sources */,
 				A2D884F420897942005116A6 /* RunLoopVC.m in Sources */,
 				A2F0031A209AFE2700F449EE /* DrawingVC.m in Sources */,
