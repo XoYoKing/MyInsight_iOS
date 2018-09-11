@@ -10,4 +10,15 @@
 
 @implementation IdiomModel
 
++ (id)modelWithDictionary:(NSDictionary *)dic {
+    IdiomModel *model = [[IdiomModel alloc] init];
+    [model setValuesForKeysWithDictionary:dic];
+    return model;
+}
+
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
+    
+}
+
+
 @end

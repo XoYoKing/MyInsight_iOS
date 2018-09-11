@@ -11,4 +11,15 @@
 
 @implementation XieHouYuModel
 
++ (id)modelWithDictionary:(NSDictionary *)dic {
+    XieHouYuModel *model = [[XieHouYuModel alloc] init];
+    [model setValuesForKeysWithDictionary:dic];
+    return model;
+}
+
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
+    
+}
+
+
 @end

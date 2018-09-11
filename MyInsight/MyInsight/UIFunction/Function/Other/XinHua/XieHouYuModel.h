@@ -15,4 +15,6 @@
 // 回答
 @property (nonatomic, strong) NSString *answer;
 
++ (id)modelWithDictionary:(NSDictionary *)dic;
+
 @end

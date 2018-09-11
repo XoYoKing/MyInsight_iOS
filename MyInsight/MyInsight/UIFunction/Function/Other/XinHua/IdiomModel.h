@@ -24,4 +24,6 @@
 // 缩写形式
 @property (nonatomic, strong) NSString *abbreviation;
 
++ (id)modelWithDictionary:(NSDictionary *)dic;
+
 @end

@@ -11,4 +11,14 @@
 
 @implementation WordModel
 
++ (id)modelWithDictionary:(NSDictionary *)dic {
+    WordModel *model = [[WordModel alloc] init];
+    [model setValuesForKeysWithDictionary:dic];
+    return model;
+}
+
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
+    
+}
+
 @end

@@ -11,7 +11,7 @@
 
 // 枚举值
 typedef enum : NSUInteger {
-    XINHUAWORD,
+    XINHUAWORD = 1,
     XINHUAIDIOM,
     XINHUAXIEHOUYU,
 } XINHUAINPUTTYPE;
