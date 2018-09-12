@@ -41,8 +41,6 @@
     [self creatUIViews];
     // 代码约束布局
     [self masonryLayoutSubViews];
-    // 处理数据
-    //[self handleData];
 }
 
 #pragma mark - 创建子控件
@@ -50,15 +48,22 @@
     // 类型选择button
     self.typeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:self.typeButton];
-    self.typeButton.backgroundColor = [UIColor redColor];
+    //self.typeButton.backgroundColor = [UIColor redColor];
     [self.typeButton addTarget:self action:@selector(typeButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.typeButton setTitle:@"类型" forState:UIControlStateNormal];
+    self.typeButton.layer.masksToBounds = YES; // 设置圆角
+    self.typeButton.layer.cornerRadius = 15.0f;
+    self.typeButton.backgroundColor = [UIColor orangeColor];
+    [self.typeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
     // 发送button
     self.sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:self.sendButton];
     self.sendButton.backgroundColor = [UIColor orangeColor];
     [self.sendButton setTitle:@"发送" forState:UIControlStateNormal];
     [self.sendButton addTarget:self action:@selector(sendButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.sendButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
     // 输入的文本框
     self.inputTextField = [[UITextField alloc] init];
     [self.view addSubview:self.inputTextField];
@@ -67,8 +72,16 @@
     // 输出的文本框
     self.outputTextView = [[UITextView alloc] init];
     [self.view addSubview:self.outputTextView];
-    self.outputTextView.backgroundColor = [UIColor purpleColor];
+    self.outputTextView.backgroundColor = [UIColor lightGrayColor];
+    self.outputTextView.textColor = [UIColor blackColor];
     self.outputTextView.editable = NO;
+    self.outputTextView.showsVerticalScrollIndicator = NO;
+    self.outputTextView.showsHorizontalScrollIndicator = NO;
+    self.outputTextView.font = [UIFont systemFontOfSize:14.0f];
+    self.outputTextView.layer.masksToBounds = YES;
+    self.outputTextView.layer.cornerRadius = 15.0f;
+    self.outputTextView.layer.borderColor = [UIColor purpleColor].CGColor;
+    self.outputTextView.layer.borderWidth = 1.0f;
 }
 
 #pragma mark - 类型选择button的动作方法
@@ -189,43 +202,49 @@
 
 #pragma mark - 处理返回的数组数据
 - (void)handleResultArrayData:(id)result {
+    // 清空返回的信息
+    self.outputTextView.text = NULL;
     // 返回的内容数组格式
     NSArray *dataArray = [NSArray arrayWithArray:result];
     // 遍历数组
     for (id item in dataArray) {
-        
-        
         // 装进model
         if (self.typeValue == XINHUAWORD) {
             // 汉字
             WordModel *wordModel = [WordModel modelWithDictionary:item];
             
-            NSLog(@"%@", wordModel.word);
-            NSLog(@"%@", wordModel.pinyin);
-            NSLog(@"%@", wordModel.radicals);
-            NSLog(@"%@", wordModel.oldword);
+            NSLog(@"汉字：%@", wordModel.word);
+            NSLog(@"繁体字：%@", wordModel.oldword);
             NSLog(@"笔画数:%ld", (long)wordModel.strokes); //笔画数
-            NSLog(@"%@", wordModel.explanation);
+            NSLog(@"汉字拼音：%@", wordModel.pinyin);
+            NSLog(@"偏旁部首：%@", wordModel.radicals);
+            NSLog(@"解释释义：%@", wordModel.explanation);
+            
+            self.outputTextView.text = [NSString stringWithFormat:@"汉字：%@ \n繁体字：%@ \n笔画数：%ld \n汉字拼音：%@ \n偏旁部首：%@ \n汉字释义：%@", wordModel.word, wordModel.oldword, wordModel.strokes, wordModel.pinyin, wordModel.radicals, wordModel.explanation];
         }
         
         if (self.typeValue == XINHUAIDIOM) {
             // 成语
             IdiomModel *idiomModel = [IdiomModel modelWithDictionary:item];
             
-            NSLog(@"%@", idiomModel.derivation);
-            NSLog(@"%@", idiomModel.example);
-            NSLog(@"%@", idiomModel.explanation);
-            NSLog(@"%@", idiomModel.pinyin);
-            NSLog(@"%@", idiomModel.word);
-            NSLog(@"%@", idiomModel.abbreviation);
+            NSLog(@"出处：%@", idiomModel.derivation);
+            NSLog(@"示例：%@", idiomModel.example);
+            NSLog(@"解释：%@", idiomModel.explanation);
+            NSLog(@"拼音：%@", idiomModel.pinyin);
+            NSLog(@"词语：%@", idiomModel.word);
+            NSLog(@"缩写形式：%@", idiomModel.abbreviation);
+            
+            self.outputTextView.text= [NSString stringWithFormat:@"词语：%@ \n拼音：%@ \n缩写形式：%@ \n解释：%@ \n出处：%@ \n示例：%@", idiomModel.word, idiomModel.pinyin, idiomModel.abbreviation, idiomModel.explanation, idiomModel.derivation, idiomModel.example];
         }
         
         if (self.typeValue == XINHUAXIEHOUYU) {
             // 歇后语
             XieHouYuModel *xiehouyuModel = [XieHouYuModel modelWithDictionary:item];
             
-            NSLog(@"%@", xiehouyuModel.answer);
-            NSLog(@"%@", xiehouyuModel.riddle);
+            NSLog(@"歇后语：%@", xiehouyuModel.riddle);
+            NSLog(@"回答：%@", xiehouyuModel.answer);
+            
+            self.outputTextView.text = [NSString stringWithFormat:@"歇后语：%@ \n回答：%@", xiehouyuModel.riddle, xiehouyuModel.answer];
         }
     }
 }
@@ -235,7 +254,7 @@
     // 类型选择button
     [self.typeButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_top).offset(80.0f);
-        make.left.equalTo(self.view.mas_left).offset(40.0f);
+        make.left.equalTo(self.view.mas_left).offset(30.0f);
         make.width.offset(60.0f);
         make.height.offset(40.0f);
     }];
@@ -249,16 +268,16 @@
     // 发送button
     [self.sendButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_top).offset(80.0f);
-        make.right.equalTo(self.view.mas_right).offset(-40.0f);
+        make.right.equalTo(self.view.mas_right).offset(-30.0f);
         make.width.offset(60.0f);
         make.height.offset(40.0f);
     }];
     // 输出的文本框
     [self.outputTextView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.inputTextField.mas_bottom).offset(20.0f);
-        make.left.equalTo(self.view.mas_left).offset(40.0f);
-        make.right.equalTo(self.view.mas_right).offset(-40.0f);
-        make.bottom.equalTo(self.view.mas_bottom).offset(-40.0f);
+        make.top.equalTo(self.inputTextField.mas_bottom).offset(15.0f);
+        make.left.equalTo(self.view.mas_left).offset(30.0f);
+        make.right.equalTo(self.view.mas_right).offset(-30.0f);
+        make.bottom.equalTo(self.view.mas_bottom).offset(-10.0f);
     }];
 }
 
