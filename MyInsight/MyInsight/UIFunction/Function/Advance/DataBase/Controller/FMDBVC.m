@@ -9,6 +9,7 @@
 #import "FMDBVC.h"
 #import <Masonry.h>
 #import "UIColor+Category.h"
+#import <FMDatabase.h>
 
 @interface FMDBVC ()
 // 创建
@@ -25,6 +26,9 @@
 @implementation FMDBVC
 
 - (void)viewDidLoad {
+    /*
+     FMDB与多线程之间的操作
+     */
     [super viewDidLoad];
     
     self.title = @"FMDB";

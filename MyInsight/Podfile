@@ -16,6 +16,10 @@ target 'MyInsight' do
   pod 'AFNetworking'
   #pod 'ReactiveCocoa','~>2.1.8' # 响应式编程
   
+  # FMDB数据库
+  pod 'FMDB'
+  
+  
   pod 'MQTTClient'
   #pod 'MQTTClient/Websocket'
   #pod 'MQTTKit' # 这个框架很久没更新了

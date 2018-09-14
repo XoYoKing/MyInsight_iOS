@@ -55,7 +55,6 @@
     self.typeButton.layer.cornerRadius = 15.0f;
     self.typeButton.backgroundColor = [UIColor orangeColor];
     [self.typeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    
     // 发送button
     self.sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:self.sendButton];
@@ -63,7 +62,6 @@
     [self.sendButton setTitle:@"发送" forState:UIControlStateNormal];
     [self.sendButton addTarget:self action:@selector(sendButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.sendButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    
     // 输入的文本框
     self.inputTextField = [[UITextField alloc] init];
     [self.view addSubview:self.inputTextField];
