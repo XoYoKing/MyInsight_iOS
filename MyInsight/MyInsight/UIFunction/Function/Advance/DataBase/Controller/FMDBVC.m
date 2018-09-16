@@ -20,6 +20,12 @@
 @property (nonatomic, strong) UIButton *retrieveButton;
 // 删除
 @property (nonatomic, strong) UIButton *deleteButton;
+// FMDB对象
+@property (nonatomic, strong) FMDatabase *db;
+// 学生标记
+@property (nonatomic, assign) int mark_student;
+// 沙盒路径(数据库地址)
+@property (nonatomic, strong) NSString *docPath;
 
 @end
 
@@ -28,6 +34,9 @@
 - (void)viewDidLoad {
     /*
      FMDB与多线程之间的操作
+     FMDB是iOS平台的SQLite数据库框架
+     FMDB以OC的方式封装了SQLite的C语言API
+     
      */
     [super viewDidLoad];
     
@@ -62,10 +71,34 @@
     self.deleteButton.backgroundColor = [UIColor RandomColor];
     [self.deleteButton setTitle:@"删除" forState:UIControlStateNormal];
     [self.deleteButton addTarget:self action:@selector(deleteButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    // 1. 获取数据库文件的路径
+    self.docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSLog(@"%@", self.docPath);
+    
+    self.mark_student = 1;
+    // 设置数据库名称
+    NSString *fileName = [self.docPath stringByAppendingPathComponent:@"student.sqlite"];
+    
+    
+    
+    
 }
 
 - (void)creatButtonAction:(UIButton *)button {
     NSLog(@"创建数据库表");
+    // 1.获得数据库文件的路径
+    NSString *doc=[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *fileName=[doc stringByAppendingPathComponent:@"fmdb.sqlite"];
+    // 2.获得数据库
+    FMDatabase *db = [FMDatabase databaseWithPath:fileName];
+    // 3.打开数据库
+    if (db.open) {
+        // 创建表
+        
+    }
+    
+    
 }
 
 - (void)updateButtonAction:(UIButton *)button {

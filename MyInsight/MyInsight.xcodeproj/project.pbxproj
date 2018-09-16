@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5646242E551402D83E5DDEC4 /* libPods-MyInsightTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1048AA554877EFDC9A3C520A /* libPods-MyInsightTests.a */; };
 		6F9CFB2BFF1D334595CC4C63 /* libPods-MyInsightUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AABD5D3CA8DF36493A18039 /* libPods-MyInsightUITests.a */; };
+		A207108B214D09E8000D1710 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = A207108A214D09E8000D1710 /* Student.m */; };
 		A20D5D881FCFFB37000E191D /* MyInsightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D5D871FCFFB37000E191D /* MyInsightTests.m */; };
 		A20D5D931FCFFB37000E191D /* MyInsightUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D5D921FCFFB37000E191D /* MyInsightUITests.m */; };
 		A20D5DFB1FD14549000E191D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20D5DEE1FD14549000E191D /* LaunchScreen.storyboard */; };
@@ -315,6 +316,8 @@
 		54BB9D4AD19B12DC9B439E91 /* Pods-MyInsightUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyInsightUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyInsightUITests/Pods-MyInsightUITests.release.xcconfig"; sourceTree = "<group>"; };
 		75FE870FEEA81D6C950B4C15 /* Pods-MyInsight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyInsight.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyInsight/Pods-MyInsight.release.xcconfig"; sourceTree = "<group>"; };
 		86049EE3A04849AE05357E50 /* Pods-MyInsightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyInsightTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyInsightTests/Pods-MyInsightTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A2071089214D09E8000D1710 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		A207108A214D09E8000D1710 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		A20D5D6B1FCFFB37000E191D /* MyInsight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyInsight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20D5D831FCFFB37000E191D /* MyInsightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyInsightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20D5D871FCFFB37000E191D /* MyInsightTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyInsightTests.m; sourceTree = "<group>"; };
@@ -2143,6 +2146,8 @@
 				A2DDDC43208ADC5C00DC7A4A /* FMDBVC.m */,
 				A2DDDC3F208ADA4C00DC7A4A /* CoreDataVC.h */,
 				A2DDDC40208ADA4C00DC7A4A /* CoreDataVC.m */,
+				A2071089214D09E8000D1710 /* Student.h */,
+				A207108A214D09E8000D1710 /* Student.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2706,6 +2711,7 @@
 				A2DDDC44208ADC5C00DC7A4A /* FMDBVC.m in Sources */,
 				A2CDD23F208DB6CA006DF86E /* ZDTPVC.m in Sources */,
 				A2B992922068F3CA002A73B1 /* ChatTextCell.m in Sources */,
+				A207108B214D09E8000D1710 /* Student.m in Sources */,
 				A242C1B620902BFA00A6A9F7 /* RSA.m in Sources */,
 				A241BF5220F739F70099E8A5 /* QuartzLineViewController.m in Sources */,
 				A2CDD272208ED232006DF86E /* PSSpringView.m in Sources */,
