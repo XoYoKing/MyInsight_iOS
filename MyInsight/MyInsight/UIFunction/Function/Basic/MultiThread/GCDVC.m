@@ -12,8 +12,10 @@
 #import "Header.h"
 
 @interface GCDVC ()
-
+// 输入
 @property (nonatomic, strong) UITextView *inputTextView;
+// 定时器Label
+@property (nonatomic, strong) UILabel *timerLabel;
 
 @end
 
@@ -26,7 +28,9 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self display];
+    // 展示
+    //[self display];
+    [self timerLabelUI];
     
     // 并发队列 + 同步执行
     [self syncConCurrent];
@@ -43,6 +47,47 @@
     // 全局队列+ 异步执行
     [self asyncGloba];
 }
+
+#pragma mark - 多线程设计定时器
+- (void)timerLabelUI {
+    self.timerLabel = [[UILabel alloc] init];
+    [self.view addSubview:self.timerLabel];
+    [self.timerLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(1.0f);
+        make.centerY.equalTo(self.view.mas_centerY).multipliedBy(1.0f);
+    }];
+    // 多线程倒计时
+    __block int timeout = 5; //倒计时时间
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue);
+    dispatch_source_set_timer(_timer,dispatch_walltime(NULL, 0),1.0*NSEC_PER_SEC, 0); //每秒执行
+    dispatch_source_set_event_handler(_timer, ^{
+        if(timeout<=0){ //倒计时结束，关闭
+            dispatch_source_cancel(_timer);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //设置界面的按钮显示 根据自己需求设置
+                self.timerLabel.text = @"长生不老";
+                self.timerLabel.userInteractionEnabled = YES;
+            });
+        } else {
+            int seconds = timeout % 60;
+            NSString *strTime = [NSString stringWithFormat:@"%.2d", seconds];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //设置界面的按钮显示 根据自己需求设置
+                //NSLog(@"____%@",strTime);
+                [UIView beginAnimations:nil context:nil];
+                [UIView setAnimationDuration:1];
+                self.timerLabel.text = [NSString stringWithFormat:@"%@",strTime];
+                [UIView commitAnimations];
+                self.timerLabel.userInteractionEnabled = NO;
+            });
+            timeout--;
+        }
+    });
+    dispatch_resume(_timer);
+}
+
+
 
 #pragma mark - 并发队列 + 同步执行
 - (void)syncConCurrent {
@@ -322,6 +367,8 @@
     主队列 + 异步执行\n\
     ------------------------------------------------------------------------------------------\n\
     ";
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
