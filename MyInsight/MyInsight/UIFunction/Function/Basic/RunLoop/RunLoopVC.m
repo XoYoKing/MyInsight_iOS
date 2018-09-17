@@ -7,8 +7,15 @@
 //
 
 #import "RunLoopVC.h"
+#import "MyThread.h"
 
 @interface RunLoopVC ()
+// 定时器
+@property (nonatomic, strong) NSMutableDictionary<id, NSTimer *> *timers;
+// 线程
+@property (nonatomic, strong) NSMutableDictionary<id, NSThread *> *threads;
+// 观察者
+@property (nonatomic, assign) CFRunLoopObserverRef observer;
 
 @end
 
@@ -19,13 +26,33 @@
     
     self.title = @"RunLoop";
     
+    // 初始化
+    self.timers = [NSMutableDictionary dictionary];
+    self.threads = [NSMutableDictionary dictionary];
+    
+    [self aaaa];
+}
+
+- (void)aaaa {
+    MyThread * thread = [[MyThread alloc]initWithTarget:self
+                                               selector:@selector(startNewThread) object:nil];
+    [thread start];
+    
+}
+
+-(void)startNewThread{
+    NSLog(@"辅助线程执行的代码");
+    
 }
 
 
+- (void)bbbb {
+    
+}
 
-
-
-
+- (void)cccc {
+    
+}
 
 
 
