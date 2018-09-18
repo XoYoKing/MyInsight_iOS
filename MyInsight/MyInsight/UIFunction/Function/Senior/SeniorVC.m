@@ -12,6 +12,7 @@
 #import "OpenCVVC.h" // OpenCV
 #import "FFmpegVC.h" // FFmpegVC
 #import "AudioVC.h"
+#import "VideoVC.h"
 #import "SocketVC.h"
 #import "OpenGLVC.h"
 
@@ -27,11 +28,9 @@ static const NSString *OpenCVStr = @"OpenCV";
 static const NSString *FFmpegStr = @"FFmpeg";
 static const NSString *OpenGLStr = @"OpenGL";
 
-/*
- 设定功能：
- 音频学习
- */
-static const NSString *AudioStr = @"Audio";
+static const NSString *AudioStr = @"Audio音频";
+static const NSString *VideoStr = @"Video视频";
+
 
 @implementation SeniorVC
 
@@ -68,7 +67,7 @@ static const NSString *AudioStr = @"Audio";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[SocketStr, OpenCVStr, FFmpegStr, AudioStr, OpenGLStr];
+    self.dataArray = @[SocketStr, OpenCVStr, FFmpegStr, AudioStr, VideoStr, OpenGLStr];
 }
 
 #pragma mark - 创建TableView
@@ -139,9 +138,16 @@ static const NSString *AudioStr = @"Audio";
         [self.navigationController pushViewController:ffmpegVC animated:YES];
     }
     if ([cellString isEqual:AudioStr]) {
+        // 音频
         AudioVC *audioVC = [[AudioVC alloc] init];
         audioVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:audioVC animated:YES];
+    }
+    if ([cellString isEqual:VideoStr]) {
+        // 视频
+        VideoVC *videoVC = [[VideoVC alloc] init];
+        videoVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:videoVC animated:YES];
     }
 }
 

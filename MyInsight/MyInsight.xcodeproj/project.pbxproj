@@ -79,6 +79,7 @@
 		A23B3529208D7E2E001D71F2 /* CALayerBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A23B3528208D7E2E001D71F2 /* CALayerBaseVC.m */; };
 		A23B352C208D7EC8001D71F2 /* CALayerYSDHVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A23B352B208D7EC8001D71F2 /* CALayerYSDHVC.m */; };
 		A23B352F208D81C0001D71F2 /* CAClockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A23B352E208D81C0001D71F2 /* CAClockVC.m */; };
+		A23D956021513AAE00295718 /* VideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A23D955F21513AAE00295718 /* VideoVC.m */; };
 		A23E0290213923B600FD0767 /* UIColor-Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = A23E028F213923B600FD0767 /* UIColor-Expanded.m */; };
 		A2419E89AB28D022C3D01AE0 /* libPods-MyInsight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D110F761EC3A481896E9E0EB /* libPods-MyInsight.a */; };
 		A241BF4720F739F70099E8A5 /* QuartzRendering.m in Sources */ = {isa = PBXBuildFile; fileRef = A241BF2A20F739F70099E8A5 /* QuartzRendering.m */; };
@@ -421,6 +422,8 @@
 		A23B352B208D7EC8001D71F2 /* CALayerYSDHVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CALayerYSDHVC.m; sourceTree = "<group>"; };
 		A23B352D208D81C0001D71F2 /* CAClockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAClockVC.h; sourceTree = "<group>"; };
 		A23B352E208D81C0001D71F2 /* CAClockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAClockVC.m; sourceTree = "<group>"; };
+		A23D955E21513AAE00295718 /* VideoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoVC.h; sourceTree = "<group>"; };
+		A23D955F21513AAE00295718 /* VideoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoVC.m; sourceTree = "<group>"; };
 		A23E028E213923B600FD0767 /* UIColor-Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor-Expanded.h"; sourceTree = "<group>"; };
 		A23E028F213923B600FD0767 /* UIColor-Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor-Expanded.m"; sourceTree = "<group>"; };
 		A241BF2A20F739F70099E8A5 /* QuartzRendering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzRendering.m; sourceTree = "<group>"; };
@@ -1363,6 +1366,15 @@
 			path = CoreAnimation;
 			sourceTree = "<group>";
 		};
+		A23D955D21513A6E00295718 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				A23D955E21513AAE00295718 /* VideoVC.h */,
+				A23D955F21513AAE00295718 /* VideoVC.m */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
 		A241BF2820F738090099E8A5 /* QuartzDraw */ = {
 			isa = PBXGroup;
 			children = (
@@ -1611,6 +1623,7 @@
 				A26CE48B2018A0AD0012EC69 /* SeniorVC.m */,
 				A2B9927120623CF3002A73B1 /* Socket */,
 				A27E8754201AD2B2003E712C /* Audio */,
+				A23D955D21513A6E00295718 /* Video */,
 				A27E8738201ACD5D003E712C /* FFmpeg */,
 				A2B9927520623E8B002A73B1 /* OpenGL */,
 				A27E8735201ACD5D003E712C /* OpenCV */,
@@ -2799,6 +2812,7 @@
 				A2DDDC48208AE20B00DC7A4A /* ViewLayoutVC.m in Sources */,
 				A2CDD26F208ED220006DF86E /* PSAttachmentView.m in Sources */,
 				A241BF5320F739F70099E8A5 /* QuartzGradientViewController.m in Sources */,
+				A23D956021513AAE00295718 /* VideoVC.m in Sources */,
 				A2D8849B208719CC005116A6 /* HTTPTOOL.m in Sources */,
 				A241BF4B20F739F70099E8A5 /* QuartzCurves.m in Sources */,
 				A2B992B32069F4FB002A73B1 /* ChatContentModel.m in Sources */,
