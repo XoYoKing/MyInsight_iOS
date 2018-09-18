@@ -360,14 +360,16 @@
 				TargetAttributes = {
 					A241BF6920FC78840099E8A5 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1000;
 					};
 					A241BF7D20FC78860099E8A5 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = A241BF6920FC78840099E8A5;
 					};
 					A241BF8820FC78860099E8A5 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = A241BF6920FC78840099E8A5;
 					};
 				};
@@ -687,7 +689,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyInsight_Swift/SupportingFiles/MyInsight_Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -709,7 +711,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.magnumsong.MyInsight-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyInsight_Swift/SupportingFiles/MyInsight_Swift-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -729,7 +731,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.magnumsong.MyInsight-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyInsight_Swift.app/MyInsight_Swift";
 			};
@@ -750,7 +752,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.magnumsong.MyInsight-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyInsight_Swift.app/MyInsight_Swift";
 			};
@@ -770,7 +772,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.magnumsong.MyInsight-SwiftUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MyInsight_Swift;
 			};
@@ -790,7 +792,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.magnumsong.MyInsight-SwiftUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MyInsight_Swift;
 			};

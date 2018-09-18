@@ -22,8 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-    
-    
     // 判断是否为首次启动
     func isRightFirstLaunched() -> Void {
         /*

@@ -37,7 +37,6 @@ class MainRevealVC: SWRevealViewController {
         self.rearViewController = rearRevealVC
         // 右侧面
         self.rightViewController = rightRevealVC
-        
     }
 
     override func didReceiveMemoryWarning() {

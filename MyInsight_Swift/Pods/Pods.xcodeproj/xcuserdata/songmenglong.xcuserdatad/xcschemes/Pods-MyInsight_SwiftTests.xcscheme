@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0940"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C6583FE56671A24964B675ECF6FE6383"
+               BlueprintIdentifier = "43216C29D73D64D121AC3C87865C4C5E"
                BuildableName = "Pods_MyInsight_SwiftTests.framework"
                BlueprintName = "Pods-MyInsight_SwiftTests"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C6583FE56671A24964B675ECF6FE6383"
+            BlueprintIdentifier = "43216C29D73D64D121AC3C87865C4C5E"
             BuildableName = "Pods_MyInsight_SwiftTests.framework"
             BlueprintName = "Pods-MyInsight_SwiftTests"
             ReferencedContainer = "container:Pods.xcodeproj">

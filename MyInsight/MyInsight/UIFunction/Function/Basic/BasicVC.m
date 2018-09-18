@@ -82,7 +82,6 @@ static const NSString *ColorPickerStr = @"颜色拾取器";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     // 左右button
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"左边" style:UIBarButtonItemStylePlain target:[self revealViewController] action:@selector(revealToggle:)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"右边" style:UIBarButtonItemStylePlain target:[self revealViewController] action:@selector(rightRevealToggle:)];

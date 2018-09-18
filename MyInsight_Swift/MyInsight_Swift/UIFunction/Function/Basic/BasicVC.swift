@@ -10,12 +10,10 @@ import UIKit
 import SWRevealViewController
 
 class BasicVC: UIViewController {
-
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        // 抽屉
         if self.revealViewController() != nil {
             self.revealViewController().tapGestureRecognizer()
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
@@ -30,7 +28,6 @@ class BasicVC: UIViewController {
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,16 +35,12 @@ class BasicVC: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "左边", style: UIBarButtonItemStyle.plain, target: self, action: #selector(SWRevealViewController.revealToggle(_:)))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "右边", style: UIBarButtonItemStyle.plain, target: self, action: #selector(SWRevealViewController.rightRevealToggle(_:)))
     }
-
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 

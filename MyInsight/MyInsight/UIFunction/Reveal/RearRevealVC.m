@@ -37,7 +37,7 @@
 }
 
 - (void)creatView {
-   
+    // 初始化控件
     self.qrcodeLabel = [[UILabel alloc] init];
     [self.view addSubview:self.qrcodeLabel];
     self.qrcodeLabel.text = @"个人二维码";

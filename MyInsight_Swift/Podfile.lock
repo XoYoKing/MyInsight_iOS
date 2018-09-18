@@ -15,7 +15,7 @@ DEPENDENCIES:
   - SWRevealViewController
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - Realm
     - RealmSwift
@@ -31,4 +31,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: c35d83a3467c77df675021c3b203dba9147b6896
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3
