@@ -62,7 +62,7 @@
     [self.view.layer addSublayer:self.playerLayer];
     //self.playerLayer.frame = CGRectMake(0, 0, 200, 200);
     self.playerLayer.frame = self.view.frame;
-    // 
+    //
     self.player.volume = 1.0f;
     
     //让视频层适应当前界面
