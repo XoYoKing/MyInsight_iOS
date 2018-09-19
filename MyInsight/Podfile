@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+#platform :ios, '9.0'
 
 target 'MyInsight' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
@@ -61,8 +61,10 @@ target 'MyInsight' do
   
   # YYTextDemo
   
-  
-  
+  # WEEX跨平台
+  #source 'https://github.com/CocoaPods/Specs.git',
+  #pod 'WXDevtool', '0.15.3', :configurations => ['Debug'],
+  pod 'WXDevtool'
   
   target 'MyInsightTests' do
     inherit! :search_paths

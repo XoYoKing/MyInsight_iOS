@@ -43,7 +43,7 @@ const SceneVertex vertices []  =
     self.title = @"OpenGL";
     
     GLKView *view = (GLKView *)self.view;
-    NSAssert([view isKindOfClass:[GLKView class]], @"ViewController's view is not a GLKView");
+    //NSAssert([view isKindOfClass:[GLKView class]], @"ViewController's view is not a GLKView");
     
     // 创建一个OpenGL ES 2.0 context（上下文）并将其提供给view
     view.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];

@@ -22,11 +22,18 @@
 @property (nonatomic,assign)BOOL isReayToPlay;
 //显示事件的label
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+
 @property (nonatomic,retain)NSTimer *timer;
 
 @end
 
 @implementation VideoVC
+
+/*
+ 另外AVPlayer是一个可以播放任何格式的全功能影音播放器
+ 支持视频格式： WMV，AVI，MKV，RMVB，RM，XVID，MP4，3GP，MPG等。
+ 支持音频格式：MP3，WMA，RM，ACC，OGG，APE，FLAC，FLV等。
+ */
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -69,6 +76,30 @@
     self.playerLayer.videoGravity = AVLayerVideoGravityResizeAspect;
     //为item添加观察者，当视频已经准备好播放的时候再播放
     [self.playerItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+    
+    // 可播放可录音，更可以后台播放，还可以在其他程序播放的情况下暂停播放
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setCategory:AVAudioSessionCategoryPlayAndRecord
+             withOptions:AVAudioSessionCategoryOptionDefaultToSpeaker
+                   error:nil];
+}
+
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    // 移除通知
+    [self.playerLayer removeFromSuperlayer];
+    // 停掉playeritem的网络请求释放掉playerintm 就不会再出现这种问题了
+    [self.playerItem cancelPendingSeeks];
+    [self.playerItem.asset cancelLoading];
+    // 加这两行代码，将正在播放的 item 释放掉
+    [self.player.currentItem cancelPendingSeeks];
+    [self.player.currentItem.asset cancelLoading];
+    
+    //[self.player removeTimeObserver:<#(nonnull id)#>]
+    self.playerLayer = nil;
+    self.player = nil;
+    self.playerItem = nil;
 }
 
 #pragma mark - KVO方法回调

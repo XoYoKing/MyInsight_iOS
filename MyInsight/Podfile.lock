@@ -62,6 +62,10 @@ PODS:
     - UMengUShare/Social/ReducedSina
   - UMengUShare/UI (6.4.8.2):
     - UMengUShare/Core
+  - WeexSDK (0.18.0.3)
+  - WXDevtool (0.16.3):
+    - SocketRocket
+    - WeexSDK
 
 DEPENDENCIES:
   - AFNetworking
@@ -85,6 +89,7 @@ DEPENDENCIES:
   - UMengUShare/Social/ReducedWeChat
   - UMengUShare/Social/Sina
   - UMengUShare/UI
+  - WXDevtool
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -106,6 +111,8 @@ SPEC REPOS:
     - SWRevealViewController
     - UMengAnalytics
     - UMengUShare
+    - WeexSDK
+    - WXDevtool
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -126,7 +133,9 @@ SPEC CHECKSUMS:
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
   UMengAnalytics: ef8d45f94c0e5771dc364cf6a5731d9d3b101da2
   UMengUShare: 370d180101e13ee0227ae657ab119ba97243d2b3
+  WeexSDK: 173541f2d0042664168b305952398145c0c6039c
+  WXDevtool: c028138b4e3a8856758acfea2328f708d3adbedd
 
-PODFILE CHECKSUM: d461a3e86a3098f046fcf57c2633dd0b35af588a
+PODFILE CHECKSUM: 6c17ee1c963ec32e9b4c43c45519246fde2ba322
 
 COCOAPODS: 1.5.3
