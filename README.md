@@ -43,6 +43,9 @@ OpenCV、ffmpeg、音频、Socket
 常用第三方demo链接汇总：
 [蓝牙]()
 
+[弹幕渲染库](https://github.com/unash/BarrageRenderer)   
+
+
 
 
 

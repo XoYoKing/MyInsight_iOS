@@ -270,6 +270,8 @@
 		A2E4E7212004BFDF00EC3D63 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E71A2004BFDE00EC3D63 /* libavdevice.a */; };
 		A2E4E7222004BFDF00EC3D63 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E71B2004BFDE00EC3D63 /* libswresample.a */; };
 		A2E4E7232004BFDF00EC3D63 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E4E71C2004BFDE00EC3D63 /* libswscale.a */; };
+		A2E642F72152463A009CADE9 /* CrossVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E642F62152463A009CADE9 /* CrossVC.m */; };
+		A2E643102152812D009CADE9 /* GaodeMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E6430F2152812D009CADE9 /* GaodeMapVC.m */; };
 		A2E9DA1F2091BD0E0061B1E7 /* NSString+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA1E2091BD0E0061B1E7 /* NSString+AES.m */; };
 		A2E9DA222091BD210061B1E7 /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA212091BD210061B1E7 /* NSData+AES.m */; };
 		A2E9DA2B2091C50A0061B1E7 /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E9DA2A2091C50A0061B1E7 /* NSData+AES256.m */; };
@@ -872,6 +874,10 @@
 		A2E4E71A2004BFDE00EC3D63 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavdevice.a; sourceTree = "<group>"; };
 		A2E4E71B2004BFDE00EC3D63 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswresample.a; sourceTree = "<group>"; };
 		A2E4E71C2004BFDE00EC3D63 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswscale.a; sourceTree = "<group>"; };
+		A2E642F52152463A009CADE9 /* CrossVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrossVC.h; sourceTree = "<group>"; };
+		A2E642F62152463A009CADE9 /* CrossVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrossVC.m; sourceTree = "<group>"; };
+		A2E6430E2152812D009CADE9 /* GaodeMapVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GaodeMapVC.h; sourceTree = "<group>"; };
+		A2E6430F2152812D009CADE9 /* GaodeMapVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GaodeMapVC.m; sourceTree = "<group>"; };
 		A2E9DA1D2091BD0E0061B1E7 /* NSString+AES.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+AES.h"; sourceTree = "<group>"; };
 		A2E9DA1E2091BD0E0061B1E7 /* NSString+AES.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+AES.m"; sourceTree = "<group>"; };
 		A2E9DA202091BD210061B1E7 /* NSData+AES.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+AES.h"; sourceTree = "<group>"; };
@@ -1638,6 +1644,7 @@
 				A26CE4882018A09A0012EC69 /* OtherVC.m */,
 				A236ED502139491D00BF9189 /* ZhiHuDaily */,
 				A2B9927D2068F09C002A73B1 /* Chat */,
+				A2E642F421524600009CADE9 /* CrossPlatform */,
 				A2A77541210EEA1600A11BBC /* XinHua */,
 			);
 			path = Other;
@@ -1649,6 +1656,7 @@
 				A26CE4AA201971DC0012EC69 /* MapsVC.h */,
 				A26CE4AB201971DC0012EC69 /* MapsVC.m */,
 				A26CE491201971C50012EC69 /* BaiduMap */,
+				A2E6430A215280C0009CADE9 /* GaodeMap */,
 				A26CE494201971C50012EC69 /* GoogleMap */,
 				A26CE497201971C50012EC69 /* YahooMap */,
 				A26CE4A0201971C50012EC69 /* SystemMap */,
@@ -2422,6 +2430,24 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		A2E642F421524600009CADE9 /* CrossPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				A2E642F52152463A009CADE9 /* CrossVC.h */,
+				A2E642F62152463A009CADE9 /* CrossVC.m */,
+			);
+			path = CrossPlatform;
+			sourceTree = "<group>";
+		};
+		A2E6430A215280C0009CADE9 /* GaodeMap */ = {
+			isa = PBXGroup;
+			children = (
+				A2E6430E2152812D009CADE9 /* GaodeMapVC.h */,
+				A2E6430F2152812D009CADE9 /* GaodeMapVC.m */,
+			);
+			path = GaodeMap;
+			sourceTree = "<group>";
+		};
 		A2E9DA1C2091BCE20061B1E7 /* AES */ = {
 			isa = PBXGroup;
 			children = (
@@ -2808,6 +2834,7 @@
 				A2E9DA312091D3FB0061B1E7 /* RSAUtil.m in Sources */,
 				A26CE4AC201971DC0012EC69 /* MapsVC.m in Sources */,
 				A236ED532139493100BF9189 /* ZhiHuDailyVC.m in Sources */,
+				A2E642F72152463A009CADE9 /* CrossVC.m in Sources */,
 				A2F002F9209AFC5200F449EE /* BasicDrawingVC.m in Sources */,
 				A2D884F420897942005116A6 /* RunLoopVC.m in Sources */,
 				A2F0031A209AFE2700F449EE /* DrawingVC.m in Sources */,
@@ -2893,6 +2920,7 @@
 				A26CE4A9201971C50012EC69 /* SystemMapVC.m in Sources */,
 				A2DDDC52208AEC9000DC7A4A /* VFLLayoutVC.m in Sources */,
 				A2DDDC5A208B074600DC7A4A /* FoldTableVC.m in Sources */,
+				A2E643102152812D009CADE9 /* GaodeMapVC.m in Sources */,
 				A241BF4F20F739F70099E8A5 /* QuartzDashViewController.m in Sources */,
 				A28ED52F1FD156B600A74551 /* RearRevealVC.m in Sources */,
 				A2CDD251208DB878006DF86E /* LZDHDTVC.m in Sources */,

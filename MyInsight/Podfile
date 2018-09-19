@@ -63,8 +63,8 @@ target 'MyInsight' do
   
   # WEEX跨平台
   #source 'https://github.com/CocoaPods/Specs.git',
-  #pod 'WXDevtool', '0.15.3', :configurations => ['Debug'],
-  pod 'WXDevtool'
+  pod 'WXDevtool', :configurations => ['Debug']
+  #pod 'WXDevtool'
   
   target 'MyInsightTests' do
     inherit! :search_paths

@@ -12,6 +12,7 @@
 #import "ChatListVC.h"
 #import "XinHuaVC.h"
 #import "ZhiHuDailyVC.h"
+#import "CrossVC.h"
 
 @interface OtherVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -21,10 +22,10 @@
 
 @end
 
-// 聊天UI
 static const NSString *ChatUIStr = @"聊天界面";
 static const NSString *XinHuaStr = @"中华新华字典";
 static const NSString *ZhiHuDailyStr = @"知乎日报";
+static const NSString *CrossStr = @"跨平台";
 
 @implementation OtherVC
 
@@ -61,7 +62,7 @@ static const NSString *ZhiHuDailyStr = @"知乎日报";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[@"百思不得姐", @"糗事百科", @"妹纸", ZhiHuDailyStr, ChatUIStr, XinHuaStr];
+    self.dataArray = @[@"百思不得姐", @"糗事百科", @"妹纸", ZhiHuDailyStr, ChatUIStr, XinHuaStr, CrossStr];
 }
 
 #pragma mark - 创建TableView
@@ -124,6 +125,12 @@ static const NSString *ZhiHuDailyStr = @"知乎日报";
         ZhiHuDailyVC *zhiHuDailyVC = [[ZhiHuDailyVC alloc] init];
         zhiHuDailyVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:zhiHuDailyVC animated:YES];
+    }
+    if ([cellString isEqual:CrossStr]) {
+        // 知乎日报
+        CrossVC *crossVC = [[CrossVC alloc] init];
+        crossVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:crossVC animated:YES];
     }
 }
 

@@ -12,6 +12,7 @@
 #import "SystemMapVC.h"
 #import "GoogleMapVC.h"
 #import "YahooMapVC.h"
+#import "GaodeMapVC.h"
 
 @interface MapsVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -25,7 +26,8 @@
 static const NSString *BaiduMapStr = @"百度地图";
 static const NSString *SystemMapStr = @"系统(高德)地图";
 static const NSString *GoogleMapStr = @"谷歌地图";
-static const NSString *YahooMapsStr = @"YahooMap";
+static const NSString *YahooMapStr = @"雅虎地图YahooMap";
+static const NSString *GaodeMapStr = @"高德地图";
 
 @implementation MapsVC
 
@@ -44,7 +46,7 @@ static const NSString *YahooMapsStr = @"YahooMap";
 // 处理数据
 - (void)handleTableViewData {
     // 初始化数组
-    self.dataArray = [NSMutableArray arrayWithArray:@[BaiduMapStr, SystemMapStr, GoogleMapStr, YahooMapsStr]];
+    self.dataArray = [NSMutableArray arrayWithArray:@[BaiduMapStr, SystemMapStr, GoogleMapStr, YahooMapStr, GaodeMapStr]];
 }
 
 #pragma mark - 创建TableView
@@ -93,28 +95,34 @@ static const NSString *YahooMapsStr = @"YahooMap";
     NSString *cellString = [self.dataArray objectAtIndex:indexPath.row];
     
     if ([cellString isEqual:BaiduMapStr]) {
-        // BaiDu
+        // 百度地图 BaiDu
         BaiduMapVC *baiduMapVC = [[BaiduMapVC alloc] init];
         baiduMapVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:baiduMapVC animated:YES];
     }
     if ([cellString isEqual:SystemMapStr]) {
-        //
+        // 系统地图 国内为高德地图 国外为谷歌地图
         SystemMapVC *systemMapVC = [[SystemMapVC alloc] init];
         systemMapVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:systemMapVC animated:YES];
     }
     if ([cellString isEqual:GoogleMapStr]) {
-        // Google
+        // 谷歌地图Google
         GoogleMapVC *googleMapVC = [[GoogleMapVC alloc] init];
         googleMapVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:googleMapVC animated:YES];
     }
-    if ([cellString isEqual:YahooMapsStr]) {
-        // Yahoo
+    if ([cellString isEqual:YahooMapStr]) {
+        // 雅虎地图Yahoo
         YahooMapVC *yahooMapVC = [[YahooMapVC alloc] init];
         yahooMapVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:yahooMapVC animated:YES];
+    }
+    if ([cellString isEqual:GaodeMapStr]) {
+        // 高德地图
+        GaodeMapVC *gaodeMapVC = [[GaodeMapVC alloc] init];
+        gaodeMapVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:gaodeMapVC animated:YES];
     }
 }
 

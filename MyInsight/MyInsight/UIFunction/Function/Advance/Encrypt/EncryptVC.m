@@ -38,6 +38,7 @@
 // 加密的枚举值
 /*
  MD5加密 DES加密 AES加密 RSA加密 RSA&JavaServer加密
+ 椭圆曲线数字签名算法(ECDSA)
  */
 typedef NS_ENUM(NSUInteger, EncryptType) {
     EncryptTypeMD5 = 0,
