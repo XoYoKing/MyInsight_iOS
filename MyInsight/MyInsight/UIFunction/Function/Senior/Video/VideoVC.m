@@ -35,6 +35,13 @@
  支持音频格式：MP3，WMA，RM，ACC，OGG，APE，FLAC，FLV等。
  */
 
+/*
+ AVPlayer：控制播放器的播放，暂停，播放速度
+ AVURLAsset : AVAsset 的一个子类，使用 URL 进行实例化，实例化对象包换 URL 对应视频资源的所有信息。
+ AVPlayerItem：管理资源对象，提供播放数据源
+ AVPlayerLayer：负责显示视频，如果没有添加该类，只有声音没有画面
+*/
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

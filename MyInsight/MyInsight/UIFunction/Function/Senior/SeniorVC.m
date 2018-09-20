@@ -27,6 +27,7 @@ static const NSString *SocketStr = @"Socket通讯";
 static const NSString *OpenCVStr = @"OpenCV";
 static const NSString *FFmpegStr = @"FFmpeg";
 static const NSString *OpenGLStr = @"OpenGL";
+// ijkplayer
 
 static const NSString *AudioStr = @"Audio音频";
 static const NSString *VideoStr = @"Video视频";

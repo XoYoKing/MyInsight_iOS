@@ -34,6 +34,9 @@ target 'MyInsight' do
   # 图片加载
   pod 'SDWebImage'
   
+  # WEEX跨平台
+  #source 'https://github.com/CocoaPods/Specs.git',
+  pod 'WXDevtool', :configurations => ['Debug']
   
   pod 'MQTTClient'
   #pod 'MQTTClient/Websocket'
@@ -61,10 +64,7 @@ target 'MyInsight' do
   
   # YYTextDemo
   
-  # WEEX跨平台
-  #source 'https://github.com/CocoaPods/Specs.git',
-  pod 'WXDevtool', :configurations => ['Debug']
-  #pod 'WXDevtool'
+  
   
   target 'MyInsightTests' do
     inherit! :search_paths

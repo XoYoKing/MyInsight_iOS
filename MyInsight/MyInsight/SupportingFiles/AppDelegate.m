@@ -71,13 +71,18 @@
     // 使用 UNUserNotificationCenter 来管理通知
     if (@available(iOS 10.0, *)) {
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-        //监听回调事件
+        // 监听回调事件 设置代理
         center.delegate = self;
         //iOS 10 使用以下方法注册，才能得到授权
         [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound + UNAuthorizationOptionBadge)
                               completionHandler:^(BOOL granted, NSError * _Nullable error) {
                                   // Enable or disable features based on authorization.
                               }];
+        
+        // 获取当前的通知设置，UNNotificationSettings 是只读对象，readOnly，只能通过以下方法获取
+        [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+            NSLog(@"iOS通知的设定：%@", settings);
+        }];
         
         NSLog(@"iOS10及以上注册通知");
     } else {
