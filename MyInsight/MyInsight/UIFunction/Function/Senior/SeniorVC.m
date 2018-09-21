@@ -15,6 +15,7 @@
 #import "VideoVC.h"
 #import "SocketVC.h"
 #import "OpenGLVC.h"
+#import "CoreFoundationVC.h"
 
 @interface SeniorVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -31,7 +32,7 @@ static const NSString *OpenGLStr = @"OpenGL";
 
 static const NSString *AudioStr = @"Audio音频";
 static const NSString *VideoStr = @"Video视频";
-
+static const NSString *CoreFoundationStr = @"Core Foundation";
 
 @implementation SeniorVC
 
@@ -68,7 +69,7 @@ static const NSString *VideoStr = @"Video视频";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[SocketStr, OpenCVStr, FFmpegStr, AudioStr, VideoStr, OpenGLStr];
+    self.dataArray = @[CoreFoundationStr, SocketStr, OpenCVStr, FFmpegStr, AudioStr, VideoStr, OpenGLStr];
 }
 
 #pragma mark - 创建TableView
@@ -113,7 +114,12 @@ static const NSString *VideoStr = @"Video视频";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 获取字符串
     NSString *cellString = [self.dataArray objectAtIndex:indexPath.row];
-    
+    if ([cellString isEqual:CoreFoundationStr]) {
+        // Core Foundation
+        CoreFoundationVC *coreFoundationVC = [[CoreFoundationVC alloc] init];
+        coreFoundationVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:coreFoundationVC animated:YES];
+    }
     if ([cellString isEqual:SocketStr]) {
         // Socket通讯
         SocketVC *socketVC = [[SocketVC alloc] init];

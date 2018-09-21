@@ -9,31 +9,38 @@
 import UIKit
 import SWRevealViewController
 
+fileprivate let name = "name"
+
 class BasicVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        // 抽屉
+        // 设置抽屉手势
         if self.revealViewController() != nil {
             self.revealViewController().tapGestureRecognizer()
+           // 添加手势动作
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+        // 设置抽屉手势
         if self.revealViewController() != nil {
-            self.view.removeGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            // 移除掉手势动作
+        self.view.removeGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 左右button 设置抽屉
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "左边", style: UIBarButtonItem.Style.plain, target: self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:))) //revealToggle(_:)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "右边", style: UIBarButtonItem.Style.plain, target: self.revealViewController(), action: #selector(SWRevealViewController.rightRevealToggle(_:)))
         
-        // 左右button
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "左边", style: UIBarButtonItemStyle.plain, target: self, action: #selector(SWRevealViewController.revealToggle(_:)))
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "右边", style: UIBarButtonItemStyle.plain, target: self, action: #selector(SWRevealViewController.rightRevealToggle(_:)))
+        // 可以写swift的一些特性
+        
+        
     }
     
     override func didReceiveMemoryWarning() {

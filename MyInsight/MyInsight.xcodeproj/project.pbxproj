@@ -122,6 +122,7 @@
 		A268BEFD2106E04300CADD8A /* scrollimage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A268BEF92106E04300CADD8A /* scrollimage1.jpg */; };
 		A268BEFE2106E04300CADD8A /* scrollimage3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A268BEFA2106E04300CADD8A /* scrollimage3.jpg */; };
 		A268BEFF2106E04300CADD8A /* scrollimage2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A268BEFB2106E04300CADD8A /* scrollimage2.jpg */; };
+		A26B693B2155227200AFDAAD /* CoreFoundationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26B693A2155227200AFDAAD /* CoreFoundationVC.m */; };
 		A26CE4862018A0880012EC69 /* BasicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE4852018A0880012EC69 /* BasicVC.m */; };
 		A26CE4892018A09A0012EC69 /* OtherVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE4882018A09A0012EC69 /* OtherVC.m */; };
 		A26CE48C2018A0AD0012EC69 /* SeniorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A26CE48B2018A0AD0012EC69 /* SeniorVC.m */; };
@@ -502,6 +503,8 @@
 		A268BEF92106E04300CADD8A /* scrollimage1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scrollimage1.jpg; sourceTree = "<group>"; };
 		A268BEFA2106E04300CADD8A /* scrollimage3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scrollimage3.jpg; sourceTree = "<group>"; };
 		A268BEFB2106E04300CADD8A /* scrollimage2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scrollimage2.jpg; sourceTree = "<group>"; };
+		A26B69392155227200AFDAAD /* CoreFoundationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreFoundationVC.h; sourceTree = "<group>"; };
+		A26B693A2155227200AFDAAD /* CoreFoundationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreFoundationVC.m; sourceTree = "<group>"; };
 		A26CE4842018A0880012EC69 /* BasicVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicVC.h; sourceTree = "<group>"; };
 		A26CE4852018A0880012EC69 /* BasicVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicVC.m; sourceTree = "<group>"; };
 		A26CE4872018A09A0012EC69 /* OtherVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherVC.h; sourceTree = "<group>"; };
@@ -1575,6 +1578,15 @@
 			path = scrollimage;
 			sourceTree = "<group>";
 		};
+		A26B69382155226500AFDAAD /* CoreFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				A26B69392155227200AFDAAD /* CoreFoundationVC.h */,
+				A26B693A2155227200AFDAAD /* CoreFoundationVC.m */,
+			);
+			path = CoreFoundation;
+			sourceTree = "<group>";
+		};
 		A26CE4802018A0730012EC69 /* Advance */ = {
 			isa = PBXGroup;
 			children = (
@@ -1632,6 +1644,7 @@
 				A23D955D21513A6E00295718 /* Video */,
 				A27E8738201ACD5D003E712C /* FFmpeg */,
 				A2B9927520623E8B002A73B1 /* OpenGL */,
+				A26B69382155226500AFDAAD /* CoreFoundation */,
 				A27E8735201ACD5D003E712C /* OpenCV */,
 			);
 			path = Senior;
@@ -2777,6 +2790,7 @@
 				A23B3523208D72B5001D71F2 /* CoreAnimationVC.m in Sources */,
 				A2E9DA222091BD210061B1E7 /* NSData+AES.m in Sources */,
 				A2DDDC55208AECCD00DC7A4A /* AutoLayoutVC.m in Sources */,
+				A26B693B2155227200AFDAAD /* CoreFoundationVC.m in Sources */,
 				A239CE1A208595C30033646A /* MultiTypeFlowLayoutVC.m in Sources */,
 				A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */,
 				A2561DC3209953B200D4E2E5 /* PushMsgVC.m in Sources */,

@@ -18,6 +18,7 @@
 
 @end
 
+// 设置字符串常量
 static const NSString *NSThreadStr = @"NSThread线程";
 static const NSString *GCDStr = @"GCD多线程";
 static const NSString *NSOperationStr = @"NSOperation多线程";

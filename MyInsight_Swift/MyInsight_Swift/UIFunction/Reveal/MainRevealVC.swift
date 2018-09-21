@@ -21,7 +21,6 @@ class MainRevealVC: SWRevealViewController {
         let rearRevealVC: RearRevealVC = RearRevealVC()
         // 右边侧滑页面
         let rightRevealVC: RightRevealVC = RightRevealVC()
-        
         // 左右抽屉显示宽度
         self.rearViewRevealWidth = UIScreen.main.bounds.size.width*0.70
         self.rightViewRevealWidth = UIScreen.main.bounds.size.width*0.70
