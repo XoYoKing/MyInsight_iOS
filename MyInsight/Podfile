@@ -11,6 +11,12 @@ target 'MyInsight' do
   pod 'SWRevealViewController' # 侧边抽屉
   pod 'BaiduMapKit' #百度地图SDK
   pod 'GoogleMaps' #, '= 2.5.0' # Goole地图
+  # 高德地图
+  pod 'AMap2DMap'  #3D地图 SDK（2D地图：AMap2DMap NO-IDFA版本：AMap3DMap-NO-IDFA，AMap2DMap-NO-IDFA） 3D地图与2D地图不能同时使用
+  pod 'AMapSearch' # 地图SDK搜索功能
+  pod 'AMapLocation' # 定位SDK
+  #pod 'AMapNavi'  #导航 SDK 已包含3D地图，无需单独引入3D地图
+  
   pod 'BabyBluetooth' # 蓝牙
   # 网络请求
   pod 'AFNetworking'

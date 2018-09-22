@@ -33,6 +33,7 @@ static const NSString *OpenGLStr = @"OpenGL";
 static const NSString *AudioStr = @"Audio音频";
 static const NSString *VideoStr = @"Video视频";
 static const NSString *CoreFoundationStr = @"Core Foundation";
+static const NSString *BarrageRendererStr = @"弹幕渲染器";
 
 @implementation SeniorVC
 
@@ -69,7 +70,7 @@ static const NSString *CoreFoundationStr = @"Core Foundation";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[CoreFoundationStr, SocketStr, OpenCVStr, FFmpegStr, AudioStr, VideoStr, OpenGLStr];
+    self.dataArray = @[CoreFoundationStr, SocketStr, OpenCVStr, FFmpegStr, AudioStr, VideoStr, OpenGLStr, BarrageRendererStr];
 }
 
 #pragma mark - 创建TableView
@@ -155,6 +156,10 @@ static const NSString *CoreFoundationStr = @"Core Foundation";
         VideoVC *videoVC = [[VideoVC alloc] init];
         videoVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:videoVC animated:YES];
+    }
+    if ([cellString isEqual:BarrageRendererStr]) {
+        // 弹幕渲染器
+        
     }
 }
 

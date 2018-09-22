@@ -14,7 +14,6 @@ class MainRevealVC: SWRevealViewController {
     //  iOS之UI--使用SWRevealViewController 实现侧边菜单功能详解实例 https://www.cnblogs.com/LiLihongqiang/p/5905547.html
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // 主页面
         let tabbarVC: TabBarVC = TabBarVC()
         // 左边侧滑页面

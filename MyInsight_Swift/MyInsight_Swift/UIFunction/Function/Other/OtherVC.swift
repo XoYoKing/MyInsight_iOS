@@ -10,7 +10,10 @@ import UIKit
 import SWRevealViewController
 
 class OtherVC: UIViewController {
-
+    // 声明变量
+    let tableview = UITableView()
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // 抽屉
