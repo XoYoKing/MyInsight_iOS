@@ -53,7 +53,7 @@ class TabBarVC: UITabBarController {
         otherVC.tabBarItem.image = UIImage.init(named: "setting_nor")
         otherVC.tabBarItem.selectedImage = UIImage.init(named: "setting_sel")
         
-        self.setViewControllers([basicNavi, advanceNavi, seniorNavi, otherNavi], animated: true);
+        self.setViewControllers([basicNavi, advanceNavi, seniorNavi, otherNavi], animated: false);
         
         // 设置徽标
         basicVC.navigationController?.tabBarItem.badgeValue = "7"

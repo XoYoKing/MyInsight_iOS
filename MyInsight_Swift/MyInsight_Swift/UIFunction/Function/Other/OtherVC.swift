@@ -8,6 +8,7 @@
 
 import UIKit
 import SWRevealViewController
+import SnapKit
 
 class OtherVC: UIViewController {
     // 声明变量
@@ -38,6 +39,26 @@ class OtherVC: UIViewController {
         // 左右button
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "左边", style: UIBarButtonItem.Style.plain, target: self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:))) //revealToggle(_:)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "右边", style: UIBarButtonItem.Style.plain, target: self.revealViewController(), action: #selector(SWRevealViewController.rightRevealToggle(_:)))
+        
+        self.title = "其他"
+        // 设置背景颜色
+        self.view.backgroundColor = UIColor.white
+        // 初始化tableview
+        
+        self.view.addSubview(self.tableview)
+        self.tableview.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view.snp.top).offset(0.0)
+            make.left.equalTo(self.view.snp.left).offset(0.0)
+            make.right.equalTo(self.view.snp.right).offset(0.0)
+            make.bottom.equalTo(self.view.snp.bottom).offset(0.0)
+        }
+        self.tableview.delegate = self
+        self.tableview.dataSource = self
+        // 注册cell
+        self.tableview.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
+        // 清空多余cell
+        self.tableview.tableFooterView = UIView(frame: CGRect.zero)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,3 +78,32 @@ class OtherVC: UIViewController {
     */
 
 }
+
+//扩展
+extension OtherVC: UITableViewDelegate, UITableViewDataSource {
+    // 实现代理协议
+    
+    // setction个数
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    // cell行数目
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    // 生成cell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
+        cell.backgroundColor = UIColor.orange
+        
+        return cell
+    }
+    // 选中cell
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        debugPrint(indexPath.row)
+    }
+    
+    
+    
+}
+
