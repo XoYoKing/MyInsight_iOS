@@ -13,6 +13,7 @@
 #import "XinHuaVC.h"
 #import "ZhiHuDailyVC.h"
 #import "CrossVC.h"
+#import "ReferToVC.h"
 
 @interface OtherVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -26,6 +27,7 @@ static const NSString *ChatUIStr = @"聊天界面";
 static const NSString *XinHuaStr = @"中华新华字典";
 static const NSString *ZhiHuDailyStr = @"知乎日报";
 static const NSString *CrossStr = @"跨平台";
+static const NSString *ReferToStr = @"借鉴参考的仓库";
 
 @implementation OtherVC
 
@@ -62,7 +64,7 @@ static const NSString *CrossStr = @"跨平台";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[@"百思不得姐", @"糗事百科", @"妹纸", ZhiHuDailyStr, ChatUIStr, XinHuaStr, CrossStr];
+    self.dataArray = @[ReferToStr, @"百思不得姐", @"糗事百科", @"妹纸", ZhiHuDailyStr, ChatUIStr, XinHuaStr, CrossStr];
 }
 
 #pragma mark - 创建TableView
@@ -109,6 +111,12 @@ static const NSString *CrossStr = @"跨平台";
     // 获取cell的字符串
     NSString *cellString = [self.dataArray objectAtIndex:indexPath.row];
     
+    if ([cellString isEqual:ReferToStr]) {
+        // 借鉴参考的仓库链接
+        ReferToVC *referToVC = [[ReferToVC alloc] init];
+        referToVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:referToVC animated:YES];
+    }
     if ([cellString isEqual:ChatUIStr]) {
         ChatListVC *chatListVC = [[ChatListVC alloc] init];
         chatListVC.hidesBottomBarWhenPushed = YES;
