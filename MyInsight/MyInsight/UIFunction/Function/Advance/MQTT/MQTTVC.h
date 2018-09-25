@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "BaseVC.h"
 
-@interface MQTTVC : BaseVC
+//#import <MQTTClient/MQTTClient.h>
+#import <MQTTClient/MQTTSessionManager.h>
+
+@interface MQTTVC : BaseVC<MQTTSessionManagerDelegate>
 
 @end
