@@ -40,7 +40,7 @@
     // 初始化控件
     self.qrcodeLabel = [[UILabel alloc] init];
     [self.view addSubview:self.qrcodeLabel];
-    self.qrcodeLabel.text = @"个人二维码";
+    self.qrcodeLabel.text = @"WeChat";
     
     self.qrcodeImageView = [[UIImageView alloc] init];
     [self.view addSubview:self.qrcodeImageView];
@@ -48,7 +48,7 @@
     
     self.payLabel = [[UILabel alloc] init];
     [self.view addSubview:self.payLabel];
-    self.payLabel.text = @"打赏二维码";
+    self.payLabel.text = @"Pay";
     
     self.payImageView = [[UIImageView alloc] init];
     [self.view addSubview:self.payImageView];

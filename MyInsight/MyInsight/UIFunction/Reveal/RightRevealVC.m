@@ -35,43 +35,41 @@
 }
 
 - (void)creatContentView {;
-    
+    // 标题
     self.titleLabel = [[UILabel alloc] init];
     [self.view addSubview:self.titleLabel];
-    self.titleLabel.text = @"关于我";
-    
+    self.titleLabel.text = @"About Me";
+    // 关于
     self.aboutMeLabel = [[UILabel alloc] init];
     [self.view addSubview:self.aboutMeLabel];
     self.aboutMeLabel.text = @"尘世迷茫程序员，汇集百家来开源。感谢大神写得好，俺们只是搬搬砖。";
     self.aboutMeLabel.numberOfLines = 0;
-    
+    // 邮箱
     self.emailLabel = [[UILabel alloc] init];
     [self.view addSubview:self.emailLabel];
     self.emailLabel.numberOfLines = 0;
-    self.emailLabel.text = @"有事请联系：983174628@qq.com";
-    
-    // 鸣谢
-    
-    // 借鉴的仓库
+    self.emailLabel.text = @"Email:983174628@qq.com";
 }
 
+#pragma mark - 代码约束布局
 - (void)masonryLayout {
+    // 标题
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(1.0f);
         make.bottom.equalTo(self.aboutMeLabel.mas_top).offset(-20.0f);
-        make.width.offset(200.0f);
+        make.left.equalTo(self.view.mas_left).offset(self.view.bounds.size.width*0.20f);
+        make.right.equalTo(self.view.mas_right).offset(-10.0f);
     }];
-    
+    // 关于
     [self.aboutMeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(1.0f);
         make.centerY.equalTo(self.view.mas_centerY).multipliedBy(0.7f);
-        make.width.offset(200.0f);
+        make.left.equalTo(self.view.mas_left).offset(self.view.bounds.size.width*0.20f);
+        make.right.equalTo(self.view.mas_right).offset(-10.0f);
     }];
-    
+    // 邮箱
     [self.emailLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(1.0f);
         make.top.equalTo(self.aboutMeLabel.mas_bottom).offset(10.0f);
-        make.width.offset(200.0f);
+        make.left.equalTo(self.view.mas_left).offset(self.view.bounds.size.width*0.20f);
+        make.right.equalTo(self.view.mas_right).offset(-10.0f);
     }];
 }
 

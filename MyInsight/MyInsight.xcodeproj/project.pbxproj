@@ -208,6 +208,7 @@
 		A2C84E8220AA7A5A000FD685 /* testPic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2C84E8120AA7A5A000FD685 /* testPic.jpg */; };
 		A2C84E8C20AD3589000FD685 /* BlueToothDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C84E8B20AD3589000FD685 /* BlueToothDataVC.m */; };
 		A2C9B21521592E4E008F7942 /* ReferToVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B21421592E4E008F7942 /* ReferToVC.m */; };
+		A2C9B21821594284008F7942 /* ReferToWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B21721594284008F7942 /* ReferToWebVC.m */; };
 		A2CA807E2021568D00D81845 /* TouchIDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA807D2021568D00D81845 /* TouchIDVC.m */; };
 		A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA8086202196E900D81845 /* RunTimeVC.m */; };
 		A2CA808D202196EA00D81845 /* LiftCycleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CA8089202196E900D81845 /* LiftCycleVC.m */; };
@@ -658,6 +659,8 @@
 		A2C84E8B20AD3589000FD685 /* BlueToothDataVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueToothDataVC.m; sourceTree = "<group>"; };
 		A2C9B21321592E4E008F7942 /* ReferToVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReferToVC.h; sourceTree = "<group>"; };
 		A2C9B21421592E4E008F7942 /* ReferToVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReferToVC.m; sourceTree = "<group>"; };
+		A2C9B21621594284008F7942 /* ReferToWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReferToWebVC.h; sourceTree = "<group>"; };
+		A2C9B21721594284008F7942 /* ReferToWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReferToWebVC.m; sourceTree = "<group>"; };
 		A2CA807C2021568D00D81845 /* TouchIDVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchIDVC.h; sourceTree = "<group>"; };
 		A2CA807D2021568D00D81845 /* TouchIDVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIDVC.m; sourceTree = "<group>"; };
 		A2CA8086202196E900D81845 /* RunTimeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunTimeVC.m; sourceTree = "<group>"; };
@@ -2011,6 +2014,8 @@
 			children = (
 				A2C9B21321592E4E008F7942 /* ReferToVC.h */,
 				A2C9B21421592E4E008F7942 /* ReferToVC.m */,
+				A2C9B21621594284008F7942 /* ReferToWebVC.h */,
+				A2C9B21721594284008F7942 /* ReferToWebVC.m */,
 			);
 			path = ReferTo;
 			sourceTree = "<group>";
@@ -2830,6 +2835,7 @@
 				A2561DCA209AE49100D4E2E5 /* JiugonggeUnlockVC.m in Sources */,
 				A2BDD436205F5BAB008AD133 /* BaseTableVC.m in Sources */,
 				A2F0030B209AFDBF00F449EE /* ImageContextStackVC.m in Sources */,
+				A2C9B21821594284008F7942 /* ReferToWebVC.m in Sources */,
 				A2E9DA1F2091BD0E0061B1E7 /* NSString+AES.m in Sources */,
 				A20D5E231FD14E37000E191D /* RightRevealVC.m in Sources */,
 				A26CE4A8201971C50012EC69 /* CalloutMapAnnotation.m in Sources */,
