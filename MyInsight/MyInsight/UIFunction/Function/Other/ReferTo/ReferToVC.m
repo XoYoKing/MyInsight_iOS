@@ -38,7 +38,6 @@
     // 清空多余cell
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     // 注册cell
-    //[self.tableView registerNib:[UINib nibWithNibName:@"MineCell" bundle:nil] forCellReuseIdentifier:@"MineCell"];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ReferToVC"];
     
     // 处理数据
@@ -95,6 +94,8 @@
                          @"url":@"https://github.com/xaincai/dailyfresh"},
                        @{@"name":@"天天生鲜源代码2",
                          @"url":@"https://github.com/shihao1010/tiantianshengxian"},
+                       @{@"name":@"BezierCurveLineTest",
+                         @"url":@"https://github.com/xiayuanquan/BezierCurveLineTest"},
                        // 博客 文章 技术
                        @{@"name":@"iOS网络—UIWebView、WKWebView使用详解",
                          @"url":@"https://www.jianshu.com/p/556c988e2707"},
@@ -108,9 +109,36 @@
                          @"url":@"http://www.cocoachina.com/special/20170623/19628.html"},
                        @{@"name":@"CoreFoundation框架详细解析（二） —— 设计概念",
                          @"url":@"https://www.jianshu.com/p/2361f1221576"},
+                       @{@"name":@"iOS10 推送通知 UserNotifications",
+                         @"url":@"https://www.jianshu.com/p/bb89d636f989"},
+                       @{@"name":@"Objective-C之run loop详解",
+                         @"url":@"https://blog.csdn.net/wzzvictory/article/details/9237973"},
+                       @{@"name":@"SDWebImage4.0源码探究（一）面试题",
+                         @"url":@"https://www.jianshu.com/p/b8517dc833c7"},
+                       @{@"name":@"RunLoop运行循环机制",
+                         @"url":@"https://www.cnblogs.com/itlover2013/p/5650729.html"},
+                       @{@"name":@"深入理解RunLoop",
+                         @"url":@"https://blog.ibireme.com/2015/05/18/runloop/"},
+                       @{@"name":@"IOS多媒体",
+                         @"url":@"https://www.cnblogs.com/changjiang/p/5396069.html"},
+                       @{@"name":@"iOS音频播放 (六)：简单的音频播放器实现",
+                         @"url":@"http://msching.github.io/blog/2014/08/09/audio-in-ios-6/"},
+                       
                        // Python
                        @{@"name":@"django+nginx+uwsgi部署（及遇到的错误）",
                          @"url":@"http://www.shihao.online/detail/19/"},
+                       @{@"name":@"uWSGI+django+nginx的工作原理流程与部署历程",
+                         @"url":@"https://blog.csdn.net/c465869935/article/details/53242126"},
+                       @{@"name":@"python django+uwsgi+nginx 搭建步骤（血一般的教训）",
+                         @"url":@"https://blog.csdn.net/imphp/article/details/38232133"},
+                       @{@"name":@"Django 之 （5）Django 部署（Nginx）",
+                         @"url":@"https://blog.csdn.net/u011138533/article/details/72581997"},
+                       @{@"name":@"Django + nginx + uswgi 的部署总结",
+                         @"url":@"https://blog.csdn.net/fengzq15/article/details/78633827"},
+                       @{@"name":@"Linux下 Nginx-uWSGI-Django 搭建",
+                         @"url":@"https://www.cnblogs.com/gameoverit/p/7449300.html"},
+                       @{@"name":@"解决nginx+uwsgi部署Django的所有问题",
+                         @"url":@"https://blog.csdn.net/baidu_35085676/article/details/77160040"},
                        // 小程序
                        @{@"name":@"使用AUI框架开发微信小程序",
                          @"url":@"https://blog.csdn.net/u013176571/article/details/71171925"},
@@ -134,7 +162,10 @@
                          @"url":@"http://mrpeak.cn/ios/2016/01/07/push"},
                        @{@"name":@"知乎上的一个怎么面试iOS工程师的问题",
                          @"url":@"https://blog.csdn.net/hanangellove/article/details/45033453"},
-                       
+                       @{@"name":@"iOS面试题总结（2018）",
+                         @"url":@"https://www.jianshu.com/p/795b317efa3a"},
+                       @{@"name":@"iOS面试被问到的问题",
+                         @"url":@"https://www.jianshu.com/p/8726df3b2276"},
                        ];
 }
 

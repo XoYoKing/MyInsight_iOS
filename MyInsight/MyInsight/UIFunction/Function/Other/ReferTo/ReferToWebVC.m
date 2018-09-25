@@ -34,6 +34,14 @@
 
 #pragma mark - 使用WKWebView
 - (void)useWKWebView {
+    /*
+     iOS WKWebView使用总结
+     https://www.jianshu.com/p/20cfd4f8c4ff
+     iOS WKWebView使用总结
+     https://www.jianshu.com/p/20cfd4f8c4ff
+     */
+    
+    
     // 1.创建webview
     WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
     // 2.创建请求
@@ -42,11 +50,6 @@
     [webView loadRequest:request];
     // 最后将webView添加到界面
     [self.view addSubview:webView];
-}
-
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    NSLog(@"已经加载");
 }
 
 /*

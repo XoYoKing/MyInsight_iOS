@@ -9,8 +9,10 @@ target 'MyInsight' do
   pod 'Masonry' # 约束布局
   pod 'MBProgressHUD' # 菊花加载
   pod 'SWRevealViewController' # 侧边抽屉
-  pod 'BaiduMapKit' #百度地图SDK
-  pod 'GoogleMaps' #, '= 2.5.0' # Goole地图
+  #百度地图SDK
+  pod 'BaiduMapKit'
+  # Goole地图 谷歌地图
+  pod 'GoogleMaps' #, '= 2.5.0'
   # 高德地图
   pod 'AMap2DMap'  #3D地图 SDK（2D地图：AMap2DMap NO-IDFA版本：AMap3DMap-NO-IDFA，AMap2DMap-NO-IDFA） 3D地图与2D地图不能同时使用
   pod 'AMapSearch' # 地图SDK搜索功能
