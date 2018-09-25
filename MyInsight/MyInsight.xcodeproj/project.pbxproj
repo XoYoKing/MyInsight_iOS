@@ -118,6 +118,7 @@
 		A2561DCD209AE4F200D4E2E5 /* DrawBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DCC209AE4F200D4E2E5 /* DrawBaseVC.m */; };
 		A25748282023059D000F7632 /* CollectionViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A25748272023059D000F7632 /* CollectionViewVC.m */; };
 		A257482B202305B9000F7632 /* TableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A257482A202305B9000F7632 /* TableViewVC.m */; };
+		A25F8BA6215A6A45005D6527 /* MIMovieObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A25F8BA5215A6A45005D6527 /* MIMovieObject.m */; };
 		A268BEFC2106E04300CADD8A /* scrollimage4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A268BEF82106E04300CADD8A /* scrollimage4.jpg */; };
 		A268BEFD2106E04300CADD8A /* scrollimage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A268BEF92106E04300CADD8A /* scrollimage1.jpg */; };
 		A268BEFE2106E04300CADD8A /* scrollimage3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A268BEFA2106E04300CADD8A /* scrollimage3.jpg */; };
@@ -501,6 +502,8 @@
 		A25748272023059D000F7632 /* CollectionViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewVC.m; sourceTree = "<group>"; };
 		A2574829202305B9000F7632 /* TableViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewVC.h; sourceTree = "<group>"; };
 		A257482A202305B9000F7632 /* TableViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewVC.m; sourceTree = "<group>"; };
+		A25F8BA4215A6A45005D6527 /* MIMovieObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIMovieObject.h; sourceTree = "<group>"; };
+		A25F8BA5215A6A45005D6527 /* MIMovieObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIMovieObject.m; sourceTree = "<group>"; };
 		A268BEF82106E04300CADD8A /* scrollimage4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scrollimage4.jpg; sourceTree = "<group>"; };
 		A268BEF92106E04300CADD8A /* scrollimage1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scrollimage1.jpg; sourceTree = "<group>"; };
 		A268BEFA2106E04300CADD8A /* scrollimage3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scrollimage3.jpg; sourceTree = "<group>"; };
@@ -1785,6 +1788,8 @@
 			children = (
 				A27E8739201ACD5D003E712C /* FFmpegVC.h */,
 				A27E873A201ACD5D003E712C /* FFmpegVC.m */,
+				A25F8BA4215A6A45005D6527 /* MIMovieObject.h */,
+				A25F8BA5215A6A45005D6527 /* MIMovieObject.m */,
 			);
 			path = FFmpeg;
 			sourceTree = "<group>";
@@ -2798,6 +2803,7 @@
 				A288F9842089DB4100DD4CA0 /* VerticalCollectionVC.m in Sources */,
 				A2A516042057634400EC5AA6 /* RadioButton.m in Sources */,
 				A2D292E320F25DF400E50DC7 /* PaymentVC.m in Sources */,
+				A25F8BA6215A6A45005D6527 /* MIMovieObject.m in Sources */,
 				A2D54B4520F3815D009BFF4C /* CollectionQuiltLayoutVC.m in Sources */,
 				A2DDDC44208ADC5C00DC7A4A /* FMDBVC.m in Sources */,
 				A2CDD23F208DB6CA006DF86E /* ZDTPVC.m in Sources */,
@@ -3150,6 +3156,35 @@
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyInsight/General/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/AMap2DMap\"",
+					"\"${PODS_ROOT}/Headers/Public/AMapFoundation\"",
+					"\"${PODS_ROOT}/Headers/Public/AMapLocation\"",
+					"\"${PODS_ROOT}/Headers/Public/AMapSearch\"",
+					"\"${PODS_ROOT}/Headers/Public/BabyBluetooth\"",
+					"\"${PODS_ROOT}/Headers/Public/BaiduMapKit\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaAsyncSocket\"",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"\"${PODS_ROOT}/Headers/Public/GTMBase64\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleMaps\"",
+					"\"${PODS_ROOT}/Headers/Public/HMQRCodeScanner\"",
+					"\"${PODS_ROOT}/Headers/Public/IQKeyboardManager\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/MQTTClient\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/Reachability\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/SWRevealViewController\"",
+					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+					"\"${PODS_ROOT}/Headers/Public/UMengAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/UMengUShare\"",
+					"\"${PODS_ROOT}/Headers/Public/WXDevtool\"",
+					"\"${PODS_ROOT}/Headers/Public/WeexSDK\"",
+					"$(SRCROOT)/MyInsight/Vendors/FFmpeg-iOS/include",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/MyInsight/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -3185,6 +3220,35 @@
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyInsight/General/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/AMap2DMap\"",
+					"\"${PODS_ROOT}/Headers/Public/AMapFoundation\"",
+					"\"${PODS_ROOT}/Headers/Public/AMapLocation\"",
+					"\"${PODS_ROOT}/Headers/Public/AMapSearch\"",
+					"\"${PODS_ROOT}/Headers/Public/BabyBluetooth\"",
+					"\"${PODS_ROOT}/Headers/Public/BaiduMapKit\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaAsyncSocket\"",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"\"${PODS_ROOT}/Headers/Public/GTMBase64\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleMaps\"",
+					"\"${PODS_ROOT}/Headers/Public/HMQRCodeScanner\"",
+					"\"${PODS_ROOT}/Headers/Public/IQKeyboardManager\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/MQTTClient\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/Reachability\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/SWRevealViewController\"",
+					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+					"\"${PODS_ROOT}/Headers/Public/UMengAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/UMengUShare\"",
+					"\"${PODS_ROOT}/Headers/Public/WXDevtool\"",
+					"\"${PODS_ROOT}/Headers/Public/WeexSDK\"",
+					"$(SRCROOT)/MyInsight/Vendors/FFmpeg-iOS/include",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/MyInsight/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

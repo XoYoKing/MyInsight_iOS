@@ -7,12 +7,28 @@
 //
 
 #import "FFmpegVC.h"
+#import "MIMovieObject.h"
+#import <Masonry.h>
+#import "UIColor+Category.h"
+
+#define LERP(A,B,C) ((A)*(1.0-C)+(B)*C)
 
 @interface FFmpegVC ()
+
+@property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) UILabel *fpsLabel;
+@property (nonatomic, strong) UIButton *playBtn;
+@property (nonatomic, strong) UIButton *timerBtn;
+@property (nonatomic, strong) UILabel *timerLabel;
+@property (nonatomic, strong) MIMovieObject *video;
+@property (nonatomic, assign) float lastFrameTime;
 
 @end
 
 @implementation FFmpegVC
+
+//@synthesize imageView, fpsLabel, playBtn, video;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,12 +44,135 @@
      简单来说，FFmpeg是一个免费的多媒体框架,可以运行音频和视频多种格式的录影、转换、流功能,能让用户访问几乎所有视频格式,包括mkv、flv、mov,VLC Media Player、Google Chrome浏览器都已经支持。
      ***/
     
+    // 初始化Views
+    [self creatUIViews];
+    // 设置video
+    [self setupFFmpeg];
+}
+
+#pragma mark - 创建UI视图
+- (void)creatUIViews {
+    self.imageView = [[UIImageView alloc] init];
+    [self.view addSubview:self.imageView];
+    self.imageView.backgroundColor = [UIColor RandomColor];
     
+    self.playBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:self.playBtn];
+    self.playBtn.backgroundColor = [UIColor RandomColor];
+    [self.playBtn setTitle:@"Play" forState:UIControlStateNormal];
+    [self.playBtn addTarget:self action:@selector(playBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+
+    self.timerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:self.timerBtn];
+    self.timerBtn.backgroundColor = [UIColor RandomColor];
+    [self.timerBtn setTitle:@"Time" forState:UIControlStateNormal];
+    [self.timerBtn addTarget:self action:@selector(timerBtnAction:) forControlEvents:UIControlEventTouchUpInside];
     
+    self.fpsLabel = [[UILabel alloc] init];
+    self.fpsLabel.backgroundColor = [UIColor RandomColor];
+    [self.view addSubview:self.fpsLabel];
+    self.fpsLabel.text = @"FPS 178";
     
+    self.timerLabel = [[UILabel alloc] init];
+    self.timerLabel.backgroundColor = [UIColor RandomColor];
+    [self.view addSubview:self.timerLabel];
+    self.timerLabel.text = @"00:00:46";
     
+    // 设置代码约束
+    [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).offset(64.0f);
+        make.left.equalTo(self.view.mas_left).offset(0.0f);
+        make.right.equalTo(self.view.mas_right).offset(0.0f);
+        make.height.equalTo(self.view.mas_width).multipliedBy(0.75f);
+    }];
+    [self.playBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.imageView.mas_bottom).offset(10.0f);
+        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(0.5f);
+    }];
+    [self.timerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.playBtn.mas_bottom).offset(5.0f);
+        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(0.5f);
+    }];
+    [self.fpsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.imageView.mas_bottom).offset(10.0f);
+        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(1.5f);
+    }];
+    [self.timerLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.fpsLabel.mas_bottom).offset(5.0f);
+        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(1.5f);
+    }];
+}
+
+- (void)setupFFmpeg {
+    // 播放网络视频
+    self.video = [[MIMovieObject alloc] initWithVideo:@"http://static.tripbe.com/videofiles/20121214/9533522808.f4v.mp4"];
     
+    // 播放本地视频
+    //self.video = [[XYQMovieObject alloc] initWithVideo:[NSString bundlePath:@"Dalshabet.mp4"]];
+    //self.video = [[XYQMoiveObject alloc] initWithVideo:@"/Users/king/Desktop/Stellar.mp4"];
+    //self.video = [[XYQMoiveObject alloc] initWithVideo:@"/Users/king/Downloads/Worth it - Fifth Harmony ft.Kid Ink - May J Lee Choreography.mp4"];
+    //self.video = [[XYQMoiveObject alloc] initWithVideo:@"/Users/king/Downloads/4K.mp4"];
     
+    int tns, thh, tmm, tss;
+    tns = self.video.duration;
+    thh = tns / 3600;
+    tmm = (tns % 3600) / 60;
+    tss = tns % 60;
+}
+
+#pragma mark - 设置button的动作方法
+- (void)playBtnAction:(UIButton *)button {
+    NSLog(@"播放button的动作");
+    [self.playBtn setEnabled:NO];
+    
+    // seek to 0.0 seconds
+    [self.video seekTime:0.0];
+    
+    [NSTimer scheduledTimerWithTimeInterval: 1 / self.video.fps
+                                     target:self
+                                   selector:@selector(displayNextFrame:)
+                                   userInfo:nil
+                                    repeats:YES];
+}
+
+- (void)timerBtnAction:(UIButton *)button {
+    NSLog(@"定时器button的动作");
+    if (self.playBtn.enabled) {
+        [self.video redialPaly];
+        [self playBtnAction:self.playBtn];
+    }
+}
+
+-(void)displayNextFrame:(NSTimer *)timer {
+    NSTimeInterval startTime = [NSDate timeIntervalSinceReferenceDate];
+    //self.TimerLabel.text = [NSString stringWithFormat:@"%f s",video.currentTime];
+    self.timerLabel.text  = [self dealTime:self.video.currentTime];
+    if (![self.video stepFrame]) {
+        [timer invalidate];
+        [self.playBtn setEnabled:YES];
+        return;
+    }
+    
+    self.imageView.image = self.video.currentImage;
+    float frameTime = 1.0 / ([NSDate timeIntervalSinceReferenceDate] - startTime);
+    if (self.lastFrameTime < 0) {
+        self.lastFrameTime = frameTime;
+    } else {
+        self.lastFrameTime = LERP(frameTime, self.lastFrameTime, 0.8);
+    }
+    [self.fpsLabel setText:[NSString stringWithFormat:@"FPS %.0f",self.lastFrameTime]];
+}
+
+- (NSString *)dealTime:(double)time {
+    
+    int tns, thh, tmm, tss;
+    tns = time;
+    thh = tns / 3600;
+    tmm = (tns % 3600) / 60;
+    tss = tns % 60;
+    
+    //[ImageView setTransform:CGAffineTransformMakeRotation(M_PI)];
+    return [NSString stringWithFormat:@"%02d:%02d:%02d",thh,tmm,tss];
 }
 
 - (void)didReceiveMemoryWarning {

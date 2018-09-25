@@ -120,6 +120,7 @@
         }];
     }
     
+    // 添加监听状态观察者
     [self.manager addObserver:self
                    forKeyPath:@"state"
                       options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew
@@ -141,6 +142,15 @@
 //- (void)newMessage:(MQTTSession *)session data:(NSData *)data onTopic:(NSString *)topic qos:(MQTTQosLevel)qos retained:(BOOL)retained mid:(unsigned int)mid {
 //    NSLog(@"LALALALALA: %@", data);
 //}
+
+
+// 监听当前连接状态
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    
+    
+    
+    
+}
 
 
 - (void)didReceiveMemoryWarning {
