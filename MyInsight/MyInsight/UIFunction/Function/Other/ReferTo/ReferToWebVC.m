@@ -50,6 +50,8 @@
     [webView loadRequest:request];
     // 最后将webView添加到界面
     [self.view addSubview:webView];
+    
+    NSSet  *websiteDataTypes = [NSSet setWithArray:@[WKWebsiteDataTypeDiskCache]];
 }
 
 /*

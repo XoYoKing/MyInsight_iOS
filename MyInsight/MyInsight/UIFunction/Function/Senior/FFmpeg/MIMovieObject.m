@@ -103,6 +103,7 @@ initError:
                        AVSEEK_FLAG_FRAME);
     avcodec_flush_buffers(MICodecCtx);
 }
+
 - (BOOL)stepFrame {
     int frameFinished = 0;
     while (!frameFinished && av_read_frame(MIFormatCtx, &packet) >= 0) {
@@ -126,43 +127,53 @@ initError:
     self.cruutenPath = [moviePath copy];
     [self initializeResources:[moviePath UTF8String]];
 }
+
 - (void)redialPaly {
     [self initializeResources:[self.cruutenPath UTF8String]];
 }
+
 #pragma mark ------------------------------------
 #pragma mark  重写属性访问方法
 -(void)setOutputWidth:(int)newValue {
     if (_outputWidth == newValue) return;
     _outputWidth = newValue;
 }
+
 -(void)setOutputHeight:(int)newValue {
     if (_outputHeight == newValue) return;
     _outputHeight = newValue;
 }
+
 -(UIImage *)currentImage {
     if (!MIFrame->data[0]) return nil;
     return [self imageFromAVPicture];
 }
+
 -(double)duration {
     return (double)MIFormatCtx->duration / AV_TIME_BASE;
 }
+
 - (double)currentTime {
     AVRational timeBase = MIFormatCtx->streams[videoStream]->time_base;
     return packet.pts * (double)timeBase.num / timeBase.den;
 }
+
 - (int)sourceWidth {
     return MICodecCtx->width;
 }
+
 - (int)sourceHeight {
     return MICodecCtx->height;
 }
+
 - (double)fps {
     return fps;
 }
+
 #pragma mark --------------------------
 #pragma mark - 内部方法
-- (UIImage *)imageFromAVPicture
-{
+
+- (UIImage *)imageFromAVPicture {
     avpicture_free(&picture);
     avpicture_alloc(&picture, AV_PIX_FMT_RGB24, _outputWidth, _outputHeight);
     struct SwsContext * imgConvertCtx = sws_getContext(MIFrame->width,
