@@ -123,6 +123,8 @@
                          @"url":@"https://www.cnblogs.com/changjiang/p/5396069.html"},
                        @{@"name":@"iOS音频播放 (六)：简单的音频播放器实现",
                          @"url":@"http://msching.github.io/blog/2014/08/09/audio-in-ios-6/"},
+                       @{@"name":@"iOS-KVO 实现原理",
+                         @"url":@"https://www.jianshu.com/p/0e75d99c3480"},
                        
                        // Python
                        @{@"name":@"django+nginx+uwsgi部署（及遇到的错误）",

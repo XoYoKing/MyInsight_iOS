@@ -11,6 +11,7 @@
 #import <Masonry.h>
 #import "OpenCVVC.h" // OpenCV
 #import "FFmpegVC.h" // FFmpegVC
+#import "IJKPlayerVC.h"
 #import "AudioVC.h"
 #import "VideoVC.h"
 #import "SocketVC.h"
@@ -29,7 +30,7 @@ static const NSString *OpenCVStr = @"OpenCV";
 static const NSString *FFmpegStr = @"FFmpeg";
 static const NSString *OpenGLStr = @"OpenGL";
 // ijkplayer
-static const NSString *ijkplayerStr = @"ijkplayer";
+static const NSString *IJKPlayerStr = @"IJKPlayer";
 
 static const NSString *AudioStr = @"Audio音频";
 static const NSString *VideoStr = @"Video视频";
@@ -71,7 +72,7 @@ static const NSString *BarrageRendererStr = @"弹幕渲染器";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[CoreFoundationStr, SocketStr, OpenCVStr, FFmpegStr, ijkplayerStr, AudioStr, VideoStr, OpenGLStr, BarrageRendererStr];
+    self.dataArray = @[CoreFoundationStr, SocketStr, OpenCVStr, FFmpegStr, IJKPlayerStr, AudioStr, VideoStr, OpenGLStr, BarrageRendererStr];
 }
 
 #pragma mark - 创建TableView
@@ -146,9 +147,11 @@ static const NSString *BarrageRendererStr = @"弹幕渲染器";
         ffmpegVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:ffmpegVC animated:YES];
     }
-    if ([cellString isEqual:ijkplayerStr]) {
-        // ijkplayer
-        
+    if ([cellString isEqual:IJKPlayerStr]) {
+        // IJKPlayer
+        IJKPlayerVC *ijkPlayerVC = [[IJKPlayerVC alloc] init];
+        ijkPlayerVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:ijkPlayerVC animated:YES];
     }
     if ([cellString isEqual:AudioStr]) {
         // 音频

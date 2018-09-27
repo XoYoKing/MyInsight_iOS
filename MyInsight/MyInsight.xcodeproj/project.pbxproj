@@ -66,6 +66,7 @@
 		A22C4DD41FFC777A0079F7C2 /* via.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBD1FFC77790079F7C2 /* via.png */; };
 		A22C4DD51FFC777A0079F7C2 /* route_start_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A22C4DBE1FFC77790079F7C2 /* route_start_pin@2x.png */; };
 		A236ED532139493100BF9189 /* ZhiHuDailyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A236ED522139493100BF9189 /* ZhiHuDailyVC.m */; };
+		A238AEFF215CB6E900A9959A /* IJKPlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A238AEFE215CB6E900A9959A /* IJKPlayerVC.m */; };
 		A239CE1A208595C30033646A /* MultiTypeFlowLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A239CE19208595C30033646A /* MultiTypeFlowLayoutVC.m */; };
 		A239CE202085D4410033646A /* MIGirdLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A239CE1F2085D4410033646A /* MIGirdLayout.m */; };
 		A239CE232085D8990033646A /* MICircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A239CE222085D8990033646A /* MICircleLayout.m */; };
@@ -402,6 +403,8 @@
 		A22C4DBE1FFC77790079F7C2 /* route_start_pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "route_start_pin@2x.png"; sourceTree = "<group>"; };
 		A236ED512139493100BF9189 /* ZhiHuDailyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhiHuDailyVC.h; sourceTree = "<group>"; };
 		A236ED522139493100BF9189 /* ZhiHuDailyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhiHuDailyVC.m; sourceTree = "<group>"; };
+		A238AEFD215CB6E900A9959A /* IJKPlayerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IJKPlayerVC.h; sourceTree = "<group>"; };
+		A238AEFE215CB6E900A9959A /* IJKPlayerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IJKPlayerVC.m; sourceTree = "<group>"; };
 		A239CE18208595C30033646A /* MultiTypeFlowLayoutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiTypeFlowLayoutVC.h; sourceTree = "<group>"; };
 		A239CE19208595C30033646A /* MultiTypeFlowLayoutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiTypeFlowLayoutVC.m; sourceTree = "<group>"; };
 		A239CE1E2085D4410033646A /* MIGirdLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIGirdLayout.h; sourceTree = "<group>"; };
@@ -1272,6 +1275,15 @@
 			path = ZhiHuDaily;
 			sourceTree = "<group>";
 		};
+		A238AEFC215CB6D500A9959A /* IJKPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				A238AEFD215CB6E900A9959A /* IJKPlayerVC.h */,
+				A238AEFE215CB6E900A9959A /* IJKPlayerVC.m */,
+			);
+			path = IJKPlayer;
+			sourceTree = "<group>";
+		};
 		A239CE15208595580033646A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -1652,6 +1664,7 @@
 				A27E8754201AD2B2003E712C /* Audio */,
 				A23D955D21513A6E00295718 /* Video */,
 				A27E8738201ACD5D003E712C /* FFmpeg */,
+				A238AEFC215CB6D500A9959A /* IJKPlayer */,
 				A2B9927520623E8B002A73B1 /* OpenGL */,
 				A26B69382155226500AFDAAD /* CoreFoundation */,
 				A27E8735201ACD5D003E712C /* OpenCV */,
@@ -2892,6 +2905,7 @@
 				A241BF4B20F739F70099E8A5 /* QuartzCurves.m in Sources */,
 				A2B992B32069F4FB002A73B1 /* ChatContentModel.m in Sources */,
 				A2C84E8C20AD3589000FD685 /* BlueToothDataVC.m in Sources */,
+				A238AEFF215CB6E900A9959A /* IJKPlayerVC.m in Sources */,
 				A2B9929C2068F40D002A73B1 /* ChatAudioCell.m in Sources */,
 				A241BF4820F739F70099E8A5 /* QuartzLines.m in Sources */,
 				A2250B1320E10D6800CCBB29 /* NSString+Characters.m in Sources */,
