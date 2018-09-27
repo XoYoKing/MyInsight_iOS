@@ -111,6 +111,7 @@
 		A241D22420468E68005A3BC5 /* MQTTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22320468E68005A3BC5 /* MQTTVC.m */; };
 		A241D22B2047A32A005A3BC5 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22A2047A32A005A3BC5 /* UIColor+Category.m */; };
 		A242C1B620902BFA00A6A9F7 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = A242C1B520902BFA00A6A9F7 /* RSA.m */; };
+		A2524270215D086000181DF3 /* BlockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A252426F215D086000181DF3 /* BlockVC.m */; };
 		A2561DBC2094123400D4E2E5 /* EncryptVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DBB2094123400D4E2E5 /* EncryptVC.m */; };
 		A2561DBF2094725100D4E2E5 /* DragTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DBE2094725100D4E2E5 /* DragTableVC.m */; };
 		A2561DC3209953B200D4E2E5 /* PushMsgVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DC2209953B200D4E2E5 /* PushMsgVC.m */; };
@@ -489,6 +490,8 @@
 		A241D22A2047A32A005A3BC5 /* UIColor+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
 		A242C1B420902BFA00A6A9F7 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
 		A242C1B520902BFA00A6A9F7 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
+		A252426E215D086000181DF3 /* BlockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockVC.h; sourceTree = "<group>"; };
+		A252426F215D086000181DF3 /* BlockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockVC.m; sourceTree = "<group>"; };
 		A2561DBA2094123400D4E2E5 /* EncryptVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncryptVC.h; sourceTree = "<group>"; };
 		A2561DBB2094123400D4E2E5 /* EncryptVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncryptVC.m; sourceTree = "<group>"; };
 		A2561DBD2094725100D4E2E5 /* DragTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragTableVC.h; sourceTree = "<group>"; };
@@ -1516,6 +1519,15 @@
 			path = RSA;
 			sourceTree = "<group>";
 		};
+		A252426D215D084400181DF3 /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				A252426E215D086000181DF3 /* BlockVC.h */,
+				A252426F215D086000181DF3 /* BlockVC.m */,
+			);
+			path = Block;
+			sourceTree = "<group>";
+		};
 		A2561DC02099539E00D4E2E5 /* PushMsg */ = {
 			isa = PBXGroup;
 			children = (
@@ -1635,6 +1647,9 @@
 				A26CE4852018A0880012EC69 /* BasicVC.m */,
 				A2DDDC45208AE1F600DC7A4A /* ViewLayout */,
 				A2BDD420205F5550008AD133 /* MultiThread */,
+				A2D884F120897927005116A6 /* RunLoop */,
+				A2CA8085202196E900D81845 /* RunTime */,
+				A252426D215D084400181DF3 /* Block */,
 				A2B43C3020575ECD00FEAE58 /* RadioButton */,
 				A2930B8C2106DA1F006520FF /* ScrollView */,
 				A25748202023056C000F7632 /* CollectionView */,
@@ -1646,9 +1661,7 @@
 				A2DDDC1D208ACEF600DC7A4A /* Screen */,
 				A2D8BDED209FE9C300AD4FF0 /* Gesture */,
 				A2CA8088202196E900D81845 /* LiftCycle */,
-				A2CA8085202196E900D81845 /* RunTime */,
 				A2250B1C20E1515300CCBB29 /* DrawingBoard */,
-				A2D884F120897927005116A6 /* RunLoop */,
 				A2250B1820E1144200CCBB29 /* BlurView */,
 				A241BF9B20FC7EB80099E8A5 /* ColorPicker */,
 			);
@@ -2857,6 +2870,7 @@
 				A2250B2820E155A300CCBB29 /* MIBezierPath.m in Sources */,
 				A2561DCA209AE49100D4E2E5 /* JiugonggeUnlockVC.m in Sources */,
 				A2BDD436205F5BAB008AD133 /* BaseTableVC.m in Sources */,
+				A2524270215D086000181DF3 /* BlockVC.m in Sources */,
 				A2F0030B209AFDBF00F449EE /* ImageContextStackVC.m in Sources */,
 				A2C9B21821594284008F7942 /* ReferToWebVC.m in Sources */,
 				A2E9DA1F2091BD0E0061B1E7 /* NSString+AES.m in Sources */,

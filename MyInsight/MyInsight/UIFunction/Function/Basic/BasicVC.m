@@ -11,12 +11,13 @@
 #import <Masonry.h>
 #import "LiftCycleVC.h" // 生命周期
 #import "RunTimeVC.h" // 运行时
-#import "RunLoopVC.h"
+#import "RunLoopVC.h" // RunLoop
+#import "MultiThreadVC.h" //多线程
+#import "BlockVC.h" // Block
 #import "ScrollViewVC.h"
 #import "TableViewVC.h"
 #import "CollectionViewVC.h"
 #import "RadioButtonVC.h"
-#import "MultiThreadVC.h" //多线程
 #import "CYuYanVC.h"
 #import "PortraitScreenVC.h" // 竖屏
 #import "ViewLayoutVC.h"
@@ -42,15 +43,16 @@
 
 static const NSString *LiftCycleStr = @"VC生命周期";
 static const NSString *RunTimeStr = @"运行时RunTime";
+static const NSString *RunLoopStr = @"RunLoop";
+static const NSString *BlockStr = @"Block";
 static const NSString *GestureStr = @"手势";
 static const NSString *XieYiStr = @"协议";
 static const NSString *ScrollViewStr = @"ScrollView";
 static const NSString *TableViewStr = @"TableView";
 static const NSString *CollectViewStr = @"CollectView";
 static const NSString *RadioButtonStr = @"单选按钮🔘 基本表单";
-static const NSString *MultiThreadString = @"多线程";
+static const NSString *MultiThreadStr = @"多线程";
 static const NSString *CYuYanString = @"C语言";
-static const NSString *RunLoopString = @"RunLoop";
 static const NSString *ScreenStr = @"横竖屏";
 static const NSString *ViewLayoutStr = @"约束布局";
 static const NSString *CoreAnimationStr = @"核心动画";
@@ -97,7 +99,7 @@ static const NSString *ColorPickerStr = @"颜色拾取器";
 // 处理数据
 - (void)handleTableViewData {
     // 数组
-    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, MultiThreadString, RunLoopString, GestureStr, XieYiStr, PhysicalStr, CoreAnimationStr, CoreGraphicsStr, QuartzDrawStr, ScrollViewStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, ViewLayoutStr, BlurViewStr, DrawingBoardStr, ColorPickerStr];
+    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopStr, BlockStr, MultiThreadStr, GestureStr, XieYiStr, PhysicalStr, CoreAnimationStr, CoreGraphicsStr, QuartzDrawStr, ScrollViewStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, ViewLayoutStr, BlurViewStr, DrawingBoardStr, ColorPickerStr];
 }
 
 #pragma mark - 创建TableView
@@ -167,11 +169,17 @@ static const NSString *ColorPickerStr = @"颜色拾取器";
         runTimeVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:runTimeVC animated:YES];
     }
-    if ([cellString isEqual:RunLoopString]) {
+    if ([cellString isEqual:RunLoopStr]) {
         // RunLoop
         RunLoopVC *runLoopVC = [[RunLoopVC alloc] init];
         runLoopVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:runLoopVC animated:YES];
+    }
+    if ([cellString isEqual:BlockStr]) {
+        // Block
+        BlockVC *blockVC = [[BlockVC alloc] init];
+        blockVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:blockVC animated:YES];
     }
     if ([cellString isEqual:PhysicalStr]) {
         // 物理仿真
@@ -227,7 +235,7 @@ static const NSString *ColorPickerStr = @"颜色拾取器";
         radioButtonVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:radioButtonVC animated:YES];
     }
-    if ([cellString isEqual:MultiThreadString]) {
+    if ([cellString isEqual:MultiThreadStr]) {
         // 多线程
         MultiThreadVC *multiThreadVC = [[MultiThreadVC alloc] init];
         multiThreadVC.hidesBottomBarWhenPushed = YES;
