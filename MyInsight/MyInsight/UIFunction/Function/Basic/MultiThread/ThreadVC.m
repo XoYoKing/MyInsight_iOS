@@ -34,7 +34,7 @@
     
     NSLog(@"%lf", CFAbsoluteTimeGetCurrent());
     
-    
+    //
     [self ExitThread];
     
     [self addArrayThtead];

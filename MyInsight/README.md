@@ -1,2 +1,28 @@
 # MyInsight_iOS
 My insght Demo of iOS
+
+
+
+iOS面试题
+1.写一个block的typedef声明
+
+2.写一个单例
+
+3.NSOperation和GCD
+
+4.frame和bounds有什么不同？
+
+5.#import和#include有何区别，@class呢，#iimport<>和#import""有何区别？
+
+6.写一个函数，输入一个数如38，拆分3*8=24，2*4=8，最后8无法拆分就返回
+
+
+1.介绍下property的关键字及作用？请标明哪些是默认关键字？
+
+2.iOS中的多线程方式有哪些？线程锁死是什么？举个例子
+
+3.
+
+
+
+
