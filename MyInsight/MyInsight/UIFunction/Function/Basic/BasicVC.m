@@ -9,6 +9,7 @@
 #import "BasicVC.h"
 #import <SWRevealViewController.h>
 #import <Masonry.h>
+#import "AlgorithmVC.h" // 一些数据结构 算法
 #import "LiftCycleVC.h" // 生命周期
 #import "RunTimeVC.h" // 运行时
 #import "RunLoopVC.h" // RunLoop
@@ -43,6 +44,7 @@
 
 @end
 
+static const NSString *AlgorithmStr = @"算法Algorithm";
 static const NSString *LiftCycleStr = @"VC生命周期";
 static const NSString *RunTimeStr = @"运行时RunTime";
 static const NSString *RunLoopStr = @"RunLoop";
@@ -103,7 +105,7 @@ static const NSString *BlogStr = @"博客";
 // 处理数据
 - (void)handleTableViewData {
     // 数组
-    self.dataArray = @[BlogStr, CYuYanString, LiftCycleStr, RunTimeStr, RunLoopStr, BlockStr, MultiThreadStr, GestureStr, XieYiStr, PhysicalStr, CoreAnimationStr, CoreGraphicsStr, QuartzDrawStr, ScrollViewStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, ViewLayoutStr, BlurViewStr, DrawingBoardStr, ColorPickerStr];
+    self.dataArray = @[BlogStr, AlgorithmStr, CYuYanString, LiftCycleStr, RunTimeStr, RunLoopStr, BlockStr, MultiThreadStr, GestureStr, XieYiStr, PhysicalStr, CoreAnimationStr, CoreGraphicsStr, QuartzDrawStr, ScrollViewStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, ViewLayoutStr, BlurViewStr, DrawingBoardStr, ColorPickerStr];
 }
 
 #pragma mark - 创建TableView
@@ -154,6 +156,12 @@ static const NSString *BlogStr = @"博客";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 获取到当前cell的字符串
     NSString *cellString = [self.dataArray objectAtIndex:indexPath.row];
+    if ([cellString isEqual:AlgorithmStr]) {
+        // 算法
+        AlgorithmVC *algorithmVC = [[AlgorithmVC alloc] init];
+        algorithmVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:algorithmVC animated:YES];
+    }
     if ([cellString isEqual:BlogStr]) {
         // 博客
         BlogVC *blogVC = [[BlogVC alloc] init];

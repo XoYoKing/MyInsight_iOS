@@ -120,6 +120,7 @@
 		A252427F215F8DDC00181DF3 /* model.html in Resources */ = {isa = PBXBuildFile; fileRef = A252427E215F8DDC00181DF3 /* model.html */; };
 		A2524282215F99D500181DF3 /* BlogVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2524281215F99D500181DF3 /* BlogVC.m */; };
 		A2524285215F9A3C00181DF3 /* BlogWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2524284215F9A3C00181DF3 /* BlogWebVC.m */; };
+		A2524289215FB7AC00181DF3 /* AlgorithmVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2524288215FB7AC00181DF3 /* AlgorithmVC.m */; };
 		A2561DBC2094123400D4E2E5 /* EncryptVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DBB2094123400D4E2E5 /* EncryptVC.m */; };
 		A2561DBF2094725100D4E2E5 /* DragTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DBE2094725100D4E2E5 /* DragTableVC.m */; };
 		A2561DC3209953B200D4E2E5 /* PushMsgVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DC2209953B200D4E2E5 /* PushMsgVC.m */; };
@@ -510,6 +511,8 @@
 		A2524281215F99D500181DF3 /* BlogVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlogVC.m; sourceTree = "<group>"; };
 		A2524283215F9A3C00181DF3 /* BlogWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlogWebVC.h; sourceTree = "<group>"; };
 		A2524284215F9A3C00181DF3 /* BlogWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlogWebVC.m; sourceTree = "<group>"; };
+		A2524287215FB7AC00181DF3 /* AlgorithmVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmVC.h; sourceTree = "<group>"; };
+		A2524288215FB7AC00181DF3 /* AlgorithmVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmVC.m; sourceTree = "<group>"; };
 		A2561DBA2094123400D4E2E5 /* EncryptVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncryptVC.h; sourceTree = "<group>"; };
 		A2561DBB2094123400D4E2E5 /* EncryptVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncryptVC.m; sourceTree = "<group>"; };
 		A2561DBD2094725100D4E2E5 /* DragTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragTableVC.h; sourceTree = "<group>"; };
@@ -1560,6 +1563,15 @@
 			path = Blog;
 			sourceTree = "<group>";
 		};
+		A2524286215FB7A000181DF3 /* Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				A2524287215FB7AC00181DF3 /* AlgorithmVC.h */,
+				A2524288215FB7AC00181DF3 /* AlgorithmVC.m */,
+			);
+			path = Algorithm;
+			sourceTree = "<group>";
+		};
 		A2561DC02099539E00D4E2E5 /* PushMsg */ = {
 			isa = PBXGroup;
 			children = (
@@ -1681,6 +1693,7 @@
 				A2524281215F99D500181DF3 /* BlogVC.m */,
 				A2524283215F9A3C00181DF3 /* BlogWebVC.h */,
 				A2524284215F9A3C00181DF3 /* BlogWebVC.m */,
+				A2524286215FB7A000181DF3 /* Algorithm */,
 				A2DDDC45208AE1F600DC7A4A /* ViewLayout */,
 				A2BDD420205F5550008AD133 /* MultiThread */,
 				A2D884F120897927005116A6 /* RunLoop */,
@@ -2882,6 +2895,7 @@
 				A242C1B620902BFA00A6A9F7 /* RSA.m in Sources */,
 				A241BF5220F739F70099E8A5 /* QuartzLineViewController.m in Sources */,
 				A2CDD272208ED232006DF86E /* PSSpringView.m in Sources */,
+				A2524289215FB7AC00181DF3 /* AlgorithmVC.m in Sources */,
 				A2CDD242208DB6EA006DF86E /* YinLZDTVC.m in Sources */,
 				A23B3523208D72B5001D71F2 /* CoreAnimationVC.m in Sources */,
 				A2E9DA222091BD210061B1E7 /* NSData+AES.m in Sources */,
