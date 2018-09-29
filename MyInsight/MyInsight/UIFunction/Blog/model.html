@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="canonical" href="https://blog.csdn.net/show3/article/details/54924713"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="referrer" content="always">
+    <meta name="description" content="项目中经常会用到数据的存储，关于小量数据的存储，和海量数据的存储这里不做讨论，本帖主要讨论的是10000条以内数据的管理问题。 
+关于持久化存储，无外乎CoreData和sqllite两种。但个人一直对CoreData不太感冒，因此选择的是sqllite。
+  本文主要介绍理论方面的部分，实现代码可参考 
+  https://github.com/TonyJR/TODBModel
+我们首先把应用分为" />
+    <meta name="keywords" content="ios,数据库" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" /><link rel="alternate" media="handheld" href="#" />
+    <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848">
+    <script src="https://csdnimg.cn/release/phoenix/vendor/tingyun/tingyun-rum-blog.js"></script>
+
+    <link href="https://csdnimg.cn/public/favicon.ico" rel="SHORTCUT ICON">
+    <title>iOS客户端持久化存储——从模型到数据库 - CSDN博客</title>
+
+            <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/detail-f68d89cc26.min.css">
+        <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/themes/skin-yellow/skin-yellow-2eefd34acf.min.css">
+
+    <script type="text/javascript">
+        var username = "show3";
+        var blog_address = "https://blog.csdn.net/show3";
+        var static_host = "https://csdnimg.cn/release/phoenix/";
+        var currentUserName = "";
+        var isShowAds = true;
+        var isOwner = false;
+        var loginUrl = "https://passport.csdn.net/account/login?from=https://blog.csdn.net/show3/article/details/54924713"
+        var blogUrl = "https://blog.csdn.net/";
+        //页面皮肤样式
+        var curSkin = "skin-yellow";
+        // 第四范式所需数据
+        var articleTitles = "iOS客户端持久化存储——从模型到数据库";
+        var articleID = "54924713";
+
+        var nickName = "3show";
+    </script>
+    <script type="text/javascript">
+        // Traffic Stats of the entire Web site By baidu
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?6bcd52f51e9b3dce32bec4a3997715ac";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+        // Traffic Stats of the entire Web site By baidu end
+    </script>
+    <script src="https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="https://csdnimg.cn/rabbit/exposure-click/main-1.0.6.js"></script>
+    <!-- 新版上报 -->
+    <script src="//g.csdnimg.cn/track/1.1.1/track.js" type="text/javascript"></script>
+    <!-- 新版上报end -->
+            <link rel="stylesheet" href="https://csdnimg.cn/public/sandalstrap/1.4/css/sandalstrap.min.css">
+    <style>
+        .MathJax, .MathJax_Message, .MathJax_Preview{
+            display: none
+        }
+    </style>
+</head>
+<!-- nodata 第三栏接口无数据时样式不变 -->
+<body class="nodata"> 
+    <link rel="stylesheet" href="https://csdnimg.cn/public/common/toolbar/content_toolbar_css/content_toolbar.css">
+    <script id="toolbar-tpl-scriptId" src="https://csdnimg.cn/public/common/toolbar/js/content_toolbar.js" type="text/javascript" domain="https://blog.csdn.net/"></script>
+<link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/blog_code-c3a0c33d5c.css">
+<link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/vendor/pagination/paging.css">
+<script type="text/javascript" src="//static.mediav.com/js/mvf_news_feed.js"></script>
+<script type="text/javascript" src="//g.csdnimg.cn/copyright/1.0.2/copyright.js"></script>
+<div style="display:none;">
+	<img src="" onerror='setTimeout(function(){if(!/(csdn.net|iteye.com|baiducontent.com|googleusercontent.com|360webcache.com|sogoucdn.com|bingj.com|baidu.com)$/.test(window.location.hostname)){window.location.href="\x68\x74\x74\x70\x73\x3a\x2f\x2f\x77\x77\x77\x2e\x63\x73\x64\x6e\x2e\x6e\x65\x74"}},3000);'>
+</div>
+<link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/chart-3456820cac.css" />
+
+
+
+<script src="https://dup.baidustatic.com/js/ds.js"></script>
+<div class="container clearfix" id="mainBox">
+		<!-- <div id="breadcrumbs">
+			<span><a href="https://blog.csdn.net/">博客首页</a></span>
+			<i>></i>
+			<span><a href="https://blog.csdn.net/show3">Tony.JR的专栏...</a></span>
+			<i>></i>
+			<span>iOS客户端持久化存储——从模型到数据库...</span>
+		</div> -->
+		<div class="recommend-right">
+  <ul class="recommend-fixed-box">
+    
+  </ul>
+</div>
+    <main>
+        <div class="blog-content-box">
+	<div class="article-header-box">
+		<div class="article-header">
+			<div class="article-title-box">
+				<span class="article-type type-1 float-left">原</span>				<h1 class="title-article">iOS客户端持久化存储——从模型到数据库</h1>
+			</div>
+			<div class="article-info-box">
+				<div class="article-bar-top">
+																				<span class="time">2017年02月08日 11:24:12</span>
+					<a class="follow-nickName" href="https://me.csdn.net/show3" target="_blank">3show</a>
+						<span class="read-count">阅读数：2096</span>
+						
+														<span class="tags-box artic-tag-box">
+								<span class="label">标签：</span>
+																<a data-track-click='{"mod":"popu_626","con":"ios"}' data-track-view='{"mod":"popu_626","con":"ios"}' class="tag-link" href="http://so.csdn.net/so/search/s.do?q=ios&t=blog" target="_blank">ios																<a data-track-click='{"mod":"popu_626","con":"数据库"}' data-track-view='{"mod":"popu_626","con":"数据库"}' class="tag-link" href="http://so.csdn.net/so/search/s.do?q=数据库&t=blog" target="_blank">数据库																<a data-track-click='{"mod":"popu_626","con":"存储"}' data-track-view='{"mod":"popu_626","con":"存储"}' class="tag-link" href="http://so.csdn.net/so/search/s.do?q=存储&t=blog" target="_blank">存储																<a data-track-click='{"mod":"popu_626","con":"数据"}' data-track-view='{"mod":"popu_626","con":"数据"}' class="tag-link" href="http://so.csdn.net/so/search/s.do?q=数据&t=blog" target="_blank">数据																</a>
+							</span>
+																					<div class="tags-box space">
+								<span class="label">个人分类：</span>
+																<a class="tag-link" href="https://blog.csdn.net/show3/article/category/2891003"  target="_blank">ios																</a>
+							</div>
+																								</div>
+				<div class="operating">
+														</div>
+			</div>
+		</div>
+	</div>
+	<article>
+		<div id="article_content" class="article_content clearfix csdn-tracking-statistics" data-pid="blog"  data-mod=popu_307  data-dsm = "post" >
+								<div class="article-copyright">
+					版权声明：本文为博主原创文章，未经博主允许不得转载。					https://blog.csdn.net/show3/article/details/54924713				</div>
+								            <div class="markdown_views prism-atom-one-dark">
+							<!-- flowchart 箭头图标 勿删 -->
+							<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path></svg>
+							<hr>
+
+<p>项目中经常会用到数据的存储，关于小量数据的存储，和海量数据的存储这里不做讨论，本帖主要讨论的是10000条以内数据的管理问题。 <br>
+关于持久化存储，无外乎CoreData和sqllite两种。但个人一直对CoreData不太感冒，因此选择的是sqllite。</p>
+
+<hr>
+
+<blockquote>
+  <p>本文主要介绍理论方面的部分，实现代码可参考 <br>
+  <a href="https://github.com/TonyJR/TODBModel" rel="nofollow">https://github.com/TonyJR/TODBModel</a></p>
+</blockquote>
+
+<p><strong>我们首先把应用分为三层，应用层、数据层、持久层。我们重点实现数据层部分。</strong></p>
+
+<ol>
+<li>应用层主要是对数据的调用，展示数据修改界面</li>
+<li>数据层就是指的Model和ModelManager</li>
+<li>持久层包括所有的数据库操作，为了不重复造轮子，数据库的读写我们使用FMDB</li>
+</ol>
+
+<p><img src="https://img-blog.csdn.net/20170208103635521?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2hvdzM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="数据流向" title=""></p>
+
+<blockquote>
+  <p>如图所示，为保证读写速度，应用层只对数据层进行读写。 一般情况下，数据层只对持久层进行写入，只有初始化数据时，才会从持久层读取。</p>
+</blockquote>
+
+<p><strong>数据的唯一性</strong></p>
+
+<ul>
+<li>客户端的数据一般来源于服务器，在不同界面中，可能需要对同一对象进行操作。比如通讯录列表和联系人详情两个界面，可能同时持有同一个联系人对象。当编辑联系人信息并修改时，两个界面都应该发生变化。 <br>
+那么我们需要使用ModelManager来保证内存中关于同一id的对象不会多次出现。</li>
+</ul>
+
+<p><img src="https://img-blog.csdn.net/20170208105952211?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2hvdzM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="对象初始化过程" title=""></p>
+
+<p><strong>自动化建表、属性纠正</strong></p>
+
+<ul>
+<li>通过runtime可以方便的读取模型所有属性及其类型。因此我们可以在初始化模型的时候，检查数据表是否存在，并自动生成sql语句创建表格。</li>
+</ul>
+
+
+
+<pre class="prettyprint"><code class=" hljs objectivec"><span class="hljs-built_in">NSMutableDictionary</span> *dic = [<span class="hljs-built_in">NSMutableDictionary</span> dictionary];
+<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> count;
+objc_property_t *propertys = class_copyPropertyList([<span class="hljs-keyword">self</span> class], &amp;count);
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; count; i++)
+{
+
+    objc_property_t property = propertys[i];
+
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *name = property_getName(property);
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *type = property_copyAttributeValue(property,<span class="hljs-string">"T"</span>);
+
+
+    <span class="hljs-built_in">NSString</span> *sqlTypeName = objcType2SqlType(type);
+    <span class="hljs-keyword">if</span> (!sqlTypeName) {
+        <span class="hljs-built_in">NSLog</span>(@<span class="hljs-string">"#TOModel# %@中存在未识别的数据类型%s"</span>,NSStringFromClass([<span class="hljs-keyword">self</span> class]),type);
+    }<span class="hljs-keyword">else</span>{
+        [dic setObject:sqlTypeName forKey:[<span class="hljs-built_in">NSString</span> stringWithUTF8String:name]];
+
+    }
+
+}</code></pre>
+
+<ul>
+<li>另外开发过程中，模型随时可能增加或者删除字段，我们需要在模型加载过程中检查模型的属性变化并修改表格。</li>
+</ul>            </div>
+						<link href="https://csdnimg.cn/release/phoenix/mdeditor/markdown_views-8cccb36679.css" rel="stylesheet">
+                </div>
+		<div class="hide-article-box text-center">
+			<a class="btn" id="btn-readmore" data-track-view='{"mod":"popu_376","con":",https://blog.csdn.net/show3/article/details/54924713,"}' data-track-click='{"mod":"popu_376","con":",https://blog.csdn.net/show3/article/details/54924713,"}'>阅读更多</a>
+			<!-- <a class="btn" href="https://passport.csdn.net/account/login?utm_source=csdn_blog_pc_more_login" target="_self" id="btn-lobinreadmore" data-track-view='{"mod":"popu_557","con":",https://blog.csdn.net/show3/article/details/54924713,"}' data-track-click='{"mod":"popu_557","con":",https://blog.csdn.net/show3/article/details/54924713,"}'>登录后自动展开</a> -->
+		</div>
+	</article>
+	
+</div>
+<script>
+		$(".MathJax").remove();
+		if($('div.markdown_views pre.prettyprint code.hljs').length > 0 ){
+				$('div.markdown_views')[0].className = 'markdown_views';
+		}
+</script>
+
+<script>
+	(function(){
+		function setArticleH(btnReadmore,posi){
+			var winH = $(window).height();
+			var articleBox = $("div.article_content");
+			var artH = articleBox.height();
+			if(artH > winH*posi){
+				articleBox.css({
+					'height':winH*posi+'px',
+					'overflow':'hidden'
+				})
+				btnReadmore.click(function(){
+					articleBox.removeAttr("style");
+					$(this).parent().remove();
+				})
+			}else{
+				btnReadmore.parent().remove();
+			}
+		}
+		var btnReadmore = $("#btn-readmore");
+		if(btnReadmore.length>0){
+			if(currentUserName){
+				setArticleH(btnReadmore,3);
+			}else{
+				setArticleH(btnReadmore,1.2);
+			}
+		}
+	})()
+</script>
+        <div class="p4course_target" ></div><script>window.p4sdk_enable_courseBox=true</script>        <a id="commentBox"></a>
+<div class="comment-box">
+	  	<div class="unlogin-box text-center">
+		想对作者说点什么？
+		<!-- $curl 当前地址 -->
+		<a href="https://passport.csdn.net/account/login?from=https://blog.csdn.net/show3/article/details/54924713#commentBox" class="btn btn-sm btn-red">我来说一句</a>
+	</div>
+			<div class="comment-list-container">
+		<a id="comments"></a>
+		<div class="comment-list-box">
+		</div>
+		<div id="commentPage" class="pagination-box d-none"></div>
+		<div class="opt-box text-center">
+			<button class="btn btn-sm btn-link-blue" id="btnMoreComment"></button>
+		</div>
+	</div>
+</div>        <div class="recommend-box">
+            		<div class="recommend-item-box recommend-box-ident type_blog clearfix" data-track-view='{"mod":"popu_614","con":",https://blog.csdn.net/cjh965063777/article/details/51920668,BlogCommendFromBaidu_0"}' data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/cjh965063777/article/details/51920668,BlogCommendFromBaidu_0"}'>
+		<a href="https://blog.csdn.net/cjh965063777/article/details/51920668" target="_blank" title="iOS中关于自定义模型的存储">
+			<div class="content">
+				<h4 class="text-truncate oneline">
+						<em>iOS</em>中关于自定义<em>模型</em>的存储				</h4>
+				<div class="info-box d-flex align-content-center">
+					<p class="avatar">
+							<img src="https://avatar.csdn.net/E/C/0/3_cjh965063777.jpg" alt="cjh965063777" class="avatar-pic">
+							<span class="namebox">
+								<span class="name">cjh965063777</span>
+								<span class="triangle"></span>
+							</span>
+					</p>
+					<p class="date-and-readNum">
+						<span class="date hover-show">07-15</span>
+						<span class="read-num hover-hide">
+							<svg class="icon csdnc-yuedushu" aria-hidden="true">
+								<use xlink:href="#csdnc-yuedushu"></use>
+							</svg>
+							4010</span>
+						</p>
+					</div>
+					<p class="content oneline">
+							在开发中，我们经常会存储一个数据，这个数据可能是一个字典或者模型，当我们需要存储一个字典的时候，我们可以直接用归档操作来存储。
+但是当我们需要存储模型的时候，直接用归档方法，实现不了存储。这个时候我们...					</p>
+			</div>
+					</a>
+	</div>
+						<div class="recommend-item-box recommend-box-ident type_blog clearfix" data-track-view='{"mod":"popu_614","con":",https://blog.csdn.net/mgr406176009/article/details/52240285,BlogCommendFromBaidu_1"}' data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/mgr406176009/article/details/52240285,BlogCommendFromBaidu_1"}'>
+		<a href="https://blog.csdn.net/mgr406176009/article/details/52240285" target="_blank" title="iOS 用本地文件保存自定义模型">
+			<div class="content">
+				<h4 class="text-truncate oneline">
+						<em>iOS</em> 用本地文件保存自定义<em>模型</em>				</h4>
+				<div class="info-box d-flex align-content-center">
+					<p class="avatar">
+							<img src="https://avatar.csdn.net/C/4/4/3_mgr406176009.jpg" alt="mgr406176009" class="avatar-pic">
+							<span class="namebox">
+								<span class="name">mgr406176009</span>
+								<span class="triangle"></span>
+							</span>
+					</p>
+					<p class="date-and-readNum">
+						<span class="date hover-show">08-18</span>
+						<span class="read-num hover-hide">
+							<svg class="icon csdnc-yuedushu" aria-hidden="true">
+								<use xlink:href="#csdnc-yuedushu"></use>
+							</svg>
+							4206</span>
+						</p>
+					</div>
+					<p class="content oneline">
+							iOS中，保存数据有四种方法，归档、文件、NSUserDefaults和sqlite数据库。每一种方式都有其特定的类型，在上一篇文章中介绍了用NSUserDefaults保存自定义模型的数据，这一篇来...					</p>
+			</div>
+					</a>
+	</div>
+									<div class="recommend-item-box recommend-ad-box clearfix">
+					<script type="text/javascript" src="//rabc1.iteye.com/production/source/pc3553.js?pkcgstj=jm"></script>
+				</div>
+			
+					<div class="recommend-item-box recommend-box-ident type_blog clearfix" data-track-view='{"mod":"popu_614","con":",https://blog.csdn.net/ygyalone/article/details/61024568,BlogCommendFromBaidu_2"}' data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/ygyalone/article/details/61024568,BlogCommendFromBaidu_2"}'>
+		<a href="https://blog.csdn.net/ygyalone/article/details/61024568" target="_blank" title="简单又好用的iOS数据库存储框架">
+			<div class="content">
+				<h4 class="text-truncate oneline">
+						简单又好用的<em>iOS</em><em>数据库</em>存储框架				</h4>
+				<div class="info-box d-flex align-content-center">
+					<p class="avatar">
+							<img src="https://avatar.csdn.net/8/4/4/3_ygyalone.jpg" alt="ygyalone" class="avatar-pic">
+							<span class="namebox">
+								<span class="name">ygyalone</span>
+								<span class="triangle"></span>
+							</span>
+					</p>
+					<p class="date-and-readNum">
+						<span class="date hover-show">03-10</span>
+						<span class="read-num hover-hide">
+							<svg class="icon csdnc-yuedushu" aria-hidden="true">
+								<use xlink:href="#csdnc-yuedushu"></use>
+							</svg>
+							567</span>
+						</p>
+					</div>
+					<p class="content oneline">
+							在iOS开发中，如果使用到数据库来存储数据，使用的比较多的是FMDB或者CoreData，或者直接使用sqlite3。但是各种配置比较麻烦，或者需要自己写sql语句。我就想存个对象，要这么麻烦吗？所以...					</p>
+			</div>
+					</a>
+	</div>
+						<div class="recommend-item-box recommend-box-ident type_blog clearfix" data-track-view='{"mod":"popu_614","con":",https://blog.csdn.net/werctzzz/article/details/54783012,BlogCommendFromBaidu_3"}' data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/werctzzz/article/details/54783012,BlogCommendFromBaidu_3"}'>
+		<a href="https://blog.csdn.net/werctzzz/article/details/54783012" target="_blank" title="iOS开发-SQLite数据库在App项目中的设置及使用">
+			<div class="content">
+				<h4 class="text-truncate oneline">
+						<em>iOS</em>开发-SQLite<em>数据库</em>在App项目中的设置及使用				</h4>
+				<div class="info-box d-flex align-content-center">
+					<p class="avatar">
+							<img src="https://avatar.csdn.net/2/D/B/3_werctzzz.jpg" alt="werctzzz" class="avatar-pic">
+							<span class="namebox">
+								<span class="name">werctzzz</span>
+								<span class="triangle"></span>
+							</span>
+					</p>
+					<p class="date-and-readNum">
+						<span class="date hover-show">01-31</span>
+						<span class="read-num hover-hide">
+							<svg class="icon csdnc-yuedushu" aria-hidden="true">
+								<use xlink:href="#csdnc-yuedushu"></use>
+							</svg>
+							1391</span>
+						</p>
+					</div>
+					<p class="content oneline">
+							在iOS开发中，除了UI页面以外使用最多的估计是数据对象的存储了~
+比如聊天记录、通讯录和通讯记录、浏览记录等等。我们要根据不同
+的使用方式去对这些数据存储并使用。
+常用的有：①沙盒机制 ②属性列表p...					</p>
+			</div>
+					</a>
+	</div>
+						<div class="recommend-item-box recommend-box-ident type_blog clearfix" data-track-view='{"mod":"popu_614","con":",https://blog.csdn.net/avel__/article/details/45149653,BlogCommendFromBaidu_4"}' data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/avel__/article/details/45149653,BlogCommendFromBaidu_4"}'>
+		<a href="https://blog.csdn.net/avel__/article/details/45149653" target="_blank" title="iOS 应用中分析如何使用常用的几种数据存储方式">
+			<div class="content">
+				<h4 class="text-truncate oneline">
+						<em>iOS</em> 应用中分析如何使用常用的几种数据存储方式				</h4>
+				<div class="info-box d-flex align-content-center">
+					<p class="avatar">
+							<img src="https://avatar.csdn.net/5/0/B/3_avel__.jpg" alt="avel__" class="avatar-pic">
+							<span class="namebox">
+								<span class="name">avel__</span>
+								<span class="triangle"></span>
+							</span>
+					</p>
+					<p class="date-and-readNum">
+						<span class="date hover-show">04-20</span>
+						<span class="read-num hover-hide">
+							<svg class="icon csdnc-yuedushu" aria-hidden="true">
+								<use xlink:href="#csdnc-yuedushu"></use>
+							</svg>
+							1183</span>
+						</p>
+					</div>
+					<p class="content oneline">
+							http://blog.csdn.net/Eduora_meimei/article/details/44198579					</p>
+			</div>
+					</a>
+	</div>
+						<div class="recommend-item-box recommend-box-ident type_blog clearfix" data-track-view='{"mod":"popu_614","con":",https://blog.csdn.net/jia12216/article/details/47379087,BlogCommendFromBaidu_5"}' data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/jia12216/article/details/47379087,BlogCommendFromBaidu_5"}'>
+		<a href="https://blog.csdn.net/jia12216/article/details/47379087" target="_blank" title="IOS的四种数据存储方式及优劣">
+			<div class="content">
+				<h4 class="text-truncate oneline">
+						<em>IOS</em>的四种数据存储方式及优劣				</h4>
+				<div class="info-box d-flex align-content-center">
+					<p class="avatar">
+							<img src="https://avatar.csdn.net/A/5/B/3_jia12216.jpg" alt="jia12216" class="avatar-pic">
+							<span class="namebox">
+								<span class="name">jia12216</span>
+								<span class="triangle"></span>
+							</span>
+					</p>
+					<p class="date-and-readNum">
+						<span class="date hover-show">09-19</span>
+						<span class="read-num hover-hide">
+							<svg class="icon csdnc-yuedushu" aria-hidden="true">
+								<use xlink:href="#csdnc-yuedushu"></use>
+							</svg>
+							8431</span>
+						</p>
+					</div>
+					<p class="content oneline">
+							IOS有四种常用数据存储方式： 
+第一种方法:用NSUserDefaults存储配置信息 
+NSUserDefaults被设计用来存储设备和应用的配置信息，它通过一个工厂方法返回默认的、也是最常用到的...					</p>
+			</div>
+					</a>
+	</div>
+								<div class="recommend-item-box recommend-ad-box" id="a_d_feed_0"></div>
+			<script>
+				var width = $("div.recommend-box").outerWidth() - 48;
+				NEWS_FEED({
+					w: width,
+					h: 60,
+					showid: 'Afihld',
+					placeholderId: 'a_d_feed_0',
+					inject: 'define',
+					define: {
+						imagePosition: 'left',
+						imageBorderRadius: 0,
+						imageWidth: 90,
+						imageHeight: 60,
+						imageFill: 'clip',
+						displayImage: true,
+						displayTitle: true,
+						titleFontSize: 20,
+						titleFontColor: '#333',
+						titleFontFamily: 'Microsoft Yahei',
+						titleFontWeight: 'bold',
+						titlePaddingTop: 0,
+						titlePaddingRight: 0,
+						titlePaddingBottom: 10,
+						titlePaddingLeft: 8,
+						displayDesc: true,
+						descFontSize: 14,
+						descPaddingLeft: 14,
+						descFontColor: '#6b6b6b',
+						descFontFamily: 'Microsoft Yahei',
+						paddingTop: 0,
+						paddingRight: 0,
+						paddingBottom: 0,
+						paddingLeft: 0,
+						backgroundColor: '#fff',
+						hoverColor: '#ca0c16'
+					}
+				})
+			</script>
+							<div class="recommend-item-box recommend-box-ident recommend-download-box clearfix" data-track-view='{"mod":"popu_614","con":",https://download.csdn.net/download/zjn640322/9474898,BlogCommendFromBaidu_6"}' data-track-click='{"mod":"popu_614","con":",https://download.csdn.net/download/zjn640322/9474898,BlogCommendFromBaidu_6"}'>
+			<a href="https://download.csdn.net/download/zjn640322/9474898" target="_blank">
+				<div class="content">
+					<div class="">
+						<span class="type">下载</span>
+						<h4 class="text-truncate oneline clearfix">
+							<em>iOS</em>存储(文件存储,sqlite<em>数据库</em>操作)						</h4>
+						<span class="data float-right">03-28</span>
+					</div>
+					<div class="desc oneline">
+							iOS中基本的文件存储代码，偏好设置，sqlite数据库操作，封装好的操作类，使用简单，代码打开即可运行					</div>
+				</div>
+			</a>
+		</div>
+						<div class="recommend-item-box recommend-box-ident type_blog clearfix" data-track-view='{"mod":"popu_614","con":",https://blog.csdn.net/tianyitianyi1/article/details/7713103,BlogCommendFromBaidu_7"}' data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/tianyitianyi1/article/details/7713103,BlogCommendFromBaidu_7"}'>
+		<a href="https://blog.csdn.net/tianyitianyi1/article/details/7713103" target="_blank" title="IOS 四种保存数据的方式">
+			<div class="content">
+				<h4 class="text-truncate oneline">
+						<em>IOS</em> 四种保存数据的方式				</h4>
+				<div class="info-box d-flex align-content-center">
+					<p class="avatar">
+							<img src="https://avatar.csdn.net/4/E/8/3_tianyitianyi1.jpg" alt="tianyitianyi1" class="avatar-pic">
+							<span class="namebox">
+								<span class="name">tianyitianyi1</span>
+								<span class="triangle"></span>
+							</span>
+					</p>
+					<p class="date-and-readNum">
+						<span class="date hover-show">07-03</span>
+						<span class="read-num hover-hide">
+							<svg class="icon csdnc-yuedushu" aria-hidden="true">
+								<use xlink:href="#csdnc-yuedushu"></use>
+							</svg>
+							10.2万</span>
+						</p>
+					</div>
+					<p class="content oneline">
+							在iOS开发过程中，不管是做什么应用，都会碰到数据保存的问题。将数据保存到本地，能够让程序的运行更加流畅，不会出现让人厌恶的菊花形状，使得用户体验更好。下面介绍一下数据保存的方式：
+
+
+1.NS...					</p>
+			</div>
+					</a>
+	</div>
+						<div class="recommend-item-box recommend-box-ident type_blog clearfix" data-track-view='{"mod":"popu_614","con":",https://blog.csdn.net/Zhi_Sheng/article/details/51275758,BlogCommendFromBaidu_8"}' data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/Zhi_Sheng/article/details/51275758,BlogCommendFromBaidu_8"}'>
+		<a href="https://blog.csdn.net/Zhi_Sheng/article/details/51275758" target="_blank" title="iOS之数据的存储(数据持久化)">
+			<div class="content">
+				<h4 class="text-truncate oneline">
+						<em>iOS</em>之数据的存储(数据持久化)				</h4>
+				<div class="info-box d-flex align-content-center">
+					<p class="avatar">
+							<img src="https://avatar.csdn.net/A/C/2/3_zhi_sheng.jpg" alt="Zhi_Sheng" class="avatar-pic">
+							<span class="namebox">
+								<span class="name">Zhi_Sheng</span>
+								<span class="triangle"></span>
+							</span>
+					</p>
+					<p class="date-and-readNum">
+						<span class="date hover-show">04-28</span>
+						<span class="read-num hover-hide">
+							<svg class="icon csdnc-yuedushu" aria-hidden="true">
+								<use xlink:href="#csdnc-yuedushu"></use>
+							</svg>
+							1960</span>
+						</p>
+					</div>
+					<p class="content oneline">
+							所谓的持久化，就是将数据保存到硬盘中，使得在应用程序或机器重启后可以继续访问之前保存的数据。其实储存的形式无非就这么几种，而我们还必须要关心的是，这些文件会被放置在那个文件下，然后如何读取。 
+也就是...					</p>
+			</div>
+					</a>
+	</div>
+						<div class="recommend-item-box recommend-box-ident type_blog clearfix" data-track-view='{"mod":"popu_614","con":",https://blog.csdn.net/ahaitongxue/article/details/78758502,BlogCommendFromBaidu_9"}' data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/ahaitongxue/article/details/78758502,BlogCommendFromBaidu_9"}'>
+		<a href="https://blog.csdn.net/ahaitongxue/article/details/78758502" target="_blank" title="ios本地持久化存储">
+			<div class="content">
+				<h4 class="text-truncate oneline">
+						<em>ios</em>本地<em>持久化存储</em>				</h4>
+				<div class="info-box d-flex align-content-center">
+					<p class="avatar">
+							<img src="https://avatar.csdn.net/E/C/F/3_ahaitongxue.jpg" alt="ahaitongxue" class="avatar-pic">
+							<span class="namebox">
+								<span class="name">ahaitongxue</span>
+								<span class="triangle"></span>
+							</span>
+					</p>
+					<p class="date-and-readNum">
+						<span class="date hover-show">12-09</span>
+						<span class="read-num hover-hide">
+							<svg class="icon csdnc-yuedushu" aria-hidden="true">
+								<use xlink:href="#csdnc-yuedushu"></use>
+							</svg>
+							69</span>
+						</p>
+					</div>
+					<p class="content oneline">
+							1.临时缓存
+
+
+
+先说说临时缓存，临时缓存一般相当于用来管理应用程序中全局需要常用的一些内容。比如当前用户的ID或者当前的定位信息等。
+
+常用的方式就是写一个静态变量，然后使用类方法调用。（或者单例...					</p>
+			</div>
+					</a>
+	</div>
+						<div class="recommend-item-box type_hot_word">
+									<div class="content clearfix oneline">
+				<h5 class="float-left">相关热词</h5>
+				<div class="float-left">
+									<span>
+						<a href="https://blog.csdn.net/a997013919/article/details/78081115" target="_blank">
+						ios视频传输</a>
+					</span>
+									<span>
+						<a href="https://blog.csdn.net/pingfan183/article/details/41546873" target="_blank">
+						ios逻辑运算</a>
+					</span>
+									<span>
+						<a href="https://blog.csdn.net/haoaoo/article/details/77248813" target="_blank">
+						ios页面跳转</a>
+					</span>
+									<span>
+						<a href="https://blog.csdn.net/GeekLeee/article/details/53944344" target="_blank">
+						ios状态栏</a>
+					</span>
+									<span>
+						<a href="https://blog.csdn.net/Fuck_name/article/details/47083857" target="_blank">
+						ios的生命周期</a>
+					</span>
+								</div>
+			</div>
+					</div>
+		<div class="recommend-item-box blog-expert-recommend-box">
+			<h4 class="text-truncate">博主推荐
+			</h4>
+			<div class="blog-expert-recommend">
+				<div class="blog-expert-load-new" data-index="3">
+					<svg version="1.1" viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+					<path d="M142.5,57.5c-1.3-1.2-2.1-3.3-2.1-5.4c0-4.2,3.3-7.5,7.5-7.5h19.6c4.2,0,7.5,3.3,7.5,7.5s-3.3,7.5-7.5,7.5h-4.2
+					 C170.8,71.2,175,85,175,100c0,41.7-33.8,75-75,75c-4.2,0-7.5-3.3-7.5-7.5c0-4.2,3.3-7.5,7.5-7.5c33.3,0,60-27.1,60-60
+					 C160,83.7,153.8,68.7,142.5,57.5L142.5,57.5z M57.5,142.5c1.2,1.2,2.1,3.3,2.1,5.4c0,4.2-3.3,7.5-7.5,7.5H32.5
+					 c-4.2,0-7.5-3.3-7.5-7.5c0-4.2,3.3-7.5,7.5-7.5h4.2C29.2,128.8,25,115,25,100c0-41.7,33.7-75,75-75c4.2,0,7.5,3.3,7.5,7.5
+					 S104.2,40,100,40c-33.3,0-60,27.1-60,60C40,116.2,46.2,131.2,57.5,142.5z"/>
+					</svg>
+					<span>换一批</span>
+				</div>
+				<div class="blog-expert">
+				</div>
+			</div>
+		</div>
+
+
+            <div class="recommend-loading-box">
+                <img src='https://csdnimg.cn/release/phoenix/images/feedLoading.gif'>
+            </div>
+            <div class="recommend-end-box">
+                <p class="text-center">没有更多推荐了，<a href="https://blog.csdn.net/" class="c-blue c-blue-hover c-blue-focus">返回首页</a></p>
+            </div>
+        </div>
+    </main>
+
+    <aside>
+		    <div id="asideProfile" class="aside-box">
+    <!-- <h3 class="aside-title">个人资料</h3> -->
+    <div class="profile-intro d-flex">
+        <div class="avatar-box d-flex justify-content-center flex-column">
+            <a href="https://blog.csdn.net/show3">
+                <img src="https://avatar.csdn.net/5/B/7/3_show3.jpg" class="avatar_pic">
+            </a>
+        </div>
+        <div class="user-info d-flex justify-content-center flex-column">
+            <p class="name csdn-tracking-statistics tracking-click" data-mod="popu_379">
+                <a href="https://blog.csdn.net/show3" target="_blank" class="" id="uid">3show</a>
+            </p>
+                    </div>
+                <div class="opt-box d-flex justify-content-center flex-column">
+            <span  class="csdn-tracking-statistics tracking-click" data-mod="popu_379">
+                                <a class="btn btn-sm btn-red-hollow" href="https://passport.csdn.net/account/login?from=https://blog.csdn.net/show3/article/details/54924713" target="_self">关注</a>
+                            </span>
+                    </div>
+            </div>
+    <div class="data-info d-flex item-tiling">
+                <dl class="text-center" title="5">
+                        <dt><a href="https://blog.csdn.net/show3?t=1">原创</a></dt>
+            <dd><a href="https://blog.csdn.net/show3?t=1"><span class="count">5</span></a></dd>
+                    </dl>
+        <dl class="text-center" id="fanBox" title="4">
+            <dt>粉丝</dt>
+            <dd><span class="count" id="fan">4</span></dd>
+        </dl>
+        <dl class="text-center" title="0">
+            <dt>喜欢</dt>
+            <dd><span class="count">0</span></dd>
+        </dl>
+        <dl class="text-center" title="0">
+            <dt>评论</dt>
+            <dd><span class="count">0</span></dd>
+        </dl>
+    </div>
+    <div class="grade-box clearfix">
+        <dl>
+            <dt>等级：</dt>
+            <dd>
+                <a href="https://blog.csdn.net/home/help.html#level" title="2级,点击查看等级说明" target="_blank">
+                    <svg class="icon icon-level" aria-hidden="true">
+                        <use xlink:href="#csdnc-bloglevel-2"></use>
+                    </svg>
+                </a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>访问：</dt>
+            <dd title="9295">
+                9295            </dd>
+        </dl>
+        <dl>
+            <dt>积分：</dt>
+            <dd title="153">
+                153            </dd>
+        </dl>
+        <dl title="1136576">
+            <dt>排名：</dt>
+            <dd>113万+</dd>
+        </dl>
+    </div>
+    </div>
+		    <div class="csdn-tracking-statistics mb8 box-shadow" data-pid="blog" data-mod="popu_4" style="height:250px;">
+    <div class="aside-content text-center" id="cpro_u2734133">
+      <!-- 广告位：PC-博客内页-百度联盟-300x250 --><script type="text/javascript" src="//rabc1.iteye.com/common/production/web/z3n86.js?lg=yyovfyh"></script>    </div>
+</div>
+		    <div id="asideNewArticle" class="aside-box">
+    <h3 class="aside-title">最新文章</h3>
+    <div class="aside-content">
+        <ul class="inf_list clearfix csdn-tracking-statistics tracking-click" data-mod="popu_382">
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/show3/article/details/51780721" target="_blank">iOS中默认样式修改</a>
+            </li>
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/show3/article/details/51364720" target="_blank">App接口设计原则</a>
+            </li>
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/show3/article/details/51029030" target="_blank">开发人员结构配比</a>
+            </li>
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/show3/article/details/50994784" target="_blank">树莓派wifi配置</a>
+            </li>
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/show3/article/details/43735619" target="_blank">ios 中 使用mod和exp生成公钥(.cer)</a>
+            </li>
+                    </ul>
+    </div>
+</div>
+		    		    <div id="asideCategory" class="aside-box">
+    <h3 class="aside-title">个人分类</h3>
+    <div class="aside-content">
+        <ul>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/show3/article/category/2891003">
+                    <span class="title oneline">ios</span>
+                    <span class="count float-right">3篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/show3/article/category/6154594">
+                    <span class="title oneline">树莓派</span>
+                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/show3/article/category/6161539">
+                    <span class="title oneline">管理</span>
+                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                    </ul>
+    </div>
+    </div>
+		    <div id="asideArchive" class="aside-box">
+    <h3 class="aside-title">归档</h3>
+    <div class="aside-content">
+        <ul class="archive-list">
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/show3/article/month/2017/02">
+                    2017年2月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/show3/article/month/2016/06">
+                    2016年6月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/show3/article/month/2016/05">
+                    2016年5月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/show3/article/month/2016/03">
+                    2016年3月                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/show3/article/month/2015/02">
+                    2015年2月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                    </ul>
+    </div>
+    </div>
+		    <div id="asideHotArticle" class="aside-box">
+	<h3 class="aside-title">热门文章</h3>
+	<div class="aside-content">
+		<ul class="hotArticle-list csdn-tracking-statistics tracking-click" data-mod="popu_521">
+							<li>
+					<a href="https://blog.csdn.net/show3/article/details/51364720">App接口设计原则</a>
+					<p class="read">阅读量：<span>3380</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/show3/article/details/54924713">iOS客户端持久化存储——从模型到数据库</a>
+					<p class="read">阅读量：<span>2093</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/show3/article/details/51029030">开发人员结构配比</a>
+					<p class="read">阅读量：<span>2042</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/show3/article/details/43735619">ios 中 使用mod和exp生成公钥(.cer)</a>
+					<p class="read">阅读量：<span>1125</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/show3/article/details/51780721">iOS中默认样式修改</a>
+					<p class="read">阅读量：<span>386</span></p>
+				</li>
+					</ul>
+	</div>
+</div>
+		    		<div id="asideFooter">
+			
+		<div class="aside-box">
+						<script type="text/javascript" src="//rabc1.iteye.com/common/site/resource/nqnl.js?mhzzpw=gzj"></script>
+					</div>
+				<div class="aside-box">
+			<div class="persion_article">
+			</div>
+		</div>
+	</div>
+</aside>
+<script src="https://csdnimg.cn/pubfooter/js/publib_footer-1.0.3.js" data-isfootertrack="false" type="text/javascript"></script>
+<script>
+	$("a.flexible-btn").click(function(){
+		$(this).parents('div.aside-box').removeClass('flexible-box');
+		$(this).remove();
+	})
+</script>
+</div>
+<div class="mask-dark"></div>
+<div class="pulllog-box" style="display: block;">
+	<div class="pulllog clearfix">
+		<span class="text float-left">
+			<!-- 广告位：PC-博客内页底通 文字链位置 -->
+										<script>
+			var mediav_ad_pub = 'cXt9eo_2313086';
+			var mediav_ad_width = '500';
+			var mediav_ad_height = '36';
+			</script>
+			<script type="text/javascript" language="javascript" charset="utf-8" src="//static.mediav.com/js/mvf_g2.js"></script>
+
+			
+		</span>
+		<div class="pulllog-btn float-right clearfix">
+            <button class="pulllog-login float-left csdn-tracking-statistics tracking-click" data-bind-login= "true" data-mod="popu_557">
+                登录
+            </button>
+            <div class="pulllog-sigin float-left csdn-tracking-statistics tracking-click" data-mod="popu_558">
+                <a href="https://passport.csdn.net/account/mobileregister" target="_blank">注册</a>
+            </div>
+            <button class="btn-close">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#csdnc-times"></use>
+                </svg>
+            </button>
+		</div>
+	</div>
+</div>
+<div id="loginWrap" style="display:none"></div>
+<div class="tool-box">
+	<ul class="meau-list">
+		<li class="btn-like-box ">
+			<button class=" low-height hover-box btn-like " title="点赞">
+				<svg class="icon active hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-thumbsup-ok"></use>
+				</svg>
+				<svg class="icon no-active hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-thumbsup"></use>
+				</svg>
+				<span class="hover-show text-box text">
+					<span class="no-active">点赞</span>
+					<span class="active">取消点赞</span>
+				</span>
+				<p>0</p>
+			</button>
+		</li>
+		<li class="">
+						<a class="btn-comments low-height hover-box" title="写评论" href="#commentBox">
+				<svg class="icon hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-comments"></use>
+				</svg>
+				<span class="hover-show text">评论</span>
+				<p class="">
+										</p>
+			</a>
+		</li>
+		<li class="toc-container-box" id="liTocBox">
+			<button class="btn-toc low-height hover-box" title="目录">
+				<svg class="icon hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-contents"></use>
+				</svg>
+				<span class="hover-show text">目录</span>
+			</button>
+			<div class="toc-container">
+				<div class="pos-box">
+					<div class="icon-arrow"></div>
+					<div class="scroll-box">
+						<div class="toc-box"></div>
+					</div>
+				</div>
+				<div class="opt-box">
+					<button class="btn-opt prev nomore" title="向上">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#csdnc-chevronup"></use>
+						</svg>
+					</button>
+					<button class="btn-opt next">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#csdnc-chevrondown"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</li>
+		<li>
+			<button class="btn-bookmark low-height hover-box" title="收藏">
+				<svg class="icon active hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-bookmark-ok"></use>
+				</svg>
+				<svg class="icon no-active hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-bookmark"></use>
+				</svg>
+					<span class="hover-show text">收藏</span>
+				<!-- <span class="hover-show text-box text">
+					<span class="no-active">收藏</span>
+					<span class="active">取消收藏</span>
+				</span> -->
+			</button>
+		</li>
+				<li class="bdsharebuttonbox">
+			<button class="btn-comments low-height hover-box" >
+				<a href="#" class="bds_weixin clear-share-style" data-cmd="weixin" title="手机看"></a>
+				<svg class="icon hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-wechat"></use>
+				</svg>
+				<span class="hover-show text text3">
+					手机看
+				</span>
+			</button>
+		</li>
+							<li class="widescreen-hide">
+				<a class="btn-comments low-height hover-box" href="https://blog.csdn.net/show3/article/details/51780721" title="iOS中默认样式修改">
+					<svg class="icon hover-hide" aria-hidden="true">
+						<use xlink:href="#csdnc-shangyiye"></use>
+					</svg>
+					<span class="hover-show text text3">上一篇</span>
+				</a>
+			</li>
+								<li class="bdsharebuttonbox _360_interactive"style="margin-top: 8px;">
+			<script type="text/javascript" src="//cjhd.mediav.com/js/interactive_plugin.js"></script> 
+			<style>
+				#_360_interactive > *{
+					 margin-left: -8px;
+				}
+			</style>
+			<div id="_360_interactive" > 
+				<script> INTERACTIVE_PLUGIN.render({ showid : 'N0ufqn', w: 60, h: 60, type: 'click', placeholderId: '_360_interactive' }); </script> 
+			</div>
+			<img src="//img-ads.csdn.net/2016/201608021757063065.png" style="margin: 0 auto;display: block;" alt="">
+		</li>
+	  
+		<!-- 宽屏更多按钮 -->
+		<li class="widescreen-more">
+			<a class="btn-comments chat-ask-button low-height hover-box" title="快问" href="#chatqa">
+				<svg class="icon hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-more"></use>
+				</svg>
+				<span class="hover-show text">更多</span>
+				
+			</a>
+			<ul class="widescreen-more-box">
+													<li class="widescreen-more">
+						<a class="btn-comments low-height hover-box" href="https://blog.csdn.net/show3/article/details/51780721" title="iOS中默认样式修改">
+							<svg class="icon hover-hide" aria-hidden="true">
+								<use xlink:href="#csdnc-shangyiye"></use>
+							</svg>
+							<span class="hover-show text text3">上一篇</span>
+						</a>
+					</li>
+											</ul>
+		</li>
+	</ul>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "1", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'https://csdnimg.cn/static/api/js/share.js?v=89860594'];</script>
+<script>
+    var recommendCount = 10;
+    recommendCount = recommendCount > 1 ? (recommendCount + (recommendCount>6 ? 2 : 1)) : recommendCount;
+    var articleTit = "iOS客户端持久化存储——从模型到数据库";
+    var ChannelId = 1;
+    var articleId = "54924713";
+    var commentscount = 0;
+    var islock = false;
+    var curentUrl = "https://blog.csdn.net/show3/article/details/54924713";
+    var myUrl = "https://my.csdn.net/";
+    //1禁止评论，2正常
+    var commentAuth = 2;
+    //百度搜索
+    var baiduKey = "ios+%E6%A0%B9%E6%8D%AE%E6%A8%A1%E5%9E%8B%E5%B1%9E%E6%80%A7%E4%BD%9C%E4%B8%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%97%E6%AE%B5";
+    var needInsertBaidu = false;
+    // 代码段样式
+    var codeStyle = '';
+		var highlight = ["ios","\u5ba2\u6237\u7aef","\u6301\u4e45\u5316\u5b58\u50a8","\u6a21\u578b","\u6570\u636e\u5e93"];//高亮数组
+		// 相关推荐博主数据
+    var RecommendBlogExpertList = [{"user_name":"u013087513","nick_name":"LIUXUN1993728","avatar":"https:\/\/avatar.csdn.net\/0\/C\/7\/3_u013087513.jpg","is_expert":true,"article_count":345},{"user_name":"u013263917","nick_name":"\u5764\u5c0f","avatar":"https:\/\/avatar.csdn.net\/0\/C\/8\/3_u013263917.jpg","is_expert":true,"article_count":262},{"user_name":"jiankeufo","nick_name":"\u5357\u5cb8\u9752\u6800","avatar":"https:\/\/avatar.csdn.net\/8\/9\/A\/3_jiankeufo.jpg","is_expert":false,"article_count":769},{"user_name":"u012386696","nick_name":"\u5c01\u5bb8\u843d\u5b87","avatar":"https:\/\/avatar.csdn.net\/4\/F\/2\/3_u012386696.jpg","is_expert":false,"article_count":126},{"user_name":"zhangyulin311","nick_name":"\u5f20\u7389\u7433\u7684\u535a\u5ba2","avatar":"https:\/\/avatar.csdn.net\/7\/E\/5\/3_zhangyulin311.jpg","is_expert":false,"article_count":181},{"user_name":"qq_35700731","nick_name":"\u4fa0\u5ba2\u5b64","avatar":"https:\/\/avatar.csdn.net\/3\/D\/2\/3_qq_35700731.jpg","is_expert":false,"article_count":9},{"user_name":"xipinghuan2106","nick_name":"xipinghuan2106","avatar":"https:\/\/avatar.csdn.net\/1\/7\/C\/3_xipinghuan2106.jpg","is_expert":false,"article_count":64},{"user_name":"z1246300949","nick_name":"monoCuty","avatar":"https:\/\/avatar.csdn.net\/7\/C\/E\/3_z1246300949.jpg","is_expert":false,"article_count":27},{"user_name":"qq_28884869","nick_name":"Weeao","avatar":"https:\/\/avatar.csdn.net\/1\/1\/8\/3_qq_28884869.jpg","is_expert":false,"article_count":204},{"user_name":"u010618987","nick_name":"Lefe","avatar":"https:\/\/avatar.csdn.net\/E\/7\/2\/3_u010618987.jpg","is_expert":false,"article_count":57}];
+		
+</script>
+<script src="https://csdnimg.cn/public/sandalstrap/1.4/js/sandalstrap.min.js"></script>
+<script src="https://csdnimg.cn/release/phoenix/vendor/pagination/paging.js"></script>
+<script src='https://csdnimg.cn/public/common/gotop/js/goTop-v1.0.min.js?v201803151422'></script>
+<script>
+    GoTop({
+        right: 8,
+        hasReport: true,
+        reportFun: function() {
+            showReport(false,"iOS客户端持久化存储——从模型到数据库");
+        }
+    })
+</script>
+<script src="https://g.csdnimg.cn/login-box/1.0.0/login-box.js"></script>
+<script src="https://csdnimg.cn/release/phoenix/template/js/common-3817a3ac68.min.js"></script>
+<script src="https://csdnimg.cn/release/phoenix/template/js/detail-060912993e.min.js"></script>
+<script src="https://csdnimg.cn/release/phoenix/themes/skin-yellow/skin-yellow-9376486353.min.js"></script>
+<script src="https://csdnimg.cn/search/baidu_search-1.1.2.js?v=201802071056&autorun=true&install=true&keyword=ios+%E6%A0%B9%E6%8D%AE%E6%A8%A1%E5%9E%8B%E5%B1%9E%E6%80%A7%E4%BD%9C%E4%B8%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%97%E6%AE%B5"  type="text/javascript"></script>
+</body>
+<!-- 第四范式SDK -->
+
+<!-- 高亮未与 markdown兼容  -->
+<script type="text/javascript" src="https://static-blog.csdn.net/mdeditor/public/res/bower-libs/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            "HTML-CSS": {
+                    linebreaks: { automatic: true, width: "94%container" },
+                    imageFont: null
+            },
+            tex2jax: {
+                preview: "none"
+            },
+            mml2jax: {
+                preview: 'none'
+            }
+    });
+</script>
+</html>

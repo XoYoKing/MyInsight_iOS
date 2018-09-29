@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -893,7 +893,7 @@
 		032A3439125D4C526D13B8F12BF44DBC /* WXAnimationModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXAnimationModule.m; path = ios/sdk/WeexSDK/Sources/Module/WXAnimationModule.m; sourceTree = "<group>"; };
 		03450D9774829915D7E7D617592A9A28 /* NSTimer+Weex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSTimer+Weex.h"; path = "ios/sdk/WeexSDK/Sources/Utility/NSTimer+Weex.h"; sourceTree = "<group>"; };
 		03D8C2A794DEBD69272F81A0E287480C /* WXResourceRequestHandlerDefaultImpl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXResourceRequestHandlerDefaultImpl.m; path = ios/sdk/WeexSDK/Sources/Network/WXResourceRequestHandlerDefaultImpl.m; sourceTree = "<group>"; };
-		047F84635D07191832C06823675FD553 /* libSocketRocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSocketRocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		047F84635D07191832C06823675FD553 /* libSocketRocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSocketRocket.a; path = libSocketRocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A1CF48A6C62F30EA0545560501E808 /* WXTransform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXTransform.m; path = ios/sdk/WeexSDK/Sources/Component/WXTransform.m; sourceTree = "<group>"; };
 		04FE444406A4B80DB173D03C6A01F681 /* WXURLRewriteProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXURLRewriteProtocol.h; path = ios/sdk/WeexSDK/Sources/Protocol/WXURLRewriteProtocol.h; sourceTree = "<group>"; };
 		059650C05E28D9999E4CF9A667A8E062 /* MACustomBuildingOverlayRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MACustomBuildingOverlayRenderer.h; path = MAMapKit.framework/Headers/MACustomBuildingOverlayRenderer.h; sourceTree = "<group>"; };
@@ -938,12 +938,12 @@
 		0EE7921788E716D8D1583BAB290D42B3 /* NSSet+WXRuntimePropertyDescriptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSSet+WXRuntimePropertyDescriptor.m"; path = "sdk/WXDevTool/Source/PonyDebugger/NSSet+WXRuntimePropertyDescriptor.m"; sourceTree = "<group>"; };
 		0EEA404307D9A2B26354FF0FF5741085 /* WXContainerIndex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXContainerIndex.h; path = sdk/WXDevTool/Source/PonyDebugger/WXContainerIndex.h; sourceTree = "<group>"; };
 		0F203226896F80300010D549A5C59324 /* WXDomainController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXDomainController.m; path = sdk/WXDevTool/Source/PonyDebugger/WXDomainController.m; sourceTree = "<group>"; };
-		0F39D7885D4CEC8D6995761625205B6C /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F39D7885D4CEC8D6995761625205B6C /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F48B585F7C54AD7180B9FFC4D1E1DDB /* WXRecycleListComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXRecycleListComponent.m; path = ios/sdk/WeexSDK/Sources/Component/RecycleList/WXRecycleListComponent.m; sourceTree = "<group>"; };
 		0FA373FB0296E3E310528CFA209A7BD8 /* WXRootView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXRootView.h; path = ios/sdk/WeexSDK/Sources/View/WXRootView.h; sourceTree = "<group>"; };
 		0FB6A0571F4041B783D1233B0BB39BAE /* MAUserLocationRepresentation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAUserLocationRepresentation.h; path = MAMapKit.framework/Headers/MAUserLocationRepresentation.h; sourceTree = "<group>"; };
 		0FBD1060A7F0E64EEB52AAF01B3E969D /* IQUIView+Hierarchy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUIView+Hierarchy.m"; path = "IQKeyboardManager/Categories/IQUIView+Hierarchy.m"; sourceTree = "<group>"; };
-		0FF80490B0498A4DD8C87A5DCDCD3B1E /* libGTMBase64.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGTMBase64.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FF80490B0498A4DD8C87A5DCDCD3B1E /* libGTMBase64.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libGTMBase64.a; path = libGTMBase64.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		10005E72C972B0DF245F4463959BED53 /* WXConvert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXConvert.h; path = ios/sdk/WeexSDK/Sources/Utility/WXConvert.h; sourceTree = "<group>"; };
 		101943A06A84F66D65008BEC0BAB85C9 /* WXTimelineDomain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXTimelineDomain.h; path = sdk/WXDevTool/Source/DerivedSources/WXTimelineDomain.h; sourceTree = "<group>"; };
 		106659D526D35A0EF07EA1D5C3FBE48D /* WXClipboardModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXClipboardModule.h; path = ios/sdk/WeexSDK/Sources/Module/WXClipboardModule.h; sourceTree = "<group>"; };
@@ -979,7 +979,7 @@
 		16A19A7204D8848BEC8C2C92C8D78A25 /* BMKRadarManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRadarManager.h; path = BaiduMapKit/BaiduMapAPI_Radar.framework/Headers/BMKRadarManager.h; sourceTree = "<group>"; };
 		16C5925EC25FDD597FAB1C9471B69075 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderOperation.m; path = SDWebImage/SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
 		170E0517855FD71CEE08F41C447E254A /* WeexSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WeexSDK-prefix.pch"; sourceTree = "<group>"; };
-		17132887BD5692AA927088CFE138FC64 /* libCocoaAsyncSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaAsyncSocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		17132887BD5692AA927088CFE138FC64 /* libCocoaAsyncSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCocoaAsyncSocket.a; path = libCocoaAsyncSocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		177B206D4A783B6D6DD58D1C608086FB /* NSArray+WXRuntimePropertyDescriptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+WXRuntimePropertyDescriptor.h"; path = "sdk/WXDevTool/Source/PonyDebugger/NSArray+WXRuntimePropertyDescriptor.h"; sourceTree = "<group>"; };
 		17CEFA4AC546D7A753AC2BC9A40A5569 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
 		17D34DD41CCDA8FD21016BEA65092561 /* BabyCallback.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BabyCallback.h; path = Classes/objc/BabyCallback.h; sourceTree = "<group>"; };
@@ -989,13 +989,13 @@
 		18601C1CF7A1BA2EFDA8D4DC103FD8D9 /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
 		1873A7F74327E4D38855FDA60E0F3779 /* CocoaAsyncSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.xcconfig; sourceTree = "<group>"; };
 		18EC5576B63FCBDDE3ED51BD32E0B716 /* AMapNearbySearchManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapNearbySearchManager.h; path = AMapSearchKit.framework/Headers/AMapNearbySearchManager.h; sourceTree = "<group>"; };
-		19121BF0CCB546C1EEEF1A8AF1D216C5 /* libIQKeyboardManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIQKeyboardManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		19121BF0CCB546C1EEEF1A8AF1D216C5 /* libIQKeyboardManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libIQKeyboardManager.a; path = libIQKeyboardManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		19249BE304E823423BD0E05C65020652 /* AMapNaviCompositeManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapNaviCompositeManager.h; path = AMapNaviKit.framework/Headers/AMapNaviCompositeManager.h; sourceTree = "<group>"; };
 		1978F0A41A58178502FCA112900CA70A /* WXCycleSliderComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXCycleSliderComponent.m; path = ios/sdk/WeexSDK/Sources/Component/WXCycleSliderComponent.m; sourceTree = "<group>"; };
 		19A86922ABAF95B83FB052DC5F640BD8 /* IQKeyboardManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQKeyboardManager-dummy.m"; sourceTree = "<group>"; };
 		19ADFBCE80022419AF6BBCFAD5B0C4BA /* ForegroundReconnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ForegroundReconnection.h; path = MQTTClient/MQTTClient/ForegroundReconnection.h; sourceTree = "<group>"; };
 		19BBD3252914A0EDC78FA94A52925293 /* HMScannerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HMScannerController.h; path = HMQRCodeScanner/QRCode/HMScannerController.h; sourceTree = "<group>"; };
-		19FB0775ACF1A404056C999BB0C8B210 /* libWXDevtool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWXDevtool.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		19FB0775ACF1A404056C999BB0C8B210 /* libWXDevtool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libWXDevtool.a; path = libWXDevtool.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE3CE2B4A5A417BEDC986401DA7E608 /* WXDebuggerUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXDebuggerUtility.m; path = sdk/WXDevTool/Source/PonyDebugger/WXDebuggerUtility.m; sourceTree = "<group>"; };
 		1B130CFB3BCF8BD595AAF0B8E3B9DEC7 /* WXRuntimeTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXRuntimeTypes.m; path = sdk/WXDevTool/Source/DerivedSources/WXRuntimeTypes.m; sourceTree = "<group>"; };
 		1B4A3EF2DA3770D220355E07B36241A1 /* WXJSExceptionInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXJSExceptionInfo.m; path = ios/sdk/WeexSDK/Sources/Model/WXJSExceptionInfo.m; sourceTree = "<group>"; };
@@ -1021,7 +1021,7 @@
 		2161783141934643CB5CC97A055C064A /* WXExtendCallNativeManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXExtendCallNativeManager.h; path = ios/sdk/WeexSDK/Sources/Manager/WXExtendCallNativeManager.h; sourceTree = "<group>"; };
 		2161F78E729569ED9833649ABA598FD5 /* WXConsoleTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXConsoleTypes.h; path = sdk/WXDevTool/Source/DerivedSources/WXConsoleTypes.h; sourceTree = "<group>"; };
 		21E1B5E0FEFC33136710E11A8977F8FF /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
-		2218563BF848D7FB90B4AA1DE97CACD5 /* libPods-MyInsightUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyInsightUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2218563BF848D7FB90B4AA1DE97CACD5 /* libPods-MyInsightUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MyInsightUITests.a"; path = "libPods-MyInsightUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C21EB5BC204EDB144BA187F90C61C8 /* WXEditComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXEditComponent.h; path = ios/sdk/WeexSDK/Sources/Component/WXEditComponent.h; sourceTree = "<group>"; };
 		230624DFDA72F83DD1D5D46D98F189D8 /* WXResourceLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXResourceLoader.m; path = ios/sdk/WeexSDK/Sources/Loader/WXResourceLoader.m; sourceTree = "<group>"; };
 		235D0AC940F498DC7F6CBB7B860574DB /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Utils.framework; path = BaiduMapKit/BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
@@ -1067,7 +1067,7 @@
 		30F45811E510898E8E6E2C2BC7836105 /* libSocialSina.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSocialSina.a; path = UShareSDK/SocialLibraries/Sina/libSocialSina.a; sourceTree = "<group>"; };
 		312F0ABBB7B7241426A92D162888546C /* NSArray+Weex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+Weex.h"; path = "ios/sdk/WeexSDK/Sources/Utility/NSArray+Weex.h"; sourceTree = "<group>"; };
 		315056F8F490B3DEF71FCAC206E573F3 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
-		316879D661CFAA41154A6F359330E305 /* native-bundle-main.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = "native-bundle-main.js"; path = "pre-build/native-bundle-main.js"; sourceTree = "<group>"; };
+		316879D661CFAA41154A6F359330E305 /* native-bundle-main.js */ = {isa = PBXFileReference; includeInIndex = 1; name = "native-bundle-main.js"; path = "pre-build/native-bundle-main.js"; sourceTree = "<group>"; };
 		31BF46A8D3F90776C51FDF61DFAC7FC9 /* NSArray+WX_JSONObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+WX_JSONObject.h"; path = "sdk/WXDevTool/Source/PonyDebugger/NSArray+WX_JSONObject.h"; sourceTree = "<group>"; };
 		3221C619FAD9256BE082BAD48EF4C32C /* Pods-MyInsight-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MyInsight-dummy.m"; sourceTree = "<group>"; };
 		3299F2B53C301BFDA154050A4DA6BFCE /* MAOverlayPathRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOverlayPathRenderer.h; path = MAMapKit.framework/Headers/MAOverlayPathRenderer.h; sourceTree = "<group>"; };
@@ -1078,14 +1078,14 @@
 		334C0852CC47504FC30EA3B3A14A928E /* WXServiceFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXServiceFactory.h; path = ios/sdk/WeexSDK/Sources/Manager/WXServiceFactory.h; sourceTree = "<group>"; };
 		33511BEDB630A16AB76683EC689A19CC /* WXRecycleListUpdateManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXRecycleListUpdateManager.h; path = ios/sdk/WeexSDK/Sources/Component/RecycleList/WXRecycleListUpdateManager.h; sourceTree = "<group>"; };
 		33BAAA13F53371AC0EA83E67F15E9F47 /* WXSDKEngine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXSDKEngine.m; path = ios/sdk/WeexSDK/Sources/Engine/WXSDKEngine.m; sourceTree = "<group>"; };
-		34495D88B1DE3A6D9FD82A58D4897CC1 /* libWeexSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWeexSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		34495D88B1DE3A6D9FD82A58D4897CC1 /* libWeexSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libWeexSDK.a; path = libWeexSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		34E650D25506D944C06F84A7D7F4B6E2 /* BMKSuggestionSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKSuggestionSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKSuggestionSearch.h; sourceTree = "<group>"; };
 		35098A5186AC7A2C71EF15508BEE845E /* MQTTSSLSecurityPolicyEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTSSLSecurityPolicyEncoder.h; path = MQTTClient/MQTTClient/MQTTSSLSecurityPolicyEncoder.h; sourceTree = "<group>"; };
 		352786963CBD808F182EBE3219A28762 /* WXNetworkTransaction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXNetworkTransaction.h; path = sdk/WXDevTool/Source/WXTracing/WXNetwork/WXNetworkTransaction.h; sourceTree = "<group>"; };
 		353BFE84D5A5BCE720B7C40879793C0E /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = SDWebImage/SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
 		35485CE90F695B48E69173D33C2041C7 /* WXEventModuleProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXEventModuleProtocol.h; path = ios/sdk/WeexSDK/Sources/Protocol/WXEventModuleProtocol.h; sourceTree = "<group>"; };
 		35A6631F597BD67AC67FEB3DF3ABC9B7 /* BMKRadarOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRadarOption.h; path = BaiduMapKit/BaiduMapAPI_Radar.framework/Headers/BMKRadarOption.h; sourceTree = "<group>"; };
-		366A74814D32D28EE254426E3373AD57 /* libBabyBluetooth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBabyBluetooth.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		366A74814D32D28EE254426E3373AD57 /* libBabyBluetooth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libBabyBluetooth.a; path = libBabyBluetooth.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C0DA46739E2CA1F485A5846BB3C7C8 /* WBHttpRequest+WeiboToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WBHttpRequest+WeiboToken.h"; path = "UShareSDK/SocialLibraries/Sina/SinaSDK/WBHttpRequest+WeiboToken.h"; sourceTree = "<group>"; };
 		36EB817A2B815AB6B1CE6094EA15E196 /* AMapGeoFenceRegionObj.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapGeoFenceRegionObj.h; path = AMapLocationKit.framework/Headers/AMapGeoFenceRegionObj.h; sourceTree = "<group>"; };
 		3713A0244DEC26099BE12310A18991AF /* WXInvocationConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXInvocationConfig.m; path = ios/sdk/WeexSDK/Sources/Manager/WXInvocationConfig.m; sourceTree = "<group>"; };
@@ -1096,7 +1096,7 @@
 		3804E38A75EA56FE02A22CCE06DFD3CF /* WXLoadingIndicator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXLoadingIndicator.m; path = ios/sdk/WeexSDK/Sources/Component/WXLoadingIndicator.m; sourceTree = "<group>"; };
 		381B71BDF79AEF71FC2367E91CD4F27D /* WXMemoryTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXMemoryTypes.m; path = sdk/WXDevTool/Source/DerivedSources/WXMemoryTypes.m; sourceTree = "<group>"; };
 		38229A707471E0D3F94D4D9C025947BA /* MAOfflineProvince.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOfflineProvince.h; path = MAMapKit.framework/Headers/MAOfflineProvince.h; sourceTree = "<group>"; };
-		389A7EC85708AEA3D9D30A16BD41856D /* libPods-MyInsight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyInsight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		389A7EC85708AEA3D9D30A16BD41856D /* libPods-MyInsight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MyInsight.a"; path = "libPods-MyInsight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38EE06EE457AB87A98C8DDE3C2171D5A /* AMapServices.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapServices.h; path = AMapFoundationKit.framework/Headers/AMapServices.h; sourceTree = "<group>"; };
 		38FB633705417158AEAB7ECBB8A87140 /* WXAnimationModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXAnimationModule.h; path = ios/sdk/WeexSDK/Sources/Module/WXAnimationModule.h; sourceTree = "<group>"; };
 		396F0383E2D24C3CE51878279D86540E /* MAMultiColoredPolylineRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAMultiColoredPolylineRenderer.h; path = MAMapKit.framework/Headers/MAMultiColoredPolylineRenderer.h; sourceTree = "<group>"; };
@@ -1238,11 +1238,11 @@
 		5B2712ED9327C11FBFCA691DE60F0B15 /* WXNavigationProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXNavigationProtocol.h; path = ios/sdk/WeexSDK/Sources/Protocol/WXNavigationProtocol.h; sourceTree = "<group>"; };
 		5B617CB52480C7029A686A38413C7594 /* WXDevtool-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WXDevtool-dummy.m"; sourceTree = "<group>"; };
 		5B820E42B9B67897A847A1E2967CD6EE /* Pods-MyInsightUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyInsightUITests-resources.sh"; sourceTree = "<group>"; };
-		5BB2BCA90A02EF67B3DCF42AE5799C38 /* WXJSASTParser.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = WXJSASTParser.mm; path = ios/sdk/WeexSDK/Sources/Component/RecycleList/WXJSASTParser.mm; sourceTree = "<group>"; };
+		5BB2BCA90A02EF67B3DCF42AE5799C38 /* WXJSASTParser.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = WXJSASTParser.mm; path = ios/sdk/WeexSDK/Sources/Component/RecycleList/WXJSASTParser.mm; sourceTree = "<group>"; };
 		5BD291257AD387EAB91E51BB54F7A1B1 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
 		5C57300137033BEE28D0C3B769863B8A /* MQTTLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTLog.h; path = MQTTClient/MQTTClient/MQTTLog.h; sourceTree = "<group>"; };
 		5C78E04786BA7CDD5C60FDD3479890D6 /* WXMemoryDomain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXMemoryDomain.m; path = sdk/WXDevTool/Source/DerivedSources/WXMemoryDomain.m; sourceTree = "<group>"; };
-		5C8BB1220078580CC59498BFBDC2779F /* libPods-MyInsightTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyInsightTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C8BB1220078580CC59498BFBDC2779F /* libPods-MyInsightTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MyInsightTests.a"; path = "libPods-MyInsightTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CEC5A594EF9F62544B60A8FDA278BC0 /* WXDomModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXDomModule.m; path = ios/sdk/WeexSDK/Sources/Module/WXDomModule.m; sourceTree = "<group>"; };
 		5CEFEEA0F7D85B9166598127672A283C /* WXTextInputComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXTextInputComponent.h; path = ios/sdk/WeexSDK/Sources/Component/WXTextInputComponent.h; sourceTree = "<group>"; };
 		5CF0035CC6F1E1D47D1D28087A91D49E /* AMapLocationKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapLocationKit.h; path = AMapLocationKit.framework/Headers/AMapLocationKit.h; sourceTree = "<group>"; };
@@ -1345,7 +1345,7 @@
 		77413BB44AD4EDCBA8FF3F30B7CDFE2F /* BMKLocationService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKLocationService.h; path = BaiduMapKit/BaiduMapAPI_Location.framework/Headers/BMKLocationService.h; sourceTree = "<group>"; };
 		77460F7A271F6500CF281656BE7082E1 /* WXPrerenderManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXPrerenderManager.h; path = ios/sdk/WeexSDK/Sources/Module/WXPrerenderManager.h; sourceTree = "<group>"; };
 		7767A8EE58CC8F672CC8180CDAAD9580 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		7783F1BDD1F93E65BEF99B2691BE8F91 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7783F1BDD1F93E65BEF99B2691BE8F91 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAFNetworking.a; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D356C145748680302F1C7245EF53C6 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
 		7844469029078EF0C63742E2FA58636F /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
 		7865098C2B74E21786156F93255FEA49 /* MAGroundOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAGroundOverlay.h; path = MAMapKit.framework/Headers/MAGroundOverlay.h; sourceTree = "<group>"; };
@@ -1367,7 +1367,7 @@
 		7D4957DE5A909359721135FFD8E413DE /* WXNetworkProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXNetworkProtocol.h; path = ios/sdk/WeexSDK/Sources/Protocol/WXNetworkProtocol.h; sourceTree = "<group>"; };
 		7DD9BF882CD352B6A16A2B2CF10F3C90 /* SocketRocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SocketRocket.h; path = SocketRocket/SocketRocket.h; sourceTree = "<group>"; };
 		7E2178AC6F664CD7BC1377EC4DF38CA5 /* WXNetworkRecorder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXNetworkRecorder.h; path = sdk/WXDevTool/Source/WXTracing/WXNetwork/WXNetworkRecorder.h; sourceTree = "<group>"; };
-		7E816FEDF3534199CFBCF4E4E7A169C7 /* Layout.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = Layout.c; path = ios/sdk/WeexSDK/Sources/Layout/Layout.c; sourceTree = "<group>"; };
+		7E816FEDF3534199CFBCF4E4E7A169C7 /* Layout.c */ = {isa = PBXFileReference; includeInIndex = 1; name = Layout.c; path = ios/sdk/WeexSDK/Sources/Layout/Layout.c; sourceTree = "<group>"; };
 		7FA61E0D880F11B48AA52979F0B0DB0F /* Reachability.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Reachability.xcconfig; sourceTree = "<group>"; };
 		7FAB5C80505AF7AE57F2578593F91624 /* BMKOpenPoiOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOpenPoiOption.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKOpenPoiOption.h; sourceTree = "<group>"; };
 		7FE90A8397FFB6501DF802F59EA3B4D3 /* WXCellSlotComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXCellSlotComponent.h; path = ios/sdk/WeexSDK/Sources/Component/RecycleList/WXCellSlotComponent.h; sourceTree = "<group>"; };
@@ -1439,7 +1439,7 @@
 		92A03AC618D3D70DD6CA53BE13E27004 /* WXDestroyProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXDestroyProtocol.h; path = ios/sdk/WeexSDK/Sources/Protocol/WXDestroyProtocol.h; sourceTree = "<group>"; };
 		9304F8506C45992EFC29E4062E905E4C /* WXNetworkDomain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXNetworkDomain.m; path = sdk/WXDevTool/Source/DerivedSources/WXNetworkDomain.m; sourceTree = "<group>"; };
 		93296D6CBED85F06ACD44DC739E1683A /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93B927A59F307D1A5D5CBC762EF3C9A9 /* SDWebImageFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageFrame.m; path = SDWebImage/SDWebImageFrame.m; sourceTree = "<group>"; };
 		93F10AF7584CCF7764CEACC3746A73D4 /* WXListComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXListComponent.m; path = ios/sdk/WeexSDK/Sources/Component/WXListComponent.m; sourceTree = "<group>"; };
 		941B1A1A5BF37C94C66C76199E5D4202 /* WXFooterComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXFooterComponent.m; path = ios/sdk/WeexSDK/Sources/Component/WXFooterComponent.m; sourceTree = "<group>"; };
@@ -1509,7 +1509,7 @@
 		A42C23F513873AF48C432CF5791AD9FB /* GTMBase64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMBase64.h; path = GTMBase64/GTMBase64.h; sourceTree = "<group>"; };
 		A459BA3CF39413C68B39F427E9852F16 /* WXCellComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXCellComponent.m; path = ios/sdk/WeexSDK/Sources/Component/WXCellComponent.m; sourceTree = "<group>"; };
 		A45D31E56F8E7C87A1D43D802B7A5DD7 /* WXObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXObject.m; path = sdk/WXDevTool/Source/PonyDebugger/WXObject.m; sourceTree = "<group>"; };
-		A477ACC5B7BE36D577366CB7A30190D4 /* libHMQRCodeScanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHMQRCodeScanner.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A477ACC5B7BE36D577366CB7A30190D4 /* libHMQRCodeScanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libHMQRCodeScanner.a; path = libHMQRCodeScanner.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47EB76B2756C4798610857DFD645A79 /* NSSet+WXRuntimePropertyDescriptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSSet+WXRuntimePropertyDescriptor.h"; path = "sdk/WXDevTool/Source/PonyDebugger/NSSet+WXRuntimePropertyDescriptor.h"; sourceTree = "<group>"; };
 		A4D69AE723EC3323E3F04AEEA346FD66 /* NSTimer+Weex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+Weex.m"; path = "ios/sdk/WeexSDK/Sources/Utility/NSTimer+Weex.m"; sourceTree = "<group>"; };
 		A4D7B58332BDB31D16F6B2643EB5F1EC /* WXCSSTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXCSSTypes.h; path = sdk/WXDevTool/Source/DerivedSources/WXCSSTypes.h; sourceTree = "<group>"; };
@@ -1605,7 +1605,7 @@
 		BB0AC572091A36E077E9C620CC787799 /* BMKRouteSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRouteSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKRouteSearch.h; sourceTree = "<group>"; };
 		BB180A33FB6751A94CCD8E36EC5657E3 /* SDAnimatedImageRep.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImageRep.h; path = SDWebImage/SDAnimatedImageRep.h; sourceTree = "<group>"; };
 		BB22BB2DFFCBE2D9EE721D3F6F805C67 /* WXMemoryDomain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXMemoryDomain.h; path = sdk/WXDevTool/Source/DerivedSources/WXMemoryDomain.h; sourceTree = "<group>"; };
-		BBC8A6E06548C1D66FB52253568FD8B7 /* WXRoundedRect.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = WXRoundedRect.mm; path = ios/sdk/WeexSDK/Sources/Display/WXRoundedRect.mm; sourceTree = "<group>"; };
+		BBC8A6E06548C1D66FB52253568FD8B7 /* WXRoundedRect.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = WXRoundedRect.mm; path = ios/sdk/WeexSDK/Sources/Display/WXRoundedRect.mm; sourceTree = "<group>"; };
 		BBDE7CA8DBE7B9D8EA17160C0494122A /* WXRecycleListLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXRecycleListLayout.m; path = ios/sdk/WeexSDK/Sources/Component/RecycleList/WXRecycleListLayout.m; sourceTree = "<group>"; };
 		BBE6FEF0443CC01A62AF5E353689DC3F /* WXMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXMonitor.m; path = ios/sdk/WeexSDK/Sources/Monitor/WXMonitor.m; sourceTree = "<group>"; };
 		BC497ED6A3E31C9413C4871CFF78D0C6 /* BMKGradient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGradient.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKGradient.h; sourceTree = "<group>"; };
@@ -1684,7 +1684,7 @@
 		CFDB33FB7C21846D278DF7AB0808493F /* WXBoxShadow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXBoxShadow.h; path = ios/sdk/WeexSDK/Sources/Utility/WXBoxShadow.h; sourceTree = "<group>"; };
 		CFE9ED4E802AFC96A4E0BF53E5024B39 /* WXTextAreaComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXTextAreaComponent.m; path = ios/sdk/WeexSDK/Sources/Component/WXTextAreaComponent.m; sourceTree = "<group>"; };
 		D031B1DABF41D2FD900B5C2020241B78 /* WXBaseViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXBaseViewController.m; path = ios/sdk/WeexSDK/Sources/Controller/WXBaseViewController.m; sourceTree = "<group>"; };
-		D0D40E68C763635E6F14163DDDA33DAC /* libMQTTClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMQTTClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D40E68C763635E6F14163DDDA33DAC /* libMQTTClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMQTTClient.a; path = libMQTTClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1289D5F89DFF7CE7D93BA33DDEC3BAC /* BMKActionPaopaoView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKActionPaopaoView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKActionPaopaoView.h; sourceTree = "<group>"; };
 		D12E61A590C654203624E411D86D4347 /* BMKHeatMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKHeatMap.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKHeatMap.h; sourceTree = "<group>"; };
 		D16D4426FE80C5EFC842462D44DBEA38 /* BMKCircleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCircleView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKCircleView.h; sourceTree = "<group>"; };
@@ -1743,7 +1743,7 @@
 		DCAA3E73A09028BCCD95FA3A6D3D851C /* MQTTMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTMessage.m; path = MQTTClient/MQTTClient/MQTTMessage.m; sourceTree = "<group>"; };
 		DCBD44AD76A34DF4DBED5DCCB5005C96 /* HMScanner.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = HMScanner.bundle; path = HMQRCodeScanner/QRCode/HMScanner.bundle; sourceTree = "<group>"; };
 		DD18929D911B98E4A0AADC3A244F1DD6 /* MAPolylineRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAPolylineRenderer.h; path = MAMapKit.framework/Headers/MAPolylineRenderer.h; sourceTree = "<group>"; };
-		DD45D6B1095D354C1C60D1431D94981B /* libSWRevealViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSWRevealViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD45D6B1095D354C1C60D1431D94981B /* libSWRevealViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSWRevealViewController.a; path = libSWRevealViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD51CEC3A0FC83EDBF8E132014BD7E98 /* AMapNaviKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapNaviKit.framework; sourceTree = "<group>"; };
 		DE8D633382D92875B5C5EA8FB202F094 /* IQNSArray+Sort.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQNSArray+Sort.h"; path = "IQKeyboardManager/Categories/IQNSArray+Sort.h"; sourceTree = "<group>"; };
 		DED818315C73E5410753A82D19FFE6F1 /* UIView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCache.m"; path = "SDWebImage/UIView+WebCache.m"; sourceTree = "<group>"; };
@@ -1766,11 +1766,11 @@
 		E282F61D5C2D89FF61B65F244F52DCE2 /* WXLoadingComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXLoadingComponent.m; path = ios/sdk/WeexSDK/Sources/Component/WXLoadingComponent.m; sourceTree = "<group>"; };
 		E2E65B3FFA5E06834331F58443584D3B /* MAArcRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAArcRenderer.h; path = MAMapKit.framework/Headers/MAArcRenderer.h; sourceTree = "<group>"; };
 		E3195164E612A06E8616A4FBCFB58690 /* WXIndexedDBDomain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXIndexedDBDomain.m; path = sdk/WXDevTool/Source/DerivedSources/WXIndexedDBDomain.m; sourceTree = "<group>"; };
-		E3B96740CC58EED22AA07BD91A82B726 /* WXComponent+DataBinding.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = "WXComponent+DataBinding.mm"; path = "ios/sdk/WeexSDK/Sources/Component/RecycleList/WXComponent+DataBinding.mm"; sourceTree = "<group>"; };
+		E3B96740CC58EED22AA07BD91A82B726 /* WXComponent+DataBinding.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = "WXComponent+DataBinding.mm"; path = "ios/sdk/WeexSDK/Sources/Component/RecycleList/WXComponent+DataBinding.mm"; sourceTree = "<group>"; };
 		E3DE99109033B9CE79B2CA1B36DFE08B /* WXTextAreaComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXTextAreaComponent.h; path = ios/sdk/WeexSDK/Sources/Component/WXTextAreaComponent.h; sourceTree = "<group>"; };
 		E3E0EFB70C86EFF0EFC4835EFA64759A /* WXWorkerDomain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXWorkerDomain.h; path = sdk/WXDevTool/Source/DerivedSources/WXWorkerDomain.h; sourceTree = "<group>"; };
 		E439F7A60F14C2B0B399AEA7DE814AD0 /* WXComponentMethod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXComponentMethod.h; path = ios/sdk/WeexSDK/Sources/Bridge/WXComponentMethod.h; sourceTree = "<group>"; };
-		E4505F3776113F3B40BD2E57E9FBB485 /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4505F3776113F3B40BD2E57E9FBB485 /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFMDB.a; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E461E6CBF41275DC2164DE072D8FE0A0 /* SDWebImageGIFCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageGIFCoder.h; path = SDWebImage/SDWebImageGIFCoder.h; sourceTree = "<group>"; };
 		E490E3AEF2A44A1D79C966331982F5DA /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
 		E4DD21891D5334C49D9D8A1DDAF70948 /* SocketRocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SocketRocket-dummy.m"; sourceTree = "<group>"; };
@@ -1813,7 +1813,7 @@
 		EB917189A97FE670868B185AC9BE38AB /* Pods-MyInsightUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyInsightUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EB92682B1816BBEF70BACF227AD08E1F /* NSButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSButton+WebCache.h"; path = "SDWebImage/NSButton+WebCache.h"; sourceTree = "<group>"; };
 		EBB1CB54F7874271FECF8701AB464E7B /* WXRecycleListUpdateManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXRecycleListUpdateManager.m; path = ios/sdk/WeexSDK/Sources/Component/RecycleList/WXRecycleListUpdateManager.m; sourceTree = "<group>"; };
-		EC804BF250474D3307A7C66D09E4686D /* libReachability.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libReachability.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC804BF250474D3307A7C66D09E4686D /* libReachability.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libReachability.a; path = libReachability.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA5018B8C03AF33CCEB5720C138280F /* MACustomBuildingOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MACustomBuildingOverlay.h; path = MAMapKit.framework/Headers/MACustomBuildingOverlay.h; sourceTree = "<group>"; };
 		ED67E4B9976574E24B3FD665C171E56B /* WXComponentFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXComponentFactory.h; path = ios/sdk/WeexSDK/Sources/Manager/WXComponentFactory.h; sourceTree = "<group>"; };
 		ED91C6D7490A5624A411763F6E93E226 /* libSocialWeChat.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSocialWeChat.a; path = UShareSDK/SocialLibraries/WeChat/libSocialWeChat.a; sourceTree = "<group>"; };
@@ -1846,7 +1846,7 @@
 		F455D7FA754F90E451930A2FBF2030BB /* BMKRadarResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRadarResult.h; path = BaiduMapKit/BaiduMapAPI_Radar.framework/Headers/BMKRadarResult.h; sourceTree = "<group>"; };
 		F4C4CD43A7F99F13C3BF6EEC1AF8E72D /* WXPageDomainUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXPageDomainUtility.m; path = sdk/WXDevTool/Source/DerivedSources/WXPageDomainUtility.m; sourceTree = "<group>"; };
 		F4D5D81F897DDF720FA9A62224E2841E /* WXRuntimeTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXRuntimeTypes.h; path = sdk/WXDevTool/Source/DerivedSources/WXRuntimeTypes.h; sourceTree = "<group>"; };
-		F51665E576F18408BB8808A5AEB18A25 /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F51665E576F18408BB8808A5AEB18A25 /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMasonry.a; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55D5F14A00A027555823604A0BD6A36 /* WXDevToolType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXDevToolType.h; path = sdk/WXDevTool/Source/PonyDebugger/WXDevToolType.h; sourceTree = "<group>"; };
 		F5BEDB40FF9D3DCC362E7E25CB90F784 /* SRWebSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRWebSocket.m; path = SocketRocket/SRWebSocket.m; sourceTree = "<group>"; };
 		F62320F43E6FBF7CF36FD28C2BFC7517 /* MQTTLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTLog.m; path = MQTTClient/MQTTClient/MQTTLog.m; sourceTree = "<group>"; };
@@ -1873,7 +1873,7 @@
 		FA6055DB35CD41084EA7CFFE9088BA5C /* HMScanner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HMScanner.m; path = HMQRCodeScanner/QRCode/HMScanner.m; sourceTree = "<group>"; };
 		FA7D97C7898B100A6999057C29BFE998 /* BMKShareUrlSearchOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKShareUrlSearchOption.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKShareUrlSearchOption.h; sourceTree = "<group>"; };
 		FAA610083E9D22C583D55C75250D48AF /* BMKPinAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPinAnnotationView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKPinAnnotationView.h; sourceTree = "<group>"; };
-		FBCAEC0FF8B9F7B893C8D921FFB4B12D /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBCAEC0FF8B9F7B893C8D921FFB4B12D /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSDWebImage.a; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC59C7E9A26D97D1734193CAEB52BB42 /* WXRuntimeDomainController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXRuntimeDomainController.h; path = sdk/WXDevTool/Source/PonyDebugger/WXRuntimeDomainController.h; sourceTree = "<group>"; };
 		FD6A1B98A2D55CC6F0F28B71A8462E86 /* WXPageDomainController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WXPageDomainController.m; path = sdk/WXDevTool/Source/PonyDebugger/WXPageDomainController.m; sourceTree = "<group>"; };
 		FDE4B9CB8236954CED69FBFC8CD7233C /* MAMapView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAMapView.h; path = MAMapKit.framework/Headers/MAMapView.h; sourceTree = "<group>"; };
@@ -2075,6 +2075,7 @@
 				444EFC3E79CD55D6D135D70EBE295B4F /* NSObject+AMapJsonSerialization.h */,
 				8C9EE109651AC3AD0A1C633CB19AF3B7 /* Frameworks */,
 			);
+			name = AMapFoundation;
 			path = AMapFoundation;
 			sourceTree = "<group>";
 		};
@@ -2084,6 +2085,7 @@
 				DC9BC74C6E9EEB8B52E27AF36E9FAD28 /* Base */,
 				6432B0FBCD22C0ECA1043A61714D2D6F /* Maps */,
 			);
+			name = GoogleMaps;
 			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
@@ -2095,6 +2097,7 @@
 				00178C65A717703794A70396D2FE0C4F /* GTMDefines.h */,
 				53896362D93331729ACD929B1DCFD573 /* Support Files */,
 			);
+			name = GTMBase64;
 			path = GTMBase64;
 			sourceTree = "<group>";
 		};
@@ -2192,6 +2195,7 @@
 				E0ED6FB6D90080A751C3D20473571BB5 /* Reachability.m */,
 				5021E91B4369E5CC5D0968BC3617BBB8 /* Support Files */,
 			);
+			name = Reachability;
 			path = Reachability;
 			sourceTree = "<group>";
 		};
@@ -2201,6 +2205,7 @@
 				D0BACB5FDE39D014C0E7F872DE4DE1D5 /* Core */,
 				384CD49E574BD9CD1062D093E8C77CB1 /* Support Files */,
 			);
+			name = SDWebImage;
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
@@ -2299,6 +2304,7 @@
 				F5BEDB40FF9D3DCC362E7E25CB90F784 /* SRWebSocket.m */,
 				779E4EF9BFBCF664A3EA3F51A7180A2A /* Support Files */,
 			);
+			name = SocketRocket;
 			path = SocketRocket;
 			sourceTree = "<group>";
 		};
@@ -2392,6 +2398,7 @@
 				E68C70E252C0C3F22DA6B5CF6ACBFB74 /* standard */,
 				52AFFF92D7BA1D602EB2D6D449EC239F /* Support Files */,
 			);
+			name = FMDB;
 			path = FMDB;
 			sourceTree = "<group>";
 		};
@@ -2424,6 +2431,7 @@
 				DF6A71359B965CE602BF94DBA9C48B9D /* GCDAsyncUdpSocket.m */,
 				FCF6D62669FA9C265F3646816E838C07 /* Support Files */,
 			);
+			name = CocoaAsyncSocket;
 			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
@@ -2506,6 +2514,7 @@
 				6B6A0FAF73C2694B3CBDF78C45AB3751 /* Frameworks */,
 				95163EF8213C4EA41874DC0741B4942F /* Resources */,
 			);
+			name = AMap3DMap;
 			path = AMap3DMap;
 			sourceTree = "<group>";
 		};
@@ -2549,6 +2558,7 @@
 				DB474460E6A612297A88D54D41A9FB65 /* AMapSearchVersion.h */,
 				DAE8AFAAA5310A3AF0D10DDE3DD9CD2E /* Frameworks */,
 			);
+			name = AMapSearch;
 			path = AMapSearch;
 			sourceTree = "<group>";
 		};
@@ -2571,6 +2581,7 @@
 				6070BC5A09588BE4AC5FA05BDBF9036D /* Social */,
 				395A57BD195EB419C4239FB5CA161818 /* UI */,
 			);
+			name = UMengUShare;
 			path = UMengUShare;
 			sourceTree = "<group>";
 		};
@@ -2587,6 +2598,7 @@
 				713754753327A723531D51D1D1565964 /* AMapLocationVersion.h */,
 				DD446F8D4667F90D4E17871416997785 /* Frameworks */,
 			);
+			name = AMapLocation;
 			path = AMapLocation;
 			sourceTree = "<group>";
 		};
@@ -2625,6 +2637,7 @@
 			children = (
 				1DAE43272CCCD6539BF06B17CB978DB3 /* Frameworks */,
 			);
+			name = UMengAnalytics;
 			path = UMengAnalytics;
 			sourceTree = "<group>";
 		};
@@ -2697,6 +2710,7 @@
 				211481CDA5F3C7719281D1CEDD8F81A1 /* BabyToy.m */,
 				21CDCEE79C5DF924B9A81D076C823C65 /* Support Files */,
 			);
+			name = BabyBluetooth;
 			path = BabyBluetooth;
 			sourceTree = "<group>";
 		};
@@ -2742,6 +2756,7 @@
 				2D021FFB3F6703AFCA19C02D2F11AFE8 /* Resources */,
 				2B7DA56A843F413DCF99C3C611619F51 /* Support Files */,
 			);
+			name = IQKeyboardManager;
 			path = IQKeyboardManager;
 			sourceTree = "<group>";
 		};
@@ -2830,6 +2845,7 @@
 				0422BBACA924059FDC5A9D17A394227B /* Min */,
 				1E0797DBB994384B6EF7120EB99440A5 /* Support Files */,
 			);
+			name = MQTTClient;
 			path = MQTTClient;
 			sourceTree = "<group>";
 		};
@@ -2852,6 +2868,7 @@
 				05AC7E14BAB0733D131B115AAFE80374 /* Support Files */,
 				4CFAE3439ABE47ED3D0DBF089D0B8852 /* UIKit */,
 			);
+			name = AFNetworking;
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
@@ -2889,6 +2906,7 @@
 				F01A04E2A92DC2596A2B101F4EE29532 /* Resources */,
 				7BFA9AE096DDB64939BD1A27C901C60C /* Support Files */,
 			);
+			name = HMQRCodeScanner;
 			path = HMQRCodeScanner;
 			sourceTree = "<group>";
 		};
@@ -2938,6 +2956,7 @@
 				BF5779C40690CA828AEBA0FF1977E4FD /* ViewController+MASAdditions.m */,
 				D63902D6ABC0C73218922029D8EDE4A9 /* Support Files */,
 			);
+			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
@@ -3005,6 +3024,7 @@
 				2E0F18538044E489FDA7B6675AA959E0 /* Frameworks */,
 				71237A055CEB33EC3BF2FF3B150614A0 /* Resources */,
 			);
+			name = AMapNavi;
 			path = AMapNavi;
 			sourceTree = "<group>";
 		};
@@ -3024,6 +3044,7 @@
 				96C82592774D289788C1796DFBDB17D3 /* SWRevealViewController.m */,
 				C7CC879317615089420A68973E087182 /* Support Files */,
 			);
+			name = SWRevealViewController;
 			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
@@ -3336,6 +3357,7 @@
 				7746370099B2FD3D8358711DF0D54B8E /* Resources */,
 				D96023F01662196B8D458CCB4297E0D2 /* Support Files */,
 			);
+			name = WeexSDK;
 			path = WeexSDK;
 			sourceTree = "<group>";
 		};
@@ -3346,6 +3368,7 @@
 				61591136F1EFEA4360FFA378A1B29A26 /* MBProgressHUD.m */,
 				0F59857A08816232767B8AA2D7AEA1E9 /* Support Files */,
 			);
+			name = MBProgressHUD;
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -3505,6 +3528,7 @@
 				1B6441C6B5E074343B07C9502023AB05 /* WXWorkerDomain.m */,
 				7CF719B3F6144B1E018C02E781E097E0 /* Support Files */,
 			);
+			name = WXDevtool;
 			path = WXDevtool;
 			sourceTree = "<group>";
 		};
@@ -3639,6 +3663,7 @@
 				8E756ADDF877FFA69E1EB9865F7135A9 /* Frameworks */,
 				6F5A4CF28A996DA9745F8D89CBFEAAB7 /* Resources */,
 			);
+			name = BaiduMapKit;
 			path = BaiduMapKit;
 			sourceTree = "<group>";
 		};
@@ -4712,7 +4737,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -5399,7 +5424,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -5423,7 +5448,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Reachability/Reachability-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -5517,7 +5542,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/SWRevealViewController/SWRevealViewController-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -5542,7 +5567,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/SocketRocket/SocketRocket-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -5566,7 +5591,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/GTMBase64/GTMBase64-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -5591,7 +5616,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -5615,7 +5640,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/SocketRocket/SocketRocket-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -5640,7 +5665,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Reachability/Reachability-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -5729,7 +5754,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -5755,7 +5780,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -5801,7 +5826,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -5825,7 +5850,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/BabyBluetooth/BabyBluetooth-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -5873,7 +5898,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -5922,7 +5947,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/MQTTClient/MQTTClient-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -5946,7 +5971,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/MQTTClient/MQTTClient-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -5971,7 +5996,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/SWRevealViewController/SWRevealViewController-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -6020,7 +6045,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/GTMBase64/GTMBase64-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -6171,7 +6196,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -6196,7 +6221,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/BabyBluetooth/BabyBluetooth-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -6290,7 +6315,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -6315,7 +6340,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -6339,7 +6364,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";

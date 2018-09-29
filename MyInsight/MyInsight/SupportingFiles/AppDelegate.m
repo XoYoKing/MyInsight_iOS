@@ -10,6 +10,7 @@
 #import "MainRevealVC.h" // 主页面
 #import "WelcomeVC.h" // 欢迎页面
 #import <UserNotifications/UserNotifications.h>
+//#import <LCChatKit.h>
 
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
 

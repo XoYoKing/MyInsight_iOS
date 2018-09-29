@@ -55,6 +55,8 @@ target 'MyInsight' do
   
   #pod 'AsyncDisplayKit'
   pod 'CocoaAsyncSocket' # socket通信
+  # 免费聊天框架   https://leancloud.cn/docs/
+  #pod 'ChatKit'
   # 微信第三方登录
   # pod 'WechatOpenSDK'
   # AppID:wxd0f6b34b0b7430a4

@@ -39,6 +39,9 @@
     
     [self addArrayThtead];
 }
+/*
+ 线程状态：新建状态、就绪状态、运行状态、阻塞状态、死亡状态
+ */
 
 #pragma mark - 一：简单创建一个多线程
 - (void)addThreadAction {
@@ -51,6 +54,7 @@
     //2：隐式创建并启动线程 [self performSelectorInBackground:@selector(run) withObject:nil];
 }
 
+// 多线程执行
 -  (void)runAction {
     NSLog(@"当前NSInvocationOperation执行的线程为：%@", [NSThread currentThread]);
     //输出：当前NSInvocationOperation执行的线程为：<NSThread: 0x600000071940>{number = 1, name = main}
@@ -83,7 +87,7 @@
     thread.name=[NSString stringWithFormat:@"thread-thread"];
     [thread start];
     //    }
-    NSLog(@"%@", [NSThread currentThread]);
+    NSLog(@"运行多线程 当前的线程是：%@", [NSThread currentThread]);
 }
 
 - (void)runMutableAction {
@@ -122,8 +126,7 @@
     [self.myThreadList removeAllObjects];
     
     
-    for(int i=0; i<10;i++)
-    {
+    for(int i=0; i<10;i++) {
         NSThread *thread=[[NSThread alloc]initWithTarget:self selector:@selector(loadAction:) object:[NSNumber numberWithInt:i]];
         thread.name=[NSString stringWithFormat:@"myThread%i",i];
         

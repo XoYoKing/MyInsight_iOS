@@ -125,7 +125,16 @@
                          @"url":@"http://msching.github.io/blog/2014/08/09/audio-in-ios-6/"},
                        @{@"name":@"iOS-KVO 实现原理",
                          @"url":@"https://www.jianshu.com/p/0e75d99c3480"},
-                       
+                       @{@"name":@"IOS:通知与消息机制",
+                         @"url":@"https://blog.csdn.net/joshuajack290/article/details/44566033"},
+                       @{@"name":@"iOS 10新的通知机制",
+                         @"url":@"https://blog.csdn.net/mimosa890927/article/details/73991791"},
+                       @{@"name":@"iOS客户端持久化存储——从模型到数据库",
+                         @"url":@"https://blog.csdn.net/show3/article/details/54924713"},
+                       @{@"name":@"微博@iOS程序犭袁 的blog ",
+                         @"url":@"https://github.com/ChenYilong/iOSBlog"},
+                       @{@"name":@"微博@iOS程序犭袁 的简书 ",
+                         @"url":@"https://www.jianshu.com/u/96a14318a4de"},
                        // Python
                        @{@"name":@"django+nginx+uwsgi部署（及遇到的错误）",
                          @"url":@"http://www.shihao.online/detail/19/"},

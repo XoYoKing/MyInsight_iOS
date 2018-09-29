@@ -28,6 +28,11 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    
+}
+
+
+- (void)demoAAA {
     // 展示
     //[self display];
     [self timerLabelUI];
@@ -47,6 +52,7 @@
     // 全局队列+ 异步执行
     [self asyncGloba];
 }
+
 
 #pragma mark - 多线程设计定时器
 - (void)timerLabelUI {

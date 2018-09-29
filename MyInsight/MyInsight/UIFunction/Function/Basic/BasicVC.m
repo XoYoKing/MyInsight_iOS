@@ -29,6 +29,8 @@
 #import "DrawingBoardVC.h" // 绘图板
 #import "ColorPickerVC.h" // 颜色拾取器
 
+#import "BlogVC.h"
+
 @interface BasicVC ()<UITableViewDelegate, UITableViewDataSource>
 // LEFT
 @property (nonatomic, strong) UIBarButtonItem *leftBarButtonItem;
@@ -62,6 +64,8 @@ static const NSString *BlurViewStr = @"毛玻璃效果";
 static const NSString *DrawingBoardStr = @"绘图板";
 static const NSString *QuartzDrawStr = @"Quartz画线";
 static const NSString *ColorPickerStr = @"颜色拾取器";
+
+static const NSString *BlogStr = @"博客";
 
 @implementation BasicVC
 
@@ -99,7 +103,7 @@ static const NSString *ColorPickerStr = @"颜色拾取器";
 // 处理数据
 - (void)handleTableViewData {
     // 数组
-    self.dataArray = @[CYuYanString, LiftCycleStr, RunTimeStr, RunLoopStr, BlockStr, MultiThreadStr, GestureStr, XieYiStr, PhysicalStr, CoreAnimationStr, CoreGraphicsStr, QuartzDrawStr, ScrollViewStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, ViewLayoutStr, BlurViewStr, DrawingBoardStr, ColorPickerStr];
+    self.dataArray = @[BlogStr, CYuYanString, LiftCycleStr, RunTimeStr, RunLoopStr, BlockStr, MultiThreadStr, GestureStr, XieYiStr, PhysicalStr, CoreAnimationStr, CoreGraphicsStr, QuartzDrawStr, ScrollViewStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, ViewLayoutStr, BlurViewStr, DrawingBoardStr, ColorPickerStr];
 }
 
 #pragma mark - 创建TableView
@@ -150,7 +154,12 @@ static const NSString *ColorPickerStr = @"颜色拾取器";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 获取到当前cell的字符串
     NSString *cellString = [self.dataArray objectAtIndex:indexPath.row];
-    
+    if ([cellString isEqual:BlogStr]) {
+        // 博客
+        BlogVC *blogVC = [[BlogVC alloc] init];
+        blogVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:blogVC animated:YES];
+    }
     if ([cellString isEqual:CYuYanString]) {
         // C语言
         CYuYanVC *cYuYanVC = [[CYuYanVC alloc] init];

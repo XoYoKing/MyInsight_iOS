@@ -26,4 +26,11 @@
 
 + (id)modelWithDictionary:(NSDictionary *)dic;
 
+//- (instancetype)initWithDictionary:(NSDictionary *)dic;
+
 @end
+
+/*
+ iOS 中model的使用
+ https://www.jianshu.com/p/6b71ceabbeed
+ */
