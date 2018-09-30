@@ -46,12 +46,13 @@ class OtherVC: UIViewController {
         // 初始化tableview
         
         self.view.addSubview(self.tableview)
-        self.tableview.snp.makeConstraints { (make) in
-            make.top.equalTo(self.view.snp.top).offset(0.0)
-            make.left.equalTo(self.view.snp.left).offset(0.0)
-            make.right.equalTo(self.view.snp.right).offset(0.0)
-            make.bottom.equalTo(self.view.snp.bottom).offset(0.0)
-        }
+//        self.tableview.snp.makeConstraints { (make) in
+//            make.top.equalTo(self.view.snp.top).offset(0.0)
+//            make.left.equalTo(self.view.snp.left).offset(0.0)
+//            make.right.equalTo(self.view.snp.right).offset(0.0)
+//            make.bottom.equalTo(self.view.snp.bottom).offset(0.0)
+//        }
+        self.tableview.frame = self.view.bounds;
         self.tableview.delegate = self
         self.tableview.dataSource = self
         // 注册cell

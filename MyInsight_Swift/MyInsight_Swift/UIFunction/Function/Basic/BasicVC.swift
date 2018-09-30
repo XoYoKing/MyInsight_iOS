@@ -39,6 +39,16 @@ class BasicVC: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "右边", style: UIBarButtonItem.Style.plain, target: self.revealViewController(), action: #selector(SWRevealViewController.rightRevealToggle(_:)))
         
         // 可以写swift的一些特性
+        let name:String? = "老王"
+        
+        let name1:String? = nil
+        
+        // ?? 运算符的优先级低于 +号，注意使用的时候加上括号啊
+        
+        print(name ?? "" + "你好")
+        
+        print(name1 ?? "" + "你好")
+        
         
         
     }

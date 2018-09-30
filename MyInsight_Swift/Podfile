@@ -21,9 +21,8 @@ target 'MyInsight_Swift' do
   #
   
   # MarkDown
-  pod "MarkdownView"
-  #pod "EFMarkdown"
-  
+  pod 'MarkdownView'
+  #pod 'EFMarkdown' 编译不通过 先x注释掉
 
   target 'MyInsight_SwiftTests' do
     inherit! :search_paths

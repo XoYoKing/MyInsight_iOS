@@ -14,6 +14,7 @@
 		A241BF8E20FC78860099E8A5 /* MyInsight_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A241BF8D20FC78860099E8A5 /* MyInsight_SwiftUITests.swift */; };
 		A262CA762160503B0050D6BC /* BlogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262CA752160503B0050D6BC /* BlogVC.swift */; };
 		A262CB4F2160535B0050D6BC /* 浅谈 block（2） - 截获变量方式.md in Resources */ = {isa = PBXBuildFile; fileRef = A262CB4E2160535B0050D6BC /* 浅谈 block（2） - 截获变量方式.md */; };
+		A262CB562160C4B90050D6BC /* Vendors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262CB552160C4B90050D6BC /* Vendors.swift */; };
 		A2930B612104A08E006520FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2930B552104A08E006520FF /* Main.storyboard */; };
 		A2930B622104A08E006520FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2930B572104A08E006520FF /* LaunchScreen.storyboard */; };
 		A2930B632104A08E006520FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2930B582104A08E006520FF /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		A241BF8F20FC78860099E8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A262CA752160503B0050D6BC /* BlogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogVC.swift; sourceTree = "<group>"; };
 		A262CB4E2160535B0050D6BC /* 浅谈 block（2） - 截获变量方式.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "浅谈 block（2） - 截获变量方式.md"; sourceTree = "<group>"; };
+		A262CB552160C4B90050D6BC /* Vendors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vendors.swift; sourceTree = "<group>"; };
 		A2930B552104A08E006520FF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A2930B572104A08E006520FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2930B582104A08E006520FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		A241BF6C20FC78840099E8A5 /* MyInsight_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				A262CB542160C48E0050D6BC /* BlogMD */,
 				A2930B5B2104A08E006520FF /* General */,
 				A2930B5C2104A08E006520FF /* UIFunction */,
 				A2930B542104A08E006520FF /* StoryBoard */,
@@ -189,10 +192,18 @@
 			path = MyInsight_SwiftUITests;
 			sourceTree = "<group>";
 		};
-		A2930B532104A08E006520FF /* Vendors */ = {
+		A262CB542160C48E0050D6BC /* BlogMD */ = {
 			isa = PBXGroup;
 			children = (
 				A262CB4E2160535B0050D6BC /* 浅谈 block（2） - 截获变量方式.md */,
+			);
+			path = BlogMD;
+			sourceTree = "<group>";
+		};
+		A2930B532104A08E006520FF /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				A262CB552160C4B90050D6BC /* Vendors.swift */,
 			);
 			path = Vendors;
 			sourceTree = "<group>";
@@ -528,6 +539,7 @@
 				A2930B6D2104B00A006520FF /* RearRevealVC.swift in Sources */,
 				A2930B732104B0BE006520FF /* TabBarVC.swift in Sources */,
 				A2930B6B2104AFBB006520FF /* MainRevealVC.swift in Sources */,
+				A262CB562160C4B90050D6BC /* Vendors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

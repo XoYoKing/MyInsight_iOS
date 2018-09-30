@@ -23,6 +23,16 @@
 
 - (void)load:(NSString *)markdown enableImage:(NSString *)enableImage {
     
+    NSBundle *bundle = [NSBundle bundleForClass:[MarkdownView class]];
+    NSURL *htmlURL = [bundle URLForResource:@"index" withExtension:@"html"];
+    if ([htmlURL isEqual:NULL]) {
+        htmlURL = [bundle URLForResource:@"index" withExtension:@"html" subdirectory:@"MarkdownView.bundle"];
+    }
+    
+    NSURLRequest *templateRequest = [NSURLRequest requestWithURL:htmlURL];
+    
+    
+    
 }
 
 
