@@ -7,17 +7,17 @@
 //
 
 import UIKit
-import RealmSwift
+//import RealmSwift
 
 class RealmStore {
     
     // 定义类方法
-    class func configuration() -> Void {
-        let defaultConfiguration = Realm.Configuration()
-        
-        
-        Realm.Configuration.defaultConfiguration = defaultConfiguration
-    }
+//    class func configuration() -> Void {
+//        let defaultConfiguration = Realm.Configuration()
+//        
+//        
+//        Realm.Configuration.defaultConfiguration = defaultConfiguration
+//    }
     
     
     

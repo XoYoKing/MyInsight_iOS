@@ -101,9 +101,10 @@ extension OtherVC: UITableViewDelegate, UITableViewDataSource {
     // 选中cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         debugPrint(indexPath.row)
+        
+        let blogVC :BlogVC = BlogVC()
+        blogVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(blogVC, animated: true)
     }
-    
-    
-    
 }
 

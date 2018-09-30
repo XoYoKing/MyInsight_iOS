@@ -25,7 +25,8 @@
 
 
 - (void)useWKWebView {
-    NSURL *url = [[NSBundle mainBundle] URLForResource:self.htmlStr withExtension:@"html"];
+    //NSURL *url = [[NSBundle mainBundle] URLForResource:self.htmlStr withExtension:@"html"];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"blog.md" withExtension:nil];
     NSLog(@"%@", url);
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];

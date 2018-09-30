@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B7A4EF8ADB9C4B05AE02E688430D2E2B"
+               BlueprintIdentifier = "B1042540008A602B345FC4944C759C05"
                BlueprintName = "HMQRCodeScanner"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libHMQRCodeScanner.a">

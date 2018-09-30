@@ -96,6 +96,8 @@
                          @"url":@"https://github.com/shihao1010/tiantianshengxian"},
                        @{@"name":@"BezierCurveLineTest",
                          @"url":@"https://github.com/xiayuanquan/BezierCurveLineTest"},
+                       @{@"name":@" iOS 源码探求系列",
+                         @"url":@"https://github.com/Desgard/iOS-Source-Probe"},
                        // 博客 文章 技术
                        @{@"name":@"iOS网络—UIWebView、WKWebView使用详解",
                          @"url":@"https://www.jianshu.com/p/556c988e2707"},
@@ -177,6 +179,9 @@
                          @"url":@"https://www.jianshu.com/p/795b317efa3a"},
                        @{@"name":@"iOS面试被问到的问题",
                          @"url":@"https://www.jianshu.com/p/8726df3b2276"},
+                       //
+                       @{@"name":@"安浪个人工作站",
+                         @"url":@"https://github.com/jiankian/AnnZone"},
                        ];
 }
 

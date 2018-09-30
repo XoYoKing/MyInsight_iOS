@@ -130,6 +130,7 @@
 		A25748282023059D000F7632 /* CollectionViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A25748272023059D000F7632 /* CollectionViewVC.m */; };
 		A257482B202305B9000F7632 /* TableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A257482A202305B9000F7632 /* TableViewVC.m */; };
 		A25F8BA6215A6A45005D6527 /* MIMovieObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A25F8BA5215A6A45005D6527 /* MIMovieObject.m */; };
+		A262CB53216079610050D6BC /* MarkdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = A262CB52216079610050D6BC /* MarkdownView.m */; };
 		A268BEFC2106E04300CADD8A /* scrollimage4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A268BEF82106E04300CADD8A /* scrollimage4.jpg */; };
 		A268BEFD2106E04300CADD8A /* scrollimage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A268BEF92106E04300CADD8A /* scrollimage1.jpg */; };
 		A268BEFE2106E04300CADD8A /* scrollimage3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A268BEFA2106E04300CADD8A /* scrollimage3.jpg */; };
@@ -513,6 +514,7 @@
 		A2524284215F9A3C00181DF3 /* BlogWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlogWebVC.m; sourceTree = "<group>"; };
 		A2524287215FB7AC00181DF3 /* AlgorithmVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmVC.h; sourceTree = "<group>"; };
 		A2524288215FB7AC00181DF3 /* AlgorithmVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmVC.m; sourceTree = "<group>"; };
+		A252428A215FC81E00181DF3 /* blog.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = blog.md; sourceTree = "<group>"; };
 		A2561DBA2094123400D4E2E5 /* EncryptVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncryptVC.h; sourceTree = "<group>"; };
 		A2561DBB2094123400D4E2E5 /* EncryptVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncryptVC.m; sourceTree = "<group>"; };
 		A2561DBD2094725100D4E2E5 /* DragTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragTableVC.h; sourceTree = "<group>"; };
@@ -531,6 +533,9 @@
 		A257482A202305B9000F7632 /* TableViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewVC.m; sourceTree = "<group>"; };
 		A25F8BA4215A6A45005D6527 /* MIMovieObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIMovieObject.h; sourceTree = "<group>"; };
 		A25F8BA5215A6A45005D6527 /* MIMovieObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIMovieObject.m; sourceTree = "<group>"; };
+		A262CA74215FE4BE0050D6BC /* MyInsight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyInsight-Bridging-Header.h"; sourceTree = "<group>"; };
+		A262CB51216079610050D6BC /* MarkdownView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkdownView.h; sourceTree = "<group>"; };
+		A262CB52216079610050D6BC /* MarkdownView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarkdownView.m; sourceTree = "<group>"; };
 		A268BEF82106E04300CADD8A /* scrollimage4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scrollimage4.jpg; sourceTree = "<group>"; };
 		A268BEF92106E04300CADD8A /* scrollimage1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scrollimage1.jpg; sourceTree = "<group>"; };
 		A268BEFA2106E04300CADD8A /* scrollimage3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scrollimage3.jpg; sourceTree = "<group>"; };
@@ -1118,6 +1123,7 @@
 				A20D5DF11FD14549000E191D /* main.m */,
 				A20D5DF31FD14549000E191D /* Info.plist */,
 				A20D5DEE1FD14549000E191D /* LaunchScreen.storyboard */,
+				A262CA74215FE4BE0050D6BC /* MyInsight-Bridging-Header.h */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -1559,6 +1565,7 @@
 				A2524278215F8C7F00181DF3 /* runloop.html */,
 				A252427A215F8C9C00181DF3 /* block.html */,
 				A252427C215F8CC100181DF3 /* 多线程.html */,
+				A252428A215FC81E00181DF3 /* blog.md */,
 			);
 			path = Blog;
 			sourceTree = "<group>";
@@ -1642,6 +1649,15 @@
 				A2DDDC56208B072C00DC7A4A /* View */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		A262CB50216079570050D6BC /* MarkdownView */ = {
+			isa = PBXGroup;
+			children = (
+				A262CB51216079610050D6BC /* MarkdownView.h */,
+				A262CB52216079610050D6BC /* MarkdownView.m */,
+			);
+			path = MarkdownView;
 			sourceTree = "<group>";
 		};
 		A268BEF72106E04300CADD8A /* scrollimage */ = {
@@ -1834,6 +1850,7 @@
 				A2250B1420E112D400CCBB29 /* Blur */,
 				A27E8729201AC717003E712C /* Header.h */,
 				A27E875F201AD490003E712C /* PrefixHeader.pch */,
+				A262CB50216079570050D6BC /* MarkdownView */,
 				A241D2292047A32A005A3BC5 /* UIColor+Category.h */,
 				A241D22A2047A32A005A3BC5 /* UIColor+Category.m */,
 			);
@@ -2932,6 +2949,7 @@
 				A2C9B21821594284008F7942 /* ReferToWebVC.m in Sources */,
 				A2E9DA1F2091BD0E0061B1E7 /* NSString+AES.m in Sources */,
 				A20D5E231FD14E37000E191D /* RightRevealVC.m in Sources */,
+				A262CB53216079610050D6BC /* MarkdownView.m in Sources */,
 				A26CE4A8201971C50012EC69 /* CalloutMapAnnotation.m in Sources */,
 				A2250B2220E1551B00CCBB29 /* CancasView.m in Sources */,
 				A2B9928D2068F3A6002A73B1 /* ChatListCell.m in Sources */,
@@ -3284,7 +3302,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.happylong.MyInsight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MyInsight/UIFunction/Function/BaiduMaps/MyInsight-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MyInsight/SupportingFiles/MyInsight-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3348,7 +3366,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.happylong.MyInsight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MyInsight/UIFunction/Function/BaiduMaps/MyInsight-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MyInsight/SupportingFiles/MyInsight-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

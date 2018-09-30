@@ -28,6 +28,7 @@ static const NSString *XinHuaStr = @"中华新华字典";
 static const NSString *ZhiHuDailyStr = @"知乎日报";
 static const NSString *CrossStr = @"跨平台";
 static const NSString *ReferToStr = @"鸣谢:借鉴参考的仓库";
+static const NSString *GitHubStr = @"GitHub";
 
 @implementation OtherVC
 
@@ -64,7 +65,7 @@ static const NSString *ReferToStr = @"鸣谢:借鉴参考的仓库";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[ReferToStr, @"百思不得姐", @"糗事百科", @"妹纸", ZhiHuDailyStr, ChatUIStr, XinHuaStr, CrossStr];
+    self.dataArray = @[ReferToStr, @"百思不得姐", @"糗事百科", @"妹纸", ZhiHuDailyStr, ChatUIStr, XinHuaStr, CrossStr, GitHubStr];
 }
 
 #pragma mark - 创建TableView

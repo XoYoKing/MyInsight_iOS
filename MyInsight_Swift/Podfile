@@ -1,5 +1,6 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
+use_modular_headers!
 
 target 'MyInsight_Swift' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -19,6 +20,9 @@ target 'MyInsight_Swift' do
   # 数据库
   #
   
+  # MarkDown
+  pod "MarkdownView"
+  #pod "EFMarkdown"
   
 
   target 'MyInsight_SwiftTests' do

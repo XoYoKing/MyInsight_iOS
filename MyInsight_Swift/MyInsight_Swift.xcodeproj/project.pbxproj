@@ -12,6 +12,8 @@
 		959EE1C5FEB44C844968DD51 /* Pods_MyInsight_SwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB4EA70B82CF0E7F97618C5 /* Pods_MyInsight_SwiftUITests.framework */; };
 		A241BF8320FC78860099E8A5 /* MyInsight_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A241BF8220FC78860099E8A5 /* MyInsight_SwiftTests.swift */; };
 		A241BF8E20FC78860099E8A5 /* MyInsight_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A241BF8D20FC78860099E8A5 /* MyInsight_SwiftUITests.swift */; };
+		A262CA762160503B0050D6BC /* BlogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262CA752160503B0050D6BC /* BlogVC.swift */; };
+		A262CB4F2160535B0050D6BC /* 浅谈 block（2） - 截获变量方式.md in Resources */ = {isa = PBXBuildFile; fileRef = A262CB4E2160535B0050D6BC /* 浅谈 block（2） - 截获变量方式.md */; };
 		A2930B612104A08E006520FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2930B552104A08E006520FF /* Main.storyboard */; };
 		A2930B622104A08E006520FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2930B572104A08E006520FF /* LaunchScreen.storyboard */; };
 		A2930B632104A08E006520FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2930B582104A08E006520FF /* Assets.xcassets */; };
@@ -26,7 +28,6 @@
 		A2930B7D2104B192006520FF /* AdvanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B7C2104B192006520FF /* AdvanceVC.swift */; };
 		A2930B7F2104B19F006520FF /* BasicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B7E2104B19F006520FF /* BasicVC.swift */; };
 		A2930B812104B1D1006520FF /* CommonTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B802104B1D1006520FF /* CommonTool.swift */; };
-		A2930B832104B215006520FF /* ThirdPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B822104B215006520FF /* ThirdPart.swift */; };
 		A2930B852105FF94006520FF /* RealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2930B842105FF94006520FF /* RealmStore.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,8 @@
 		A241BF8920FC78860099E8A5 /* MyInsight_SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyInsight_SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A241BF8D20FC78860099E8A5 /* MyInsight_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInsight_SwiftUITests.swift; sourceTree = "<group>"; };
 		A241BF8F20FC78860099E8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A262CA752160503B0050D6BC /* BlogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogVC.swift; sourceTree = "<group>"; };
+		A262CB4E2160535B0050D6BC /* 浅谈 block（2） - 截获变量方式.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "浅谈 block（2） - 截获变量方式.md"; sourceTree = "<group>"; };
 		A2930B552104A08E006520FF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A2930B572104A08E006520FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2930B582104A08E006520FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,7 +79,6 @@
 		A2930B7C2104B192006520FF /* AdvanceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvanceVC.swift; sourceTree = "<group>"; };
 		A2930B7E2104B19F006520FF /* BasicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicVC.swift; sourceTree = "<group>"; };
 		A2930B802104B1D1006520FF /* CommonTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTool.swift; sourceTree = "<group>"; };
-		A2930B822104B215006520FF /* ThirdPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPart.swift; sourceTree = "<group>"; };
 		A2930B842105FF94006520FF /* RealmStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStore.swift; sourceTree = "<group>"; };
 		A9CB2AFDBCE902DE69FFC3A4 /* Pods-MyInsight_SwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyInsight_SwiftUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyInsight_SwiftUITests/Pods-MyInsight_SwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADB4EA70B82CF0E7F97618C5 /* Pods_MyInsight_SwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyInsight_SwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,7 +192,7 @@
 		A2930B532104A08E006520FF /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				A2930B822104B215006520FF /* ThirdPart.swift */,
+				A262CB4E2160535B0050D6BC /* 浅谈 block（2） - 截获变量方式.md */,
 			);
 			path = Vendors;
 			sourceTree = "<group>";
@@ -268,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				A2930B782104B171006520FF /* OtherVC.swift */,
+				A262CA752160503B0050D6BC /* BlogVC.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 			files = (
 				A2930B612104A08E006520FF /* Main.storyboard in Resources */,
 				A2930B632104A08E006520FF /* Assets.xcassets in Resources */,
+				A262CB4F2160535B0050D6BC /* 浅谈 block（2） - 截获变量方式.md in Resources */,
 				A2930B622104A08E006520FF /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +434,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyInsight_Swift/Pods-MyInsight_Swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MarkdownView/MarkdownView.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SWRevealViewController/SWRevealViewController.framework",
@@ -438,6 +443,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarkdownView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWRevealViewController.framework",
@@ -511,6 +517,7 @@
 			files = (
 				A2930B812104B1D1006520FF /* CommonTool.swift in Sources */,
 				A2930B792104B171006520FF /* OtherVC.swift in Sources */,
+				A262CA762160503B0050D6BC /* BlogVC.swift in Sources */,
 				A2930B6F2104B01D006520FF /* RightRevealVC.swift in Sources */,
 				A2930B7B2104B181006520FF /* SeniorVC.swift in Sources */,
 				A2930B7F2104B19F006520FF /* BasicVC.swift in Sources */,
@@ -518,7 +525,6 @@
 				A2930B7D2104B192006520FF /* AdvanceVC.swift in Sources */,
 				A2930B642104A08E006520FF /* AppDelegate.swift in Sources */,
 				A2930B852105FF94006520FF /* RealmStore.swift in Sources */,
-				A2930B832104B215006520FF /* ThirdPart.swift in Sources */,
 				A2930B6D2104B00A006520FF /* RearRevealVC.swift in Sources */,
 				A2930B732104B0BE006520FF /* TabBarVC.swift in Sources */,
 				A2930B6B2104AFBB006520FF /* MainRevealVC.swift in Sources */,

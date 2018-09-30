@@ -1,5 +1,6 @@
 # Uncomment the next line to define a global platform for your project
 #platform :ios, '9.0'
+use_modular_headers!
 
 target 'MyInsight' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
@@ -74,8 +75,11 @@ target 'MyInsight' do
   
   # YYTextDemo
   
-  
-  
+  # MarkDown工具 https://github.com/EyreFree/EFMarkdown
+  #应用 Swift 静态库的各种坑 https://cloud.tencent.com/developer/news/252403
+  #pod "EFMarkdown" #, :modular_headers => true
+#  pod "MarkdownView"
+
   target 'MyInsightTests' do
     inherit! :search_paths
     # Pods for testing

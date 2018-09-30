@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B8F78F3B11FDACA05E24886B367C185F"
+               BlueprintIdentifier = "23DA4EA36E3DCA7D34DEF19FB88C272E"
                BlueprintName = "MQTTClient"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libMQTTClient.a">
