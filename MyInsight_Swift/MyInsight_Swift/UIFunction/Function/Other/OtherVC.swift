@@ -10,9 +10,11 @@ import UIKit
 import SWRevealViewController
 import SnapKit
 
-class OtherVC: UIViewController {
+class OtherVC: BaseVC {
     // 声明变量
     let tableview = UITableView()
+    // 数组
+    var dataArray = Array<String>()
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,6 +62,8 @@ class OtherVC: UIViewController {
         // 清空多余cell
         self.tableview.tableFooterView = UIView(frame: CGRect.zero)
         
+        dataArray = ["博客", "聊天"]
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -90,12 +94,16 @@ extension OtherVC: UITableViewDelegate, UITableViewDataSource {
     }
     // cell行数目
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return dataArray.count
     }
     // 生成cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
-        cell.backgroundColor = UIColor.orange
+        //cell.backgroundColor = UIColor.orange
+        
+        cell.textLabel?.text = dataArray[indexPath.row]
+        // 箭头
+        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         
         return cell
     }
@@ -103,9 +111,9 @@ extension OtherVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         debugPrint(indexPath.row)
         
-        let blogVC :BlogVC = BlogVC()
-        blogVC.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(blogVC, animated: true)
+        let blogListVC :BlogListVC = BlogListVC()
+        blogListVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(blogListVC, animated: true)
     }
 }
 

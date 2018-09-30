@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WelcomeVC: UIViewController {
+class WelcomeVC: BaseVC {
     // 滑动view
     var scrollView: UIScrollView = UIScrollView()
     // 页面控制

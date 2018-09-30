@@ -11,7 +11,7 @@ import SWRevealViewController
 
 fileprivate let name = "name"
 
-class BasicVC: UIViewController {
+class BasicVC: BaseVC {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

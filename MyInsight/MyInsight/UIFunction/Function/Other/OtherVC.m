@@ -102,7 +102,7 @@ static const NSString *GitHubStr = @"GitHub";
     
     // 赋值
     cell.textLabel.text = self.dataArray[indexPath.row];
-    cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }

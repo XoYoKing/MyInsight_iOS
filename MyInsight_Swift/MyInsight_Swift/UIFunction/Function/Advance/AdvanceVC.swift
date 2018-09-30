@@ -9,7 +9,7 @@
 import UIKit
 import SWRevealViewController
 
-class AdvanceVC: UIViewController {
+class AdvanceVC: BaseVC {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

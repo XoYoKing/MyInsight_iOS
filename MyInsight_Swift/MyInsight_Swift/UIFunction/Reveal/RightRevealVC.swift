@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RightRevealVC: UIViewController {
+class RightRevealVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()

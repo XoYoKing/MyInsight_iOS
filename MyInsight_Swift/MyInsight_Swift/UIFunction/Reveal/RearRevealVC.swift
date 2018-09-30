@@ -9,7 +9,7 @@
 
 import UIKit
 
-class RearRevealVC: UIViewController {
+class RearRevealVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
