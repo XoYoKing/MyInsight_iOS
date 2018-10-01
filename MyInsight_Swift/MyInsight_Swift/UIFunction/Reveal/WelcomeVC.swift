@@ -24,6 +24,8 @@ class WelcomeVC: BaseVC {
         
         self.pageArray = ["launch_0", "launch_1", "launch_2", "launch_3"]
         
+        self.scrollView = UIScrollView(frame: self.view.bounds)
+        self.view.addSubview(self.scrollView)
         
         
         
