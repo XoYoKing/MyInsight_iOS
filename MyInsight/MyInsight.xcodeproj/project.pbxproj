@@ -131,6 +131,7 @@
 		A257482B202305B9000F7632 /* TableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A257482A202305B9000F7632 /* TableViewVC.m */; };
 		A25F8BA6215A6A45005D6527 /* MIMovieObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A25F8BA5215A6A45005D6527 /* MIMovieObject.m */; };
 		A262CB53216079610050D6BC /* MarkdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = A262CB52216079610050D6BC /* MarkdownView.m */; };
+		A262CC42216388A10050D6BC /* 消愁.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A262CC41216388A10050D6BC /* 消愁.mp3 */; };
 		A268BEFC2106E04300CADD8A /* scrollimage4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A268BEF82106E04300CADD8A /* scrollimage4.jpg */; };
 		A268BEFD2106E04300CADD8A /* scrollimage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A268BEF92106E04300CADD8A /* scrollimage1.jpg */; };
 		A268BEFE2106E04300CADD8A /* scrollimage3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A268BEFA2106E04300CADD8A /* scrollimage3.jpg */; };
@@ -536,6 +537,7 @@
 		A262CA74215FE4BE0050D6BC /* MyInsight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyInsight-Bridging-Header.h"; sourceTree = "<group>"; };
 		A262CB51216079610050D6BC /* MarkdownView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkdownView.h; sourceTree = "<group>"; };
 		A262CB52216079610050D6BC /* MarkdownView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarkdownView.m; sourceTree = "<group>"; };
+		A262CC41216388A10050D6BC /* 消愁.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "消愁.mp3"; sourceTree = "<group>"; };
 		A268BEF82106E04300CADD8A /* scrollimage4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scrollimage4.jpg; sourceTree = "<group>"; };
 		A268BEF92106E04300CADD8A /* scrollimage1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scrollimage1.jpg; sourceTree = "<group>"; };
 		A268BEFA2106E04300CADD8A /* scrollimage3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scrollimage3.jpg; sourceTree = "<group>"; };
@@ -1860,6 +1862,7 @@
 		A27E8726201AC53C003E712C /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				A262CC41216388A10050D6BC /* 消愁.mp3 */,
 				A27E8727201AC53C003E712C /* 1967.mp3 */,
 				A2C1AB7C2025A1D80085A653 /* alarm4.m4r */,
 			);
@@ -2715,6 +2718,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A262CC42216388A10050D6BC /* 消愁.mp3 in Resources */,
 				A2DDDC5F208B084A00DC7A4A /* FoldTableViewCell.xib in Resources */,
 				A2B992A72068F441002A73B1 /* ChatFileCell.xib in Resources */,
 				A27E8728201AC53C003E712C /* 1967.mp3 in Resources */,

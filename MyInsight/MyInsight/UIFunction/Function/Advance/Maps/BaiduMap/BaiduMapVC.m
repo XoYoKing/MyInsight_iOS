@@ -59,7 +59,6 @@
     if (!ret) {
         NSLog(@"百度地图初始化失败！");
     }
-    
     // 设置百度地图定位
     [self setupBaiduMapLocation];
     // 绘制页面

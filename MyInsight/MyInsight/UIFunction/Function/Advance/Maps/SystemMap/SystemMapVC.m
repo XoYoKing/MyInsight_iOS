@@ -31,13 +31,17 @@
 
 @implementation SystemMapVC
 
+/*
+ 准备仿照苹果手机自带地图软件写
+ */
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     /*
      [iOS 自带地图详解](https://www.cnblogs.com/hongyan1314/p/5802193.html)
      */
-    self.title = @"系统(高德)地图";
+    self.title = @"系统地图";
     
     // 创建地图
     [self creatMaps];

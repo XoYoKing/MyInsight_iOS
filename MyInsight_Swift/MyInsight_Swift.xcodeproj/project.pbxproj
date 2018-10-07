@@ -62,6 +62,8 @@
 		A262CC39216104520050D6BC /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = A262CC35216104520050D6BC /* main.js */; };
 		A262CC3C216110870050D6BC /* iOS面试题.md in Resources */ = {isa = PBXBuildFile; fileRef = A262CC3A21610B4D0050D6BC /* iOS面试题.md */; };
 		A262CC3E21621C670050D6BC /* 一些.md in Resources */ = {isa = PBXBuildFile; fileRef = A262CC3D21621C670050D6BC /* 一些.md */; };
+		A262CC40216338030050D6BC /* BlockVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262CC3F216338030050D6BC /* BlockVC.swift */; };
+		A262CC4421646F620050D6BC /* MyBlogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262CC4321646F620050D6BC /* MyBlogVC.swift */; };
 		A2930B612104A08E006520FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2930B552104A08E006520FF /* Main.storyboard */; };
 		A2930B622104A08E006520FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2930B572104A08E006520FF /* LaunchScreen.storyboard */; };
 		A2930B632104A08E006520FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2930B582104A08E006520FF /* Assets.xcassets */; };
@@ -159,6 +161,8 @@
 		A262CC35216104520050D6BC /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 		A262CC3A21610B4D0050D6BC /* iOS面试题.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "iOS面试题.md"; sourceTree = "<group>"; };
 		A262CC3D21621C670050D6BC /* 一些.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "一些.md"; sourceTree = "<group>"; };
+		A262CC3F216338030050D6BC /* BlockVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockVC.swift; sourceTree = "<group>"; };
+		A262CC4321646F620050D6BC /* MyBlogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBlogVC.swift; sourceTree = "<group>"; };
 		A2930B552104A08E006520FF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A2930B572104A08E006520FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2930B582104A08E006520FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -542,6 +546,7 @@
 			isa = PBXGroup;
 			children = (
 				A2930B7E2104B19F006520FF /* BasicVC.swift */,
+				A262CC3F216338030050D6BC /* BlockVC.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -551,6 +556,7 @@
 			children = (
 				A2930B782104B171006520FF /* OtherVC.swift */,
 				A262CC252160D10E0050D6BC /* BlogListVC.swift */,
+				A262CC4321646F620050D6BC /* MyBlogVC.swift */,
 				A262CC232160D0C40050D6BC /* MarkDownBlogVC.swift */,
 			);
 			path = Other;
@@ -838,6 +844,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A262CC4421646F620050D6BC /* MyBlogVC.swift in Sources */,
 				A2930B812104B1D1006520FF /* CommonTool.swift in Sources */,
 				A262CC37216104520050D6BC /* MarkdownView.swift in Sources */,
 				A2930B792104B171006520FF /* OtherVC.swift in Sources */,
@@ -852,6 +859,7 @@
 				A2930B852105FF94006520FF /* RealmStore.swift in Sources */,
 				A262CC282160DBDD0050D6BC /* BaseVC.swift in Sources */,
 				A2930B6D2104B00A006520FF /* RearRevealVC.swift in Sources */,
+				A262CC40216338030050D6BC /* BlockVC.swift in Sources */,
 				A2930B732104B0BE006520FF /* TabBarVC.swift in Sources */,
 				A2930B6B2104AFBB006520FF /* MainRevealVC.swift in Sources */,
 				A262CB562160C4B90050D6BC /* Vendors.swift in Sources */,

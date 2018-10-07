@@ -7,7 +7,6 @@
 //
 
 #import "MapsVC.h"
-#import <Masonry.h>
 #import "BaiduMapVC.h"
 #import "SystemMapVC.h"
 #import "GoogleMapVC.h"
@@ -39,8 +38,6 @@ static const NSString *GaodeMapStr = @"高德地图";
     [self handleTableViewData];
     
     [self creatTableView];
-    
-    [self masonryLayoutSubview];
 }
 
 // 处理数据
@@ -51,7 +48,7 @@ static const NSString *GaodeMapStr = @"高德地图";
 
 #pragma mark - 创建TableView
 - (void)creatTableView {
-    self.tableView = [[UITableView alloc] init];
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     // 设置代理
     self.tableView.delegate = self;
@@ -59,7 +56,6 @@ static const NSString *GaodeMapStr = @"高德地图";
     // 清空多余cell
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     // 注册cell
-    //[self.tableView registerNib:[UINib nibWithNibName:@"MineCell" bundle:nil] forCellReuseIdentifier:@"MineCell"];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
 }
 
@@ -124,17 +120,6 @@ static const NSString *GaodeMapStr = @"高德地图";
         gaodeMapVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:gaodeMapVC animated:YES];
     }
-}
-
-#pragma mark - 代码约束布局
-- (void)masonryLayoutSubview {
-    // TableView
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).offset(0.0f);
-        make.left.equalTo(self.view.mas_left).offset(0.0f);
-        make.right.equalTo(self.view.mas_right).offset(0.0f);
-        make.bottom.equalTo(self.view.mas_bottom).offset(0.0f);
-    }];
 }
 
 - (void)didReceiveMemoryWarning {

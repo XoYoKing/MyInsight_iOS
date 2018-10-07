@@ -48,12 +48,6 @@ class OtherVC: BaseVC {
         // 初始化tableview
         
         self.view.addSubview(self.tableview)
-//        self.tableview.snp.makeConstraints { (make) in
-//            make.top.equalTo(self.view.snp.top).offset(0.0)
-//            make.left.equalTo(self.view.snp.left).offset(0.0)
-//            make.right.equalTo(self.view.snp.right).offset(0.0)
-//            make.bottom.equalTo(self.view.snp.bottom).offset(0.0)
-//        }
         self.tableview.frame = self.view.bounds;
         self.tableview.delegate = self
         self.tableview.dataSource = self
@@ -62,7 +56,7 @@ class OtherVC: BaseVC {
         // 清空多余cell
         self.tableview.tableFooterView = UIView(frame: CGRect.zero)
         
-        dataArray = ["博客", "聊天"]
+        dataArray = ["博客", "我的博客"]
         
     }
 
@@ -84,7 +78,7 @@ class OtherVC: BaseVC {
 
 }
 
-//扩展
+//MARK: - 扩展
 extension OtherVC: UITableViewDelegate, UITableViewDataSource {
     // 实现代理协议
     
@@ -99,8 +93,7 @@ extension OtherVC: UITableViewDelegate, UITableViewDataSource {
     // 生成cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
-        //cell.backgroundColor = UIColor.orange
-        
+        // label赋值
         cell.textLabel?.text = dataArray[indexPath.row]
         // 箭头
         cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
@@ -109,7 +102,16 @@ extension OtherVC: UITableViewDelegate, UITableViewDataSource {
     }
     // 选中cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        debugPrint(indexPath.row)
+        
+        let cellStr: String = self.dataArray[indexPath.row]
+        
+        if cellStr == "博客" {
+            debugPrint("博客")
+        }
+        
+        if cellStr == "我的博客" {
+            debugPrint("我的博客")
+        }
         
         let blogListVC :BlogListVC = BlogListVC()
         blogListVC.hidesBottomBarWhenPushed = true

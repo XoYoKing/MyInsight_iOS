@@ -40,7 +40,6 @@
 - (void)setupMapViews {
     self.mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:self.mapView];
-    //self.mapView.centerCoordinate = CLLocationCoordinate2DMake(22.547,114.085947);
     self.mapView.showsCompass = YES;
     self.mapView.mapType = MAMapTypeStandard;
     self.mapView.showsScale = YES;

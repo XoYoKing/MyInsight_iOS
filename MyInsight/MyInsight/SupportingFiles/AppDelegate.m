@@ -14,6 +14,8 @@
 
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
+@property (nonatomic, assign) UIBackgroundTaskIdentifier backgroundUpdateTask;
+
 @end
 
 @implementation AppDelegate
@@ -145,6 +147,19 @@
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
+    NSLog(@"程序进入后台");
+    [self beingBackgroundUpdateTask];
+    [self endBackgroundUpdateTask];
+}
+
+- (void)beingBackgroundUpdateTask {
+//    self.backgroundUpdateTask = [[UIApplication sharedApplication] beginBackgroundTaskWithName:@"" expirationHandler:^{
+//
+//    }];
+}
+
+- (void)endBackgroundUpdateTask {
+    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
