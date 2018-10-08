@@ -30,8 +30,6 @@
 #import "DrawingBoardVC.h" // 绘图板
 #import "ColorPickerVC.h" // 颜色拾取器
 
-#import "BlogVC.h"
-
 @interface BasicVC ()<UITableViewDelegate, UITableViewDataSource>
 // LEFT
 @property (nonatomic, strong) UIBarButtonItem *leftBarButtonItem;
@@ -44,7 +42,7 @@
 
 @end
 
-static const NSString *AlgorithmStr = @"算法Algorithm";
+static const NSString *AlgorithmStr = @"数据结构/算法Algorithm";
 static const NSString *LiftCycleStr = @"VC生命周期";
 static const NSString *RunTimeStr = @"运行时RunTime";
 static const NSString *RunLoopStr = @"RunLoop";
@@ -66,8 +64,6 @@ static const NSString *BlurViewStr = @"毛玻璃效果";
 static const NSString *DrawingBoardStr = @"绘图板";
 static const NSString *QuartzDrawStr = @"Quartz画线";
 static const NSString *ColorPickerStr = @"颜色拾取器";
-
-static const NSString *BlogStr = @"博客";
 
 @implementation BasicVC
 
@@ -105,7 +101,7 @@ static const NSString *BlogStr = @"博客";
 // 处理数据
 - (void)handleTableViewData {
     // 数组
-    self.dataArray = @[BlogStr, AlgorithmStr, CYuYanString, LiftCycleStr, RunTimeStr, RunLoopStr, BlockStr, MultiThreadStr, GestureStr, XieYiStr, PhysicalStr, CoreAnimationStr, CoreGraphicsStr, QuartzDrawStr, ScrollViewStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, ViewLayoutStr, BlurViewStr, DrawingBoardStr, ColorPickerStr];
+    self.dataArray = @[AlgorithmStr, CYuYanString, LiftCycleStr, RunTimeStr, RunLoopStr, BlockStr, MultiThreadStr, GestureStr, XieYiStr, PhysicalStr, CoreAnimationStr, CoreGraphicsStr, QuartzDrawStr, ScrollViewStr, TableViewStr, CollectViewStr, RadioButtonStr, ScreenStr, ViewLayoutStr, BlurViewStr, DrawingBoardStr, ColorPickerStr];
 }
 
 #pragma mark - 创建TableView
@@ -161,12 +157,6 @@ static const NSString *BlogStr = @"博客";
         AlgorithmVC *algorithmVC = [[AlgorithmVC alloc] init];
         algorithmVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:algorithmVC animated:YES];
-    }
-    if ([cellString isEqual:BlogStr]) {
-        // 博客
-        BlogVC *blogVC = [[BlogVC alloc] init];
-        blogVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:blogVC animated:YES];
     }
     if ([cellString isEqual:CYuYanString]) {
         // C语言

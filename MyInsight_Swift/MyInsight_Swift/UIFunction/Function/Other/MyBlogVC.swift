@@ -10,18 +10,24 @@ import UIKit
 
 class MyBlogVC: BaseVC {
     
+    var tableView = UITableView()
     
+    var dataArray: Array<String> = Array()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "我的博客"
         
+        self.tableView = UITableView(frame: self.view.bounds, style: UITableView.Style.plain)
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.view.addSubview(self.tableView)
         
+        self.dataArray = ["iOS面试题", "一些"]
         
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -32,4 +38,29 @@ class MyBlogVC: BaseVC {
     }
     */
 
+}
+
+extension MyBlogVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.dataArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
+        
+        cell.textLabel?.text = dataArray[indexPath.row]
+        // 箭头
+        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let markdownStr: String = dataArray[indexPath.row]
+        debugPrint("滚滚长江东逝水 " + markdownStr)
+        let markDownBlogVC :MarkDownBlogVC = MarkDownBlogVC()
+        markDownBlogVC.hidesBottomBarWhenPushed = true
+        markDownBlogVC.markdownStr = markdownStr
+        self.navigationController?.pushViewController(markDownBlogVC, animated: true)
+    }
 }

@@ -107,15 +107,17 @@ extension OtherVC: UITableViewDelegate, UITableViewDataSource {
         
         if cellStr == "博客" {
             debugPrint("博客")
+            let blogListVC :BlogListVC = BlogListVC()
+            blogListVC.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(blogListVC, animated: true)
         }
         
         if cellStr == "我的博客" {
             debugPrint("我的博客")
+            let myBlogVC :MyBlogVC = MyBlogVC()
+            myBlogVC.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(myBlogVC, animated: true)
         }
-        
-        let blogListVC :BlogListVC = BlogListVC()
-        blogListVC.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(blogListVC, animated: true)
     }
 }
 

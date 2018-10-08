@@ -112,10 +112,6 @@
 		A241D22B2047A32A005A3BC5 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22A2047A32A005A3BC5 /* UIColor+Category.m */; };
 		A242C1B620902BFA00A6A9F7 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = A242C1B520902BFA00A6A9F7 /* RSA.m */; };
 		A2524270215D086000181DF3 /* BlockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A252426F215D086000181DF3 /* BlockVC.m */; };
-		A2524275215F8C5E00181DF3 /* 算法.html in Resources */ = {isa = PBXBuildFile; fileRef = A2524274215F8C5E00181DF3 /* 算法.html */; };
-		A2524277215F8C7400181DF3 /* runtime.html in Resources */ = {isa = PBXBuildFile; fileRef = A2524276215F8C7400181DF3 /* runtime.html */; };
-		A2524279215F8C7F00181DF3 /* runloop.html in Resources */ = {isa = PBXBuildFile; fileRef = A2524278215F8C7F00181DF3 /* runloop.html */; };
-		A252427B215F8C9C00181DF3 /* block.html in Resources */ = {isa = PBXBuildFile; fileRef = A252427A215F8C9C00181DF3 /* block.html */; };
 		A252427D215F8CC100181DF3 /* 多线程.html in Resources */ = {isa = PBXBuildFile; fileRef = A252427C215F8CC100181DF3 /* 多线程.html */; };
 		A252427F215F8DDC00181DF3 /* model.html in Resources */ = {isa = PBXBuildFile; fileRef = A252427E215F8DDC00181DF3 /* model.html */; };
 		A2524282215F99D500181DF3 /* BlogVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2524281215F99D500181DF3 /* BlogVC.m */; };
@@ -503,10 +499,6 @@
 		A242C1B520902BFA00A6A9F7 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
 		A252426E215D086000181DF3 /* BlockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockVC.h; sourceTree = "<group>"; };
 		A252426F215D086000181DF3 /* BlockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockVC.m; sourceTree = "<group>"; };
-		A2524274215F8C5E00181DF3 /* 算法.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "算法.html"; sourceTree = "<group>"; };
-		A2524276215F8C7400181DF3 /* runtime.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = runtime.html; sourceTree = "<group>"; };
-		A2524278215F8C7F00181DF3 /* runloop.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = runloop.html; sourceTree = "<group>"; };
-		A252427A215F8C9C00181DF3 /* block.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = block.html; sourceTree = "<group>"; };
 		A252427C215F8CC100181DF3 /* 多线程.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "多线程.html"; sourceTree = "<group>"; };
 		A252427E215F8DDC00181DF3 /* model.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = model.html; sourceTree = "<group>"; };
 		A2524280215F99D500181DF3 /* BlogVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlogVC.h; sourceTree = "<group>"; };
@@ -515,7 +507,6 @@
 		A2524284215F9A3C00181DF3 /* BlogWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlogWebVC.m; sourceTree = "<group>"; };
 		A2524287215FB7AC00181DF3 /* AlgorithmVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmVC.h; sourceTree = "<group>"; };
 		A2524288215FB7AC00181DF3 /* AlgorithmVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmVC.m; sourceTree = "<group>"; };
-		A252428A215FC81E00181DF3 /* blog.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = blog.md; sourceTree = "<group>"; };
 		A2561DBA2094123400D4E2E5 /* EncryptVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncryptVC.h; sourceTree = "<group>"; };
 		A2561DBB2094123400D4E2E5 /* EncryptVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncryptVC.m; sourceTree = "<group>"; };
 		A2561DBD2094725100D4E2E5 /* DragTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragTableVC.h; sourceTree = "<group>"; };
@@ -1562,12 +1553,7 @@
 			isa = PBXGroup;
 			children = (
 				A252427E215F8DDC00181DF3 /* model.html */,
-				A2524274215F8C5E00181DF3 /* 算法.html */,
-				A2524276215F8C7400181DF3 /* runtime.html */,
-				A2524278215F8C7F00181DF3 /* runloop.html */,
-				A252427A215F8C9C00181DF3 /* block.html */,
 				A252427C215F8CC100181DF3 /* 多线程.html */,
-				A252428A215FC81E00181DF3 /* blog.md */,
 			);
 			path = Blog;
 			sourceTree = "<group>";
@@ -2722,7 +2708,6 @@
 				A2DDDC5F208B084A00DC7A4A /* FoldTableViewCell.xib in Resources */,
 				A2B992A72068F441002A73B1 /* ChatFileCell.xib in Resources */,
 				A27E8728201AC53C003E712C /* 1967.mp3 in Resources */,
-				A2524277215F8C7400181DF3 /* runtime.html in Resources */,
 				A268BEFE2106E04300CADD8A /* scrollimage3.jpg in Resources */,
 				A22C4DD11FFC777A0079F7C2 /* purple_arrow.png in Resources */,
 				A2B992AC2068F45B002A73B1 /* ChatTipCell.xib in Resources */,
@@ -2735,7 +2720,6 @@
 				A22C4DD41FFC777A0079F7C2 /* via.png in Resources */,
 				A252427D215F8CC100181DF3 /* 多线程.html in Resources */,
 				A28ED53D1FD2494800A74551 /* Home.storyboard in Resources */,
-				A2524275215F8C5E00181DF3 /* 算法.html in Resources */,
 				A22C4DCD1FFC777A0079F7C2 /* via@2x.png in Resources */,
 				A2C84E8220AA7A5A000FD685 /* testPic.jpg in Resources */,
 				A22C4DC61FFC777A0079F7C2 /* route_start_pin.png in Resources */,
@@ -2759,11 +2743,9 @@
 				A268BEFF2106E04300CADD8A /* scrollimage2.jpg in Resources */,
 				A22C4DC21FFC777A0079F7C2 /* goal.png in Resources */,
 				A22C4DCB1FFC777A0079F7C2 /* route_pin@2x.png in Resources */,
-				A252427B215F8C9C00181DF3 /* block.html in Resources */,
 				A28ED5411FD2495F00A74551 /* Mine.storyboard in Resources */,
 				A241BF5920F73DB60099E8A5 /* QuartzDraw.storyboard in Resources */,
 				A2CDD258208DD3CA006DF86E /* 卡哇伊.jpg in Resources */,
-				A2524279215F8C7F00181DF3 /* runloop.html in Resources */,
 				A22C4DCA1FFC777A0079F7C2 /* compass48.png in Resources */,
 				A268BEFD2106E04300CADD8A /* scrollimage1.jpg in Resources */,
 				A2B992982068F3E4002A73B1 /* ChatImageCell.xib in Resources */,

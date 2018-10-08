@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"算法Algorithm";
+    self.title = @"算法Algorithm/数据结构";
     
     NSMutableArray * dataArr = [NSMutableArray arrayWithArray:@[@"13",@"5",@"89",@"20",@"40",@"18",@"120"]];
     
