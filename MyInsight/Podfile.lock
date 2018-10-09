@@ -27,6 +27,9 @@ PODS:
   - BabyBluetooth (0.7.0)
   - BaiduMapKit (3.4.2)
   - CocoaAsyncSocket (7.6.3)
+  - Flurry-iOS-SDK/FlurryAds (9.2.0):
+    - Flurry-iOS-SDK/FlurrySDK
+  - Flurry-iOS-SDK/FlurrySDK (9.2.0)
   - FMDB (2.7.2):
     - FMDB/standard (= 2.7.2)
   - FMDB/standard (2.7.2)
@@ -54,24 +57,10 @@ PODS:
   - SDWebImage/Core (4.4.2)
   - SocketRocket (0.5.1)
   - SWRevealViewController (2.3.0)
-  - UMengAnalytics (4.2.4)
-  - UMengUShare/Core (6.4.8.2):
-    - UMengUShare/Network
-  - UMengUShare/Network (6.4.8.2)
-  - UMengUShare/Social/QQ (6.4.8.2):
-    - UMengUShare/Core
-    - UMengUShare/Social/ReducedQQ
-  - UMengUShare/Social/ReducedQQ (6.4.8.2):
-    - UMengUShare/Core
-  - UMengUShare/Social/ReducedSina (6.4.8.2):
-    - UMengUShare/Core
-  - UMengUShare/Social/ReducedWeChat (6.4.8.2):
-    - UMengUShare/Core
-  - UMengUShare/Social/Sina (6.4.8.2):
-    - UMengUShare/Core
-    - UMengUShare/Social/ReducedSina
-  - UMengUShare/UI (6.4.8.2):
-    - UMengUShare/Core
+  - UMCAnalytics (5.5.1):
+    - UMCCommon
+  - UMCCommon (1.5.2)
+  - UMCSecurityPlugins (1.0.6)
   - WeexSDK (0.18.0.3)
   - WXDevtool (0.16.3):
     - SocketRocket
@@ -85,6 +74,8 @@ DEPENDENCIES:
   - BabyBluetooth
   - BaiduMapKit
   - CocoaAsyncSocket
+  - Flurry-iOS-SDK/FlurryAds
+  - Flurry-iOS-SDK/FlurrySDK
   - FMDB
   - GoogleMaps
   - GTMBase64
@@ -97,11 +88,9 @@ DEPENDENCIES:
   - SDWebImage
   - SocketRocket
   - SWRevealViewController
-  - UMengAnalytics
-  - UMengUShare/Social/QQ
-  - UMengUShare/Social/ReducedWeChat
-  - UMengUShare/Social/Sina
-  - UMengUShare/UI
+  - UMCAnalytics
+  - UMCCommon
+  - UMCSecurityPlugins
   - WXDevtool
 
 SPEC REPOS:
@@ -115,6 +104,7 @@ SPEC REPOS:
     - BabyBluetooth
     - BaiduMapKit
     - CocoaAsyncSocket
+    - Flurry-iOS-SDK
     - FMDB
     - GoogleMaps
     - GTMBase64
@@ -127,8 +117,9 @@ SPEC REPOS:
     - SDWebImage
     - SocketRocket
     - SWRevealViewController
-    - UMengAnalytics
-    - UMengUShare
+    - UMCAnalytics
+    - UMCCommon
+    - UMCSecurityPlugins
     - WeexSDK
     - WXDevtool
 
@@ -142,6 +133,7 @@ SPEC CHECKSUMS:
   BabyBluetooth: d50758aecf24d4a0ab9271d69f0f116d6bee51c9
   BaiduMapKit: f61b19ecf07a3f2deede72b221b366bf698739ed
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  Flurry-iOS-SDK: e5d6ff8cb79b5044710a0c7ae41b12ac651f4315
   FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
@@ -154,11 +146,12 @@ SPEC CHECKSUMS:
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
-  UMengAnalytics: ef8d45f94c0e5771dc364cf6a5731d9d3b101da2
-  UMengUShare: 370d180101e13ee0227ae657ab119ba97243d2b3
+  UMCAnalytics: 0aff87e39008e2a650e5917430db0da2de2f8495
+  UMCCommon: 4392868ac47ff1b101663106bb114ba616fabbad
+  UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
   WeexSDK: 173541f2d0042664168b305952398145c0c6039c
   WXDevtool: c028138b4e3a8856758acfea2328f708d3adbedd
 
-PODFILE CHECKSUM: f9fbc31d515d2ecf689e658ba125579b8842ddff
+PODFILE CHECKSUM: a1a417ef2be09f442aa22846d7c6611a1d5104a5
 
 COCOAPODS: 1.5.3

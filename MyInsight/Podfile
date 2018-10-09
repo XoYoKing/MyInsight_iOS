@@ -27,14 +27,21 @@ target 'MyInsight' do
   pod 'Reachability'
   #pod 'ReactiveCocoa','~>2.1.8' # 响应式编程
   
-  #友盟统计和分享
-  pod 'UMengAnalytics'
+  #友盟统计
+  pod 'UMCCommon'
+  pod 'UMCAnalytics'
+  pod 'UMCSecurityPlugins'
   # U-Share SDK UI模块（分享面板，建议添加）
-  pod 'UMengUShare/UI'
-  pod 'UMengUShare/Social/ReducedWeChat'
-  pod 'UMengUShare/Social/QQ'
-  pod 'UMengUShare/Social/Sina'
+  # 友盟分享
   
+  # 友盟推送
+  
+  #pod 'UMengAnalytics'
+#  pod 'UMengUShare/UI'
+#  pod 'UMengUShare/Social/ReducedWeChat'
+#  pod 'UMengUShare/Social/QQ'
+#  pod 'UMengUShare/Social/Sina'
+
   # 键盘管理
   pod 'IQKeyboardManager'
   
@@ -79,6 +86,10 @@ target 'MyInsight' do
   #应用 Swift 静态库的各种坑 https://cloud.tencent.com/developer/news/252403
   #pod "EFMarkdown" #, :modular_headers => true
 #  pod "MarkdownView"
+
+
+    pod 'Flurry-iOS-SDK/FlurrySDK'
+    pod 'Flurry-iOS-SDK/FlurryAds'
 
   target 'MyInsightTests' do
     inherit! :search_paths

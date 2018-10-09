@@ -112,10 +112,6 @@
 		A241D22B2047A32A005A3BC5 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A241D22A2047A32A005A3BC5 /* UIColor+Category.m */; };
 		A242C1B620902BFA00A6A9F7 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = A242C1B520902BFA00A6A9F7 /* RSA.m */; };
 		A2524270215D086000181DF3 /* BlockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A252426F215D086000181DF3 /* BlockVC.m */; };
-		A252427D215F8CC100181DF3 /* 多线程.html in Resources */ = {isa = PBXBuildFile; fileRef = A252427C215F8CC100181DF3 /* 多线程.html */; };
-		A252427F215F8DDC00181DF3 /* model.html in Resources */ = {isa = PBXBuildFile; fileRef = A252427E215F8DDC00181DF3 /* model.html */; };
-		A2524282215F99D500181DF3 /* BlogVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2524281215F99D500181DF3 /* BlogVC.m */; };
-		A2524285215F9A3C00181DF3 /* BlogWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2524284215F9A3C00181DF3 /* BlogWebVC.m */; };
 		A2524289215FB7AC00181DF3 /* AlgorithmVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2524288215FB7AC00181DF3 /* AlgorithmVC.m */; };
 		A2561DBC2094123400D4E2E5 /* EncryptVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DBB2094123400D4E2E5 /* EncryptVC.m */; };
 		A2561DBF2094725100D4E2E5 /* DragTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2561DBE2094725100D4E2E5 /* DragTableVC.m */; };
@@ -499,12 +495,6 @@
 		A242C1B520902BFA00A6A9F7 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
 		A252426E215D086000181DF3 /* BlockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockVC.h; sourceTree = "<group>"; };
 		A252426F215D086000181DF3 /* BlockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockVC.m; sourceTree = "<group>"; };
-		A252427C215F8CC100181DF3 /* 多线程.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "多线程.html"; sourceTree = "<group>"; };
-		A252427E215F8DDC00181DF3 /* model.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = model.html; sourceTree = "<group>"; };
-		A2524280215F99D500181DF3 /* BlogVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlogVC.h; sourceTree = "<group>"; };
-		A2524281215F99D500181DF3 /* BlogVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlogVC.m; sourceTree = "<group>"; };
-		A2524283215F9A3C00181DF3 /* BlogWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlogWebVC.h; sourceTree = "<group>"; };
-		A2524284215F9A3C00181DF3 /* BlogWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlogWebVC.m; sourceTree = "<group>"; };
 		A2524287215FB7AC00181DF3 /* AlgorithmVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmVC.h; sourceTree = "<group>"; };
 		A2524288215FB7AC00181DF3 /* AlgorithmVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmVC.m; sourceTree = "<group>"; };
 		A2561DBA2094123400D4E2E5 /* EncryptVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncryptVC.h; sourceTree = "<group>"; };
@@ -1136,7 +1126,6 @@
 		A20D5DF61FD14549000E191D /* UIFunction */ = {
 			isa = PBXGroup;
 			children = (
-				A2524273215F8C2B00181DF3 /* Blog */,
 				A26D172D2043A3CA0064DECF /* Welcome */,
 				A20D5E031FD1471D000E191D /* Reveal */,
 				A20D5E041FD1471D000E191D /* Tabbar */,
@@ -1549,15 +1538,6 @@
 			path = Block;
 			sourceTree = "<group>";
 		};
-		A2524273215F8C2B00181DF3 /* Blog */ = {
-			isa = PBXGroup;
-			children = (
-				A252427E215F8DDC00181DF3 /* model.html */,
-				A252427C215F8CC100181DF3 /* 多线程.html */,
-			);
-			path = Blog;
-			sourceTree = "<group>";
-		};
 		A2524286215FB7A000181DF3 /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
@@ -1693,10 +1673,6 @@
 			children = (
 				A26CE4842018A0880012EC69 /* BasicVC.h */,
 				A26CE4852018A0880012EC69 /* BasicVC.m */,
-				A2524280215F99D500181DF3 /* BlogVC.h */,
-				A2524281215F99D500181DF3 /* BlogVC.m */,
-				A2524283215F9A3C00181DF3 /* BlogWebVC.h */,
-				A2524284215F9A3C00181DF3 /* BlogWebVC.m */,
 				A2524286215FB7A000181DF3 /* Algorithm */,
 				A2DDDC45208AE1F600DC7A4A /* ViewLayout */,
 				A2BDD420205F5550008AD133 /* MultiThread */,
@@ -2718,7 +2694,6 @@
 				A22C4DCF1FFC777A0079F7C2 /* pin_head_l.png in Resources */,
 				A22C4DCE1FFC777A0079F7C2 /* route_goal_pin@2x.png in Resources */,
 				A22C4DD41FFC777A0079F7C2 /* via.png in Resources */,
-				A252427D215F8CC100181DF3 /* 多线程.html in Resources */,
 				A28ED53D1FD2494800A74551 /* Home.storyboard in Resources */,
 				A22C4DCD1FFC777A0079F7C2 /* via@2x.png in Resources */,
 				A2C84E8220AA7A5A000FD685 /* testPic.jpg in Resources */,
@@ -2731,7 +2706,6 @@
 				A22C4DC91FFC777A0079F7C2 /* compass48@2x.png in Resources */,
 				A2930B5221049071006520FF /* beijing.png in Resources */,
 				A22C4DD01FFC777A0079F7C2 /* pin_red_s.png in Resources */,
-				A252427F215F8DDC00181DF3 /* model.html in Resources */,
 				A2B992A22068F42F002A73B1 /* ChatVideoCell.xib in Resources */,
 				A22C4DC71FFC777A0079F7C2 /* route_goal_pin.png in Resources */,
 				A241BF6020F740C30099E8A5 /* Quartz.pdf in Resources */,
@@ -2830,10 +2804,6 @@
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/HMQRCodeScanner/HMQRCodeScanner/QRCode/HMScanner.bundle",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
-				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle",
-				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/QQ/QQSDK/TencentOpenApi_IOS_Bundle.bundle",
-				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/Sina/SinaSDK/WeiboSDK.bundle",
-				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialUI/UMSocialSDKResources.bundle",
 				"${PODS_ROOT}/WeexSDK/pre-build/native-bundle-main.js",
 				"${PODS_ROOT}/WeexSDK/ios/sdk/WeexSDK/Resources/wx_load_error@3x.png",
 			);
@@ -2845,10 +2815,6 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HMScanner.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKPromptResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TencentOpenApi_IOS_Bundle.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/native-bundle-main.js",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/wx_load_error@3x.png",
 			);
@@ -2903,7 +2869,6 @@
 				A23B3523208D72B5001D71F2 /* CoreAnimationVC.m in Sources */,
 				A2E9DA222091BD210061B1E7 /* NSData+AES.m in Sources */,
 				A2DDDC55208AECCD00DC7A4A /* AutoLayoutVC.m in Sources */,
-				A2524282215F99D500181DF3 /* BlogVC.m in Sources */,
 				A26B693B2155227200AFDAAD /* CoreFoundationVC.m in Sources */,
 				A239CE1A208595C30033646A /* MultiTypeFlowLayoutVC.m in Sources */,
 				A2CA808C202196EA00D81845 /* RunTimeVC.m in Sources */,
@@ -3013,7 +2978,6 @@
 				A20D5DFE1FD14549000E191D /* AppDelegate.m in Sources */,
 				A23B3526208D7E16001D71F2 /* CALayerVC.m in Sources */,
 				A2C84E8020AA78F9000FD685 /* FileSharedVC.m in Sources */,
-				A2524285215F9A3C00181DF3 /* BlogWebVC.m in Sources */,
 				A239CE262085D8B20033646A /* MILineLayout.m in Sources */,
 				A2D884A620872322005116A6 /* BluetoothCell.m in Sources */,
 				A26D17342043BDB80064DECF /* LoginVC.m in Sources */,

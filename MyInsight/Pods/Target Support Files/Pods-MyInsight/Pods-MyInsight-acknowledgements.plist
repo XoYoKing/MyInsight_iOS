@@ -215,6 +215,17 @@ THE SOFTWARE.</string>
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Developer's use of the SDK is governed by the license in the applicable Flurry Terms of Service. Some components of the SDK are governed by open source software licenses. In the event of any conflict between the license in the applicable Flurry Terms of Service and the applicable open source license, the terms of the open source license shall prevail with respect to those components.
+</string>
+			<key>License</key>
+			<string>Commercial</string>
+			<key>Title</key>
+			<string>Flurry-iOS-SDK</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>The MIT License (MIT)
 
 Copyright (c) 2015 
@@ -721,23 +732,34 @@ THE SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright 2011 - 2015 UMeng.com. All rights reserved.
+			<string>Copyright 2011 - 2018 umeng.com. All rights reserved.
 </string>
 			<key>License</key>
 			<string>Copyright</string>
 			<key>Title</key>
-			<string>UMengAnalytics</string>
+			<string>UMCAnalytics</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright 2011 - 2018 UMeng.com. All rights reserved.
+			<string>Copyright 2011 - 2018 umeng.com. All rights reserved.
 </string>
 			<key>License</key>
 			<string>Copyright</string>
 			<key>Title</key>
-			<string>UMengUShare</string>
+			<string>UMCCommon</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright 2011 - 2018 umeng.com. All rights reserved.
+</string>
+			<key>License</key>
+			<string>Copyright</string>
+			<key>Title</key>
+			<string>UMCSecurityPlugins</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

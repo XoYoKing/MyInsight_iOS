@@ -12,7 +12,13 @@
 #import <UserNotifications/UserNotifications.h>
 #import <SDWebImageDownloader.h>
 #import <SDWebImageManager.h>
+#import <Flurry.h>
 //#import <LCChatKit.h>
+
+/*
+ 友盟API
+ 5bbc3f6ef1f5569c8300050a
+ */
 
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
@@ -38,6 +44,8 @@
     [self isRightFirstLaunched];
     // Window可见
     [self.window makeKeyAndVisible];
+    // 设置Flurry应用检测
+    [self setupFlurry];
     
     return YES;
 }
@@ -70,6 +78,15 @@
 - (void)showAdvertiserView {
     NSLog(@"此处 启动 广告！");
 }
+
+#pragma mark - 设置Flurry应用检测
+- (void)setupFlurry {
+    [Flurry startSession:@"TQDQRDHJPWRQPN24JR4S"
+      withSessionBuilder:[[[FlurrySessionBuilder new]
+                           withCrashReporting:YES]
+                          withLogLevel:FlurryLogLevelDebug]];
+}
+
 
 #pragma mark - 下载图片设置
 - (void)sdwebImageLoad {

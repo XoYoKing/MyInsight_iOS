@@ -8,7 +8,6 @@
 
 #import "OtherVC.h"
 #import <SWRevealViewController.h>
-#import <Masonry.h>
 #import "ChatListVC.h"
 #import "XinHuaVC.h"
 #import "ZhiHuDailyVC.h"
@@ -23,11 +22,15 @@
 
 @end
 
+static const NSString *BaiSiBuDeJieStr = @"百思不得姐";
+static const NSString *QiuShiBaiKeStr = @"糗事百科";
+static const NSString *MeiZhiStr = @"妹纸";
 static const NSString *ChatUIStr = @"聊天界面";
 static const NSString *XinHuaStr = @"中华新华字典";
 static const NSString *ZhiHuDailyStr = @"知乎日报";
 static const NSString *CrossStr = @"跨平台";
 static const NSString *ReferToStr = @"鸣谢:借鉴参考的仓库";
+static const NSString *UmengShareStr = @"友盟分享";
 static const NSString *GitHubStr = @"GitHub";
 
 @implementation OtherVC
@@ -59,18 +62,16 @@ static const NSString *GitHubStr = @"GitHub";
     [self handleTableViewData];
     // 创建列表
     [self creatTableView];
-    // 代码约束布局
-    [self masonryLayoutSubview];
 }
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[ReferToStr, @"百思不得姐", @"糗事百科", @"妹纸", ZhiHuDailyStr, ChatUIStr, XinHuaStr, CrossStr, GitHubStr];
+    self.dataArray = @[ReferToStr, BaiSiBuDeJieStr, QiuShiBaiKeStr, MeiZhiStr, ZhiHuDailyStr, ChatUIStr, XinHuaStr, CrossStr, UmengShareStr, GitHubStr];
 }
 
 #pragma mark - 创建TableView
 - (void)creatTableView {
-    self.tableView = [[UITableView alloc] init];
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     // 设置代理
     self.tableView.delegate = self;
@@ -87,7 +88,7 @@ static const NSString *GitHubStr = @"GitHub";
     return 1;
 }
 
-
+// 行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataArray.count;
 }
@@ -141,17 +142,6 @@ static const NSString *GitHubStr = @"GitHub";
         crossVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:crossVC animated:YES];
     }
-}
-
-#pragma mark - 代码约束布局
-- (void)masonryLayoutSubview {
-    // TableView
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).offset(0.0f);
-        make.left.equalTo(self.view.mas_left).offset(0.0f);
-        make.right.equalTo(self.view.mas_right).offset(0.0f);
-        make.bottom.equalTo(self.view.mas_bottom).offset(0.0f);
-    }];
 }
 
 - (void)didReceiveMemoryWarning {

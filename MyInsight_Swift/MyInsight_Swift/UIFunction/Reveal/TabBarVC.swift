@@ -56,7 +56,7 @@ class TabBarVC: UITabBarController {
         self.setViewControllers([basicNavi, advanceNavi, seniorNavi, otherNavi], animated: false);
         
         // 设置徽标
-        basicVC.navigationController?.tabBarItem.badgeValue = "7"
+        basicVC.navigationController?.tabBarItem.badgeValue = "1"
     }
 
     override func didReceiveMemoryWarning() {
