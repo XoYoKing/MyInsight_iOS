@@ -24,7 +24,7 @@ class MyBlogVC: BaseVC {
         self.tableView.dataSource = self
         self.view.addSubview(self.tableView)
         
-        self.dataArray = ["iOS面试题", "一些"]
+        self.dataArray = ["iOS面试题", "一些", "SDWebImage原理", "一些指令"]
         
     }
     

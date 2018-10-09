@@ -10,6 +10,8 @@
 #import "MainRevealVC.h" // 主页面
 #import "WelcomeVC.h" // 欢迎页面
 #import <UserNotifications/UserNotifications.h>
+#import <SDWebImageDownloader.h>
+#import <SDWebImageManager.h>
 //#import <LCChatKit.h>
 
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
@@ -21,6 +23,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSLog(@"FinishLaunchingWithOptions 程序启动完成");
     
     UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window = window;
@@ -67,6 +70,42 @@
 - (void)showAdvertiserView {
     NSLog(@"此处 启动 广告！");
 }
+
+#pragma mark - 下载图片设置
+- (void)sdwebImageLoad {
+    
+    SDWebImageDownloader *imgDownloader = SDWebImageManager.sharedManager.imageDownloader;
+    imgDownloader.headersFilter  = ^NSDictionary *(NSURL *url, NSDictionary *headers) {
+        
+        NSFileManager *fm = [[NSFileManager alloc] init];
+        NSString *imgKey = [SDWebImageManager.sharedManager cacheKeyForURL:url];
+        NSString *imgPath = [SDWebImageManager.sharedManager.imageCache defaultCachePathForKey:imgKey];
+        NSDictionary *fileAttr = [fm attributesOfItemAtPath:imgPath error:nil];
+        
+        NSMutableDictionary *mutableHeaders = [headers mutableCopy];
+        
+        NSDate *lastModifiedDate = nil;
+        
+        if (fileAttr.count > 0) {
+            if (fileAttr.count > 0) {
+                lastModifiedDate = (NSDate *)fileAttr[NSFileModificationDate];
+            }
+            
+        }
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
+        formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+        formatter.dateFormat = @"EEE, dd MMM yyyy HH:mm:ss z";
+        
+        NSString *lastModifiedStr = [formatter stringFromDate:lastModifiedDate];
+        lastModifiedStr = lastModifiedStr.length > 0 ? lastModifiedStr : @"";
+        [mutableHeaders setValue:lastModifiedStr forKey:@"If-Modified-Since"];
+        
+        return mutableHeaders;
+    };
+
+}
+
 
 #pragma mark - 注册通知
 - (void)registerUserNoti {
@@ -142,12 +181,11 @@
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-    
+    NSLog(@"WillResignActive 程序将要进入后台");
 }
 
-
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    NSLog(@"程序进入后台");
+    NSLog(@"DidEnterBackground 程序进入后台");
     [self beingBackgroundUpdateTask];
     [self endBackgroundUpdateTask];
 }
@@ -163,16 +201,15 @@
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
+    NSLog(@"WillEnterForeground 程序将要进入前台");
 }
-
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    NSLog(@"DidBecomeActive 程序进入前台");
 }
 
-
 - (void)applicationWillTerminate:(UIApplication *)application {
-    
-    
+    NSLog(@"WillTerminate 程序退出");
 }
 
 
