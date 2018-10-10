@@ -12,7 +12,8 @@
 #import <UserNotifications/UserNotifications.h>
 #import <SDWebImageDownloader.h>
 #import <SDWebImageManager.h>
-#import <Flurry.h>
+#import <Flurry.h> // 统计
+#import <UMCommon/UMCommon.h> //友盟
 //#import <LCChatKit.h>
 
 /*
@@ -46,6 +47,8 @@
     [self.window makeKeyAndVisible];
     // 设置Flurry应用检测
     [self setupFlurry];
+    // 友盟
+    [self setupUMeng];
     
     return YES;
 }
@@ -87,6 +90,10 @@
                           withLogLevel:FlurryLogLevelDebug]];
 }
 
+#pragma mark - 设置友盟UMeng
+- (void)setupUMeng {
+    [UMConfigure initWithAppkey:@"5bbc3f6ef1f5569c8300050a" channel:nil];
+}
 
 #pragma mark - 下载图片设置
 - (void)sdwebImageLoad {

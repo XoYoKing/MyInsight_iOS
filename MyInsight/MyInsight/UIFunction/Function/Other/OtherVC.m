@@ -13,6 +13,7 @@
 #import "ZhiHuDailyVC.h"
 #import "CrossVC.h"
 #import "ReferToVC.h"
+#import "UMengVC.h"
 
 @interface OtherVC ()<UITableViewDelegate, UITableViewDataSource>
 // 列表
@@ -30,8 +31,8 @@ static const NSString *XinHuaStr = @"中华新华字典";
 static const NSString *ZhiHuDailyStr = @"知乎日报";
 static const NSString *CrossStr = @"跨平台";
 static const NSString *ReferToStr = @"鸣谢:借鉴参考的仓库";
-static const NSString *UmengShareStr = @"友盟分享";
 static const NSString *GitHubStr = @"GitHub";
+static const NSString *UMengStr = @"友盟UMeng";
 
 @implementation OtherVC
 
@@ -66,7 +67,7 @@ static const NSString *GitHubStr = @"GitHub";
 
 // 处理数据
 - (void)handleTableViewData {
-    self.dataArray = @[ReferToStr, BaiSiBuDeJieStr, QiuShiBaiKeStr, MeiZhiStr, ZhiHuDailyStr, ChatUIStr, XinHuaStr, CrossStr, UmengShareStr, GitHubStr];
+    self.dataArray = @[ReferToStr, BaiSiBuDeJieStr, QiuShiBaiKeStr, MeiZhiStr, ZhiHuDailyStr, ChatUIStr, XinHuaStr, CrossStr, UMengStr, GitHubStr];
 }
 
 #pragma mark - 创建TableView
@@ -141,6 +142,13 @@ static const NSString *GitHubStr = @"GitHub";
         CrossVC *crossVC = [[CrossVC alloc] init];
         crossVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:crossVC animated:YES];
+    }
+    if ([cellString isEqual:UMengStr]) {
+        // 友盟
+        UMengVC *umengVC = [[UMengVC alloc] init];
+        umengVC.title = cellString;
+        umengVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:umengVC animated:YES];
     }
 }
 

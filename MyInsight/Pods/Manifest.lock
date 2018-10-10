@@ -60,7 +60,38 @@ PODS:
   - UMCAnalytics (5.5.1):
     - UMCCommon
   - UMCCommon (1.5.2)
+  - UMCPush (3.2.3):
+    - UMCCommon
   - UMCSecurityPlugins (1.0.6)
+  - UMCShare/Core (6.9.4):
+    - UMCCommon
+  - UMCShare/Social/AlipayShare (6.9.4):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/QQ (6.9.4):
+    - UMCCommon
+    - UMCShare/Core
+    - UMCShare/Social/ReducedQQ
+  - UMCShare/Social/ReducedQQ (6.9.4):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/ReducedSina (6.9.4):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/ReducedWeChat (6.9.4):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/Sina (6.9.4):
+    - UMCCommon
+    - UMCShare/Core
+    - UMCShare/Social/ReducedSina
+  - UMCShare/Social/WeChat (6.9.4):
+    - UMCCommon
+    - UMCShare/Core
+    - UMCShare/Social/ReducedWeChat
+  - UMCShare/UI (6.9.4):
+    - UMCCommon
+    - UMCShare/Core
   - WeexSDK (0.18.0.3)
   - WXDevtool (0.16.3):
     - SocketRocket
@@ -90,7 +121,13 @@ DEPENDENCIES:
   - SWRevealViewController
   - UMCAnalytics
   - UMCCommon
+  - UMCPush
   - UMCSecurityPlugins
+  - UMCShare/Social/AlipayShare
+  - UMCShare/Social/QQ
+  - UMCShare/Social/Sina
+  - UMCShare/Social/WeChat
+  - UMCShare/UI
   - WXDevtool
 
 SPEC REPOS:
@@ -119,7 +156,9 @@ SPEC REPOS:
     - SWRevealViewController
     - UMCAnalytics
     - UMCCommon
+    - UMCPush
     - UMCSecurityPlugins
+    - UMCShare
     - WeexSDK
     - WXDevtool
 
@@ -148,10 +187,12 @@ SPEC CHECKSUMS:
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
   UMCAnalytics: 0aff87e39008e2a650e5917430db0da2de2f8495
   UMCCommon: 4392868ac47ff1b101663106bb114ba616fabbad
+  UMCPush: 628b5c61be5a5036cb31eb9b3a3ab8dce7521691
   UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
+  UMCShare: aa233aecad67979930fe43f3a2f676023b669439
   WeexSDK: 173541f2d0042664168b305952398145c0c6039c
   WXDevtool: c028138b4e3a8856758acfea2328f708d3adbedd
 
-PODFILE CHECKSUM: a1a417ef2be09f442aa22846d7c6611a1d5104a5
+PODFILE CHECKSUM: 62c534030660201e148703baa3e848ae778f6f4e
 
 COCOAPODS: 1.5.3
