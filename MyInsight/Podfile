@@ -86,7 +86,7 @@ target 'MyInsight' do
   #pod "EFMarkdown" #, :modular_headers => true
 #  pod "MarkdownView"
 
-    #
+    # Flurry统计
     pod 'Flurry-iOS-SDK/FlurrySDK'
     pod 'Flurry-iOS-SDK/FlurryAds'
     
