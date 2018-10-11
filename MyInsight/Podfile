@@ -86,10 +86,13 @@ target 'MyInsight' do
   #pod "EFMarkdown" #, :modular_headers => true
 #  pod "MarkdownView"
 
-
+    #
     pod 'Flurry-iOS-SDK/FlurrySDK'
     pod 'Flurry-iOS-SDK/FlurryAds'
-
+    
+    # Google Protobuf协议
+    pod 'Protobuf'
+    
   target 'MyInsightTests' do
     inherit! :search_paths
     # Pods for testing

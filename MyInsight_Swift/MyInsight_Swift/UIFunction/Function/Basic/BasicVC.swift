@@ -108,9 +108,7 @@ extension BasicVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let cellStr: String = self.dataArray[indexPath.row]
-        
-        debugPrint(cellStr)
-        
+                
         if cellStr == RunTimeStr {
             // RunTime运行时
             let runTimeVC :RunTimeVC = RunTimeVC()
